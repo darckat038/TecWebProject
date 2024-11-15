@@ -1,0 +1,10 @@
+Ristorante con creazione piatto: sito che riguarda un ristorante che permette la creazione 
+di piatti personalizzati dall'utente.
+
+Rete di condivisione attrezzi: sito che permette a diversi utenti di scambiarsi/condividere 
+strumenti da giardinaggio e bricolage.
+
+Komoot + Maps: maybe consigli di sicurezza e attrezzatura
+
+Mensa: sito per visualizzare il menu giornaliero della mensa, prenotare posti in una determinata
+mensa e fascia oraria, proporre take-away
