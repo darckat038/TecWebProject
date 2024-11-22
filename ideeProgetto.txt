@@ -10,8 +10,20 @@ Mensa: sito per visualizzare il menu giornaliero della mensa, prenotare posti in
 mensa e fascia oraria, proporre take-away
 
 FINALE:
+
+IDEA:
 Concessionario:
-    - visualizzazione di auto
-    - possibilità di prenotare test-drive
-    - login amministratore
-    - possibilità amministratore modifica auto
+- visualizzazione di auto
+- possibilità di prenotare test-drive
+- login amministratore
+- possibilità amministratore modifica auto
+
+PAGINE WEB:
+- Landing Page
+- Registrazione
+- Login
+- Listino
+- Test-Drive prenotazione
+- Admin Test-Drive
+- Chi siamo?/Storia concessionario
+- Contatti
