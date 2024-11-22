@@ -8,3 +8,10 @@ Komoot + Maps: maybe consigli di sicurezza e attrezzatura
 
 Mensa: sito per visualizzare il menu giornaliero della mensa, prenotare posti in una determinata
 mensa e fascia oraria, proporre take-away
+
+FINALE:
+Concessionario:
+    - visualizzazione di auto
+    - possibilità di prenotare test-drive
+    - login amministratore
+    - possibilità amministratore modifica auto
