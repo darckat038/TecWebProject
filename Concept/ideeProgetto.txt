@@ -19,11 +19,13 @@ Concessionario:
 - possibilità amministratore modifica auto
 
 PAGINE WEB:
-- Landing Page
+- Landing Page (Home)(index)
 - Registrazione
 - Login
+- User Page
 - Listino
-- Test-Drive prenotazione
-- Admin Test-Drive
+- Drive-Test prenotazione
+- Admin Page
 - Chi siamo?/Storia concessionario
-- Contatti
+
+//Contatti nella sezione footer di ogni pagina
