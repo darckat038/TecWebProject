@@ -25,7 +25,7 @@ PAGINE WEB:
 - User Page
 - Listino
 - Test-Drive prenotazione
-- Admin Test-Drive
+- Admin Page
 - Chi siamo?/Storia concessionario
 
 //Contatti nella sezione footer di ogni pagina
