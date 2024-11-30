@@ -24,7 +24,7 @@ PAGINE WEB:
 - Login
 - User Page
 - Listino
-- Test-Drive prenotazione
+- Drive-Test prenotazione
 - Admin Page
 - Chi siamo?/Storia concessionario
 
