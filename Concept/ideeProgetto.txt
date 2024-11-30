@@ -22,6 +22,7 @@ PAGINE WEB:
 - Landing Page (Home)(index)
 - Registrazione
 - Login
+- User Page
 - Listino
 - Test-Drive prenotazione
 - Admin Test-Drive
