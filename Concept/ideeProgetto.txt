@@ -19,7 +19,7 @@ Concessionario:
 - possibilità amministratore modifica auto
 
 PAGINE WEB:
-- Landing Page (Home)
+- Landing Page (Home)(index)
 - Registrazione
 - Login
 - Listino
