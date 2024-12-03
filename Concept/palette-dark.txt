@@ -1,0 +1,9 @@
+#sfondo, #testo
+#bcbdfd, #000000
+#999afc, #000000
+#4e4ffa, #ffffff
+#3f3ee3, #ffffff
+#2f2ecc, #ffffff
+#4e4ffa, #ffffff
+#3e3e3e, #ffffff
+#696969, #ffffff
