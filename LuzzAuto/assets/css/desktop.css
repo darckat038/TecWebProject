@@ -1,3 +1,24 @@
-body{
-    background-color: red;
+:root {
+    --bg-color: white;
+    --text-color: black;
+}
+
+body {
+    background-color: var(--bg-color);
+    color: var(--text-color);
+    display: flex;
+    flex-direction: column;
+    font-size: 100%;
+    font-family: "Lexend", Roboto, sans-serif;
+    line-height: 1.5em;
+}
+
+body.dark {
+    --bg-color: #121212;
+    --text-color: #ffffff;
+}
+
+body.purple {
+    --bg-color: #4B0082;
+    --text-color: #ffffff;
 }
