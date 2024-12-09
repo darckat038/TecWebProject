@@ -15,8 +15,60 @@
     <meta name="description" content="Accedi al tuo account personale per gestire le tue prenotazioni e continuare ad usufruire dei nostri servizi!">
     <meta name="keywords" content="luzzauto, concessionario, macchina, auto, automobili, guida, vetture, test, account, accesso, prenotazioni">
     <meta name="author" content="Artusi Emanuele, Bellon Filippo, Diviesti Filippo, Righetto Filippo">
-</head>
-<body>
-    
-</body>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Lexend:wght@100..900&display=swap" rel="stylesheet">
+
+        <script>
+            document.addEventListener("DOMContentLoaded", function () {
+                var x = document.getElementById("menu");
+                var y = document.getElementById("menu-button-container");
+
+                function adjustMenuOnResize() {
+                    if (window.innerWidth >= 1024) {
+                        x.style.display = "flex";                       // Passaggio a modalità desktop
+                    } else {
+                        if (x.style.display === "flex" && !(y.classList.contains("change"))) {
+                            x.style.display = "none";                   // Passaggio da desktop a mobile
+                        }
+                                                                        // Passaggio da mobile a mobile
+                    }
+                }
+
+                // Evento resize sulla finestra
+                window.addEventListener("resize", adjustMenuOnResize);
+            });
+
+            function menuOpenClose(y) {
+                var x = document.getElementById("menu");
+                if (x.style.display === "flex") {
+                    x.style.display = "none";
+                } else {
+                    x.style.display = "flex";
+                }
+                y.classList.toggle("change");
+            }
+        </script>
+    </head>
+    <body>
+        <header>
+            <a href="about.html" class="logo" aria-label="immagine logo del sito">Logo</a>
+            <nav class="topNavBar">
+                <a href="javascript:void(0);" id="menu-button-container" onclick="menuOpenClose(this)" aria-label="icona apertura menu">
+                    <div class="menu-button-bar1" aria-hidden="true"></div>
+                    <div class="menu-button-bar2" aria-hidden="true"></div>
+                    <div class="menu-button-bar3" aria-hidden="true"></div>
+                </a>
+                <ul id="menu"  aria-label="menu del sito">
+                    <li><a href="home.html">Home</a></li>
+                    <li><a href="about.html">Chi Siamo</a></li>
+                    <li><a href="listino.html">Auto</a></li>
+                    <li><a href="drive_test.html">Prenotazione</a></li>
+                    <li><a href="login.html" id="here">Login</a></li>
+                    <li><a href="registrazione.html">Registrazione</a></li>
+                </ul>
+            </nav>
+        </header>
+    </body>
 </html>
