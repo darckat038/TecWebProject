@@ -6,7 +6,7 @@
 body {
     background-color: var(--bg-color);
     color: var(--text-color);
-    display: flex;
+    display: block;
     flex-direction: column;
     font-size: 100%;
     font-family: "Lexend", Roboto, sans-serif;
@@ -25,6 +25,10 @@ body.purple {
     --bg-color: #4B0082;
     --text-color: #ffffff;
 }
+
+/*******************
+HEADER
+********************/
 
 header {
     display: block;
@@ -67,12 +71,17 @@ header .topNavBar #menu a {
     font-size: 1.2em;
 }
 
+header .topNavBar #menu a#here {
+    color: #999afc;
+}
+
 header .topNavBar #menu-button-container {
     display: inline-block;
     position: absolute;
     top: 0;
     right: 0;
     padding: 0.5em 0.5em;
+    justify-content: space-between
 }
 
 header .topNavBar #menu-button-container .menu-button-bar1,
@@ -87,11 +96,28 @@ header .topNavBar #menu-button-container .menu-button-bar3 {
 }
 
 .change .menu-button-bar1 {
-    transform: translate(0, 11px) rotate(-45deg);
+    transform: translate(0, 0.7em) rotate(-45deg);
 }
   
 .change .menu-button-bar2 {opacity: 0;}
   
 .change .menu-button-bar3 {
-    transform: translate(0, -11px) rotate(45deg);
+    transform: translate(0, -0.7em) rotate(45deg);
+}
+
+/******************* 
+ABOUT - CONTENUTO
+********************/
+
+body h1.h1-hello {
+    text-align: center;
+    margin-top: 2.5em;
+    font-size: 4em;
+    color: white;
+}
+
+body p.p-hello {
+    text-align: center;
+    font-size: 1.5em;
+    color: white;
 }
