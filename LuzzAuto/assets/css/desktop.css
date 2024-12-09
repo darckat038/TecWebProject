@@ -11,6 +11,10 @@ body {
     font-size: 100%;
     font-family: "Lexend", Roboto, sans-serif;
     line-height: 1.5em;
+    background-image: url("../img/Background/background.jpg");
+    background-repeat: no-repeat;
+    background-position: top;
+    background-size: cover;
 }
 
 body.dark {
@@ -21,4 +25,44 @@ body.dark {
 body.purple {
     --bg-color: #4B0082;
     --text-color: #ffffff;
+}
+
+header {
+    display: inline-flex;
+    overflow: hidden;
+    position: relative;
+    background-color: black;
+    color: white;
+    border-radius: 1em;
+}
+
+header .logo {
+    background-color: inherit;
+    color: inherit;
+    padding: 1em 1em;
+    text-decoration: none;
+}
+
+header .topNavBar {
+    /* usato per allineare il contenuto a destra*/
+    margin-left: auto; 
+    background-color: inherit;
+    color: inherit;
+}
+
+header .topNavBar #menu {
+    list-style: none;
+    display: inline-flex;
+    flex-direction: row;
+}
+
+header .topNavBar #menu a {
+    padding: 0 1.2em;
+    text-align: center;
+    text-decoration: none;
+    color: inherit;
+}
+
+header .topNavBar #menu a:hover {
+    color: #999afc;
 }

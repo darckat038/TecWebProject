@@ -11,6 +11,9 @@ body {
     font-size: 100%;
     font-family: "Lexend", Roboto, sans-serif;
     line-height: 1.5em;
+    background-image: url("../img/Background/background.jpg");
+    background-repeat: no-repeat;
+    background-position: top;
 }
 
 body.dark {
@@ -23,18 +26,29 @@ body.purple {
     --text-color: #ffffff;
 }
 
-header .topNavBar {
-    overflow: hidden;
+header {
+    display: block;
     position: relative;
     background-color: black;
     color: white;
+    border-radius: 1em;
 }
 
-header .topNavBar .logo {
-    display: inline-block;
+header .logo {
+    display: inline-flex;
     background-color: inherit;
     color: inherit;
     padding: 1em 1em;
+    text-decoration: none;
+    border-radius: 1em;
+}
+
+header .topNavBar {
+    /* usato per allineare il contenuto a destra*/
+    margin-left: auto; 
+    background-color: inherit;
+    color: inherit;
+    border-radius: 0 0 1em 1em;
 }
 
 header .topNavBar #menu {
@@ -53,7 +67,7 @@ header .topNavBar #menu a {
     font-size: 1.2em;
 }
 
-header .topNavBar .menu-button-container {
+header .topNavBar #menu-button-container {
     display: inline-block;
     position: absolute;
     top: 0;
@@ -61,9 +75,9 @@ header .topNavBar .menu-button-container {
     padding: 0.5em 0.5em;
 }
 
-header .topNavBar .menu-button-container .menu-button-bar1,
-header .topNavBar .menu-button-container .menu-button-bar2,
-header .topNavBar .menu-button-container .menu-button-bar3 {
+header .topNavBar #menu-button-container .menu-button-bar1,
+header .topNavBar #menu-button-container .menu-button-bar2,
+header .topNavBar #menu-button-container .menu-button-bar3 {
     width: 2em;
     height: 0.3em;
     background-color: white;
