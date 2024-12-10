@@ -3,6 +3,11 @@
     --text-color: black;
 }
 
+* {
+    border: 0;
+    margin: 0;
+}
+
 body {
     background-color: var(--bg-color);
     color: var(--text-color);
@@ -11,10 +16,6 @@ body {
     font-size: 100%;
     font-family: "Lexend", Roboto, sans-serif;
     line-height: 1.5em;
-    background-image: url("../img/Background/background.jpg");
-    background-repeat: no-repeat;
-    background-position: top;
-    background-size: cover;
 }
 
 body.dark {
@@ -27,50 +28,62 @@ body.purple {
     --text-color: #ffffff;
 }
 
-header {
+.topNavBar {
+    top: 0;
     display: inline-flex;
     overflow: hidden;
-    position: relative;
+    position: fixed;
+    width: 100%;
     background-color: black;
     color: white;
     border-radius: 1em;
+    margin-top: 0.5em;
 }
 
-header .logo {
+.topNavBar .logo {
     background-color: inherit;
     color: inherit;
     padding: 1em 1em;
     text-decoration: none;
 }
 
-header .topNavBar {
+.topNavBar #menu{
     /* usato per allineare il contenuto a destra*/
     margin-left: auto; 
-    background-color: inherit;
+    background-color: inheri\t;
     color: inherit;
-}
-
-header .topNavBar #menu {
     list-style: none;
     display: inline-flex;
     flex-direction: row;
 }
 
-header .topNavBar #menu a {
+.topNavBar #menu li {
+    align-content: center;
+}
+
+.topNavBar #menu a {
     padding: 0 1.2em;
     text-align: center;
     text-decoration: none;
     color: inherit;
 }
 
-header .topNavBar #menu a:hover,
-header .topNavBar #menu a#here {
+.topNavBar #menu a:hover,
+.topNavBar #menu a#here {
     color: #999afc;
 }
 
 /******************* 
 ABOUT - CONTENUTO
 ********************/
+
+header {
+    background-image: url("../img/Background/background.jpg");
+    background-repeat: no-repeat;
+    background-position: top;
+    background-size: cover;
+    height: 100vh;
+}
 
 body h1 {
     text-align: center;
