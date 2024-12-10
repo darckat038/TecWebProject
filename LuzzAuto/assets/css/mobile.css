@@ -3,6 +3,15 @@
     --text-color: black;
 }
 
+* {
+    border: 0;
+    margin: 0;
+}
+
+html, body {
+    height: 100%;
+}
+
 body {
     background-color: var(--bg-color);
     color: var(--text-color);
@@ -11,9 +20,6 @@ body {
     font-size: 100%;
     font-family: "Lexend", Roboto, sans-serif;
     line-height: 1.5em;
-    background-image: url("../img/Background/background.jpg");
-    background-repeat: no-repeat;
-    background-position: top;
 }
 
 body.dark {
@@ -26,20 +32,18 @@ body.purple {
     --text-color: #ffffff;
 }
 
-/*******************
-HEADER
-********************/
-
-header {
-    display: block;
-    position: relative;
+.topNavBar {
+    top: 0;
+    position: fixed;
+    display: inline-flex;
+    flex-direction: column;
     background-color: black;
     color: white;
-    border-radius: 1em;
+    border-radius: 0 0 1em 1em;
+    width: 100%;
 }
 
-header .logo {
-    display: inline-flex;
+.topNavBar .logo {
     background-color: inherit;
     color: inherit;
     padding: 1em 1em;
@@ -47,35 +51,29 @@ header .logo {
     border-radius: 1em;
 }
 
-header .topNavBar {
-    /* usato per allineare il contenuto a destra*/
-    margin-left: auto; 
-    background-color: inherit;
-    color: inherit;
-    border-radius: 0 0 1em 1em;
-}
-
-header .topNavBar #menu {
+.topNavBar #menu {
     display: none;
     flex-direction: column;
     list-style: none;
     margin: 0;
 }
 
-header .topNavBar #menu a {
+.topNavBar #menu a {
     display: block;
     flex-direction: row;
     color: white;
     padding: 0.8em 0.8em;
     text-decoration: none;
     font-size: 1.2em;
+    text-align: center;
 }
 
-header .topNavBar #menu a#here {
+.topNavBar #menu a#here {
     color: #999afc;
 }
 
-header .topNavBar #menu-button-container {
+.topNavBar #menu-button-container {
+    margin-left: 0;
     display: inline-block;
     position: absolute;
     top: 0;
@@ -84,9 +82,9 @@ header .topNavBar #menu-button-container {
     justify-content: space-between
 }
 
-header .topNavBar #menu-button-container .menu-button-bar1,
-header .topNavBar #menu-button-container .menu-button-bar2,
-header .topNavBar #menu-button-container .menu-button-bar3 {
+.topNavBar #menu-button-container .menu-button-bar1,
+.topNavBar #menu-button-container .menu-button-bar2,
+.topNavBar #menu-button-container .menu-button-bar3 {
     width: 2em;
     height: 0.3em;
     background-color: white;
@@ -109,11 +107,23 @@ header .topNavBar #menu-button-container .menu-button-bar3 {
 ABOUT - CONTENUTO
 ********************/
 
+/*******************
+HEADER
+********************/
+
+header {
+    background-image: url("../img/Background/background.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+
 body h1.h1-hello {
     text-align: center;
     margin-top: 2.5em;
     font-size: 4em;
     color: white;
+    margin-bottom: 0.4em;
 }
 
 body p.p-hello {
