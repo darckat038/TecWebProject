@@ -1,0 +1,365 @@
+* {
+    /* Da mettere sempre */
+    margin: 0em;
+    padding: 0em;
+}
+
+:root{
+    --bgcolor: #0365AE; /* background */
+    --txtcolor: #FFFFFF;
+    --breadcolor: #163F77;
+    --newscolor: #F3C42B;
+    --contenttxtcolor: #000; /* content e' il main. Diamo colore a testo (txt) qua e a background (bg) sotto */
+    --contentbgcolor: #FFF;
+    --linkcolor: #FFF;
+    --visitedcolor: #F3C42B;
+}
+
+html, body{
+    color: var(--txtcolor);
+    background-color: var(--bgcolor);
+}
+
+html{
+    background-image: url('./materiale/images/bg.webp');
+    background-size: contain;
+}
+
+body{
+    font-size: 100%; /* quello definito da utente */
+    font-family: "Lexend", Roboto, sans-serif; /* Font accessibile */
+    line-height: 1.5em; /* interlinea accessibile */
+    max-width: 800px; /* Oltre questa grandezza va a mostrare l'immagine di sfondo di "html" */
+    margin: auto; /* per centrare il body */
+    border: 1px solid #000;
+}
+
+
+/*
+=============
+SEZIONE HEADER
+=============
+*/
+
+header{
+    padding: 0cm 1cm;
+    text-align: center;
+    background: url('./materiale/images/paola-egonu.webp') bottom right,
+                url('./materiale/images/orro-medaglia.jpeg') top left;
+    background-size: 20%, 20%;
+    background-repeat: no-repeat;
+    margin: 1em;
+}
+
+header h1{
+    font-size: 6em;
+    line-height: 1.5em;
+    background-image: url('materiale/images/logo_fipav.svg');
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    text-indent: -9999px;
+}
+
+
+
+
+/*
+=============
+SEZIONE BREADCRUMB
+=============
+*/
+
+#breadcrumb{
+    background-color: var(--breadcolor);
+}
+
+
+/*
+=============
+SEZIONE MENU
+=============
+*/
+
+#menu{
+    float: left;
+    width: 18%;
+    padding-left: 2em;
+}
+
+#menu a:link{
+    color: var(--linkcolor);
+}
+
+#menu a:visited{
+    color: var(--visitedcolor);
+}
+
+#menu ul{
+    list-style-type: none;
+}
+
+#currentLink {
+    list-style-image: url('materiale/images/favicon-16x16.png');
+    margin-left: 1.5em;
+}
+
+
+/*
+=============
+SEZIONE MAIN
+=============
+*/
+
+main{
+    background-color: var(--contentbgcolor);
+    color: var(--contenttxtcolor);
+    margin-left: 20%;
+    /* margin-right: 20%; */
+    padding: 1.75em;
+}
+
+main h2{
+    line-height: 1.5em;
+    margin-bottom: 0.5em;
+    margin-top: 0.5em;
+}
+
+main li{
+    list-style-image: url('materiale/images/favicon-16x16.png');
+    margin-left: 2em;
+    padding-left: 0.5em;
+}
+
+main h1 {
+    text-align: center;
+    line-height: 1.5em;
+    margin-bottom: 1em;
+}
+
+main h2 {
+    line-height: 1.5em;
+    margin-bottom: 0.5em;
+    margin-top: 0.5em;
+}
+
+main > dl {
+    width: 95%;
+    margin: auto;
+}
+
+#premi dt{
+    background-image: url('materiale/images/coppa.png');
+    background-size: 2em;
+    background-repeat: no-repeat;
+    padding-left: 2.5em;
+}
+
+#premi dd{
+    padding-left: 2.5em;
+}
+
+
+/*
+=============
+SEZIONE NEWS
+=============
+*/
+
+#breakingNews {
+    float: right;
+    width: 18%;
+    border: 1px solid #000;
+    background-color: var(--bgcolor);
+    color: var(--txtcolor);
+    padding: 0.5em;
+    margin-top: 1em;
+    margin-right: 2%;
+    margin-left: 3%;
+}
+
+#breakingNews dl dd {
+    margin-left: 1.5em;
+    
+}
+
+#breakingNews dt {
+    margin-left: 0.8em;
+    font-weight: bold;
+}
+
+
+/*
+=============
+SEZIONE FOOTER
+=============
+*/
+
+footer{
+    background-color: var(--breadcolor);
+    color: var(--txtcolor);
+}
+
+footer p{
+    display: inline;
+    font-size: 0.8em;
+    font-style: italic;
+}
+
+.imgValidCode{
+    vertical-align: middle;
+}
+
+
+/*
+=============
+PAGINA SQUADRA
+=============
+*/
+
+.giocatrici > dt{
+    background-color: var(--breadcolor);
+    color: var(--txtcolor);
+    font-size: 1.1em;
+    padding: 0.5em;
+}
+
+.giocatrici > dd {
+    border: 1px solid #000;
+    padding-top: 1em;
+    padding-left: 1em;
+    min-height: 130px;
+}
+
+
+
+/* GRID vs FLOAT */
+
+
+/* GRID */
+
+/*
+.giocatrice_grid {
+    display: grid;
+    grid-template-columns: 1fr 4fr;
+    grid-template-areas: 
+    "i t";
+}
+
+.giocatrice_grid > img{
+    grid-area: i;
+}
+
+.giocatrice_grid > dl{
+    grid-area: t;
+}
+
+.giocatrici img{
+    min-width: 85px;
+    width: 20%;
+}
+
+.giocatrice dt{
+    float: left;
+    font-weight: bold;
+    padding-right: 0.5em;
+}
+
+.giocatrice dt::after{
+    content: ": ";
+}
+
+dt.riconoscimenti{
+    float: none;
+}
+*/
+
+/* grid dentro un altro grid rallenta il rendering, allora devo usare il float */
+
+/* FLOAT */
+
+.giocatrici img{
+    float: left;
+    min-width: 85px;
+    width: 20%;
+    margin-right: 1cm;
+}
+
+.giocatrici>dd dl{
+    margin-left: 25%;
+}
+
+.giocatrice{
+    padding-left: 1em;
+}
+
+.giocatrice dt{
+    float: left;
+    font-weight: bold;
+    padding-right: 0.5em;
+}
+
+.giocatrice dt::after{
+    content: ": ";
+}
+
+dt.riconoscimenti{
+    float: none;
+}
+
+
+
+
+
+
+
+/*
+=============
+TABELLA
+=============
+*/
+
+table{
+    margin: auto;
+}
+
+table, td, th{
+    border: 1px solid black;
+    border-collapse: collapse;
+}
+
+thead th{
+    background-color: #0365AE;
+    color: #FFF;
+}
+
+tfoot td{
+    text-align: center;
+}
+
+#descTab{
+    text-indent: -999em;
+}
+
+
+
+/*
+=============
+AIUTI ALLA NAVIGAZIONE
+=============
+*/
+
+.navigationHelp{
+    position: absolute;
+    text-indent: -999em;
+}
+
+.navigationHelp:focus{
+    position: static;
+    text-indent: 0;
+}
+
+/* Per togliere i pallini della lista puntata */
+.listHelp{
+    list-style-type: none;
+}

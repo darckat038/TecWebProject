@@ -1,0 +1,408 @@
+===========================================================
+
+index.html
+
+===========================================================
+
+La pallavolo femminile italiana
+Ti trovi in: Home
+
+Home
+L'allenatore
+La squadra
+Il fair play
+Salta le news
+Ultime news
+11 Agosto 2024:
+L’Italia conquista il suo primo oro olimpico battendo gli Stati Uniti con un secco 3-0 (25-18, 25-20, 25-17). Paola Egonu, Myriam Sylla e le altre protagoniste chiudono un torneo perfetto, senza perdere un set in finale
+10 Agosto 2024:
+Grande prestazione delle azzurre che si impongono 3-0, guadagnandosi l'accesso alla finale olimpica
+2 Ottobre 2023
+L'Italvolley femminile ha battuto il Qatar con un netto 3-0, proseguendo la sua corsa verso la qualificazione olimpica con un'ottima prestazione di squadra, confermando il suo primo posto nel girone
+16 Settembre 2023
+L'Italia ha ottenuto un'importante vittoria contro la Polonia (3-1) durante le qualificazioni olimpiche. Questa vittoria ha avvicinato ulteriormente la nazionale alla qualificazione per le Olimpiadi di Parigi 2024
+
+La nazionale femminile di pallavolo alle Olimpiadi di Parigi 2024
+La nazionale italiana femminile di pallavolo ha conquistato una storica vittoria alle Olimpiadi di Parigi, salendo per la prima volta sul gradino più alto del podio. Con una prestazione straordinaria, le azzurre hanno superato avversarie di alto livello, dimostrando grande tecnica, forza e spirito di squadra.
+
+La vittoria rappresenta un traguardo fondamentale per il movimento della pallavolo in Italia, celebrato con orgoglio da tutta la nazione. Un sogno olimpico diventato realtà, che consacra l'Italia tra le grandi potenze della pallavolo mondiale.
+
+Altri importanti riconoscimenti conferiti alla nazionale sono:
+
+il premio MVP (Most Valuable Player)
+che è stato consegnato a Paola Egonu, centrale della nostra nazionale;
+il premio di miglior pallegiatrice
+consegnato a Alessia Orro;
+il premio di miglior centrale
+vinto da Cristina Chirichella;
+il premio di miglior schiacciatrice
+vinto da Myriam Sylla.
+La nazionale femminile italiana di pallavolo è una delle squadre più competitive e ammirate a livello internazionale, grazie a successi costanti e a un gruppo di atlete di altissimo livello. Con un mix di esperienza e giovani talenti, la squadra ha saputo ottenere risultati eccellenti negli ultimi anni.
+
+Ecco alcuni punti salienti:
+
+Campione d'Europa nel 2007, 2009 e 2021, dimostrando una grande costanza a livello continentale;
+Vincitrice della FIVB Nations League 2022, consolidando la sua posizione tra le potenze mondiali del volley;
+Medaglia d'argento ai Mondiali 2018, sfiorando il titolo mondiale dopo un torneo esemplare;
+Giocatrici come Paola Egonu, Myriam Sylla e Monica De Gennaro sono riconosciute tra le migliori al mondo nei rispettivi ruoli;
+Allenata da tecnici di grande livello, la squadra è nota per il suo gioco dinamico, l'organizzazione difensiva impeccabile e un potente attacco.
+La nazionale italiana di pallavolo continua a essere un punto di riferimento internazionale, ispirando future generazioni e mantenendo alte le ambizioni per i titoli futuri.
+
+XHTML validoOmbretta Gaggi, Cactus & Federazione Italiana Pallavolo - All rights Reserved
+
+===========================================================
+
+allenatore.html
+
+===========================================================
+
+
+La pallavolo femminile italiana
+Ti trovi in: Home > > L'allenatore
+
+Salta il menù di navigazione
+Home
+L'allenatore
+La squadra
+Il fair play
+L’allenatore: Julio Velasco
+
+Julio Velasco è uno dei più grandi allenatori nella storia della pallavolo mondiale e una figura chiave nello sviluppo di questo sport in Italia. Nato il 9 febbraio 1952 a La Plata, in Argentina, Velasco ha rivoluzionato il concetto di allenatore, introducendo un approccio che combina tecnica, disciplina mentale e gestione del gruppo.
+
+Dopo aver raggiunto risultati straordinari con la nazionale maschile italiana, con cui ha vinto due Campionati Mondiali, cinque World League e tre Campionati Europei negli anni '90, ha deciso di accettare una nuova sfida allenando anche la nazionale femminile. La sua leadership e le sue innovazioni tattiche hanno contribuito a trasformare il livello del volley italiano, portando la squadra femminile a essere tra le più competitive.
+
+Velasco è celebre per il suo concetto di "cultura della vittoria" e per la sua capacità di motivare e ispirare sia gli atleti che i leader fuori dal campo, guadagnandosi il rispetto e l'ammirazione a livello internazionale.
+
+Cultura della Vittoria
+La "cultura della vittoria" di Julio Velasco è un concetto che ha definito la sua filosofia di allenatore, basato sull'idea che la vittoria non sia solo un obiettivo, ma un modo di pensare e agire. Velasco crede che per vincere sia necessario cambiare la mentalità e il comportamento, sia individuale che di squadra, spostando il focus dalla paura di perdere alla determinazione di dominare le sfide. Uno dei suoi principi cardine è quello di assumersi le proprie responsabilità: Velasco sostiene che il successo o il fallimento dipendano dalle azioni di ciascun membro del gruppo, non dalle circostanze esterne come la qualità dell'avversario o la sfortuna.
+
+Un aspetto fondamentale della sua cultura della vittoria è anche la gestione psicologica degli atleti. Velasco insiste sull'importanza di credere nelle proprie capacità e di mantenere un livello costante di prestazione, indipendentemente dalla pressione esterna. Inoltre, incoraggia il miglioramento continuo, sottolineando che la vittoria non è un risultato isolato, ma il frutto di un processo di crescita collettiva.
+
+Velasco ha diffuso questo concetto non solo nello sport, ma anche in ambiti manageriali e aziendali, dove è stato spesso invitato a parlare della sua filosofia. La sua idea di leadership si basa sulla capacità di costruire fiducia nel gruppo, sul saper ispirare e motivare, e sull’importanza della disciplina e dell’organizzazione per raggiungere obiettivi ambiziosi. Questo approccio è stato un pilastro del successo delle squadre che ha allenato, rendendo l'Italia una potenza mondiale nel mondo della pallavolo negli anni '90.
+
+XHTML validoOmbretta Gaggi, Cactus & Federazione Italiana Pallavolo - All rights Reserved
+
+===========================================================
+
+squadra.html
+
+===========================================================
+
+
+La pallavolo femminile italiana
+Ti trovi in: Home > > La squadra
+
+Salta il menù di navigazione
+Home
+L'allenatore
+La squadra
+Il fair play
+La squadra
+Anna Danesi - Capitano
+
+Data di nascita
+20/04/1996
+Luogo
+Brescia
+Squadra
+Pro Victoria
+Ruolo
+Centrale
+Altezza
+196 cm
+Maglia
+11
+Maglia in nazionale
+11
+Punti totali
+43
+Riconoscimenti
+Miglior centrale nel Campionato mondiale femminile under 20 di pallavolo femminile del 2015.
+Miglior centrale nel Campionato europeo femminile di pallavolo 2021.
+Miglior centrale nel Campionato mondiale femminile di pallavolo 2022.
+Miglior centrale di Pallavolo ai Giochi della XXXIII Olimpiade - Torneo femminile, 2024.
+Palleggiatrici
+Carlotta Cambi
+
+Data di nascita
+28/05/1996
+Luogo
+San Miniato
+Squadra
+Pinerolo
+Ruolo
+Palleggiatrice
+Altezza
+176 cm
+Maglia
+3
+Maglia in nazionale
+3
+Vinti
+12
+Note
+Ha fatto parte della squadra "AGIL" durante la stagione 2016/17 e 2022/2023. Dalla stagione 2023/2024 fa parte della squadra "Pinerolo".
+Alessia Orro
+
+Data di nascita
+18/07/1998
+Luogo
+Oristano
+Squadra
+Pro Victoria
+Ruolo
+Palleggiatrice
+Altezza
+180 cm
+Maglia
+8
+Maglia in nazionale
+8
+Vinti
+105
+Riconoscimenti
+MVP coppa CEV, 2021
+Miglior palleggiatrice, Volleyball Nations League, 2022.
+Miglior palleggiatrice, Volleyball Nations League, 2024.
+Miglior palleggiatrice di Pallavolo, Giochi della XXXIII Olimpiade - Torneo femminile, 2024.
+Schiacciatrici
+Caterina Bosetti
+
+Data di nascita
+02/02/1994
+Luogo
+Busto Arsizio
+Squadra
+VakıfBank.
+Ruolo
+Schiacciatrice
+Altezza
+180 cm
+Maglia
+9
+Maglia in nazionale
+9
+Punti Totali
+33
+Riconoscimenti
+Miglior Schiacciatrice, Campionato Mondiale di pallavolo femminile Under-20, 2011.
+MVP, Campionato Mondiale di Pallavolo femminile Under-20, 2011.
+MVP, Supercoppa Italiana di Pallavolo femminile, 2012.
+Miglior Schiacciatrice, Volleyball Nations League, 2022.
+Gaia Giovannini
+
+Data di nascita
+17/12/2001
+Luogo
+Bologna
+Squadra
+Megavolley
+Ruolo
+Schiacciatrice
+Altezza
+182 cm
+Maglia
+17
+Maglia in nazionale
+27
+Punti totali
+10
+Myriam Sylla
+
+Data di nascita
+08/01/1995
+Luogo
+Palermo
+Squadra
+Pro Victoria
+Ruolo
+Schiacciatrice
+Altezza
+184 cm
+Maglia
+17
+Maglia in nazionale
+17
+Punti totali
+60
+Riconoscimenti
+Miglior schiacciatrice, Campionato Europeo di pallavolo femminile, 2021.
+Miglior schiacciatrice, Campionato Mondiale di pallavolo femminile, 2022.
+Miglior schiacciatrice, Volleyball Nations League, 2024.
+Miglior schiacciatrice di Pallavolo, Giochi della XXXIII Olimpiade - Torneo femminile, 2024.
+Centrali
+Marina Lubian
+
+Data di nascita
+11/04/2000
+Luogo
+Moncalieri
+Squadra
+Imoco
+Ruolo
+Centrale
+Altezza
+192 cm
+Maglia
+9
+Maglia in nazionale
+1
+Punti totali
+1
+Riconoscimenti
+Miglior centrale, Campionato Europeo di pallavolo femminile, 2023.
+Sarah Fahr
+
+Data di nascita
+12/09/2001
+Luogo
+Kulmbach
+Squadra
+Imoco
+Ruolo
+Centrale
+Altezza
+192 cm
+Maglia
+19
+Maglia in nazionale
+19
+Punti totali
+36
+Riconoscimenti
+Miglior centrale, Campionato Europeo di pallavolo femminile Under-19, 2018.
+Miglior centrale, Montreux Volley Master, 2019.
+Miglior centrale, Volleyball Nations League, 2024.
+MVP, Supercoppa Italiana di Pallavolo femminile, 2024.
+Opposti
+Paola Ogechi Egonu
+
+Data di nascita
+10/12/1998
+Luogo
+Cittadella
+Squadra
+Pro Victoria
+Ruolo
+Opposto
+Altezza
+190 cm
+Maglia
+18
+Maglia in nazionale
+18
+Punti totali
+110
+Riconoscimenti
+MVP,Serie A1, 2022.
+Miglior opposto e MVP, Volleyball Nations League, 2024.
+MVP, Champions League, 2024.
+Miglior opposto e MVP, Volleyball Nations League, 2024.
+Miglior opposto e MVP, di Pallavolo, Giochi della XXXIII Olimpiade - Torneo femminile, 2024.
+Ekaterina Antropova
+
+Data di nascita
+19/03/2003
+Luogo
+Akureyri
+Squadra
+Savino Del Bene
+Ruolo
+Opposto
+Altezza
+202 cm
+Maglia
+24
+Maglia in nazionale
+24
+Punti totali
+54
+Libero
+Monica De Gennaro
+
+Data di nascita
+08/01/1987
+Luogo
+Piano di Sorrento
+Squadra
+Imoboco
+Ruolo
+Libero
+Altezza
+173 cm
+Maglia
+10
+Maglia in nazionale
+10
+Difese
+64
+Tredicesima
+Ilaria Spirito
+
+Data di nascita
+20/02/1994
+Luogo
+Albisola Superiore
+Squadra
+Chieri' 76
+Ruolo
+Libero
+Altezza
+174 cm
+Maglia
+5
+Maglia in nazionale
+5
+Difese
+0
+In questa tabella vengono riassunti i dati dei giocatori: nome, ruolo, maglia in nazionale, punti e squadra di provenienza.
+Giocatori
+Giocatore	Ruolo	Maglia	Punti	Squadra di provenienza
+Anna Danesi	Centrale	11	43	Pro Victoria
+Carlotta Cambi	Palleggiatrice	3	0	Pinerolo
+Alessia Orro	Palleggiatrice	8	13	Pro Victoria
+Caterina Bosetti	Schiacciatrice	9	33	VakıfBank
+Gaia Giovannini	Schiacciatrice	27	27	Megavolley
+Myriam Sylla	Schiacciatrice	17	60	Pro Victoria
+Marina Lubian	Centrale	1	1	Imoco
+Sarah Fahr	Centrale	19	36	Imoco
+Paola Ogechi Egonu	Opposto	18	110	Pro Victoria
+Ekaterina Antropova	Opposto	24	54	Savino Del Bene
+Monica De Gennaro	Libero	10	0	Imoboco
+Ilaria Spirito	Libero	5	0	Chieri' 76
+Totale Punti	377	
+
+===========================================================
+
+fairplay.html
+
+===========================================================
+
+
+La pallavolo femminile italiana
+Ti trovi in: Home > > FairPlay
+
+Salta il menù di navigazione
+Home
+L'allenatore
+La squadra
+Il fair play
+Il fair play nella pallavolo
+Nella pallavolo, il rispetto per sé stessi, per i compagni, per gli avversari e per gli arbitri costituisce una delle regole alla base del gioco. Questi principi vengono definiti con il termine anglosassone fair play, ma esso non è il semplice rispetto delle regole del gioco, ma esprime un concetto più ampio, che include anche sentimenti come:
+
+l’amicizia
+la stima per le capacità degli avversari e
+lo spirito sportivo.
+Ciascun partecipante deve non solo attenersi alle regole del gioco, ma anche accettare le decisioni dell’arbitro senza discutere. In caso di dubbio, possono essere richieste spiegazioni, ma solo tramite la figura del capitano in gioco e sempre con il dovuto rispetto.
+
+Il fair play nella pallavolo si esprime anche nell’astensione da azioni o atteggiamenti che hanno l’obiettivo di influenzare le decisioni arbitrali o di coprire i falli commessi dalla propria squadra, non è raro infatti che un giocatore ammetta da sé il fallo commesso, così da evitare di dover ricorrere al videocheck.
+
+Il caso di Ema Stikić
+Tutti i pallavolisti e le pallavoliste sono molto attenti a rispettare il fair play, anche se questo può costargli la vittoria: è il caso di Ema Stikić, giovane pallavolista croata, che nel 2020 (all’età di appena 16 anni), mentre giocava a Zara una partita contro il Rijeka, nel quinto (e ultimo) set che avrebbe potuto garantirgli l’accesso alle semifinali, toccò accidentalmente la rete dopo un’azione a muro. L’arbitro però non si accorse dell’infrazione e l’azione proseguì, ma Ema, senza pensarci due volte, alzò la mano e segnalò l’invasione. Il giudice di gara assegnò il punto decisivo al Rijeka e l’Umago (la squadra di Ema) dovette rinunciare alle semifinali. Il suo gesto non passò inosservato e fu così tanto apprezzato che qualche tempo dopo Ema venne convocata nella nazionale croata.
+
+Il Cartellino Verde
+In Italia, con l’obiettivo di premiare il fair play, in Superlega (il massimo campionato di volley) è stato istituito il cartellino verde, che viene dato a quei giocatori che dimostrano un comportamento sportivo, per esempio autodenunciando dei falli commessi.
+
+Esiste anche un premio in denaro (che poi viene dato in beneficenza) per la squadra con più cartellini verdi. Nel 2018 in tutto sono stati 74 i cartellini verdi in SuperLega Credem Banca su 182 gare di Regular Season, 178 nelle 338 gare di Serie A Credem Banca. Nel 2019 per il progetto del cartellino verde la Lega Pallavolo Serie A è stata inoltre premiata a Budapest dall’International Fair Play Committee.
+
+XHTML validoOmbretta Gaggi, Cactus & Federazione Italiana Pallavolo - All rights Reserved

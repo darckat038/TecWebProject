@@ -1,0 +1,37 @@
+thead{
+    display: none;
+}
+
+tr, th, td{
+    display: block;
+    padding: 0;
+}
+
+/* Tolgo i bordi che non siano quelli delle celle */
+table, body, tr{
+    border: none;
+}
+
+/* Aggiungo il bordo alla prima cella così tutti i bordi orizzontali hanno lo stesso spessore */
+tr:first-child th{
+    border-top: 2px solid #000
+}
+
+/* Aggiungo il bordo all'ultima cella così tutti i bordi orizzontali hanno lo stesso spessore */
+tfoot tr td{
+    border-bottom: 2px solid #000
+}
+
+td[data-title]:before{
+    content: attr(data-title) ": "
+}
+
+/* Per evitare la ripetizione di "Totale Punti" */
+tfoot th{
+  display: none;
+}
+
+/* Faccio sparire le celle vuote */
+td:empty{
+  display: none;
+}
