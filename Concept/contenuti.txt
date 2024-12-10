@@ -1,0 +1,20 @@
+MAIN
+  - "cosa stai cercando?" aka filtro veloce per marca/modello ecc che andra' ad aprire la pagina listino filtrata
+  - promozioni aka 3/4 auto a prezzo scontato
+  - "cerchiamo talenti" aka link ad un form per inviare CV e candidatura, selezionando la posizione da un elenco
+  - "rivenditori ufficiali di" e scarrellata dei loghi dei veicoli
+  - qualche recensione fasulla maybe
+  - indirizzo e link alla pagina about
+
+CHI SIAMO/ABOUT
+  - storia
+  - un po' di numeri e statistiche (auto vendute ecc)
+  - come raggiungerci
+  - contatti
+
+LISTINO
+  - elenco completo veicoli (ciascuno con nome e prezzo, foto copertina)
+
+DETTAGLIO VEICOLO
+  - info dettagliate e foto
+  - link per prenotare test drive
