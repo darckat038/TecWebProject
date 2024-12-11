@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="19.321" height="20" viewBox="0 0 19.321 20">
+  <defs>
+    <clipPath id="clip-path">
+      <rect id="Rettangolo_8851" data-name="Rettangolo 8851" width="19.321" height="20"/>
+    </clipPath>
+  </defs>
+  <g id="TrenPass" transform="translate(0 0)">
+    <g id="Raggruppa_11447" data-name="Raggruppa 11447" transform="translate(0 0)" clip-path="url(#clip-path)">
+      <path id="Tracciato_14823" data-name="Tracciato 14823" d="M16.5,5.4h-3.33a3.843,3.843,0,1,0-7.017,0H2.822A2.822,2.822,0,0,0,0,8.226v8.952A2.822,2.822,0,0,0,2.822,20H16.5a2.822,2.822,0,0,0,2.822-2.822V8.226A2.822,2.822,0,0,0,16.5,5.4M8.02,3.843A1.641,1.641,0,1,1,10.141,5.4H9.18A1.637,1.637,0,0,1,8.02,3.843M16.03,16.714H3.29a1.1,1.1,0,1,1,0-2.2H16.03a1.1,1.1,0,1,1,0,2.2m0-3.628H3.29a1.1,1.1,0,1,1,0-2.2H16.03a1.1,1.1,0,1,1,0,2.2" transform="translate(0 0)"/>
+    </g>
+  </g>
+</svg>
