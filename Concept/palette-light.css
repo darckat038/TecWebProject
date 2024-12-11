@@ -1,0 +1,43 @@
+#sfondo, #testo
+#bcbdfd, #000000
+#999afc, #000000
+#4e4ffa, #ffffff
+#3f3ee3, #ffffff
+#2f2ecc, #ffffff
+#ffffff, #4e4ffa
+#ffffff, #3e3e3e
+#ffffff, #696969
+
+* {
+    sfondo: #bcbdfd;
+    testo: #000000;
+}
+* {
+    sfondo: #999afc;
+    testo: #000000;
+}
+* {
+    sfondo: #4e4ffa;
+    testo: #ffffff;
+}
+* {
+    sfondo: #3f3ee3;
+    testo: #ffffff;
+}
+* {
+    sfondo: #2f2ecc;
+    testo: #ffffff;
+}
+* {
+    sfondo: #ffffff;
+    testo: #4e4ffa;
+}
+* {
+    sfondo: #ffffff;
+;
+    testo: #3e3e3e;
+}
+* {
+    sfondo: #ffffff;
+    testo: #696969;
+}
