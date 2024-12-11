@@ -37,6 +37,7 @@ body{
     background-color: black;
     color: white;
     display: inline-flex;
+    flex-direction: column;
     overflow: hidden;
     position: fixed;
     border-radius: 1em;
@@ -46,13 +47,18 @@ body{
     margin-top: 0.5em;
 }
 
+.topNavBar .logo {
+    display: inline-block;
+    padding: 0 0 0 1em;
+}
+
 #menu{
     list-style: none;
-    margin: auto;
     display: none;
     flex-direction: column;
     margin-top: 1.5em;
     text-align: center;
+    padding-left: 0;
 }
 
 #menu a{
@@ -62,7 +68,6 @@ body{
     text-decoration: none;
     font-size: 1.2em;
     padding-top: 1em;
-    margin-left: -3.5em;
 }
 
 .topNavBar #menu-button-container {
