@@ -3,19 +3,6 @@
     --text-color: black;
 }
 
-body {
-    background-color: var(--bg-color);
-    color: var(--text-color);
-    display: block;
-    flex-direction: column;
-    font-size: 100%;
-    font-family: "Lexend", Roboto, sans-serif;
-    line-height: 1.5em;
-    background-image: url("../img/Background/background.jpg");
-    background-repeat: no-repeat;
-    background-position: top;
-}
-
 body.dark {
     --bg-color: #121212;
     --text-color: #ffffff;
@@ -26,56 +13,59 @@ body.purple {
     --text-color: #ffffff;
 }
 
-/*******************
-HEADER
-********************/
-
-header {
-    display: block;
-    position: relative;
-    background-color: black;
-    color: white;
-    border-radius: 1em;
-}
-
-header .logo {
-    display: inline-flex;
-    background-color: inherit;
-    color: inherit;
-    padding: 1em 1em;
-    text-decoration: none;
-    border-radius: 1em;
-}
-
-header .topNavBar {
-    /* usato per allineare il contenuto a destra*/
-    margin-left: auto; 
-    background-color: inherit;
-    color: inherit;
-    border-radius: 0 0 1em 1em;
-}
-
-header .topNavBar #menu {
-    display: none;
-    flex-direction: column;
-    list-style: none;
+*{
+    border: 0;
     margin: 0;
 }
 
-header .topNavBar #menu a {
+/******************* 
+        HOME
+********************/
+
+body{
+    background-color: var(--bg-color);
+    color: var(--text-color);
+    display: flex;
+    flex-direction: column;
+    font-size: 100%;
+    font-family: "Lexend", Roboto, sans-serif;
+    line-height: 1.5em;
+    align-items: center;
+}
+
+.topNavBar{
+    background-color: black;
+    color: white;
+    display: inline-flex;
+    overflow: hidden;
+    position: fixed;
+    border-radius: 1em;
+    width:98%;
+    padding-top: 1em;
+    padding-bottom: 1em;
+    margin-top: 0.5em;
+}
+
+#menu{
+    list-style: none;
+    margin: auto;
+    display: none;
+    flex-direction: column;
+    margin-top: 1.5em;
+    text-align: center;
+}
+
+#menu a{
     display: block;
     flex-direction: row;
     color: white;
-    padding: 0.8em 0.8em;
     text-decoration: none;
     font-size: 1.2em;
+    padding-top: 1em;
+    margin-left: -3.5em;
 }
 
-header .topNavBar #menu a#here {
-    color: #999afc;
-}
-
-header .topNavBar #menu-button-container {
+.topNavBar #menu-button-container {
     display: inline-block;
     position: absolute;
     top: 0;
@@ -84,9 +74,9 @@ header .topNavBar #menu-button-container {
     justify-content: space-between
 }
 
-header .topNavBar #menu-button-container .menu-button-bar1,
-header .topNavBar #menu-button-container .menu-button-bar2,
-header .topNavBar #menu-button-container .menu-button-bar3 {
+.topNavBar #menu-button-container .menu-button-bar1,
+.topNavBar #menu-button-container .menu-button-bar2,
+.topNavBar #menu-button-container .menu-button-bar3 {
     width: 2em;
     height: 0.3em;
     background-color: white;
@@ -105,19 +95,18 @@ header .topNavBar #menu-button-container .menu-button-bar3 {
     transform: translate(0, -0.7em) rotate(45deg);
 }
 
-/******************* 
-ABOUT - CONTENUTO
-********************/
-
-body h1.h1-hello {
+header{
+    padding-top: 20%;
+    padding-bottom: 20%;
+    background-image: url("../img/Background/background.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: top;
     text-align: center;
-    margin-top: 2.5em;
-    font-size: 4em;
     color: white;
+    width: 100%;
 }
 
-body p.p-hello {
-    text-align: center;
-    font-size: 1.5em;
-    color: white;
+header h1{
+    margin-bottom: 1em;
 }

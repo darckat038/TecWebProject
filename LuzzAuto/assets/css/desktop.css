@@ -3,20 +3,6 @@
     --text-color: black;
 }
 
-body {
-    background-color: var(--bg-color);
-    color: var(--text-color);
-    display: flex;
-    flex-direction: column;
-    font-size: 100%;
-    font-family: "Lexend", Roboto, sans-serif;
-    line-height: 1.5em;
-    background-image: url("../img/Background/background.jpg");
-    background-repeat: no-repeat;
-    background-position: top;
-    background-size: cover;
-}
-
 body.dark {
     --bg-color: #121212;
     --text-color: #ffffff;
@@ -27,60 +13,65 @@ body.purple {
     --text-color: #ffffff;
 }
 
-header {
-    display: inline-flex;
-    overflow: hidden;
-    position: relative;
+*{
+    border: 0;
+    margin: 0;
+}
+
+/******************* 
+        HOME
+********************/
+
+body{
+    background-color: var(--bg-color);
+    color: var(--text-color);
+    display: flex;
+    flex-direction: column;
+    font-size: 100%;
+    font-family: "Lexend", Roboto, sans-serif;
+    line-height: 1.5em;
+    align-items: center;
+}
+
+.topNavBar{
     background-color: black;
     color: white;
+    display: inline-flex;
+    overflow: hidden;
+    position: fixed;
     border-radius: 1em;
+    width: 98%;
+    padding-top: 1em;
+    padding-bottom: 1em;
+    margin-top: 0.5em;
 }
 
-header .logo {
-    background-color: inherit;
-    color: inherit;
-    padding: 1em 1em;
-    text-decoration: none;
-}
-
-header .topNavBar {
-    /* usato per allineare il contenuto a destra*/
-    margin-left: auto; 
-    background-color: inherit;
-    color: inherit;
-}
-
-header .topNavBar #menu {
+#menu{
     list-style: none;
+    margin-left: auto;
     display: inline-flex;
     flex-direction: row;
 }
 
-header .topNavBar #menu a {
+#menu a{
     padding: 0 1.2em;
     text-align: center;
     text-decoration: none;
-    color: inherit;
-}
-
-header .topNavBar #menu a:hover,
-header .topNavBar #menu a#here {
-    color: #999afc;
-}
-
-/******************* 
-ABOUT - CONTENUTO
-********************/
-
-body h1 {
-    text-align: center;
-    margin-top: 1.5em;
-    font-size: 5em;
     color: white;
 }
 
-body p.p-hello {
+header{
+    padding-top: 20%;
+    padding-bottom: 20%;
+    background-image: url("../img/Background/background.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: top;
     text-align: center;
-    font-size: 2em;
     color: white;
+    width: 100%;
+}
+
+header h1{
+    margin-bottom: 1em;
 }
