@@ -6,5 +6,5 @@ Progetto del corso di Tecnologie Web della laurea in Informatica presso l'Univer
 - Diviesti Filippo
 - Righetto Filippo
 ### Link utili:
-- [Template esempio](https://demo.themesine.com/carvilla/)
+- [Template esempio Carvilla](https://demo.themesine.com/carvilla/)
 - [WCAG22 Regole di accessibilità](https://www.w3.org/WAI/WCAG22/quickref/)
