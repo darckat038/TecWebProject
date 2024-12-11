@@ -24,11 +24,14 @@
     testo: #ffffff;
 }
 * {
-    sfondo: #3e3e3e;
-;
+    sfondo: #3e3e3e;;
     testo: #ffffff;
 }
 * {
     sfondo: #696969;
+    testo: #ffffff;
+}
+* {
+    sfondo: #000000;
     testo: #ffffff;
 }

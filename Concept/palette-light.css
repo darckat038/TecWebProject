@@ -1,12 +1,3 @@
-#sfondo, #testo
-#bcbdfd, #000000
-#999afc, #000000
-#4e4ffa, #ffffff
-#3f3ee3, #ffffff
-#2f2ecc, #ffffff
-#ffffff, #4e4ffa
-#ffffff, #3e3e3e
-#ffffff, #696969
 
 * {
     sfondo: #bcbdfd;
@@ -32,12 +23,39 @@
     sfondo: #ffffff;
     testo: #4e4ffa;
 }
+
 * {
-    sfondo: #ffffff;
-;
+    sfondo: #ffffff;;
     testo: #3e3e3e;
 }
+
 * {
     sfondo: #ffffff;
     testo: #696969;
+}
+
+testi_di_contenuto_[es_paragrafo_chi_siamo] {
+    sfondo: #ffffff;
+    testo: #000000;
+}
+
+link menu {
+    sfondo: #000000;
+    testo_link_non_visitato: #ffffff;
+    testo_link_visitato: #999afc;
+}
+
+bottoni {
+    sfondo: #2f2ecc;
+    testo: #ffffff;
+}
+
+cards {
+    sfondo: #4e4ffa;
+    testo: #ffffff;
+}
+
+forms {
+    sfondo: #ffffff;
+    colore_bordo_input: #696969;
 }
