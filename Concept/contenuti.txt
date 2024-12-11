@@ -1,4 +1,4 @@
-MAIN
+HOME - Bilippo
   - "cosa stai cercando?" aka filtro veloce per marca/modello ecc che andra' ad aprire la pagina listino filtrata
   - promozioni aka 3/4 auto a prezzo scontato
   - "cerchiamo talenti" aka link ad un form per inviare CV e candidatura, selezionando la posizione da un elenco
@@ -6,20 +6,45 @@ MAIN
   - qualche recensione fasulla maybe
   - indirizzo e link alla pagina about
 
-CHI SIAMO/ABOUT
+CHI SIAMO/ABOUT - Bilippo
   - storia
   - un po' di numeri e statistiche (auto vendute ecc)
   - come raggiungerci
   - contatti
 
-LISTINO
+LISTINO - Emanuelippo
   - elenco completo veicoli (ciascuno con nome e prezzo, foto copertina)
 
-DETTAGLIO VEICOLO
+AUTO - Emanuelippo
   - info dettagliate e foto
   - link per prenotare test drive
 
-FOOTER
+LOGIN - Dilippo
+  - email
+  - password
+
+REGISTRAZIONE - Dilippo
+  - nome
+  - cognome
+  - email
+  - password
+  - data nascita
+  - codice fiscale
+
+TEST DRIVE - Dilippo
+  - pagina informativa su servizio offerto
+  - form visualizzabile solo le loggato altrimenti bottone per login
+
+UTENTE - Rilippo
+  - pagina gestione utente
+  - pagina gestione prenotazioni
+
+AMMINISTRATORE - Rilippo
+  - pagina gestione amministratore
+  - pagina gestione prenotazioni
+  - pagina gestione auto
+
+*FOOTER - Tutti
   - certificazione WCAG accessbile
   - copyright
   - disclaimer (vedi telegram 😎)
