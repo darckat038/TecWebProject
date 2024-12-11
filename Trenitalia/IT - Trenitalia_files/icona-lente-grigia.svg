@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="22.621" height="22.621" viewBox="0 0 22.621 22.621">
+  <g id="Lente" transform="translate(-1376 -11)">
+    <g id="Path_14174" data-name="Path 14174" transform="translate(1376 11)" fill="none" stroke-linecap="round">
+      <path d="M10,0A10,10,0,1,1,0,10,10,10,0,0,1,10,0Z" stroke="none"/>
+      <path d="M 10 3 C 6.140190124511719 3 3 6.140190124511719 3 10 C 3 13.85980987548828 6.140190124511719 17 10 17 C 13.85980987548828 17 17 13.85980987548828 17 10 C 17 6.140190124511719 13.85980987548828 3 10 3 M 10 0 C 15.52285003662109 0 20 4.477149963378906 20 10 C 20 15.52285003662109 15.52285003662109 20 10 20 C 4.477149963378906 20 0 15.52285003662109 0 10 C 0 4.477149963378906 4.477149963378906 0 10 0 Z" stroke="none" fill="#303030"/>
+    </g>
+    <line id="Line_997" data-name="Line 997" x2="2" y2="2" transform="translate(1394.5 29.5)" fill="none" stroke="#303030" stroke-linecap="round" stroke-width="3"/>
+  </g>
+</svg>

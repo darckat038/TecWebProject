@@ -1,0 +1,10 @@
+<svg id="_01_check" data-name="01_check" xmlns="http://www.w3.org/2000/svg" width="41" height="20" viewBox="0 0 41 20">
+  <g id="Rectangle_8432" data-name="Rectangle 8432" fill="#fff" stroke="#707070" stroke-width="1">
+    <rect width="41" height="20" rx="10" stroke="none"/>
+    <rect x="0.5" y="0.5" width="40" height="19" rx="9.5" fill="none"/>
+  </g>
+  <g id="Radio_Button" data-name="Radio Button" transform="translate(2 2)" fill="#707070" stroke="#707070" stroke-width="1">
+    <circle cx="8" cy="8" r="8" stroke="none"/>
+    <circle cx="8" cy="8" r="7.5" fill="none"/>
+  </g>
+</svg>
