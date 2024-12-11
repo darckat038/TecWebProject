@@ -18,3 +18,8 @@ LISTINO
 DETTAGLIO VEICOLO
   - info dettagliate e foto
   - link per prenotare test drive
+
+FOOTER
+  - certificazione WCAG accessbile
+  - copyright
+  - disclaimer (vedi telegram 😎)
