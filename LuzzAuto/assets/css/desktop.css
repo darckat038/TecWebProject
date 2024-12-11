@@ -47,8 +47,16 @@ body{
 }
 
 .topNavBar .logo {
-    display: inline-block;
+    position: inherit;
+    display: block;
+    height: fit-content;
+    width: fit-content;
     padding: 0 0 0 1em;
+}
+
+.topNavBar .logo img {
+    height: 15%;
+    width: 15%;
 }
 
 #menu{
