@@ -48,7 +48,9 @@ body{
 }
 
 .topNavBar .logo {
-    display: inline-block;
+    display: block;
+    height: fit-content;
+    width: fit-content;
     padding: 0 0 0 1em;
 }
 
