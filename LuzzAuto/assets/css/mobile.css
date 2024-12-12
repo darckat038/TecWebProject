@@ -38,6 +38,8 @@ body.purple {
         HOME
 ********************/
 
+/*#region Home*/
+
 body{
     background-color: var(--bg-color);
     color: var(--text-color);
@@ -165,3 +167,10 @@ header{
 header h1{
     margin-bottom: 1em;
 }
+
+/*#endregion Home*/
+
+/******************* 
+        LOGIN
+********************/
+
