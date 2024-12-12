@@ -67,10 +67,9 @@ body{
     display: block;
     margin-right: 100em;
     padding: 0 0 0 1em;
-    pointer-events: none;
 }
 
-.topNavBar .logo .disabled{
+.topNavBar #disable{
     pointer-events: none;
 }
 
