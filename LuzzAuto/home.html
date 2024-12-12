@@ -25,12 +25,12 @@
 
         <header>
             <h1 aria-label="Titolo pagina">LuzzAuto</h1>
-            <h2 aria-label="descrizione pagina">descrizione homepage</h2>
+            <h2 aria-label="descrizione pagina">Da sempre <br>il tuo concessionario di fiducia</h2>
         </header>
         <nav class="topNavBar">
             <a href="home.html" class="logo" id="disable" aria-label="Logo"><img src="assets/img/Logo/Logo Bianco Scritta.svg" alt="Logo"></a>
 
-            <span lang="eng" id="breadcrumb" aria-label="Pagina attuale">Home</span>
+            <span lang="eng" id="breadcrumb" aria-label="Pagina attuale" tabindex="2">Home</span>
 
             <a href="javascript:void(0);" id="menu-button-container" onclick="menuOpenClose(this)" aria-label="icona apertura menu">               
                 <div class="menu-button-bar1" aria-hidden="true"></div>
@@ -47,7 +47,16 @@
                 <li><a href="registrazione.html" >Registrazione</a></li>
             </ul>
         </nav>
-
+        <section class="fastSearch">
+            <h3>Cerchi un veicolo in particolare?</h3>
+            <form action="listino.html">
+                <label for="marca" id="marcaL">Marca</label>
+                <input type="text" name="marca" id="marca">
+                <label for="modello" id="modelloL">Modello</label>
+                <input type="text" name="modello" id="modello">
+                <input type="submit" value="Ricerca" id="submit">
+            </form>
+        </section>
         
 
     </body>
