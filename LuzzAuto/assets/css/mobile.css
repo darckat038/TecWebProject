@@ -1,6 +1,22 @@
 :root {
-    --bg-color: white;
-    --text-color: black;
+    --content-text-bg-color: #ffffff;
+    --content-text-color: #000000;
+
+    --navbar-bg-color: #000000;
+    --navbar-text-color: #ffffff;
+
+    --link-bg-color: #000000;
+    --not-visited-link: #ffffff;
+    --visited-link: #999afc;
+
+    --button-bg-color: #2f2ecc;
+    --button-text-color: #ffffff;
+
+    --cards-bg-color: #4e4ffa;
+    --cards-text-color: #ffffff;
+
+    --form-bg-color: #ffffff;
+    --form-border-input-color: #696969;
 }
 
 body.dark {
@@ -65,7 +81,7 @@ body{
     list-style: none;
     display: none;
     flex-direction: column;
-    margin-top: 0.6em;
+    margin-top: 1.5em;
     text-align: center;
     padding-left: 0;
 }
@@ -73,11 +89,24 @@ body{
 #menu a{
     display: block;
     flex-direction: row;
-    color: white;
+    color: var(--navbar-text-color);
     text-decoration: underline;
     text-underline-offset: 0.3em;
     font-size: 1.2em;
     padding-top: 1em;
+}
+
+#menu #here{
+    background-color: white;
+    margin: 0 auto;
+    border-radius: 1em;
+}
+
+#menu #here a {
+    text-decoration: none;
+    pointer-events: none;
+    color: var(--content-text-color);
+    padding: 0.4em 0.6em;
 }
 
 .topNavBar #menu-button-container {
