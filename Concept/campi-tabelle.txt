@@ -1,0 +1,15 @@
+Campi auto:
+- Marca
+- Modello
+- Anno
+- Colore
+- Condizione (nuovo/usato)
+- Prezzo
+- Chilometraggio
+- Alimentazione
+- Cambio
+- Trazione (AWD, RWD, FWD)
+- Potenza (CV)
+- Peso (kg)
+- Neopatentati (sì/no)
+- Numero posti
