@@ -152,6 +152,8 @@ body{
         HOME
 ********************/
 
+/* HEADER */
+
 header{
     padding-top: 20%;
     padding-bottom: 20%;
@@ -172,6 +174,8 @@ header h1{
 header h2 {
     color: var(--cards-text-color);
 }
+
+/* MAIN */
 
 .fastSearch {
     display: flex;
@@ -195,19 +199,41 @@ header h2 {
     align-items: center;
 }
 
+.fastSearch form #condizioneF {
+    display: inline-flex;
+}
+
+.fastSearch form #condizioneL {
+    display: flex;
+    align-items: center;
+    margin-right: 1em;
+}
+
 .fastSearch form input {
     border: 0.2em solid var(--form-border-input-color);
     border-radius: 1em;
+    padding: 0.4em 0.4em;
 }
 
 .fastSearch form #marca,
-.fastSearch form #modello {
+.fastSearch form #modello,
+.fastSearch form #maxPrezzo {
     text-align: center;
 }
 
 .fastSearch form #submit {
     margin-top: 1em;
     padding: 0.5em 1em;
+}
+
+/* FOOTER */
+
+footer {
+    background-color: var(--navbar-bg-color);
+    color: var(--navbar-text-color);
+    margin: 1em 0 0 0;
+    padding: 1em 10em;
+    float: left;
 }
 
 /*#endregion Home*/
