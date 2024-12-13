@@ -44,8 +44,21 @@
             </ul>
         </nav>
 
+        <form action="" method="post">
+            <fieldset>
 
+                <legend><span lang="eng">Login</span></legend>
 
+                <label for="mail"><span lang="eng">Mail:</span></label>
+                <input type="email" name="mail" id="mail" aria-required="true" aria-label="Campo di inserimento della mail" required data-msg-required="Per favore, inserisci la tua mail" data-msg-invalid:="Ci dispiace, formato non corretto">
+
+                <label for="password"><span lang="eng">Password:</span></label>
+                <input type="password" name="password" id="password" aria-required="true" aria-label="Campo di inserimento della password" required data-msg-required="Per favore, inserisci la tua password">
+
+                <input type="submit" value="Login" aria-label="Bottone di invio del form">
+
+            </fieldset>
+        </form>
 
 
     </body>
