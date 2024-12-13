@@ -13,3 +13,10 @@ Campi auto:
 - Peso (kg)
 - Neopatentati (sì/no)
 - Numero posti
+
+Campi utente: 
+- Nome
+- Cognome
+- Telefono
+- Email
+- Password
