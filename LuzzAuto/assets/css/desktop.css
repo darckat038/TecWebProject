@@ -34,10 +34,6 @@ body.purple {
     margin: 0;
 }
 
-/******************* 
-        HOME
-********************/
-
 body{
     background-color: var(--content-text-bg-color);
     color: var(--content-text-color);
