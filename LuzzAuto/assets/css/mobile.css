@@ -34,10 +34,6 @@ body.purple {
     margin: 0;
 }
 
-/******************* 
-        HOME
-********************/
-
 body{
     background-color: var(--bg-color);
     color: var(--text-color);
@@ -149,6 +145,14 @@ body{
 .change .menu-button-bar3 {
     transform: translate(0, -0.7em) rotate(45deg);
 }
+
+/*#region About us*/
+
+/****************
+    ABOUT US
+*****************/
+
+/*#endregion About us*/
 
 header{
     padding-top: 20%;
