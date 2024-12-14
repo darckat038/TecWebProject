@@ -171,8 +171,13 @@ header{
 }
 
 header h1{
-    margin-bottom: 1em;
+    margin: 1em 1em 0.5em 1em;
     line-height: 1em;
+}
+
+header h2 {
+    margin-top: 1em;
+    color: var(--cards-text-color);
 }
 
 main {
@@ -216,6 +221,21 @@ main {
 }
 
 #ourNums h3 {
+    margin-top: 1em;
+}
+
+#reachUs {
+    border: 0.2em solid var(--content-text-color);
+    border-radius: 1em;
+    width: 70%;
+    margin-top: 3em;
+    display: inline-block;
+    text-align: center;
+    padding: 0 1em 1em 1em;
+    box-shadow: 0em 0em 1em black;
+}
+
+#reachUs h3 {
     margin-top: 1em;
 }
 

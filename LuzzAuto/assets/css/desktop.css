@@ -186,6 +186,21 @@ main {
     margin-top: 1em;
 }
 
+#reachUs {
+    border: 0.2em solid var(--content-text-color);
+    border-radius: 1em;
+    width: 60%;
+    margin-top: 3em;
+    display: inline-block;
+    text-align: center;
+    padding: 0 1em 1em 1em;
+    box-shadow: 0em 0em 1em black; 
+}
+
+#reachUs h3 {
+    margin-top: 1em;
+}
+
 footer {
     margin-top: 1em;
     background-color: var(--navbar-bg-color);
