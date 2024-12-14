@@ -17,6 +17,8 @@
 
     --form-bg-color: #ffffff;
     --form-border-input-color: #696969;
+
+    width: 100%;
 }
 
 body.dark {
@@ -32,6 +34,10 @@ body.purple {
 *{
     border: 0;
     margin: 0;
+}
+
+html, body{
+    width: 100%;
 }
 
 body{
@@ -139,6 +145,7 @@ main {
     display: flex;
     flex-direction: column;
     align-items: center;
+    width: 100%;
 }
 
 #history {
@@ -183,7 +190,6 @@ footer {
     margin-top: 1em;
     background-color: var(--navbar-bg-color);
     color: var(--navbar-text-color);
-    width: 100%;
     display: flex;
     justify-content: center;
     height: fit-content;
@@ -192,7 +198,7 @@ footer {
 }
 
 footer p{
-    display: inline;
+    display: inline-flex;
     font-size: 0.8em;
     font-style: italic;
 }
