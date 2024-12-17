@@ -35,21 +35,8 @@ body.purple {
 }
 
 /******************* 
-        HOME
+        MENU
 ********************/
-
-/*#region Home*/
-
-body{
-    background-color: var(--bg-color);
-    color: var(--text-color);
-    display: flex;
-    flex-direction: column;
-    font-size: 100%;
-    font-family: "Lexend", Roboto, sans-serif;
-    line-height: 1.5em;
-    align-items: center;
-}
 
 .topNavBar{
     background-color: black;
@@ -155,8 +142,22 @@ body{
     transform: translate(0, -0.7em) rotate(45deg);
 }
 
-/* FINE MENU */
+/******************* 
+        HOME
+********************/
 
+/*#region Home*/
+
+body{
+    background-color: var(--bg-color);
+    color: var(--text-color);
+    display: flex;
+    flex-direction: column;
+    font-size: 100%;
+    font-family: "Lexend", Roboto, sans-serif;
+    line-height: 1.5em;
+    align-items: center;
+}
 
 header{
     padding-top: 20%;

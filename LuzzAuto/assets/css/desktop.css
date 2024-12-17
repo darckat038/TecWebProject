@@ -35,21 +35,8 @@ body.purple {
 }
 
 /******************* 
-        HOME
+        MENU
 ********************/
-
-/*#region Home*/
-
-body{
-    background-color: var(--content-text-bg-color);
-    color: var(--content-text-color);
-    display: flex;
-    flex-direction: column;
-    font-size: 100%;
-    font-family: "Lexend", Roboto, sans-serif;
-    line-height: 1.5em;
-    align-items: center;
-}
 
 .topNavBar{
     background-color: black;
@@ -106,10 +93,28 @@ body{
 #menu #here a {
     text-decoration: none;
     pointer-events: none;
-    background-color: white;
-    color: black;
+    background-color: var(--content-text-bg-color);
+    color: var(--content-text-color);
     border-radius: 1em;
     padding: 0.4em 0.6em;
+}
+
+
+/******************* 
+        HOME
+********************/
+
+/*#region Home*/
+
+body{
+    background-color: var(--content-text-bg-color);
+    color: var(--content-text-color);
+    display: flex;
+    flex-direction: column;
+    font-size: 100%;
+    font-family: "Lexend", Roboto, sans-serif;
+    line-height: 1.5em;
+    align-items: center;
 }
 
 header{
