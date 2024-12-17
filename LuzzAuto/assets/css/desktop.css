@@ -43,32 +43,28 @@ body.purple {
     color: white;
     display: inline-flex;
     overflow: hidden;
-    position: fixed;
-    border-radius: 1em;
-    width: 98%;
+    position: absolute;
+    width: 100%;
     padding-top: 1em;
     padding-bottom: 1em;
-    margin-top: 0.5em;
 }
 
-.topNavBar .logo {
-    position: inherit;
-    display: block;
-    margin-right: 100em;
-    padding: 0 0 0 1em;
+.hide{
+    text-indent: 100%;
+    white-space: nowrap;
+    overflow: hidden;
+}
+
+h1.hide{
+    background-image: url("../img/Logo/Logo\ Bianco\ Scritta.svg");
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    margin-left: 1em;
 }
 
 .topNavBar #disable{
     pointer-events: none;
-}
-
-
-.topNavBar .logo img {
-    width: 8em;
-}
-
-.topNavBar #breadcrumb {
-    text-indent: -9999em;
 }
 
 #menu{
@@ -98,6 +94,24 @@ body.purple {
     border-radius: 1em;
     padding: 0.4em 0.6em;
 }
+
+/******************* 
+     BREADCRUMB
+********************/
+
+#breadcrumb{
+    color: var(--navbar-text-color);
+    background-color: var(--navbar-bg-color);
+    width: 100%;
+    margin-top: 3.5em;
+    border-top: 1px solid var(--form-border-input-color);
+    position: absolute;
+}
+
+#breadcrumb p{
+    padding: 0.5em 0 0.5em 1em;
+}
+
 
 /******************* 
         HOME
