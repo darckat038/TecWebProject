@@ -24,16 +24,14 @@
     <body>
 
         <nav class="topNavBar">
-            <a href="home.html" class="logo" aria-label="Logo"><img src="assets/img/Logo/Logo Bianco Scritta.svg" alt="Logo"></a>
 
-            <span lang="eng" id="breadcrumb" aria-label="Pagina attuale">Login</span>
-
+            <h1 class="hide">LuzzAuto</h1>
+            
             <a href="javascript:void(0);" id="menu-button-container" onclick="menuOpenClose(this)" aria-label="icona apertura menu">               
                 <div class="menu-button-bar1" aria-hidden="true"></div>
                 <div class="menu-button-bar2" aria-hidden="true"></div>
                 <div class="menu-button-bar3" aria-hidden="true"></div>
             </a>
-            
             <ul id="menu"  aria-label="menu del sito">
                 <li><a href="home.html"><span lang="eng">Home</span></a></li>
                 <li><a href="about.html" >Chi Siamo</a></li>
@@ -44,10 +42,14 @@
             </ul>
         </nav>
 
+        <nav id="breadcrumb">
+            <p>Ti trovi in: <span lang="eng">Login</span></p>
+        </nav>
+
         <form action="" method="post">
             <fieldset>
 
-                <legend><span lang="eng">Login</span></legend>
+                <legend>Credenziali</legend>
 
                 <label for="mail"><span lang="eng">Mail:</span></label>
                 <input type="email" name="mail" id="mail" aria-required="true" aria-label="Campo di inserimento della mail" required data-msg-required="Per favore, inserisci la tua mail" data-msg-invalid:="Ci dispiace, formato non corretto">
@@ -59,7 +61,6 @@
 
             </fieldset>
         </form>
-
 
     </body>
 </html>
