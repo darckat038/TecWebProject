@@ -104,8 +104,8 @@ body{
 #menu #here a {
     text-decoration: none;
     pointer-events: none;
-    background-color: white;
-    color: black;
+    background-color: var(--content-text-bg-color);
+    color: var(--content-text-color);
     border-radius: 1em;
     padding: 0.4em 0.6em;
 }

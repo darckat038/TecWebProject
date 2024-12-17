@@ -49,6 +49,8 @@ body{
     align-items: center;
 }
 
+/* MENU */
+
 .topNavBar{
     background-color: black;
     color: white;
@@ -90,6 +92,11 @@ body{
     padding-left: 0;
 }
 
+#menu li{
+    margin-top: 1em;
+    margin-bottom: 1em;
+}
+
 #menu a{
     display: block;
     flex-direction: row;
@@ -97,16 +104,12 @@ body{
     text-decoration: underline;
     text-underline-offset: 0.3em;
     font-size: 1.2em;
-    padding-top: 1em;
 }
 
 #menu #here{
     background-color: white;
-    margin-top: 1em;
-    margin-left: auto;
-    margin-right: auto;
     border-radius: 1em;
-    margin-bottom: -0.5em;
+    align-self: center;
 }
 
 #menu a:visited {
@@ -116,7 +119,9 @@ body{
 #menu #here a {
     text-decoration: none;
     pointer-events: none;
+    background-color: var(--content-text-bg-color);
     color: var(--content-text-color);
+    border-radius: 1em;
     padding: 0.4em 0.6em;
 }
 
@@ -149,6 +154,8 @@ body{
 .change .menu-button-bar3 {
     transform: translate(0, -0.7em) rotate(45deg);
 }
+
+/* FINE MENU */
 
 header{
     padding-top: 20%;
