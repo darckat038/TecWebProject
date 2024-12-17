@@ -17,6 +17,7 @@
 
     --form-bg-color: #ffffff;
     --form-border-input-color: #696969;
+    --form-text-color: #000000;
 }
 
 body.dark {
@@ -46,8 +47,8 @@ body{
 }
 
 .topNavBar{
-    background-color: black;
-    color: white;
+    background-color: var(--navbar-bg-color);
+    color: var(--navbar-text-color);
     display: inline-flex;
     overflow: hidden;
     position: fixed;
@@ -111,6 +112,11 @@ body{
 /******************* 
         HOME
 ********************/
+
+/* 
+    width non include padding e margin
+    ex. width: 100% = larghezza 100% solo al contenuto, a cui vado ad aggiungere margini ed eventuale padding
+*/
 
 header{
     padding-top: 20%;
@@ -221,7 +227,9 @@ footer {
     color: var(--navbar-text-color);
     display: flex;
     flex-direction: row;
-    padding: 1em;
+    justify-content: center;
+    padding: 1em 0;
+    width: 100%;
 }
 
 footer img.imgValidHTMLCode {
