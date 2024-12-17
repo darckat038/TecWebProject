@@ -35,19 +35,8 @@ body.purple {
 }
 
 /******************* 
-        HOME
+        MENU
 ********************/
-
-body{
-    background-color: var(--content-text-bg-color);
-    color: var(--content-text-color);
-    display: flex;
-    flex-direction: column;
-    font-size: 100%;
-    font-family: "Lexend", Roboto, sans-serif;
-    line-height: 1.5em;
-    align-items: center;
-}
 
 .topNavBar{
     background-color: black;
@@ -108,6 +97,21 @@ body{
     color: var(--content-text-color);
     border-radius: 1em;
     padding: 0.4em 0.6em;
+}
+
+/******************* 
+        HOME
+********************/
+
+body{
+    background-color: var(--content-text-bg-color);
+    color: var(--content-text-color);
+    display: flex;
+    flex-direction: column;
+    font-size: 100%;
+    font-family: "Lexend", Roboto, sans-serif;
+    line-height: 1.5em;
+    align-items: center;
 }
 
 header{
