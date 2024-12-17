@@ -138,9 +138,10 @@ header h2 {
     flex-direction: column;
     border: 0.3em solid var(--content-text-color);
     border-radius: 1em;
-    margin-top: -4em;
+    margin-top: -3.5em;
     background-color: var(--content-text-bg-color);
     box-shadow: 0.3em 0.3em 0.7em black;
+    padding: 0.5em;
 }
 
 .fastSearch h3 {
@@ -205,9 +206,13 @@ header h2 {
     font-size: 1em;
 }
 
+.fastSearch form #bottoniF {
+    display: block;
+    margin-left: 1em;
+}
+
 .fastSearch form #submit {
-    margin-top: 1em;
-    padding: 0.5em 1em;
+    padding: 1em 1em;
 }
 
 footer {
