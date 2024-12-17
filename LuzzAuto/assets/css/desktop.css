@@ -142,7 +142,7 @@ header h2 {
 .fastSearch {
     display: flex;
     flex-direction: column;
-    border: 0.3em solid var(--content-text-color);
+    border: 0.2em solid var(--content-text-color);
     border-radius: 1em;
     margin-top: -3.5em;
     background-color: var(--content-text-bg-color);
