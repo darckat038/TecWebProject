@@ -29,24 +29,26 @@
         </header>
 
         <nav class="topNavBar">
-            <a href="home.html" class="logo" id="disable" aria-label="Logo"><img src="assets/img/Logo/Logo Bianco Scritta.svg" alt="Logo"></a>
 
-            <span lang="eng" id="breadcrumb" aria-label="Pagina attuale" tabindex="2">Home</span>
-
-            <a href="javascript:void(0);" id="menu-button-container" onclick="menuOpenClose(this)" aria-label="tasto apertura menu">
+            <h1 class="hide">LuzzAuto</h1>
+            
+            <a href="javascript:void(0);" id="menu-button-container" onclick="menuOpenClose(this)" aria-label="icona apertura menu">               
                 <div class="menu-button-bar1" aria-hidden="true"></div>
                 <div class="menu-button-bar2" aria-hidden="true"></div>
                 <div class="menu-button-bar3" aria-hidden="true"></div>
             </a>
-            
             <ul id="menu"  aria-label="menu del sito">
-                <li id="here"><a href="home.html" tabindex="-1"><span lang="eng">Home</span></a></li>
+                <li><a href="home.html"><span lang="eng">Home</span></a></li>
                 <li><a href="about.html" >Chi Siamo</a></li>
                 <li><a href="listino.html" >Listino auto</a></li>
                 <li><a href="test_drive.html" ><span lang="eng">Test Drive</span></a></li>
-                <li><a href="login.html" ><span lang="eng">Login</span></a></li>
+                <li id="here"><a href="login.html" tabindex="-1"><span lang="eng">Login</span></a></li>
                 <li><a href="registrazione.html" >Registrazione</a></li>
             </ul>
+        </nav>
+
+        <nav id="breadcrumb">
+            <p>Ti trovi in: <span lang="eng">Login</span></p>
         </nav>
 
         <main>
