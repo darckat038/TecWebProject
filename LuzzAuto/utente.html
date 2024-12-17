@@ -1,22 +1,95 @@
 <!DOCTYPE html>
 <html lang="it">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width">
 
-    <base href="/LuzzAuto/">
+        <base href="/LuzzAuto/">
 
-    <title>Utente - LuzzAuto Concessionario</title>
+        <title>Utente - LuzzAuto Concessionario</title>
 
-    <link rel="stylesheet" media="screen and (max-width:1024px), only screen and (max-device-width:1024px)" href="assets/css/mobile.css" type="text/css">
-    <link rel="stylesheet" media="screen and (min-width:1024px), only screen and (min-device-width:1024px)" href="assets/css/desktop.css" type="text/css">
-    <link rel="stylesheet" media="print" href="assets/css/print.css" type="text/css">
+        <link rel="stylesheet" media="screen and (max-width:1024px)" href="assets/css/mobile.css" type="text/css">
+        <link rel="stylesheet" media="screen and (min-width:1024px)" href="assets/css/desktop.css" type="text/css">
+        <link rel="stylesheet" media="print" href="assets/css/print.css" type="text/css">
 
-    <meta name="description" content="Gestisci le informazioni del tuo account personale e le prenotazioni al nostro servizio di test di guida">
-    <meta name="keywords" content="luzzauto, concessionario, macchina, auto, automobili, guida, vetture, test, account, prenotazioni, guida">
-    <meta name="author" content="Artusi Emanuele, Bellon Filippo, Diviesti Filippo, Righetto Filippo">
-</head>
-<body>
-    
-</body>
+        <script src="assets/js/file.js"></script>
+
+        <meta name="description" content="Gestisci le informazioni del tuo account personale e le prenotazioni al nostro servizio di test di guida">
+        <meta name="keywords" content="luzzauto, concessionario, macchina, auto, automobili, guida, vetture, test, account, prenotazioni, guida">
+        <meta name="author" content="Artusi Emanuele, Bellon Filippo, Diviesti Filippo, Righetto Filippo">
+
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Lexend:wght@100..900&display=swap" rel="stylesheet">
+    </head>
+    <body id="corpo">
+
+        <!--
+        <header>
+        </header>
+        -->
+        <nav class="topNavBar">
+            <a href="home.html" class="logo" id="disable" aria-label="Logo"><img src="assets/img/Logo/Logo Bianco Scritta.svg" alt="Logo"></a>
+
+            <span id="breadcrumb" aria-label="Pagina attuale">Utente</span>
+
+            <a href="javascript:void(0);" id="menu-button-container" onclick="menuOpenClose(this)" aria-label="icona apertura menu">               
+                <div class="menu-button-bar1" aria-hidden="true"></div>
+                <div class="menu-button-bar2" aria-hidden="true"></div>
+                <div class="menu-button-bar3" aria-hidden="true"></div>
+            </a>
+            
+            <ul id="menu"  aria-label="menu del sito">
+                <li id="here"><a href="utente.html" tabindex="-1">Utente</a></li>
+            </ul>
+        </nav>
+
+        <nav class="leftNavBar">
+          <ul id="menuUtente" aria-label="menu utente">
+            <li><a href="#" data-section="info">Informazioni Utente</a></li>
+            <li><a href="#" data-section="prenotazioni">Gestione Prenotazioni</a></li>
+          </ul>
+        </nav>
+
+        <h1 id="saluto">...</h1>
+
+        <div id="info" class="section active">
+            <h2>Informazioni Utente</h2>
+            <form>
+              <label for="name">Nome:</label>
+              <input type="text" id="name" name="name" placeholder="Giovanni"><br>
+              <label for="cognome">Cognome:</label>
+              <input type="text" id="cognome" name="cognome" placeholder="Rossi"><br>
+              <label for="phone">Numero telefono:</label>
+              <input type="tel" id="phone" name="phone" placeholder="Es: +39 123 456 7890" pattern="[+]{0,1}[0-9\s]{7,15}" title="Inserire un numero di telefono valido, ad esempio +39 123 456 7890"><br>
+              <label for="email">Email:</label>
+              <input type="email" id="email" name="email" placeholder="giovanniRossi@gmail.com"><br>
+              <label for="password">password:</label>
+              <input type="text" id="password" name="password" placeholder="**************"><br>
+              <a href="#"  id="modUtente" data-section="modificaUtente">modifica</a>
+            </form>
+          </div>
+
+          <div id="modificaUtente" class="section">
+            <h2>Informazioni Utente</h2>
+            <form>
+              <label for="name">Nome: Modifica...</label><br>
+              <label for="cognome">Cognome: Modifica...</label><br>
+              <label for="phone">Numero telefono: Modifica...</label><br>
+              <label for="email">Email: Modifica</label><br>
+              <label for="password">password: Modifica</label><br>
+            </form>
+          </div>
+
+          <div id="prenotazioni" class="section">
+            <h2>Prenotazioni Test Drive</h2>
+            <ul>
+              <li>Prenotazione 1 - Data: 20/12/2024</li>
+              <li>Prenotazione 2 - Data: 22/12/2024</li>
+            </ul>
+            <button>Gestisci Prenotazioni</button>
+          </div>
+        
+
+    </body>
 </html>

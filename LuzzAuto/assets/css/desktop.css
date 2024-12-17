@@ -125,3 +125,112 @@ header{
 header h1{
     margin-bottom: 1em;
 }
+
+
+
+/******************* 
+        UTENTE
+********************/
+
+  /* Stile delle sezioni */
+
+  #menuUtente{
+    list-style: none;
+}
+
+#menuUtente a{
+    text-align: center;
+    text-underline-offset: 0.3em;
+    /*
+    color: var(--not-visited-link);
+    background-color: var(--link-bg-color);
+    */
+}
+
+#menuUtente a:visited {
+    /*
+    color: var(--visited-link);
+    */
+}
+
+#menuUtente #here a {
+    text-decoration: none;
+    pointer-events: none;
+    background-color: white;
+    color: black;
+    border-radius: 1em;
+    padding: 0.4em 0.6em;
+}
+
+#saluto{
+    margin-top: 3em;
+    margin-bottom:1em;
+}
+
+.section {
+    display: none;
+  }
+  
+  .section.active {
+    display: block;
+  }
+
+  .leftNavBar {
+    background-color: #696969;  
+    color: black;
+    position: fixed;           
+    top: 4.6em;                   
+    left: 1%;                   
+    width: 16em;           
+    height: 100%;             
+    padding-top: 1em;          
+    padding-bottom: 1em;       
+    border-radius: 0.5em;      
+}
+
+#info{
+    background-color: white;
+    width: 30em;
+    height: 20em;
+    padding-left: 5em;
+    padding-top: 1em;
+    border-radius: 0.5em;
+}
+
+#info h2{
+    margin-bottom: 1.2em;
+}
+
+#modificaUtente{
+    background-color: white;
+    width: 30em;
+    height: 20em;
+    padding-left: 5em;
+    padding-top: 1em;
+    border-radius: 0.5em;
+}
+
+#modificaUtente h2{
+    margin-bottom: 1.2em;
+}
+
+#prenotazioni{
+    background-color: white;
+    width: 30em;
+    height: 20em;
+    padding-left: 5em;
+    padding-top: 1em;
+    border-radius: 0.5em;
+}
+
+#prenotazioni h2{
+    margin-bottom: 1.2em;
+}
+
+#corpo{
+    background-image: url("../img/Background/background.jpg");
+}
+
+
+
+  
