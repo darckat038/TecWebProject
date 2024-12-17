@@ -148,6 +148,10 @@ main {
     width: 100%;
 }
 
+main p {
+    font-size: 1.15em;
+}
+
 /*
 
 main section {
@@ -159,7 +163,7 @@ main section {
 
 #history {
     border-radius: 1em;
-    width: 90%;
+    width: 85%;
     margin-top: 2em;
     display: inline-block;
     padding: 0 1em 1em 1em;
@@ -172,7 +176,27 @@ main section {
 
 #history p {
     margin-top: 0.3em;
-    display: flex;
+}
+
+#history #part1 h3 {
+    text-align: center;
+}
+
+#history #part1 p {
+    text-align: center;
+}
+
+#history #part2 {
+    display: inline-flex;
+    flex-direction: row;
+}
+
+#history #part2 img {
+    height: 16em;
+    width: 28em;
+    object-fit: contain;
+    margin-left: 1em;
+    border-radius: 0.7em;
 }
 
 #ourNums {
@@ -184,12 +208,12 @@ main section {
     padding: 0 1em 1em 1em;
 }
 
-#ourNums span {
-    margin-top: 1em;
+#ourNums p {
+    margin-bottom: 1em;
 }
 
 #ourNums h3 {
-    margin-top: 1em;
+    margin-top: 0;
 }
 
 #reachUs {
@@ -212,14 +236,15 @@ footer {
     display: flex;
     justify-content: center;
     height: fit-content;
-    gap: 2em;
-    padding: 1em;
+    padding: 1em 0;
+    width: 100%;
 }
 
 footer p{
     display: inline-flex;
     font-size: 0.8em;
     font-style: italic;
+    padding: 0 1em;
 }
 
 .imgValidCode{
