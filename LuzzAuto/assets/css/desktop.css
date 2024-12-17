@@ -35,19 +35,8 @@ body.purple {
 }
 
 /******************* 
-        HOME
+        MENU
 ********************/
-
-body{
-    background-color: var(--content-text-bg-color);
-    color: var(--content-text-color);
-    display: flex;
-    flex-direction: column;
-    font-size: 100%;
-    font-family: "Lexend", Roboto, sans-serif;
-    line-height: 1.5em;
-    align-items: center;
-}
 
 .topNavBar{
     background-color: black;
@@ -104,10 +93,25 @@ body{
 #menu #here a {
     text-decoration: none;
     pointer-events: none;
-    background-color: white;
-    color: black;
+    background-color: var(--content-text-bg-color);
+    color: var(--content-text-color);
     border-radius: 1em;
     padding: 0.4em 0.6em;
+}
+
+/******************* 
+        HOME
+********************/
+
+body{
+    background-color: var(--content-text-bg-color);
+    color: var(--content-text-color);
+    display: flex;
+    flex-direction: column;
+    font-size: 100%;
+    font-family: "Lexend", Roboto, sans-serif;
+    line-height: 1.5em;
+    align-items: center;
 }
 
 header{
@@ -134,18 +138,34 @@ header h1{
 
   /* Stile delle sezioni */
 
-  #menuUtente{
-    list-style: none;
-}
+  #menuUtente {
+    list-style: none; 
+    padding: 0;
+    margin: 0;
+    display: flex; 
+    justify-content: center; 
+    gap: 1em; 
+  }
 
-#menuUtente a{
-    text-align: center;
-    text-underline-offset: 0.3em;
-    /*
-    color: var(--not-visited-link);
-    background-color: var(--link-bg-color);
-    */
-}
+  #menuUtente li {
+    margin-right: 10px; 
+  }
+
+  #menuUtente li a {
+    display: inline-block; 
+    padding: 0.75em 1.5em; 
+    background-color: white;
+    color: black; 
+    text-decoration: none; 
+    border-radius: 0.5em; 
+    font-weight: bold; 
+    transition: background-color 0.3s ease; 
+  }
+
+  #menuUtente li a:hover {
+    background-color: lightsteelbluep; 
+    cursor: pointer;
+  }
 
 #menuUtente a:visited {
     /*
@@ -162,6 +182,10 @@ header h1{
     padding: 0.4em 0.6em;
 }
 
+body{
+    background-image: url("../img/Background/background.jpg");
+}
+
 #saluto{
     margin-top: 3em;
     margin-bottom:1em;
@@ -176,17 +200,11 @@ header h1{
   }
 
   .leftNavBar {
-    background-color: #696969;  
     color: black;
-    position: fixed;           
-    top: 4.6em;                   
-    left: 1%;                   
-    width: 16em;           
-    height: 100%;             
-    padding-top: 1em;          
-    padding-bottom: 1em;       
-    border-radius: 0.5em;      
-}
+    padding: 1em;
+    border-radius: 0.5em;
+    margin-bottom: 2em;
+  }
 
 #info{
     background-color: white;
@@ -227,9 +245,6 @@ header h1{
     margin-bottom: 1.2em;
 }
 
-#corpo{
-    background-image: url("../img/Background/background.jpg");
-}
 
 
 

@@ -59,9 +59,9 @@ main h1 {
 }
 
 main h2 {
-    line-height: 1.5em
-    margin-bottom: 0.5em
-    margin-top: 0.5em
+    line-height: 1.5em;
+    margin-bottom: 0.5em;
+    margin-top: 0.5em;
 }
 
 main > dl {

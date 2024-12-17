@@ -22,7 +22,7 @@
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
         <link href="https://fonts.googleapis.com/css2?family=Lexend:wght@100..900&display=swap" rel="stylesheet">
     </head>
-    <body id="corpo">
+    <body>
 
         <!--
         <header>
@@ -44,14 +44,14 @@
             </ul>
         </nav>
 
+        <h1 id="saluto"></h1>
+
         <nav class="leftNavBar">
           <ul id="menuUtente" aria-label="menu utente">
             <li><a href="#" data-section="info">Informazioni Utente</a></li>
             <li><a href="#" data-section="prenotazioni">Gestione Prenotazioni</a></li>
           </ul>
         </nav>
-
-        <h1 id="saluto">...</h1>
 
         <div id="info" class="section active">
             <h2>Informazioni Utente</h2>
@@ -78,6 +78,10 @@
               <label for="phone">Numero telefono: Modifica...</label><br>
               <label for="email">Email: Modifica</label><br>
               <label for="password">password: Modifica</label><br>
+              <a href="#"  id="indietro" data-section="info">Indietro</a>
+              <a href="#"  id="salva" data-section="salva">Salva</a>
+
+
             </form>
           </div>
 
@@ -90,6 +94,5 @@
             <button>Gestisci Prenotazioni</button>
           </div>
         
-
     </body>
 </html>
