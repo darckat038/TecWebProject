@@ -148,10 +148,10 @@ h1.hide{
     color: var(--navbar-text-color);
     background-color: var(--navbar-bg-color);
     width: 100%;
-    margin-top: 3.6em;
+    margin-top: 3.5em;
     border-top: 1px solid var(--form-border-input-color);
     border-bottom: 1px solid var(--form-border-input-color);
-    position: relative;
+    position: absolute;
 }
 
 #breadcrumb p{
