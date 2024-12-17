@@ -186,13 +186,13 @@ header h2 {
     flex-direction: column;
 }
 
-.fastSearch form #condizioneF p {
-    text-align: center;
-}
-
 .fastSearch form #condizioneF span {
     display: flex;
     flex-direction: row;
+}
+
+.fastSearch form #condizioneF span label {
+    margin: 0 0.5em;
 }
 
 .fastSearch form p {
