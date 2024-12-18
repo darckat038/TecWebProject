@@ -16,7 +16,7 @@
     --cards-text-color: #ffffff;
 
     --form-bg-color: #ffffff;
-    --form-border-input-color: #696969;
+    --form-border-input-color: #919191;
 }
 
 body.dark {
@@ -77,13 +77,6 @@ h1.hide{
 #menu a{
     padding: 0 1.2em;
     text-align: center;
-    text-underline-offset: 0.3em;
-    color: var(--not-visited-link);
-    background-color: var(--link-bg-color);
-}
-
-#menu a:visited {
-    color: var(--visited-link);
 }
 
 #menu #here a {
@@ -112,14 +105,13 @@ h1.hide{
     padding: 0.5em 0 0.5em 1em;
 }
 
-
 /******************* 
-        HOME
+    STYLE COMUNE
 ********************/
 
 body{
-    background-color: var(--content-text-bg-color);
-    color: var(--content-text-color);
+    background-color: var(--bg-color);
+    color: var(--text-color);
     display: flex;
     flex-direction: column;
     font-size: 100%;
@@ -128,20 +120,14 @@ body{
     align-items: center;
 }
 
-header{
-    padding-top: 20%;
-    padding-bottom: 20%;
-    background-image: url("../img/Background/background.jpg");
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-position: top;
-    text-align: center;
-    color: var(--content-text-color);
-    width: 100%;
+a{
+    color: var(--not-visited-link);
+    text-underline-offset: 0.3em;
 }
 
-header h1{
-    margin-bottom: 1em;
+a:visited {
+    color: var(--visited-link);
+    text-underline-offset: 0.3em;
 }
 
 
@@ -150,7 +136,86 @@ header h1{
         UTENTE
 ********************/
 
-  /* Stile delle sezioni */
+.utente{
+    background-color: var(--navbar-bg-color);
+    color: var(--navbar-text-color);
+    padding: 2.5em;
+    border-radius: 1.5em;
+    margin-top: 10em;
+    width: 60vw;
+    height: auto;
+}
+
+.utente > h1{
+    text-align: center;
+}
+
+#infoBox{
+    
+    border-radius: 0.5em;
+    border: 1px solid var(--form-border-input-color);
+    background-color: var(--navbar-bg-color);
+    color: var(--navbar-text-color);
+    margin: 0 5em 2em 5em;
+    font-size: 100%;
+    font-family: "Lexend", Roboto, sans-serif;
+    padding-left: 1em;
+    margin-top: 3em;
+    padding: 2em; 
+}
+
+#infoBox p{
+    padding: 0.2em;
+    color: var(--navbar-text-color);
+}
+
+#infoBox span{
+    color: var(--form-border-input-color);
+}
+
+#userImage{
+    width: 13em;
+    float: right;
+    position: relative;   
+    margin-top: -1.5em;
+}
+
+
+#infoUtente{
+    background-color: var(--navbar-bg-color);
+    margin-left: 1em;
+    position: absolute;
+    padding: 0 0.5em;
+    margin-top: -1.9em;
+    color: var(--form-border-input-color);
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*
+
+  // Stile delle sezioni 
 
   #menuUtente {
     list-style: none; 
@@ -182,9 +247,9 @@ header h1{
   }
 
 #menuUtente a:visited {
-    /*
-    color: var(--visited-link);
-    */
+    
+    //color: var(--visited-link);
+    
 }
 
 #menuUtente #here a {
@@ -258,7 +323,7 @@ body{
 #prenotazioni h2{
     margin-bottom: 1.2em;
 }
-
+*/
 
 
 

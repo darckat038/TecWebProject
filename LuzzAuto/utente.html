@@ -1,37 +1,31 @@
 <!DOCTYPE html>
 <html lang="it">
     <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width">
 
-        <base href="/LuzzAuto/">
+    <title>Login - LuzzAuto Concessionario</title>
 
-        <title>Utente - LuzzAuto Concessionario</title>
+    <meta name="description" content="Accedi al tuo account personale per gestire le tue prenotazioni e continuare ad usufruire dei nostri servizi!">
+    <meta name="keywords" content="luzzauto, concessionario, macchina, auto, automobili, guida, vetture, test, account, accesso, prenotazioni">
+    <meta name="author" content="Artusi Emanuele, Bellon Filippo, Diviesti Filippo, Righetto Filippo">
 
-        <link rel="stylesheet" media="screen and (max-width:1024px)" href="assets/css/mobile.css" type="text/css">
-        <link rel="stylesheet" media="screen and (min-width:1024px)" href="assets/css/desktop.css" type="text/css">
-        <link rel="stylesheet" media="print" href="assets/css/print.css" type="text/css">
+    <link rel="stylesheet" media="screen and (max-width:1024px)" href="assets/css/mobile.css" type="text/css">
+    <link rel="stylesheet" media="screen and (min-width:1024px)" href="assets/css/desktop.css" type="text/css">
+    <link rel="stylesheet" media="print" href="assets/css/print.css" type="text/css">
 
-        <script src="assets/js/file.js"></script>
+    <script src="assets/js/file.js"></script>
 
-        <meta name="description" content="Gestisci le informazioni del tuo account personale e le prenotazioni al nostro servizio di test di guida">
-        <meta name="keywords" content="luzzauto, concessionario, macchina, auto, automobili, guida, vetture, test, account, prenotazioni, guida">
-        <meta name="author" content="Artusi Emanuele, Bellon Filippo, Diviesti Filippo, Righetto Filippo">
+    
 
-        <link rel="preconnect" href="https://fonts.googleapis.com">
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-        <link href="https://fonts.googleapis.com/css2?family=Lexend:wght@100..900&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lexend:wght@100..900&display=swap" rel="stylesheet">
+
     </head>
     <body>
-
-    <!--
-    <header>
-        <h1 aria-label="Titolo pagina">LuzzAuto</h1>
-        <h2 aria-label="descrizione pagina">descrizione homepage</h2>
-    </header>
-    -->
     
-    <nav class="topNavBar">
+      <nav class="topNavBar">
 
         <h1 class="hide">LuzzAuto</h1>
         
@@ -41,19 +35,54 @@
             <div class="menu-button-bar3" aria-hidden="true"></div>
         </a>
         <ul id="menu"  aria-label="menu del sito">
-            <li id="here"><a href="home.html" tabindex="-1"><span lang="eng">Home</span></a></li>
+            <li><a href="home.html"><span lang="eng">Home</span></a></li>
             <li><a href="about.html" >Chi Siamo</a></li>
             <li><a href="listino.html" >Listino auto</a></li>
             <li><a href="test_drive.html" ><span lang="eng">Test Drive</span></a></li>
-            <li><a href="login.html" ><span lang="eng">Login</span></a></li>
-            <li><a href="registrazione.html" >Registrazione</a></li>
+            <li id="here"><a href="login.html" tabindex="-1"><span lang="eng">LogIn</span></a></li>
+            <li><a href="registrazione.html" ><span lang="eng">SignIn</span></a></li>
         </ul>
-    </nav>
+      </nav>
 
-    <nav id="breadcrumb">
-        <p>Ti trovi in: <span lang="eng">Home</span></p>
-    </nav>
+      <nav id="breadcrumb">
+          <p>Ti trovi in: <span lang="eng">Login</span> - Utente</p>
+      </nav>
 
+
+      <main class="utente">
+
+        <h1 id="saluto"></h1>
+
+        <section id="infoBox">
+          <h2 id="infoUtente">Informazioni Utente</h2>
+          <img src="assets/img/ImmagineUtente/ImmagineUtente.svg" alt="Utente" id="userImage">
+          <p><strong>Nome:</strong><span> Giovanni</span></p>
+          <p><strong>Cognome:</strong><span> Rossi</span></p>
+          <p><strong>Telefono:</strong><span> 3483457629872</span></p>
+          <p><strong>Mail:</strong><span> giovanni.rossi.studenti.unipd.it</span></p>
+          <p><strong>Password:</strong><span> ************</span></p>
+          <p>Se desideri modificare i tuoi dati premere: <a href="">Modifica</a></p>
+        </section>
+
+        <section>
+
+        </section>
+
+      </main>
+
+
+
+
+
+
+
+
+
+
+
+
+
+      <!-- 
         <h1 id="saluto"></h1>
 
         <nav class="leftNavBar">
@@ -103,6 +132,8 @@
             </ul>
             <button>Gestisci Prenotazioni</button>
           </div>
+
+          -->
         
     </body>
 </html>
