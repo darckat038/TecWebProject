@@ -195,6 +195,33 @@ section#future h3 {
     text-align: center;
 }
 
+#dreamToReal {
+    display: inline-block;
+    flex-direction: row;
+}
+
+#dreamToReal h3,
+#dreamToReal p {
+    float: left;
+}
+
+#dreamToReal img {
+    float: right;
+}
+
+#unique {
+    display: inline-block;
+    flex-direction: row;
+}
+
+#unique h3 {
+    float: inline-end;
+}
+
+#unique p {
+    float: right;
+}
+
 #ourNums {
     text-align: center;
 }
