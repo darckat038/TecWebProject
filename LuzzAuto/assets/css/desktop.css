@@ -265,6 +265,11 @@ section#future h3 {
     margin-top: 1em;
 }
 
+#contactUs {
+    display: inline-block;
+    text-align: center;
+}
+
 footer {
     margin-top: 1em;
     background-color: var(--navbar-bg-color);
