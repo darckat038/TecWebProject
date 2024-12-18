@@ -159,10 +159,8 @@ h1.hide{
 }
 
 /******************* 
-        HOME
+    STYLE COMUNE
 ********************/
-
-/*#region Home*/
 
 body{
     background-color: var(--bg-color);
@@ -175,21 +173,13 @@ body{
     align-items: center;
 }
 
-header{
-    padding-top: 20%;
-    padding-bottom: 20%;
-    background-image: url("../img/Background/background.jpg");
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-position: top;
-    text-align: center;
-    color: white;
-    width: 100%;
-}
+/******************* 
+        HOME
+********************/
 
-header h1{
-    margin-bottom: 1em;
-}
+/*#region Home*/
+
+
 
 /*#endregion Home*/
 

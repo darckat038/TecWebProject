@@ -77,13 +77,6 @@ h1.hide{
 #menu a{
     padding: 0 1.2em;
     text-align: center;
-    text-underline-offset: 0.3em;
-    color: var(--not-visited-link);
-    background-color: var(--link-bg-color);
-}
-
-#menu a:visited {
-    color: var(--visited-link);
 }
 
 #menu #here a {
@@ -113,14 +106,12 @@ h1.hide{
 }
 
 /******************* 
-        HOME
+    STYLE COMUNE
 ********************/
 
-/*#region Home*/
-
 body{
-    background-color: var(--content-text-bg-color);
-    color: var(--content-text-color);
+    background-color: var(--bg-color);
+    color: var(--text-color);
     display: flex;
     flex-direction: column;
     font-size: 100%;
@@ -129,21 +120,23 @@ body{
     align-items: center;
 }
 
-header{
-    padding-top: 20%;
-    padding-bottom: 20%;
-    background-image: url("../img/Background/background.jpg");
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-position: top;
-    text-align: center;
-    color: var(--content-text-color);
-    width: 100%;
+a{
+    color: var(--not-visited-link);
+    text-underline-offset: 0.3em;
 }
 
-header h1{
-    margin-bottom: 1em;
+a:visited {
+    color: var(--visited-link);
+    text-underline-offset: 0.3em;
 }
+
+/******************* 
+        HOME
+********************/
+
+/*#region Home*/
+
+
 
 /*#endregion Home*/
 
@@ -153,6 +146,80 @@ header h1{
 
 /*#region Login*/
 
+.login_content{
+    background-color: var(--navbar-bg-color);
+    color: var(--navbar-text-color);
+    padding: 2.5em;
+    border-radius: 1.5em;
+    margin-top: 10em;
+}
 
+.login_content > h1, .login_content > p{
+    text-align: center;
+}
+
+.login_content > h1{
+    margin-bottom: 1em;
+}
+
+#login_form{
+    margin: 1em 0;
+    border-radius: 1em;
+}
+
+legend{
+    width: 100%;
+    text-align: center;
+    margin-bottom: 1em;
+}
+
+#login_form > fieldset{
+    display: flex;
+    flex-direction: column;
+}
+
+#mail, #password{
+    height: 3em;
+    border-radius: 0.5em;
+    border: 1px solid var(--form-border-input-color);
+    background-color: var(--navbar-bg-color);
+    color: var(--navbar-text-color);
+    margin: 0 5em 2em 5em;
+    font-size: 100%;
+    font-family: "Lexend", Roboto, sans-serif;
+    padding-left: 1em;
+}
+
+#login_form label{
+    background-color: var(--navbar-bg-color);
+    margin-left: 6em;
+    position: absolute;
+    padding: 0 0.5em;
+}
+
+#label_mail{
+    margin-top: -0.8em;
+    color: var(--form-border-input-color);
+}
+
+#label_password{
+    margin-top: 4.5em;
+    color: var(--form-border-input-color);
+}
+
+#accedi{
+    color: var(--navbar-text-color);
+    background-color: var(--navbar-bg-color);
+    border: 1px solid white;
+    padding: 1em 1.5em;
+    border-radius: 1.5em;
+    max-width: 10em;
+    align-self: center;
+}
+
+#accedi:hover{
+    background-color: var(--navbar-text-color);
+    color: var(--navbar-bg-color);
+}
 
 /*#endregion Login*/
