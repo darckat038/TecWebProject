@@ -181,33 +181,25 @@ section {
     width: 80%;
 }
 
-section > img {
-    object-fit: contain;
-    width: 24em;
-    border-radius: 0.5em;
-}
-
 section h3 {
     font-size: 1.5em;
 }
 
-section#luzzauto,
-section#dreamToReal,
-section#unique,
-section#mobility,
-section#future {
+section.history {
     line-height: 1.8em;
     display: inline-block;
     flex-direction: row;
     margin-top: 2em;
 }
 
-section#luzzauto h3,
-section#dreamToReal h3,
-section#unique h3,
-section#mobility h3,
-section#future h3 {
+section.history h3 {
     margin-bottom: 0.5em;
+}
+
+section.history > img {
+    object-fit: contain;
+    width: 24em;
+    border-radius: 0.5em;
 }
 
 #luzzauto h3 {
@@ -260,7 +252,7 @@ section#future h3 {
 
 #mobility img {
     float: left;
-    margin-right: 2em;
+    margin-right: 4em;
 }
 
 /* ------------------ */
@@ -297,6 +289,11 @@ section#future h3 {
 
 #reachUs h3 {
     margin-top: 1em;
+}
+
+#reachUs img {
+    margin-top: 1em;
+    border-radius: 0.5em;
 }
 
 /* ------------------ */
