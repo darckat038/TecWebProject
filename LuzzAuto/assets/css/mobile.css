@@ -200,6 +200,14 @@ a:visited {
 
 /*#region Login*/
 
+#login_body{
+    background-image: url(/LuzzAuto/assets/img/Background/LuzzAuto_facciata1.png);
+    background-repeat: no-repeat;
+    background-color: white;
+    background-size:auto;
+    background-position: right;
+}
+
 .login_content{
     background-color: var(--form-bg-color);
     color: var(--form-text-color);
@@ -207,6 +215,8 @@ a:visited {
     border-radius: 1.5em;
     margin-top: 10em;
     width: 60vw;
+    box-shadow: rgba(115, 115, 115, 0.35) 0px 5px 15px;
+
 }
 
 .login_content > h1, .login_content > p{
