@@ -179,29 +179,37 @@ h1.hide{
     ABOUT US
 *****************/
 
-/*#endregion About us*/
+/* HEADER */
 
 header{
     padding-top: 20%;
     padding-bottom: 20%;
-    background-image: url("../img/Background/background.jpg");
+    background-image: url("../img/Background/header_image_Luzzauto_4.jpeg");
     background-size: cover;
     background-repeat: no-repeat;
-    background-position: center;
+    background-position: top;
     text-align: center;
-    color: white;
+    background-color: var(--content-text-bg-color);
+    color: var(--content-text-color);
     width: 100%;
 }
 
-header h1{
-    margin: 1em 1em 0.5em 1em;
-    line-height: 1em;
+header#headerAboutUs h1{
+    font-size: 2.5em;
+    margin-top: 1em;
+    margin-bottom: 0.3em;
 }
 
-header h2 {
-    margin-top: 1em;
-    color: var(--cards-text-color);
+header#headerAboutUs p {
+    font-size: 1.5em;
 }
+
+header#headerAboutUs h2 {
+    margin-top: 1em;
+    font-size: 2em;
+}
+
+/* MAIN */
 
 main {
     display: flex;
@@ -209,61 +217,84 @@ main {
     align-items: center;
 }
 
-/*
-
-main section {
-    border: 0.2em solid var(--content-text-color);
-    box-shadow: 0em 0em 1em black;
+main h2 {
+    font-size: 2em;
+    margin-top: 2em;
+    font-weight: 500;
 }
 
-*/
+main p {
+    font-size: 1.15em;
+}
 
-#history {
+/** HISTORY **/
+
+section.history {
     border-radius: 1em;
     margin-top: 2em;
     display: inline-block;
     padding: 0 1em 1em 1em;
-    width: 80%;
+    width: 90%;
 }
 
-#history h3 {
+section.history h3 {
     margin-top: 1em;
 }
 
-#history p {
+section.history p {
     margin-top: 0.3em;
-    display: flex;
 }
 
+section.history img {
+    object-fit: contain;
+    width: 20em;
+    border-radius: 0.7em;
+}
+
+/* NUMS */
+
 #ourNums {
-    border-radius: 1em;
-    width: 60%;
     margin-top: 3em;
     display: inline-block;
     text-align: center;
     padding: 0 1em 1em 1em;
+    background-color: #dfdfdf;
 }
 
-#ourNums span {
+#ourNums h2 {
     margin-top: 1em;
+    margin-bottom: 1em;
 }
 
-#ourNums h3 {
-    margin-top: 1em;
+#ourNums img {
+    margin-top: 1.5em;
+    object-fit: contain;
+    width: 3em;
 }
+
+/* LOCATION */
 
 #reachUs {
     border-radius: 1em;
-    width: 70%;
+    width: fit-content;
     margin-top: 3em;
     display: inline-block;
     text-align: center;
     padding: 0 1em 1em 1em;
 }
 
-#reachUs h3 {
+#reachUs h2 {
     margin-top: 1em;
+    margin-bottom: 1em;
 }
+
+#reachUs img {
+    object-fit: contain;
+    width: 90%;
+    border-radius: 1em;
+}
+
+/*#endregion About us*/
 
 footer {
     margin-top: 1em;
@@ -273,7 +304,8 @@ footer {
     display: flex;
     justify-content: center;
     height: fit-content;
-    padding: 1em;
+    padding: 1em 0;
+    width: 100%;
 }
 
 footer p{
