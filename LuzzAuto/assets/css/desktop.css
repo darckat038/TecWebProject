@@ -143,16 +143,22 @@ header{
     background-repeat: no-repeat;
     background-position: top;
     text-align: center;
-    color: var(--content-text-color);
+    color: var(--navbar-text-color);
     width: 100%;
 }
 
 header h1{
-    color: var(--cards-text-color);
+    font-size: 4em;
+    margin-bottom: 0.7em;
+}
+
+header p {
+    font-size: 1.5em;
 }
 
 header h2 {
-    margin-top: 2em;
+    margin-top: 3em;
+    font-size: 2.5em;
     color: var(--cards-text-color);
 }
 
@@ -161,6 +167,12 @@ main {
     flex-direction: column;
     align-items: center;
     width: 100%;
+}
+
+main h2 {
+    font-size: 2em;
+    margin-top: 2em;
+    font-weight: 500;
 }
 
 main p {
@@ -189,7 +201,7 @@ section.history {
     line-height: 1.8em;
     display: inline-block;
     flex-direction: row;
-    margin-top: 2em;
+    margin-top: 8em;
 }
 
 section.history h3 {
@@ -202,78 +214,160 @@ section.history > img {
     border-radius: 0.5em;
 }
 
-#luzzauto h3 {
+/* ------------------ */
+
+#luzzauto {
     text-align: center;
+    margin-top: 2.5em;
 }
 
 #luzzauto p {
-    text-align: left;
+    font-weight: 300;
 }
 
 /* ------------------ */
 
+#dreamToReal {
+    text-align: center;
+}
+
 #dreamToReal h3 {
-    text-align: right;
+   font-weight:450;
+   font-size: 1.8em;
 }
 
 #dreamToReal p {
-    text-align: justify;
+    font-weight: 300;
 }
 
 #dreamToReal img {
-    float: left;
+    float: none;
     margin-right: 2em;
+    width: 50em;
+    margin-bottom: 2em;
+    box-shadow: 1em 1em 1em grey;
 }
 
 /* ------------------ */
 
 #unique h3 {
-    text-align: left;
+    font-weight:450;
+    font-size: 1.8em;
+    vertical-align: middle;
 }
 
 #unique p {
-    text-align: justify;
+    font-weight: 300;
+    vertical-align: middle;
 }
 
 #unique img {
-    margin-left: 2em;
-    float: right;
+    margin-right: 4em;
+    float: left;
+    width: 30em;
+    box-shadow: -1em 1em 1em lightgray;
 }
 
 /* ------------------ */
 
+#mobility {
+    text-align: left;
+}
+
 #mobility h3 {
-    text-align: right;
+    font-weight:450;
+    font-size: 1.8em;
 }
 
 #mobility p {
-    text-align: justify;
+    font-weight: 300;
 }
 
 #mobility img {
-    float: left;
-    margin-right: 4em;
+    float: right;
+    margin-left: 4em;
+    width: 35em;
 }
 
 /* ------------------ */
 
-#future h3 {
+#future {
     text-align: center;
+}
+
+#future h3 {
+    font-weight: 450;
+    font-size: 1.8em;
+}
+
+#future p {
+    font-weight: 300;
+    max-width: 50em;
+    margin: 0 auto;
 }
 
 /* ------------------ */
 
 #ourNums {
     text-align: center;
+    background-color: #dfdfdf;
+    width: 100%;
+    padding: 1em 0 5em 0;
+}
+
+#ourNums > dl {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 5em;
+    grid-template-areas: 
+    "a b c"
+    "d e f";
+}
+
+#ourNums h2 {
+    font-size: 2em;
+    margin-bottom: 2em;
+    font-weight: 500;
 }
 
 #ourNums img {
     margin-top: 1.5em;
+    object-fit: contain;
+    width: 3em;
 }
 
-#ourNums dt {
+#ourNums dl h3 {
+    font-size: 1.5em;
+    font-weight: 450;
+}
+
+#ourNums dl p {
+    margin-top: 0.7em;
     font-size: 1.3em;
-    font-weight: 600;
+}
+
+#ourNums #soldCars {
+    grid-area: "a";
+}
+
+#ourNums #custSat {
+    grid-area: "b";
+}
+
+#ourNums #yearsExp {
+    grid-area: "c";
+}
+
+#ourNums #savedEmiss {
+    grid-area: "d";
+}
+
+#ourNums #testDrives {
+    grid-area: "e";
+}
+
+#ourNums #warranty {
+    grid-area: "f";
 }
 
 /* ------------------ */
@@ -292,7 +386,7 @@ section.history > img {
 }
 
 #reachUs img {
-    margin-top: 1em;
+    margin-top: 2em;
     border-radius: 0.5em;
 }
 
