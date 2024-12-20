@@ -136,17 +136,19 @@ h1.hide{
 header#headerAboutUs {
     padding-top: 20%;
     padding-bottom: 20%;
-    background-image: url("../img/Background/background.jpg");
+    background-image: url("../img/Background/header_image_Luzzauto.jpeg");
     background-size: cover;
     background-repeat: no-repeat;
     background-position: top;
     text-align: center;
-    color: var(--navbar-text-color);
+    background-color: var(--content-text-bg-color);
+    color: var(--content-text-color);
     width: 100%;
 }
 
 header#headerAboutUs h1{
     font-size: 4em;
+    margin-top: -1em;
     margin-bottom: 0.7em;
 }
 
@@ -155,9 +157,8 @@ header#headerAboutUs p {
 }
 
 header#headerAboutUs h2 {
-    margin-top: 3em;
+    margin-top: 2em;
     font-size: 2.5em;
-    color: var(--cards-text-color);
 }
 
 /* MAIN */
@@ -280,6 +281,7 @@ section.history > img {
     float: right;
     margin-left: 4em;
     width: 35em;
+    box-shadow: 1em 1em 1em lightgray;
 }
 
 /** ------------------ **/
