@@ -36,10 +36,6 @@ body.purple {
     margin: 0;
 }
 
-html, body{
-    width: 100%;
-}
-
 body{
     background-color: var(--content-text-bg-color);
     color: var(--content-text-color);
@@ -135,7 +131,9 @@ h1.hide{
     ABOUT US
 *****************/
 
-header{
+/* HEADER */
+
+header#headerAboutUs {
     padding-top: 20%;
     padding-bottom: 20%;
     background-image: url("../img/Background/background.jpg");
@@ -147,20 +145,22 @@ header{
     width: 100%;
 }
 
-header h1{
+header#headerAboutUs h1{
     font-size: 4em;
     margin-bottom: 0.7em;
 }
 
-header p {
+header#headerAboutUs p {
     font-size: 1.5em;
 }
 
-header h2 {
+header#headerAboutUs h2 {
     margin-top: 3em;
     font-size: 2.5em;
     color: var(--cards-text-color);
 }
+
+/* MAIN */
 
 main {
     display: flex;
@@ -179,14 +179,7 @@ main p {
     font-size: 1.15em;
 }
 
-/*
-
-main section {
-    border: 0.2em solid var(--content-text-color);
-    box-shadow: 0em 0em 1em black;
-}
-
-*/
+/** HISTORY **/
 
 section {
     margin-top: 4em;
@@ -214,7 +207,7 @@ section.history > img {
     border-radius: 0.5em;
 }
 
-/* ------------------ */
+/** ------------------ **/
 
 #luzzauto {
     text-align: center;
@@ -225,7 +218,7 @@ section.history > img {
     font-weight: 300;
 }
 
-/* ------------------ */
+/** ------------------ *è*/
 
 #dreamToReal {
     text-align: center;
@@ -248,7 +241,7 @@ section.history > img {
     box-shadow: 1em 1em 1em grey;
 }
 
-/* ------------------ */
+/** ------------------ **/
 
 #unique h3 {
     font-weight:450;
@@ -268,7 +261,7 @@ section.history > img {
     box-shadow: -1em 1em 1em lightgray;
 }
 
-/* ------------------ */
+/** ------------------ **/
 
 #mobility {
     text-align: left;
@@ -289,7 +282,7 @@ section.history > img {
     width: 35em;
 }
 
-/* ------------------ */
+/** ------------------ **/
 
 #future {
     text-align: center;
@@ -306,7 +299,7 @@ section.history > img {
     margin: 0 auto;
 }
 
-/* ------------------ */
+/* NUMS */
 
 #ourNums {
     text-align: center;
@@ -370,7 +363,7 @@ section.history > img {
     grid-area: "f";
 }
 
-/* ------------------ */
+/* LOCATION */
 
 #reachUs {
     border-radius: 1em;
@@ -390,7 +383,7 @@ section.history > img {
     border-radius: 0.5em;
 }
 
-/* ------------------ */
+/* CONTACTS */
 
 #contactUs {
     display: inline-block;
