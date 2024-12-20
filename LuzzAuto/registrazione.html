@@ -21,7 +21,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Lexend:wght@100..900&display=swap" rel="stylesheet">
 
     </head>
-    <body>
+    <body id="signin_body"> 
         <nav class="topNavBar">
 
             <h1 class="hide">LuzzAuto</h1>
@@ -44,6 +44,43 @@
         <nav id="breadcrumb">
             <p>Ti trovi in: <span lang="en-GB">SignIn</span></p>
         </nav>
+
+        <main class="signin_content">
+
+            <h1>Benvenuto in LuzzAuto</h1>
+            <p>Inserisci i tuoi dati per creare un <span lang="en-GB">account</span> e poter accedere ai nostri servizi.</p>
+            
+            <form method="post" action="">
+                <fieldset>
+    
+                    <legend><span lang="en-GB">SignIn</span></legend>
+
+                    <label for="nome">Nome</label>
+                    <input type="text" name="nome" aria-required="true" aria-label="Campo di inserimento del nome" required data-msg-required="Per favore, inserisci il tuo nome">
+    
+                    <label for="cognome">Cognome</label>
+                    <input type="text" name="cognome" aria-required="true" aria-label="Campo di inserimento del cognome" required data-msg-required="Per favore, inserisci il tuo cognome">
+                    
+                    <label for="mail"><span lang="en-GB">Mail</span></label>
+                    <input type="email" name="mail" aria-required="true" aria-label="Campo di inserimento della mail" required data-msg-required="Per favore, inserisci la tua mail" data-msg-invalid:="Ci dispiace, formato non corretto">
+    
+                    <label for="password"><span lang="en-GB">Password</span></label>
+                    <input type="password" name="password" aria-required="true" aria-label="Campo di inserimento della password" required data-msg-required="Per favore, inserisci la tua password">
+
+                    <label for="password2"><span lang="en-GB">Ripeti password</span></label>
+                    <input type="password" name="password2" aria-required="true" aria-label="Campo di inserimento della password" required data-msg-required="Per favore, reinserisci la tua password">
+
+                    <label for="data">Data di nascita</label>
+                    <input type="date" name="data" aria-required="true" aria-label="Campo di inserimento della data di nascita" required data-msg-required="Per favore, inserisci la tua data di nascita">
+    
+                    <input type="submit" value="Registrati" aria-label="Bottone di invio del form">
+    
+                </fieldset>
+            </form>
+
+            <p>Se sei già registrato allora <a href="registrazione.html">ACCEDI AL TUO <span lang="en-GB">ACCOUNT</span></a>!</p>
+
+        </main>
 
 
     </body>

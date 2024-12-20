@@ -234,3 +234,35 @@ legend{
 }
 
 /*#endregion Login*/
+
+/******************* 
+        SIGNIN
+********************/
+
+/*#region SignIn*/
+
+#signin_body{
+    background-image: url(/LuzzAuto/assets/img/Background/LuzzAuto_facciata1.png);
+    background-repeat: no-repeat;
+    background-color: white;
+    background-size:cover;
+}
+
+.signin_content{
+    background-color: var(--form-bg-color);
+    color: var(--form-text-color);
+    padding: 2.5em;
+    border-radius: 1.5em;
+    margin-top: 10em;
+    box-shadow: rgba(115, 115, 115, 0.35) 0px 5px 15px;
+}
+
+.signin_content > h1, .signin_content > p{
+    text-align: center;
+}
+
+.signin_content > h1{
+    margin-bottom: 1em;
+}
+
+/*#endregion SignIn*/
