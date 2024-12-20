@@ -15,8 +15,9 @@
     --cards-bg-color: #4e4ffa;
     --cards-text-color: #ffffff;
 
-    --form-bg-color: #ffffff;
-    --form-border-input-color: #696969;
+    --form-bg-color: #000000;
+    --form-border-input-color: #919191;
+    --form-text-color: #ffffff;
 }
 
 body.dark {
@@ -35,51 +36,36 @@ body.purple {
 }
 
 /******************* 
-        HOME
+        MENU
 ********************/
 
-body{
-    background-color: var(--content-text-bg-color);
-    color: var(--content-text-color);
-    display: flex;
-    flex-direction: column;
-    font-size: 100%;
-    font-family: "Lexend", Roboto, sans-serif;
-    line-height: 1.5em;
-    align-items: center;
-}
-
 .topNavBar{
-    background-color: black;
-    color: white;
+    background-color: var(--navbar-bg-color);
+    color: var(--navbar-text-color);
     display: inline-flex;
     overflow: hidden;
-    position: fixed;
-    border-radius: 1em;
-    width: 98%;
+    position: absolute;
+    width: 100%;
     padding-top: 1em;
     padding-bottom: 1em;
-    margin-top: 0.5em;
 }
 
-.topNavBar .logo {
-    position: inherit;
-    display: block;
-    margin-right: 100em;
-    padding: 0 0 0 1em;
+.hide{
+    text-indent: 100%;
+    white-space: nowrap;
+    overflow: hidden;
+}
+
+h1.hide{
+    background-image: url("../img/Logo/Logo\ Bianco\ Scritta.svg");
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    margin-left: 1em;
 }
 
 .topNavBar #disable{
     pointer-events: none;
-}
-
-
-.topNavBar .logo img {
-    width: 8em;
-}
-
-.topNavBar #breadcrumb {
-    text-indent: -9999em;
 }
 
 #menu{
@@ -92,36 +78,159 @@ body{
 #menu a{
     padding: 0 1.2em;
     text-align: center;
-    text-underline-offset: 0.3em;
-    color: var(--not-visited-link);
-    background-color: var(--link-bg-color);
-}
-
-#menu a:visited {
-    color: var(--visited-link);
 }
 
 #menu #here a {
     text-decoration: none;
     pointer-events: none;
-    background-color: white;
-    color: black;
+    background-color: var(--content-text-bg-color);
+    color: var(--content-text-color);
     border-radius: 1em;
     padding: 0.4em 0.6em;
 }
 
-header{
-    padding-top: 20%;
-    padding-bottom: 20%;
-    background-image: url("../img/Background/background.jpg");
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-position: top;
-    text-align: center;
-    color: var(--content-text-color);
+/******************* 
+     BREADCRUMB
+********************/
+
+#breadcrumb{
+    color: var(--navbar-text-color);
+    background-color: var(--navbar-bg-color);
     width: 100%;
+    margin-top: 3.5em;
+    border-top: 1px solid var(--form-border-input-color);
+    position: absolute;
 }
 
-header h1{
+#breadcrumb p{
+    padding: 0.5em 0 0.5em 1em;
+}
+
+/******************* 
+    STYLE COMUNE
+********************/
+
+body{
+    background-color: var(--bg-color);
+    color: var(--text-color);
+    display: flex;
+    flex-direction: column;
+    font-size: 100%;
+    font-family: "Lexend", Roboto, sans-serif;
+    line-height: 1.5em;
+    align-items: center;
+}
+
+a{
+    color: var(--not-visited-link);
+    text-underline-offset: 0.3em;
+}
+
+a:visited {
+    color: var(--visited-link);
+    text-underline-offset: 0.3em;
+}
+
+/******************* 
+        HOME
+********************/
+
+/*#region Home*/
+
+
+
+/*#endregion Home*/
+
+/******************* 
+        LOGIN
+********************/
+
+/*#region Login*/
+
+#login_body{
+    background-image: url(/LuzzAuto/assets/img/Background/LuzzAuto_facciata1.png);
+    background-repeat: no-repeat;
+    background-color: white;
+    background-size:cover;
+}
+
+.login_content{
+    background-color: var(--form-bg-color);
+    color: var(--form-text-color);
+    padding: 2.5em;
+    border-radius: 1.5em;
+    margin-top: 10em;
+    box-shadow: rgba(115, 115, 115, 0.35) 0px 5px 15px;
+}
+
+.login_content > h1, .login_content > p{
+    text-align: center;
+}
+
+.login_content > h1{
     margin-bottom: 1em;
 }
+
+#login_form{
+    margin: 1em 0;
+    border-radius: 1em;
+}
+
+legend{
+    width: 100%;
+    text-align: center;
+    margin-bottom: 1em;
+}
+
+#login_form > fieldset{
+    display: flex;
+    flex-direction: column;
+}
+
+#mail, #password{
+    height: 3em;
+    border-radius: 0.5em;
+    border: 1px solid var(--form-border-input-color);
+    background-color: var(--form-bg-color);
+    color: var(--navbar-text-color);
+    margin: 0 5em 2em 5em;
+    font-size: 100%;
+    font-family: "Lexend", Roboto, sans-serif;
+    padding-left: 1em;
+}
+
+#login_form label{
+    background-color: var(--form-bg-color);
+    margin-left: 6em;
+    position: absolute;
+    padding: 0 0.5em;
+}
+
+#label_mail{
+    margin-top: -0.8em;
+    color: var(--form-border-input-color);
+}
+
+#label_password{
+    margin-top: 4.5em;
+    color: var(--form-border-input-color);
+}
+
+#accedi{
+    color: var(--form-text-color);
+    background-color: var(--form-bg-color);
+    border: 1px solid white;
+    padding: 1em 1.5em;
+    border-radius: 1.5em;
+    max-width: 10em;
+    align-self: center;
+    font-size: 100%;
+    font-family: "Lexend", Roboto, sans-serif;
+}
+
+#accedi:hover{
+    background-color: var(--form-text-color);
+    color: var(--form-bg-color);
+}
+
+/*#endregion Login*/

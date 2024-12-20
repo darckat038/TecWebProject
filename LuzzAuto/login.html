@@ -6,41 +6,73 @@
 
     <title>Login - LuzzAuto Concessionario</title>
 
+    <meta name="description" content="Accedi al tuo account personale per gestire le tue prenotazioni e continuare ad usufruire dei nostri servizi!">
+    <meta name="keywords" content="luzzauto, concessionario, macchina, auto, automobili, guida, vetture, test, account, accesso, prenotazioni">
+    <meta name="author" content="Artusi Emanuele, Bellon Filippo, Diviesti Filippo, Righetto Filippo">
+
     <link rel="stylesheet" media="screen and (max-width:1024px)" href="assets/css/mobile.css" type="text/css">
     <link rel="stylesheet" media="screen and (min-width:1024px)" href="assets/css/desktop.css" type="text/css">
     <link rel="stylesheet" media="print" href="assets/css/print.css" type="text/css">
 
     <script src="assets/js/file.js"></script>
 
-    <meta name="description" content="Accedi al tuo account personale per gestire le tue prenotazioni e continuare ad usufruire dei nostri servizi!">
-    <meta name="keywords" content="luzzauto, concessionario, macchina, auto, automobili, guida, vetture, test, account, accesso, prenotazioni">
-    <meta name="author" content="Artusi Emanuele, Bellon Filippo, Diviesti Filippo, Righetto Filippo">
+    
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Lexend:wght@100..900&display=swap" rel="stylesheet">
 
     </head>
-    <body>
+    <body id="login_body">
+
         <nav class="topNavBar">
-            <a href="home.html" class="logo" aria-label="Logo"><img src="assets/img/Logo/Logo Bianco Scritta.svg" alt="Logo"></a>
 
-            <span lang="eng" id="breadcrumb" aria-label="Pagina attuale">Home</span>
-
+            <h1 class="hide">LuzzAuto</h1>
+            
             <a href="javascript:void(0);" id="menu-button-container" onclick="menuOpenClose(this)" aria-label="icona apertura menu">               
                 <div class="menu-button-bar1" aria-hidden="true"></div>
                 <div class="menu-button-bar2" aria-hidden="true"></div>
                 <div class="menu-button-bar3" aria-hidden="true"></div>
             </a>
-            
             <ul id="menu"  aria-label="menu del sito">
-                <li><a href="home.html" tabindex="-1"><span lang="eng">Home</span></a></li>
+                <li><a href="home.html"><span lang="en-GB">Home</span></a></li>
                 <li><a href="about.html" >Chi Siamo</a></li>
                 <li><a href="listino.html" >Listino auto</a></li>
-                <li><a href="test_drive.html" ><span lang="eng">Test Drive</span></a></li>
-                <li id="here"><a href="login.html" ><span lang="eng">Login</span></a></li>
-                <li><a href="registrazione.html" >Registrazione</a></li>
+                <li><a href="test_drive.html" ><span lang="en-GB">Test Drive</span></a></li>
+                <li id="here"><a href="login.html" tabindex="-1"><span lang="en-GB">LogIn</span></a></li>
+                <li><a href="registrazione.html" ><span lang="en-GB">SignIn</span></a></li>
             </ul>
         </nav>
+
+        <nav id="breadcrumb">
+            <p>Ti trovi in: <span lang="en-GB">Login</span></p>
+        </nav>
+
+        <main class="login_content">
+
+            <h1>Bentornato in LuzzAuto</h1>
+            <p>Inserisci le tue credenziali per accedere alla tua AREA PERSONALE.</p>
+            
+
+            <form id="login_form" method="post" action="">
+                <fieldset>
+    
+                    <legend><span lang="en-GB">Login</span></legend>
+    
+                    <label id="label_mail" for="mail"><span lang="en-GB">Mail</span></label>
+                    <input type="email" name="mail" id="mail" aria-required="true" aria-label="Campo di inserimento della mail" required data-msg-required="Per favore, inserisci la tua mail" data-msg-invalid:="Ci dispiace, formato non corretto">
+    
+                    <label id="label_password" for="password"><span lang="en-GB">Password</span></label>
+                    <input type="password" name="password" id="password" aria-required="true" aria-label="Campo di inserimento della password" required data-msg-required="Per favore, inserisci la tua password">
+    
+                    <input id="accedi" type="submit" value="Accedi" aria-label="Bottone di invio del form">
+    
+                </fieldset>
+            </form>
+
+            <p>Se non sei ancora registrato allora <a href="registrazione.html">CREA UN <span lang="en-GB">ACCOUNT</span></a>!</p>
+
+        </main>
+
     </body>
 </html>
