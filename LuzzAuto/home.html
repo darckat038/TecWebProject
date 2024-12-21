@@ -3,6 +3,7 @@
     <head>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width">
+        <base href="/LuzzAuto/">
 
         <title>Home Page - LuzzAuto Concessionario</title>
 
@@ -23,11 +24,6 @@
     </head>
     <body>
 
-        <header>
-            <h1 aria-label="Titolo pagina">LuzzAuto</h1>
-            <h2 aria-label="Descrizione pagina">Da sempre il tuo concessionario di fiducia</h2> 
-        </header>
-
         <nav class="topNavBar">
 
             <h1 class="hide">LuzzAuto</h1>
@@ -42,74 +38,56 @@
                 <li><a href="about.html" >Chi Siamo</a></li>
                 <li><a href="listino.html" >Listino auto</a></li>
                 <li><a href="test_drive.html" ><span lang="eng">Test Drive</span></a></li>
-                <li><a href="login.html"><span lang="eng">Login</span></a></li>
-                <li><a href="registrazione.html" >Registrazione</a></li>
+                <li><a href="login.html"><span lang="eng">LogIn</span></a></li>
+                <li><a href="registrazione.html" ><span lang="eng">SignUp</span></a></li>
             </ul>
         </nav>
 
         <nav id="breadcrumb">
-            <p>Ti trovi in: <span lang="eng">Login</span></p>
+            <p>Ti trovi in: <span lang="eng">Home</span></p>
         </nav>
 
+        <header id="home_header">
+            <h1 class="home_header_text">LuzzAuto</h1>
+            <p class="home_header_text">Vendiamo, noleggiamo, innoviamo</p>
+            <h2 class="home_header_text"><span lang="eng">Home</span></h2>
+        </header>
+
         <main>
-            <section class="fastSearch">
-                <h3 class="sectionTitle">Cerchi un veicolo in particolare?</h3>
+            <section class="home_fastSearch">
+                <h3 class="home_sectionTitle">Cerchi un veicolo in particolare?</h3>
                 <form action="listino.html" method="GET">
-                    <fieldset id="basicInfo">
+                    <!-- Fieldset per info base veicolo -->
+                    <fieldset id="home_basicInfo">
                         <legend>Informazioni sul veicolo</legend>
                         
-                        <label for="marca">Marca:</label>
-                        <input type="text" id="marca" class="insert" name="marca" placeholder="Inserisci la marca">
+                        <label for="home_marca" id="home_label_marca">Marca</label>
+                        <input type="text" id="home_marca" class="home_insert" name="marca" placeholder="Inserisci la marca" aria-required="true" aria-label="Campo di inserimento della marca dell'auto" required data-msg-required="Per favore, inserisci la marca dell'auto">
                     
-                        <label for="modello">Modello:</label>
-                        <input type="text" id="modello" class="insert" name="modello" placeholder="Inserisci il modello">
+                        <label for="home_modello" id="home_label_modello">Modello</label>
+                        <input type="text" id="home_modello" class="home_insert" name="modello" placeholder="Inserisci il modello" aria-label="Campo di inserimento del modello dell'auto">
                     </fieldset>
                 
                     <!-- Fieldset per preferenze di acquisto -->
-                    <fieldset id="preferences">
+                    <fieldset id="home_preferences">
                         <legend>Preferenze</legend>
                         
-                        <label for="condizione">Condizione:</label>
-                        <select id="condizione" name="condizione">
-                            <option value="">--Seleziona--</option>
+                        <label for="home_condizione" id="home_label_condizione">Condizione</label>
+                        <select id="home_condizione" name="condizione" class="home_insert">
+                            <option disabled selected value>-- Seleziona --</option>
                             <option value="nuovo">Nuovo</option>
                             <option value="usato">Usato</option>
                             <option value="km0">KM 0</option>
                         </select>
                     
-                        <label for="prezzo">Prezzo massimo (€):</label>
-                        <input type="number" id="prezzo" class="insert" class="insert" name="prezzo" placeholder="Inserisci il prezzo massimo">
+                        <label for="home_prezzo" id="home_label_prezzo">Prezzo massimo (€)</label>
+                        <input type="number" id="home_prezzo" class="home_insert" name="prezzo" placeholder="Inserisci il prezzo massimo" aria-label="Campo di inserimento del prezzo massimo dell'auto">
                     </fieldset>
-                    <input type="submit" value="Ricerca" id="submit" aria-label="Bottone ricerca per ricercare veicoli con opzioni selezionate sopra">
-
-                    <!-- 
-                    <fieldset id="marcaF">
-                        <label for="marca" id="marcaL">Marca</label>
-                        <input type="text" name="marca" id="marca" placeholder="Mercedes" aria-required="true" aria-label="Campo inserimento marca auto" required>
-                    </fieldset>
-                    <fieldset id="modelloF">
-                        <label for="modello" id="modelloL">Modello</label>
-                        <input type="text" name="modello" id="modello" placeholder="CLA 220d" aria-label="Campo inserimento modello auto">
-                    </fieldset>
-                    <fieldset id="condizioneF">
-                        <label for="condizione" id="condizioneL">Condizione</label>
-                        <span id="condizione">
-                            <input type="checkbox" name="condizione" id="condizione1" aria-label="Selezionatore condizione auto nuova"> <label for="condizione1" id="nuovaL">Nuova</label>
-                            <input type="checkbox" name="condizione" id="condizione2" aria-label="Selezionatore condizione auto usata"> <label for="condizione2" id="usataL">Usata</label>
-                        </span>
-                    </fieldset>
-                    <fieldset id="maxPrezzoF">
-                        <label for="maxPrezzo" id="maxPrezzoL">Prezzo massimo</label>
-                        <input type="number" name="maxPrezzo" id="maxPrezzo" min="0" step="500" placeholder="20000" aria-label="Campo inserimento prezzo massimo auto">
-                    </fieldset>
-                    <fieldset id="bottoniF">
-                        <input type="submit" value="Ricerca" id="submit" aria-label="Bottone ricerca per ricercare veicoli con opzioni selezionate sopra">
-                    </fieldset>
-                    -->
+                    <input type="submit" value="Ricerca" id="home_submit" aria-label="Bottone di ricerca per ricercare veicoli con opzioni selezionate sopra">
                 </form>
             </section>
 
-            <section class="discounts" aria-label="Sezione mostra automobili scontate">
+            <section class="home_discounts" aria-label="Sezione mostra automobili scontate">
                 
             </section>
         </main>

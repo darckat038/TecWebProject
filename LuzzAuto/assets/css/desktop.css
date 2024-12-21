@@ -5,6 +5,9 @@
     --navbar-bg-color: #000000;
     --navbar-text-color: #ffffff;
 
+    --header-bg-color: #000000;
+    --header-text-color: #ffffff;
+
     --link-bg-color: #000000;
     --not-visited-link: #ffffff;
     --visited-link: #999afc;
@@ -130,151 +133,156 @@ h1.hide{
         HOME
 ********************/
 
-/* 
-    width non include padding e margin
-    ex. width: 100% = larghezza 100% solo al contenuto, a cui vado ad aggiungere margini ed eventuale padding
-*/
 
-header{
+/* HEADER */
+
+#home_header {
     padding-top: 20%;
     padding-bottom: 20%;
-    background-image: url("../img/Background/background.jpg");
+    background-image: url("/LuzzAuto/assets/img/Background/Luzzauto/header_image_Luzzauto_2_dark.png");
     background-size: cover;
     background-repeat: no-repeat;
-    background-position: top;
+    background-position: center;
     text-align: center;
-    color: var(--content-text-color);
+    background-color: var(--header-bg-color);
+    color: var(--header-text-color);
     width: 100%;
 }
 
-header h1{
-    margin-bottom: 1em;
-    color: var(--cards-text-color);
+#home_header h1{
+    font-size: 8em;
+    margin-top: -0.5em;
+    margin-bottom: 0.5em;
 }
 
-header h2 {
-    color: var(--cards-text-color);
+#home_header p {
+    font-size: 1.7em;
 }
 
-/*
+#home_header h2 {
+    margin-top: 4em;
+    font-size: 3em;
+}
 
-.fastSearch {
-    display: flex;
-    flex-direction: column;
-    border-radius: 1em;
-    margin-top: -3.5em;
+#home_header .home_header_text {
+    text-align: right;
+    margin-right: 12%;
+}
+
+/* FASTSEARCH */
+
+.home_fastSearch {
     background-color: var(--form-bg-color);
     color: var(--form-text-color);
-    padding: 0.5em;
-}
-
-.fastSearch h3 {
-    align-self: center;
-    margin-top: 1em;
-    padding: 0 1em;
-}
-
-.fastSearch form {
-    display: inline-flex;
-    flex-direction: row;
-    margin-top: 1em;
-    padding: 0 1em 1em 1em;
-}
-
-.fastSearch form fieldset {
-    align-content: center;
+    display: flex;
+    flex-direction: column;
+    margin-top: -8em;
+    padding: 3em;
+    border-radius: 1em;
+    font-size: 100%;
+    box-shadow: rgba(115, 115, 115, 0.35) 0px 5px 15px;
     width: fit-content;
 }
 
-.fastSearch form label {
-    text-align: center;
-    color: var(--form-border-input-color);
-}
-
-.fastSearch form input {
-    border: 0.1em solid var(--form-border-input-color);
-    background-color: var(--form-bg-color);
-    color: var(--form-text-color);
-    border-radius: 0.5em;
-}
-
-.fastSearch form fieldset input {
-    padding: 0 0.4em 0 0.4em;
-}
-
-.fastSearch form #condizioneF {
-    display: flex;
-    flex-direction: column;
-}
-
-.fastSearch form #condizioneF span {
-    display: flex;
-    flex-direction: row;
-}
-
-.fastSearch form #condizioneF span label {
-    margin: 0 0.5em;
-}
-
-.fastSearch form p {
-    margin: 0 0.5em;
-}
-
-.fastSearch form #marca,
-.fastSearch form #modello,
-.fastSearch form #condizione,
-.fastSearch form #maxPrezzo {
-    text-align: center;
-    margin-left: 0.2em;
-}
-
-.fastSearch form #marca,
-.fastSearch form #modello,
-.fastSearch form #maxPrezzo {
-    font-size: 1em;
-    height: 2em;
-}
-
-.fastSearch form #bottoniF {
-    display: block;
-    margin-left: 1em;
-}
-
-.fastSearch form #submit {
-    padding: 1em 1em;
-}
-
-*/
-
-.fastSearch {
-    background-color: var(--form-bg-color);
-    color: var(--form-text-color);
-    display: flex;
-    flex-direction: column;
-    margin-top: -2em;
-    padding: 1em;
-    border-radius: 1em;
-}
-
-.fastSearch .sectionTitle {
+.home_fastSearch .home_sectionTitle {
+    font-weight:450;
+    font-size: 1.8em;
     text-align: center;
     margin: 1em;
 }
 
-.fastSearch form #basicInfo {
-    float: none;
+.home_fastSearch form {
+    margin: 1em 0;
+    font-size: 100%;
 }
 
-.fastSearch form #preferences {
-    float: none;
-}
-
-.fastSearch form input.insert {
-    background-color: var(--form-bg-color);
-    color: var(--form-text-color);
-    border: 1px solid var(--form-border-input-color);
-    border-radius: 0.5em;
+.home_fastSearch legend {
+    width: 100%;
     text-align: center;
+    padding-bottom: 1.5em;
+    padding-top: 2em;
+    font-size: 100%;
+}
+
+.home_fastSearch label {
+    background-color: var(--form-bg-color);
+    color: var(--form-border-input-color);
+    position: absolute;
+    padding: 0 0.5em;
+    font-size: 100%;
+}
+
+.home_fastSearch form #home_basicInfo {
+    padding: 0 0em;
+}
+
+.home_fastSearch label#home_label_marca,
+.home_fastSearch form #home_label_condizione {
+    margin-top: -0.85em;
+    margin-left: 1em;
+}
+
+.home_fastSearch form #home_marca,
+.home_fastSearch form #home_condizione {
+    float: left;
+}
+
+.home_fastSearch label#home_label_modello,
+.home_fastSearch form #home_label_prezzo {
+    margin-top: -0.85em;
+    margin-left: 5.8em;
+}
+
+.home_fastSearch form #home_modello,
+.home_fastSearch form #home_prezzo {
+    float: right;
+}
+
+.home_fastSearch form #home_preferences {
+    padding: 0 0em;
+}
+
+.home_fastSearch form #home_label_condizione {
+    margin-left: 3em;
+}
+
+.home_fastSearch form #home_label_prezzo {
+    margin-left: 8.2em;
+}
+
+.home_fastSearch form #home_condizione {
+    margin-left: 2em;
+    padding-right: 0.8em;
+}
+
+.home_fastSearch form .home_insert {
+    height: 3em;
+    border-radius: 0.5em;
+    border: 1px solid var(--form-border-input-color);
+    background-color: var(--form-bg-color);
+    color: var(--navbar-text-color);
+    font-family: "Lexend", Roboto, sans-serif;
+    padding-left: 1em;
+    font-size: 100%;
+}
+
+.home_fastSearch form #home_submit{
+    display: block;
+    align-self: center;
+    color: var(--form-text-color);
+    background-color: var(--form-bg-color);
+    border: 1px solid white;
+    padding: 1em 1.5em;
+    border-radius: 1.5em;
+    max-width: 10em;
+    font-size: 100%;
+    font-family: "Lexend", Roboto, sans-serif;
+    margin-top: 2em;
+}
+
+.home_fastSearch form #home_submit:hover{
+    background-color: var(--form-text-color);
+    color: var(--form-bg-color);
 }
 
 /*#endregion Home*/
