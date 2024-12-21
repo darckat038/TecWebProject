@@ -176,7 +176,7 @@ a:visited {
     border-radius: 1em;
 }
 
-legend{
+#login_form legend{
     width: 100%;
     text-align: center;
     margin-bottom: 1em;
@@ -234,3 +234,125 @@ legend{
 }
 
 /*#endregion Login*/
+
+/******************* 
+        SIGNIN
+********************/
+
+/*#region SignIn*/
+
+#signup_body{
+    background-image: url(/LuzzAuto/assets/img/Background/LuzzAuto_facciata1.png);
+    background-repeat: no-repeat;
+    background-color: white;
+    background-size:cover;
+}
+
+.signup_content{
+    background-color: var(--form-bg-color);
+    color: var(--form-text-color);
+    padding: 2.5em;
+    border-radius: 1.5em;
+    margin-top: 10em;
+    box-shadow: rgba(115, 115, 115, 0.35) 0px 5px 15px;
+}
+
+.signup_content > h1, .signup_content > p{
+    text-align: center;
+}
+
+.signup_content > h1{
+    margin-bottom: 1em;
+}
+
+#signup_form{
+    margin: 1em 0;
+    border-radius: 1em;
+}
+
+#signup_form legend{
+    width: 100%;
+    text-align: center;
+    margin-bottom: 1em;
+}
+
+#signup_form fieldset{
+    display: flex;
+    flex-direction: column;
+}
+
+#signup_form fieldset .signup_input{
+    height: 3em;
+    border-radius: 0.5em;
+    border: 1px solid var(--form-border-input-color);
+    background-color: var(--form-bg-color);
+    color: var(--navbar-text-color);
+    margin: 0 5em 2em 5em;
+    font-size: 100%;
+    font-family: "Lexend", Roboto, sans-serif;
+    padding-left: 1em;
+}
+
+
+#signup_form label{
+    background-color: var(--form-bg-color);
+    margin-left: 6em;
+    position: absolute;
+    padding: 0 0.5em;
+}
+
+#signup_label_nome{
+    margin-top: -0.8em;
+    color: var(--form-border-input-color);
+}
+
+#signup_label_cognome{
+    margin-top: 4.5em;
+    color: var(--form-border-input-color);
+}
+
+#signup_label_mail{
+    margin-top: 9.8em;
+    color: var(--form-border-input-color);
+}
+
+#signup_label_pass{
+    margin-top: 15em;
+    color: var(--form-border-input-color);
+}
+
+#signup_label_pass2{
+    margin-top: 20.2em;
+    color: var(--form-border-input-color);
+}
+
+#signup_label_data{
+    margin-top: 25.5em;
+    color: var(--form-border-input-color);
+}
+
+input[type="date"]::-webkit-calendar-picker-indicator {
+    background-color: white;
+    margin-right: 1em;
+    border-radius: 0.5em;
+}
+
+#signup_button{
+    color: var(--form-text-color);
+    background-color: var(--form-bg-color);
+    border: 1px solid white;
+    padding: 1em 1.5em;
+    border-radius: 1.5em;
+    max-width: 10em;
+    align-self: center;
+    font-size: 100%;
+    font-family: "Lexend", Roboto, sans-serif;
+}
+
+#signup_button:hover{
+    background-color: var(--form-text-color);
+    color: var(--form-bg-color);
+}
+
+
+/*#endregion SignIn*/
