@@ -148,7 +148,7 @@ header#headerAboutUs {
 
 header#headerAboutUs h1{
     font-size: 600%;
-    margin-top: -1em;
+    margin-top: -0.5em;
     margin-bottom: 0.5em;
 }
 
@@ -159,6 +159,11 @@ header#headerAboutUs p {
 header#headerAboutUs h2 {
     margin-top: 1.5em;
     font-size: 2.5em;
+}
+
+header .text {
+    text-align: left;
+    margin-left: 15%;
 }
 
 /* MAIN */
