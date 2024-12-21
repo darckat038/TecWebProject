@@ -5,6 +5,9 @@
     --navbar-bg-color: #000000;
     --navbar-text-color: #ffffff;
 
+    --header-bg-color: #000000;
+    --header-text-color: #ffffff;
+
     --link-bg-color: #000000;
     --not-visited-link: #ffffff;
     --visited-link: #999afc;
@@ -56,7 +59,7 @@ body{
     color: white;
     display: inline-flex;
     overflow: hidden;
-    position: absolute;
+    /* position: absolute; */
     width: 100%;
     padding-top: 1em;
     padding-bottom: 1em;
@@ -116,9 +119,9 @@ h1.hide{
     color: var(--navbar-text-color);
     background-color: var(--navbar-bg-color);
     width: 100%;
-    margin-top: 3.5em;
+    margin-top: 0em;
     border-top: 1px solid var(--form-border-input-color);
-    position: absolute;
+    /* position: absolute; */
 }
 
 #breadcrumb p{
@@ -136,34 +139,34 @@ h1.hide{
 header#headerAboutUs {
     padding-top: 20%;
     padding-bottom: 20%;
-    background-image: url("../img/Background/header_image_Luzzauto_4.jpeg");
+    background-image: url("../img/Background/Luzzauto/header_image_Luzzauto_2_dark.png");
     background-size: cover;
     background-repeat: no-repeat;
-    background-position: top;
+    background-position: center;
     text-align: center;
-    background-color: var(--content-text-bg-color);
-    color: var(--content-text-color);
+    background-color: var(--header-bg-color);
+    color: var(--header-text-color);
     width: 100%;
 }
 
 header#headerAboutUs h1{
-    font-size: 600%;
+    font-size: 8em;
     margin-top: -0.5em;
     margin-bottom: 0.5em;
 }
 
 header#headerAboutUs p {
-    font-size: 1.5em;
+    font-size: 1.7em;
 }
 
 header#headerAboutUs h2 {
-    margin-top: 1.5em;
-    font-size: 2.5em;
+    margin-top: 4em;
+    font-size: 3em;
 }
 
 header .text {
-    text-align: left;
-    margin-left: 15%;
+    text-align: right;
+    margin-right: 12%;
 }
 
 /* MAIN */
@@ -213,6 +216,15 @@ section.history > img {
     border-radius: 0.5em;
 }
 
+section.history h3 {
+    font-weight:450;
+   font-size: 1.8em;
+}
+
+section.history p {
+    font-weight: 300;
+}
+
 /** ------------------ **/
 
 #luzzauto {
@@ -230,15 +242,6 @@ section.history > img {
     text-align: center;
 }
 
-#dreamToReal h3 {
-   font-weight:450;
-   font-size: 1.8em;
-}
-
-#dreamToReal p {
-    font-weight: 300;
-}
-
 #dreamToReal img {
     float: none;
     margin-right: 2em;
@@ -248,17 +251,6 @@ section.history > img {
 }
 
 /** ------------------ **/
-
-#unique h3 {
-    font-weight:450;
-    font-size: 1.8em;
-    vertical-align: middle;
-}
-
-#unique p {
-    font-weight: 300;
-    vertical-align: middle;
-}
 
 #unique img {
     margin-right: 4em;
@@ -271,15 +263,6 @@ section.history > img {
 
 #mobility {
     text-align: left;
-}
-
-#mobility h3 {
-    font-weight:450;
-    font-size: 1.8em;
-}
-
-#mobility p {
-    font-weight: 300;
 }
 
 #mobility img {
@@ -295,13 +278,7 @@ section.history > img {
     text-align: center;
 }
 
-#future h3 {
-    font-weight: 450;
-    font-size: 1.8em;
-}
-
 #future p {
-    font-weight: 300;
     max-width: 50em;
     margin: 0 auto;
 }

@@ -4,6 +4,9 @@
 
     --navbar-bg-color: #000000;
     --navbar-text-color: #ffffff;
+    
+    --header-bg-color: #000000;
+    --header-text-color: #ffffff;
 
     --link-bg-color: #000000;
     --not-visited-link: #ffffff;
@@ -184,13 +187,13 @@ h1.hide{
 header{
     padding-top: 20%;
     padding-bottom: 20%;
-    background-image: url("../img/Background/header_image_Luzzauto_4.jpeg");
+    background-image: url("../img/Background/Luzzauto/header_image_Luzzauto_2_dark.png");
     background-size: cover;
     background-repeat: no-repeat;
     background-position: top;
     text-align: center;
-    background-color: var(--content-text-bg-color);
-    color: var(--content-text-color);
+    background-color: var(--header-bg-color);
+    color: var(--header-text-color);
     width: 100%;
 }
 
@@ -201,11 +204,13 @@ header#headerAboutUs h1{
 }
 
 header#headerAboutUs p {
+    margin: 1em auto 0 auto;
     font-size: 1.5em;
+    max-width: 8em;
 }
 
 header#headerAboutUs h2 {
-    margin-top: 1em;
+    margin-top: 3em;
     font-size: 2em;
 }
 
@@ -235,13 +240,17 @@ section.history {
     display: inline-block;
     padding: 0 1em 1em 1em;
     width: 90%;
+    text-align: center;
 }
 
 section.history h3 {
+    font-weight:450;
+    font-size: 1.8em;
     margin-top: 1em;
 }
 
 section.history p {
+    font-weight: 300;
     margin-top: 0.3em;
 }
 
