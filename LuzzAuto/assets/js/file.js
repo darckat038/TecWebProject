@@ -3,7 +3,7 @@ document.addEventListener("DOMContentLoaded", function () {
     var y = document.getElementById("menu-button-container");
 
     function adjustMenuOnResize() {
-        if (window.innerWidth >= 1024) {
+        if (window.innerWidth > 1024) {
             x.style.display = "flex";                       // Passaggio a modalità desktop
         } else {
             if (x.style.display === "flex" && !(y.classList.contains("change"))) {
