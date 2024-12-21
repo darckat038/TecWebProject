@@ -12,3 +12,6 @@ Progetto del corso di Tecnologie Web della laurea in Informatica presso l'Univer
 ### Info Utili
 - Versione PHP Server Tecweb: 8.2.26
 - Versione SQL Server: MariaDB 10.11.6
+
+### Strumenti utili
+- [Checker contrasto immagine testo](https://imagecontrastchecker.com/)
