@@ -21,7 +21,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Lexend:wght@100..900&display=swap" rel="stylesheet">
 
     </head>
-    <body id="signin_body"> 
+    <body id="signup_body"> 
         <nav class="topNavBar">
 
             <h1 class="hide">LuzzAuto</h1>
@@ -37,48 +37,48 @@
                 <li><a href="listino.html" >Listino auto</a></li>
                 <li><a href="test_drive.html" ><span lang="en-GB">Test Drive</span></a></li>
                 <li><a href="login.html" ><span lang="en-GB">LogIn</span></a></li>
-                <li id="here"><a href="registrazione.html" tabindex="-1"><span lang="en-GB">SignIn</span></a></li>
+                <li id="here"><a href="registrazione.html" tabindex="-1"><span lang="en-GB">SignUp</span></a></li>
             </ul>
         </nav>
 
         <nav id="breadcrumb">
-            <p>Ti trovi in: <span lang="en-GB">SignIn</span></p>
+            <p>Ti trovi in: <span lang="en-GB">SignUp</span></p>
         </nav>
 
-        <main class="signin_content">
+        <main class="signup_content">
 
             <h1>Benvenuto in LuzzAuto</h1>
             <p>Inserisci i tuoi dati per creare un <span lang="en-GB">account</span> e poter accedere ai nostri servizi.</p>
             
-            <form method="post" action="">
+            <form id="signup_form" method="post" action="">
                 <fieldset>
     
-                    <legend><span lang="en-GB">SignIn</span></legend>
+                    <legend><span lang="en-GB">SignUp</span></legend>
 
-                    <label for="nome">Nome</label>
-                    <input type="text" name="nome" aria-required="true" aria-label="Campo di inserimento del nome" required data-msg-required="Per favore, inserisci il tuo nome">
+                    <label id="signup_label_nome" for="signup_nome">Nome</label>
+                    <input id="signup_nome" class="signup_input" type="text" name="nome" aria-required="true" aria-label="Campo di inserimento del nome" required data-msg-required="Per favore, inserisci il tuo nome">
     
-                    <label for="cognome">Cognome</label>
-                    <input type="text" name="cognome" aria-required="true" aria-label="Campo di inserimento del cognome" required data-msg-required="Per favore, inserisci il tuo cognome">
+                    <label id="signup_label_cognome" for="signup_cognome">Cognome</label>
+                    <input id="signup_cognome" class="signup_input" type="text" name="cognome" aria-required="true" aria-label="Campo di inserimento del cognome" required data-msg-required="Per favore, inserisci il tuo cognome">
                     
-                    <label for="mail"><span lang="en-GB">Mail</span></label>
-                    <input type="email" name="mail" aria-required="true" aria-label="Campo di inserimento della mail" required data-msg-required="Per favore, inserisci la tua mail" data-msg-invalid:="Ci dispiace, formato non corretto">
+                    <label id="signup_label_mail" for="signup_mail"><span lang="en-GB">Mail</span></label>
+                    <input id="signup_mail" class="signup_input" type="email" name="mail" aria-required="true" aria-label="Campo di inserimento della mail" required data-msg-required="Per favore, inserisci la tua mail" data-msg-invalid:="Ci dispiace, formato non corretto">
     
-                    <label for="password"><span lang="en-GB">Password</span></label>
-                    <input type="password" name="password" aria-required="true" aria-label="Campo di inserimento della password" required data-msg-required="Per favore, inserisci la tua password">
+                    <label id="signup_label_pass" for="signup_pass"><span lang="en-GB">Password</span></label>
+                    <input id="signup_pass" class="signup_input" type="password" name="password" aria-required="true" aria-label="Campo di inserimento della password" required data-msg-required="Per favore, inserisci la tua password">
 
-                    <label for="password2"><span lang="en-GB">Ripeti password</span></label>
-                    <input type="password" name="password2" aria-required="true" aria-label="Campo di inserimento della password" required data-msg-required="Per favore, reinserisci la tua password">
+                    <label id="signup_label_pass2" for="signup_pass2"><span lang="en-GB">Ripeti password</span></label>
+                    <input id="signup_pass2" class="signup_input" type="password" name="password2" aria-required="true" aria-label="Campo di inserimento della password" required data-msg-required="Per favore, reinserisci la tua password">
 
-                    <label for="data">Data di nascita</label>
-                    <input type="date" name="data" aria-required="true" aria-label="Campo di inserimento della data di nascita" required data-msg-required="Per favore, inserisci la tua data di nascita">
+                    <label id="signup_label_data" for="signup_data">Data di nascita</label>
+                    <input id="signup_data" class="signup_input" type="date" name="data" aria-required="true" aria-label="Campo di inserimento della data di nascita" required data-msg-required="Per favore, inserisci la tua data di nascita">
     
-                    <input type="submit" value="Registrati" aria-label="Bottone di invio del form">
+                    <input id="signup_button" type="submit" value="Registrati" aria-label="Bottone di invio del form">
     
                 </fieldset>
             </form>
 
-            <p>Se sei già registrato allora <a href="registrazione.html">ACCEDI AL TUO <span lang="en-GB">ACCOUNT</span></a>!</p>
+            <p>Se sei già registrato allora <a href="login.html">ACCEDI AL TUO <span lang="en-GB">ACCOUNT</span></a>!</p>
 
         </main>
 
