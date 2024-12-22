@@ -242,16 +242,12 @@ h1.hide{
     padding: 0 0em;
 }
 
-.home_fastSearch form #home_label_condizione {
-    margin-left: 3em;
-}
-
 .home_fastSearch form #home_label_prezzo {
-    margin-left: 8.2em;
+    margin-left: 9.3em;
 }
 
 .home_fastSearch form #home_condizione {
-    margin-left: 2em;
+    margin-left: 0em;
     padding-right: 0.8em;
 }
 
@@ -268,7 +264,7 @@ h1.hide{
 
 .home_fastSearch form #home_submit{
     display: block;
-    align-self: center;
+    margin: 3em auto 0;                            /* con questo e display: block riesco ad allinearlo a centro */
     color: var(--form-text-color);
     background-color: var(--form-bg-color);
     border: 1px solid white;
@@ -277,7 +273,6 @@ h1.hide{
     max-width: 10em;
     font-size: 100%;
     font-family: "Lexend", Roboto, sans-serif;
-    margin-top: 2em;
 }
 
 .home_fastSearch form #home_submit:hover{
