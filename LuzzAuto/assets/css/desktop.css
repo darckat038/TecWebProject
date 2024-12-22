@@ -46,7 +46,6 @@ body{
     font-size: 100%;
     font-family: "Lexend", Roboto, sans-serif;
     line-height: 1.5em;
-    align-items: center;
 }
 
 a{
@@ -57,6 +56,10 @@ a{
 a:visited {
     color: var(--visited-link);
     text-underline-offset: 0.3em;
+}
+
+img {
+    object-position: contain;
 }
 
 /******************* 
@@ -143,7 +146,6 @@ h1.hide{
         HOME
 ********************/
 
-
 /* HEADER */
 
 #home_header {
@@ -179,6 +181,15 @@ h1.hide{
     margin-right: 12%;
 }
 
+/* SECTIONS */
+
+.home_sectionTitle {
+    font-weight:450;
+    font-size: 1.8em;
+    text-align: center;
+    margin: 1em;
+}
+
 /* FASTSEARCH */
 
 .home_fastSearch {
@@ -186,19 +197,12 @@ h1.hide{
     color: var(--form-text-color);
     display: flex;
     flex-direction: column;
-    margin-top: -8em;
+    margin: -8em auto 0;
     padding: 3em;
     border-radius: 1em;
     font-size: 100%;
     box-shadow: rgba(115, 115, 115, 0.35) 0px 5px 15px;
     width: fit-content;
-}
-
-.home_fastSearch .home_sectionTitle {
-    font-weight:450;
-    font-size: 1.8em;
-    text-align: center;
-    margin: 1em;
 }
 
 .home_fastSearch form {
@@ -240,7 +244,7 @@ h1.hide{
 .home_fastSearch label#home_label_modello,
 .home_fastSearch form #home_label_prezzo {
     margin-top: -0.85em;
-    margin-left: 5.8em;
+    margin-left: 5em;
 }
 
 .home_fastSearch form #home_modello,
@@ -253,7 +257,7 @@ h1.hide{
 }
 
 .home_fastSearch form #home_label_prezzo {
-    margin-left: 9.3em;
+    margin-left: 8.5em;
 }
 
 .home_fastSearch form .home_insert {
@@ -283,6 +287,31 @@ h1.hide{
 .home_fastSearch form #home_submit:hover{
     background-color: var(--form-text-color);
     color: var(--form-bg-color);
+}
+
+/* DISCOUNTS */
+
+.home_discounts {
+    display: block;
+    padding: 2em 0 5em;
+    margin: 5em 0;
+    background-color: lightgray;
+    text-align: center;
+}
+
+.home_discounts img {
+    width: 30em;
+    border-radius: 0.5em;
+}
+
+.home_discounts img#home_second_image {
+    margin: 6em 3em;
+}
+
+/* WORK WITH US */
+
+.workWithUs {
+
 }
 
 /*#endregion Home*/
