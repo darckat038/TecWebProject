@@ -39,14 +39,24 @@ body.purple {
 }
 
 body{
-    background-color: var(--content-text-bg-color);
-    color: var(--content-text-color);
+    background-color: var(--bg-color);
+    color: var(--text-color);
     display: flex;
     flex-direction: column;
     font-size: 100%;
     font-family: "Lexend", Roboto, sans-serif;
     line-height: 1.5em;
     align-items: center;
+}
+
+a{
+    color: var(--not-visited-link);
+    text-underline-offset: 0.3em;
+}
+
+a:visited {
+    color: var(--visited-link);
+    text-underline-offset: 0.3em;
 }
 
 /******************* 

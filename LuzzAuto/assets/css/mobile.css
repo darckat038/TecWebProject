@@ -5,6 +5,12 @@
     --navbar-bg-color: #000000;
     --navbar-text-color: #ffffff;
 
+    --header-bg-color: #000000;
+    --header-text-color: #ffffff;
+
+    --footer-bg-color: #000000;
+    --footer-text-color: #ffffff;
+
     --link-bg-color: #000000;
     --not-visited-link: #ffffff;
     --visited-link: #999afc;
@@ -15,8 +21,9 @@
     --cards-bg-color: #4e4ffa;
     --cards-text-color: #ffffff;
 
-    --form-bg-color: #ffffff;
-    --form-border-input-color: #696969;
+    --form-bg-color: #000000;
+    --form-border-input-color: #919191;
+    --form-text-color: #ffffff;
 }
 
 body.dark {
@@ -34,6 +41,11 @@ body.purple {
     margin: 0;
 }
 
+html, body {
+    width: 100%;
+    height: 100%;
+}
+
 body{
     background-color: var(--bg-color);
     color: var(--text-color);
@@ -42,7 +54,21 @@ body{
     font-size: 100%;
     font-family: "Lexend", Roboto, sans-serif;
     line-height: 1.5em;
-    align-items: center;
+    align-content: center;
+}
+
+a{
+    color: var(--not-visited-link);
+    text-underline-offset: 0.3em;
+}
+
+a:visited {
+    color: var(--visited-link);
+    text-underline-offset: 0.3em;
+}
+
+img {
+    object-fit: contain;
 }
 
 /******************* 
@@ -177,86 +203,121 @@ h1.hide{
 
 /* HEADER */
 
-header{
+#home_header {
     padding-top: 20%;
     padding-bottom: 20%;
-    background-image: url("../img/Background/background.jpg");
+    background-image: url("/LuzzAuto/assets/img/Background/Luzzauto/header_image_Luzzauto_2_dark.webp");
     background-size: cover;
     background-repeat: no-repeat;
     background-position: top;
     text-align: center;
-    color: white;
+    background-color: var(--header-bg-color);
+    color: var(--header-text-color);
     width: 100%;
 }
 
-header h1{
-    margin-bottom: 1em;
-    color: var(--cards-text-color);
+#home_header h1{
+    margin-top: 2em;
+    font-size: 3.5em;
 }
 
-header h2 {
-    color: var(--cards-text-color);
+#home_header p {
+    margin-top: 0.7em;
+    font-size: 1.7em;
+    line-height: 1.2em;
+}
+
+#home_header h2 {
+    margin-top: 2em;
+    font-size: 2.5em;
 }
 
 /* MAIN */
 
-.fastSearch {
-    display: flex;
-    flex-direction: column;
-    border: 0.3em solid var(--content-text-color);
-    border-radius: 1em;
-    margin-top: 1em;
-}
-
-.fastSearch h3 {
-    align-self: center;
-    margin-top: 1em;
-    padding: 0 1em;
-}
-
-.fastSearch form {
-    display: flex;
-    flex-direction: column;
-    margin-top: 1em;
-    padding: 0 1em 1em 1em;
-    align-items: center;
-}
-
-.fastSearch form #condizioneF {
-    display: inline-flex;
-}
-
-.fastSearch form #condizioneL {
-    display: flex;
-    align-items: center;
-    margin-right: 1em;
-}
-
-.fastSearch form input {
-    border: 0.2em solid var(--form-border-input-color);
-    border-radius: 1em;
-    padding: 0.4em 0.4em;
-}
-
-.fastSearch form #marca,
-.fastSearch form #modello,
-.fastSearch form #maxPrezzo {
+.home_fastSearch {
+    background-color: var(--form-bg-color);
+    color: var(--form-text-color);
+    border-radius: 1.5em;
+    width: 85%;
+    box-shadow: rgba(115, 115, 115, 0.35) 0px 5px 15px;
+    margin: 1em auto 0;
     text-align: center;
 }
 
-.fastSearch form #submit {
-    margin-top: 1em;
-    padding: 0.5em 1em;
+.home_fastSearch h3.home_sectionTitle {
+    text-align: center;
+    padding: 1.5em 1em 0;
+    font-size: 1.5em;
+}
+
+.home_fastSearch form {
+    padding: 1em 1em;
+}
+
+.home_fastSearch form fieldset {
+    display: flex;
+    flex-direction: column;
+    margin-top: 1.5em;
+}
+
+.home_fastSearch form legend {
+    width: 100%;
+    text-align: center;
+    font-size: 100%;
+}
+
+.home_fastSearch form label {
+    background-color: var(--form-bg-color);
+    margin-top: 1.5em;
+    color: var(--form-border-input-color);
+    font-size: 100%;
+    margin-bottom: 0.5em;
+}
+
+.home_fastSearch form #home_condizione {
+    text-align: center;
+    padding: 0;
+    font-size: 100%;
+}
+
+.home_fastSearch form .home_insert {
+    height: 3em;
+    border-radius: 0.5em;
+    border: 1px solid var(--form-border-input-color);
+    background-color: var(--form-bg-color);
+    color: var(--navbar-text-color);
+    font-family: "Lexend", Roboto, sans-serif;
+    padding-left: 1em;
+    font-size: 100%;
+}
+
+.home_fastSearch form #home_submit{
+    color: var(--form-text-color);
+    background-color: var(--form-bg-color);
+    border: 1px solid white;
+    border-radius: 1.5em;
+    font-size: 100%;
+    font-family: "Lexend", Roboto, sans-serif;
+    margin-top: 3em;
+    padding: 1em 1em;
+    width: 100%;
+}
+
+.home_fastSearch form #home_submit:hover{
+    background-color: var(--form-text-color);
+    color: var(--form-bg-color);
 }
 
 /* FOOTER */
 
 footer {
-    background-color: var(--navbar-bg-color);
-    color: var(--navbar-text-color);
+    display: inline-flex;
+    justify-content: center;
+    background-color: var(--footer-bg-color);
+    color: var(--footer-text-color);
     margin: 1em 0 0 0;
-    padding: 1em 10em;
-    float: left;
+    width: 100%;
+    padding: 1em 0;
 }
 
 /*#endregion Home*/
