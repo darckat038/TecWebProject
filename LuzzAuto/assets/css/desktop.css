@@ -196,6 +196,10 @@ h1.hide{
     font-size: 100%;
 }
 
+.home_fastSearch fieldset {
+    padding: 0 0.5em;
+}
+
 .home_fastSearch legend {
     width: 100%;
     text-align: center;
@@ -210,10 +214,6 @@ h1.hide{
     position: absolute;
     padding: 0 0.5em;
     font-size: 100%;
-}
-
-.home_fastSearch form #home_basicInfo {
-    padding: 0 0em;
 }
 
 .home_fastSearch label#home_label_marca,
@@ -238,17 +238,12 @@ h1.hide{
     float: right;
 }
 
-.home_fastSearch form #home_preferences {
-    padding: 0 0em;
+.home_fastSearch form #home_condizione {
+    padding-right: 0.8em;
 }
 
 .home_fastSearch form #home_label_prezzo {
     margin-left: 9.3em;
-}
-
-.home_fastSearch form #home_condizione {
-    margin-left: 0em;
-    padding-right: 0.8em;
 }
 
 .home_fastSearch form .home_insert {
