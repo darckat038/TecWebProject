@@ -207,7 +207,6 @@ h1.hide{
 
 .home_fastSearch form {
     margin: 1em 0;
-    font-size: 100%;
 }
 
 .home_fastSearch fieldset {
@@ -265,13 +264,13 @@ h1.hide{
     border-radius: 0.5em;
     border: 1px solid var(--form-border-input-color);
     background-color: var(--form-bg-color);
-    color: var(--navbar-text-color);
+    color: var(--form-text-color);
     font-family: "Lexend", Roboto, sans-serif;
     padding-left: 1em;
     font-size: 100%;
 }
 
-.home_fastSearch form #home_submit{
+.home_fastSearch form #home_cerca {
     display: block;
     margin: 3em auto 0;                            /* con questo e display: block riesco ad allinearlo a centro */
     color: var(--form-text-color);
@@ -284,34 +283,158 @@ h1.hide{
     font-family: "Lexend", Roboto, sans-serif;
 }
 
-.home_fastSearch form #home_submit:hover{
+.home_fastSearch form #home_cerca:hover {
     background-color: var(--form-text-color);
     color: var(--form-bg-color);
 }
 
-/* DISCOUNTS */
+/* NEW CARS */
 
-.home_discounts {
-    display: block;
-    padding: 2em 0 5em;
+.home_new {
+    padding: 2em 0 6em;
     margin: 5em 0;
-    background-color: rgb(236, 236, 236);
     text-align: center;
+    background-color: rgb(223, 223, 223);
+    width: 100%;
 }
 
-.home_discounts img {
-    width: 30em;
-    border-radius: 0.5em;
+.home_new h3 {
+    font-size: 2.7em;
 }
 
-.home_discounts img#home_second_image {
-    margin: 6em 3em;
+.home_new div.home_car_item {
+    margin: 4em 3em 0;
+    display: inline-block;
+    border: 0px solid black;
+    border-radius: 1.5em;
+    overflow: hidden;
+    max-width: 25em;
+    height: fit-content;
+    padding: 0 0 1em;
+    font-size: 100%;
+    background-color: white;
+}
+
+.home_new div.home_car_item dt {
+    font-weight:450;
+    font-size: 1.3em;
+    margin: 0.5em 0;
+}
+
+.home_new div.home_car_item dd {
+    padding: 0 1em 1em;
+    font-weight: 300;
+    font-size: 1.1em;
+}
+
+.home_new img {
+    object-fit: cover;
+    width: 100%;
+    border-radius: 0;
+}
+
+.home_new div:hover {
+    transform: scale(1.2);
+    transition-duration: 0.5s;
+}
+
+.home_new div:not(:hover) {
+    transform: scale(1);
+    transition-duration: 0.5s;
 }
 
 /* WORK WITH US */
 
 .workWithUs {
+    background-color: var(--form-bg-color);
+    color: var(--form-text-color);
+    display: flex;
+    flex-direction: column;
+    margin: 3em auto;
+    padding: 3em;
+    border-radius: 3em 0;
+    font-size: 100%;
+    width: fit-content;
+}
 
+.workWithUs fieldset {
+    display: inline-block;
+}
+
+.workWithUs legend {
+    text-align: center;
+    padding-bottom: 1.5em;
+    padding-top: 2em;
+    font-size: 100%;
+}
+
+.workWithUs label {
+    background-color: var(--form-bg-color);
+    color: var(--form-border-input-color);
+    position: absolute;
+    padding: 0 0.5em;
+    font-size: 100%;
+}
+
+.workWithUs form #home_label_name {
+    margin-top: -0.85em;
+    margin-left: 1.2em;
+}
+
+.workWithUs form #home_name {
+    float: left;
+    margin-right: 2em;
+}
+
+.workWithUs form #home_label_mail {
+    margin-top: -0.85em;
+    margin-left: 3.2em;
+}
+
+.workWithUs form #home_mail {
+    float: right;
+    margin-left: 2em;
+    width: 20em;
+}
+
+.workWithUs form #home_label_ruolo {
+    margin-top: -0.85em;
+    margin-left: 2.8em;
+}
+
+.workWithUs form #home_ruolo {
+    float: left;
+    margin-left: 1.7em;
+    padding-right: 0.8em;
+}
+
+.workWithUs form .home_insert {
+    height: 3em;
+    border-radius: 0.5em;
+    border: 1px solid var(--form-border-input-color);
+    background-color: var(--form-bg-color);
+    color: var(--form-text-color);
+    font-family: "Lexend", Roboto, sans-serif;
+    padding-left: 1em;
+    font-size: 100%;
+}
+
+.workWithUs form #home_invia {
+    display: block;
+    margin: 3em auto 0;                            /* con questo e display: block riesco ad allinearlo a centro */
+    color: var(--form-text-color);
+    background-color: var(--form-bg-color);
+    border: 1px solid white;
+    padding: 1em 1.5em;
+    border-radius: 1.5em;
+    max-width: 10em;
+    font-size: 100%;
+    font-family: "Lexend", Roboto, sans-serif;
+}
+
+.workWithUs form #home_invia:hover {
+    background-color: var(--form-text-color);
+    color: var(--form-bg-color);
 }
 
 /*#endregion Home*/

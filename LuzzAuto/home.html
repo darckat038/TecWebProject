@@ -5,7 +5,7 @@
         <meta name="viewport" content="width=device-width">
         <base href="/LuzzAuto/">
 
-        <title>Home Page - LuzzAuto Concessionario</title>
+        <title>Home Page | LuzzAuto Concessionario</title>
 
         <link rel="stylesheet" media="screen and (max-width:1024px)" href="assets/css/mobile.css" type="text/css">
         <link rel="stylesheet" media="screen and (min-width:1025px)" href="assets/css/desktop.css" type="text/css">
@@ -83,19 +83,68 @@
                         <label for="home_prezzo" id="home_label_prezzo">Prezzo massimo (€)</label>
                         <input type="number" id="home_prezzo" class="home_insert" name="prezzo" min="0" step="500" placeholder="25000" aria-label="Campo di inserimento del prezzo massimo dell'auto">
                     </fieldset>
-                    <input type="submit" value="Ricerca" id="home_submit" aria-label="Bottone di ricerca per ricercare veicoli con opzioni selezionate sopra">
+                    <input type="submit" value="Ricerca" id="home_cerca" aria-label="Bottone di ricerca per ricercare veicoli con opzioni selezionate sopra">
                 </form>
             </section>
 
-            <section class="home_discounts" aria-label="Sezione esposizione automobili scontate">
-                <h3 class="home_sectionTitle">Scopri le ultime promozioni</h3>
-                <img id="home_first_image" src="assets/img/DM/mudol.jpeg" alt="Automobile sportiva azzurra vista davanti sinistra">
-                <img id="home_second_image" src="assets/img/ESU/belzuny.jpeg" alt="Suv sportivo rosso vista frontale su sfondo roccioso">
-                <img id="home_third_image" src="assets/img/UniPD/planetary.png" alt="Minivan blu vista davanti destra">
+            <section class="home_new" aria-label="Sezione esposizione nuove automobili">
+                <h3 class="home_sectionTitle">Scopri gli ultimi arrivi</h3>
+                <dl id="home_car_list">
+                    <div id="home_first_car" class="home_car_item">
+                        <img id="home_first_image" src="assets/img/DM/mudol.jpeg" alt="Berlina sportiva blu elettrico vista davanti sinistra">
+                        <dt>DM Mudol</dt>
+                        <dd>
+                            Prestazioni mozzafiato e design aerodinamico si fondono in questa elegante berlina sportiva.
+                            Colore esclusivo blu elettrico, linee dinamiche e tecnologia all'avanguardia per un'esperienza di guida unica.
+                            Disponibile ora presso il nostro showroom!
+                        </dd>
+                    </div>
+                    <div id="home_second_car" class="home_car_item">
+                        <img id="home_second_image" src="assets/img/ESU/belzuny.jpeg" alt="Suv di lusso sportivo rosso vista frontale su sfondo roccioso">
+                        <dt>ESU Belzuy</dt>
+                        <dd>
+                            Unione perfetta di potenza e stile, questo SUV di lusso si distingue per il suo design aggressivo e le prestazioni straordinarie su ogni terreno.
+                            Verniciatura esclusiva rosso metallizzato e interni di altissimo livello.
+                            Vieni a scoprirlo nel nostro showroom!
+                        </dd>
+                    </div>
+                    <div id="home_third_car" class="home_car_item">
+                        <img id="home_third_image" src="assets/img/UniPD/planetary.png" alt="Minivan premium blu metallizzato futuristico vista davanti destra">
+                        <dt>UniPD Planetary</dt>
+                        <dd>
+                            Progettata per la famiglia moderna, questa monovolume premium offre spazio, eleganza e tecnologia avanzata.
+                            Il design raffinato in blu metallizzato e gli interni spaziosi garantiscono comfort per ogni viaggio.
+                            Scopri l'auto perfetta per le tue esigenze nel nostro showroom!
+                        </dd>
+                    </div>
+                </dl>
             </section>
 
             <section class="workWithUs">
                 <h3 class="home_sectionTitle">Vuoi lavorare con noi?</h3>
+                <form action="" method="POST">
+                    <fieldset>
+                        <legend>INFO DI CONTATTO</legend>
+
+                        <label for="home_name" id="home_label_name">Nome</label>
+                        <input type="text" name="Nome" id="home_name" class="home_insert" placeholder="John Doe" aria-required="true" aria-label="Campo di inserimento del nome completo" required data-msg-required="Per favore, inserisci il tuo nome completo" >
+
+                        <label id="home_label_mail" for="home_mail"><span lang="en-GB">Mail</span></label>
+                        <input type="email" name="mail" id="home_mail" class="home_insert" placeholder="example@yahoo.com" aria-required="true" aria-label="Campo di inserimento della mail" required data-msg-required="Per favore, inserisci la tua mail" data-msg-invalid:="Ci dispiace, formato non corretto">
+                    </fieldset>
+                    <fieldset>
+                        <legend>RUOLO</legend>
+
+                        <label for="home_ruolo" id="home_label_ruolo">Ruolo</label>
+                        <select name="ruolo" id="home_ruolo" class="home_insert">
+                            <option disabled selected value>-- Seleziona --</option>
+                            <option value="designer"><span lang="en-GB">Designer</span></option>
+                            <option value="sviluppatore">Sviluppatore</option>
+                            <option value="venditore">Venditore</option>
+                        </select>
+                    </fieldset>
+                    <input type="submit" value="Invia" id="home_invia" aria-label="Bottone di invio del form">
+                </form>
             </section>
         </main>
 
