@@ -139,7 +139,7 @@ h1.hide{
 header#aboutUs_header {
     padding-top: 20%;
     padding-bottom: 20%;
-    background-image: url("../img/Background/Luzzauto/header_image_Luzzauto_2_dark.webp");
+    background-image: url("../img/Background/Luzzauto/header_image_Luzzauto_dark.webp");
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
@@ -218,7 +218,7 @@ section.aboutUs_history > img {
 
 section.aboutUs_history h3 {
     font-weight:450;
-   font-size: 1.8em;
+    font-size: 1.8em;
 }
 
 section.aboutUs_history p {
@@ -367,17 +367,73 @@ section.aboutUs_history p {
     border-radius: 0.5em;
 }
 
-/* CONTACTS */
+/* OUR TEAM */
 
 #aboutUs_ourTeam {
     display: inline-block;
     text-align: center;
 }
 
+#aboutUs_ourTeam > dl {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-areas: 
+    "a b"
+    "c d";
+    gap: 2em;
+    margin-top: 2em;
+}
+
+#aboutUs_ourTeam > dl > div {
+    display: block;
+    background-color: var(--cards-bg-color);
+    color: var(--cards-text-color);
+    overflow: hidden;
+    border-radius: 0.5em;
+    width: 40em;
+    margin: 2em auto 0;
+}
+
+#aboutUs_ourTeam > dl > div > img{
+    float: left;
+    object-fit: contain;
+    width: 15em;
+    margin-right: 2em;
+}
+
+#aboutUs_ourTeam > dl > div > dt {
+    text-align: center;
+    margin-top: 1em;
+    font-size: 1.3em;
+    font-weight:450;
+}
+
+#aboutUs_ourTeam > dl > div > dd {
+    margin-top: 1em;
+    margin-right: 1em;
+    font-weight: 300;
+}
+
+#aboutUs_ourTeam #aboutUs_fbellon {
+    grid-area: "a";
+}
+
+#aboutUs_ourTeam #aboutUs_frighetto {
+    grid-area: "b";
+}
+
+#aboutUs_ourTeam #aboutUs_fdiviesti {
+    grid-area: "c";
+}
+
+#aboutUs_ourTeam #aboutUs_eartusi {
+    grid-area: "d";
+}
+
 /*#endregion About us*/
 
 footer {
-    margin-top: 1em;
+    margin-top: 4em;
     background-color: var(--navbar-bg-color);
     color: var(--navbar-text-color);
     display: flex;
@@ -392,8 +448,10 @@ footer p{
     font-size: 0.8em;
     font-style: italic;
     padding: 0 1em;
+    font-size: 100%;
 }
 
 .imgValidCode{
     vertical-align: middle;
+    object-fit: cover;
 }
