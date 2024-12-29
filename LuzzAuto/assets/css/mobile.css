@@ -204,8 +204,8 @@ a:visited {
     color: var(--form-text-color);
     padding: 2.5em;
     border-radius: 1.5em;
-    margin-top: 10em;
-    width: 60vw;
+    margin-top: 8em;
+    width: 70vw;
     box-shadow: rgba(115, 115, 115, 0.35) 0px 5px 15px;
 }
 
@@ -218,10 +218,28 @@ a:visited {
     border: 1px solid var(--form-border-input-color);
     background-color: var(--navbar-bg-color);
     color: var(--navbar-text-color);
-    margin: 0 5em 2em 5em;
+    margin: 0 1em 2em 1em;
     font-size: 100%;
     font-family: "Lexend", Roboto, sans-serif;
     padding-left: 1em;
     margin-top: 3em;
     padding: 2em; 
+}
+
+.riquadri p{
+    padding: 0.1em;
+    color: var(--navbar-text-color);
+}
+
+.riquadri span{
+    color: var(--form-border-input-color);
+}
+
+.nomeRiq{
+    background-color: var(--navbar-bg-color);
+    margin-left: 1em;
+    position: absolute;
+    padding: 0 0.5em;
+    margin-top: -1.9em;
+    color: var(--form-border-input-color);
 }
