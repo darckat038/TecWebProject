@@ -39,8 +39,8 @@ body.purple {
 ********************/
 
 .topNavBar{
-    background-color: black;
-    color: white;
+    background-color: var(--navbar-bg-color);
+    color: var(--navbar-text-color);
     display: inline-flex;
     overflow: hidden;
     position: absolute;
@@ -118,7 +118,6 @@ body{
     font-family: "Lexend", Roboto, sans-serif;
     line-height: 1.5em;
     align-items: center;
-    background-image: url("../img/Background/background.jpg"); 
 }
 
 a{
@@ -133,9 +132,15 @@ a:visited {
 
 
 
+
 /******************* 
         UTENTE
 ********************/
+
+#utente_body{
+    background-image: url("/LuzzAuto/assets/img/Background/LuzzAuto_facciata1.png"); 
+}
+
 
 .utente{
     background-color: var(--navbar-bg-color);
@@ -198,10 +203,6 @@ a:visited {
     background-position: center;
     margin-top: -1.7em; 
 }
-
-
-
-
 
 
 /* Stile della tabella */
