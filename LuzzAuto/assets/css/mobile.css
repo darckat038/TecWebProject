@@ -35,6 +35,8 @@ body.purple {
     margin: 0;
 }
 
+html { scroll-behavior: smooth; }
+
 /******************* 
         MENU
 ********************/
