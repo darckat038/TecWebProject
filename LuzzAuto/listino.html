@@ -1,74 +1,212 @@
 <!DOCTYPE html>
 <html lang="it">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width">
+        <base href="/LuzzAuto/">
 
-    <base href="/LuzzAuto/">
+        <title>Home Page | LuzzAuto Concessionario</title>
 
-    <title>Listino - LuzzAuto Concessionario</title>
+        <link rel="stylesheet" media="screen and (max-width:1024px)" href="assets/css/mobile.css" type="text/css">
+        <link rel="stylesheet" media="screen and (min-width:1025px)" href="assets/css/desktop.css" type="text/css">
+        <link rel="stylesheet" media="print" href="assets/css/print.css" type="text/css">
 
-    <link rel="stylesheet" media="screen and (max-width:1024px), only screen and (max-device-width:1024px)" href="assets/css/mobile.css" type="text/css">
-    <link rel="stylesheet" media="screen and (min-width:1024px), only screen and (min-device-width:1024px)" href="assets/css/desktop.css" type="text/css">
-    <link rel="stylesheet" media="print" href="assets/css/print.css" type="text/css">
+        <script src="assets/js/file.js"></script>
 
-    <meta name="description" content="Consulta tutte le vetture disponibili nel nostro concessionario con la possibilità di prenotare un' esperienza di guida con l'auto dei tuoi sogni!">
-    <meta name="keywords" content="luzzauto, concessionario, macchina, auto, automobili, guida, vetture, test, prenota, esperienza">
-    <meta name="author" content="Artusi Emanuele, Bellon Filippo, Diviesti Filippo, Righetto Filippo">
+        <meta name="description" content="Visita il nostro concessionario per rimanere aggiornato sulle nuove vetture disponibili e prenotare un test di guida con la tua macchina dei sogni.">
+        <meta name="keywords" content="luzzauto, concessionario, macchina, auto, automobili, guida, vetture, test">
+        <meta name="author" content="Artusi Emanuele, Bellon Filippo, Diviesti Filippo, Righetto Filippo">
 
-    <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
         <link href="https://fonts.googleapis.com/css2?family=Lexend:wght@100..900&display=swap" rel="stylesheet">
 
-        <script>
-            document.addEventListener("DOMContentLoaded", function () {
-                var x = document.getElementById("menu");
-                var y = document.getElementById("menu-button-container");
-
-                function adjustMenuOnResize() {
-                    if (window.innerWidth >= 1024) {
-                        x.style.display = "flex";                       // Passaggio a modalità desktop
-                    } else {
-                        if (x.style.display === "flex" && !(y.classList.contains("change"))) {
-                            x.style.display = "none";                   // Passaggio da desktop a mobile
-                        }
-                                                                        // Passaggio da mobile a mobile
-                    }
-                }
-
-                // Evento resize sulla finestra
-                window.addEventListener("resize", adjustMenuOnResize);
-            });
-
-            function menuOpenClose(y) {
-                var x = document.getElementById("menu");
-                if (x.style.display === "flex") {
-                    x.style.display = "none";
-                } else {
-                    x.style.display = "flex";
-                }
-                y.classList.toggle("change");
-            }
-        </script>
     </head>
+
+    <!--
+    INSERIMENTO PHP PER FILTRO
+    -->
+
     <body>
-        <header>
-            <a href="about.html" class="logo" aria-label="immagine logo del sito">Logo</a>
-            <nav class="topNavBar">
-                <a href="javascript:void(0);" id="menu-button-container" onclick="menuOpenClose(this)" aria-label="icona apertura menu">
-                    <div class="menu-button-bar1" aria-hidden="true"></div>
-                    <div class="menu-button-bar2" aria-hidden="true"></div>
-                    <div class="menu-button-bar3" aria-hidden="true"></div>
-                </a>
-                <ul id="menu"  aria-label="menu del sito">
-                    <li><a href="home.html">Home</a></li>
-                    <li><a href="about.html">Chi Siamo</a></li>
-                    <li><a href="listino.html" id="here">Auto</a></li>
-                    <li><a href="drive_test.html">Prenotazione</a></li>
-                    <li><a href="login.html">Login</a></li>
-                    <li><a href="registrazione.html">Registrazione</a></li>
-                </ul>
-            </nav>
-        </header>
+
+        <nav class="topNavBar">
+
+            <h1 class="hide">LuzzAuto</h1>
+            
+            <a href="javascript:void(0);" id="menu-button-container" onclick="menuOpenClose(this)" aria-label="icona apertura menu">               
+                <div class="menu-button-bar1" aria-hidden="true"></div>
+                <div class="menu-button-bar2" aria-hidden="true"></div>
+                <div class="menu-button-bar3" aria-hidden="true"></div>
+            </a>
+            <ul id="menu"  aria-label="menu del sito">
+                <li><a href="home.html" tabindex="-1"><span lang="en-GB">Home</span></a></li>
+                <li><a href="about.html" >Chi Siamo</a></li>
+                <li id="here"><a href="listino.html" >Listino auto</a></li>
+                <li><a href="test_drive.html" ><span lang="en-GB">Test Drive</span></a></li>
+                <li><a href="login.html"><span lang="en-GB">LogIn</span></a></li>
+                <li><a href="registrazione.html" ><span lang="en-GB">SignUp</span></a></li>
+            </ul>
+        </nav>
+
+        <nav id="breadcrumb">
+            <p>Ti trovi in: <span lang="en-GB">Listino auto</span></p>
+        </nav>
+
+        <main>
+            <section class="list_filter">
+                <h3 class="list_sectionTitle">Filtra il catalogo</h3>
+                <form action="listino.html" method="GET">
+                    <!-- Fieldset per info base veicolo 
+                    - Marca
+                    - Modello
+                    - Anno
+                    - Colore
+                    - Alimentazione
+                    - Cambio
+                    - Trazione (AWD, RWD, FWD)
+                    - Potenza (CV)
+                    - Peso (kg)
+                    - Neopatentati (sì/no)
+                    - Numero posti
+                    -->
+                    <fieldset id="list_filter_basicInfo">
+                        <legend>INFORMAZIONI SUL VEICOLO</legend>
+                        
+                        <label for="list_filter_marca" id="list_label_marca">Marca</label>
+                        <input type="text" id="list_filter_marca" class="list_insert" name="marca" placeholder="Qualsiasi" aria-label="Campo di inserimento della marca dell'auto">
+                    
+                        <label for="list_filter_modello" id="list_label_modello">Modello</label>
+                        <input type="text" id="list_filter_modello" class="list_insert" name="modello" placeholder="Qualsiasi" aria-label="Campo di inserimento del modello dell'auto">
+                        
+                        <label for="list_filter_anno" id="list_label_anno">Anno</label>
+                        <!-- DA SISTEMARE MAX! con anno attuale -->
+                        <input type="number" id="list_filter_anno" class="list_insert" name="anno" min="1990" step="1" max="2024" placeholder="Qualsiasi" aria-label="Campo di inserimento dell'anno di produzione dell'auto">
+                        
+                        <label for="list_filter_colore" id="list_label_colore">Colore</label>
+                        <select id="list_filter_colore" class="list_insert" name="colore" aria-label="Campo di inserimento del colore dell'auto">
+                            <option disabled selected value>-- Qualsiasi --</option>
+                            <option value="bianco">Bianco</option>
+                            <option value="nero">Nero</option>
+                            <option value="grigio">Grigio</option>
+                            <option value="rosso">Rosso</option>
+                            <option value="blu">Blu</option>
+                            <option value="verde">Verde</option>
+                            <option value="arancione">Arancione</option>
+                            <option value="giallo">Giallo</option>
+                        </select>
+                        
+                        <label for="list_filter_alimentazione" id="list_label_alimentazione">Alimentazione</label>
+                        <select id="list_filter_alimentazione" class="list_insert" name="alimentazione" aria-label="Campo di inserimento dell'alimentazione dell'auto">
+                            <option disabled selected value>-- Qualsiasi --</option>
+                            <option value="benzina">Benzina</option>
+                            <option value="diesel"><span lang="en-GB">Diesel</span></option>
+                            <option value="elettrico">Elettrico</option>
+                            <option value="gpl">Ibrido <abbr title="">GPL</abbr></option>
+                            <option value="plugin">Ibrido <span lang="en-GB">Plug-in</span></option>
+                        </select>
+
+                        <label for="list_filter_cambio" id="list_label_cambio">Cambio</label>
+                        <select id="list_filter_cambio" class="list_insert" name="cambio" aria-label="Campo di inserimento del cambio dell'auto">
+                            <option disabled selected value>-- Qualsiasi --</option>
+                            <option value="manuale">Manuale</option>
+                            <option value="automatico">Automatico</option>
+                        </select>
+
+                        <label for="list_filter_trazione" id="list_label_trazione">Trazione</label>
+                        <select id="list_filter_trazione" class="list_insert" name="trazione" aria-label="Campo di inserimento della trazione dell'auto">
+                            <option disabled selected value>-- Qualsiasi --</option>
+                            <option value="anteriore">Anteriore</option>
+                            <option value="posteriore">Posteriore</option>
+                            <option value="integrale">Integrale</option>
+                        </select>
+
+                        <!-- MIN? MAX? -->
+                        <label for="list_filter_potenza" id="list_label_potenza">Potenza (<abbr title="cavalli vapore">CV</abbr>)</label>
+                        <input type="text" id="list_filter_potenza" class="list_insert" name="potenza" placeholder="Qualsiasi" aria-label="Campo di inserimento della potenza dell'auto in cavalli vapore">
+                        <!-- MIN? MAX? -->
+                        <label for="list_filter_peso" id="list_label_peso">Peso (<abbr title="chilogrammi">kg</abbr>)</label>
+                        <input type="text" id="list_filter_peso" class="list_insert" name="peso" placeholder="Qualsiasi" aria-label="Campo di inserimento del peso dell'auto in chilogrammi">
+                        
+                        <label for="list_filter_neopatentati" id="list_label_neopatentati">Neopatentati</label>
+                        <input type="checkbox" id="list_filter_neopatentati" class="list_insert" name="neopatentati" value="true" aria-label="Mettere spunta se neopatentati abilitati alla guida dell'auto">
+                        abilitati alla guida
+                    
+                        <label for="list_filter_posti" id="list_label_posti">Numero posti</label>
+                        <input type="number" id="list_filter_posti" class="list_insert" name="posti" min="1" max="9" step="1" placeholder="Qualsiasi"  aria-label="Campo di inserimento del numero di posti dell'auto">
+                    
+                    </fieldset>
+                
+                    <!-- Fieldset per preferenze di acquisto 
+                    - Condizione (nuovo/usato)
+                    - Prezzo
+                    - Chilometraggio max
+                    -->
+                    <fieldset id="list_filter_preferences">
+                        <legend>PREFERENZE</legend>
+                        
+                        <label for="list_filter_condizione" id="list_label_condizione">Condizione</label>
+                        <select id="list_filter_condizione" name="condizione" class="list_insert" aria-label="Campo di inserimento della condizione dell'auto">
+                            <option disabled selected value>-- Seleziona --</option>
+                            <option value="nuovo">Nuovo</option>
+                            <option value="usato">Usato</option>
+                            <option value="km0"><abbr title="Chilometro zero">KM 0</abbr></option>
+                        </select>
+                    
+                        <label for="list_filter_prezzo" id="list_label_prezzo">Prezzo massimo (€)</label>
+                        <input type="number" id="list_filter_prezzo" class="list_insert" name="prezzo" min="0" step="500" placeholder="25000" aria-label="Campo di inserimento del prezzo massimo dell'auto">
+
+                        <label for="list_filter_chilometraggio" id="list_label_chilometraggio">Chilometraggio massimo (<abbr title="chilometri">km</abbr>)</label>
+                        <input type="number" id="list_filter_chilometraggio" class="list_insert" name="chilometraggio" min="0" step="100" placeholder="250000" aria-label="Campo di inserimento del chilometraggio massimo dell'auto">
+
+                    </fieldset>
+
+                    <input type="submit" value="Ricerca" id="home_cerca" aria-label="Bottone di ricerca per filtrare veicoli con opzioni selezionate">
+                    <input type="reset" value="Rimuovi filtri" id="home_cerca" aria-label="Bottone per rimuovere ogni filtro selezionato">
+                </form>
+            </section>
+
+            <section class="list" aria-label="Sezione lista automobili filtrata">
+                <h3 class="list_sectionTitle">Listino</h3>
+                <dl id="list_car_list">
+                    <!---
+                    IDEA: DESKTOP -> RETTANGOLI LARGHI, IMG A SX E INFO A DX
+                          MOBILE -> RETTANGOLI STRETTI, IMG IN ALTO E INFO IN BASSO
+                    -->
+                    <div class="list_car_item">
+                        <img id="home_first_image" src="assets/img/DM/mudol.jpeg" alt="Berlina sportiva blu elettrico vista davanti sinistra">
+                        <dt>DM Mudol</dt>
+                        <dd>
+                            Prestazioni mozzafiato e design aerodinamico si fondono in questa elegante berlina sportiva.
+                            Colore esclusivo blu elettrico, linee dinamiche e tecnologia all'avanguardia per un'esperienza di guida unica.
+                            Disponibile ora presso il nostro showroom!
+                        </dd>
+                    </div>
+                    <div id="home_second_car" class="home_car_item">
+                        <img id="home_second_image" src="assets/img/ESU/belzuny.jpeg" alt="Suv di lusso sportivo rosso vista frontale su sfondo roccioso">
+                        <dt>ESU Belzuy</dt>
+                        <dd>
+                            Unione perfetta di potenza e stile, questo SUV di lusso si distingue per il suo design aggressivo e le prestazioni straordinarie su ogni terreno.
+                            Verniciatura esclusiva rosso metallizzato e interni di altissimo livello.
+                            Vieni a scoprirlo nel nostro showroom!
+                        </dd>
+                    </div>
+                    <div id="home_third_car" class="home_car_item">
+                        <img id="home_third_image" src="assets/img/UniPD/planetary.png" alt="Minivan premium blu metallizzato futuristico vista davanti destra">
+                        <dt>UniPD Planetary</dt>
+                        <dd>
+                            Progettata per la famiglia moderna, questa monovolume premium offre spazio, eleganza e tecnologia avanzata.
+                            Il design raffinato in blu metallizzato e gli interni spaziosi garantiscono comfort per ogni viaggio.
+                            Scopri l'auto perfetta per le tue esigenze nel nostro showroom!
+                        </dd>
+                    </div>
+                </dl>
+            </section>
+        </main>
+
+        <footer>
+            <img class="imgValidHTMLCode" src="assets/img/Footer/valid-xhtml10.png" alt="HTML valido">
+            <p>FFF&E Co. - <span lang="en-GB">All rights Reserved</span></p>
+            <img class="imgValidCSSCode" src="assets/img/Footer/vcss-blue.gif" alt="CSS valido">
+        </footer>
     </body>
 </html>
