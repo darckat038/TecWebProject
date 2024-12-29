@@ -234,7 +234,7 @@ h1.hide{
 
 /* MAIN */
 
-.home_fastSearch {
+#home_fastSearch {
     background-color: var(--form-bg-color);
     color: var(--form-text-color);
     border-radius: 1.5em;
@@ -244,43 +244,42 @@ h1.hide{
     text-align: center;
 }
 
-.home_fastSearch h3.home_sectionTitle {
-    text-align: center;
+#home_fastSearch h3.home_sectionTitle {
     padding: 1.5em 1em 0;
     font-size: 1.5em;
 }
 
-.home_fastSearch form {
+#home_fastSearch form {
     padding: 1em 1em;
 }
 
-.home_fastSearch form fieldset {
+#home_fastSearch fieldset {
     display: flex;
     flex-direction: column;
     margin-top: 1.5em;
 }
 
-.home_fastSearch form legend {
+#home_fastSearch legend {
     width: 100%;
-    text-align: center;
     font-size: 100%;
 }
 
-.home_fastSearch form label {
+#home_fastSearch label {
     background-color: var(--form-bg-color);
-    margin-top: 1.5em;
     color: var(--form-border-input-color);
+    margin-top: 1.5em;
     font-size: 100%;
     margin-bottom: 0.5em;
 }
 
-.home_fastSearch form #home_condizione {
+#home_fastSearch #home_condizione {
     text-align: center;
     padding: 0;
     font-size: 100%;
+    text-overflow: ellipsis;
 }
 
-.home_fastSearch form .home_insert {
+#home_fastSearch .home_insert {
     height: 3em;
     border-radius: 0.5em;
     border: 1px solid var(--form-border-input-color);
@@ -291,7 +290,7 @@ h1.hide{
     font-size: 100%;
 }
 
-.home_fastSearch form #home_submit{
+#home_fastSearch #home_cerca {
     color: var(--form-text-color);
     background-color: var(--form-bg-color);
     border: 1px solid white;
@@ -303,7 +302,126 @@ h1.hide{
     width: 100%;
 }
 
-.home_fastSearch form #home_submit:hover{
+#home_fastSearch #home_cerca:hover {
+    background-color: var(--form-text-color);
+    color: var(--form-bg-color);
+}
+
+/* NEW CARS  */
+
+#home_new {
+    padding: 2em 0 6em;
+    margin: 5em 0;
+    text-align: center;
+    background-color: rgb(223, 223, 223);
+    width: 100%;
+}
+
+#home_new h3 {
+    font-size: 2.7em;
+    line-height: 1.2em;
+}
+
+#home_new div.home_car_item {
+    margin: 4em 3em 0;
+    display: inline-block;
+    border: 0px solid black;
+    border-radius: 1.5em;
+    overflow: hidden;
+    max-width: 25em;
+    height: fit-content;
+    padding: 0 0 1em;
+    font-size: 100%;
+    background-color: white;
+}
+
+#home_new div.home_car_item dt {
+    font-weight:450;
+    font-size: 1.3em;
+    margin: 0.5em 0;
+}
+
+#home_new div.home_car_item dd {
+    padding: 0 1em 1em;
+    font-weight: 300;
+    font-size: 1.1em;
+}
+
+#home_new img {
+    object-fit: cover;
+    width: 100%;
+    border-radius: 0;
+}
+
+/* WORK WITH US */
+
+#home_workWithUs {
+    background-color: var(--form-bg-color);
+    color: var(--form-text-color);
+    margin: 3em auto;
+    padding: 2em 0;
+    font-size: 100%;
+    width: 100%;
+    text-align: center;
+}
+
+#home_workWithUs h3.home_sectionTitle {
+    font-size: 1.5em;
+}
+
+#home_workWithUs form {
+    margin-top: 1em;
+}
+
+#home_workWithUs fieldset {
+    display: flex;
+    flex-direction: column;
+    width: 80%;
+    margin: 1.5em auto 0;
+}
+
+#home_workWithUs legend {
+    width: 100%;
+    font-size: 100%;
+}
+
+#home_workWithUs label {
+    background-color: var(--form-bg-color);
+    margin-top: 1em;
+    color: var(--form-border-input-color);
+    font-size: 100%;
+    margin-bottom: 0.5em;
+}
+
+#home_workWithUs #home_role {
+    text-align: center;
+}
+
+#home_workWithUs .home_insert {
+    height: 3em;
+    border-radius: 0.5em;
+    border: 1px solid var(--form-border-input-color);
+    background-color: var(--form-bg-color);
+    color: var(--navbar-text-color);
+    font-family: "Lexend", Roboto, sans-serif;
+    padding-left: 1em;
+    font-size: 100%;
+}
+
+#home_workWithUs #home_invia {
+    display: block;
+    margin: 3em auto 0;                            /* con questo e display: block riesco ad allinearlo a centro */
+    color: var(--form-text-color);
+    background-color: var(--form-bg-color);
+    border: 1px solid white;
+    padding: 1em 1.5em;
+    border-radius: 1.5em;
+    max-width: 10em;
+    font-size: 100%;
+    font-family: "Lexend", Roboto, sans-serif;
+}
+
+#home_workWithUs #home_invia:hover {
     background-color: var(--form-text-color);
     color: var(--form-bg-color);
 }
@@ -318,6 +436,14 @@ footer {
     margin: 1em 0 0 0;
     width: 100%;
     padding: 1em 0;
+}
+
+footer img.imgValidHTMLCode {
+    margin-right: 1em;
+}
+
+footer img.imgValidCSSCode {
+    margin-left: 1em;
 }
 
 /*#endregion Home*/

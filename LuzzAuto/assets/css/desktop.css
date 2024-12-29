@@ -192,7 +192,7 @@ h1.hide{
 
 /* FASTSEARCH */
 
-.home_fastSearch {
+#home_fastSearch {
     background-color: var(--form-bg-color);
     color: var(--form-text-color);
     display: flex;
@@ -205,15 +205,15 @@ h1.hide{
     width: fit-content;
 }
 
-.home_fastSearch form {
+#home_fastSearch form {
     margin: 1em 0;
 }
 
-.home_fastSearch fieldset {
+#home_fastSearch fieldset {
     padding: 0 0.5em;
 }
 
-.home_fastSearch legend {
+#home_fastSearch legend {
     width: 100%;
     text-align: center;
     padding-bottom: 1.5em;
@@ -221,7 +221,7 @@ h1.hide{
     font-size: 100%;
 }
 
-.home_fastSearch label {
+#home_fastSearch label {
     background-color: var(--form-bg-color);
     color: var(--form-border-input-color);
     position: absolute;
@@ -229,38 +229,38 @@ h1.hide{
     font-size: 100%;
 }
 
-.home_fastSearch label#home_label_marca,
-.home_fastSearch form #home_label_condizione {
+#home_fastSearch label#home_label_marca,
+#home_fastSearch #home_label_condizione {
     margin-top: -0.85em;
     margin-left: 1em;
 }
 
-.home_fastSearch form #home_marca,
-.home_fastSearch form #home_condizione {
+#home_fastSearch #home_marca,
+#home_fastSearch #home_condizione {
     float: left;
 }
 
-.home_fastSearch label#home_label_modello,
-.home_fastSearch form #home_label_prezzo {
+#home_fastSearch label#home_label_modello,
+#home_fastSearch #home_label_prezzo {
     margin-top: -0.85em;
     margin-left: 5em;
 }
 
-.home_fastSearch form #home_modello,
-.home_fastSearch form #home_prezzo {
+#home_fastSearch #home_modello,
+#home_fastSearch #home_prezzo {
     float: right;
 }
 
-.home_fastSearch form #home_condizione {
+#home_fastSearch #home_condizione {
     padding-right: 0.8em;
     width: 44%;
 }
 
-.home_fastSearch form #home_label_prezzo {
+#home_fastSearch #home_label_prezzo {
     margin-left: 5em;
 }
 
-.home_fastSearch form .home_insert {
+#home_fastSearch .home_insert {
     height: 3em;
     border-radius: 0.5em;
     border: 1px solid var(--form-border-input-color);
@@ -271,7 +271,7 @@ h1.hide{
     font-size: 100%;
 }
 
-.home_fastSearch form #home_cerca {
+#home_fastSearch #home_cerca {
     display: block;
     margin: 3em auto 0;                            /* con questo e display: block riesco ad allinearlo a centro */
     color: var(--form-text-color);
@@ -284,14 +284,14 @@ h1.hide{
     font-family: "Lexend", Roboto, sans-serif;
 }
 
-.home_fastSearch form #home_cerca:hover {
+#home_fastSearch #home_cerca:hover {
     background-color: var(--form-text-color);
     color: var(--form-bg-color);
 }
 
 /* NEW CARS  */
  
-.home_new {
+#home_new {
     padding: 2em 0 6em;
     margin: 5em 0;
     text-align: center;
@@ -299,11 +299,11 @@ h1.hide{
     width: 100%;
 }
 
-.home_new h3 {
+#home_new h3 {
     font-size: 2.7em;
 }
 
-.home_new div.home_car_item {
+#home_new div.home_car_item {
     margin: 4em 3em 0;
     display: inline-block;
     border: 0px solid black;
@@ -316,37 +316,37 @@ h1.hide{
     background-color: white;
 }
 
-.home_new div.home_car_item dt {
+#home_new div.home_car_item dt {
     font-weight:450;
     font-size: 1.3em;
     margin: 0.5em 0;
 }
 
-.home_new div.home_car_item dd {
+#home_new div.home_car_item dd {
     padding: 0 1em 1em;
     font-weight: 300;
     font-size: 1.1em;
 }
 
-.home_new img {
+#home_new img {
     object-fit: cover;
     width: 100%;
     border-radius: 0;
 }
 
-.home_new div:hover {
+#home_new div:hover {
     transform: scale(1.2);
     transition-duration: 0.5s;
 }
 
-.home_new div:not(:hover) {
+#home_new div:not(:hover) {
     transform: scale(1);
     transition-duration: 0.5s;
 }
 
 /* WORK WITH US */
 
-.workWithUs {
+#home_workWithUs {
     background-color: var(--form-bg-color);
     color: var(--form-text-color);
     display: flex;
@@ -358,18 +358,18 @@ h1.hide{
     width: fit-content;
 }
 
-.workWithUs fieldset {
+#home_workWithUs fieldset {
     display: inline-block;
 }
 
-.workWithUs legend {
+#home_workWithUs legend {
     text-align: center;
     padding-bottom: 1.5em;
     padding-top: 2em;
     font-size: 100%;
 }
 
-.workWithUs label {
+#home_workWithUs label {
     background-color: var(--form-bg-color);
     color: var(--form-border-input-color);
     position: absolute;
@@ -377,39 +377,39 @@ h1.hide{
     font-size: 100%;
 }
 
-.workWithUs form #home_label_name {
+#home_workWithUs #home_label_name {
     margin-top: -0.85em;
     margin-left: 1.2em;
 }
 
-.workWithUs form #home_name {
+#home_workWithUs #home_name {
     float: left;
     margin-right: 2em;
 }
 
-.workWithUs form #home_label_mail {
+#home_workWithUs #home_label_mail {
     margin-top: -0.85em;
     margin-left: 3.2em;
 }
 
-.workWithUs form #home_mail {
+#home_workWithUs #home_mail {
     float: right;
     margin-left: 2em;
     width: 20em;
 }
 
-.workWithUs form #home_label_ruolo {
+#home_workWithUs #home_label_role {
     margin-top: -0.85em;
     margin-left: 2.8em;
 }
 
-.workWithUs form #home_ruolo {
+#home_workWithUs #home_role {
     float: left;
     margin-left: 1.7em;
     padding-right: 0.8em;
 }
 
-.workWithUs form .home_insert {
+#home_workWithUs .home_insert {
     height: 3em;
     border-radius: 0.5em;
     border: 1px solid var(--form-border-input-color);
@@ -420,7 +420,7 @@ h1.hide{
     font-size: 100%;
 }
 
-.workWithUs form #home_invia {
+#home_workWithUs #home_invia {
     display: block;
     margin: 3em auto 0;                            /* con questo e display: block riesco ad allinearlo a centro */
     color: var(--form-text-color);
@@ -433,7 +433,7 @@ h1.hide{
     font-family: "Lexend", Roboto, sans-serif;
 }
 
-.workWithUs form #home_invia:hover {
+#home_workWithUs #home_invia:hover {
     background-color: var(--form-text-color);
     color: var(--form-bg-color);
 }
