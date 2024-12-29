@@ -164,7 +164,7 @@ header#aboutUs_header p {
 
 header#aboutUs_header h2 {
     margin-top: 4em;
-    font-size: 3em;
+    font-size: 4em;
 }
 
 header#aboutUs_header .aboutUs_text {
@@ -181,8 +181,9 @@ main#aboutUs_main {
     width: 100%;
 }
 
-main#aboutUs_main h2 {
-    font-size: 2em;
+main#aboutUs_main > h2,
+main#aboutUs_main > section >h2 {
+    font-size: 2.7em;
     margin-top: 2em;
     font-weight: 500;
 }
@@ -239,7 +240,7 @@ section.aboutUs_history p {
     font-weight: 300;
 }
 
-/** ------------------ *è*/
+/** ------------------ **/
 
 #aboutUs_dreamToReal {
     text-align: center;
@@ -305,7 +306,6 @@ section.aboutUs_history p {
 }
 
 #aboutUs_ourNums h2 {
-    font-size: 2em;
     margin-bottom: 2em;
     font-weight: 500;
 }
@@ -366,7 +366,7 @@ section.aboutUs_history p {
 }
 
 #aboutUs_reachUs img {
-    margin-top: 2em;
+    margin-top: 3em;
     border-radius: 0.5em;
 }
 
@@ -375,6 +375,12 @@ section.aboutUs_history p {
 #aboutUs_ourTeam {
     display: inline-block;
     text-align: center;
+    background-image: url("../img/Pictures/Luzzauto/interni_Luzzauto.webp");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    width: 100%;
+    padding: 5em 0;
 }
 
 #aboutUs_ourTeam > dl {
@@ -383,8 +389,7 @@ section.aboutUs_history p {
     grid-template-areas: 
     "a b"
     "c d";
-    gap: 2em;
-    margin-top: 2em;
+    gap: 5em;
 }
 
 #aboutUs_ourTeam > dl > div {
@@ -394,7 +399,7 @@ section.aboutUs_history p {
     overflow: hidden;
     border-radius: 0.5em;
     width: 40em;
-    margin: 2em auto 0;
+    margin: 0 auto 0;
 }
 
 #aboutUs_ourTeam > dl > div > img {
@@ -408,7 +413,7 @@ section.aboutUs_history p {
     text-align: center;
     margin-top: 1em;
     font-size: 1.3em;
-    font-weight:450;
+    font-weight: 450;
 }
 
 #aboutUs_ourTeam > dl > div > dd {
@@ -436,7 +441,6 @@ section.aboutUs_history p {
 /*#endregion About us*/
 
 footer {
-    margin-top: 4em;
     background-color: var(--footer-bg-color);
     color: var(--footer-text-color);
     display: flex;
