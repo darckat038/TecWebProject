@@ -253,10 +253,11 @@ h1.hide{
 
 .home_fastSearch form #home_condizione {
     padding-right: 0.8em;
+    width: 44%;
 }
 
 .home_fastSearch form #home_label_prezzo {
-    margin-left: 8.5em;
+    margin-left: 5em;
 }
 
 .home_fastSearch form .home_insert {
