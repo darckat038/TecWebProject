@@ -2,6 +2,8 @@
     --content-text-bg-color: #ffffff;
     --content-text-color: #000000;
 
+    --section-bg-color: #e7e7e7;
+
     --navbar-bg-color: #000000;
     --navbar-text-color: #ffffff;
 
@@ -37,12 +39,12 @@ body.purple {
     --text-color: #ffffff;
 }
 
-*{
+* {
     border: 0;
     margin: 0;
 }
 
-body{
+body {
     background-color: var(--content-text-bg-color);
     color: var(--content-text-color);
     display: flex;
@@ -57,7 +59,7 @@ body{
         MENU
 ********************/
 
-.topNavBar{
+.topNavBar {
     background-color: black;
     color: white;
     display: inline-flex;
@@ -68,13 +70,13 @@ body{
     padding-bottom: 1em;
 }
 
-.hide{
+.hide {
     text-indent: 100%;
     white-space: nowrap;
     overflow: hidden;
 }
 
-h1.hide{
+h1.hide {
     background-image: url("../img/Logo/Logo\ Bianco\ Scritta.svg");
     background-size: contain;
     background-repeat: no-repeat;
@@ -82,18 +84,18 @@ h1.hide{
     margin-left: 1em;
 }
 
-.topNavBar #disable{
+.topNavBar #disable {
     pointer-events: none;
 }
 
-#menu{
+#menu {
     list-style: none;
     margin-left: auto;
     display: inline-flex;
     flex-direction: row;
 }
 
-#menu a{
+#menu a {
     padding: 0 1.2em;
     text-align: center;
     text-underline-offset: 0.3em;
@@ -118,7 +120,7 @@ h1.hide{
      BREADCRUMB
 ********************/
 
-#breadcrumb{
+#breadcrumb {
     color: var(--navbar-text-color);
     background-color: var(--navbar-bg-color);
     width: 100%;
@@ -127,7 +129,7 @@ h1.hide{
     /* position: absolute; */
 }
 
-#breadcrumb p{
+#breadcrumb p {
     padding: 0.5em 0 0.5em 1em;
 }
 
@@ -139,7 +141,7 @@ h1.hide{
 
 /* HEADER */
 
-header#aboutUs_header {
+#aboutUs_header {
     padding-top: 20%;
     padding-bottom: 20%;
     background-image: url("../img/Background/Luzzauto/header_image_Luzzauto_dark.webp");
@@ -152,56 +154,47 @@ header#aboutUs_header {
     width: 100%;
 }
 
-header#aboutUs_header h1{
+#aboutUs_header > h1{
     font-size: 8em;
     margin-top: -0.5em;
     margin-bottom: 0.5em;
 }
 
-header#aboutUs_header p {
+#aboutUs_header > p {
     font-size: 1.7em;
 }
 
-header#aboutUs_header h2 {
+#aboutUs_header > h2 {
     margin-top: 4em;
     font-size: 4em;
 }
 
-header#aboutUs_header .aboutUs_text {
+#aboutUs_header > .aboutUs_text {
     text-align: right;
     margin-right: 12%;
 }
 
 /* MAIN */
 
-main#aboutUs_main {
+#aboutUs_main {
     display: flex;
     flex-direction: column;
     align-items: center;
     width: 100%;
 }
 
-main#aboutUs_main > h2,
-main#aboutUs_main > section >h2 {
+#aboutUs_main h2 {
     font-size: 2.7em;
     margin-top: 2em;
     font-weight: 500;
 }
-
-main#aboutUs_main p {
-    font-size: 1.15em;
-}
-
-/** HISTORY **/
 
 section {
     margin-top: 4em;
     width: 80%;
 }
 
-section h3 {
-    font-size: 1.5em;
-}
+/* ---- HISTORY ---- */
 
 section.aboutUs_history {
     line-height: 1.8em;
@@ -216,31 +209,27 @@ section.aboutUs_history h3 {
 
 section.aboutUs_history > img {
     object-fit: contain;
-    width: 24em;
     border-radius: 0.5em;
 }
 
 section.aboutUs_history h3 {
-    font-weight:450;
+    font-weight: 450;
     font-size: 1.8em;
 }
 
 section.aboutUs_history p {
     font-weight: 300;
+    font-size: 1.15em;
 }
 
-/** ------------------ **/
+/** LUZZAUTO **/
 
 #aboutUs_luzzauto {
     text-align: center;
     margin-top: 2.5em;
 }
 
-#aboutUs_luzzauto p {
-    font-weight: 300;
-}
-
-/** ------------------ **/
+/** DREAMTOREAL **/
 
 #aboutUs_dreamToReal {
     text-align: center;
@@ -248,13 +237,12 @@ section.aboutUs_history p {
 
 #aboutUs_dreamToReal img {
     float: none;
-    margin-right: 2em;
     width: 50em;
     margin-bottom: 2em;
-    box-shadow: 1em 1em 1em grey;
+    box-shadow: 0em 0.5em 1em grey;
 }
 
-/** ------------------ **/
+/** UNIQUE **/
 
 #aboutUs_unique img {
     margin-right: 4em;
@@ -263,7 +251,7 @@ section.aboutUs_history p {
     box-shadow: -1em 1em 1em lightgray;
 }
 
-/** ------------------ **/
+/** MOBILITY **/
 
 #aboutUs_mobility {
     text-align: left;
@@ -276,7 +264,7 @@ section.aboutUs_history p {
     box-shadow: 1em 1em 1em lightgray;
 }
 
-/** ------------------ **/
+/** FUTURE **/
 
 #aboutUs_future {
     text-align: center;
@@ -287,11 +275,11 @@ section.aboutUs_history p {
     margin: 0 auto;
 }
 
-/* NUMS */
+/* ---- NUMS ---- */
 
 #aboutUs_ourNums {
     text-align: center;
-    background-color: #dfdfdf;
+    background-color: var(--section-bg-color);
     width: 100%;
     padding: 1em 0 5em 0;
 }
@@ -307,7 +295,6 @@ section.aboutUs_history p {
 
 #aboutUs_ourNums h2 {
     margin-bottom: 2em;
-    font-weight: 500;
 }
 
 #aboutUs_ourNums img {
@@ -317,7 +304,7 @@ section.aboutUs_history p {
 }
 
 #aboutUs_ourNums dl h3 {
-    font-size: 1.5em;
+    font-size: 1.6em;
     font-weight: 450;
 }
 
@@ -350,27 +337,27 @@ section.aboutUs_history p {
     grid-area: f;
 }
 
-/* LOCATION */
+/* ---- LOCATION ---- */
 
 #aboutUs_reachUs {
     border-radius: 1em;
-    width: fit-content;
-    margin-top: 3em;
+    margin-top: 4em;
     display: inline-block;
     text-align: center;
-    padding: 0 1em 1em 1em;
+    width: fit-content;
+    box-shadow: rgba(17, 17, 26, 0.1) 0px 1px 0px, rgba(17, 17, 26, 0.1) 0px 8px 24px, rgba(17, 17, 26, 0.1) 0px 16px 48px;
 }
 
-#aboutUs_reachUs h3 {
+#aboutUs_reachUs h2 {
     margin-top: 1em;
 }
 
 #aboutUs_reachUs img {
-    margin-top: 3em;
+    margin: 3em 7em;
     border-radius: 0.5em;
 }
 
-/* OUR TEAM */
+/* ---- OUR TEAM ---- */
 
 #aboutUs_ourTeam {
     display: inline-block;
@@ -389,7 +376,9 @@ section.aboutUs_history p {
     grid-template-areas: 
     "a b"
     "c d";
-    gap: 5em;
+    row-gap: 5em;
+    column-gap: 10em;
+    margin: 0 10em;
 }
 
 #aboutUs_ourTeam > dl > div {
@@ -398,7 +387,6 @@ section.aboutUs_history p {
     color: var(--cards-text-color);
     overflow: hidden;
     border-radius: 0.5em;
-    width: 40em;
     margin: 0 auto 0;
 }
 
