@@ -88,6 +88,10 @@ h1.hide {
     pointer-events: none;
 }
 
+.topNavBar #menu-button-container {
+    pointer-events: none;
+}
+
 #menu {
     list-style: none;
     margin-left: auto;
@@ -362,7 +366,7 @@ section.aboutUs_history p {
 #aboutUs_ourTeam {
     display: inline-block;
     text-align: center;
-    background-image: url("../img/Pictures/Luzzauto/interni_Luzzauto.webp");
+    background-image: url("../img/Pictures/Luzzauto/interni_Luzzauto_dark.png");
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
