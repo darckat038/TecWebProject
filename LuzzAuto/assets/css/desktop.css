@@ -190,6 +190,12 @@ a:visited {
     color: var(--form-border-input-color);
 }
 
+.nomeRiqPrenotazioni{
+    color: var(--form-border-input-color);
+    padding-left: 4vw;
+    padding-top: 1em;
+}
+
 #userImage{
     /*
     width: 13em;
@@ -210,9 +216,9 @@ a:visited {
 
 /* Stile della tabella */
 .tabellaPrenotazioni {
-    width: 100%;
+    width: 52vw;
     border-collapse: collapse;
-    margin-top: 1em;
+    margin: 1em auto; /* Centra la tabella */
 }
 
 .tabellaPrenotazioni thead {
