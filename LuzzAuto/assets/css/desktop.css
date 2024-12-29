@@ -327,27 +327,27 @@ section.aboutUs_history p {
 }
 
 #aboutUs_ourNums #aboutUs_soldCars {
-    grid-area: "a";
+    grid-area: a;
 }
 
 #aboutUs_ourNums #aboutUs_custSat {
-    grid-area: "b";
+    grid-area: b;
 }
 
 #aboutUs_ourNums #aboutUs_yearsExp {
-    grid-area: "c";
+    grid-area: c;
 }
 
 #aboutUs_ourNums #aboutUs_savedEmiss {
-    grid-area: "d";
+    grid-area: d;
 }
 
 #aboutUs_ourNums #aboutUs_testDrives {
-    grid-area: "e";
+    grid-area: e;
 }
 
 #aboutUs_ourNums #aboutUs_warranty {
-    grid-area: "f";
+    grid-area: f;
 }
 
 /* LOCATION */
@@ -423,19 +423,19 @@ section.aboutUs_history p {
 }
 
 #aboutUs_ourTeam #aboutUs_fbellon {
-    grid-area: "a";
+    grid-area: a;
 }
 
 #aboutUs_ourTeam #aboutUs_frighetto {
-    grid-area: "b";
+    grid-area: b;
 }
 
 #aboutUs_ourTeam #aboutUs_fdiviesti {
-    grid-area: "c";
+    grid-area: c;
 }
 
 #aboutUs_ourTeam #aboutUs_eartusi {
-    grid-area: "d";
+    grid-area: d;
 }
 
 /*#endregion About us*/
