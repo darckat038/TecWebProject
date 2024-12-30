@@ -438,6 +438,39 @@ h1.hide{
     color: var(--form-bg-color);
 }
 
+/* HOME BRANDS */
+
+#home_brands {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    width: 100%;
+    background-color: #7171f8;;
+}
+
+#home_brands h3 {
+    margin-top: 2em;
+}
+
+#home_brands #home_brands_container {
+    display: inline-block;
+    margin-top: 2em;
+}
+
+#home_brands img {
+    object-fit: contain;
+    width: 15em;
+    vertical-align: middle;
+    margin: 0 1em;
+    border-radius: 50%;
+}
+
+#home_brands img#home_audi,
+#home_brands img#home_opel
+ {
+    border-radius: 0;
+}
+
 /*#endregion Home*/
 
 footer {
