@@ -367,6 +367,7 @@ input[type="date"]::-webkit-calendar-picker-indicator {
 /*#region TestDrive*/
 
 #test_drive_header {
+    background-color: var(--navbar-bg-color);
     padding-top: 25%;
     padding-bottom: 20%;
     background-image: url(/LuzzAuto/assets/img/Background/backgroundHeaderTestDrive.png);
@@ -466,6 +467,22 @@ input[type="date"]::-webkit-calendar-picker-indicator {
 
 
 
+#test_drive_consulenti{
+    margin: auto 20%;
+}
+
+#test_drive_consulenti > img{
+    border-radius: 0.5em;
+    height: 35%;
+    width: 35%;
+    float: left;
+    box-shadow: rgba(17, 17, 26, 0.1) 0px 1px 0px, rgba(17, 17, 26, 0.1) 0px 8px 24px, rgba(17, 17, 26, 0.1) 0px 16px 48px;
+    margin-right: 2em;
+}
+
+#test_drive_consulenti > h3{
+    margin-bottom: 1em;
+}
 
 
 /*#endregion TestDrive*/
