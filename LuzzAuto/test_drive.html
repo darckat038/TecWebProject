@@ -26,7 +26,7 @@
         <header id="test_drive_header">
             <h1><span lang="en-GB">Test Drive</span></h1>
             <p>"Non immaginare, vivi: guida il cambiamento con noi!"</p>
-            <a id="test_drive_prenotaBtn" href="#test_drive_prenota">Prenota</a>
+            <a id="test_drive_prenotaAnchor" href="#test_drive_prenota">Prenota</a>
         </header>
 
         <nav class="topNavBar">
@@ -76,8 +76,8 @@
 
             <section id="test_drive_consulenti">
 
-                <img src="/LuzzAuto/assets/img/Content/testdrive_consulente.webp" alt="Foto futuristica di un consulente a lavoro nel servizio di Test Drive all'interno del concessionario LuzzAuto.">
                 <h3>Perché scegliere il nostro servizio di <span lang="en-GB">Test Drive</span>?</h3>
+                <img src="/LuzzAuto/assets/img/Content/testdrive_consulente.webp" alt="Foto futuristica di un consulente a lavoro nel servizio di Test Drive all'interno del concessionario LuzzAuto.">
                 <p>I nostri consulenti saranno al tuo fianco per rispondere a tutte le tue domande e offrirti consigli utili su un'ampia scelta d veicoli. Tutte le auto sono accuratamente igienizzate e controllate prima di ogni prova su strada, per garantire una guida serena e sicura.</p>
 
             </section>
@@ -87,7 +87,34 @@
                 <h3>Prenota ora il tuo <span lang="en-GB">Test Drive</span></h3>
                 <p>Non aspettare oltre: fai il primo passo verso la tua nuova auto!</p>
 
-                <!--SEZIONE FORM OPPURE BOTTONE (LOGIN)(SIGNIN)-->
+                <!--SEZIONE FORM-->
+
+                <form id="test_drive_form" method="post" action="">
+                    <fieldset>
+        
+                        <legend>Prenota <span lang="en-GB">Test Drive</span></legend>
+        
+                        <label id="test_drive_label_auto" for="test_drive_select_auto">Auto</label>
+                        <select name="test_drive_select_auto" id="test_drive_select_auto" aria-required="true" aria-label="Campo di scelta dell'auto" required data-msg-required="Per favore, seleziona l'auto'" data-msg-invalid:="Ci dispiace, formato non corretto">
+                            <option value="a">a</option>
+                            <option value="a">a</option>
+                            <option value="a">a</option>
+                            <option value="a">a</option>
+                            <option value="a">a</option>
+                        </select>
+
+                        <label id="test_drive_label_date" for="test_drive_date">Data e ora</label>
+                        <input id="test_drive_date" type="datetime-local" name="test_drive_date" aria-required="true" aria-label="Campo di inserimento della data e ora della prenotazione" required data-msg-required="Per favore, inserisci la data e l'ora della prenotazione">
+                
+                        <input id="test_drive_prenotaBtn" type="submit" value="INVIA RICHIESTA" aria-label="Bottone di invio del form">
+        
+                    </fieldset>
+                </form>
+
+                <!--OPPURE BOTTONE (LOGIN)(SIGNIN)-->
+
+                <!--fare html-->
+                
 
             </section>
 
