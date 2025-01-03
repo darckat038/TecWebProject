@@ -181,9 +181,7 @@ h1.hide {
 /* MAIN */
 
 #aboutUs_main {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+    text-align: center;
     width: 100%;
 }
 
@@ -247,6 +245,10 @@ section.aboutUs_history p {
 }
 
 /** UNIQUE **/
+
+#aboutUs_unique {
+    text-align: left;
+}
 
 #aboutUs_unique img {
     margin-right: 4em;
@@ -397,8 +399,8 @@ section.aboutUs_history p {
 
 #aboutUs_ourTeam > dl > div > img {
     float: left;
-    object-fit: contain;
-    width: 15em;
+    height: 12vw;
+    width: 12vw;
     margin-right: 2em;
 }
 
@@ -436,15 +438,14 @@ section.aboutUs_history p {
 footer {
     background-color: var(--footer-bg-color);
     color: var(--footer-text-color);
-    display: flex;
-    justify-content: center;
+    text-align: center;
     height: fit-content;
     padding: 1em 0;
     width: 100%;
 }
 
-footer p{
-    display: inline-flex;
+footer p {
+    display: inline-block;
     font-size: 0.8em;
     font-style: italic;
     padding: 0 1em;
