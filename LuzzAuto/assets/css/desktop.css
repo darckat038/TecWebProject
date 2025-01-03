@@ -498,18 +498,19 @@ input[type="date"]::-webkit-calendar-picker-indicator {
     color: var(--form-text-color);
     border-radius: 2em 0 2em 0;
     width: 80%;
-    padding-bottom: 4em;
+    padding-bottom: 6em;
     margin-bottom: 4em;
+    box-shadow: rgba(17, 17, 26, 0.1) 0px 1px 0px, rgba(17, 17, 26, 0.1) 0px 8px 24px, rgba(17, 17, 26, 0.1) 0px 16px 48px;
 }
 
 #test_drive_prenota > h3{
-    margin-top: 1.5em;
+    margin-top: 2em;
 }
 
 #test_drive_prenota > p{
-    margin-top: 1em;
-    margin-bottom: 3em;
+    margin-top: 2em;
     font-size: 1.15em;
+    margin-bottom: 2em;
     font-weight: 300;
 }
 
@@ -522,13 +523,17 @@ input[type="date"]::-webkit-calendar-picker-indicator {
     border-radius: 1em;
 }
 
+#test_drive_form > fieldset > legend{
+    padding: 0 0.5em;
+}
+
 .test_drive_input{
     height: 3em;
     border-radius: 0.5em;
     border: 1px solid var(--form-border-input-color);
     background-color: var(--form-bg-color);
     color: var(--navbar-text-color);
-    margin: 0 5em 2em 5em;
+    margin: 2em 5em 2em 5em;
     font-size: 100%;
     font-family: "Lexend", Roboto, sans-serif;
     padding-left: 1em;
@@ -550,6 +555,7 @@ input[type="datetime-local"]::-webkit-calendar-picker-indicator {
     font-family: "Lexend", Roboto, sans-serif;
     padding: 1em;
     margin-bottom: 1em;
+    margin-top: 1em;
 }
 
 #test_drive_prenotaBtn:hover{
@@ -557,5 +563,39 @@ input[type="datetime-local"]::-webkit-calendar-picker-indicator {
     color: var(--form-bg-color);
 }
 
+#test_drive_label_auto{
+    color: var(--form-border-input-color);
+    background-color: var(--form-bg-color);
+    padding: 0 0.5em;
+    position: absolute;
+    margin-left: 5.7em;
+    margin-top: 1.2em;
+}
+
+#test_drive_label_date{
+    color: var(--form-border-input-color);
+    background-color: var(--form-bg-color);
+    padding: 0 0.5em;
+    position: absolute;
+    margin-left: 5.7em;
+    margin-top: 8.2em;
+}
+
+
+
+
+#test_drive_prenota a{
+    background-color: var(--form-bg-color);
+    border: 1px solid white;
+    padding: 1em 1.5em 1.35em 1.5em;
+    border-radius: 1.5em;
+    font-size: 100%;
+    font-family: "Lexend", Roboto, sans-serif;
+}
+
+#test_drive_prenota a:hover{
+    background-color: var(--form-text-color);
+    color: var(--form-bg-color);
+}
 
 /*#endregion TestDrive*/
