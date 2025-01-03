@@ -392,7 +392,6 @@ input[type="date"]::-webkit-calendar-picker-indicator {
     margin-bottom: 1.5em;
 }
 #test_drive_prenotaAnchor{
-    color: var(--form-text-color);
     background-color: var(--form-bg-color);
     border: 1px solid white;
     padding: 1em 1.5em 1.35em 1.5em;
@@ -499,7 +498,8 @@ input[type="date"]::-webkit-calendar-picker-indicator {
     color: var(--form-text-color);
     border-radius: 2em 0 2em 0;
     width: 80%;
-    padding-bottom: 3em;
+    padding-bottom: 4em;
+    margin-bottom: 4em;
 }
 
 #test_drive_prenota > h3{
@@ -517,9 +517,44 @@ input[type="date"]::-webkit-calendar-picker-indicator {
     display: flex;
     flex-direction: column;
     margin: auto;
-    width:fit-content;
+    width:30%;
     border: 1px solid white;
     border-radius: 1em;
+}
+
+.test_drive_input{
+    height: 3em;
+    border-radius: 0.5em;
+    border: 1px solid var(--form-border-input-color);
+    background-color: var(--form-bg-color);
+    color: var(--navbar-text-color);
+    margin: 0 5em 2em 5em;
+    font-size: 100%;
+    font-family: "Lexend", Roboto, sans-serif;
+    padding-left: 1em;
+}
+
+input[type="datetime-local"]::-webkit-calendar-picker-indicator {
+    background-color: white;
+    margin-right: 1em;
+    border-radius: 0.5em;
+}
+
+#test_drive_prenotaBtn{
+    color: var(--form-text-color);
+    background-color: var(--form-bg-color);
+    border: 1px solid white;
+    border-radius: 1.5em;
+    align-self: center;
+    font-size: 100%;
+    font-family: "Lexend", Roboto, sans-serif;
+    padding: 1em;
+    margin-bottom: 1em;
+}
+
+#test_drive_prenotaBtn:hover{
+    background-color: var(--form-text-color);
+    color: var(--form-bg-color);
 }
 
 
