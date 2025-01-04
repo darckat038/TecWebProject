@@ -5,7 +5,7 @@
         <meta name="viewport" content="width=device-width">
         <base href="/LuzzAuto/">
 
-        <title>Home Page | LuzzAuto Concessionario</title>
+        <title>Listino | LuzzAuto Concessionario</title>
 
         <link rel="stylesheet" media="screen and (max-width:1024px)" href="assets/css/mobile.css" type="text/css">
         <link rel="stylesheet" media="screen and (min-width:1025px)" href="assets/css/desktop.css" type="text/css">
@@ -53,7 +53,7 @@
         </nav>
 
         <main>
-            <section class="list_filter">
+            <section id="list_filter">
                 <h3 class="list_sectionTitle">Filtra il catalogo</h3>
                 <form action="listino.html" method="GET">
                     <!-- Fieldset per info base veicolo 
@@ -72,68 +72,92 @@
                     <fieldset id="list_filter_basicInfo">
                         <legend>INFORMAZIONI SUL VEICOLO</legend>
                         
-                        <label for="list_filter_marca" id="list_label_marca">Marca</label>
-                        <input type="text" id="list_filter_marca" class="list_insert" name="marca" placeholder="Qualsiasi" aria-label="Campo di inserimento della marca dell'auto">
-                    
-                        <label for="list_filter_modello" id="list_label_modello">Modello</label>
-                        <input type="text" id="list_filter_modello" class="list_insert" name="modello" placeholder="Qualsiasi" aria-label="Campo di inserimento del modello dell'auto">
                         
-                        <label for="list_filter_anno" id="list_label_anno">Anno</label>
-                        <!-- DA SISTEMARE MAX! con anno attuale -->
-                        <input type="number" id="list_filter_anno" class="list_insert" name="anno" min="1990" step="1" max="2024" placeholder="Qualsiasi" aria-label="Campo di inserimento dell'anno di produzione dell'auto">
-                        
-                        <label for="list_filter_colore" id="list_label_colore">Colore</label>
-                        <select id="list_filter_colore" class="list_insert" name="colore" aria-label="Campo di inserimento del colore dell'auto">
-                            <option disabled selected value>-- Qualsiasi --</option>
-                            <option value="bianco">Bianco</option>
-                            <option value="nero">Nero</option>
-                            <option value="grigio">Grigio</option>
-                            <option value="rosso">Rosso</option>
-                            <option value="blu">Blu</option>
-                            <option value="verde">Verde</option>
-                            <option value="arancione">Arancione</option>
-                            <option value="giallo">Giallo</option>
-                        </select>
-                        
-                        <label for="list_filter_alimentazione" id="list_label_alimentazione">Alimentazione</label>
-                        <select id="list_filter_alimentazione" class="list_insert" name="alimentazione" aria-label="Campo di inserimento dell'alimentazione dell'auto">
-                            <option disabled selected value>-- Qualsiasi --</option>
-                            <option value="benzina">Benzina</option>
-                            <option value="diesel"><span lang="en-GB">Diesel</span></option>
-                            <option value="elettrico">Elettrico</option>
-                            <option value="gpl">Ibrido <abbr title="">GPL</abbr></option>
-                            <option value="plugin">Ibrido <span lang="en-GB">Plug-in</span></option>
-                        </select>
+                            <div class="list_input_container">
+                                <label for="list_filter_marca" id="list_label_marca">Marca</label>
+                                <input type="text" id="list_filter_marca" class="list_insert" name="marca" placeholder="Qualsiasi" aria-label="Campo di inserimento della marca dell'auto">
+                            </div>
 
-                        <label for="list_filter_cambio" id="list_label_cambio">Cambio</label>
-                        <select id="list_filter_cambio" class="list_insert" name="cambio" aria-label="Campo di inserimento del cambio dell'auto">
-                            <option disabled selected value>-- Qualsiasi --</option>
-                            <option value="manuale">Manuale</option>
-                            <option value="automatico">Automatico</option>
-                        </select>
+                            <div class="list_input_container">
+                                <label for="list_filter_modello" id="list_label_modello">Modello</label>
+                                <input type="text" id="list_filter_modello" class="list_insert" name="modello" placeholder="Qualsiasi" aria-label="Campo di inserimento del modello dell'auto">
+                            </div>
 
-                        <label for="list_filter_trazione" id="list_label_trazione">Trazione</label>
-                        <select id="list_filter_trazione" class="list_insert" name="trazione" aria-label="Campo di inserimento della trazione dell'auto">
-                            <option disabled selected value>-- Qualsiasi --</option>
-                            <option value="anteriore">Anteriore</option>
-                            <option value="posteriore">Posteriore</option>
-                            <option value="integrale">Integrale</option>
-                        </select>
+                            <div class="list_input_container">
+                                <label for="list_filter_anno" id="list_label_anno">Anno</label>
+                                <input type="number" id="list_filter_anno" class="list_insert" name="anno" min="1990" step="1" max="2024" placeholder="Qualsiasi" aria-label="Campo di inserimento dell'anno di produzione dell'auto">
+                            </div>
 
-                        <!-- MIN? MAX? -->
-                        <label for="list_filter_potenza" id="list_label_potenza">Potenza (<abbr title="cavalli vapore">CV</abbr>)</label>
-                        <input type="text" id="list_filter_potenza" class="list_insert" name="potenza" placeholder="Qualsiasi" aria-label="Campo di inserimento della potenza dell'auto in cavalli vapore">
-                        <!-- MIN? MAX? -->
-                        <label for="list_filter_peso" id="list_label_peso">Peso (<abbr title="chilogrammi">kg</abbr>)</label>
-                        <input type="text" id="list_filter_peso" class="list_insert" name="peso" placeholder="Qualsiasi" aria-label="Campo di inserimento del peso dell'auto in chilogrammi">
-                        
-                        <label for="list_filter_neopatentati" id="list_label_neopatentati">Neopatentati</label>
-                        <input type="checkbox" id="list_filter_neopatentati" class="list_insert" name="neopatentati" value="true" aria-label="Mettere spunta se neopatentati abilitati alla guida dell'auto">
-                        abilitati alla guida
-                    
-                        <label for="list_filter_posti" id="list_label_posti">Numero posti</label>
-                        <input type="number" id="list_filter_posti" class="list_insert" name="posti" min="1" max="9" step="1" placeholder="Qualsiasi"  aria-label="Campo di inserimento del numero di posti dell'auto">
-                    
+                            <div class="list_input_container">
+                                <label for="list_filter_colore" id="list_label_colore">Colore</label>
+                                <select id="list_filter_colore" class="list_insert" name="colore" aria-label="Campo di inserimento del colore dell'auto">
+                                    <option disabled selected value>Qualsiasi</option>
+                                    <option value="bianco">Bianco</option>
+                                    <option value="nero">Nero</option>
+                                    <option value="grigio">Grigio</option>
+                                    <option value="rosso">Rosso</option>
+                                    <option value="blu">Blu</option>
+                                    <option value="verde">Verde</option>
+                                    <option value="arancione">Arancione</option>
+                                    <option value="giallo">Giallo</option>
+                                </select>
+                            </div>
+
+                            <div class="list_input_container">
+                                <label for="list_filter_alimentazione" id="list_label_alimentazione">Alimentazione</label>
+                                <select id="list_filter_alimentazione" class="list_insert" name="alimentazione" aria-label="Campo di inserimento dell'alimentazione dell'auto">
+                                    <option disabled selected value>Qualsiasi</option>
+                                    <option value="benzina">Benzina</option>
+                                    <option value="diesel"><span lang="en-GB">Diesel</span></option>
+                                    <option value="elettrico">Elettrico</option>
+                                    <option value="gpl">Ibrido <abbr title="">GPL</abbr></option>
+                                    <option value="plugin">Ibrido <span lang="en-GB">Plug-in</span></option>
+                                </select>
+                            </div>
+
+                            <div class="list_input_container">
+                                <label for="list_filter_cambio" id="list_label_cambio">Cambio</label>
+                                <select id="list_filter_cambio" class="list_insert" name="cambio" aria-label="Campo di inserimento del cambio dell'auto">
+                                    <option disabled selected value>Qualsiasi</option>
+                                    <option value="manuale">Manuale</option>
+                                    <option value="automatico">Automatico</option>
+                                </select>
+                            </div>
+
+                            <div class="list_input_container">
+                                <label for="list_filter_trazione" id="list_label_trazione">Trazione</label>
+                                <select id="list_filter_trazione" class="list_insert" name="trazione" aria-label="Campo di inserimento della trazione dell'auto">
+                                    <option disabled selected value>Qualsiasi</option>
+                                    <option value="anteriore">Anteriore</option>
+                                    <option value="posteriore">Posteriore</option>
+                                    <option value="integrale">Integrale</option>
+                                </select>
+                            </div>
+
+                            <!-- MAX o MIN?? -->
+                            <div class="list_input_container">
+                                <label for="list_filter_potenza" id="list_label_potenza">Potenza (<abbr title="cavalli vapore">CV</abbr>)</label>
+                                <input type="text" id="list_filter_potenza" class="list_insert" name="potenza" min="0" step="1" placeholder="Qualsiasi" aria-label="Campo di inserimento della potenza dell'auto in cavalli vapore">
+                            </div>
+
+                            <!-- MAX o MIN?? -->
+                            <div class="list_input_container">
+                                <label for="list_filter_peso" id="list_label_peso">Peso (<abbr title="chilogrammi">kg</abbr>)</label>
+                                <input type="text" id="list_filter_peso" class="list_insert" name="peso" min="0" step="1" placeholder="Qualsiasi" aria-label="Campo di inserimento del peso dell'auto in chilogrammi">
+                            </div>
+
+                            <div class="list_input_container">
+                                <label for="list_filter_neopatentati" id="list_label_neopatentati">Neopatentati</label>
+                                <div class="list_insert" id="list_filter_neopatentati">
+                                    <input type="checkbox"  name="neopatentati" value="true" aria-label="Mettere spunta se neopatentati abilitati alla guida dell'auto">
+                                    abilitati alla guida
+                                </div>
+                            </div>
+
+                            <div class="list_input_container">
+                                <label for="list_filter_posti" id="list_label_posti">Numero posti</label>
+                                <input type="number" id="list_filter_posti" class="list_insert" name="posti" min="1" max="9" step="1" placeholder="Qualsiasi" aria-label="Campo di inserimento del numero di posti dell'auto">
+                            </div>
                     </fieldset>
                 
                     <!-- Fieldset per preferenze di acquisto 
@@ -144,24 +168,32 @@
                     <fieldset id="list_filter_preferences">
                         <legend>PREFERENZE</legend>
                         
-                        <label for="list_filter_condizione" id="list_label_condizione">Condizione</label>
-                        <select id="list_filter_condizione" name="condizione" class="list_insert" aria-label="Campo di inserimento della condizione dell'auto">
-                            <option disabled selected value>-- Seleziona --</option>
-                            <option value="nuovo">Nuovo</option>
-                            <option value="usato">Usato</option>
-                            <option value="km0"><abbr title="Chilometro zero">KM 0</abbr></option>
-                        </select>
-                    
-                        <label for="list_filter_prezzo" id="list_label_prezzo">Prezzo massimo (€)</label>
-                        <input type="number" id="list_filter_prezzo" class="list_insert" name="prezzo" min="0" step="500" placeholder="25000" aria-label="Campo di inserimento del prezzo massimo dell'auto">
+                        <div class="list_input_container">
+                            <label for="list_filter_condizione" id="list_label_condizione">Condizione</label>
+                            <select id="list_filter_condizione" name="condizione" class="list_insert" aria-label="Campo di inserimento della condizione dell'auto">
+                                <option disabled selected value>Qualsiasi</option>
+                                <option value="nuovo">Nuovo</option>
+                                <option value="usato">Usato</option>
+                                <option value="km0"><abbr title="Chilometro zero">KM 0</abbr></option>
+                            </select>
+                        </div>
+                        
+                        <div class="list_input_container">
+                            <label for="list_filter_prezzo" id="list_label_prezzo">Prezzo massimo (€)</label>
+                            <input type="number" id="list_filter_prezzo" class="list_insert" name="prezzo" min="0" step="500" placeholder="25000" aria-label="Campo di inserimento del prezzo massimo dell'auto">
+                        </div>
 
-                        <label for="list_filter_chilometraggio" id="list_label_chilometraggio">Chilometraggio massimo (<abbr title="chilometri">km</abbr>)</label>
-                        <input type="number" id="list_filter_chilometraggio" class="list_insert" name="chilometraggio" min="0" step="100" placeholder="250000" aria-label="Campo di inserimento del chilometraggio massimo dell'auto">
+                        <div class="list_input_container">
+                            <label for="list_filter_chilometraggio" id="list_label_chilometraggio">Chilometraggio massimo (<abbr title="chilometri">km</abbr>)</label>
+                            <input type="number" id="list_filter_chilometraggio" class="list_insert" name="chilometraggio" min="0" step="100" placeholder="250000" aria-label="Campo di inserimento del chilometraggio massimo dell'auto">
+                        </div>
 
                     </fieldset>
 
-                    <input type="submit" value="Ricerca" id="home_cerca" aria-label="Bottone di ricerca per filtrare veicoli con opzioni selezionate">
-                    <input type="reset" value="Rimuovi filtri" id="home_cerca" aria-label="Bottone per rimuovere ogni filtro selezionato">
+                    <div id="list_filter_buttons">
+                        <input type="reset" value="Rimuovi filtri" class="list_button" aria-label="Bottone per rimuovere ogni filtro selezionato">
+                        <input type="submit" value="Ricerca" class="list_button" aria-label="Bottone di ricerca per filtrare veicoli con opzioni selezionate">
+                    </div>
                 </form>
             </section>
 
