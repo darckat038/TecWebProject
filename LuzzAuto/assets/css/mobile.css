@@ -4,6 +4,9 @@
 
     --navbar-bg-color: #000000;
     --navbar-text-color: #ffffff;
+    
+    --header-bg-color: #000000;
+    --header-text-color: #ffffff;
 
     --link-bg-color: #000000;
     --not-visited-link: #ffffff;
@@ -185,16 +188,6 @@ a:visited {
     color: var(--visited-link);
     text-underline-offset: 0.3em;
 }
-
-/******************* 
-        HOME
-********************/
-
-/*#region Home*/
-
-
-
-/*#endregion Home*/
 
 /******************* 
         LOGIN
@@ -478,8 +471,6 @@ input[type="date"]::-webkit-calendar-picker-indicator {
     text-align: center;
 }
 
-
-
 #test_drive_consulenti{
     text-align: center;
 }
@@ -503,8 +494,6 @@ input[type="date"]::-webkit-calendar-picker-indicator {
     font-size: 1.15em;
     font-weight: 300;
 }
-
-
 
 #test_drive_prenota{
     text-align: center;
@@ -582,9 +571,6 @@ input[type="datetime-local"]::-webkit-calendar-picker-indicator {
     color: var(--form-border-input-color);
 }
 
-
-
-
 #test_drive_prenota a{
     background-color: var(--form-bg-color);
     border: 1px solid white;
@@ -600,3 +586,215 @@ input[type="datetime-local"]::-webkit-calendar-picker-indicator {
 }
 
 /*#endregion TestDrive*/
+
+/*******************
+        ABOUT US
+********************/
+
+/*#region About us*/
+
+/* HEADER */
+
+#aboutUs_header {
+    padding-top: 20%;
+    padding-bottom: 20%;
+    background-image: url("../img/Background/Luzzauto/header_image_Luzzauto_dark.webp");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: top;
+    text-align: right;
+    background-color: var(--header-bg-color);
+    color: var(--header-text-color);
+    width: 100%;
+    height: 17em;
+}
+
+#aboutUs_header h1 {
+    font-size: 3em;
+    margin-top: 1em;
+    margin-bottom: 0.3em;
+}
+
+#aboutUs_header p {
+    margin: 1em auto 0 auto;
+    font-size: 1.5em;
+    max-width: 12em;
+}
+
+#aboutUs_header h2 {
+    margin-top: 2.5em;
+    font-size: 2.2em;
+}
+
+#aboutUs_header .aboutUs_text {
+    text-align: right;
+    margin-right: 10%;
+}
+
+/* MAIN */
+
+#aboutUs_main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+}
+
+#aboutUs_main h2 {
+    font-size: 2em;
+    margin-top: 2em;
+    font-weight: 500;
+}
+
+#aboutUs_main p {
+    font-size: 1.15em;
+}
+
+/* ---- HISTORY ---- */
+
+section.aboutUs_history {
+    border-radius: 1em;
+    margin-top: 2em;
+    display: inline-block;
+    padding: 0 1em 1em 1em;
+    width: 90%;
+    text-align: center;
+}
+
+section.aboutUs_history h3 {
+    font-weight:450;
+    font-size: 1.8em;
+    margin-top: 1em;
+    line-height: 1.2em;
+}
+
+section.aboutUs_history p {
+    font-weight: 300;
+    margin-top: 0.5em;
+}
+
+section.aboutUs_history img {
+    object-fit: contain;
+    width: 20em;
+    border-radius: 0.7em;
+}
+
+/* ---- NUMS ---- */
+
+#aboutUs_ourNums {
+    margin-top: 3em;
+    display: inline-block;
+    text-align: center;
+    padding-bottom: 3em;
+    background-color: #dfdfdf;
+    width: 100%;
+}
+
+#aboutUs_ourNums h2 {
+    margin-top: 1em;
+    margin-bottom: 1em;
+}
+
+#aboutUs_ourNums img {
+    margin-top: 1.5em;
+    object-fit: contain;
+    width: 3em;
+}
+
+#aboutUs_ourNums p {
+    margin: 0 1em 0;
+}
+
+/* ---- LOCATION ---- */
+
+#aboutUs_reachUs {
+    border-radius: 1em;
+    width: fit-content;
+    margin: 3em 0;
+    display: inline-block;
+    text-align: center;
+    padding: 0 1em 1em 1em;
+}
+
+#aboutUs_reachUs h2 {
+    margin-top: 1em;
+    margin-bottom: 1em;
+}
+
+#aboutUs_reachUs img {
+    object-fit: contain;
+    width: 100%;
+    border-radius: 1em;
+}
+
+/* ---- OUR TEAM ---- */
+
+#aboutUs_ourTeam {
+    background-image: url("../img/Pictures/Luzzauto/interni_Luzzauto.webp");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-color: var(--content-text-bg-color);
+    color: var(--content-text-color);
+    margin-top: 2em;
+    text-align: center;
+}
+
+#aboutUs_ourTeam > dl {
+    margin-top: 2em;
+}
+
+#aboutUs_ourTeam > dl > div {
+    margin: 0 auto 4em;
+    background-color: rgb(236, 236, 236);
+    border-radius: 0.5em;
+    width: 85%;
+    padding: 1em 0 1em;
+}
+
+#aboutUs_ourTeam > dl > div > img{
+    object-fit: contain;
+    border-radius: 50%;
+    width: 13em;
+    box-shadow: 0px 10px 25px 0px rgba(0, 0, 0, 0.3)
+}
+
+#aboutUs_ourTeam > dl > div > dt {
+    margin-top: 1em;
+    font-weight:450;
+    font-size: 1.3em;
+}
+
+#aboutUs_ourTeam > dl > div > dd {
+    margin: 1em 2.5em 1em;
+    font-weight: 300;
+    font-size: 1.1em;
+}
+
+/*#endregion About us*/
+
+/* FOOTER */
+
+footer {
+    background-color: var(--navbar-bg-color);
+    color: var(--navbar-text-color);
+    width: max-content;
+    display: flex;
+    justify-content: center;
+    height: fit-content;
+    padding: 1em 0;
+    width: 100%;
+    
+}
+
+footer p{
+    display: inline;
+    font-size: 0.8em;
+    font-style: italic;
+    padding: 0 1em;
+}
+
+.imgValidCode{
+    vertical-align: middle;
+    object-fit: contain;
+}

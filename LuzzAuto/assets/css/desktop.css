@@ -2,8 +2,16 @@
     --content-text-bg-color: #ffffff;
     --content-text-color: #000000;
 
+    --section-bg-color: #e7e7e7;
+
     --navbar-bg-color: #000000;
     --navbar-text-color: #ffffff;
+
+    --header-bg-color: #000000;
+    --header-text-color: #ffffff;
+
+    --footer-bg-color: #000000;
+    --footer-text-color: #ffffff;
 
     --link-bg-color: #000000;
     --not-visited-link: #ffffff;
@@ -30,7 +38,7 @@ body.purple {
     --text-color: #ffffff;
 }
 
-*{
+* {
     border: 0;
     margin: 0;
 }
@@ -132,16 +140,6 @@ a:visited {
     color: var(--visited-link);
     text-underline-offset: 0.3em;
 }
-
-/*******************
-        ABOUT US
-********************/
-
-/*#region About Us*/
-
-
-
-/*#endregion About Us*/
 
 /******************* 
         LOGIN
@@ -599,3 +597,326 @@ input[type="datetime-local"]::-webkit-calendar-picker-indicator {
 }
 
 /*#endregion TestDrive*/
+
+/*******************
+        ABOUT US
+********************/
+
+/*#region About us*/
+
+/* HEADER */
+
+#aboutUs_header {
+    padding-top: 20%;
+    padding-bottom: 20%;
+    background-image: url("../img/Background/Luzzauto/header_image_Luzzauto_dark.webp");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    text-align: center;
+    background-color: var(--header-bg-color);
+    color: var(--header-text-color);
+    width: 100%;
+}
+
+#aboutUs_header > h1{
+    font-size: 8em;
+    margin-top: -0.5em;
+    margin-bottom: 0.5em;
+}
+
+#aboutUs_header > p {
+    font-size: 1.7em;
+}
+
+#aboutUs_header > h2 {
+    margin-top: 4em;
+    font-size: 4em;
+}
+
+#aboutUs_header > .aboutUs_text {
+    text-align: right;
+    margin-right: 12%;
+}
+
+/* MAIN */
+
+#aboutUs_main {
+    text-align: center;
+    width: 100%;
+}
+
+#aboutUs_main h2 {
+    font-size: 2.7em;
+    margin-top: 2em;
+    font-weight: 500;
+}
+
+section {
+    margin-top: 4em;
+    width: 80%;
+}
+
+/* ---- HISTORY ---- */
+
+section.aboutUs_history {
+    line-height: 1.8em;
+    display: inline-block;
+    flex-direction: row;
+    margin-top: 8em;
+}
+
+section.aboutUs_history h3 {
+    margin-bottom: 0.5em;
+}
+
+section.aboutUs_history > img {
+    object-fit: contain;
+    border-radius: 0.5em;
+}
+
+section.aboutUs_history h3 {
+    font-weight: 450;
+    font-size: 1.8em;
+}
+
+section.aboutUs_history p {
+    font-weight: 300;
+    font-size: 1.15em;
+}
+
+/** LUZZAUTO **/
+
+#aboutUs_luzzauto {
+    text-align: center;
+    margin-top: 2.5em;
+}
+
+/** DREAMTOREAL **/
+
+#aboutUs_dreamToReal {
+    text-align: center;
+}
+
+#aboutUs_dreamToReal img {
+    float: none;
+    width: 50em;
+    margin-bottom: 2em;
+    box-shadow: 0em 0.5em 1em grey;
+}
+
+/** UNIQUE **/
+
+#aboutUs_unique {
+    text-align: left;
+}
+
+#aboutUs_unique img {
+    margin-right: 4em;
+    float: left;
+    width: 30em;
+    box-shadow: -1em 1em 1em lightgray;
+}
+
+/** MOBILITY **/
+
+#aboutUs_mobility {
+    text-align: left;
+}
+
+#aboutUs_mobility img {
+    float: right;
+    margin-left: 4em;
+    width: 35em;
+    box-shadow: 1em 1em 1em lightgray;
+}
+
+/** FUTURE **/
+
+#aboutUs_future {
+    text-align: center;
+}
+
+#aboutUs_future p {
+    max-width: 50em;
+    margin: 0 auto;
+}
+
+/* ---- NUMS ---- */
+
+#aboutUs_ourNums {
+    text-align: center;
+    background-color: var(--section-bg-color);
+    width: 100%;
+    padding: 1em 0 5em 0;
+}
+
+#aboutUs_ourNums h2 {
+    margin-bottom: 2em;
+}
+
+#aboutUs_ourNums > dl {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 5em;
+    grid-template-areas: 
+    "a b c"
+    "d e f";
+}
+
+#aboutUs_ourNums img {
+    margin-top: 1.5em;
+    object-fit: contain;
+    width: 3em;
+}
+
+#aboutUs_ourNums > dl h3 {
+    font-size: 1.6em;
+    font-weight: 450;
+}
+
+#aboutUs_ourNums > dl p {
+    margin-top: 0.7em;
+    font-size: 1.3em;
+}
+
+#aboutUs_ourNums #aboutUs_soldCars {
+    grid-area: a;
+}
+
+#aboutUs_ourNums #aboutUs_custSat {
+    grid-area: b;
+}
+
+#aboutUs_ourNums #aboutUs_yearsExp {
+    grid-area: c;
+}
+
+#aboutUs_ourNums #aboutUs_savedEmiss {
+    grid-area: d;
+}
+
+#aboutUs_ourNums #aboutUs_testDrives {
+    grid-area: e;
+}
+
+#aboutUs_ourNums #aboutUs_warranty {
+    grid-area: f;
+}
+
+/* ---- LOCATION ---- */
+
+#aboutUs_reachUs {
+    border-radius: 3em;
+    margin-top: 4em;
+    display: inline-block;
+    text-align: center;
+    width: fit-content;
+    box-shadow: rgba(17, 17, 26, 0.1) 0px 1px 0px, rgba(17, 17, 26, 0.1) 0px 8px 24px, rgba(17, 17, 26, 0.1) 0px 16px 48px;
+}
+
+#aboutUs_reachUs h2 {
+    margin-top: 1em;
+}
+
+#aboutUs_reachUs img {
+    margin: 3em 7em;
+    border-radius: 0.5em;
+}
+
+/* ---- OUR TEAM ---- */
+
+#aboutUs_ourTeam {
+    display: inline-block;
+    text-align: center;
+    background-image: url("../img/Pictures/Luzzauto/interni_Luzzauto_dark.png");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    width: 100%;
+    padding: 5em 0;
+}
+
+#aboutUs_ourTeam > dl {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-areas: 
+    "a b"
+    "c d";
+    row-gap: 5em;
+    column-gap: 8em;
+    margin: 0 7em;
+}
+
+#aboutUs_ourTeam > dl > div {
+    display: block;
+    background-color: var(--cards-bg-color);
+    color: var(--cards-text-color);
+    overflow: hidden;
+    border-radius: 0.5em;
+    margin: 0 auto 0;
+    max-width: 45em;
+}
+
+#aboutUs_ourTeam > dl > div > img {
+    float: left;
+    height: 12vw;
+    width: 12vw;
+    margin-right: 2em;
+}
+
+#aboutUs_ourTeam > dl > div > dt {
+    text-align: center;
+    margin-top: 1em;
+    font-size: 1.3em;
+    font-weight: 450;
+}
+
+#aboutUs_ourTeam > dl > div > dd {
+    margin-top: 1em;
+    margin-right: 1em;
+    font-weight: 300;
+    margin-left: 1em;
+}
+
+#aboutUs_ourTeam #aboutUs_fbellon {
+    grid-area: a;
+}
+
+#aboutUs_ourTeam #aboutUs_frighetto {
+    grid-area: b;
+}
+
+#aboutUs_ourTeam #aboutUs_fdiviesti {
+    grid-area: c;
+}
+
+#aboutUs_ourTeam #aboutUs_eartusi {
+    grid-area: d;
+}
+
+/*#endregion About us*/
+
+/* FOOTER */
+
+footer {
+    background-color: var(--footer-bg-color);
+    color: var(--footer-text-color);
+    text-align: center;
+    height: fit-content;
+    padding: 1em 0;
+    width: 100%;
+}
+
+footer p {
+    display: inline-block;
+    font-size: 0.8em;
+    font-style: italic;
+    padding: 0 1em;
+    font-size: 100%;
+}
+
+.imgValidCode{
+    vertical-align: middle;
+    object-fit: cover;
+}
