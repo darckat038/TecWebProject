@@ -18,8 +18,9 @@
     --cards-bg-color: #4e4ffa;
     --cards-text-color: #ffffff;
 
-    --form-bg-color: #ffffff;
-    --form-border-input-color: #696969;
+    --form-bg-color: #000000;
+    --form-border-input-color: #919191;
+    --form-text-color: #ffffff;
 }
 
 body.dark {
@@ -41,16 +42,7 @@ html, body {
     width: 100%;
 }
 
-body {
-    background-color: var(--bg-color);
-    color: var(--text-color);
-    display: flex;
-    flex-direction: column;
-    font-size: 100%;
-    font-family: "Lexend", Roboto, sans-serif;
-    line-height: 1.5em;
-    align-items: center;
-}
+html { scroll-behavior: smooth; }
 
 /******************* 
         MENU
@@ -177,11 +169,36 @@ h1.hide {
     padding: 0.5em 0 0.5em 1em;
 }
 
-/*#region About us*/
+/******************* 
+    STYLE COMUNE
+********************/
+
+body {
+    background-color: var(--bg-color);
+    color: var(--text-color);
+    display: flex;
+    flex-direction: column;
+    font-size: 100%;
+    font-family: "Lexend", Roboto, sans-serif;
+    line-height: 1.5em;
+    align-items: center;
+}
+
+a {
+    color: var(--not-visited-link);
+    text-underline-offset: 0.3em;
+}
+
+a:visited {
+    color: var(--visited-link);
+    text-underline-offset: 0.3em;
+}
 
 /****************
     ABOUT US
 *****************/
+
+/*#region About us*/
 
 /* HEADER */
 
