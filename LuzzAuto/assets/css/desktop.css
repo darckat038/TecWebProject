@@ -50,11 +50,11 @@ html { scroll-behavior: smooth; }
 ********************/
 
 .topNavBar {
-    background-color: black;
-    color: white;
+    background-color: var(--navbar-bg-color);
+    color: var(--navbar-text-color);
     display: inline-flex;
     overflow: hidden;
-    /* position: absolute; */
+    position: absolute;
     width: 100%;
     padding-top: 1em;
     padding-bottom: 1em;
@@ -78,10 +78,6 @@ h1.hide {
     pointer-events: none;
 }
 
-.topNavBar #menu-button-container {
-    pointer-events: none;
-}
-
 #menu {
     list-style: none;
     margin-left: auto;
@@ -92,13 +88,6 @@ h1.hide {
 #menu a {
     padding: 0 1.2em;
     text-align: center;
-    text-underline-offset: 0.3em;
-    color: var(--not-visited-link);
-    background-color: var(--link-bg-color);
-}
-
-#menu a:visited {
-    color: var(--visited-link);
 }
 
 #menu #here a {
@@ -118,9 +107,9 @@ h1.hide {
     color: var(--navbar-text-color);
     background-color: var(--navbar-bg-color);
     width: 100%;
-    margin-top: 0em;
+    margin-top: 3.5em;
     border-top: 1px solid var(--form-border-input-color);
-    /* position: absolute; */
+    position: absolute;
 }
 
 #breadcrumb p {
