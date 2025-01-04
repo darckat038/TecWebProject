@@ -41,7 +41,7 @@ html { scroll-behavior: smooth; }
         MENU
 ********************/
 
-.topNavBar{
+.topNavBar {
     background-color: var(--navbar-bg-color);
     color: var(--navbar-text-color);
     display: inline-flex;
@@ -52,13 +52,13 @@ html { scroll-behavior: smooth; }
     padding-bottom: 1em;
 }
 
-.hide{
+.hide {
     text-indent: 100%;
     white-space: nowrap;
     overflow: hidden;
 }
 
-h1.hide{
+h1.hide {
     background-image: url("../img/Logo/Logo\ Bianco\ Scritta.svg");
     background-size: contain;
     background-repeat: no-repeat;
@@ -66,18 +66,18 @@ h1.hide{
     margin-left: 1em;
 }
 
-.topNavBar #disable{
+.topNavBar #disable {
     pointer-events: none;
 }
 
-#menu{
+#menu {
     list-style: none;
     margin-left: auto;
     display: inline-flex;
     flex-direction: row;
 }
 
-#menu a{
+#menu a {
     padding: 0 1.2em;
     text-align: center;
 }
@@ -95,7 +95,7 @@ h1.hide{
      BREADCRUMB
 ********************/
 
-#breadcrumb{
+#breadcrumb {
     color: var(--navbar-text-color);
     background-color: var(--navbar-bg-color);
     width: 100%;
@@ -104,7 +104,7 @@ h1.hide{
     position: absolute;
 }
 
-#breadcrumb p{
+#breadcrumb p {
     padding: 0.5em 0 0.5em 1em;
 }
 
@@ -112,7 +112,7 @@ h1.hide{
     STYLE COMUNE
 ********************/
 
-body{
+body {
     background-color: var(--bg-color);
     color: var(--text-color);
     display: flex;
@@ -123,7 +123,7 @@ body{
     align-items: center;
 }
 
-a{
+a {
     color: var(--not-visited-link);
     text-underline-offset: 0.3em;
 }
@@ -133,15 +133,15 @@ a:visited {
     text-underline-offset: 0.3em;
 }
 
-/******************* 
-        HOME
+/*******************
+        ABOUT US
 ********************/
 
-/*#region Home*/
+/*#region About Us*/
 
 
 
-/*#endregion Home*/
+/*#endregion About Us*/
 
 /******************* 
         LOGIN
