@@ -4,71 +4,84 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width">
 
-    <base href="/LuzzAuto/">
-
     <title>Registrazione - LuzzAuto Concessionario</title>
-
-    <link rel="stylesheet" media="screen and (max-width:1024px), only screen and (max-device-width:1024px)" href="assets/css/mobile.css" type="text/css">
-    <link rel="stylesheet" media="screen and (min-width:1024px), only screen and (min-device-width:1024px)" href="assets/css/desktop.css" type="text/css">
-    <link rel="stylesheet" media="print" href="assets/css/print.css" type="text/css">
 
     <meta name="description" content="Crea il tuo account per iniziare a usufruire al meglio dei nostri servizi e tener traccia delle tue prenotazioni!">
     <meta name="keywords" content="luzzauto, concessionario, macchina, auto, automobili, guida, vetture, test, account, registrazione, prenotazioni">
     <meta name="author" content="Artusi Emanuele, Bellon Filippo, Diviesti Filippo, Righetto Filippo">
 
+    <link rel="stylesheet" media="screen and (max-width:1024px), only screen and (max-device-width:1024px)" href="assets/css/mobile.css" type="text/css">
+    <link rel="stylesheet" media="screen and (min-width:1024px), only screen and (min-device-width:1024px)" href="assets/css/desktop.css" type="text/css">
+    <link rel="stylesheet" media="print" href="assets/css/print.css" type="text/css">
+
+    <script src="assets/js/file.js"></script>
+
     <link rel="preconnect" href="https://fonts.googleapis.com">
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-        <link href="https://fonts.googleapis.com/css2?family=Lexend:wght@100..900&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lexend:wght@100..900&display=swap" rel="stylesheet">
 
-        <script>
-            document.addEventListener("DOMContentLoaded", function () {
-                var x = document.getElementById("menu");
-                var y = document.getElementById("menu-button-container");
-
-                function adjustMenuOnResize() {
-                    if (window.innerWidth >= 1024) {
-                        x.style.display = "flex";                       // Passaggio a modalità desktop
-                    } else {
-                        if (x.style.display === "flex" && !(y.classList.contains("change"))) {
-                            x.style.display = "none";                   // Passaggio da desktop a mobile
-                        }
-                                                                        // Passaggio da mobile a mobile
-                    }
-                }
-
-                // Evento resize sulla finestra
-                window.addEventListener("resize", adjustMenuOnResize);
-            });
-
-            function menuOpenClose(y) {
-                var x = document.getElementById("menu");
-                if (x.style.display === "flex") {
-                    x.style.display = "none";
-                } else {
-                    x.style.display = "flex";
-                }
-                y.classList.toggle("change");
-            }
-        </script>
     </head>
-    <body>
-        <header>
-            <a href="about.html" class="logo" aria-label="immagine logo del sito">Logo</a>
-            <nav class="topNavBar">
-                <a href="javascript:void(0);" id="menu-button-container" onclick="menuOpenClose(this)" aria-label="icona apertura menu">
-                    <div class="menu-button-bar1" aria-hidden="true"></div>
-                    <div class="menu-button-bar2" aria-hidden="true"></div>
-                    <div class="menu-button-bar3" aria-hidden="true"></div>
-                </a>
-                <ul id="menu"  aria-label="menu del sito">
-                    <li><a href="home.html">Home</a></li>
-                    <li><a href="about.html">Chi Siamo</a></li>
-                    <li><a href="listino.html">Auto</a></li>
-                    <li><a href="drive_test.html">Prenotazione</a></li>
-                    <li><a href="login.html">Login</a></li>
-                    <li><a href="registrazione.html" id="here">Registrazione</a></li>
-                </ul>
-            </nav>
-        </header>
+    <body id="signup_body"> 
+        <nav class="topNavBar">
+
+            <h1 class="hide">LuzzAuto</h1>
+            
+            <a href="javascript:void(0);" id="menu-button-container" onclick="menuOpenClose(this)" aria-label="icona apertura menu">               
+                <div class="menu-button-bar1" aria-hidden="true"></div>
+                <div class="menu-button-bar2" aria-hidden="true"></div>
+                <div class="menu-button-bar3" aria-hidden="true"></div>
+            </a>
+            <ul id="menu"  aria-label="menu del sito">
+                <li><a href="home.html"><span lang="en-GB">Home</span></a></li>
+                <li><a href="about.html" >Chi Siamo</a></li>
+                <li><a href="listino.html" >Listino auto</a></li>
+                <li><a href="test_drive.html" ><span lang="en-GB">Test Drive</span></a></li>
+                <li><a href="login.html" ><span lang="en-GB">LogIn</span></a></li>
+                <li id="here"><a href="registrazione.html" tabindex="-1"><span lang="en-GB">SignUp</span></a></li>
+            </ul>
+        </nav>
+
+        <nav id="breadcrumb">
+            <p>Ti trovi in: <span lang="en-GB">SignUp</span></p>
+        </nav>
+
+        <main class="signup_content">
+
+            <h1>Benvenuto in LuzzAuto</h1>
+            <p>Inserisci i tuoi dati per creare un <span lang="en-GB">account</span> e poter accedere ai nostri servizi.</p>
+            
+            <form id="signup_form" method="post" action="">
+                <fieldset>
+    
+                    <legend><span lang="en-GB">SignUp</span></legend>
+
+                    <label id="signup_label_nome" for="signup_nome">Nome</label>
+                    <input id="signup_nome" class="signup_input" type="text" name="nome" aria-required="true" aria-label="Campo di inserimento del nome" required data-msg-required="Per favore, inserisci il tuo nome">
+    
+                    <label id="signup_label_cognome" for="signup_cognome">Cognome</label>
+                    <input id="signup_cognome" class="signup_input" type="text" name="cognome" aria-required="true" aria-label="Campo di inserimento del cognome" required data-msg-required="Per favore, inserisci il tuo cognome">
+                    
+                    <label id="signup_label_username" for="signup_username"><span lang="en-GB">Username</span></label>
+                    <input id="signup_username" class="signup_input" type="text" name="username" aria-required="true" aria-label="Campo di inserimento dell'username" required data-msg-required="Per favore, inserisci il tuo username" data-msg-invalid:="Ci dispiace, formato non corretto">
+    
+                    <label id="signup_label_pass" for="signup_pass"><span lang="en-GB">Password</span></label>
+                    <input id="signup_pass" class="signup_input" type="password" name="password" aria-required="true" aria-label="Campo di inserimento della password" required data-msg-required="Per favore, inserisci la tua password">
+
+                    <label id="signup_label_pass2" for="signup_pass2"><span lang="en-GB">Ripeti password</span></label>
+                    <input id="signup_pass2" class="signup_input" type="password" name="password2" aria-required="true" aria-label="Campo di inserimento della password" required data-msg-required="Per favore, reinserisci la tua password">
+
+                    <label id="signup_label_data" for="signup_data">Data di nascita</label>
+                    <input id="signup_data" class="signup_input" type="date" name="data" aria-required="true" aria-label="Campo di inserimento della data di nascita" required data-msg-required="Per favore, inserisci la tua data di nascita">
+    
+                    <input id="signup_button" type="submit" value="Registrati" aria-label="Bottone di invio del form">
+    
+                </fieldset>
+            </form>
+
+            <p>Se sei già registrato allora <a href="login.html">ACCEDI AL TUO <span lang="en-GB">ACCOUNT</span></a>!</p>
+
+        </main>
+
+
     </body>
 </html>
