@@ -290,6 +290,10 @@ section.aboutUs_history p {
     padding: 1em 0 5em 0;
 }
 
+#aboutUs_ourNums h2 {
+    margin-bottom: 2em;
+}
+
 #aboutUs_ourNums > dl {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
@@ -299,22 +303,18 @@ section.aboutUs_history p {
     "d e f";
 }
 
-#aboutUs_ourNums h2 {
-    margin-bottom: 2em;
-}
-
 #aboutUs_ourNums img {
     margin-top: 1.5em;
     object-fit: contain;
     width: 3em;
 }
 
-#aboutUs_ourNums dl h3 {
+#aboutUs_ourNums > dl h3 {
     font-size: 1.6em;
     font-weight: 450;
 }
 
-#aboutUs_ourNums dl p {
+#aboutUs_ourNums > dl p {
     margin-top: 0.7em;
     font-size: 1.3em;
 }
