@@ -39,8 +39,8 @@ body.purple {
 }
 
 body{
-    background-color: var(--bg-color);
-    color: var(--text-color);
+    background-color: var(--content-text-bg-color);
+    color: var(--content-text-color);
     display: flex;
     flex-direction: column;
     font-size: 100%;
@@ -271,6 +271,10 @@ h1.hide{
     font-size: 100%;
 }
 
+#home_fastSearch .home_insert::placeholder {
+    color: var(--form-border-input-color);
+}
+
 #home_fastSearch #home_cerca {
     display: block;
     margin: 3em auto 0;                            /* con questo e display: block riesco ad allinearlo a centro */
@@ -349,14 +353,32 @@ h1.hide{
 #home_workWithUs {
     background-color: var(--form-bg-color);
     color: var(--form-text-color);
-    display: flex;
-    flex-direction: column;
-    margin: 3em auto;
+    display: block;
+    margin: 3em auto 5em;
     padding: 3em;
     border-radius: 3em 0;
     font-size: 100%;
-    width: fit-content;
+    width: 50%;
+    text-align: center;
+    line-height: 1.8em;
 }
+
+#home_workWithUs h3 {
+    margin-bottom: 1em;
+    font-size: 2em;
+}
+
+#home_workWithUs h4 {
+    margin-bottom: 2em;
+    font-size: 1.5em;
+    font-weight: 400;
+}
+
+#home_workWithUs p {
+    font-size: 1.2em;
+}
+
+/*
 
 #home_workWithUs fieldset {
     display: inline-block;
@@ -422,7 +444,7 @@ h1.hide{
 
 #home_workWithUs #home_invia {
     display: block;
-    margin: 3em auto 0;                            /* con questo e display: block riesco ad allinearlo a centro */
+    margin: 3em auto 0;
     color: var(--form-text-color);
     background-color: var(--form-bg-color);
     border: 1px solid white;
@@ -437,6 +459,8 @@ h1.hide{
     background-color: var(--form-text-color);
     color: var(--form-bg-color);
 }
+
+*/
 
 /* HOME BRANDS */
 
@@ -470,6 +494,48 @@ h1.hide{
 #home_brands img#home_audi,
 #home_brands img#home_opel {
     border-radius: 0;
+}
+
+/* CLIENT REVIEWS */
+
+#home_reviews {
+    padding: 2em 0 6em;
+    margin: 5em 0;
+    text-align: center;
+    width: 100%;
+    display: block;
+}
+
+#home_reviews h3 {
+    font-size: 2.7em;
+}
+
+#home_reviews > dl {
+    display: flex;
+    justify-content: space-evenly;
+    padding-top: 2em;
+}
+
+#home_reviews div.home_review_item {
+    /*
+    margin: 4em 3em 0;
+    display: inline-block;
+    */
+    border: 0px solid black;
+    border-radius: 1.5em;
+    overflow: hidden;
+    max-width: 25em;
+    height: fit-content;
+    padding: 0 0 1em;
+    font-size: 100%;
+    background-color: rgb(223, 223, 223);
+    color: var(--content-text-color);
+    background-color: var();
+}
+
+#home_reviews div.home_review_item:hover {
+    background-color: var(--cards-bg-color);
+    color: var(--cards-text-color);
 }
 
 /*#endregion Home*/
