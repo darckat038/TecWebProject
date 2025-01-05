@@ -171,7 +171,6 @@ select option {
     left: 3px;
     transform: translateY(-50%);
     transition: transform 0.3s;
-    box-shadow: 0 2px 6px rgba(153, 153, 153, 0.75);
     border: solid 1px black;    /* Per migliore visibilità */
 }
 
@@ -238,6 +237,14 @@ select option {
     box-shadow: rgba(115, 115, 115, 0.35) 0px 5px 15px;
     width: 55em;
  }
+
+#list_toggle_button {
+    display: none; /* Nasconde il pulsante toggle su desktop */
+}
+
+.list_toggle_input {
+    display: none; /* Nasconde anche il checkbox su desktop */
+}
 
 #list_filter form {
     margin: 1em 0;

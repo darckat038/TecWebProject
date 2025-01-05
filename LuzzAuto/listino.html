@@ -56,8 +56,15 @@
 
         <main id="list_main">
             <section id="list_filter">
-                <h2 class="list_sectionTitle">Filtra qui il listino</h2>
-                <form action="listino.html" method="GET">
+                <input type="checkbox" id="list_toggle_filter" class="list_toggle_input" hidden >
+
+                <div id="list_filter_header">
+                    <h2 class="list_sectionTitle">Filtra qui il listino</h2>
+                    <button for="list_toggle_filter" id="list_toggle_button" aria-label="Seleziona per espandere il form filtro" title="Espandi/comprimi form" aria-expanded="false" aria-controls="filter_form">▼</button>
+                </div>
+                
+
+                <form action="listino.html" method="GET" id="list_filter_form" aria-label="Form per filtrare le automobili">
                     <!-- Fieldset per info base veicolo 
                     - Marca
                     - Modello
@@ -229,7 +236,7 @@
                         <dl class="list_car_info">
                             <div>
                                 <dd>Marca</dd>
-                                <dt>Digital Motion</dt>
+                                <dt>DM - Digital Motion</dt>
                             </div>
                             <div>
                                 <dd>Modello</dd>
@@ -253,7 +260,7 @@
                         <dl class="list_car_info">
                             <div>
                                 <dd>Marca</dd>
-                                <dt>European Sports Unlimited</dt>
+                                <dt>ESU - European Sports Unlimited</dt>
                             </div>
                             <div>
                                 <dd>Modello</dd>
@@ -277,7 +284,7 @@
                         <dl class="list_car_info">
                             <div>
                                 <dd>Marca</dd>
-                                <dt>Universal Premium Design</dt>
+                                <dt>UniPD - Universal Premium Design</dt>
                             </div>
                             <div>
                                 <dd>Modello</dd>
@@ -301,6 +308,24 @@
             <img class="imgValidHTMLCode" src="assets/img/Footer/valid-xhtml10.png" alt="HTML valido">
             <p>FFF&E Co. - <span lang="en-GB">All rights Reserved</span></p>
             <img class="imgValidCSSCode" src="assets/img/Footer/vcss-blue.gif" alt="CSS valido">
+            <p id="footnote">Alcuni marchi e modelli sono frutto della nostra immaginazione; le immagini relative sono state generate da strumenti di intelligenza artificiale.</p>
         </footer>
+
+
+
+        <script>
+            // Assicuriamo il funzionamento dell'espansione del filtro da mobile anche da tastiera
+            const toggleButton = document.getElementById('list_toggle_button');
+            const toggleInput = document.getElementById('list_toggle_filter');
+            const filterForm = document.getElementById('list_filter_form');
+        
+            
+            toggleButton.addEventListener('click', () => {
+                toggleInput.checked = !toggleInput.checked;
+                toggleButton.setAttribute('aria-expanded', toggleInput.checked.toString());
+                toggleButton.setAttribute('aria-label', toggleInput.checked ? 'Seleziona per comprimere il form filtro' : 'Seleziona per espandere il form filtro');
+            });
+
+        </script>
     </body>
 </html>
