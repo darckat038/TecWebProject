@@ -254,6 +254,7 @@ h1.hide{
 #home_fastSearch #home_condizione {
     padding-right: 0.8em;
     width: 44%;
+    text-align: center;
 }
 
 #home_fastSearch #home_label_prezzo {
@@ -271,7 +272,7 @@ h1.hide{
     font-size: 100%;
 }
 
-#home_fastSearch .home_insert::placeholder {
+#home_fastSearch input::placeholder {
     color: var(--form-border-input-color);
 }
 
@@ -510,20 +511,19 @@ h1.hide{
     font-size: 2.7em;
 }
 
-#home_reviews > dl {
+#home_reviews > dl#home_clients_reviews {
     display: flex;
     justify-content: space-evenly;
     padding-top: 2em;
 }
 
-#home_reviews div.home_review_item {
+#home_reviews dl div.home_review_item {
     /*
     margin: 4em 3em 0;
     display: inline-block;
     */
     border: 0px solid black;
     border-radius: 1.5em;
-    overflow: hidden;
     max-width: 25em;
     height: fit-content;
     padding: 0 0 1em;
@@ -536,6 +536,27 @@ h1.hide{
 #home_reviews div.home_review_item:hover {
     background-color: var(--cards-bg-color);
     color: var(--cards-text-color);
+}
+
+#home_reviews dl dt {
+    font-weight:450;
+    font-size: 1.3em;
+    margin: 1em 0 0.5em;
+}
+
+#home_reviews dl dd {
+    padding: 0 1em 1em;
+    font-weight: 300;
+    font-size: 1.1em;
+}
+
+#home_reviews div img {
+    box-shadow: 0px 10px 25px 0px rgba(0, 0, 0, 0.3);
+    object-fit: contain;
+    width: 5em;
+    margin-top: -10%;
+    background-color: white;
+    border-radius: 50%;
 }
 
 /*#endregion Home*/
