@@ -18,6 +18,7 @@
     --form-bg-color: #000000;
     --form-border-input-color: #919191;
     --form-text-color: #ffffff;
+
 }
 
 body.dark {
@@ -131,6 +132,78 @@ a:visited {
     text-underline-offset: 0.3em;
 }
 
+
+select,
+select option {
+    cursor: pointer;
+}
+
+/* CHECKBOX CUSTOM Sì/No */
+
+/* Nascondi l'input checkbox */
+.interruttore input[type="checkbox"] {
+    opacity: 0;
+    width: 0;
+    height: 0;
+}
+
+/* Slider dell'interruttore */
+.interruttore-slider {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #ccc;
+    border-radius: 25px;
+    transition: background-color 0.3s;
+    border: solid 1px black;    /* Per migliore visibilità */
+}
+
+/* Manopola dell'interruttore */
+.interruttore-knob {
+    position: absolute;
+    height: 20px;
+    width: 20px;
+    background-color: white;
+    border-radius: 50%;
+    top: 50%;
+    left: 3px;
+    transform: translateY(-50%);
+    transition: transform 0.3s;
+    box-shadow: 0 2px 6px rgba(153, 153, 153, 0.75);
+    border: solid 1px black;    /* Per migliore visibilità */
+}
+
+/* Stato Checked */
+.interruttore input[type="checkbox"]:checked + .interruttore-slider {
+    background-color: #4caf50; /* Colore quando attivo */
+}
+
+.interruttore input[type="checkbox"]:checked + .interruttore-slider .interruttore-knob {
+    transform: translate(25px, -50%);
+}
+
+/* Testo On/Off sulla Knob */
+.interruttore-knob::after {
+    content: 'No';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 65%;
+    text-transform: uppercase;
+    font-weight: 500;
+    color: black;  /* Per migliore visibilità */
+}
+
+.interruttore input[type="checkbox"]:checked + .interruttore-slider .interruttore-knob::after {
+    content: 'Sì';
+}
+
+.interruttore:hover {
+    cursor: pointer;
+}
 
 
 
@@ -249,64 +322,7 @@ a:visited {
     top: 0.2em;
 }
 
-/* Nascondi l'input checkbox */
-.interruttore input[type="checkbox"] {
-    opacity: 0;
-    width: 0;
-    height: 0;
-}
 
-/* Slider dell'interruttore */
-.interruttore-slider {
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    background-color: #ccc;
-    border-radius: 25px;
-    transition: background-color 0.3s;
-}
-
-/* Manopola dell'interruttore */
-.interruttore-knob {
-    position: absolute;
-    height: 20px;
-    width: 20px;
-    background-color: white;
-    border-radius: 50%;
-    top: 50%;
-    left: 3px;
-    transform: translateY(-50%);
-    transition: transform 0.3s;
-    box-shadow: 0 2px 6px rgba(153, 153, 153, 0.75);
-}
-
-/* Stato Checked */
-.interruttore input[type="checkbox"]:checked + .interruttore-slider {
-    background-color: #4caf50; /* Colore quando attivo */
-}
-
-.interruttore input[type="checkbox"]:checked + .interruttore-slider .interruttore-knob {
-    transform: translate(25px, -50%);
-}
-
-/* Testo On/Off sulla Knob */
-.interruttore-knob::after {
-    content: 'No';
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    font-size: 65%;
-    text-transform: uppercase;
-    font-weight: 500;
-    opacity: 0.7;
-}
-
-.interruttore input[type="checkbox"]:checked + .interruttore-slider .interruttore-knob::after {
-    content: 'Sì';
-}
 
 
 #list_filter .list_insert {
@@ -319,6 +335,7 @@ a:visited {
     padding-left: 1em;
     font-size: 100%;
 }
+
 
 
 /*
