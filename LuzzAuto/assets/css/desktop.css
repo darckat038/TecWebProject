@@ -58,10 +58,6 @@ a:visited {
     text-underline-offset: 0.3em;
 }
 
-img {
-    object-position: contain;
-}
-
 /******************* 
         MENU
 ********************/
@@ -470,7 +466,7 @@ h1.hide{
     flex-direction: column;
     text-align: center;
     width: 100%;
-    background-color: #7171f8;
+    background-color: #8c8cff;
     padding: 2em 0 4em;
 }
 
