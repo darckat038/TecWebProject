@@ -253,6 +253,10 @@ h1.hide{
     text-align: center;
 }
 
+#home_fastSearch #home_condizione option:disabled {
+    color: var(--form-border-input-color);
+}
+
 #home_fastSearch #home_label_prezzo {
     margin-left: 5em;
 }
