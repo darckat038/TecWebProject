@@ -159,7 +159,7 @@ a:visited {
     text-align: center;
 }
 
-/*
+
 .riquadri{ 
     border-radius: 0.5em;
     border: 1px solid var(--form-border-input-color);
@@ -191,7 +191,7 @@ a:visited {
     margin-top: -1.9em;
     color: var(--form-border-input-color);
 }
-    */
+    
 
 .nomeRiqPrenotazioni{
     color: var(--form-border-input-color);

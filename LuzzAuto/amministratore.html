@@ -52,19 +52,6 @@
 
       <h1 id="saluto"></h1>
 
-      <!-- 
-      <section class="riquadri">
-        <h2 class="nomeRiq">Informazioni Utente</h2>
-        <p id="userImage"></p>
-        <p><strong>Nome:</strong><span> Giovanni</span></p>
-        <p><strong>Cognome:</strong><span> Rossi</span></p>
-        <p><strong>Telefono:</strong><span> 3483457629872</span></p>
-        <p><strong>Mail:</strong><span> giovanni.rossi@studenti.unipd.it</span></p>
-        <p><strong>Password:</strong><span> ************</span></p>
-        <p>Se desideri modificare i tuoi dati premere: <a href="">Modifica</a></p>
-      </section>
-      -->
-
       <section >
         <h2 class="nomeRiqPrenotazioni">Gestione Prenotazioni</h2>
         <table class="tabellaPrenotazioni">
@@ -96,7 +83,73 @@
         </table>
       </section>
 
-      
+      <section class="riquadri">
+        <h2 class="nomeRiq">Aggiungi Auto</h2>
+        <form action="submit_form.php" method="POST">
+          <label for="marca">Marca:</label><br>
+          <input type="text" id="marca" name="marca" required><br><br>
+  
+          <label for="modello">Modello:</label><br>
+          <input type="text" id="modello" name="modello" required><br><br>
+  
+          <label for="anno">Anno:</label><br>
+          <input type="number" id="anno" name="anno" min="1886" max="2025" required><br><br>
+  
+          <label for="colore">Colore:</label><br>
+          <input type="text" id="colore" name="colore" required><br><br>
+  
+          <label for="condizione">Condizione:</label><br>
+          <select id="condizione" name="condizione" required>
+              <option value="nuovo">Nuovo</option>
+              <option value="usato">Usato</option>
+          </select><br><br>
+  
+          <label for="prezzo">Prezzo (€):</label><br>
+          <input type="number" id="prezzo" name="prezzo" min="0" step="0.01" required><br><br>
+  
+          <label for="chilometraggio">Chilometraggio (km):</label><br>
+          <input type="number" id="chilometraggio" name="chilometraggio" min="0"><br><br>
+  
+          <label for="alimentazione">Alimentazione:</label><br>
+          <select id="alimentazione" name="alimentazione" required>
+              <option value="benzina">Benzina</option>
+              <option value="diesel">Diesel</option>
+              <option value="ibrida">Ibrida</option>
+              <option value="elettrica">Elettrica</option>
+              <option value="altro">Altro</option>
+          </select><br><br>
+  
+          <label for="cambio">Cambio:</label><br>
+          <select id="cambio" name="cambio" required>
+              <option value="manuale">Manuale</option>
+              <option value="automatico">Automatico</option>
+          </select><br><br>
+  
+          <label for="trazione">Trazione:</label><br>
+          <select id="trazione" name="trazione" required>
+              <option value="AWD">AWD</option>
+              <option value="RWD">RWD</option>
+              <option value="FWD">FWD</option>
+          </select><br><br>
+  
+          <label for="potenza">Potenza (CV):</label><br>
+          <input type="number" id="potenza" name="potenza" min="0" required><br><br>
+  
+          <label for="peso">Peso (kg):</label><br>
+          <input type="number" id="peso" name="peso" min="0" required><br><br>
+  
+          <label>Adatta a neopatentati:</label><br>
+          <input type="radio" id="neopatentati_sì" name="neopatentati" value="sì" required>
+          <label for="neopatentati_sì">Sì</label><br>
+          <input type="radio" id="neopatentati_no" name="neopatentati" value="no" required>
+          <label for="neopatentati_no">No</label><br><br>
+  
+          <label for="numero_posti">Numero posti:</label><br>
+          <input type="number" id="numero_posti" name="numero_posti" min="1" max="9" required><br><br>
+  
+          <button type="submit">Invia</button>
+      </form>
+      </section>
 
     </main>
       
