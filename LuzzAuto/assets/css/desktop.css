@@ -137,7 +137,7 @@ a:visited {
     AMMINISTRATORE
 ********************/
 
-#utente_body{
+#admin_body{
     background-image: url(/LuzzAuto/assets/img/Background/LuzzAuto_facciata1.png);
     background-repeat: no-repeat;
     background-color: white;
@@ -145,7 +145,7 @@ a:visited {
 }
 
 
-.utente_content{
+.admin_content{
     background-color: var(--navbar-bg-color);
     color: var(--navbar-text-color);
     padding: 2em;
@@ -155,10 +155,11 @@ a:visited {
     height: auto;
 }
 
-.utente_content > h1{
+.admin_content > h1{
     text-align: center;
 }
 
+/*
 .riquadri{ 
     border-radius: 0.5em;
     border: 1px solid var(--form-border-input-color);
@@ -171,6 +172,7 @@ a:visited {
     margin-top: 3em;
     padding: 2em; 
 }
+
 
 .riquadri p{
     padding: 0.2em;
@@ -189,28 +191,14 @@ a:visited {
     margin-top: -1.9em;
     color: var(--form-border-input-color);
 }
+    */
 
 .nomeRiqPrenotazioni{
     color: var(--form-border-input-color);
     padding-left: 3em;
     padding-top: 1em;
 }
-
-#userImage{
-    /*
-    width: 13em;
-    float: right;
-    position: relative;   
-    margin-top: -1.3em;
-    */
-    background-image: url('../img/ImmagineUtente/ImmagineUtente.svg');
-    float: right; 
-    width: 12em;
-    height: 12em;
-    background-size: cover; 
-    background-position: center;
-    margin-top: -1.5em; 
-}
+    
 
 
 /* Stile della tabella */

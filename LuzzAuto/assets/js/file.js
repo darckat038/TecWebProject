@@ -26,3 +26,16 @@ function menuOpenClose(y) {
     }
     y.classList.toggle("change");
 }
+
+
+
+/*AMMINISTRATORE*/
+
+document.addEventListener("DOMContentLoaded", function(){
+    const oraCorrente = new Date().getHours();
+    const nomeUtente = "Luca";
+    const salutoUtente = document.getElementById("saluto");
+  
+    let saluto = oraCorrente < 17 ? "Buongiorno" : "Buonasera";
+    salutoUtente.textContent = `${saluto} ${nomeUtente}!`;
+  });

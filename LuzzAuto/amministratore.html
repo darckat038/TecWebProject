@@ -22,7 +22,7 @@
 </head>
 
 
-<body id="utente_body">
+<body id="admin_body">
     
     <nav class="topNavBar">
 
@@ -48,13 +48,13 @@
     </nav>
 
 
-    <main class="utente_content">
+    <main class="admin_content">
 
       <h1 id="saluto"></h1>
 
+      <!-- 
       <section class="riquadri">
         <h2 class="nomeRiq">Informazioni Utente</h2>
-        <!-- <img src="assets/img/ImmagineUtente/ImmagineUtente.svg" alt="Utente" id="userImage">-->
         <p id="userImage"></p>
         <p><strong>Nome:</strong><span> Giovanni</span></p>
         <p><strong>Cognome:</strong><span> Rossi</span></p>
@@ -63,6 +63,7 @@
         <p><strong>Password:</strong><span> ************</span></p>
         <p>Se desideri modificare i tuoi dati premere: <a href="">Modifica</a></p>
       </section>
+      -->
 
       <section >
         <h2 class="nomeRiqPrenotazioni">Gestione Prenotazioni</h2>
@@ -70,6 +71,7 @@
           <thead>
             <tr>
               <th>Nr. Pren.</th>
+              <th>Utente</th>
               <th>Modello Auto</th>
               <th>Data Test Drive</th>
               <th>Azioni</th>
@@ -78,12 +80,14 @@
           <tbody>
             <tr>
               <td>001</td>
+              <td>Giovanni Rossi</td>
               <td>Fiat Panda</td>
               <td><date>20-12-2024</date>15:30</td>
               <td><button class="btnAnnulla">Annulla</button></td>
             </tr>
             <tr>
               <td>002</td>
+              <td>Giovanni Rossi</td>
               <td>Ford Mustang</td>
               <td><date>22-12-2024</date> 10:00</td>
               <td><button class="btnAnnulla">Annulla</button></td>
@@ -91,6 +95,8 @@
           </tbody>
         </table>
       </section>
+
+      
 
     </main>
       
