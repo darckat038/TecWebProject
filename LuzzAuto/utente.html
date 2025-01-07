@@ -57,21 +57,20 @@
           <p id="userImage"></p>
           <p><strong>Nome:</strong><span> Giovanni</span></p>
           <p><strong>Cognome:</strong><span> Rossi</span></p>
-          <p><strong>Telefono:</strong><span> 3483457629872</span></p>
-          <p><strong>Mail:</strong><span> giovanni.rossi@studenti.unipd.it</span></p>
+          <p><strong>Username:</strong><span> giovanni.rossi</span></p>
           <p><strong>Password:</strong><span> ************</span></p>
           <p>Se desideri modificare i tuoi dati premere: <a href="">Modifica</a></p>
         </section>
 
         <section >
-          <h2 class="nomeRiqPrenotazioni">Gestione Prenotazioni</h2>
+          <h2 class="nomeRiqPrenotazioni">Prenotazioni</h2>
           <table class="tabellaPrenotazioni">
             <thead>
               <tr>
                 <th>Nr. Pren.</th>
                 <th>Modello Auto</th>
                 <th>Data Test Drive</th>
-                <th>Azioni</th>
+                <th>Stato</th>
               </tr>
             </thead>
             <tbody>
@@ -79,19 +78,34 @@
                 <td>001</td>
                 <td>Fiat Panda</td>
                 <td><date>20-12-2024</date>15:30</td>
-                <td><button class="btnAnnulla">Annulla</button></td>
+                <td>Accettato</td>
               </tr>
               <tr>
                 <td>002</td>
                 <td>Ford Mustang</td>
                 <td><date>22-12-2024</date> 10:00</td>
-                <td><button class="btnAnnulla">Annulla</button></td>
+                <td>In elaborazione</td>
               </tr>
             </tbody>
           </table>
         </section>
 
+        <section class="riquadri">
+          <h2 class="nomeRiq">Gestione Prenotazioni</h2>
+          <label for="list_filter_colore" id="gestionePrenotazione">Prenotazioni: </label>
+          <select id="list_filter_colore" name="colore" aria-label="Campo di inserimento del colore dell'auto">
+              <option disabled selected value="">Qualsiasi</option>
+              <option value="bianco">Bianco</option>
+              <option value="nero">Nero</option>
+              <option value="grigio">Grigio</option>
+              <option value="rosso">Rosso</option>
+              <option value="blu">Blu</option>
+              <option value="verde">Verde</option>
+              <option value="arancione">Arancione</option>
+              <option value="giallo">Giallo</option>
+          </select>
+        </section>
+
       </main>
-        
     </body>
 </html>
