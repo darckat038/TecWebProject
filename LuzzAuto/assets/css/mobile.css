@@ -279,6 +279,10 @@ h1.hide{
     text-overflow: ellipsis;
 }
 
+#home_fastSearch #home_condizione option:disabled {
+    color: var(--form-border-input-color);
+}
+
 #home_fastSearch .home_insert {
     height: 3em;
     border-radius: 0.5em;
@@ -479,6 +483,63 @@ h1.hide{
 #home_brands img#home_audi,
 #home_brands img#home_opel {
     border-radius: 0;
+}
+
+/* CLIENT REVIEWS */
+
+#home_reviews {
+    padding: 2em 0 6em;
+    margin: 5em 0;
+    text-align: center;
+    color: var(--content-text-color);
+    width: 100%;
+}
+
+#home_reviews h3 {
+    font-size: 2.7em;
+    line-height: 1.2em;
+}
+
+#home_reviews > dl#home_clients_reviews {
+    padding-top: 1.5em;
+}
+
+#home_reviews dl div.home_review_item {
+    /*
+    margin: 4em 3em 0;
+    display: inline-block;
+    */
+    margin: 4em 2em 0;
+    border: 0px solid black;
+    border-radius: 1.5em;
+    max-width: 25em;
+    height: fit-content;
+    padding: 0 0 1em;
+    font-size: 100%;
+    background-color: rgb(223, 223, 223);
+    color: var(--content-text-color);
+    background-color: var();
+}
+
+#home_reviews dl dt {
+    font-weight:450;
+    font-size: 1.3em;
+    margin: 1em 0 0.5em;
+}
+
+#home_reviews dl dd {
+    padding: 0 1em 1em;
+    font-weight: 300;
+    font-size: 1.1em;
+}
+
+#home_reviews img {
+    box-shadow: 0px 10px 25px 0px rgba(0, 0, 0, 0.3);
+    object-fit: contain;
+    width: 5em;
+    margin-top: -10%;
+    background-color: white;
+    border-radius: 50%;
 }
 
 /* FOOTER */
