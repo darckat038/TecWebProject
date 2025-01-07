@@ -283,16 +283,30 @@ a:visited {
     border: 1px solid var(--form-border-input-color);
 }
 
-.btnAnnulla {
-    background-color: var(--form-border-input-color);
-    color: var(--navbar-bg-color);
-    padding: 0.5em 1em;
-    border: none;
-    border-radius: 0.3em;
-    cursor: pointer;
-    font-size: 0.9em;
-}
 
 .tabellaPrenotazioni date{
     display: block;
+}
+
+#gestionePrenotazione{
+    width: 100%; /* Adatta la larghezza al contenitore */
+    padding: 0.4em;
+    /*margin-left: 0.3em;*/
+    border: 1px solid white; /* Bordo verde */
+    border-radius: 4px; /* Angoli arrotondati */
+    background-color:black; /* Sfondo chiaro */
+    color: var(--form-border-input-color); /* Colore del testo */
+    font-size: 16px;
+    cursor: pointer; 
+}
+
+
+#eliminaPrenotazione{
+    background-color: white; 
+    padding: 0.5em 0.8em;
+    margin-top: 1em;
+    color: black;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
 }
