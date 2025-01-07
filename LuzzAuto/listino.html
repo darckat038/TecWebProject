@@ -1,74 +1,331 @@
 <!DOCTYPE html>
 <html lang="it">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width">
+        <base href="/LuzzAuto/">
 
-    <base href="/LuzzAuto/">
 
-    <title>Listino - LuzzAuto Concessionario</title>
 
-    <link rel="stylesheet" media="screen and (max-width:1024px), only screen and (max-device-width:1024px)" href="assets/css/mobile.css" type="text/css">
-    <link rel="stylesheet" media="screen and (min-width:1024px), only screen and (min-device-width:1024px)" href="assets/css/desktop.css" type="text/css">
-    <link rel="stylesheet" media="print" href="assets/css/print.css" type="text/css">
+        <title>Listino | LuzzAuto Concessionario</title>
 
-    <meta name="description" content="Consulta tutte le vetture disponibili nel nostro concessionario con la possibilità di prenotare un' esperienza di guida con l'auto dei tuoi sogni!">
-    <meta name="keywords" content="luzzauto, concessionario, macchina, auto, automobili, guida, vetture, test, prenota, esperienza">
-    <meta name="author" content="Artusi Emanuele, Bellon Filippo, Diviesti Filippo, Righetto Filippo">
+        <link rel="stylesheet" media="screen and (max-width:1024px)" href="assets/css/mobile.css" type="text/css">
+        <link rel="stylesheet" media="screen and (min-width:1025px)" href="assets/css/desktop.css" type="text/css">
+        <link rel="stylesheet" media="print" href="assets/css/print.css" type="text/css">
 
-    <link rel="preconnect" href="https://fonts.googleapis.com">
+        <script src="assets/js/file.js"></script>
+
+        <meta name="description" content="Visita il nostro concessionario per rimanere aggiornato sulle nuove vetture disponibili e prenotare un test di guida con la tua macchina dei sogni.">
+        <meta name="keywords" content="luzzauto, concessionario, macchina, auto, automobili, guida, vetture, test">
+        <meta name="author" content="Artusi Emanuele, Bellon Filippo, Diviesti Filippo, Righetto Filippo">
+
+        <link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
         <link href="https://fonts.googleapis.com/css2?family=Lexend:wght@100..900&display=swap" rel="stylesheet">
 
+    </head>
+
+    <!--
+    INSERIMENTO PHP PER FILTRO
+    -->
+
+    <body>
+
+        <nav class="topNavBar">
+
+            <h1 class="hide">LuzzAuto</h1>
+            
+            <a href="javascript:void(0);" id="menu-button-container" onclick="menuOpenClose(this)" aria-label="icona apertura menu">               
+                <div class="menu-button-bar1" aria-hidden="true"></div>
+                <div class="menu-button-bar2" aria-hidden="true"></div>
+                <div class="menu-button-bar3" aria-hidden="true"></div>
+            </a>
+            <ul id="menu"  aria-label="menu del sito">
+                <li><a href="home.html" tabindex="-1"><span lang="en-GB">Home</span></a></li>
+                <li><a href="about.html" >Chi Siamo</a></li>
+                <li id="here"><a href="listino.html" >Listino auto</a></li>
+                <li><a href="test_drive.html" ><span lang="en-GB">Test Drive</span></a></li>
+                <li><a href="login.html"><span lang="en-GB">LogIn</span></a></li>
+                <li><a href="registrazione.html" ><span lang="en-GB">SignUp</span></a></li>
+            </ul>
+        </nav>
+
+        <nav id="breadcrumb">
+            <p>Ti trovi in: <span lang="en-GB">Listino auto</span></p>
+        </nav>
+
+        <main id="list_main">
+            <section id="list_filter">
+                <input type="checkbox" id="list_toggle_filter" class="list_toggle_input" hidden >
+
+                <div id="list_filter_header">
+                    <h2 class="list_sectionTitle">Filtra qui il listino</h2>
+                    <button for="list_toggle_filter" id="list_toggle_button" aria-label="Seleziona per espandere il form filtro" title="Espandi/comprimi form" aria-expanded="false" aria-controls="filter_form">▼</button>
+                </div>
+                
+
+                <form action="listino.html" method="GET" id="list_filter_form" aria-label="Form per filtrare le automobili">
+                    <!-- Fieldset per info base veicolo 
+                    - Marca
+                    - Modello
+                    - Anno
+                    - Colore
+                    - Alimentazione
+                    - Cambio
+                    - Trazione (AWD, RWD, FWD)
+                    - Potenza (CV)
+                    - Peso (kg)
+                    - Neopatentati (sì/no)
+                    - Numero posti
+                    -->
+                    <fieldset id="list_filter_basicInfo">
+                        <legend>INFORMAZIONI SUL VEICOLO</legend>
+                        
+                        
+                            <div class="list_input_container">
+                                <label for="list_filter_marca" id="list_label_marca">Marca</label>
+                                <input type="text" id="list_filter_marca" class="list_insert" name="marca" placeholder="Qualsiasi" aria-label="Campo di inserimento della marca dell'auto">
+                            </div>
+
+                            <div class="list_input_container">
+                                <label for="list_filter_modello" id="list_label_modello">Modello</label>
+                                <input type="text" id="list_filter_modello" class="list_insert" name="modello" placeholder="Qualsiasi" aria-label="Campo di inserimento del modello dell'auto">
+                            </div>
+
+                            <div class="list_input_container">
+                                <label for="list_filter_anno" id="list_label_anno">Anno</label>
+                                <input type="number" id="list_filter_anno" class="list_insert" name="anno" min="1990" step="1" max="2024" placeholder="Qualsiasi" aria-label="Campo di inserimento dell'anno di produzione dell'auto">
+                            </div>
+
+                            <div class="list_input_container">
+                                <label for="list_filter_colore" id="list_label_colore">Colore</label>
+                                <select id="list_filter_colore" class="list_insert" name="colore" aria-label="Campo di inserimento del colore dell'auto">
+                                    <option disabled selected value="">Qualsiasi</option>
+                                    <option value="bianco">Bianco</option>
+                                    <option value="nero">Nero</option>
+                                    <option value="grigio">Grigio</option>
+                                    <option value="rosso">Rosso</option>
+                                    <option value="blu">Blu</option>
+                                    <option value="verde">Verde</option>
+                                    <option value="arancione">Arancione</option>
+                                    <option value="giallo">Giallo</option>
+                                </select>
+                            </div>
+
+                            <div class="list_input_container">
+                                <label for="list_filter_alimentazione" id="list_label_alimentazione">Alimentazione</label>
+                                <select id="list_filter_alimentazione" class="list_insert" name="alimentazione" aria-label="Campo di inserimento dell'alimentazione dell'auto">
+                                    <option disabled selected value="">Qualsiasi</option>
+                                    <option value="benzina">Benzina</option>
+                                    <option value="gasolio">Gasolio</option>
+                                    <option value="elettrico">Elettrico</option>
+                                    <option value="gpl">Ibrido <abbr title="">GPL</abbr></option>
+                                    <option value="plugin">Ibrido <span lang="en-GB">Plug-in</span></option>
+                                </select>
+                            </div>
+
+                            <div class="list_input_container">
+                                <label for="list_filter_cambio" id="list_label_cambio">Cambio</label>
+                                <select id="list_filter_cambio" class="list_insert" name="cambio" aria-label="Campo di inserimento del cambio dell'auto">
+                                    <option disabled selected value>Qualsiasi</option>
+                                    <option value="manuale">Manuale</option>
+                                    <option value="automatico">Automatico</option>
+                                </select>
+                            </div>
+
+                            <div class="list_input_container">
+                                <label for="list_filter_trazione" id="list_label_trazione">Trazione</label>
+                                <select id="list_filter_trazione" class="list_insert" name="trazione" aria-label="Campo di inserimento della trazione dell'auto">
+                                    <option disabled selected value="">Qualsiasi</option>
+                                    <option value="anteriore">Anteriore</option>
+                                    <option value="posteriore">Posteriore</option>
+                                    <option value="integrale">Integrale</option>
+                                </select>
+                            </div>
+
+                            <!-- MAX o MIN?? -->
+                            <div class="list_input_container">
+                                <label for="list_filter_potenza" id="list_label_potenza">Potenza (<abbr title="cavalli vapore">CV</abbr>)</label>
+                                <input type="text" id="list_filter_potenza" class="list_insert" name="potenza" min="0" step="1" placeholder="Qualsiasi" aria-label="Campo di inserimento della potenza dell'auto in cavalli vapore">
+                            </div>
+
+                            <!-- MAX o MIN?? -->
+                            <div class="list_input_container">
+                                <label for="list_filter_peso" id="list_label_peso">Peso (<abbr title="chilogrammi">kg</abbr>)</label>
+                                <input type="text" id="list_filter_peso" class="list_insert" name="peso" min="0" step="1" placeholder="Qualsiasi" aria-label="Campo di inserimento del peso dell'auto in chilogrammi">
+                            </div>
+
+                            <div class="list_input_container">
+                                <label for="list_filter_neopatentati" id="list_label_neopatentati">Idoneità neopatentati</label>
+                                <div class="list_insert" id="list_filter_neopatentati">
+                                    <label class="interruttore">
+                                        <input type="checkbox" name="neopatentati" value="true" aria-label="Mettere spunta se neopatentati abilitati alla guida dell'auto">
+                                        <div class="interruttore-slider">
+                                            <div class="interruttore-knob"></div>
+                                        </div>
+                                    </label>
+                                </div>
+                            </div>
+
+                            <div class="list_input_container">
+                                <label for="list_filter_posti" id="list_label_posti">Numero posti</label>
+                                <input type="number" id="list_filter_posti" class="list_insert" name="posti" min="1" max="9" step="1" placeholder="Qualsiasi" aria-label="Campo di inserimento del numero di posti dell'auto">
+                            </div>
+                    </fieldset>
+                
+                    <!-- Fieldset per preferenze di acquisto 
+                    - Condizione (nuovo/usato)
+                    - Prezzo
+                    - Chilometraggio max
+                    -->
+                    <fieldset id="list_filter_preferences">
+                        <legend>PREFERENZE</legend>
+                        
+                        <div class="list_input_container">
+                            <label for="list_filter_condizione" id="list_label_condizione">Condizione</label>
+                            <select id="list_filter_condizione" name="condizione" class="list_insert" aria-label="Campo di inserimento della condizione dell'auto">
+                                <option disabled selected value="">Qualsiasi</option>
+                                <option value="nuovo">Nuovo</option>
+                                <option value="usato">Usato</option>
+                                <option value="km0"><abbr title="Chilometro zero">KM 0</abbr></option>
+                            </select>
+                        </div>
+                        
+                        <div class="list_input_container">
+                            <label for="list_filter_prezzo" id="list_label_prezzo">Prezzo massimo (€)</label>
+                            <input type="number" id="list_filter_prezzo" class="list_insert" name="prezzo" min="0" step="500" placeholder="Qualsiasi" aria-label="Campo di inserimento del prezzo massimo dell'auto">
+                        </div>
+
+                        <div class="list_input_container">
+                            <label for="list_filter_chilometraggio" id="list_label_chilometraggio">Chilometraggio massimo (<abbr title="chilometri">km</abbr>)</label>
+                            <input type="number" id="list_filter_chilometraggio" class="list_insert" name="chilometraggio" min="0" step="100" placeholder="Qualsiasi" aria-label="Campo di inserimento del chilometraggio massimo dell'auto">
+                        </div>
+
+                    </fieldset>
+
+                    <div id="list_filter_buttons">
+                        <input type="reset" value="Rimuovi filtri" class="list_button" aria-label="Bottone per rimuovere ogni filtro selezionato">
+                        <input type="submit" value="Applica filtri" class="list_button" id="list_clear" aria-label="Bottone di ricerca per filtrare veicoli con opzioni selezionate">
+                    </div>
+
+                    <!-- 
+                    document.getElementById('list_clear').addEventListener('click', function () {
+                        // Rimuove i dati salvati localmente
+                        localStorage.clear(); 
+                        sessionStorage.clear();
+                        
+                        // Ricarica la pagina senza parametri nell'URL
+                        window.location.href = window.location.pathname;
+                    });
+                    -->
+
+                </form>
+            </section>
+
+            <section class="list" aria-label="Sezione lista automobili filtrata">
+                <h2 class="list_sectionTitle">Listino</h2>
+                <dl id="list_car_list">
+                    <!---
+                    IDEA: DESKTOP -> RETTANGOLI LARGHI, IMG A SX E INFO A DX
+                          MOBILE -> RETTANGOLI STRETTI, IMG IN ALTO E INFO IN BASSO
+                    -->
+                    <div class="list_car_item">
+                        <div class="list_car_image">
+                            <img src="assets/img/DM/mudol.jpeg" alt="Berlina sportiva blu elettrico vista davanti sinistra">
+                        </div>
+                        <dl class="list_car_info">
+                            <div>
+                                <dd>Marca</dd>
+                                <dt>DM - Digital Motion</dt>
+                            </div>
+                            <div>
+                                <dd>Modello</dd>
+                                <dt>Mudol</dt>
+                            </div>
+                            <div>
+                                <dd>Condizioni</dd>
+                                <dt>Nuova</dt>
+                            </div>
+                            <div>
+                                <dd>Prezzo</dd>
+                                <dt>€ 65800</dt>
+                            </div>
+                        </dl>
+                    </div>
+                    <div class="list_car_item">
+                        <div class="list_car_image">
+                            <img src="assets/img/ESU/belzuny.jpeg" alt="Suv di lusso sportivo rosso vista frontale su sfondo roccioso">
+                        </div>
+                        
+                        <dl class="list_car_info">
+                            <div>
+                                <dd>Marca</dd>
+                                <dt>ESU - European Sports Unlimited</dt>
+                            </div>
+                            <div>
+                                <dd>Modello</dd>
+                                <dt>Belzuny</dt>
+                            </div>
+                            <div>
+                                <dd>Condizioni</dd>
+                                <dt>Nuova</dt>
+                            </div>
+                            <div>
+                                <dd>Prezzo</dd>
+                                <dt>€ 56600</dt>
+                            </div>
+                        </dl>
+                    </div>
+                    <div class="list_car_item">
+                        <div class="list_car_image">
+                            <img src="assets/img/UniPD/planetary.png" alt="Minivan premium blu metallizzato futuristico vista davanti destra">
+                        </div>
+
+                        <dl class="list_car_info">
+                            <div>
+                                <dd>Marca</dd>
+                                <dt>UniPD - Universal Premium Design</dt>
+                            </div>
+                            <div>
+                                <dd>Modello</dd>
+                                <dt>Planetary</dt>
+                            </div>
+                            <div>
+                                <dd>Condizioni</dd>
+                                <dt>Nuova</dt>
+                            </div>
+                            <div>
+                                <dd>Prezzo</dd>
+                                <dt>€ 43050</dt>
+                            </div>
+                        </dl>
+                    </div>
+                </dl>
+            </section>
+        </main>
+
+        <footer>
+            <img class="imgValidHTMLCode" src="assets/img/Footer/valid-xhtml10.png" alt="HTML valido">
+            <p>FFF&E Co. - <span lang="en-GB">All rights Reserved</span></p>
+            <img class="imgValidCSSCode" src="assets/img/Footer/vcss-blue.gif" alt="CSS valido">
+            <p id="footnote">Alcuni marchi e modelli sono frutto della nostra immaginazione; le immagini relative sono state generate da strumenti di intelligenza artificiale.</p>
+        </footer>
+
+
+
         <script>
-            document.addEventListener("DOMContentLoaded", function () {
-                var x = document.getElementById("menu");
-                var y = document.getElementById("menu-button-container");
-
-                function adjustMenuOnResize() {
-                    if (window.innerWidth >= 1024) {
-                        x.style.display = "flex";                       // Passaggio a modalità desktop
-                    } else {
-                        if (x.style.display === "flex" && !(y.classList.contains("change"))) {
-                            x.style.display = "none";                   // Passaggio da desktop a mobile
-                        }
-                                                                        // Passaggio da mobile a mobile
-                    }
-                }
-
-                // Evento resize sulla finestra
-                window.addEventListener("resize", adjustMenuOnResize);
+            // Assicuriamo il funzionamento dell'espansione del filtro da mobile anche da tastiera
+            const toggleButton = document.getElementById('list_toggle_button');
+            const toggleInput = document.getElementById('list_toggle_filter');
+            const filterForm = document.getElementById('list_filter_form');
+        
+            
+            toggleButton.addEventListener('click', () => {
+                toggleInput.checked = !toggleInput.checked;
+                toggleButton.setAttribute('aria-expanded', toggleInput.checked.toString());
+                toggleButton.setAttribute('aria-label', toggleInput.checked ? 'Seleziona per comprimere il form filtro' : 'Seleziona per espandere il form filtro');
             });
 
-            function menuOpenClose(y) {
-                var x = document.getElementById("menu");
-                if (x.style.display === "flex") {
-                    x.style.display = "none";
-                } else {
-                    x.style.display = "flex";
-                }
-                y.classList.toggle("change");
-            }
         </script>
-    </head>
-    <body>
-        <header>
-            <a href="about.html" class="logo" aria-label="immagine logo del sito">Logo</a>
-            <nav class="topNavBar">
-                <a href="javascript:void(0);" id="menu-button-container" onclick="menuOpenClose(this)" aria-label="icona apertura menu">
-                    <div class="menu-button-bar1" aria-hidden="true"></div>
-                    <div class="menu-button-bar2" aria-hidden="true"></div>
-                    <div class="menu-button-bar3" aria-hidden="true"></div>
-                </a>
-                <ul id="menu"  aria-label="menu del sito">
-                    <li><a href="home.html">Home</a></li>
-                    <li><a href="about.html">Chi Siamo</a></li>
-                    <li><a href="listino.html" id="here">Auto</a></li>
-                    <li><a href="drive_test.html">Prenotazione</a></li>
-                    <li><a href="login.html">Login</a></li>
-                    <li><a href="registrazione.html">Registrazione</a></li>
-                </ul>
-            </nav>
-        </header>
     </body>
 </html>
