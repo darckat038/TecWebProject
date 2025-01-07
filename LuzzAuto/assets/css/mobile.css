@@ -4,9 +4,12 @@
 
     --navbar-bg-color: #000000;
     --navbar-text-color: #ffffff;
-    
+
     --header-bg-color: #000000;
     --header-text-color: #ffffff;
+
+    --footer-bg-color: #000000;
+    --footer-text-color: #ffffff;
 
     --link-bg-color: #000000;
     --not-visited-link: #ffffff;
@@ -36,15 +39,115 @@ body.purple {
 *{
     border: 0;
     margin: 0;
+    z-index: 0;
 }
 
-html { scroll-behavior: smooth; }
+html, body {
+    width: 100%;
+    height: 100%;
+}
+
+body{
+    background-color: var(--bg-color);
+    color: var(--text-color);
+    display: flex;
+    flex-direction: column;
+    font-size: 100%;
+    font-family: "Lexend", Roboto, sans-serif;
+    line-height: 1.5em;
+    align-content: center;
+}
+
+a{
+    color: var(--not-visited-link);
+    text-underline-offset: 0.3em;
+}
+
+a:visited {
+    color: var(--visited-link);
+    text-underline-offset: 0.3em;
+}
+
+img {
+    object-fit: contain;
+}
+
+select,
+select option {
+    cursor: pointer;
+}
+
+/* CHECKBOX CUSTOM Sì/No */
+
+/* Nascondi l'input checkbox */
+.interruttore input[type="checkbox"] {
+    opacity: 0;
+    width: 0;
+    height: 0;
+}
+
+/* Slider dell'interruttore */
+.interruttore-slider {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #ccc;
+    border-radius: 25px;
+    transition: background-color 0.3s;
+    border: solid 1px black;    /* Per migliore visibilità */
+}
+
+/* Manopola dell'interruttore */
+.interruttore-knob {
+    position: absolute;
+    height: 20px;
+    width: 20px;
+    background-color: white;
+    border-radius: 50%;
+    top: 50%;
+    left: 3px;
+    transform: translateY(-50%);
+    transition: transform 0.3s;
+    border: solid 1px black;    /* Per migliore visibilità */
+}
+
+/* Stato Checked */
+.interruttore input[type="checkbox"]:checked + .interruttore-slider {
+    background-color: #4caf50; /* Colore quando attivo */
+}
+
+.interruttore input[type="checkbox"]:checked + .interruttore-slider .interruttore-knob {
+    transform: translate(25px, -50%);
+}
+
+/* Testo On/Off sulla Knob */
+.interruttore-knob::after {
+    content: 'No';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 65%;
+    text-transform: uppercase;
+    font-weight: 500;
+    color: black;  /* Per migliore visibilità */
+}
+
+.interruttore input[type="checkbox"]:checked + .interruttore-slider .interruttore-knob::after {
+    content: 'Sì';
+}
+
+.interruttore:hover {
+    cursor: pointer;
+}
 
 /******************* 
         MENU
 ********************/
 
-.topNavBar {
+.topNavBar{
     background-color: var(--navbar-bg-color);
     color: var(--navbar-text-color);
     display: inline-flex;
@@ -54,15 +157,16 @@ html { scroll-behavior: smooth; }
     width: 100%;
     padding-top: 1em;
     padding-bottom: 1em;
+    z-index: 9999;
 }
 
-.hide {
+.hide{
     text-indent: 100%;
     white-space: nowrap;
     overflow: hidden;
 }
 
-h1.hide {
+h1.hide{
     background-image: url("../img/Logo/Logo\ Bianco\ Scritta.svg");
     background-size: contain;
     background-repeat: no-repeat;
@@ -70,25 +174,26 @@ h1.hide {
     margin-left: 1em;
 }
 
-.topNavBar #disable {
+.topNavBar #disable{
     pointer-events: none;
 }
 
-#menu {
+#menu{
     list-style: none;
     display: none;
     flex-direction: column;
     margin-top: 3.5em;
     text-align: center;
     padding-left: 0;
+    z-index: 9999;
 }
 
-#menu li {
+#menu li{
     margin-top: 1em;
     margin-bottom: 1em;
 }
 
-#menu a {
+#menu a{
     display: block;
     flex-direction: row;
     color: var(--navbar-text-color);
@@ -97,7 +202,7 @@ h1.hide {
     font-size: 1.2em;
 }
 
-#menu #here {
+#menu #here{
     background-color: white;
     border-radius: 1em;
     align-self: center;
@@ -772,6 +877,347 @@ section.aboutUs_history img {
 }
 
 /*#endregion About us*/
+
+
+
+/******************* 
+    LISTINO
+********************/
+
+/*#region Listino*/
+
+#list_main {
+    background-image: white;    /* Immagine di sfondo eventualmente */
+}
+
+.list_sectionTitle {
+    font-weight:450;
+    font-size: 1.8em;
+    text-align: center;
+    margin: 1em;
+}
+
+
+/* FILTRO */
+
+#list_filter {
+    background-color: var(--form-bg-color);
+    color: var(--form-text-color);
+    
+    margin: 8em auto 0;
+    padding: 2%;
+    border-radius: 1em;
+    font-size: 100%;
+    box-shadow: rgba(115, 115, 115, 0.35) 0px 5px 15px;
+    width: fit-content;
+ }
+
+
+/* Header con titolo e pulsante */
+#list_filter_header {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Pulsante toggle */
+#list_filter #list_filter_header #list_toggle_button {
+    background: none;
+    display: inline-block;
+    color: white;
+    border: 1px solid black;
+    padding: 0.5em 1em;
+    font-size: 1.2em;
+    cursor: pointer;
+    font-weight:450;
+    font-size: 1.8em;
+    text-align: center;
+    margin: 1em;
+    transition: transform 0.3s ease-out;
+}
+
+
+/* Checkbox nascosto */
+.list_toggle_input {
+    display: none;
+}
+
+/* Form nascosto di default su mobile */
+#list_filter_form {
+    display: none;
+    flex-direction: column;
+    gap: 1em;
+    margin-top: 1em;
+}
+
+/* Mostra il form quando il checkbox è selezionato */
+.list_toggle_input:checked ~ #list_filter_form {
+    display: flex;
+}
+
+/* Ruota il pulsante quando il checkbox è selezionato */
+.list_toggle_input:checked ~ #list_filter_header #list_toggle_button {
+    transform: rotate(180deg);
+}
+
+
+
+
+
+
+#list_filter form {
+    margin: 1em 0;
+}
+
+
+#list_filter #list_filter_preferences {
+    flex-wrap: nowrap;
+}
+
+
+#list_filter fieldset {
+    padding: 0 0.5em;
+    display: flex;
+
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 1em;
+
+    flex: 1 1 calc(33.333% - 1em);
+    box-sizing: border-box;
+
+
+}
+
+#list_filter legend {
+    width: 100%;
+    text-align: center;
+    padding-bottom: 1.5em;
+    padding-top: 2em;
+    font-size: 100%;
+}
+
+#list_filter .input-container {
+    position: relative;
+}
+
+
+#list_filter label {
+    background-color: var(--form-bg-color);
+    color: var(--form-border-input-color);
+    position: relative;
+    padding: 0 0.5em;
+    top: 0.2em;
+    left: 0.1em;
+    font-size: 100%;
+}
+
+#list_filter #list_filter_marca,
+#list_filter #list_filter_modello,
+#list_filter #list_filter_anno,
+#list_filter #list_filter_colore,
+#list_filter #list_filter_alimentazione,
+#list_filter #list_filter_cambio,
+#list_filter #list_filter_trazione,
+#list_filter #list_filter_potenza,
+#list_filter #list_filter_peso,
+#list_filter #list_filter_posti,
+#list_filter #list_filter_condizione,
+#list_filter #list_filter_prezzo,
+#list_filter #list_filter_chilometraggio {
+    width: 100%;
+    padding: 0.5em;
+    box-sizing: border-box;
+}
+
+#list_filter #list_filter_neopatentati {
+    display: flex;
+    align-items: center;
+    gap: 1em;
+    font-size: 1em;
+    width: 13em;
+}
+
+
+#list_filter #list_filter_neopatentati .interruttore {
+    position: relative;
+    display: inline-block;
+    width: 50px;
+    height: 25px;
+    padding: 0;
+    top: 0.2em;
+}
+
+
+
+
+#list_filter .list_insert {
+    height: 3em;
+    border-radius: 0.5em;
+    border: 1px solid var(--form-border-input-color);
+    background-color: var(--form-bg-color);
+    color: var(--form-text-color);
+    font-family: "Lexend", Roboto, sans-serif;
+    padding-left: 1em;
+    font-size: 100%;
+}
+
+
+
+/*
+
+PER METTERE IL PLACEHOLDER DI COLORE GRIGIO NEI SELECT
+
+
+#list_filter .list_insert option[selected],
+#list_filter .list_insert:focus option[selected],
+#list_filter .list_insert option[disabled],
+#list_filter .list_insert:focus option[disabled] {
+    color: var(--form-border-input-color);
+}
+
+in realtà servirebbe 
+
+// Aggiungiamo un controllo ai select
+document.querySelectorAll('#list_filter .list_insert').forEach(select => {
+    // Funzione per aggiornare lo stile
+    function updateSelectStyle() {
+        if (select.value === "") {
+            select.classList.add('placeholder');
+        } else {
+            select.classList.remove('placeholder');
+        }
+    }
+
+    // Eseguiamo il controllo all'avvio
+    updateSelectStyle();
+
+    // Aggiungiamo un evento per rilevare i cambiamenti
+    select.addEventListener('change', updateSelectStyle);
+});
+
+*/
+
+
+
+#list_filter #list_filter_buttons {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+#list_filter .list_button {
+    display: flex;
+    margin: 3em auto 0;
+    color: var(--form-text-color);
+    background-color: var(--form-bg-color);
+    border: 1px solid white;
+    padding: 1em 1.5em;
+    border-radius: 1.5em;
+    max-width: 10em;
+    font-size: 100%;
+    font-family: "Lexend", Roboto, sans-serif;
+    transition: 
+        background-color 0.3s ease, 
+        color 0.3s ease, 
+        border-radius 0.3s ease;
+}
+
+#list_filter .list_button:hover {
+    background-color: var(--form-text-color);
+    color: var(--form-bg-color);
+    cursor: pointer;
+}
+
+/* ELENCO */
+
+#list_car_list {
+    display: flex;
+    flex-wrap: wrap; /* Permette di andare a capo se lo spazio finisce */
+    gap: 0.5em; /* Distanza tra i riquadri */
+    justify-content: center; /* Allinea gli elementi */
+}
+
+.list_car_item {
+    width: 15em; /* Larghezza fissa */
+    height: 30em; /* Altezza fissa */
+    background-color: white; /* Sfondo bianco */
+    color: black; /* Testo nero */
+    border: 1px solid black; /* Bordo sottile nero */
+    border-radius: 0; /* Angoli a 90 gradi */
+    box-sizing: border-box; /* Include il bordo nella larghezza/altezza */
+    padding: 0.5em; /* Spaziatura interna */
+    overflow: hidden; /* Evita fuoriuscite */
+    transition:  /* Effetto di transizione */
+        background-color 0.3s ease, 
+        color 0.3s ease, 
+        border-radius 0.3s ease;
+    display: flex; /* Disposizione orizzontale delle colonne */
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.list_car_item:hover {
+    background-color: black; /* Sfondo nero */
+    color: white; /* Testo bianco */
+    border-radius: 1em; /* Angoli arrotondati */
+    cursor: pointer; /* Cambia il cursore in puntatore */
+}
+
+.list_car_item .list_car_image {
+    max-height: 12em; /* Altezza fissa */
+    max-width: 13em; /* Larghezza fissa */
+    align-items: center; /* Centra verticalmente l'immagine */
+    justify-content: center; /* Centra orizzontalmente l'immagine */
+    overflow: hidden; /* Evita fuoriuscite */
+    border-radius: 0; /* Angoli a 90 gradi */
+    transition:  /* Effetto di transizione */
+        border-radius 0.3s ease,
+        transform 10s ease;
+}
+
+.list_car_item:hover .list_car_image {
+    border-radius: 1em; /* Angoli arrotondati */
+}
+
+.list_car_item .list_car_image img {
+    height: 100%; /* Altezza massima */
+    width: 100%; /* Larghezza massima */
+    object-fit: cover; /* Immagine copre tutto lo spazio */
+    transition: transform 0.1s ease-out;
+    transform: scale(1); /* Ingrandisce l'immagine */
+}
+
+.list_car_item:hover .list_car_image img {
+    transition: transform 1s ease-out;
+    transform: scale(1.05); /* Ingrandisce l'immagine */
+}
+
+
+.list_car_item .list_car_info {
+    flex: 1; /* Occupa lo spazio rimanente */
+    padding: 0.5em;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    gap: 0.5em;
+}
+
+.list_car_item .list_car_info dd {
+    font-weight: bold;
+    padding-top: 0.3em;
+}
+
+.list_car_item .list_car_info dt {
+    font-size: 150%;
+    font-weight: 300;
+}
+
+/*#endregion Listino*/
+
+
+
 
 /* FOOTER */
 
