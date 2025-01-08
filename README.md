@@ -10,12 +10,12 @@ Progetto del corso di Tecnologie Web della laurea in Informatica presso l'Univer
 - [Template esempio Carvilla](https://demo.themesine.com/carvilla/)
 - [WCAG22 Regole di accessibilità](https://www.w3.org/WAI/WCAG22/quickref/)
 
-### Info Utili
-- Versione PHP Server Tecweb: 8.2.26
-- Versione SQL Server: MariaDB 10.11.6
-
 ### Strumenti utili
 - [Checker contrasto immagine testo](https://imagecontrastchecker.com/)
+
+### Info Utili Server
+- Versione PHP Server Tecweb: 8.2.26
+- Versione SQL Server: MariaDB 10.11.6
 
 ### Avvio del server in locale con docker
 Nella cartella LuzzAuto:
