@@ -569,6 +569,11 @@ h1.hide{
     border-radius: 50%;
 }
 
+#home_reviews img.home_star_image {
+    object-fit: contain;
+    width: 4em;
+}
+
 /*#endregion Home*/
 
 footer {

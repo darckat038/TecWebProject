@@ -390,6 +390,15 @@ h1.hide{
     font-size: 1em;
 }
 
+#home_workWithUs #home_workWithUs_email {
+    color: var(--not-visited-link);
+    word-wrap: break-word;
+}
+
+#home_workWithUs #home_workWithUs_email:visited {
+    color: var(--visited-link);
+}
+
 /*
 
 #home_workWithUs form {
@@ -542,6 +551,11 @@ h1.hide{
     margin-top: -10%;
     background-color: white;
     border-radius: 50%;
+}
+
+#home_reviews img.home_star_image {
+    object-fit: contain;
+    width: 4em;
 }
 
 /* FOOTER */
