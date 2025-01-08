@@ -165,18 +165,18 @@ select option {
     background-color: #ccc;
     border-radius: 25px;
     transition: background-color 0.3s;
-    border: solid 1px black;    /* Per migliore visibilità */
+    /*border: solid 1px black;    /* Per migliore visibilità */
 }
 
 /* Manopola dell'interruttore */
 .interruttore-knob {
-    position: absolute;
-    height: 20px;
-    width: 20px;
+    position: relative;
+    height: 21px;
+    width: 21px;
     background-color: white;
     border-radius: 50%;
-    top: 50%;
-    left: 3px;
+    top: 48%;
+    left: 0.5px;
     transform: translateY(-50%);
     transition: transform 0.3s;
     border: solid 1px black;    /* Per migliore visibilità */
