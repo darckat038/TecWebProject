@@ -977,7 +977,10 @@ section.aboutUs_history p {
 /*#region Listino*/
 
 #list_main {
-    background-image: white;    /* Immagine di sfondo eventualmente */
+    background-image: none;    /* Immagine di sfondo eventualmente */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
 .list_sectionTitle {
@@ -1176,6 +1179,10 @@ document.querySelectorAll('#list_filter .list_insert').forEach(select => {
 
 /* ELENCO */
 
+#list {
+    width: 100%;
+}
+
 #list_car_list {
     display: flex;
     flex-wrap: wrap; /* Permette di andare a capo se lo spazio finisce */
@@ -1217,6 +1224,8 @@ document.querySelectorAll('#list_filter .list_insert').forEach(select => {
     transition:  /* Effetto di transizione */
         border-radius 0.3s ease,
         transform 10s ease;
+
+    text-align: center;     /* Centra il testo alt */
 }
 
 .list_car_item:hover .list_car_image {
