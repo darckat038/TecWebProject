@@ -288,14 +288,15 @@ a:visited {
     display: block;
 }
 
-#labelPrenotazioni{
+
+#labelPrenUtente{
     display: block;
     margin-left: 0.3em;
 }
 
-#gestionePrenotazione{
+#gestPrenUtente{
     width: 100%; 
-    padding: 0.4em;
+    padding: 0.5em;
     border: 1px solid white; 
     border-radius: 4px; 
     background-color:black; 
@@ -305,7 +306,7 @@ a:visited {
 }
 
 
-#eliminaPrenotazione{
+#eliminaPrenUtente{
     display: flex;
     margin: auto;
     margin-top: 1em;
