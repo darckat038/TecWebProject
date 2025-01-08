@@ -551,7 +551,7 @@ h1.hide{
     font-size: 1.1em;
 }
 
-#home_reviews div img {
+#home_reviews div img.home_users_review_img {
     box-shadow: 0px 10px 25px 0px rgba(0, 0, 0, 0.3);
     object-fit: contain;
     width: 5em;
