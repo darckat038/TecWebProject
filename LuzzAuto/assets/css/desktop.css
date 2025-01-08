@@ -220,7 +220,7 @@ select option {
 /*#region Login*/
 
 #login_body{
-    background-image: url(/LuzzAuto/assets/img/Background/LuzzAuto_facciata1.png);
+    background-image: url(../img/Background/LuzzAuto_facciata1.png);
     background-repeat: no-repeat;
     background-color: white;
     background-size:cover;
@@ -314,7 +314,7 @@ select option {
 /*#region SignIn*/
 
 #signup_body{
-    background-image: url(/LuzzAuto/assets/img/Background/LuzzAuto_facciata1.png);
+    background-image: url(../img/Background/LuzzAuto_facciata1.png);
     background-repeat: no-repeat;
     background-color: white;
     background-size:cover;
@@ -440,7 +440,7 @@ input[type="date"]::-webkit-calendar-picker-indicator {
     background-color: var(--navbar-bg-color);
     padding-top: 25%;
     padding-bottom: 20%;
-    background-image: url(/LuzzAuto/assets/img/Background/backgroundHeaderTestDrive.png);
+    background-image: url(../img/Background/backgroundHeaderTestDrive.png);
     background-size: cover;
     background-repeat: no-repeat;
     background-position: top;
