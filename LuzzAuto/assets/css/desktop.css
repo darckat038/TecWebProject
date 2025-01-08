@@ -159,7 +159,7 @@ a:visited {
     text-align: center;
 }
 
-.riquadri{ 
+.riquadriUtente{ 
     border-radius: 0.5em;
     border: 1px solid var(--form-border-input-color);
     background-color: var(--navbar-bg-color);
@@ -172,16 +172,16 @@ a:visited {
     padding: 2em; 
 }
 
-.riquadri p{
+.riquadriUtente p{
     padding: 0.2em;
     color: var(--navbar-text-color);
 }
 
-.riquadri span{
+.riquadriUtente span{
     color: var(--form-border-input-color);
 }
 
-.nomeRiq{
+.nomeRiqUtente{
     background-color: var(--navbar-bg-color);
     margin-left: 1em;
     position: absolute;
@@ -190,7 +190,7 @@ a:visited {
     color: var(--form-border-input-color);
 }
 
-.nomeRiqPrenotazioni{
+.nomeRiqPrenUtente{
     color: var(--form-border-input-color);
     padding-left: 3em;
     padding-top: 1em;
@@ -207,26 +207,25 @@ a:visited {
 }
 
 
-/* Stile della tabella */
-.tabellaPrenotazioni {
+.tabellaPrenUtente {
     width: calc(100% - 6em); /* 100% meno il padding a sinistra e a destra */
     border-collapse: collapse;
     margin: 1em auto; 
 }
 
-.tabellaPrenotazioni thead {
+.tabellaPrenUtente thead {
     background-color: var(--navbar-bg-color);
     color: var(--form-border-input-color);
 }
 
-.tabellaPrenotazioni th, .tabellaPrenotazioni td {
+.tabellaPrenUtente th, .tabellaPrenUtente td {
     text-align: left;
     padding: 0.8em;
     border: 1px solid var(--form-border-input-color);
 }
 
 
-.tabellaPrenotazioni date{
+.tabellaPrenUtente date{
     display: block;
 }
 
