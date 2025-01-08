@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="it">
+
+<head>
+	<meta  charset="utf-8" >
+
+	<title>Inserimento giocatrice - Volley Tribute</title>
+	<meta name="description" content="Questa pagina è dedicata alle giocatrici della nazionale di pallavolo femminile." >
+	<meta name="keywords" content="giocatori, pallavolo, femminile, italia, nazionale italiana" >
+	<meta name="author" content="Ombretta Gaggi" >
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Lexend:wght@100..900&display=swap" rel="stylesheet">
+
+	<link rel="stylesheet" type="text/css" href="../html5/style.css" media="screen" >
+	<link rel="stylesheet" type="text/css" href="../html5/mini.css" media="screen and (max-width:600px)" >
+	<link rel="stylesheet" type="text/css" href="../html5/print.css" media="print" >
+	<link rel="stylesheet" type="text/css" href="../html5/tabellaMobile.css" media="screen and (max-width:900px)" >
+
+	<link rel="shortcut icon" type="image/png" href="../images/favicon.ico" >
+</head>
+<body>
+<header>
+	<nav aria-label="aiuti alla navigazione">
+		<a class="navigationHelp" href="#content">Vai al contenuto</a>
+	</nav>
+	<h1>Federazione Italiana Pallavolo</h1>
+	<h2>La pallavolo femminile italiana</h2>
+</header>
+
+<nav id="breadcrumb" aria-label="percorso" >
+	<p>Ti trovi in: <a href="../html5/index.html" lang="en">Home</a> &gt; &gt; La squadra</p>
+</nav>
+
+<nav id="menu" aria-label="site menu">
+	<a class="navigationHelp" href="#content">Salta il menù di navigazione</a>
+	<ul>
+		<li><a href="../html5/index.html" lang="en">Home</a></li>
+		<li><a href="../html5/allenatore.html">L'allenatore</a></li>
+		<li><a href="../html5/squadra.php">La squadra</a></li>
+		<li id="currentLink">Inserisci giocatrice</li>
+		<li><a href="../html5/fairplay.html">Il <span lang="en">fair play</span></a></li>
+	</ul>
+</nav>
+<main id="content">
+	
+	<h1>Inserisci una nuova giocatrice</h1>
+
+	[messaggiForm]
+
+	<form method="post" action="nuovaGiocatrice.php">
+
+	<fieldset>
+		<legend>Informazioni generali</legend>
+	
+		<div>
+			<label for="nome">Nome e Cognome: </label>
+			<input type="text" name="nome" id="nome"  value="[valoreNome]" >
+		</div>
+		<p>Capitano?</p>
+		<div>
+			<input type="radio" id="capitano_si" name="capitano" value="1" >
+			<label for="capitano_si">Si</label>
+			<input type="radio" id="capitano_no" name="capitano" value="0" checked>
+			<label for="capitano_no">No</label>
+		</div>
+		<div>
+			<label for="dataNascita">Data di Nascita: </label>
+			<input type="date" name="dataNascita" id="dataNascita" value="[valData]" required>
+		</div>
+		<div>
+			<label for="luogo">Luogo di Nascita: </label>
+			<input type="text" name="luogo" id="luogo" value="[valLuogo]" required>
+		</div>
+		<div>
+			<label for="altezza">Altezza: </label> 
+			<input type="number" min="130" name="altezza" id="altezza" value="[valoreAltezza]">
+		</div>
+	</fieldset>
+	
+	<fieldset>
+		<legend>Squadra</legend>
+		<div>
+			<label for="squadra">Squadra in campionato: </label>
+			<input type="text" name="squadra" id="squadra"  value="[valoreSquadra]">
+		</div>
+		<div>
+			<label for="maglia">Maglia: </label>
+			<input type="number" min="1" name="maglia" id="maglia" value="[valoreMaglia]" >
+		</div>
+	</fieldset>
+
+	<fieldset>
+		<legend>Nazionale</legend>
+		<div>
+			<label for="ruolo">Ruolo: </label>
+			<select id="ruolo" name="ruolo" value="[valoreRuolo]">
+  				<option value="Palleggiatore">Palleggiatore</option>
+  				<option value="Libero">Libero</option>
+  				<option value="Centrale">Centrale</option>
+  				<option value="Schiacciatore">Schiacciatore</option>
+  				<option value="Opposto">Opposto</option>
+			</select>
+		</div>
+		<div>
+			<label for="magliaNazionale">Maglia in Nazionale: </label>
+			<input type="number" min="1" name="magliaNazionale" id="magliaNazionale" value="[valoreMagliaNazionale]" >
+		</div>
+	</fieldset>
+	
+	<fieldset>
+		<legend>Carriera</legend>
+		<div>
+			<label for="punti">Punti/ricezioni: </label>
+			<input type="number" min="1" name="punti" id="punti" value="[valorePunti]" >
+		</div>
+		<div>
+			<label for="riconoscimenti">Riconoscimenti: </label>
+			<textarea id="riconoscimenti" name="riconoscimenti">[valoreRiconoscimenti]</textarea>
+		</div>
+		<div>
+			<label for="note">Note: </label>
+			<textarea id="note" name="note">[valoreNote]</textarea>
+		</div>
+	</fieldset>
+	
+	<fieldset>
+		<legend>Bottoni</legend>
+		<input type="submit" id="submit" name="submit" class="margineSinistro" value="Inserisci giocatrice" >
+		<input type="reset" id="reset" class="margineSinistro" value="Cancella tutto" >
+	</fieldset>
+	
+	</form>
+</main>
+<footer>
+	<img class="imgValidCode" src="../images/valid-xhtml10.png" alt="XHTML valido" ><p>Ombretta Gaggi, Cactus &amp; Federazione Italiana Pallavolo - <span lang="en">All rights Reserved</span></p><img class="imgValidCode" src="../images/vcss-blue.gif" alt="CSS valido" >
+</footer>
+</body>
+</html>
