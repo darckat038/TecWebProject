@@ -1258,12 +1258,10 @@ document.querySelectorAll('#list_filter .list_insert').forEach(select => {
 
 /*#endregion Listino*/
 
-
-
-
 /* FOOTER */
 
 footer {
+    margin-top: 2em;
     background-color: var(--footer-bg-color);
     color: var(--footer-text-color);
     text-align: center;
