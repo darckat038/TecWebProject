@@ -236,3 +236,31 @@ a:visited {
 }
 
 
+#labelPrenotazioni{
+    display: block;
+    margin-left: 0.5em;
+}
+
+#gestionePrenotazione{
+    width: 70%; 
+    padding: 0.4em;
+    margin-left: 0.3em;
+    border: 1px solid white; 
+    border-radius: 4px; 
+    background-color:black; 
+    color: var(--form-border-input-color); 
+    font-size: 16px;
+    cursor: pointer; 
+}
+
+#eliminaPrenotazione{
+    padding: 0.5em 0.8em;
+    float: right;
+    background-color: white; 
+    color: black;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+
