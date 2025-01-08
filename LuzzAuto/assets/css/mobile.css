@@ -234,6 +234,8 @@ h1.hide{
 
 /* MAIN */
 
+/* ---- FAST SEARCH ---- */
+
 #home_fastSearch {
     background-color: var(--form-bg-color);
     color: var(--form-text-color);
@@ -311,7 +313,7 @@ h1.hide{
     color: var(--form-bg-color);
 }
 
-/* NEW CARS  */
+/* ---- NEW CARS ---- */
 
 #home_new {
     padding: 2em 0 6em;
@@ -358,7 +360,7 @@ h1.hide{
     border-radius: 0;
 }
 
-/* WORK WITH US */
+/* ---- WORK WITH US ---- */
 
 #home_workWithUs {
     background-color: var(--form-bg-color);
@@ -449,7 +451,7 @@ h1.hide{
 
 */
 
-/* HOME BRANDS */
+/* ---- HOME BRANDS ---- */
 
 #home_brands {
     display: flex;
@@ -485,7 +487,7 @@ h1.hide{
     border-radius: 0;
 }
 
-/* CLIENT REVIEWS */
+/* ---- CLIENT REVIEWS ---- */
 
 #home_reviews {
     padding: 2em 0 6em;
