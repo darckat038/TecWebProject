@@ -1175,10 +1175,13 @@ document.querySelectorAll('#list_filter .list_insert').forEach(select => {
     transition:  /* Effetto di transizione */
         border-radius 0.3s ease,
         transform 10s ease;
+
+    text-align: center;     /* Centra il testo alt */
 }
 
 .list_car_item:hover .list_car_image {
     border-radius: 1em; /* Angoli arrotondati */
+    
 }
 
 .list_car_item .list_car_image img {
