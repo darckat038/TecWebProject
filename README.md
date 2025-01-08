@@ -16,3 +16,12 @@ Progetto del corso di Tecnologie Web della laurea in Informatica presso l'Univer
 
 ### Strumenti utili
 - [Checker contrasto immagine testo](https://imagecontrastchecker.com/)
+
+### Avvio del server in locale con docker
+Nella cartella LuzzAuto:
+```cmd
+docker-compose build
+```
+```cmd
+docker-compose up -d
+```
