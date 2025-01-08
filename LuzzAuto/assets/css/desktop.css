@@ -224,7 +224,7 @@ a:visited {
 }
 
 
-.riquadroGestione {
+.sectionGestPrenAdmin {
     display: grid;
     grid-template-columns: 1fr 1fr auto; 
     column-gap: 1em;
@@ -232,11 +232,11 @@ a:visited {
     margin: 1em 0;
 }
 
-#labelPrenotazioni {
+#labelPrenAdmin {
     grid-column: 1; 
     grid-row: 1; 
 }
-#gestionePrenotazione {
+#gestPrenAdmin {
     grid-column: 1; 
     grid-row: 2;
     padding: 0.4em;
@@ -247,11 +247,11 @@ a:visited {
     font-size: 16px;
     cursor: pointer;
 }
-#labelAzione {
+#labelAzioneAdmin {
     grid-column: 2; 
     grid-row: 1; 
 }
-#azione {
+#azioneAdmin {
     grid-column: 2; 
     grid-row: 2;
     padding: 0.4em;
@@ -263,7 +263,7 @@ a:visited {
     cursor: pointer; 
 }
 
-#eliminaPrenotazione {
+#eliminaPrenAdmin{
     grid-column: 3; 
     grid-row:   2;
     align-self: center; 
