@@ -288,25 +288,31 @@ a:visited {
     display: block;
 }
 
+#labelPrenotazioni{
+    display: block;
+    margin-left: 0.3em;
+}
+
 #gestionePrenotazione{
-    width: 100%; /* Adatta la larghezza al contenitore */
+    width: 100%; 
     padding: 0.4em;
-    /*margin-left: 0.3em;*/
-    border: 1px solid white; /* Bordo verde */
-    border-radius: 4px; /* Angoli arrotondati */
-    background-color:black; /* Sfondo chiaro */
-    color: var(--form-border-input-color); /* Colore del testo */
+    border: 1px solid white; 
+    border-radius: 4px; 
+    background-color:black; 
+    color: var(--form-border-input-color); 
     font-size: 16px;
     cursor: pointer; 
 }
 
 
 #eliminaPrenotazione{
-    background-color: white; 
-    padding: 0.5em 0.8em;
+    display: flex;
+    margin: auto;
     margin-top: 1em;
+    padding: 0.5em 0.8em;
+    background-color: white; 
     color: black;
-    border-radius: 5px;
     font-size: 16px;
+    border-radius: 5px;
     cursor: pointer;
 }
