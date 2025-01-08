@@ -17,7 +17,7 @@ Progetto del corso di Tecnologie Web della laurea in Informatica presso l'Univer
 - Versione PHP Server Tecweb: 8.2.26
 - Versione SQL Server: MariaDB 10.11.6
 
-### Avvio del server in locale con docker
+### Creazione del server in locale con docker
 Nella cartella LuzzAuto:
 ```cmd
 docker-compose build
