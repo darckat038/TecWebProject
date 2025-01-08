@@ -45,10 +45,11 @@ body.purple {
     color: var(--navbar-text-color);
     display: inline-flex;
     overflow: hidden;
-    position: absolute;
+    position: fixed;
     width: 100%;
     padding-top: 1em;
     padding-bottom: 1em;
+    z-index: 9999;
 }
 
 .hide{

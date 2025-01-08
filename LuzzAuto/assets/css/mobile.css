@@ -39,7 +39,6 @@ body.purple {
 *{
     border: 0;
     margin: 0;
-    z-index: 0;
 }
 
 html, body {
@@ -153,7 +152,7 @@ select option {
     display: inline-flex;
     flex-direction: column;
     overflow: hidden;
-    position: absolute;
+    position: fixed;
     width: 100%;
     padding-top: 1em;
     padding-bottom: 1em;
