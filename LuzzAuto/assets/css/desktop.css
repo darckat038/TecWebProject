@@ -219,32 +219,42 @@ a:visited {
     border: 1px solid var(--form-border-input-color);
 }
 
-/* Pulsanti di azione */
-.btnAnnulla {
-    background-color: var(--form-border-input-color);
-    color: var(--navbar-bg-color);
-    padding: 0.5em 1em;
-    border: none;
-    border-radius: 0.3em;
-    cursor: pointer;
-    font-size: 0.9em;
-}
-
-
 .tabellaPrenotazioni date{
     display: block;
 }
 
 
-#labelPrenotazioni{
-    display: block;
-    margin-left: 0.5em;
+.riquadroGestione {
+    display: grid;
+    grid-template-columns: 1fr 1fr auto; 
+    column-gap: 1em;
+    align-items: start; 
+    margin: 1em 0;
 }
 
-#gestionePrenotazione{
-    width: 70%; 
+#labelPrenotazioni {
+    grid-column: 1; 
+    grid-row: 1; 
+}
+#gestionePrenotazione {
+    grid-column: 1; 
+    grid-row: 2;
     padding: 0.4em;
-    margin-left: 0.3em;
+    border: 1px solid white; 
+    border-radius: 4px; 
+    background-color:black; 
+    color: var(--form-border-input-color); 
+    font-size: 16px;
+    cursor: pointer;
+}
+#labelAzione {
+    grid-column: 2; 
+    grid-row: 1; 
+}
+#azione {
+    grid-column: 2; 
+    grid-row: 2;
+    padding: 0.4em;
     border: 1px solid white; 
     border-radius: 4px; 
     background-color:black; 
@@ -253,14 +263,18 @@ a:visited {
     cursor: pointer; 
 }
 
-#eliminaPrenotazione{
-    padding: 0.5em 0.8em;
-    float: right;
-    background-color: white; 
-    color: black;
+#eliminaPrenotazione {
+    grid-column: 3; 
+    grid-row:   2;
+    align-self: center; 
+    justify-self: end;
+    padding: 0.5em 1.5em; 
+    font-size: 16px; 
     border-radius: 5px;
-    font-size: 16px;
-    cursor: pointer;
 }
+
+
+
+
 
 

@@ -53,7 +53,7 @@
       <h1 id="saluto"></h1>
 
       <section >
-        <h2 class="nomeRiqPrenotazioni">Gestione Prenotazioni</h2>
+        <h2 class="nomeRiqPrenotazioni">Prenotazioni</h2>
         <table class="tabellaPrenotazioni">
           <thead>
             <tr>
@@ -88,6 +88,31 @@
             </tr>
           </tbody>
         </table>
+      </section>
+
+      <section class="riquadri">
+        <h2 class="nomeRiq">Gestione Prenotazioni</h2>
+
+        <section class="riquadroGestione">
+          
+        <label for="gestionePrenotazione" id="labelPrenotazioni"><strong>Prenotazioni:</strong> </label>
+        <select id="gestionePrenotazione" name="gestionePrenotazione" aria-label="Campo di inserimento della prenotazione che desideri gestire">
+            <option value="Fiat">001 - Fiat Panda</option>
+            <option value="Ford">002 - Ford Mustang</option>
+            <option value="Ford">003 - Tesla Model 3</option>
+        </select>
+
+        <label for="azione" id="labelAzione"><strong>Azione:</strong> </label>
+        <select id="azione" name="azione" aria-label="Azione che desideri effettuare">
+            <option value="Fiat">Accetta</option>
+            <option value="Ford">Rifiuta</option>
+        </select>
+
+        <button id="eliminaPrenotazione" aria-label="Elimina la prenotazione selezionata">
+          Invia
+        </button>
+
+        </section>
       </section>
 
       <section class="riquadri">
@@ -166,28 +191,6 @@
   
           <button type="submit"  aria-label="Bottone per confermare i dati e aggiungere una nuova auto">Invia</button>
       </form>
-      </section>
-
-      <section class="riquadri">
-        <h2 class="nomeRiq">Gestione Prenotazioni</h2>
-
-        <label for="gestionePrenotazione" id="labelPrenotazioni"><strong>Prenotazioni:</strong> </label>
-        <select id="gestionePrenotazione" name="gestionePrenotazione" aria-label="Campo di inserimento della prenotazione che desideri gestire">
-            <option value="Fiat">001 - Fiat Panda</option>
-            <option value="Ford">002 - Ford Mustang</option>
-            <option value="Ford">003 - Tesla Model 3</option>
-        </select>
-
-        <label for="azione" id="labelAzione"><strong>Azione:</strong> </label>
-        <select id="azione" name="azione" aria-label="Azione che desideri effettuare">
-            <option value="Fiat">Accetta</option>
-            <option value="Ford">Rifiuta</option>
-        </select>
-
-        <button id="eliminaPrenotazione" aria-label="Elimina la prenotazione selezionata">
-          Invia
-        </button>
-
       </section>
 
     </main>
