@@ -292,6 +292,7 @@ h1.hide{
 #home_fastSearch #home_cerca:hover {
     background-color: var(--form-text-color);
     color: var(--form-bg-color);
+    cursor: pointer;
 }
 
 /* NEW CARS  */
@@ -377,6 +378,14 @@ h1.hide{
 
 #home_workWithUs p {
     font-size: 1.2em;
+}
+
+#home_workWithUs #home_workWithUs_email {
+    color: var(--not-visited-link);
+}
+
+#home_workWithUs #home_workWithUs_email:visited {
+    color: var(--visited-link);
 }
 
 /*
