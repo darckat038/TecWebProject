@@ -160,7 +160,7 @@ a:visited {
 }
 
 
-.riquadri{ 
+.riquadriAdmin{ 
     border-radius: 0.5em;
     border: 1px solid var(--form-border-input-color);
     background-color: var(--navbar-bg-color);
@@ -174,16 +174,7 @@ a:visited {
 }
 
 
-.riquadri p{
-    padding: 0.2em;
-    color: var(--navbar-text-color);
-}
-
-.riquadri span{
-    color: var(--form-border-input-color);
-}
-
-.nomeRiq{
+.nomeRiqAdmin{
     background-color: var(--navbar-bg-color);
     margin-left: 1em;
     position: absolute;
@@ -193,7 +184,7 @@ a:visited {
 }
     
 
-.nomeRiqPrenotazioni{
+.nomeRiqPrenAdmin{
     color: var(--form-border-input-color);
     padding-left: 3em;
     padding-top: 1em;
@@ -202,24 +193,24 @@ a:visited {
 
 
 /* Stile della tabella */
-.tabellaPrenotazioni {
+.tabellaPrenAdmin {
     width: calc(100% - 6em); /* 100% meno il padding a sinistra e a destra */
     border-collapse: collapse;
     margin: 1em auto; 
 }
 
-.tabellaPrenotazioni thead {
+.tabellaPrenAdmin thead {
     background-color: var(--navbar-bg-color);
     color: var(--form-border-input-color);
 }
 
-.tabellaPrenotazioni th, .tabellaPrenotazioni td {
+.tabellaPrenAdmin th, .tabellaPrenAdmin td {
     text-align: left;
     padding: 0.8em;
     border: 1px solid var(--form-border-input-color);
 }
 
-.tabellaPrenotazioni date{
+.tabellaPrenAdmin date{
     display: block;
 }
 
@@ -270,6 +261,41 @@ a:visited {
     justify-self: end;
     padding: 0.5em 1.5em; 
     font-size: 16px; 
+    border-radius: 5px;
+}
+
+.sectionEliminaAdmin{
+    display: grid;
+    grid-template-columns: 1fr auto;
+    column-gap: 1em;
+    align-items: start;
+    margin: 1em 0;
+}
+
+#labelEliminaAutoAdmin{
+    grid-column: 1;
+    grid-row: 1;
+}
+
+#eliminaAutoAdmin{
+    grid-column: 1;
+    grid-row: 2;
+    padding: 0.5em;
+    border: 1px solid white; 
+    border-radius: 4px; 
+    background-color:black; 
+    color: var(--form-border-input-color); 
+    font-size: 16px;
+    cursor: pointer; 
+}
+
+#eliminaButtonAdmin{
+    grid-column: 3;
+    grid-row: 2;
+    align-self: center;
+    justify-self: end;
+    padding: 0.5em 1.5em;
+    font-size: 16px;
     border-radius: 5px;
 }
 

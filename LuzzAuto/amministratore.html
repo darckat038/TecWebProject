@@ -53,11 +53,11 @@
       <h1 id="saluto"></h1>
 
       <section >
-        <h2 class="nomeRiqPrenotazioni">Prenotazioni</h2>
-        <table class="tabellaPrenotazioni">
+        <h2 class="nomeRiqPrenAdmin">Prenotazioni</h2>
+        <table class="tabellaPrenAdmin">
           <thead>
             <tr>
-              <th>Nr. Pren.</th>
+              <th><abbr title="Numero Prenotazione">Nr. Pren.</abbr></th>
               <th>Utente</th>
               <th>Modello Auto</th>
               <th>Data Test Drive</th>
@@ -69,29 +69,29 @@
               <td>001</td>
               <td>Giovanni Rossi</td>
               <td>Fiat Panda</td>
-              <td><date>20-12-2024</date>15:30</td>
-              <td>Accettato</td>
+              <td><date>20-12-2024</date> 15:30</td>
+              <td>Acc</td>
             </tr>
             <tr>
               <td>002</td>
               <td>Giovanni Rossi</td>
               <td>Ford Mustang</td>
               <td><date>22-12-2024</date> 10:00</td>
-              <td>Da accettare</td>
+              <td>Da acc</td>
             </tr>
             <tr>
               <td>003</td>
               <td>Paolo Verdi</td>
               <td>Tesla model 3</td>
               <td><date>22-12-2024</date> 13:00</td>
-              <td>Rifiutato</td>
+              <td>Rif</td>
             </tr>
           </tbody>
         </table>
       </section>
 
-      <section class="riquadri">
-        <h2 class="nomeRiq">Gestione Prenotazioni</h2>
+      <section class="riquadriAdmin">
+        <h2 class="nomeRiqAdmin">Gestione Prenotazioni</h2>
 
         <section class="sectionGestPrenAdmin">
           
@@ -115,22 +115,22 @@
         </section>
       </section>
 
-      <section class="riquadri">
-        <h2 class="nomeRiq">Aggiungi Auto</h2>
+      <section class="riquadriAdmin">
+        <h2 class="nomeRiqAdmin">Aggiungi Automobile</h2>
 
         <form action="amministratore.html" method="POST" aria-label="Form per aggiungere una nuova automobile">
 
-          <label for="marca">Marca:</label>
-          <input type="text" id="marca" name="marca" placeholder="Inserisci" aria-label="Campo di inserimento della marca dell'auto" required>
+          <label for="marcaAdmin" id="labelMarcaAdmin">Marca:</label>
+          <input type="text" id="marcaAdmin" name="marcaAdmin" placeholder="Inserisci" aria-label="Campo di inserimento della marca dell'auto" required>
   
-          <label for="modello">Modello:</label>
-          <input type="text" id="modello" name="modello" placeholder="Inserisci" aria-label="Campo di inserimento del modello dell'auto" required>
+          <label for="modelloAdmin" id="labelModelloAdmin">Modello:</label>
+          <input type="text" id="modelloAdmin" name="modelloAdmin" placeholder="Inserisci" aria-label="Campo di inserimento del modello dell'auto" required>
   
-          <label for="anno">Anno:</label>
-          <input type="number" id="anno" name="anno" min="1990" step="1" max="2024" placeholder="Inserisci" aria-label="Campo di inserimento dell'anno di produzione dell'auto" required>
+          <label for="annoAdmin" id="labelAnnoAdmin">Anno:</label>
+          <input type="number" id="annoAdmin" name="annoAdmin" min="1990" step="1" max="2024" placeholder="Inserisci" aria-label="Campo di inserimento dell'anno di produzione dell'auto" required>
   
-          <label for="colore">Colore:</label>
-          <select id="colore" name="colore" aria-label="Campo di inserimento del colore dell'auto" required>
+          <label for="coloreAdmin" id="labelColoreAdmin">Colore:</label>
+          <select id="coloreAdmin" name="coloreAdmin" aria-label="Campo di inserimento del colore dell'auto" required>
             <option value="bianco">Bianco</option>
             <option value="nero">Nero</option>
             <option value="grigio">Grigio</option>
@@ -141,8 +141,8 @@
             <option value="giallo">Giallo</option>
         </select>
 
-        <label for="alimentazione">Alimentazione:</label>
-        <select id="alimentazione" name="alimentazione" aria-label="Campo di inserimento dell'alimentazione dell'auto" required>
+        <label for="alimentazioneAdmin" id="labelAlimAdmin">Alimentazione:</label>
+        <select id="alimentazioneAdmin" name="alimentazioneAdmin" aria-label="Campo di inserimento dell'alimentazione dell'auto" required>
           <option value="benzina">Benzina</option>
           <option value="gasolio">Gasolio</option>
           <option value="elettrico">Elettrico</option>
@@ -150,48 +150,67 @@
           <option value="plugin">Ibrido <span lang="en-GB">Plug-in</span></option>
         </select>
 
-        <label for="cambio">Cambio:</label>
-        <select id="cambio" name="cambio" aria-label="Campo di inserimento del cambio dell'auto" required>
+        <label for="cambioAdmin" id="labelCambioAdmin">Cambio:</label>
+        <select id="cambioAdmin" name="cambioAdmin" aria-label="Campo di inserimento del cambio dell'auto" required>
             <option value="manuale">Manuale</option>
             <option value="automatico">Automatico</option>
         </select>
 
-        <label for="trazione">Trazione:</label>
-        <select id="trazione" name="trazione" aria-label="Campo di inserimento della trazione dell'auto" required>
+        <label for="trazioneAdmin" id="labelTrazioneAdmin">Trazione:</label>
+        <select id="trazioneAdmin" name="trazioneAdmin" aria-label="Campo di inserimento della trazione dell'auto" required>
             <option value="anteriore">Anteriore</option>
             <option value="posteriore">Posteriore</option>
             <option value="integrale">Integrale</option>
         </select>
 
-        <label for="potenza">Potenza (<abbr title="cavalli vapore">CV</abbr>):</label>
-        <input type="number" id="potenza" name="potenza" min="0" step="1" placeholder="Inserisci" aria-label="Campo di inserimento della potenza dell'auto in cavalli vapore" required>
+        <label for="potenzaAdmin" id="labelPotenzaAdmin">Potenza (<abbr title="cavalli vapore">CV</abbr>):</label>
+        <input type="number" id="potenzaAdmin" name="potenzaAdmin" min="0" step="1" placeholder="Inserisci" aria-label="Campo di inserimento della potenza dell'auto in cavalli vapore" required>
 
-        <label for="peso">Peso (<abbr title="chilogrammi">kg</abbr>):</label>
-        <input type="number" id="peso" name="peso" min="0" step="1" placeholder="Inserisci" aria-label="Campo di inserimento del peso dell'auto in chilogrammi" required>
+        <label for="pesoAdmin" id="labelPesoAdmin">Peso (<abbr title="chilogrammi">kg</abbr>):</label>
+        <input type="number" id="pesoAdmin" name="pesoAdmin" min="0" step="1" placeholder="Inserisci" aria-label="Campo di inserimento del peso dell'auto in chilogrammi" required>
 
-        <label for="numero_posti">Numero posti:</label>
-        <input type="number" id="numero_posti" name="numero_posti" min="1" max="9" step="1" placeholder="Inserisci" aria-label="Campo di inserimento del numero di posti dell'auto"  required>
+        <label for="numero_postiAdmin" id="labelPostiAdmin">Numero posti:</label>
+        <input type="number" id="numero_postiAdmin" name="numero_postiAdmin" min="1" max="9" step="1" placeholder="Inserisci" aria-label="Campo di inserimento del numero di posti dell'auto"  required>
 
-          <label for="condizione">Condizione:</label>
-          <select id="condizione" name="condizione" aria-label="Campo di inserimento della condizione dell'auto" required>
+          <label for="condizioneAdmin" id="labelCondizioniAdmin">Condizione:</label>
+          <select id="condizioneAdmin" name="condizioneAdmin" aria-label="Campo di inserimento della condizione dell'auto" required>
               <option value="nuovo">Nuovo</option>
               <option value="usato">Usato</option>
               <option value="km0"><abbr title="Chilometro zero">KM 0</abbr></option>
           </select>
 
-          <label for="chilometraggio">Chilometraggio (<abbr title="chilometri">km</abbr>):</label>
-          <input type="number" id="chilometraggio" name="chilometraggio" min="0" step="100" placeholder="Inserisci" aria-label="Campo di inserimento del chilometraggio massimo dell'auto">
+          <label for="chilometraggioAdmin" id="labelChilometriAdmin">Chilometraggio (<abbr title="chilometri">km</abbr>):</label>
+          <input type="number" id="chilometraggioAdmin" name="chilometraggioAdmin" min="0" step="100" placeholder="Inserisci" aria-label="Campo di inserimento del chilometraggio massimo dell'auto">
+          
+          <label for="prezzoAdmin" id="labelPrezzoAdmin">Prezzo (€):</label>
+          <input type="number" id="prezzoAdmin" name="prezzoAdmin" min="0" step="1" placeholder="Inserisci" aria-label="Campo di inserimento del prezzo massimo dell'auto" required>
 
-          
-          <label>Idoneità neopatentati:</label>
-          <input type="checkbox" name="neopatentati" value="true" aria-label="Mettere spunta se neopatentati abilitati alla guida dell'auto">
-          
-          <label for="prezzo">Prezzo (€):</label>
-          <input type="number" id="prezzo" name="prezzo" min="0" step="1" placeholder="Inserisci" aria-label="Campo di inserimento del prezzo massimo dell'auto" required>
+          <label id="labelNeopAdmin">Idoneità neopatentati:</label>
+          <input type="checkbox" name="neopatentatiAdmin" value="true" aria-label="Mettere spunta se neopatentati abilitati alla guida dell'auto">
   
-          <button type="submit"  aria-label="Bottone per confermare i dati e aggiungere una nuova auto">Invia</button>
+          <button type="submit" id="bottoneAggiungi" aria-label="Bottone per confermare i dati e aggiungere una nuova auto">Invia</button>
       </form>
       </section>
+
+
+
+      <section class="riquadriAdmin">
+        <h2 class="nomeRiqAdmin">Elimina Automobile</h2>
+        <section class="sectionEliminaAdmin">
+              <label for="eliminaAutoAdmin" id="labelEliminaAutoAdmin"><strong>Prenotazioni:</strong> </label>
+              <select id="eliminaAutoAdmin" name="eliminaAutoAdmin" aria-label="Campo di inserimento dell'auto che desideri eliminare">
+                  <option value="Fiat">Fiat Panda</option>
+                  <option value="Ford">Ford Mustang</option>
+                  <option value="Fiat">Tesla</option>
+                  <option value="Ford">Alfa Romeo</option>
+              </select>
+              <button id="eliminaButtonAdmin" aria-label="Elimina la prenotazione selezionata">
+                Elimina
+              </button>
+        </section>
+      </section>
+
+
 
     </main>
       
