@@ -26,9 +26,9 @@ class DBAccess {
 		mysqli_close($this->connection);
 	}
 
-
-	public function getList() {
-		$query = "SELECT * FROM giocatrici ORDER BY ID ASC;";
+	//FUNZIONE PER RICAVARE TUTTI I VEICOLI PRESENTI NEL DB
+	public function getAllVehicles() {
+		$query = "SELECT * FROM Veicoli ORDER BY ID ASC;";
 		
 		$queryRes = mysqli_query($this->connection, $query); //or die("Errore in openDBConnection: " . mysqli_error($this->connection));
 
@@ -45,11 +45,12 @@ class DBAccess {
 		}
 	}
 
-	public function insertNewElement($nome, $capitano, $dataNascita, $luogo, $squadra, $ruolo, $altezza, $maglia, $magliaNazionale, $punti, $riconoscimenti, $note) {
+	//FUNZIONE PER INSERIRE NUOVO VEICOLO IN VEICOLI NEL DB
+	public function insertNewVehicle($marca, $modello, $anno, $colore, $alimentazione, $cambio, $trazione, $CVpotenza, $KGpeso, $neoP, $nPosti, $condizione, $chilometraggio) {
 		
-		$queryInsert = "INSERT INTO giocatrici(nome ,capitano, dataNascita, luogo, squadra, ruolo, altezza, maglia, magliaNazionale, punti, riconoscimenti, note) 
-						VALUES (\"$nome\", \"$capitano\", \"$dataNascita\", \"$luogo\", \"$squadra\", \"$ruolo\", \"$altezza\", \"$maglia\", \"$magliaNazionale\", 
-						\"$punti\", \"$riconoscimenti\", \"$note\")";
+		$queryInsert = "INSERT INTO Veicoli(marca ,modello, anno, colore, alimentazione, cambio, trazione, potenza, peso, neopatentati, numeroPosti, condizione, chilometraggio) 
+						VALUES (\"$marca\", \"$modello\", \"$anno\", \"$colore\", \"$alimentazione\", \"$cambio\", \"$trazione\", \"$CVpotenza\", \"$KGpeso\", 
+						\"$neoP\", \"$nPosti\", \"$condizione\", \"$chilometraggio\")";
 						
 		$queryRes = mysqli_query($this->connection, $queryInsert) or die(mysqli_error($this->connection));
 
