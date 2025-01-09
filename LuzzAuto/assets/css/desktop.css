@@ -1645,7 +1645,7 @@ document.querySelectorAll('#list_filter .list_insert').forEach(select => {
 /* ---- CLIENT REVIEWS ---- */
 
 #home_reviews {
-    padding: 2em 0 6em;
+    padding: 2em 0;
     margin: 5em 0;
     text-align: center;
     width: 100%;
@@ -1721,6 +1721,7 @@ footer {
     display: inline-block;
     text-align: center;
     padding: 1em 0;
+    width: 100%;
 }
 
 footer p {
