@@ -3,11 +3,12 @@
     <head>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width">
+        <base href="/LuzzAuto/">
 
-        <title>Home Page - LuzzAuto Concessionario</title>
+        <title>Home Page | LuzzAuto Concessionario</title>
 
         <link rel="stylesheet" media="screen and (max-width:1024px)" href="assets/css/mobile.css" type="text/css">
-        <link rel="stylesheet" media="screen and (min-width:1024px)" href="assets/css/desktop.css" type="text/css">
+        <link rel="stylesheet" media="screen and (min-width:1025px)" href="assets/css/desktop.css" type="text/css">
         <link rel="stylesheet" media="print" href="assets/css/print.css" type="text/css">
 
         <script src="assets/js/file.js"></script>
@@ -22,11 +23,13 @@
 
     </head>
     <body>
-
-        <header>
-            <h1 aria-label="Titolo pagina">LuzzAuto</h1>
-            <h2 aria-label="descrizione pagina">descrizione homepage</h2>
+      
+        <header id="home_header">
+            <h1 class="home_header_text">LuzzAuto</h1>
+            <p class="home_header_text">Vendiamo, noleggiamo, innoviamo</p>
+            <h2 class="home_header_text"><span lang="en-GB">Home</span></h2>
         </header>
+
         <nav class="topNavBar">
 
             <h1 class="hide">LuzzAuto</h1>
@@ -37,21 +40,180 @@
                 <div class="menu-button-bar3" aria-hidden="true"></div>
             </a>
             <ul id="menu"  aria-label="menu del sito">
-                <li id="here"><a href="index.html" tabindex="-1"><span lang="eng">Home</span></a></li>
+                <li id="here"><a href="index.html" tabindex="-1"><span lang="en-GB">Home</span></a></li>
                 <li><a href="about.html" >Chi Siamo</a></li>
                 <li><a href="listino.html" >Listino auto</a></li>
-                <li><a href="test_drive.html" ><span lang="eng">Test Drive</span></a></li>
-                <li><a href="login.html" ><span lang="eng">Login</span></a></li>
-                <li><a href="registrazione.html" >Registrazione</a></li>
+                <li><a href="test_drive.html" ><span lang="en-GB">Test Drive</span></a></li>
+                <li><a href="login.html"><span lang="en-GB">LogIn</span></a></li>
+                <li><a href="registrazione.html" ><span lang="en-GB">SignUp</span></a></li>
             </ul>
         </nav>
 
         <nav id="breadcrumb">
-            <p>Ti trovi in: <span lang="eng">Home</span></p>
+            <p>Ti trovi in: <span lang="en-GB">Home</span></p>
         </nav>
 
+        <main>
+            <section id="home_fastSearch">
+                <h3 class="home_sectionTitle">Cerchi un veicolo in particolare?</h3>
+                <form action="listino.html" method="GET">
+                    <!-- Fieldset per info base veicolo -->
+                    <fieldset id="home_basicInfo">
+                        <legend>INFORMAZIONI SUL VEICOLO</legend>
+                        
+                        <label for="home_marca" id="home_label_marca">Marca</label>
+                        <input type="text" id="home_marca" class="home_insert" name="marca" placeholder="Mercedes" aria-required="true" aria-label="Campo di inserimento della marca dell'auto" required data-msg-required="Per favore, inserisci la marca dell'auto">
+                    
+                        <label for="home_modello" id="home_label_modello">Modello</label>
+                        <input type="text" id="home_modello" class="home_insert" name="modello" placeholder="CLA 200d" aria-label="Campo di inserimento del modello dell'auto">
+                    </fieldset>
+                
+                    <!-- Fieldset per preferenze di acquisto -->
+                    <fieldset id="home_preferences">
+                        <legend>PREFERENZE</legend>
+                        
+                        <label for="home_condizione" id="home_label_condizione">Condizione</label>
+                        <select id="home_condizione" name="condizione" class="home_insert" aria-label="Campo di selezione della condizione dell'auto">
+                            <option disabled selected value>-- Seleziona --</option>
+                            <option value="nuovo">Nuovo</option>
+                            <option value="usato">Usato</option>
+                            <option value="km0"><abbr title="Chilometro zero">KM 0</abbr></option>
+                        </select>
+                    
+                        <label for="home_prezzo" id="home_label_prezzo">Prezzo massimo (&euro;)</label>
+                        <input type="number" id="home_prezzo" class="home_insert" name="prezzo" min="0" step="500" placeholder="25000" aria-label="Campo di inserimento del prezzo massimo dell'auto">
+                    </fieldset>
+                    <input type="submit" value="Ricerca" id="home_cerca" aria-label="Bottone di ricerca per ricercare veicoli con opzioni selezionate sopra">
+                </form>
+            </section>
 
-        
+            <section id="home_new" aria-label="Sezione esposizione nuove automobili">
+                <h3 class="home_sectionTitle">Scopri gli ultimi arrivi</h3>
+                <dl id="home_car_list">
+                    <div id="home_first_car" class="home_car_item">
+                        <img id="home_first_image" src="assets/img/Cars/DM/mudol.jpeg" alt="Berlina sportiva blu elettrico vista davanti sinistra">
+                        <dt>DM Mudol</dt>
+                        <dd>
+                            Prestazioni mozzafiato e design aerodinamico si fondono in questa elegante berlina sportiva.
+                            Colore esclusivo blu elettrico, linee dinamiche e tecnologia all'avanguardia per un'esperienza di guida unica.
+                            Disponibile ora presso il nostro showroom!
+                        </dd>
+                    </div>
+                    <div id="home_second_car" class="home_car_item">
+                        <img id="home_second_image" src="assets/img/Cars/ESU/belzuny.jpeg" alt="Suv di lusso sportivo rosso vista frontale su sfondo roccioso">
+                        <dt>ESU Belzuny</dt>
+                        <dd>
+                            Unione perfetta di potenza e stile, questo SUV di lusso si distingue per il suo design aggressivo e le prestazioni straordinarie su ogni terreno.
+                            Verniciatura esclusiva rosso metallizzato e interni di altissimo livello.
+                            Vieni a scoprirlo nel nostro showroom!
+                        </dd>
+                    </div>
+                    <div id="home_third_car" class="home_car_item">
+                        <img id="home_third_image" src="assets/img/Cars/UniPD/planetary.png" alt="Minivan premium blu metallizzato futuristico vista davanti destra">
+                        <dt>UniPD Planetary</dt>
+                        <dd>
+                            Progettata per la famiglia moderna, questa monovolume premium offre spazio, eleganza e tecnologia avanzata.
+                            Il design raffinato in blu metallizzato e gli interni spaziosi garantiscono comfort per ogni viaggio.
+                            Scopri l'auto perfetta per le tue esigenze nel nostro showroom!
+                        </dd>
+                    </div>
+                </dl>
+            </section>
 
+            <!-- 
+            "Cerchiamo nuovi talenti" come titolo
+            Rimuovo form
+            Metto "portare candidatura in concessionario o inviarla a indirizzo email (fittizio)"
+            -->
+            
+            <section id="home_workWithUs">
+                <h3 class="home_sectionTitle">Vuoi lavorare con noi?</h3>
+                <h4>Siamo attualmente alla ricerca di nuovi talenti.</h4>
+                <p>
+                    Se vuoi provare ad unirti a noi, inviaci il tuo curriculum via <span lang="en-GB">email</span> (<a id="home_workWithUs_email" href="mailto:luzzauto.concessionario@luzzauto.it" aria-label="link invio email">luzzauto.concessionario@luzzauto.it</a>) o portacelo direttamente in concessionario.
+                    Ti aspettiamo.
+                </p>
+                <!-- 
+                <form action="" method="POST">
+                    <fieldset>
+                        <legend>INFO DI CONTATTO</legend>
+
+                        <label for="home_name" id="home_label_name">Nome</label>
+                        <input type="text" name="Nome" id="home_name" class="home_insert" placeholder="John Doe" aria-required="true" aria-label="Campo di inserimento del nome completo" required data-msg-required="Per favore, inserisci il tuo nome completo" >
+
+                        <label id="home_label_mail" for="home_mail"><span lang="en-GB">Mail</span></label>
+                        <input type="email" name="mail" id="home_mail" class="home_insert" placeholder="example@yahoo.com" aria-required="true" aria-label="Campo di inserimento della mail" required data-msg-required="Per favore, inserisci la tua mail" data-msg-invalid:="Ci dispiace, formato non corretto">
+                    </fieldset>
+                    <fieldset>
+                        <legend>RUOLO</legend>
+
+                        <label for="home_role" id="home_label_role">Ruolo</label>
+                        <select name="role" id="home_role" class="home_insert">
+                            <option disabled selected value>-- Seleziona --</option>
+                            <option value="designer"><span lang="en-GB">Designer</span></option>
+                            <option value="sviluppatore">Sviluppatore</option>
+                            <option value="venditore">Venditore</option>
+                        </select>
+                    </fieldset>
+                    <input type="submit" value="Invia" id="home_invia" aria-label="Bottone di invio del form">
+                </form>
+                -->
+            </section>
+
+            <section id="home_brands">
+                <h3 class="home_sectionTitle">I brand che trattiamo</h3>
+                <div id="home_brands_container">
+                    <img src="assets/img/Cars/DM/stemma.png" alt="Logo circolare, scritta DM al centro, dettagli stilizzati di circuiti elettronici, bordatura cromata"  onerror="this.style.borderRadius=0">
+                    <img src="assets/img/Cars/ESU/stemma.jpg" alt="Logo circolare cromato, scritta ESU in basso, raffigurato un leone di profilo al centro"  onerror="this.style.borderRadius=0">
+                    <img src="assets/img/Cars/EXFiat/stemma.jpeg" alt="Stemma araldico, leoni dorati ai lati, scudo rosso al centro, corona reale in alto, scritta EXFIAT in basso"  onerror="this.style.borderRadius=0">
+                    <img src="assets/img/Cars/UniPD/stemma.png" alt="Emblema dorato su fondo scuro, cavallo al centro, corona in alto, alloro attorno, scritta UNIPD in basso"  onerror="this.style.borderRadius=0">
+                    <img src="assets/img/Cars/Audi/stemma_scritta.png" alt="Stemma Audi, quattro anelli cromati intrecciati, scritta Audi in basso a sinistra" id="home_audi">
+                    <img src="assets/img/Cars/Ford/stemma.png" alt="Stemma Ford, ellisse blu al centro con scritta Ford bianca in mezzo"  onerror="this.style.borderRadius=0">
+                    <img src="assets/img/Cars/Opel/stemma_scrittaSotto.png" alt="Stemma Opel, fulmine orizzontale nero all'interno di un cerchio nero, scritta nera Opel in basso" id="home_opel">
+                    <img src="assets/img/Cars/Tesla/stemma_scritta.png" alt="Stemma Tesla, lettera T in rosso al centro, scritta Tesla rossa sotto" onerror="this.style.borderRadius=0">
+                </div>
+            </section>
+
+            <section id="home_reviews">
+                <h3 class="home_sectionTitle">Cosa dicono i nostri clienti</h3>
+                <dl id="home_clients_reviews">
+                    <div id="home_first_review" class="home_review_item">
+                        <img id="home_first_client_img" class="home_users_review_img" src="assets/img/Users/ImmagineUtente.svg" alt="">
+                        <dt>Elon Musk</dt>
+                        <dd>
+                            Esperienza eccellente grazie alla professionalità del personale, che ha reso ogni fase semplice e piacevole.
+                            Un team davvero eccezionale!
+                        </dd>
+                        <img class="home_star_image" src="assets/img/Icons/star/star.png" alt="">
+                    </div>
+                    <div id="home_second_review" class="home_review_item">
+                        <img id="home_second_client_img" class="home_users_review_img" src="assets/img/Users/ImmagineUtente.svg" alt="">
+                        <dt>Aldo Baglio</dt>
+                        <dd>
+                            Miiiiii veramente un ottimo servizio! Ho prenotato il test drive comodamente dal loro sito web.
+                            Qualche attesa in concessionaria, ma personale molto professionale.
+                            Consigliato.
+                        </dd>
+                        <img class="home_star_image"  src="assets/img/Icons/star/star.png" alt="">
+                    </div>
+                    <div id="home_third_review" class="home_review_item">
+                        <img id="home_third_client_img" class="home_users_review_img" src="assets/img/Users/ImmagineUtente.svg" alt="">
+                        <dt>Tullio Vardanega</dt>
+                        <dd>
+                            Porca loca, un concessionario super tecnologico!
+                            Consulenti preparati, una vasta gamma di auto per ogni esigenza e tanta attenzione ai dettagli.
+                            Davvero top!
+                        </dd>
+                        <img class="home_star_image" src="assets/img/Icons/star/star.png" alt="">
+                    </div>
+                </dl>
+            </section>
+        </main>
+
+        <footer>
+            <img class="imgValidHTMLCode" src="assets/img/Footer/valid-xhtml10.png" alt="HTML valido">
+            <p>FFF&E Co. - <span lang="en-GB">All rights Reserved</span></p>
+            <img class="imgValidCSSCode" src="assets/img/Footer/vcss-blue.gif" alt="CSS valido">
+        </footer>
     </body>
 </html>
