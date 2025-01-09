@@ -341,7 +341,7 @@ legend{
     flex-direction: column;
 }
 
-#mail, #password{
+#login_username, #password{
     height: 3em;
     border-radius: 0.5em;
     border: 1px solid var(--form-border-input-color);
