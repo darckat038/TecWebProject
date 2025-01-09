@@ -1,22 +1,109 @@
 <!DOCTYPE html>
 <html lang="it">
-<head>
+    <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width">
 
-    <base href="/LuzzAuto/">
-
     <title>Utente - LuzzAuto Concessionario</title>
-
-    <link rel="stylesheet" media="screen and (max-width:1024px), only screen and (max-device-width:1024px)" href="assets/css/mobile.css" type="text/css">
-    <link rel="stylesheet" media="screen and (min-width:1024px), only screen and (min-device-width:1024px)" href="assets/css/desktop.css" type="text/css">
-    <link rel="stylesheet" media="print" href="assets/css/print.css" type="text/css">
 
     <meta name="description" content="Gestisci le informazioni del tuo account personale e le prenotazioni al nostro servizio di test di guida">
     <meta name="keywords" content="luzzauto, concessionario, macchina, auto, automobili, guida, vetture, test, account, prenotazioni, guida">
     <meta name="author" content="Artusi Emanuele, Bellon Filippo, Diviesti Filippo, Righetto Filippo">
-</head>
-<body>
+
+    <link rel="stylesheet" media="screen and (max-width:1024px)" href="assets/css/mobile.css" type="text/css">
+    <link rel="stylesheet" media="screen and (min-width:1024px)" href="assets/css/desktop.css" type="text/css">
+    <link rel="stylesheet" media="print" href="assets/css/print.css" type="text/css">
+
+    <script src="assets/js/file.js"></script>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lexend:wght@100..900&display=swap" rel="stylesheet">
+    </head>
+
+    <body id="utente_body">
     
-</body>
+      <nav class="topNavBar">
+
+        <h1 class="hide">LuzzAuto</h1>
+        
+        <a href="javascript:void(0);" id="menu-button-container" onclick="menuOpenClose(this)" aria-label="icona apertura menu">               
+            <div class="menu-button-bar1" aria-hidden="true"></div>
+            <div class="menu-button-bar2" aria-hidden="true"></div>
+            <div class="menu-button-bar3" aria-hidden="true"></div>
+        </a>
+        <ul id="menu"  aria-label="menu del sito">
+            <li><a href="home.html"><span lang="eng">Home</span></a></li>
+            <li><a href="about.html" >Chi Siamo</a></li>
+            <li><a href="listino.html" >Listino auto</a></li>
+            <li><a href="test_drive.html" ><span lang="eng">Test Drive</span></a></li>
+            <li id="here"><a href="login.html" tabindex="-1"><span lang="eng">LogIn</span></a></li>
+            <li><a href="registrazione.html" ><span lang="eng">SignIn</span></a></li>
+        </ul>
+      </nav>
+
+      <nav id="breadcrumb">
+          <p>Ti trovi in: Pagina utente</p>
+      </nav>
+
+
+      <main class="utente_content">
+
+        <h1 id="saluto"></h1>
+
+        <section class="riquadriUtente">
+          <h2 class="nomeRiqUtente">Informazioni Utente</h2>
+          <!-- <img src="assets/img/ImmagineUtente/ImmagineUtente.svg" alt="Utente" id="userImage">-->
+          <p id="userImage"></p>
+          <p><strong>Nome:</strong><span> Giovanni</span></p>
+          <p><strong>Cognome:</strong><span> Rossi</span></p>
+          <p><strong>Username:</strong><span> giovanni.rossi</span></p>
+          <p><strong>Password:</strong><span> ************</span></p>
+          <p>Se desideri modificare i tuoi dati premere: <a href="">Modifica</a></p>
+        </section>
+
+        <section >
+          <h2 class="nomeRiqPrenUtente">Prenotazioni</h2>
+          <table class="tabellaPrenUtente">
+            <thead>
+              <tr>
+                <th><abbr title="Numero prenotazione">Num. Pren.</abbr></th>
+                <th>Modello Auto</th>
+                <th>Data Test Drive</th>
+                <th>Stato</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>001</td>
+                <td>Fiat Panda</td>
+                <td><date>20-12-2024</date>15:30</td>
+                <td>Accettato</td>
+              </tr>
+              <tr>
+                <td>002</td>
+                <td>Ford Mustang</td>
+                <td><date>22-12-2024</date> 10:00</td>
+                <td>In elaborazione</td>
+              </tr>
+            </tbody>
+          </table>
+        </section>
+
+        <section class="riquadriUtente">
+            <h2 class="nomeRiqUtente">Gestione Prenotazioni</h2>
+            <section class="sectionPrenUtente">
+                  <label for="gestPrenUtente" id="labelPrenUtente"><strong>Prenotazioni:</strong> </label>
+                  <select id="gestPrenUtente" name="gestPrenUtente" aria-label="Campo di inserimento della prenotazione che desideri annullare">
+                      <option value="Fiat">001 - Fiat Panda</option>
+                      <option value="Ford">002 - Ford Mustang</option>
+                  </select>
+                  <button id="eliminaPrenUtente" aria-label="Elimina la prenotazione selezionata">
+                    Elimina
+                  </button>
+            </section>
+        </section>
+
+      </main>
+    </body>
 </html>

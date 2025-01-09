@@ -1712,6 +1712,143 @@ document.querySelectorAll('#list_filter .list_insert').forEach(select => {
 
 /*#endregion Home*/
 
+
+/*#region Utente*/
+
+/******************* 
+        UTENTE
+********************/
+
+#utente_body{
+    background-image: url(/LuzzAuto/assets/img/Background/LuzzAuto_facciata1.png);
+    background-repeat: no-repeat;
+    background-color: white;
+    background-size:cover;
+}
+
+
+.utente_content{
+    background-color: var(--navbar-bg-color);
+    color: var(--navbar-text-color);
+    padding: 2em;
+    border-radius: 1.5em;
+    margin-top: 8em;
+    width: 66vw;
+    height: auto;
+}
+
+.utente_content > h1{
+    text-align: center;
+}
+
+.riquadriUtente{ 
+    border-radius: 0.5em;
+    border: 1px solid var(--form-border-input-color);
+    background-color: var(--navbar-bg-color);
+    color: var(--navbar-text-color);
+    margin: 0 3em 2em 3em;
+    font-size: 100%;
+    font-family: "Lexend", Roboto, sans-serif;
+    padding-left: 1em;
+    margin-top: 3em;
+    padding: 2em; 
+}
+
+.riquadriUtente p{
+    padding: 0.2em;
+    color: var(--navbar-text-color);
+}
+
+.riquadriUtente span{
+    color: var(--form-border-input-color);
+}
+
+.nomeRiqUtente{
+    background-color: var(--navbar-bg-color);
+    margin-left: 1em;
+    position: absolute;
+    padding: 0 0.5em;
+    margin-top: -1.9em;
+    color: var(--form-border-input-color);
+}
+
+.nomeRiqPrenUtente{
+    color: var(--form-border-input-color);
+    padding-left: 3em;
+    padding-top: 1em;
+}
+
+#userImage{
+    background-image: url('../img/ImmagineUtente/ImmagineUtente.svg');
+    float: right; 
+    width: 12em;
+    height: 12em;
+    background-size: cover; 
+    background-position: center;
+    margin-top: -1.5em; 
+}
+
+
+.tabellaPrenUtente {
+    width: calc(100% - 6em); /* 100% meno il padding a sinistra e a destra */
+    border-collapse: collapse;
+    margin: 1em auto; 
+}
+
+.tabellaPrenUtente thead {
+    background-color: var(--navbar-bg-color);
+    color: var(--form-border-input-color);
+}
+
+.tabellaPrenUtente th, .tabellaPrenUtente td {
+    text-align: left;
+    padding: 0.8em;
+    border: 1px solid var(--form-border-input-color);
+}
+
+
+.tabellaPrenUtente date{
+    display: block;
+}
+
+.sectionPrenUtente{
+    display: grid;
+    grid-template-columns: 1fr auto;
+    column-gap: 1em;
+    align-items: start;
+    margin: 1em 0;
+}
+
+#labelPrenUtente{
+    grid-column: 1;
+    grid-row: 1;
+}
+
+#gestPrenUtente{
+    grid-column: 1;
+    grid-row: 2;
+    padding: 0.5em;
+    border: 1px solid white; 
+    border-radius: 4px; 
+    background-color:black; 
+    color: var(--form-border-input-color); 
+    font-size: 16px;
+    cursor: pointer; 
+}
+
+#eliminaPrenUtente{
+    grid-column: 3;
+    grid-row: 2;
+    align-self: center;
+    justify-self: end;
+    padding: 0.5em 1.5em;
+    font-size: 16px;
+    border-radius: 5px;
+}
+
+/*#endregion Utente*/
+
+
 /* FOOTER */
 
 footer {
