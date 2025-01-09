@@ -327,7 +327,7 @@ a:visited {
     background-color:black; 
     color: var(--form-border-input-color); 
     font-size: 16px;
-    cursor: pointer; 
+    cursor: pointer;
 }
 
 #bottoneAggiungi{
