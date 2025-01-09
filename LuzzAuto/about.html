@@ -4,15 +4,13 @@
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width">
 
-        <base href="/LuzzAuto/">
-
         <title>Chi siamo? - LuzzAuto Concessionario</title>
 
-        <link rel="stylesheet" media="screen and (max-width:1024px), only screen and (max-device-width:1024px)" href="assets/css/mobile.css" type="text/css">
-        <link rel="stylesheet" media="screen and (min-width:1025px), only screen and (min-device-width:1025px)" href="assets/css/desktop.css" type="text/css">
+        <link rel="stylesheet" media="screen and (max-width:1024px)" href="assets/css/mobile.css" type="text/css">
+        <link rel="stylesheet" media="screen and (min-width:1025px)" href="assets/css/desktop.css" type="text/css">
         <link rel="stylesheet" media="print" href="assets/css/print.css" type="text/css">
 
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+        <script src="assets/js/file.js"></script>
 
         <meta name="description" content="LuzzAuto rappresenta un concessionario gestito da giovani appassionati di motori. Scopri chi siamo e i servizi che mettiamo a disposizione.">
         <meta name="keywords" content="luzzauto, concessionario, macchina, auto, automobili, guida, vetture, giovani, chi siamo, servizi">
@@ -24,31 +22,186 @@
 
     </head>
     <body>
-        
-        <header>
-            <h1 aria-label="Titolo pagina">LuzzAuto</h1>
-            <h2 aria-label="descrizione pagina">descrizione homepage</h2>
+
+        <header id="aboutUs_header">
+            <h1 aria-label="Titolo in header" class="aboutUs_text">LuzzAuto</h1>
+            <p class="aboutUs_text">Vendiamo, noleggiamo, innoviamo.</p>
+            <h2 aria-label="descrizione pagina in header" class="aboutUs_text">Chi siamo</h2>
         </header>
+
         <nav class="topNavBar">
-            <a href="home.html" class="logo disable" aria-label="Logo"><img src="assets/img/Logo/Logo Bianco Scritta.svg" alt="Logo"></a>
 
-            <span lang="eng" id="breadcrumb" aria-label="Pagina attuale">Home</span>
-
+            <h1 class="hide">LuzzAuto</h1>
+            
             <a href="javascript:void(0);" id="menu-button-container" onclick="menuOpenClose(this)" aria-label="icona apertura menu">               
                 <div class="menu-button-bar1" aria-hidden="true"></div>
                 <div class="menu-button-bar2" aria-hidden="true"></div>
                 <div class="menu-button-bar3" aria-hidden="true"></div>
             </a>
-            
             <ul id="menu"  aria-label="menu del sito">
-                <li id="here"><a href="index.html" tabindex="-1"><span lang="eng">Home</span></a></li>
-                <li><a href="about.html" >Chi Siamo</a></li>
+                <li><a href="index.html"><span lang="en-GB">Home</span></a></li>
+                <li id="here"><a href="about.html" tabindex="-1">Chi Siamo</a></li>
                 <li><a href="listino.html" >Listino auto</a></li>
-                <li><a href="test_drive.html" ><span lang="eng">Test Drive</span></a></li>
-                <li><a href="login.html" ><span lang="eng">Login</span></a></li>
+                <li><a href="test_drive.html" ><span lang="en-GB">Test Drive</span></a></li>
+                <li><a href="login.html" ><span lang="en-GB">Login</span></a></li>
                 <li><a href="registrazione.html" >Registrazione</a></li>
             </ul>
         </nav>
-        
+
+        <nav id="breadcrumb">
+            <p>Ti trovi in: Chi Siamo</p>
+        </nav>
+
+        <main id="aboutUs_main">
+
+            <h2>La nostra storia</h2>
+            <section id="aboutUs_luzzauto" class="aboutUs_history">
+                <p>
+                    A Padova, tra aule universitarie e sessioni di studio, Filippo³ ed Emanuele, quattro studenti di informatica con una grande passione per le auto, decisero di fondare LuzzAuto, una concessionaria che unisce tradizione e modernità.
+
+                    Il loro obiettivo?
+
+                    Offrire servizi di vendita e noleggio auto che fossero accessibili, trasparenti e tecnologicamente all'avanguardia.
+                </p>
+            </section>
+            
+            <section id="aboutUs_dreamToReal" class="aboutUs_history">
+                <img src="assets/img/Pictures/Luzzauto/facciata_Luzzauto.webp" alt="Facciata di un concessionario Luzzauto moderno">
+                <h3>Da un sogno a una realtà</h3>
+                
+                <p>
+                    L'idea nacque durante una pausa caffè al bar universitario. "Abbiamo le competenze per costruire qualcosa di unico," disse uno dei Filippo.
+
+                    Gli altri concordarono: avrebbero creato una concessionaria diversa, capace di offrire non solo auto nuove e usate, ma anche un servizio di noleggio semplice e veloce.
+
+                    Con un piccolo capitale iniziale e tanto entusiasmo, i ragazzi trovarono uno spazio nella periferia di Padova e iniziarono la loro avventura.
+                </p>
+            </section>
+
+            <section id="aboutUs_unique" class="aboutUs_history">
+                <img src="assets/img/Pictures/Luzzauto/comunicazione_Luzzauto.webp" alt="Tecnologia per comunicazione con cliente">
+                <h3>Cosa rende unica LuzzAuto</h3>
+                
+                <p>
+                    Grazie al loro background in informatica, Filippo³ ed Emanuele svilupparono un sistema digitale per semplificare l'esperienza dei clienti, offrendo inoltre un servizio online moderno e intuitivo.
+
+                    Sul loro <strong>sito</strong>, i clienti possono facilmente esplorare e configurare auto nuove, oppure scoprire un'ampia gamma di veicoli usati, sempre con informazioni chiare e dettagli trasparenti.
+
+                    Inoltre, grazie a una piattaforma di <strong>noleggio smart</strong>, è possibile prenotare un'auto, sia per brevi periodi che per noleggi a lungo termine, con pochi semplici clic.
+
+                    Emanuele, con il suo carisma, si occupava delle trattative e del rapporto con i clienti, mentre Filippo³ gestiva la parte tecnica e organizzativa.
+                </p>   
+            </section>
+
+            <section id="aboutUs_mobility" class="aboutUs_history">
+                <img src="assets/img/Pictures/Luzzauto/mobilità_Luzzauto.webp" alt="Luzzauto nella città di Padova">
+                <h3>Padova al centro della mobilità</h3>
+                
+                    <p>
+                        LuzzAuto divenne presto un punto di riferimento per la mobilità a Padova, rispondendo alle esigenze di studenti, professionisti e famiglie.
+                        Gli universitari apprezzarono il servizio di noleggio economico, ideale per muoversi in città o affrontare viaggi occasionali.
+                        Anche i professionisti trovarono nella piattaforma di noleggio un'opzione flessibile e conveniente per esigenze lavorative.
+                        Le famiglie, invece, si affidavano alla concessionaria per acquistare auto affidabili, accompagnate da garanzie chiare e un servizio trasparente.
+                        Questo approccio inclusivo consolidò il ruolo di LuzzAuto nella comunità locale.
+                    </p>
+            </section>
+
+            <section id="aboutUs_future" class="aboutUs_history">
+                <h3>Il futuro di LuzzAuto</h3>
+                <p>
+                    Grazie al lavoro di squadra e all'innovazione, LuzzAuto continua a crescere, mantenendo il suo legame con Padova e la sua missione: rendere la mobilità più semplice e accessibile per tutti.
+                </p>
+            </section>
+
+            <section id="aboutUs_ourNums">
+                <h2>Un po' di numeri...</h2>
+                <dl>
+                    <div id="aboutUs_soldCars">
+                        <img src="assets/img/Icons/car/icons8-auto-sf-black-filled-96.png" alt="">
+                        <h3>Auto vendute</h3>
+                        <p>Più di 8000</p>
+                    </div>
+
+                    <div id="aboutUs_custSat">
+                        <img src="assets/img/Icons/thumb/icons8-pollice-in-su-ios-17-glyph-96.png" alt="">
+                        <h3>Soddisfazione cliente</h3>
+                        <p>99%</p>
+                    </div>
+
+                    <div id="aboutUs_yearsExp">
+                        <img src="assets/img/Icons/exp/icons8-experience-parzival’-1997-detailed-outline-96.png" alt="">
+                        <h3>Anni di esperienza</h3>
+                        <p>3+</p>
+                    </div>
+
+                    <div id="aboutUs_savedEmiss">
+                        <img src="assets/img/Icons/co2/icons8-riduzione-della-co2-ios-17-filled-96.png" alt="">
+                        <h3>Emissioni risparmiate</h3>
+                        <p>Più di 2000 tonnellate di CO2 risparmiate</p>
+                    </div>
+
+                    <div id="aboutUs_testDrives">
+                        <img src="assets/img/Icons/wheel/icons8-volante-glyph-neue-96.png" alt="">
+                        <h3><span lang="en-GB">Test drive</span></h3>
+                        <p>Più di 50 test drive organizzati ogni mese</p>
+                    </div>
+
+                    <div id="aboutUs_warranty">
+                        <img src="assets/img/Icons/warranty/icons8-garanzia-color-96.png" alt="">
+                        <h3>Garanzia offerta</h3>
+                        <p>Più di 5 anni di garanzia</p>
+                    </div>
+                </dl>
+            </section>
+
+            <section id="aboutUs_reachUs">
+                <h2>Dove trovarci</h2>
+                <img src="assets/img/Map/Location_satellite.webp" alt="Mappa satellitare posizione Luzzauto, Via Luigi Luzzati 8 Padova, vicino Via Paolotti">
+            </section>
+
+            <h2>Il nostro Team</h2>
+            <section id="aboutUs_ourTeam">
+                <dl>
+                    <div id="aboutUs_fbellon">
+                        <img src="assets/img/Pictures/Team/fbellon_blur.jpg" alt="Foto in primo piano dello studente di Unipd Filippo Bellon">
+                        <dt>Filippo Bellon</dt>
+                        <dd>
+                            Dotato di una mente analitica e di una grande passione per il lavoro di squadra, Filippo si dedica con entusiasmo allo studio dell'informatica.
+                            Con un particolare interesse per la sicurezza informatica, si impegna a imparare e crescere continuamente.
+                        </dd>
+                    </div>
+                    <div id="aboutUs_frighetto">
+                        <img src="assets/img/Pictures/Team/frighetto_blur.jpg" alt="Foto in primo piano dello studente di Unipd Filippo Righetto">
+                        <dt>Filippo Righetto</dt>
+                        <dd>
+                            Con una forte curiosità per la tecnologia e l'innovazione, Filippo è sempre pronto ad affrontare nuove sfide per ampliare le sue competenze.
+                            Ha un interesse particolare per lo sviluppo software e sogna di contribuire a progetti che abbiano un impatto positivo.
+                        </dd>
+                    </div>
+                    <div id="aboutUs_fdiviesti">
+                        <img src="assets/img/Pictures/Team/fdiviesti_blur.jpg" alt="Foto in primo piano dello studente di Unipd Filippo Diviesti">
+                        <dt>Filippo Diviesti</dt>
+                        <dd>
+                            Con un occhio attento ai dettagli e un grande entusiasmo per il problem solving, Filippo eccelle nell'analizzare e risolvere complessi problemi informatici.
+                            Nel tempo libero, ama esplorare nuovi linguaggi di programmazione e sviluppare progetti personali.
+                        </dd>
+                    </div>
+                    <div id="aboutUs_eartusi">
+                        <img src="assets/img/Pictures/Team/eartusi_blur.jpg" alt="Foto in primo piano dello studente di Unipd Emanuele Artusi">
+                        <dt>Emanuele Artusi</dt>
+                        <dd>
+                            Curioso e creativo, Emanuele si distingue per la sua capacità di trovare soluzioni innovative ai problemi.
+                            È interessato al mondo dell'intelligenza artificiale e del machine learning, settori in cui spera di specializzarsi.
+                        </dd>
+                    </div>
+                </dl>
+            </section>
+        </main>
+
+        <footer>
+            <img class="imgValidCode" src="assets/img/Footer/valid-xhtml10.png" alt="HTML valido">
+            <p>FFF&E&nbsp;-&nbsp;<span lang="en">All rights Reserved</span></p>
+            <img class="imgValidCode" src="assets/img/Footer/valid-xhtml10.png" alt="CSS valido">
+        </footer>
     </body>
 </html>

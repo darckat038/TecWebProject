@@ -6,9 +6,22 @@ Progetto del corso di Tecnologie Web della laurea in Informatica presso l'Univer
 - Diviesti Filippo
 - Righetto Filippo
 ### Link utili:
+- [Template esempio PIU' COMPLETO](https://themes.getbootstrap.com/preview/?theme_id=1719)
 - [Template esempio Carvilla](https://demo.themesine.com/carvilla/)
 - [WCAG22 Regole di accessibilità](https://www.w3.org/WAI/WCAG22/quickref/)
+- 
+### Strumenti utili
+- [Checker contrasto immagine testo](https://imagecontrastchecker.com/)
 
-### Info Utili
+### Info Utili Server
 - Versione PHP Server Tecweb: 8.2.26
 - Versione SQL Server: MariaDB 10.11.6
+
+### Creazione del server in locale con docker
+Nella cartella LuzzAuto:
+```cmd
+docker-compose build
+```
+```cmd
+docker-compose up -d
+```

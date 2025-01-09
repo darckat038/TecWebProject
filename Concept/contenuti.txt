@@ -20,13 +20,13 @@ AUTO - Emanuelippo
   - link per prenotare test drive
 
 LOGIN - Dilippo
-  - email
+  - username
   - password
 
 REGISTRAZIONE - Dilippo
   - nome
   - cognome
-  - email
+  - username
   - password
   - data nascita
   - codice fiscale

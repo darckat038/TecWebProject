@@ -4,71 +4,133 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width">
 
-    <base href="/LuzzAuto/">
-
     <title>Drive-Test - LuzzAuto Concessionario</title>
-
-    <link rel="stylesheet" media="screen and (max-width:1024px), only screen and (max-device-width:1024px)" href="assets/css/mobile.css" type="text/css">
-    <link rel="stylesheet" media="screen and (min-width:1024px), only screen and (min-device-width:1024px)" href="assets/css/desktop.css" type="text/css">
-    <link rel="stylesheet" media="print" href="assets/css/print.css" type="text/css">
 
     <meta name="description" content="Scegli l'auto che più ti piace e salici a bordo prenotando un test di guida!">
     <meta name="keywords" content="luzzauto, concessionario, macchina, auto, automobili, guida, vetture, test, prenota">
     <meta name="author" content="Artusi Emanuele, Bellon Filippo, Diviesti Filippo, Righetto Filippo">
 
+    <link rel="stylesheet" media="screen and (max-width:1024px)" href="assets/css/mobile.css" type="text/css">
+    <link rel="stylesheet" media="screen and (min-width:1025px)" href="assets/css/desktop.css" type="text/css">
+    <link rel="stylesheet" media="print" href="assets/css/print.css" type="text/css">
+
+    <script src="assets/js/file.js"></script>
+
     <link rel="preconnect" href="https://fonts.googleapis.com">
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-        <link href="https://fonts.googleapis.com/css2?family=Lexend:wght@100..900&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lexend:wght@100..900&display=swap" rel="stylesheet">
 
-        <script>
-            document.addEventListener("DOMContentLoaded", function () {
-                var x = document.getElementById("menu");
-                var y = document.getElementById("menu-button-container");
-
-                function adjustMenuOnResize() {
-                    if (window.innerWidth >= 1024) {
-                        x.style.display = "flex";                       // Passaggio a modalità desktop
-                    } else {
-                        if (x.style.display === "flex" && !(y.classList.contains("change"))) {
-                            x.style.display = "none";                   // Passaggio da desktop a mobile
-                        }
-                                                                        // Passaggio da mobile a mobile
-                    }
-                }
-
-                // Evento resize sulla finestra
-                window.addEventListener("resize", adjustMenuOnResize);
-            });
-
-            function menuOpenClose(y) {
-                var x = document.getElementById("menu");
-                if (x.style.display === "flex") {
-                    x.style.display = "none";
-                } else {
-                    x.style.display = "flex";
-                }
-                y.classList.toggle("change");
-            }
-        </script>
     </head>
     <body>
-        <header>
-            <a href="about.html" class="logo" aria-label="immagine logo del sito">Logo</a>
-            <nav class="topNavBar">
-                <a href="javascript:void(0);" id="menu-button-container" onclick="menuOpenClose(this)" aria-label="icona apertura menu">
-                    <div class="menu-button-bar1" aria-hidden="true"></div>
-                    <div class="menu-button-bar2" aria-hidden="true"></div>
-                    <div class="menu-button-bar3" aria-hidden="true"></div>
-                </a>
-                <ul id="menu"  aria-label="menu del sito">
-                    <li><a href="index.html">Home</a></li>
-                    <li><a href="about.html">Chi Siamo</a></li>
-                    <li><a href="listino.html">Auto</a></li>
-                    <li><a href="drive_test.html" id="here">Prenotazione</a></li>
-                    <li><a href="login.html">Login</a></li>
-                    <li><a href="registrazione.html">Registrazione</a></li>
-                </ul>
-            </nav>
+
+        <header id="test_drive_header">
+            <h1><span lang="en-GB">Test Drive</span></h1>
+            <p>"Non immaginare, vivi: guida il cambiamento con noi!"</p>
+            <a id="test_drive_prenotaAnchor" href="#test_drive_prenota">Prenota</a>
         </header>
+
+        <nav class="topNavBar">
+
+            <h1 class="hide">LuzzAuto</h1>
+            
+            <a href="javascript:void(0);" id="menu-button-container" onclick="menuOpenClose(this)" aria-label="icona apertura menu">               
+                <div class="menu-button-bar1" aria-hidden="true"></div>
+                <div class="menu-button-bar2" aria-hidden="true"></div>
+                <div class="menu-button-bar3" aria-hidden="true"></div>
+            </a>
+            <ul id="menu"  aria-label="menu del sito">
+                <li><a href="index.html"><span lang="en-GB">Home</span></a></li>
+                <li><a href="about.html" >Chi Siamo</a></li>
+                <li><a href="listino.html" >Listino auto</a></li>
+                <li id="here"><a href="test_drive.html" tabindex="-1"><span lang="en-GB">Test Drive</span></a></li>
+                <li><a href="login.html" ><span lang="en-GB">LogIn</span></a></li>
+                <li><a href="registrazione.html" ><span lang="en-GB">SignUp</span></a></li>
+            </ul>
+        </nav>
+
+        <nav id="breadcrumb">
+            <p>Ti trovi in: <span lang="en-GB">Test Drive</span></p>
+        </nav>
+
+        <main id="test_drive_main">
+
+            <h2>Prova su strada - <span lang="en-GB">Test Drive</span> con LuzzAuto</h2>
+            <p>Scopri il piacere di guidare il tuo prossimo veicolo con il nostro esclusivo servizio di <span lang="en-GB">Test Drive</span>. Presso LuzzAuto, ti offriamo l'opportunità di provare la tua auto preferita per capire davvero se è quella giusta per te.</p>
+
+            <section id="test_drive_comefunziona">
+
+                <h3>Come funziona il nostro servizio di <span lang="en-GB">Test Drive</span>?</h3>
+
+                <dl>
+                    <dt>Scegli il modello</dt>
+                    <dd>Visita il nostro sito o passa in concessionaria per scegliere tra un'ampia gamma di veicoli disponibili per il <span lang="en-GB">Test Drive</span>.</dd>
+
+                    <dt>Prenota un appuntamento</dt>
+                    <dd>Fissa un appuntamento comodamente online o direttamente in concessionaria. Saremo lieti di trovare l'orario più adatto alle tue esigenze.</dd>
+
+                    <dt>Prova su strada</dt>
+                    <dd>Vieni in concessionaria all'orario concordato. Ti accoglieremo con tutte le informazioni necessarie e ti accompagneremo nella prova su strada.</dd>
+                </dl>
+
+            </section>
+
+            <section id="test_drive_consulenti">
+
+                <h3>Perché scegliere il nostro servizio di <span lang="en-GB">Test Drive</span>?</h3>
+                <img src="assets/img/Content/testdrive_consulente.webp" alt="Foto futuristica di un consulente a lavoro nel servizio di Test Drive all'interno del concessionario LuzzAuto.">
+                <p>I nostri consulenti saranno al tuo fianco per rispondere a tutte le tue domande e offrirti consigli utili su un'ampia scelta d veicoli. Tutte le auto sono accuratamente igienizzate e controllate prima di ogni prova su strada, per garantire una guida serena e sicura.</p>
+
+            </section>
+
+            <section id="test_drive_prenota">
+
+                <h3>Prenota ora il tuo <span lang="en-GB">Test Drive</span></h3>
+                <p>Non aspettare oltre: fai il primo passo verso la tua nuova auto!</p>
+
+                <!--SEZIONE FORM-->
+                 
+
+                <form id="test_drive_form" method="post" action="">
+                    <fieldset>
+        
+                        <legend>Prenota <span lang="en-GB">Test Drive</span></legend>
+        
+                        <label id="test_drive_label_auto" for="test_drive_select_auto">Auto</label>
+                        <select name="test_drive_select_auto" id="test_drive_select_auto" class="test_drive_input" aria-required="true" aria-label="Campo di scelta dell'auto" required data-msg-required="Per favore, seleziona l'auto'" data-msg-invalid:="Ci dispiace, formato non corretto">
+                            <option value="a">a</option>
+                            <option value="a">a</option>
+                            <option value="a">a</option>
+                            <option value="a">a</option>
+                            <option value="a">a</option>
+                        </select>
+
+                        <label id="test_drive_label_date" for="test_drive_date">Data e ora</label>
+                        <input id="test_drive_date" class="test_drive_input" type="datetime-local" name="test_drive_date" aria-required="true" aria-label="Campo di inserimento della data e ora della prenotazione" required data-msg-required="Per favore, inserisci la data e l'ora della prenotazione">
+                
+                        <input id="test_drive_prenotaBtn" type="submit" value="INVIA RICHIESTA" aria-label="Bottone di invio del form">
+        
+                    </fieldset>
+                </form>
+
+                
+
+                <!--OPPURE BOTTONE (LOGIN)(SIGNIN)-->
+
+               <!--
+
+                <p>Accedi al tuo profilo per usufruire del servizio di <span lang="en-GB">Test Drive</span> :</p>
+                <a href="login.html">LogIn</a>
+
+                <p>Oppure crea un <span lang="en-GB">account</span> :</p>
+                <a href="registrazione.html">SignIn</a>
+                
+                -->
+
+            </section>
+
+
+
+        </main>
+
     </body>
 </html>
