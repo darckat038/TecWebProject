@@ -1,4 +1,4 @@
-create table Veicoli
+create table Veicolo
 (
     id             int auto_increment
         primary key,
