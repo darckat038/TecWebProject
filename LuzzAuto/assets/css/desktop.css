@@ -1195,7 +1195,7 @@ document.querySelectorAll('#list_filter .list_insert').forEach(select => {
 }
 
 .list_car_item {
-    width: 45em; /* Larghezza fissa */
+    width: 42em; /* Larghezza fissa */
     height: 20em; /* Altezza fissa */
     background-color: white; /* Sfondo bianco */
     color: black; /* Testo nero */
