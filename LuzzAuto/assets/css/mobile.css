@@ -1034,6 +1034,15 @@ section.aboutUs_history img {
     box-sizing: border-box;
 }
 
+#list_filter #list_filter_potenza,
+#list_filter #list_filter_peso {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1em;
+    justify-content: space-between;
+    align-items: center;
+}
+
 #list_filter #list_filter_neopatentati {
     display: flex;
     align-items: center;
@@ -1066,7 +1075,14 @@ section.aboutUs_history img {
     font-size: 100%;
 }
 
-
+#list_filter .list_internal_insert {
+    height: 2em;
+    background-color: var(--form-bg-color);
+    color: var(--form-text-color);
+    font-family: "Lexend", Roboto, sans-serif;
+    font-size: 100%;
+    width: 5em;
+}
 
 /*
 
