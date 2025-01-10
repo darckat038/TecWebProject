@@ -10,7 +10,7 @@ $connessione = new DBAccess();
 
 $connessioneOK = $connessione->openDBConnection();
 
-$veicoli = "";
+$veicoli = array();
 $stringaVeicoli = "";
 
 //in fase di produzione il controllo corretto e' $connessioneOK
