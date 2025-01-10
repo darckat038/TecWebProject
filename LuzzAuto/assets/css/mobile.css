@@ -305,7 +305,7 @@ a:visited {
 /*#region Login*/
 
 #login_body{
-    background-image: url(../img/Background/LuzzAuto_facciata1.png);
+    background-image: url(../img/Background/Luzzauto/LuzzAuto_facciata1.png);
     background-repeat: no-repeat;
     background-color: white;
     background-size:auto;
@@ -388,7 +388,7 @@ legend{
 /*#region SignIn*/
 
 #signup_body{
-    background-image: url(../img/Background/LuzzAuto_facciata1.png);
+    background-image: url(../img/Background/Luzzauto/LuzzAuto_facciata1.png);
     background-repeat: no-repeat;
     background-color: white;
     background-size:auto;
@@ -1234,7 +1234,7 @@ document.querySelectorAll('#list_filter .list_insert').forEach(select => {
 #home_header {
     padding-top: 20%;
     padding-bottom: 20%;
-    background-image: url("/LuzzAuto/assets/img/Background/Luzzauto/header_image_Luzzauto_2_dark.webp");
+    background-image: url("/LuzzAuto/assets/img/Background/Luzzauto/header_image_Luzzauto_dark.webp");
     background-size: cover;
     background-repeat: no-repeat;
     background-position: top;
@@ -1312,6 +1312,12 @@ document.querySelectorAll('#list_filter .list_insert').forEach(select => {
 #home_fastSearch #home_condizione option:disabled {
     color: var(--form-border-input-color);
 }
+
+/* input type range
+#home_fastSearch #home_prezzo {
+    padding-left: 0;
+}
+/* fine input type range*/
 
 #home_fastSearch .home_insert {
     height: 3em;

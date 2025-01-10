@@ -1400,7 +1400,7 @@ document.querySelectorAll('#list_filter .list_insert').forEach(select => {
     margin-left: 5em;
 }
 
-/* usato per input type range*/
+/* input type range
 #home_fastSearch #home_prezzo {
     background-color: white;
     padding-left: 0;
@@ -1412,8 +1412,9 @@ document.querySelectorAll('#list_filter .list_insert').forEach(select => {
 #home_fastSearch output {
     float: right;
     margin-top: 1em;
-    margin-right: 1.5em;
 }
+
+/* fine input type range*/
 
 #home_fastSearch .home_insert {
     height: 3em;

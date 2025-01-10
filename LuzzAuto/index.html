@@ -56,7 +56,7 @@
         <main>
             <section id="home_fastSearch" aria-label="Sezione ricerca rapida veicolo">
                 <h3 class="home_sectionTitle">Cerchi un veicolo in particolare?</h3>
-                <form action="listino.html" method="GET">
+                <form action="listino.php" method="GET">
                     <!-- Fieldset per info base veicolo -->
                     <fieldset id="home_basicInfo">
                         <legend>INFORMAZIONI SUL VEICOLO</legend>
@@ -81,9 +81,7 @@
                         </select>
                     
                         <label for="home_prezzo" id="home_label_prezzo">Prezzo massimo (&euro;)</label>
-                        <!-- <input type="number" id="home_prezzo" class="home_insert" name="prezzo" min="0" step="500" placeholder="25000" aria-label="Campo di inserimento del prezzo massimo dell'auto"> -->
-                        <input type="range" name="prezzoMax" id="home_prezzo" class="home_insert" value="30000" min="0" step="500" max="60000" oninput="this.nextElementSibling.value = this.value" aria-label="Campo di selezione del prezzo massimo dell'auto">
-                        <output>30000</output>
+                        <input type="number" id="home_prezzo" class="home_insert" name="prezzo" min="0" step="500" placeholder="25000" aria-label="Campo di inserimento del prezzo massimo dell'auto">
                     </fieldset>
                     <input type="submit" value="Ricerca" id="home_cerca" aria-label="Bottone di ricerca per ricercare veicoli con opzioni selezionate sopra">
                 </form>
@@ -169,21 +167,13 @@
                 <h3 class="home_sectionTitle">I brand che trattiamo</h3>
                 <div id="home_brands_container">
                     <img src="assets/img/Cars/DM/stemma.png" alt="Logo circolare, scritta DM al centro, dettagli stilizzati di circuiti elettronici, bordatura cromata"  onerror="this.style.borderRadius=0">
-                    <!-- img da sostituire con placeholder ([IMG_DM_STEMMA]) -->
                     <img src="assets/img/Cars/ESU/stemma.jpg" alt="Logo circolare cromato, scritta ESU in basso, raffigurato un leone di profilo al centro"  onerror="this.style.borderRadius=0">
-                    <!-- img da sostituire con placeholder ([IMG_ESU_STEMMA]) -->
                     <img src="assets/img/Cars/EXFiat/stemma.jpeg" alt="Stemma araldico, leoni dorati ai lati, scudo rosso al centro, corona reale in alto, scritta EXFIAT in basso"  onerror="this.style.borderRadius=0">
-                    <!-- img da sostituire con placeholder ([IMG_EXFIAT_STEMMA]) -->
                     <img src="assets/img/Cars/UniPD/stemma.png" alt="Emblema dorato su fondo scuro, cavallo al centro, corona in alto, alloro attorno, scritta UNIPD in basso"  onerror="this.style.borderRadius=0">
-                    <!-- img da sostituire con placeholder ([IMG_UNIPD_STEMMA]) -->
                     <img src="assets/img/Cars/Audi/stemma_scritta.png" alt="Stemma Audi, quattro anelli cromati intrecciati, scritta Audi in basso a sinistra" id="home_audi">
-                    <!-- img da sostituire con placeholder ([IMG_AUDI_STEMMA]) -->
                     <img src="assets/img/Cars/Ford/stemma.png" alt="Stemma Ford, ellisse blu al centro con scritta Ford bianca in mezzo"  onerror="this.style.borderRadius=0">
-                    <!-- img da sostituire con placeholder ([IMG_FORD_STEMMA]) -->
                     <img src="assets/img/Cars/Opel/stemma_scrittaSotto.png" alt="Stemma Opel, fulmine orizzontale nero all'interno di un cerchio nero, scritta nera Opel in basso" id="home_opel">
-                    <!-- img da sostituire con placeholder ([IMG_OPEL_STEMMA]) -->
                     <img src="assets/img/Cars/Tesla/stemma_scritta.png" alt="Stemma Tesla, lettera T in rosso al centro, scritta Tesla rossa sotto" onerror="this.style.borderRadius=0">
-                    <!-- img da sostituire con placeholder ([IMG_TESLA_STEMMA]) -->
                 </div>
             </section>
 
