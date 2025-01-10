@@ -1,4 +1,32 @@
+function validateFastSearch() {
+	let form = document.getElementById("home_fastSearch_form");
 
+	form.addEventListener("submit", function(event) {
+		if(!( validateMarca(form) && validateModello(form) && validatePrezzo(form) )) {
+			event.preventDefault();
+		}
+	})
+}
+
+function validateMarca(form) {
+	const allowedChars = /^[A-Za-z0-9\-]+$/; // lettere maiuscole e minuscole, numeri e il carattere trattino(-)
+}
+
+function validateModello() {
+	const allowedChars = /^[A-Za-z0-9\-]+$/; // lettere maiuscole e minuscole, numeri e il carattere trattino(-)
+}
+
+function validatePrezzo(form) {
+	var id = "home_prezzo";
+	var username = form;
+	
+	if (prezzoMax <= 0) {
+		showErrorMessage(id, 'Prezzo massimo non valido, devi inserire un valore più grande di 0.');
+		return false;
+	}
+	removeErrorMessage(id);
+	return true;
+}
 
 /*
  * Mostra messaggio di errore a seguito di validazione
