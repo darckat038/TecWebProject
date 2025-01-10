@@ -1072,7 +1072,6 @@ section.aboutUs_history p {
 #list_filter #list_filter_cambio,
 #list_filter #list_filter_trazione,
 #list_filter #list_filter_potenza,
-#list_filter #list_filter_peso,
 #list_filter #list_filter_posti,
 #list_filter #list_filter_condizione,
 #list_filter #list_filter_prezzo,
@@ -1080,6 +1079,15 @@ section.aboutUs_history p {
     width: 100%;
     padding: 0.5em;
     box-sizing: border-box;
+}
+
+#list_filter #list_filter_potenza,
+#list_filter #list_filter_peso {
+    display: flex;
+    flex-wrap: nowrap;
+    gap: 1em;
+    justify-content: space-between;
+    align-items: center;
 }
 
 #list_filter #list_filter_neopatentati {
@@ -1114,9 +1122,22 @@ section.aboutUs_history p {
     font-size: 100%;
 }
 
+#list_filter .list_internal_insert {
+    height: 2em;
+    background-color: var(--form-bg-color);
+    color: var(--form-text-color);
+    font-family: "Lexend", Roboto, sans-serif;
+    font-size: 100%;
+    width: 5.5em;
+}
+
 
 
 /*
+
+#list_filter .list_insert .placeholder {
+    color: var(--form-bg-color);
+}
 
 PER METTERE IL PLACEHOLDER DI COLORE GRIGIO NEI SELECT
 
@@ -1128,7 +1149,7 @@ PER METTERE IL PLACEHOLDER DI COLORE GRIGIO NEI SELECT
     color: var(--form-border-input-color);
 }
 
-in realtà servirebbe 
+/* in realtà servirebbe 
 
 // Aggiungiamo un controllo ai select
 document.querySelectorAll('#list_filter .list_insert').forEach(select => {

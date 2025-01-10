@@ -142,16 +142,20 @@
                                 </select>
                             </div>
 
-                            <!-- MAX o MIN?? -->
                             <div class="list_input_container">
                                 <label for="list_filter_potenza" id="list_label_potenza">Potenza (<abbr title="cavalli vapore">CV</abbr>)</label>
-                                <input type="text" id="list_filter_potenza" class="list_insert" name="potenza" min="0" step="1" placeholder="Qualsiasi" aria-label="Campo di inserimento della potenza dell'auto in cavalli vapore">
+                                <div id="list_filter_potenza" class="list_insert">
+                                    Da <input type="number" class="list_internal_insert" name="potenzaMin" min="0" step="1" placeholder="qualsiasi" aria-label="Campo di inserimento della potenza minima dell'auto in cavalli vapore">
+                                    a <input type="number" class="list_internal_insert" name="potenzaMax" min="0" step="1" placeholder="qualsiasi" aria-label="Campo di inserimento della potenza massima dell'auto in cavalli vapore">
+                                </div>
                             </div>
 
-                            <!-- MAX o MIN?? -->
                             <div class="list_input_container">
                                 <label for="list_filter_peso" id="list_label_peso">Peso (<abbr title="chilogrammi">kg</abbr>)</label>
-                                <input type="text" id="list_filter_peso" class="list_insert" name="peso" min="0" step="1" placeholder="Qualsiasi" aria-label="Campo di inserimento del peso dell'auto in chilogrammi">
+                                <div id="list_filter_peso" class="list_insert">
+                                    Da <input type="number" class="list_internal_insert" name="pesoMin" min="0" step="1" placeholder="qualsiasi" aria-label="Campo di inserimento del peso minimo dell'auto in chilogrammi">
+                                    a <input type="number" class="list_internal_insert" name="pesoMax" min="0" step="1" placeholder="qualsiasi" aria-label="Campo di inserimento del peso massimo dell'auto in chilogrammi">
+                                </div>
                             </div>
 
                             <div class="list_input_container">
@@ -310,8 +314,5 @@
             <img class="imgValidCSSCode" src="assets/img/Footer/vcss-blue.gif" alt="CSS valido">
             <p id="footnote">Alcuni marchi e modelli sono frutto della nostra immaginazione; le immagini relative sono state generate da strumenti di intelligenza artificiale.</p>
         </footer>
-
-        
-
     </body>
 </html>
