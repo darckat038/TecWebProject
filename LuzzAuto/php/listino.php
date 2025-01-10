@@ -1,10 +1,10 @@
 <?php
 
-require_once "dbConnection.php";
+require_once ".." . DIRECTORY_SEPARATOR . "php_sessions" . DIRECTORY_SEPARATOR . "dbConnection.php";
 use DB\DBAccess;
 
 //DA SOSTITUIRE CON PERCORSO FILE HTML
-$paginaHTML = file_get_contents('..' . DIRECTORY_SEPARATOR .'public_html'. DIRECTORY_SEPARATOR . 'squadra_php.html');
+$paginaHTML = file_get_contents('..' . DIRECTORY_SEPARATOR . "listino.html");
 
 $connessione = new DBAccess();
 
@@ -18,15 +18,25 @@ if ($connessioneOK) {
 
     // DA INSERIRE CONTROLLO CON $SESSION PER CONTROLLARE SE CI SONO DEI FILTRI SALVATI
 
-	$veicoli = $connessione->getAllVehicles();
+	$veicoli = $connessione->getFilteredVehicles();
 
 	$connessione->closeConnection();
 
-	if(count($veicoli) >= 0) {
+	if(count($veicoli) > 0) {
 
-		for($i = 0; $i < count($veicoli); $i++) {
+		$stringaVeicoli = '<dl id="list_car_list">';
+
+		$stringaVeicoli .= '<!---
+				IDEA: DESKTOP -> RETTANGOLI LARGHI, IMG A SX E INFO A DX
+						MOBILE -> RETTANGOLI STRETTI, IMG IN ALTO E INFO IN BASSO
+				-->';
+
+		foreach($veicoli as $veicolo) {
 			
 		}
+
+		$stringaVeicoli .= '</dl>
+            </section>';
 
 	}
 
@@ -38,5 +48,7 @@ if ($connessioneOK) {
 
 }
 
-//echo str_replace("[listaGiocatrici]", $stringaGiocatrici, $paginaHTML);
+$strPatternToReplace = '/<dl id="list_car_list">.*?<\/dl>\s*<\/section>/s';
+
+echo preg_replace($strPatternToReplace, $stringaVeicoli, $paginaHTML);
 ?>
