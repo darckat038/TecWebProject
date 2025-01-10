@@ -1125,7 +1125,7 @@ document.querySelectorAll('#list_filter .list_insert').forEach(select => {
     justify-content: center;
 }
 
-#list_filter .list_button {
+.list_button {
     display: flex;
     margin: 3em auto 0;
     color: var(--form-text-color);
@@ -1142,7 +1142,7 @@ document.querySelectorAll('#list_filter .list_insert').forEach(select => {
         border-radius 0.3s ease;
 }
 
-#list_filter .list_button:hover {
+.list_button:hover {
     background-color: var(--form-text-color);
     color: var(--form-bg-color);
     cursor: pointer;
