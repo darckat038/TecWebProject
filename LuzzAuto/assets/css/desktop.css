@@ -1303,7 +1303,7 @@ document.querySelectorAll('#list_filter .list_insert').forEach(select => {
 #home_header {
     padding-top: 20%;
     padding-bottom: 20%;
-    background-image: url("/LuzzAuto/assets/img/Background/Luzzauto/header_image_Luzzauto_dark.webp");
+    background-image: url("../img/Background/Luzzauto/header_image_Luzzauto_dark.webp");
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
