@@ -1,30 +1,36 @@
 <?php
 namespace DB;
 
-class DBAccess {
+mysqli_report(MYSQLI_REPORT_ERROR | MYSQLI_REPORT_STRICT);
 
-	private const HOST_DB = "localhost";
+class DBConnection {
 	#private const HOST_DB = "tecweb.studenti.math.unipd.it";
-	private const DATABASE_NAME = "fbellon";
-	private const USERNAME = "fbellon";
-	private const PASSWORD = "lahy8Fielod8eyoo";
+	private const HOST = "db";
+	private const NAME = "LuzzAutoDB";
+	private const USER = "root";
+	private const PASS = "root";
 
 	private $connection;
 
-	public function openDBConnection() {
-
-		$this->connection = mysqli_connect(DBAccess::HOST_DB, DBAccess::USERNAME, DBAccess::PASSWORD, DBAccess::DATABASE_NAME);
-
-		if(mysqli_connect_errno()) {               //funzione per verificare se c'e' stato un errore nella connessione
-			return false;
-		} else {
-			return true;
+	public function __construct() {
+		try {
+			$this->connection = mysqli_connect(self::HOST, self::USER, self::PASS, self::NAME);
+		} catch (Exception $e) {
+			throw $e;
 		}
 	}
 
-	public function closeConnection() {
-		mysqli_close($this->connection);
+	public function getConnection() {
+		if (!$this->connection->connect_errno)
+			return $this->connection;
 	}
+
+	public function closeConnection() {
+		if (!$this->connection->connect_errno)
+			$this->connection->close();
+	}
+
+
 
 	// FUNZIONE PER RICAVARE I VEICOLI CON FILTRI APPLICATI PRESENTI NEL DB
 	public function getFilteredVehicles() {
