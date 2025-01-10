@@ -22,6 +22,93 @@
 
     </head>
     <body>
+        <nav class="topNavBar">
 
+            <h1 class="hide">LuzzAuto</h1>
+            
+            <a href="javascript:void(0);" id="menu-button-container" onclick="menuOpenClose(this)" aria-label="icona apertura menu">               
+                <div class="menu-button-bar1" aria-hidden="true"></div>
+                <div class="menu-button-bar2" aria-hidden="true"></div>
+                <div class="menu-button-bar3" aria-hidden="true"></div>
+            </a>
+            <ul id="menu"  aria-label="menu del sito">
+                <li><a href="index.html" tabindex="-1"><span lang="en-GB">Home</span></a></li>
+                <li><a href="about.html" >Chi Siamo</a></li>
+                <li id="here"><a href="listino.html" >Listino auto</a></li>
+                <li><a href="test_drive.html" ><span lang="en-GB">Test Drive</span></a></li>
+                <li><a href="utente.html" >Area riservata</a></li>
+            </ul>
+        </nav>
+
+        <nav id="breadcrumb">
+            <p>Ti trovi in: <a href="listino.html">Listino auto</a> > Dettaglio auto</p>
+        </nav>
+
+        <main id="details">
+            <div id="details_box">
+                <div id="details_box_carousel">
+                    <img src="assets/img/Cars/DM/mudol.jpeg" alt="auto1">
+                    <img src="assets/img/auto2.jpg" alt="auto2">
+                    <img src="assets/img/auto3.jpg" alt="auto3">
+                    <img src="assets/img/auto4.jpg" alt="auto4">
+                </div>
+                <div id="details_box_info">
+                    <h2>Dettagli</h2>
+                    <dl>
+                        <div>
+                            <dd>Anno</dd>
+                            <dt>2024</dt>
+                        </div>
+                        <div>
+                            <dd>Colore</dd>
+                            <dt>Blu chiaro</dt>
+                        </div>
+                        <div>
+                            <dd>Alimentazione</dd>
+                            <dt>Elettrica</dt>
+                        </div>
+                        <div>
+                            <dd>Cambio</dd>
+                            <dt>Automatico</dt>
+                        </div>
+                        <div>
+                            <dd>Trazione</dd>
+                            <dt>Integrale</dt>
+                        </div>
+                        <div>
+                            <dd>Potenza</dd>
+                            <dt>490 CV</dt>
+                        </div>
+                        <div>
+                            <dd>Peso</dd>
+                            <dt>1765 kg</dt>
+                        </div>
+                        <div>
+                            <dd>Neopatentati abilitati</dd>
+                            <dt>No</dt>
+                        </div>
+                        <div>
+                            <dd>Posti</dd>
+                            <dt>5</dt>
+                        </div>
+                    </dl>
+                </div>
+            </div>
+            <div id="details_buttons">
+                <dl>
+                    <dd>Marca</dd>
+                    <dt>DM - Digital Motion</dt>
+                    <dd>Modello</dd>
+                    <dt>Mudol</dt>
+                    <dd>Condizioni</dd>
+                    <dt>Nuova</dt>
+                    <dd>Prezzo</dd>
+                    <dt>€ 65800</dt>
+                </dl>
+
+                <button class="list_button">Prenota un test drive</button>
+                <button class="list_button">Chiedi informazioni</button>
+            </div>
+        </main>
     </body>
 </html>
