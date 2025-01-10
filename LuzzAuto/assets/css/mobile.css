@@ -476,7 +476,7 @@ input[type="date"]::-webkit-calendar-picker-indicator {
     background-color: var(--navbar-bg-color);
     padding-top: 25%;
     padding-bottom: 20%;
-    background-image: url(../img/Background/backgroundHeaderTestDrive.png);
+    background-image: url(../img/Background/Luzzauto/backgroundHeaderTestDrive.png);
     background-size: cover;
     background-repeat: no-repeat;
     background-position: top;
@@ -588,7 +588,6 @@ input[type="date"]::-webkit-calendar-picker-indicator {
     border-radius: 1em 0 1em 0;
     height: 60%;
     width: 60%;
-    box-shadow: rgba(17, 17, 26, 0.1) 0px 1px 0px, rgba(17, 17, 26, 0.1) 0px 8px 24px, rgba(17, 17, 26, 0.1) 0px 16px 48px;
     margin-bottom: 1em;
     margin-top: 1em;
 }
@@ -1250,7 +1249,7 @@ document.querySelectorAll('#list_filter .list_insert').forEach(select => {
 #home_header {
     padding-top: 20%;
     padding-bottom: 20%;
-    background-image: url("/LuzzAuto/assets/img/Background/Luzzauto/header_image_Luzzauto_dark.webp");
+    background-image: url("../img/Background/Luzzauto/header_image_Luzzauto_dark.webp");
     background-size: cover;
     background-repeat: no-repeat;
     background-position: top;
