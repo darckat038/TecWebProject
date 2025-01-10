@@ -29,12 +29,13 @@ class DBAccess {
 	// FUNZIONE PER RICAVARE I VEICOLI CON FILTRI APPLICATI PRESENTI NEL DB
 	public function getFilteredVehicles() {
 		$result = array();
+		//DA INSERIRE FILTRI
 		return $result;
 	}
 
 	//FUNZIONE PER RICAVARE TUTTI I VEICOLI PRESENTI NEL DB
 	public function getAllVehicles() {
-		$query = "SELECT * FROM Veicoli ORDER BY ID ASC;";
+		$query = "SELECT * FROM Veicolo ORDER BY ID ASC;";
 		
 		$queryRes = mysqli_query($this->connection, $query); //or die("Errore in openDBConnection: " . mysqli_error($this->connection));
 
@@ -54,7 +55,7 @@ class DBAccess {
 	//FUNZIONE PER INSERIRE NUOVO VEICOLO IN VEICOLI NEL DB
 	public function insertNewVehicle($marca, $modello, $anno, $colore, $alimentazione, $cambio, $trazione, $CVpotenza, $KGpeso, $neoP, $nPosti, $condizione, $chilometraggio) {
 		
-		$queryInsert = "INSERT INTO Veicoli(marca ,modello, anno, colore, alimentazione, cambio, trazione, potenza, peso, neopatentati, numeroPosti, condizione, chilometraggio) 
+		$queryInsert = "INSERT INTO Veicolo(marca ,modello, anno, colore, alimentazione, cambio, trazione, potenza, peso, neopatentati, numeroPosti, condizione, chilometraggio) 
 						VALUES (\"$marca\", \"$modello\", \"$anno\", \"$colore\", \"$alimentazione\", \"$cambio\", \"$trazione\", \"$CVpotenza\", \"$KGpeso\", 
 						\"$neoP\", \"$nPosti\", \"$condizione\", \"$chilometraggio\")";
 						
