@@ -1,0 +1,21 @@
+html, header{
+    background: none;
+}
+
+#menu{
+    float: none;
+}
+
+#breakingNews{
+    float: none;
+    width: auto;
+    margin: 0;
+}
+
+main{
+    margin-left: 0;
+}
+
+footer .imgValidCode{
+    width: 20%;
+}
