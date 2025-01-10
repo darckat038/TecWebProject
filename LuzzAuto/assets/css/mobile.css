@@ -1238,6 +1238,91 @@ document.querySelectorAll('#list_filter .list_insert').forEach(select => {
 
 /*#endregion Listino*/
 
+
+/*#region Auto*/
+
+/******************* 
+        AUTO
+********************/
+
+
+#details {
+    margin-top: 8em;
+    display: flex;
+    flex-direction: column-reverse;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 1em;
+    width: 100%;
+}
+
+#details #details_box {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+}
+
+#details #details_box #details_box_carousel {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 1em;
+}
+
+#details #details_box #details_box_carousel img {
+    max-width: 20em;
+    border-radius: 1em;
+}
+
+#details #details_box #details_box_info {
+    display: flex;
+    flex-direction: column;
+    gap: 1em;
+    margin: 1em;
+}
+
+#details #details_box #details_box_info dl {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(10em, 1fr));
+    column-gap: 0.9em;
+}
+
+#details dd {
+    font-weight: bold;
+    padding-top: 0.3em;
+}
+
+#details dt {
+    font-size: 150%;
+    font-weight: 300;
+    margin-bottom: 0.5em;
+}
+
+#details #details_buttons {
+    background-color: black; /* Sfondo nero */
+    color: white; /* Testo bianco */
+    border: 1px solid black; /* Bordo sottile nero */
+    border-radius: 1em; /* Angoli arrotondati */
+    padding: 1em;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 1em;
+    margin-top: 1em;
+    position: sticky;
+}
+
+#details #details_buttons .list_button {
+    padding: 0.5em;
+    margin: 0.2em;
+    align-self: center;
+}
+
+/*#endregion Auto*/
+
+
+
 /*#region Home*/
 
 /******************* 
