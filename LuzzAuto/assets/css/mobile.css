@@ -1027,11 +1027,21 @@ section.aboutUs_history img {
 #list_filter #list_filter_peso,
 #list_filter #list_filter_posti,
 #list_filter #list_filter_condizione,
-#list_filter #list_filter_prezzo,
 #list_filter #list_filter_chilometraggio {
     width: 100%;
     padding: 0.5em;
     box-sizing: border-box;
+}
+
+#list_filter #list_filter_prezzo {
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: center;
+    align-items: center;
+    border-radius: 0.5em;
+    border: 1px solid var(--form-border-input-color);
+    padding-right: 0.5em;
+    padding-left: 0.3em;
 }
 
 #list_filter #list_filter_neopatentati {
