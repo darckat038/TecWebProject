@@ -1132,7 +1132,12 @@ section.aboutUs_history p {
 }
 
 
+
 /*
+
+#list_filter .list_insert .placeholder {
+    color: var(--form-bg-color);
+}
 
 PER METTERE IL PLACEHOLDER DI COLORE GRIGIO NEI SELECT
 
@@ -1144,7 +1149,7 @@ PER METTERE IL PLACEHOLDER DI COLORE GRIGIO NEI SELECT
     color: var(--form-border-input-color);
 }
 
-in realtà servirebbe 
+/* in realtà servirebbe 
 
 // Aggiungiamo un controllo ai select
 document.querySelectorAll('#list_filter .list_insert').forEach(select => {
