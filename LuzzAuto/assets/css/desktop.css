@@ -148,6 +148,10 @@ select option {
 
 /* CHECKBOX CUSTOM Sì/No */
 
+.interruttore p{
+    display: none;
+}
+
 /* Nascondi l'input checkbox */
 .interruttore input[type="checkbox"] {
     opacity: 0;

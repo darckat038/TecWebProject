@@ -54,8 +54,10 @@
 
         <main id="list_main">
             <section id="list_filter">
-                <input type="checkbox" id="list_toggle_filter" class="list_toggle_input" hidden >
-
+                <form action="">
+                    <input type="checkbox" id="list_toggle_filter" class="list_toggle_input" title="Interruttore espansione menù filtro" hidden >
+                </form>
+                
                 <div id="list_filter_header">
                     <h2 class="list_sectionTitle">Filtra qui il listino</h2>
                     <button for="list_toggle_filter" id="list_toggle_button" aria-label="Seleziona per espandere il form filtro" title="Espandi/comprimi form" aria-expanded="false" aria-controls="filter_form">▼</button>
@@ -156,8 +158,9 @@
                             <div class="list_input_container">
                                 <label for="list_filter_neopatentati" id="list_label_neopatentati">Idoneità neopatentati</label>
                                 <div class="list_insert" id="list_filter_neopatentati">
-                                    <label class="interruttore">
-                                        <input type="checkbox" name="neopatentati" value="true" aria-label="Mettere spunta se neopatentati abilitati alla guida dell'auto">
+                                    <label class="interruttore" for="neopatentatiID">
+                                        <p>Interruttore qui</p>
+                                        <input type="checkbox" name="neopatentati" id="neopatentatiID" value="true" aria-label="Mettere spunta se neopatentati abilitati alla guida dell'auto">
                                         <div class="interruttore-slider">
                                             <div class="interruttore-knob"></div>
                                         </div>
