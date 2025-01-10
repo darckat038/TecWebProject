@@ -26,6 +26,12 @@ class DBAccess {
 		mysqli_close($this->connection);
 	}
 
+	// FUNZIONE PER RICAVARE I VEICOLI CON FILTRI APPLICATI PRESENTI NEL DB
+	public function getFilteredVehicles() {
+		$result = "";
+		return $result;
+	}
+
 	//FUNZIONE PER RICAVARE TUTTI I VEICOLI PRESENTI NEL DB
 	public function getAllVehicles() {
 		$query = "SELECT * FROM Veicoli ORDER BY ID ASC;";
