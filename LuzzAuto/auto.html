@@ -4,16 +4,17 @@
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width">
 
-        <title>Home Page - LuzzAuto Concessionario</title>
+
+        <title>Dettaglio auto | LuzzAuto Concessionario</title>
 
         <link rel="stylesheet" media="screen and (max-width:1024px)" href="assets/css/mobile.css" type="text/css">
-        <link rel="stylesheet" media="screen and (min-width:1024px)" href="assets/css/desktop.css" type="text/css">
+        <link rel="stylesheet" media="screen and (min-width:1025px)" href="assets/css/desktop.css" type="text/css">
         <link rel="stylesheet" media="print" href="assets/css/print.css" type="text/css">
 
-        <script src="assets/js/file.js"></script>
+        <script src="assets/js/toggle.js"></script>
 
-        <meta name="description" content="DA FARE">  <!--!!!!!!!!!!!!!! INSERIRE LA DESCRIZIONE !!!!!!!!!!!!!!!!!!!!!!!!!!!-->
-        <meta name="keywords" content="DA FARE">     <!--!!!!!!!!!!!!!! INSERIRE LE PAROLE CHIAVE !!!!!!!!!!!!!!!!!!!!!!!!!!!-->
+        <meta name="description" content="Visualizza i dettagli dell'auto scelta e prenota un test drive.">
+        <meta name="keywords" content="luzzauto, concessionario, macchina, auto, automobili, guida, vetture, test">
         <meta name="author" content="Artusi Emanuele, Bellon Filippo, Diviesti Filippo, Righetto Filippo">
 
         <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -22,6 +23,91 @@
 
     </head>
     <body>
+        <nav class="topNavBar">
 
+            <h1 class="hide">LuzzAuto</h1>
+            
+            <a href="javascript:void(0);" id="menu-button-container" onclick="menuOpenClose(this)" aria-label="icona apertura menu">               
+                <div class="menu-button-bar1" aria-hidden="true"></div>
+                <div class="menu-button-bar2" aria-hidden="true"></div>
+                <div class="menu-button-bar3" aria-hidden="true"></div>
+            </a>
+            <ul id="menu"  aria-label="menu del sito">
+                <li><a href="index.html" tabindex="-1"><span lang="en-GB">Home</span></a></li>
+                <li><a href="about.html" >Chi Siamo</a></li>
+                <li id="here"><a href="listino.html" >Listino auto</a></li>
+                <li><a href="test_drive.html" ><span lang="en-GB">Test Drive</span></a></li>
+                <li><a href="utente.html" >Area riservata</a></li>
+            </ul>
+        </nav>
+
+        <nav id="breadcrumb">
+            <p>Ti trovi in: <a href="listino.html">Listino auto</a> > Dettaglio auto</p>
+        </nav>
+
+        <main id="details">
+            <div id="details_box">
+                <div id="details_box_carousel">
+                    <img src="assets/img/Cars/DM/mudol.jpeg">
+                    <img src="assets/img/Cars/DM/mudol-interni.jpeg" alt="auto2">
+                </div>
+                <div id="details_box_info">
+                    <h2>Dettagli</h2>
+                    <dl>
+                        <div>
+                            <dd>Anno</dd>
+                            <dt>2024</dt>
+                        </div>
+                        <div>
+                            <dd>Colore</dd>
+                            <dt>Blu chiaro</dt>
+                        </div>
+                        <div>
+                            <dd>Alimentazione</dd>
+                            <dt>Elettrica</dt>
+                        </div>
+                        <div>
+                            <dd>Cambio</dd>
+                            <dt>Automatico</dt>
+                        </div>
+                        <div>
+                            <dd>Trazione</dd>
+                            <dt>Integrale</dt>
+                        </div>
+                        <div>
+                            <dd>Potenza</dd>
+                            <dt>490 CV</dt>
+                        </div>
+                        <div>
+                            <dd>Peso</dd>
+                            <dt>1765 kg</dt>
+                        </div>
+                        <div>
+                            <dd>Neopatentati abilitati</dd>
+                            <dt>No</dt>
+                        </div>
+                        <div>
+                            <dd>Posti</dd>
+                            <dt>5</dt>
+                        </div>
+                    </dl>
+                </div>
+            </div>
+            <div id="details_buttons">
+                <dl>
+                    <dd>Marca</dd>
+                    <dt>DM - Digital Motion</dt>
+                    <dd>Modello</dd>
+                    <dt>Mudol</dt>
+                    <dd>Condizioni</dd>
+                    <dt>Nuova</dt>
+                    <dd>Prezzo</dd>
+                    <dt>€ 65800</dt>
+                </dl>
+
+                <button class="list_button">Prenota un test drive</button>
+                <button class="list_button">Chiedi informazioni</button>
+            </div>
+        </main>
     </body>
 </html>

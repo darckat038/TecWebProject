@@ -1177,7 +1177,7 @@ document.querySelectorAll('#list_filter .list_insert').forEach(select => {
     justify-content: center;
 }
 
-#list_filter .list_button {
+.list_button {
     display: flex;
     margin: 3em auto 0;
     color: var(--form-text-color);
@@ -1194,7 +1194,7 @@ document.querySelectorAll('#list_filter .list_insert').forEach(select => {
         border-radius 0.3s ease;
 }
 
-#list_filter .list_button:hover {
+.list_button:hover {
     background-color: var(--form-text-color);
     color: var(--form-bg-color);
     cursor: pointer;
@@ -1289,6 +1289,93 @@ document.querySelectorAll('#list_filter .list_insert').forEach(select => {
 }
 
 /*#endregion Listino*/
+
+
+/*#region Auto*/
+
+/******************* 
+        AUTO
+********************/
+
+
+#details {
+    margin-top: 8em;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    width: 80%;
+}
+
+#details #details_box {
+    width: 200em;
+}
+
+#details #details_box #details_box_carousel {
+    height: 21em;
+    display: flex;
+    align-items: end;
+    justify-content: center;
+}
+
+#details #details_box #details_box_carousel img {
+    max-width: 5em;
+    transition: transform 0.3s ease, border-radius 0.3s ease;
+    transform-origin: bottom center; /* L'ingrandimento parte dal basso */
+}
+
+#details #details_box #details_box_carousel img:hover {
+    transform: scale(4);
+    border-radius: 0.1em;
+    background-color: white;
+}
+
+#details #details_box #details_box_info {
+    display: flex;
+    flex-direction: column;
+    gap: 1em;
+    margin-top: 1em;
+}
+
+#details #details_box #details_box_info dl {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    column-gap: 0.9em;
+}
+
+#details dd {
+    font-weight: bold;
+    padding-top: 0.3em;
+}
+
+#details dt {
+    font-size: 150%;
+    font-weight: 300;
+    margin-bottom: 0.5em;
+}
+
+#details #details_buttons {
+    background-color: black; /* Sfondo nero */
+    color: white; /* Testo bianco */
+    border: 1px solid black; /* Bordo sottile nero */
+    border-radius: 1em; /* Angoli arrotondati */
+    width: 80em; /* Larghezza fissa */
+    padding: 1em;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 1em;
+    margin-top: 1em;
+    position: sticky;
+}
+
+#details #details_buttons .list_button {
+    padding: 0.5em;
+    margin: 0.2em;
+    align-self: center;
+}
+
+/*#endregion Auto*/
+
 
 /*#region Home*/
 

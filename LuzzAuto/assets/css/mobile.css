@@ -1125,7 +1125,7 @@ document.querySelectorAll('#list_filter .list_insert').forEach(select => {
     justify-content: center;
 }
 
-#list_filter .list_button {
+.list_button {
     display: flex;
     margin: 3em auto 0;
     color: var(--form-text-color);
@@ -1142,7 +1142,7 @@ document.querySelectorAll('#list_filter .list_insert').forEach(select => {
         border-radius 0.3s ease;
 }
 
-#list_filter .list_button:hover {
+.list_button:hover {
     background-color: var(--form-text-color);
     color: var(--form-bg-color);
     cursor: pointer;
@@ -1183,6 +1183,17 @@ document.querySelectorAll('#list_filter .list_insert').forEach(select => {
     border-radius: 1em; /* Angoli arrotondati */
     cursor: pointer; /* Cambia il cursore in puntatore */
 }
+
+.list_car_item a {
+    text-decoration: none; /* Rimuove il sottolineato */
+    color: black; /* Testo nero */
+    transition: color 0.3s ease;
+}
+
+.list_car_item:hover a {
+    color: white; /* Colore bianco durante l'hover del div */
+}
+
 
 .list_car_item .list_car_image {
     max-height: 12em; /* Altezza fissa */
@@ -1237,6 +1248,91 @@ document.querySelectorAll('#list_filter .list_insert').forEach(select => {
 }
 
 /*#endregion Listino*/
+
+
+/*#region Auto*/
+
+/******************* 
+        AUTO
+********************/
+
+
+#details {
+    margin-top: 8em;
+    display: flex;
+    flex-direction: column-reverse;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 1em;
+    width: 100%;
+}
+
+#details #details_box {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+}
+
+#details #details_box #details_box_carousel {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 1em;
+}
+
+#details #details_box #details_box_carousel img {
+    max-width: 20em;
+    border-radius: 1em;
+}
+
+#details #details_box #details_box_info {
+    display: flex;
+    flex-direction: column;
+    gap: 1em;
+    margin: 1em;
+}
+
+#details #details_box #details_box_info dl {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(10em, 1fr));
+    column-gap: 0.9em;
+}
+
+#details dd {
+    font-weight: bold;
+    padding-top: 0.3em;
+}
+
+#details dt {
+    font-size: 150%;
+    font-weight: 300;
+    margin-bottom: 0.5em;
+}
+
+#details #details_buttons {
+    background-color: black; /* Sfondo nero */
+    color: white; /* Testo bianco */
+    border: 1px solid black; /* Bordo sottile nero */
+    border-radius: 1em; /* Angoli arrotondati */
+    padding: 1em;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 1em;
+    margin-top: 1em;
+    position: sticky;
+}
+
+#details #details_buttons .list_button {
+    padding: 0.5em;
+    margin: 0.2em;
+    align-self: center;
+}
+
+/*#endregion Auto*/
+
+
 
 /*#region Home*/
 

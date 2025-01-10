@@ -16,8 +16,6 @@ $stringaVeicoli = "";
 //in fase di produzione il controllo corretto e' $connessioneOK
 if ($connessioneOK) {
 
-    // DA INSERIRE CONTROLLO CON $SESSION PER CONTROLLARE SE CI SONO DEI FILTRI SALVATI
-
 	$veicoli = $connessione->getFilteredVehicles();
 
 	$connessione->closeConnection();
@@ -51,4 +49,5 @@ if ($connessioneOK) {
 $strPatternToReplace = '/<dl id="list_car_list">.*?<\/dl>\s*<\/section>/s';
 
 echo preg_replace($strPatternToReplace, $stringaVeicoli, $paginaHTML);
+
 ?>
