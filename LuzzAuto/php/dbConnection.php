@@ -28,7 +28,7 @@ class DBAccess {
 
 	// FUNZIONE PER RICAVARE I VEICOLI CON FILTRI APPLICATI PRESENTI NEL DB
 	public function getFilteredVehicles() {
-		$result = "";
+		$result = array();
 		return $result;
 	}
 
