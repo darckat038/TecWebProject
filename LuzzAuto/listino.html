@@ -12,6 +12,7 @@
         <link rel="stylesheet" media="print" href="assets/css/print.css" type="text/css">
 
         <script src="assets/js/file.js"></script>
+        <script src="assets/js/toggle.js"></script>
 
         <meta name="description" content="Visita il nostro concessionario per rimanere aggiornato sulle nuove vetture disponibili e prenotare un test di guida con la tua macchina dei sogni.">
         <meta name="keywords" content="luzzauto, concessionario, macchina, auto, automobili, guida, vetture, test">
@@ -49,16 +50,17 @@
         </nav>
 
         <nav id="breadcrumb">
-            <p>Ti trovi in: <span lang="en-GB">Listino auto</span></p>
+            <p>Ti trovi in: Listino auto</p>
         </nav>
 
         <main id="list_main">
             <section id="list_filter">
-                <input type="checkbox" id="list_toggle_filter" class="list_toggle_input" hidden >
-
+                
+                <input type="checkbox" id="list_toggle_filter" class="list_toggle_input" title="Interruttore espansione menù filtro" hidden checked>
+               
                 <div id="list_filter_header">
                     <h2 class="list_sectionTitle">Filtra qui il listino</h2>
-                    <button for="list_toggle_filter" id="list_toggle_button" aria-label="Seleziona per espandere il form filtro" title="Espandi/comprimi form" aria-expanded="false" aria-controls="filter_form">▼</button>
+                    <button for="list_toggle_filter" id="list_toggle_button" aria-label="Seleziona per espandere il form filtro" title="Espandi/comprimi form" aria-expanded="false" aria-controls="filter_form" onclick="switchToggle()">▼</button>
                 </div>
                 
 
@@ -156,8 +158,9 @@
                             <div class="list_input_container">
                                 <label for="list_filter_neopatentati" id="list_label_neopatentati">Idoneità neopatentati</label>
                                 <div class="list_insert" id="list_filter_neopatentati">
-                                    <label class="interruttore">
-                                        <input type="checkbox" name="neopatentati" value="true" aria-label="Mettere spunta se neopatentati abilitati alla guida dell'auto">
+                                    <label class="interruttore" for="neopatentatiID">
+                                        <p>Interruttore qui</p>
+                                        <input type="checkbox" name="neopatentati" id="neopatentatiID" value="true" aria-label="Mettere spunta se neopatentati abilitati alla guida dell'auto">
                                         <div class="interruttore-slider">
                                             <div class="interruttore-knob"></div>
                                         </div>
@@ -309,21 +312,7 @@
             <p id="footnote">Alcuni marchi e modelli sono frutto della nostra immaginazione; le immagini relative sono state generate da strumenti di intelligenza artificiale.</p>
         </footer>
 
-
-
-        <script>
-            // Assicuriamo il funzionamento dell'espansione del filtro da mobile anche da tastiera
-            const toggleButton = document.getElementById('list_toggle_button');
-            const toggleInput = document.getElementById('list_toggle_filter');
-            const filterForm = document.getElementById('list_filter_form');
         
-            
-            toggleButton.addEventListener('click', () => {
-                toggleInput.checked = !toggleInput.checked;
-                toggleButton.setAttribute('aria-expanded', toggleInput.checked.toString());
-                toggleButton.setAttribute('aria-label', toggleInput.checked ? 'Seleziona per comprimere il form filtro' : 'Seleziona per espandere il form filtro');
-            });
 
-        </script>
     </body>
 </html>
