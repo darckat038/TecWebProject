@@ -1396,6 +1396,21 @@ document.querySelectorAll('#list_filter .list_insert').forEach(select => {
     margin-left: 5em;
 }
 
+/* usato per input type range*/
+#home_fastSearch #home_prezzo {
+    background-color: white;
+    padding-left: 0;
+    margin-left: 3.5em;
+    float: left;
+    margin-top: 0.25em;
+}
+
+#home_fastSearch output {
+    float: right;
+    margin-top: 1em;
+    margin-right: 1.5em;
+}
+
 #home_fastSearch .home_insert {
     height: 3em;
     border-radius: 0.5em;
