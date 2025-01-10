@@ -10,4 +10,3 @@ document.addEventListener("DOMContentLoaded", function(){
     salutoUtente.textContent = `${saluto} ${nomeUtente}!`;
   });
 
-  toggle
