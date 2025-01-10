@@ -926,12 +926,16 @@ section.aboutUs_history p {
 
 #aboutUs_ourTeam > dl > div {
     display: block;
-    background-color: var(--cards-bg-color);
-    color: var(--cards-text-color);
+    background-color: rgb(212, 207, 207);
     overflow: hidden;
     border-radius: 0.5em;
     margin: 0 auto 0;
     max-width: 45em;
+}
+
+#aboutUs_ourTeam > dl > div:hover {
+    background-color: var(--cards-bg-color);
+    color: var(--cards-text-color);
 }
 
 #aboutUs_ourTeam > dl > div > img {
@@ -1109,9 +1113,6 @@ section.aboutUs_history p {
     top: 0.2em;
 }
 
-
-
-
 #list_filter .list_insert {
     height: 3em;
     border-radius: 0.5em;
@@ -1131,8 +1132,6 @@ section.aboutUs_history p {
     font-size: 100%;
     width: 5.5em;
 }
-
-
 
 /*
 
@@ -1171,8 +1170,6 @@ document.querySelectorAll('#list_filter .list_insert').forEach(select => {
 });
 
 */
-
-
 
 #list_filter #list_filter_buttons {
     display: flex;
