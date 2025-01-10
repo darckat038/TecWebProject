@@ -1550,8 +1550,8 @@ document.querySelectorAll('#list_filter .list_insert').forEach(select => {
 /* ---- CLIENT REVIEWS ---- */
 
 #home_reviews {
-    padding: 2em 0;
-    margin: 5em 0;
+    padding: 2em 0 0;
+    margin: 5em 0 0;
     text-align: center;
     color: var(--content-text-color);
     width: 100%;
@@ -1567,11 +1567,7 @@ document.querySelectorAll('#list_filter .list_insert').forEach(select => {
 }
 
 #home_reviews dl div.home_review_item {
-    /*
-    margin: 4em 3em 0;
-    display: inline-block;
-    */
-    margin: 4em 2em 0;
+    margin: 4em auto 10em;
     border: 0px solid black;
     border-radius: 1.5em;
     max-width: 25em;
