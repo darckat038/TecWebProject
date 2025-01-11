@@ -1244,6 +1244,17 @@ document.querySelectorAll('#list_filter .list_insert').forEach(select => {
     cursor: pointer; /* Cambia il cursore in puntatore */
 }
 
+
+.list_car_item a {
+    text-decoration: none; /* Rimuove il sottolineato */
+    color: black; /* Testo nero */
+    transition: color 0.3s ease;
+}
+
+.list_car_item:hover a {
+    color: white; /* Colore bianco durante l'hover del div */
+}
+
 .list_car_item .list_car_image {
     flex: 0 0 23em; /* Larghezza fissa della colonna immagine */
     display: flex; /* Disposizione orizzontale delle colonne */
@@ -1495,7 +1506,7 @@ document.querySelectorAll('#list_filter .list_insert').forEach(select => {
 }
 
 #home_fastSearch #home_modello,
-#home_fastSearch #home_prezzo {
+#home_fastSearch #home_prezzoMax {
     float: right;
 }
 
@@ -1514,7 +1525,7 @@ document.querySelectorAll('#list_filter .list_insert').forEach(select => {
 }
 
 /* input type range
-#home_fastSearch #home_prezzo {
+#home_fastSearch #home_prezzoMax {
     background-color: white;
     padding-left: 0;
     margin-left: 3.5em;

@@ -1433,7 +1433,7 @@ document.querySelectorAll('#list_filter .list_insert').forEach(select => {
 }
 
 /* input type range
-#home_fastSearch #home_prezzo {
+#home_fastSearch #home_prezzoMax {
     padding-left: 0;
 }
 /* fine input type range*/
