@@ -54,16 +54,16 @@
         <main>
             <section id="home_fastSearch" aria-label="Sezione ricerca rapida veicolo">
                 <h3 class="home_sectionTitle">Cerchi un veicolo in particolare?</h3>
-                <form action="listino.php" method="GET" id="home_fastSearch_form">
+                <form action="index.php" method="GET" id="home_fastSearch_form" aria-label="Form per filtrare rapidamente le automobili">
                     <!-- Fieldset per info base veicolo -->
                     <fieldset id="home_basicInfo">
                         <legend>INFORMAZIONI SUL VEICOLO</legend>
                         
                         <label for="home_marca" id="home_label_marca">Marca</label>
-                        <input type="text" id="home_marca" class="home_insert" name="marca" placeholder="qualsiasi" aria-required="true" aria-label="Campo di inserimento della marca dell'auto" required data-msg-required="Per favore, inserisci la marca dell'auto">
+                        <input type="text" id="home_marca" class="home_insert" value="[marca]" name="marca" placeholder="qualsiasi" aria-label="Campo di inserimento della marca dell'auto">
                     
                         <label for="home_modello" id="home_label_modello">Modello</label>
-                        <input type="text" id="home_modello" class="home_insert" name="modello" placeholder="qualsiasi" aria-label="Campo di inserimento del modello dell'auto">
+                        <input type="text" id="home_modello" class="home_insert" value="[modello]" name="modello" placeholder="qualsiasi" aria-label="Campo di inserimento del modello dell'auto">
                     </fieldset>
                 
                     <!-- Fieldset per preferenze di acquisto -->
@@ -71,18 +71,22 @@
                         <legend>PREFERENZE</legend>
                         
                         <label for="home_condizione" id="home_label_condizione">Condizione</label>
-                        <select id="home_condizione" name="condizione" class="home_insert" aria-label="Campo di selezione della condizione dell'auto">
-                            <option disabled selected value>-- Seleziona --</option>
+                        <select id="home_condizione" name="condizione" class="home_insert" value="[condizione]" aria-label="Campo di selezione della condizione dell'auto">
+                            <option disabled selected value>-- Qualsiasi --</option>
                             <option value="nuovo">Nuovo</option>
                             <option value="usato">Usato</option>
                             <option value="km0"><abbr title="Chilometro zero">KM 0</abbr></option>
                         </select>
                     
-                        <label for="home_prezzo" id="home_label_prezzo">Prezzo massimo (<abbr title="Euro">&euro;</abbr>)</label>
-                        <input type="number" id="home_prezzo" class="home_insert" name="prezzo" min="1" step="500" placeholder="qualsiasi" aria-label="Campo di inserimento del prezzo massimo dell'auto">
+                        <label for="home_prezzoMax" id="home_label_prezzo">Prezzo massimo (<abbr title="Euro">&euro;</abbr>)</label>
+                        <input type="number" id="home_prezzoMax" class="home_insert" value="[prezzoMax]" name="prezzoMax" min="1" step="500" placeholder="qualsiasi" aria-label="Campo di inserimento del prezzo massimo dell'auto">
                     </fieldset>
                     <input type="submit" value="Ricerca" id="home_cerca" aria-label="Bottone di ricerca per ricercare veicoli con opzioni selezionate sopra">
                 </form>
+
+                <div class = "form_errors">
+                    [err]
+                </div>
             </section>
 
             <section id="home_new" aria-label="Sezione esposizione nuove automobili">
