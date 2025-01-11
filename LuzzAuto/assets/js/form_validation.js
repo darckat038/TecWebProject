@@ -1,3 +1,14 @@
+/*
+function deleteErrorMessagesOnLoad() {
+	let indexBody = document.getElementsByTagName("body");
+
+	indexBody.addEventListener("load", function() {
+		
+	})
+	return;
+}
+*/
+
 function validateFastSearch() {
 	let form = document.getElementById("home_fastSearch_form");
 
