@@ -302,5 +302,45 @@ a:visited {
 
 
 
+form {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+#labelMarcaAdmin, #labelModelloAdmin, #labelAnnoAdmin, #labelColoreAdmin,
+#labelAlimAdmin, #labelCambioAdmin, #labelTrazioneAdmin, #labelPotenzaAdmin, 
+#labelPesoAdmin, #labelPostiAdmin, #labelCondizioniAdmin, #labelChilometriAdmin,
+#labelPrezzoAdmin, #labelNeopAdmin{
+    font-weight: bold;
+    margin-bottom: 5px;
+    display: block;
+    color: var(--text-color);
+}
+
+#marcaAdmin, #modelloAdmin, #annoAdmin, #coloreAdmin, #alimentazioneAdmin, 
+#cambioAdmin, #trazioneAdmin, #potenzaAdmin, #pesoAdmin, #numero_postiAdmin, 
+#condizioneAdmin, #chilometraggioAdmin, #prezzoAdmin{
+    margin-bottom: 1em;
+}
+
+input, select, button {
+    font-size: 16px;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+
+form > * {
+    
+    flex-grow: 1;
+    /*flex-shrink: 1;*/
+    flex-basis: 50%;
+}
+
+#bottoneAggiungi{
+    margin-top: 2em;
+}
+
 
 
