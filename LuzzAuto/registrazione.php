@@ -20,12 +20,12 @@ $registrazioneHTML = file_get_contents('registrazione.html');
 $err = "";
 
 //CONTROLLO SE UTENTE IN SESSION STORAGE GIA' SETTATO da fare
-/*
-if (isset($_SESSION["user"])) {
+session_start();
+if (isset($_SESSION["utente"])) {
 	header("location: utente.php");
 	exit();
 }
-*/
+
 
 //CONTROLLO SE SONO SETTATI TUTTI I CAMPI E CHE NON SIANO VUOTI
 if(isset($_POST["nome"]) && isset($_POST["cognome"]) && isset($_POST["username"]) && isset($_POST["password"]) && isset($_POST["password2"]) && isset($_POST["data"])){
@@ -82,17 +82,18 @@ if(isset($_POST["nome"]) && isset($_POST["cognome"]) && isset($_POST["username"]
 			}
 			else{
 				if($ris){
-					//impostare la sessione utente da fare
+					$_SESSION['utente'] = $_POST["username"];
+					$_SESSION['pass'] = password_hash($_POST["password"], PASSWORD_DEFAULT);
 					header("location: utente.html");
 				}
 				else{
-					//rimanda alla pagina di errore 500 da fare
+					header("location: 500.html");
 					exit();
 				}
 			}
 		}
 		catch(Exception){
-			//rimanda alla pagina di errore 500 da fare
+			header("location: 500.html");
 			exit();
 		}
 		
