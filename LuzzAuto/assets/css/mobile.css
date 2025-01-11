@@ -1184,6 +1184,17 @@ document.querySelectorAll('#list_filter .list_insert').forEach(select => {
     cursor: pointer; /* Cambia il cursore in puntatore */
 }
 
+.list_car_item a {
+    text-decoration: none; /* Rimuove il sottolineato */
+    color: black; /* Testo nero */
+    transition: color 0.3s ease;
+}
+
+.list_car_item:hover a {
+    color: white; /* Colore bianco durante l'hover del div */
+}
+
+
 .list_car_item .list_car_image {
     max-height: 12em; /* Altezza fissa */
     max-width: 13em; /* Larghezza fissa */

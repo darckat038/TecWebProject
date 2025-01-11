@@ -12,3 +12,6 @@
 ### come fare inserimento immagini?
 
 ### come gestire testo "alt" delle immagini (js per corretta visualizzazione, come inserire nel form e salvare nel DB)?
+
+## I bottoni devono avere comunque il formato link (testo sottolineato ecc)?
+### vale anche per i riquadri tipo i veicoli in listino?
