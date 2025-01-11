@@ -19,17 +19,42 @@ class DBConnection {
 			throw $e;
 		}
 	}
-
 	public function getConnection() {
 		if (!$this->connection->connect_errno)
 			return $this->connection;
 	}
-
 	public function closeConnection() {
 		if (!$this->connection->connect_errno)
 			$this->connection->close();
 	}
 
+
+
+
+	//FUNZIONE DI REGISTRAZIONE DI UN UTENTE NEL DB
+	public function registerUser($username, $password, $nome, $cognome, $dataNascita) {
+		// Preparazione della query SQL con placeholder
+		$query = "INSERT INTO Utente (username, password, nome, cognome, dataNascita) VALUES (?, ?, ?, ?, ?)";
+
+		// Preparazione dello statement
+		$stmt = $this->connection->prepare($query);
+		if ($stmt === false) {
+			die("Errore nella preparazione dello statement: " . $this->connection->error);
+		}
+
+		// Bind dei parametri ("sssss" = 5 stringhe)
+		$stmt->bind_param("sssss", $username, $password, $nome, $cognome, $dataNascita);
+
+		// Esecuzione della query
+		$result = $stmt->execute();
+
+		// Controllo del risultato
+		if ($result) {
+			return true;
+		} else {
+			return false;
+		}
+	}
 
 
 	// FUNZIONE PER RICAVARE I VEICOLI CON FILTRI APPLICATI PRESENTI NEL DB
