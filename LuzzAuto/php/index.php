@@ -54,9 +54,9 @@ if ($connessioneOK) {
 
 // Rimpiazzo segnaposto con immagini
 
-echo str_replace("[IMG_DM_MUDOL]", $DM_Mudol, $paginaHTML);
-echo str_replace("[IMG_ESU_BELZUNY]", $ESU_Belzuny, $paginaHTML);
-echo str_replace("[IMG_UNIPD_PLANETARY]", $UNIPD_Planetary, $paginaHTML);
+$paginaHTML = str_replace("[IMG_DM_MUDOL]", $DM_Mudol, $paginaHTML);
+$paginaHTML = str_replace("[IMG_ESU_BELZUNY]", $ESU_Belzuny, $paginaHTML);
+$paginaHTML = str_replace("[IMG_UNIPD_PLANETARY]", $UNIPD_Planetary, $paginaHTML);
 
 /*
 echo str_replace("[IMG_DM_STEMMA]", $DM_Stemma, $paginaHTML);
