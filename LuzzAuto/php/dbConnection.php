@@ -1,6 +1,8 @@
 <?php
 namespace DB;
 
+use Exception;
+
 mysqli_report(MYSQLI_REPORT_ERROR | MYSQLI_REPORT_STRICT);
 
 class DBConnection {
@@ -27,9 +29,6 @@ class DBConnection {
 		if (!$this->connection->connect_errno)
 			$this->connection->close();
 	}
-
-
-
 
 	//FUNZIONE DI REGISTRAZIONE DI UN UTENTE NEL DB
 	public function registerUser($username, $password, $nome, $cognome, $dataNascita) {
@@ -67,33 +66,51 @@ class DBConnection {
 	//FUNZIONE PER RICAVARE TUTTI I VEICOLI PRESENTI NEL DB
 	public function getAllVehicles() {
 		$query = "SELECT * FROM Veicolo ORDER BY ID ASC;";
-		
-		$queryRes = mysqli_query($this->connection, $query); //or die("Errore in openDBConnection: " . mysqli_error($this->connection));
 
-		if(mysqli_num_rows($queryRes) == 0) {
-			return null;
+		// Preparazione dello statement
+		$stmt = $this->connection->prepare($query);
+		if ($stmt === false) {
+			die("Errore nella preparazione dello statement: " . $this->connection->error);
+		}
+
+		// Esecuzione della query
+		$result = $stmt->execute();
+
+		// Controllo del risultato
+		if ($result) {
+			$ret = ($stmt->get_result())->fetch_all(MYSQLI_ASSOC);
+			$stmt->close();
+			return $ret;
 		} else {
-			$result = array();
-			while($row = mysqli_fetch_assoc($queryRes)) {
-				array_push($result, $row);
-			}
-
-			$queryRes->free();
-			return $result;
+			$stmt->close();
+			return false;
 		}
 	}
 
 	//FUNZIONE PER INSERIRE NUOVO VEICOLO IN VEICOLI NEL DB
-	public function insertNewVehicle($marca, $modello, $anno, $colore, $alimentazione, $cambio, $trazione, $CVpotenza, $KGpeso, $neoP, $nPosti, $condizione, $chilometraggio) {
+	public function insertNewVehicle($marca, $modello, $anno, $colore, $alimentazione, $cambio, $trazione, $CVpotenza, $KGpeso, $neoP, $nPosti, $condizione, $chilometraggio, $prezzo) {
 		
-		$queryInsert = "INSERT INTO Veicolo(marca ,modello, anno, colore, alimentazione, cambio, trazione, potenza, peso, neopatentati, numeroPosti, condizione, chilometraggio) 
-						VALUES (\"$marca\", \"$modello\", \"$anno\", \"$colore\", \"$alimentazione\", \"$cambio\", \"$trazione\", \"$CVpotenza\", \"$KGpeso\", 
-						\"$neoP\", \"$nPosti\", \"$condizione\", \"$chilometraggio\")";
-						
-		$queryRes = mysqli_query($this->connection, $queryInsert) or die(mysqli_error($this->connection));
+		$query = "INSERT INTO Veicolo (marca ,modello, anno, colore, alimentazione, cambio, trazione, potenza, 
+							peso, neopatentati, numeroPosti, condizione, chilometraggio, prezzo) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)";
 
-		if(mysqli_affected_rows($this->connection) > 0) {
-			$queryRes->free();
+		// Preparazione dello statement
+		$stmt = $this->connection->prepare($query);
+		if ($stmt === false) {
+			die("Errore nella preparazione dello statement: " . $this->connection->error);
+		}
+
+		// Bind dei parametri (s = stringa, i = intero, d = double/float, b = blob)
+		$stmt->bind_param("ssissssiiiisid", $marca, $modello, $anno, $colore, $alimentazione, $cambio, $trazione, $CVpotenza, 
+						$KGpeso, $neoP, $nPosti, $condizione, $chilometraggio, $prezzo);
+
+		// Esecuzione della query
+		$result = $stmt->execute();
+
+		// Controllo del risultato
+		if ($result) {
+			return true;
+		} else {
+			return false;
 		}
 		
 	}
