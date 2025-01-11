@@ -1,1 +1,4 @@
 ErrorDocument 404 /404.html
+
+RewriteEngine On
+RewriteRule ^registrazione\.html$ /registrazione.php [L,R=301]
