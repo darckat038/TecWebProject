@@ -192,7 +192,7 @@ a:visited {
     
 
 
-/* Stile della tabella */
+/* tabella prenotazione */
 .tabellaPrenAdmin {
     width: calc(100% - 6em); /* 100% meno il padding a sinistra e a destra */
     border-collapse: collapse;
@@ -214,6 +214,7 @@ a:visited {
     display: block;
 }
 
+/*Gestione prenotazione*/
 
 .sectionGestPrenAdmin {
     display: grid;
@@ -254,7 +255,7 @@ a:visited {
     cursor: pointer; 
 }
 
-#eliminaPrenAdmin{
+#inviaAzioneAdmin{
     grid-column: 3; 
     grid-row:   2;
     align-self: center; 
@@ -263,6 +264,54 @@ a:visited {
     font-size: 16px; 
     border-radius: 5px;
 }
+
+
+/*Aggiungi Automobile*/
+#formAdmin {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+#labelMarcaAdmin, #labelModelloAdmin, #labelAnnoAdmin, #labelColoreAdmin,
+#labelAlimAdmin, #labelCambioAdmin, #labelTrazioneAdmin, #labelPotenzaAdmin, 
+#labelPesoAdmin, #labelPostiAdmin, #labelCondizioniAdmin, #labelChilometriAdmin,
+#labelPrezzoAdmin, #labelNeopAdmin{
+    font-weight: bold;
+    margin-bottom: 5px;
+    display: block;
+    color: var(--text-color);
+}
+
+#marcaAdmin, #modelloAdmin, #annoAdmin, #coloreAdmin, #alimentazioneAdmin, 
+#cambioAdmin, #trazioneAdmin, #potenzaAdmin, #pesoAdmin, #numero_postiAdmin, 
+#condizioneAdmin, #chilometraggioAdmin, #prezzoAdmin{
+    margin-bottom: 1em;
+    font-size: 16px;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+
+#formAdmin > * {
+    
+    flex-grow: 1;
+    /*flex-shrink: 1;*/
+    flex-basis: 50%;
+}
+
+#bottoneAggiungi{
+    margin-top: 2em;
+    font-size: 16px;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+
+
+
+/*Elimina Automobile*/
 
 .sectionEliminaAdmin{
     display: grid;
@@ -302,45 +351,7 @@ a:visited {
 
 
 
-form {
-    display: flex;
-    flex-wrap: wrap;
-}
 
-#labelMarcaAdmin, #labelModelloAdmin, #labelAnnoAdmin, #labelColoreAdmin,
-#labelAlimAdmin, #labelCambioAdmin, #labelTrazioneAdmin, #labelPotenzaAdmin, 
-#labelPesoAdmin, #labelPostiAdmin, #labelCondizioniAdmin, #labelChilometriAdmin,
-#labelPrezzoAdmin, #labelNeopAdmin{
-    font-weight: bold;
-    margin-bottom: 5px;
-    display: block;
-    color: var(--text-color);
-}
-
-#marcaAdmin, #modelloAdmin, #annoAdmin, #coloreAdmin, #alimentazioneAdmin, 
-#cambioAdmin, #trazioneAdmin, #potenzaAdmin, #pesoAdmin, #numero_postiAdmin, 
-#condizioneAdmin, #chilometraggioAdmin, #prezzoAdmin{
-    margin-bottom: 1em;
-}
-
-input, select, button {
-    font-size: 16px;
-    padding: 10px;
-    border: 1px solid #ccc;
-    border-radius: 4px;
-    box-sizing: border-box;
-}
-
-form > * {
-    
-    flex-grow: 1;
-    /*flex-shrink: 1;*/
-    flex-basis: 50%;
-}
-
-#bottoneAggiungi{
-    margin-top: 2em;
-}
 
 
 
