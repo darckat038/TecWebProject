@@ -55,11 +55,21 @@ class DBConnection {
 		}
 	}
 
-
 	// FUNZIONE PER RICAVARE I VEICOLI CON FILTRI APPLICATI PRESENTI NEL DB
-	public function getFilteredVehicles() {
+	public function getFilteredVehicles($params) {
 		$result = array();
 		//DA INSERIRE FILTRI
+
+		$query = "SELECT * FROM Veicolo WHERE marca IN (?) AND modello IN (?)";
+
+		// Preparazione dello statement
+		$stmt = $this->connection->prepare($query);
+		if ($stmt === false) {
+			die("Errore nella preparazione dello statement: " . $this->connection->error);
+		}
+
+		// Bind dei parametri (s = stringa, i = intero, d = double/float, b = blob)
+
 		return $result;
 	}
 
