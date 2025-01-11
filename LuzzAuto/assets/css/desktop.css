@@ -1488,7 +1488,7 @@ document.querySelectorAll('#list_filter .list_insert').forEach(select => {
 }
 
 #home_fastSearch #home_modello,
-#home_fastSearch #home_prezzo {
+#home_fastSearch #home_prezzoMax {
     float: right;
 }
 
@@ -1507,7 +1507,7 @@ document.querySelectorAll('#list_filter .list_insert').forEach(select => {
 }
 
 /* input type range
-#home_fastSearch #home_prezzo {
+#home_fastSearch #home_prezzoMax {
     background-color: white;
     padding-left: 0;
     margin-left: 3.5em;
