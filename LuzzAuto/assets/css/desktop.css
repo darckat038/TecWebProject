@@ -1987,6 +1987,11 @@ footer {
     width: 100%;
 }
 
+footer.shortPageFooter {
+   position: absolute;
+   bottom: 0;
+}
+
 footer p {
     display: inline-block;
     margin: auto 0;
