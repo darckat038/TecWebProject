@@ -32,6 +32,28 @@ class DBConnection {
 
 	//FUNZIONE DI REGISTRAZIONE DI UN UTENTE NEL DB
 	public function registerUser($username, $password, $nome, $cognome, $dataNascita) {
+
+		$queryControllo = "SELECT * FROM Utente WHERE username = ?";
+		// Preparazione dello statement
+		$stmt = $this->connection->prepare($queryControllo);
+		if ($stmt === false) {
+			die("Errore nella preparazione dello statement: " . $this->connection->error);
+		}
+		// Bind dei parametri
+		$stmt->bind_param("s", $username);
+		// Esecuzione della query
+		if (!$stmt->execute()) {
+			die("Errore nell'esecuzione dello statement: " . $stmt->error);
+		}
+		// Ottenimento del risultato
+		$result = $stmt->get_result();
+		$rows = $result->fetch_all(MYSQLI_ASSOC);
+		$numRows = count($rows);
+
+		if($numRows != 0){
+			return -1;
+		}
+
 		// Preparazione della query SQL con placeholder
 		$query = "INSERT INTO Utente (username, password, nome, cognome, dataNascita) VALUES (?, ?, ?, ?, ?)";
 
@@ -49,10 +71,11 @@ class DBConnection {
 
 		// Controllo del risultato
 		if ($result) {
-			return true;
+			return 1;
 		} else {
-			return false;
+			return 0;
 		}
+			
 	}
 
 

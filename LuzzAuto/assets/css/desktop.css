@@ -26,6 +26,7 @@
     --form-bg-color: #000000;
     --form-border-input-color: #919191;
     --form-text-color: #ffffff;
+    --form-error-text-color: #ff2910;
 }
 
 body.dark {
@@ -429,6 +430,12 @@ input[type="date"]::-webkit-calendar-picker-indicator {
 #signup_button:hover{
     background-color: var(--form-text-color);
     color: var(--form-bg-color);
+}
+
+#signup_errors{
+    text-align: center;
+    margin-top: 1em;
+    color: var(--form-error-text-color);
 }
 
 

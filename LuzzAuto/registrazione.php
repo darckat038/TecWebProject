@@ -1,5 +1,17 @@
 <?php
 
+function ripristinoInput(){
+	$registrazioneHTML = file_get_contents('registrazione.html');
+	//RIPRISTINO DELL'INPUT INSERITO
+	$registrazioneHTML = str_replace("[nome]", htmlspecialchars(isset($_POST['nome']) ? $_POST['nome'] : ''), $registrazioneHTML);
+	$registrazioneHTML = str_replace("[cognome]", htmlspecialchars(isset($_POST['cognome']) ? $_POST['cognome'] : ''), $registrazioneHTML);
+	$registrazioneHTML = str_replace("[username]", htmlspecialchars(isset($_POST['username']) ? $_POST['username'] : ''), $registrazioneHTML);
+	$registrazioneHTML = str_replace("[password]", htmlspecialchars(isset($_POST['password']) ? $_POST['password'] : ''), $registrazioneHTML);
+	$registrazioneHTML = str_replace("[password2]", htmlspecialchars(isset($_POST['password2']) ? $_POST['password2'] : ''), $registrazioneHTML);
+	$registrazioneHTML = str_replace("[data]", htmlspecialchars(isset($_POST['data']) ? $_POST['data'] : ''), $registrazioneHTML);
+	return $registrazioneHTML;
+}
+
 require_once 'dbConnection.php';
 use DB\DBConnection;
 
@@ -7,7 +19,7 @@ $registrazioneHTML = file_get_contents('registrazione.html');
 
 $err = "";
 
-//CONTROLLO SE UTENTE IN SESSION STORAGE GIA' SETTATO
+//CONTROLLO SE UTENTE IN SESSION STORAGE GIA' SETTATO da fare
 /*
 if (isset($_SESSION["user"])) {
 	header("location: utente.php");
@@ -52,13 +64,7 @@ if(isset($_POST["nome"]) && isset($_POST["cognome"]) && isset($_POST["username"]
 
 		//CONTROLLO ERRORI
 		if (!empty($err)) {
-			//RIPRISTINO DELL'INPUT INSERITO
-			$registrazioneHTML = str_replace("[nome]", htmlspecialchars(isset($_POST['nome']) ? $_POST['nome'] : ''), $registrazioneHTML);
-			$registrazioneHTML = str_replace("[cognome]", htmlspecialchars(isset($_POST['cognome']) ? $_POST['cognome'] : ''), $registrazioneHTML);
-			$registrazioneHTML = str_replace("[username]", htmlspecialchars(isset($_POST['username']) ? $_POST['username'] : ''), $registrazioneHTML);
-			$registrazioneHTML = str_replace("[password]", htmlspecialchars(isset($_POST['password']) ? $_POST['password'] : ''), $registrazioneHTML);
-			$registrazioneHTML = str_replace("[password2]", htmlspecialchars(isset($_POST['password2']) ? $_POST['password2'] : ''), $registrazioneHTML);
-			$registrazioneHTML = str_replace("[data]", htmlspecialchars(isset($_POST['data']) ? $_POST['data'] : ''), $registrazioneHTML);
+			$registrazioneHTML = ripristinoInput();
 			echo str_replace("[err]", $err, $registrazioneHTML);
 			exit();
 		}
@@ -69,13 +75,20 @@ if(isset($_POST["nome"]) && isset($_POST["cognome"]) && isset($_POST["username"]
 			$ris = $db->registerUser($_POST["username"], password_hash($_POST["password"], PASSWORD_DEFAULT), $_POST["nome"], $_POST["cognome"], $_POST["data"]);
 			$db->closeConnection();
 			unset($db);
-			if($ris){
-				//impostare la sessione utente da fare
-				header("location: utente.html");
+			if($ris == -1){
+				$err = $err . "<p><span lang='en-GB'>Username</span> già in uso.</p>";
+				$registrazioneHTML = ripristinoInput();
+				echo str_replace("[err]", $err, $registrazioneHTML);
 			}
 			else{
-				//rimanda alla pagina di errore 500 da fare
-				exit();
+				if($ris){
+					//impostare la sessione utente da fare
+					header("location: utente.html");
+				}
+				else{
+					//rimanda alla pagina di errore 500 da fare
+					exit();
+				}
 			}
 		}
 		catch(Exception){
@@ -88,14 +101,9 @@ if(isset($_POST["nome"]) && isset($_POST["cognome"]) && isset($_POST["username"]
 
 }
 else{
-	//RIPRISTINO DELL'INPUT INSERITO
-	$registrazioneHTML = str_replace("[nome]", '', $registrazioneHTML);
-	$registrazioneHTML = str_replace("[cognome]", '', $registrazioneHTML);
-	$registrazioneHTML = str_replace("[username]", '', $registrazioneHTML);
-	$registrazioneHTML = str_replace("[password]", '', $registrazioneHTML);
-	$registrazioneHTML = str_replace("[password2]", '', $registrazioneHTML);
-	$registrazioneHTML = str_replace("[data]", '', $registrazioneHTML);
+	$registrazioneHTML = ripristinoInput();
 	echo str_replace("[err]", $err, $registrazioneHTML);
+
 }
 
 
