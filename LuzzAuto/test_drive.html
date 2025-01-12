@@ -15,6 +15,7 @@
     <link rel="stylesheet" media="print" href="assets/css/print.css" type="text/css">
 
     <script src="assets/js/toggle.js"></script>
+    <script src="assets/js/back_to_origin.js"></script>
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -86,7 +87,10 @@
                 <h3>Prenota ora il tuo <span lang="en-GB">Test Drive</span></h3>
                 <p>Non aspettare oltre: fai il primo passo verso la tua nuova auto!</p>
 
-                <!--SEZIONE FORM-->
+
+                [formORbuttons]
+
+                <!--
                  
 
                 <form id="test_drive_form" method="post" action="">
@@ -109,13 +113,18 @@
                         <input id="test_drive_prenotaBtn" type="submit" value="INVIA RICHIESTA" aria-label="Bottone di invio del form">
         
                     </fieldset>
+                    
                 </form>
 
-                
+                <div class="form_errors">
+                    [err]
+                </div>
 
-                <!--OPPURE BOTTONE (LOGIN)(SIGNIN)-->
 
-               <!--
+
+                /////////////////////////////////////
+
+
 
                 <p>Accedi al tuo profilo per usufruire del servizio di <span lang="en-GB">Test Drive</span> :</p>
                 <a href="login.html">LogIn</a>
@@ -124,6 +133,8 @@
                 <a href="registrazione.html">SignIn</a>
                 
                 -->
+
+            
 
             </section>
 
