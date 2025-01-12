@@ -1,53 +1,80 @@
 <?php
 
-require_once "dbConnection.php";
-use DB\DBAccess;
+function ripristinoInput(){
+	$listinoHTML = file_get_contents("listino.html");
+	//RIPRISTINO DELL'INPUT INSERITO
+	// Se c'è input salvato in $_GET, mette quello, altrimenti valore di default (stringa vuota o select default)
+	$listinoHTML = str_replace("[marca]", htmlspecialchars(isset($_GET['marca']) ? $_GET['marca'] : ''), $listinoHTML);
+	$listinoHTML = str_replace("[modello]", htmlspecialchars(isset($_GET['modello']) ? $_GET['modello'] : ''), $listinoHTML);
+	
+	$listinoHTML = str_replace("[condizione]", htmlspecialchars(isset($_GET['condizione']) ? $_GET['condizione'] : '-- Qualsiasi --'), $listinoHTML);
 
-//DA SOSTITUIRE CON PERCORSO FILE HTML
-$paginaHTML = file_get_contents("listino.html");
-
-$connessione = new DBAccess();
-
-$connessioneOK = $connessione->openDBConnection();
-
-$veicoli = array();
-$stringaVeicoli = "";
-
-//in fase di produzione il controllo corretto e' $connessioneOK
-if ($connessioneOK) {
-
-	$veicoli = $connessione->getFilteredVehicles();
-
-	$connessione->closeConnection();
-
-	if(count($veicoli) > 0) {
-
-		$stringaVeicoli = '<dl id="list_car_list">';
-
-		$stringaVeicoli .= '<!---
-				IDEA: DESKTOP -> RETTANGOLI LARGHI, IMG A SX E INFO A DX
-						MOBILE -> RETTANGOLI STRETTI, IMG IN ALTO E INFO IN BASSO
-				-->';
-
-		foreach($veicoli as $veicolo) {
-			
-		}
-
-		$stringaVeicoli .= '</dl>
-            </section>';
-
-	}
-
-
-} else {
-
-	//in fase di produzione rimuovere $connessioneOK
-	$stringaVeicoli = $connessioneOK . "<p>I sistemi sono momentaneamente fuori servizio, ci scusiamo per il disagio.</p>";
-
+	$listinoHTML = str_replace("[prezzoMax]", htmlspecialchars(isset($_GET['prezzoMax']) ? $_GET['prezzoMax'] : ''), $listinoHTML);
+	return $listinoHTML;
 }
 
-$strPatternToReplace = '/<dl id="list_car_list">.*?<\/dl>\s*<\/section>/s';
+require_once "dbConnection.php";
+use DB\DBConnection;
 
-echo preg_replace($strPatternToReplace, $stringaVeicoli, $paginaHTML);
+//DA SOSTITUIRE CON PERCORSO FILE HTML
+$listinoHTML = file_get_contents("listino.html");
+
+$err = "";
+
+if(isset($_GET["marca"]) || isset($_GET["modello"]) || isset($_GET["anno"]) || isset($_GET["colore"]) 
+	|| isset($_GET["alimentazione"]) || isset($_GET["cambio"]) || isset($_GET["trazione"]) || isset($_GET["potenzaMin"]) || isset($_GET["potenzaMax"]) 
+	|| isset($_GET["pesoMin"]) || isset($_GET["pesoMax"]) || isset($_GET["neopatentati"]) || isset($_GET["posti"]) || isset($_GET["condizione"]) 
+	|| isset($_GET["prezzoMax"]) || isset($_GET["chilometraggio"])) {
+
+    //CONTROLLI SULL'INPUT
+	if (!preg_match("/^[A-Za-z0-9\-]*$/", $_GET["marca"])) {
+		$err = $err . "<p>Marca non valida, puoi usare solo lettere, numeri e il carattere \"-\".</p>";
+	}
+	if (!preg_match("/^[A-Za-z0-9\-]*$/", $_GET["modello"])) {
+		$err = $err . "<p>Modello non valido, puoi usare solo lettere, numeri e il carattere \"-\".</p>";
+	}
+	if ($_GET["anno"] != "" && (intval($_GET["anno"]) < 1990 || intval($_GET["anno"]) > 2024)) {
+		$err = $err . "<p>Anno non valido, inserisci un anno compreso tra 1990 e 2024</p>";
+	}
+	if ($_GET["prezzoMax"] != "" && doubleval($_GET["prezzoMax"]) <= 0) {
+		$err = $err . "<p>Prezzo non valido, inserisci un prezzo maggiore di 0.</p>"; 
+	}
+
+	//CONTROLLO ERRORI
+	if (!empty($err)) {
+		$listinoHTML = ripristinoInput();
+		echo str_replace("[err]", $err, $listinoHTML);
+		exit();
+	}
+
+	//ESECUZIONE DELLA QUERY
+	/*
+	try{
+		$db = new DBConnection();
+
+		//IMPOSTARE DATI COME INDICATO NEI FILTRI
+		$params = array();
+		$ris = $db->getFilteredVehicles($params);
+
+		$db->closeConnection();
+		unset($db);
+
+		if($ris){
+			
+		}
+		else{
+			header("location: 500.html");
+			exit();
+		}
+	}
+	catch(Exception){
+		header("location: 500.html");
+		exit();
+	}
+		*/
+} else {
+	$listinoHTML = ripristinoInput();
+	echo str_replace("[err]", $err, $listinoHTML);
+}
 
 ?>

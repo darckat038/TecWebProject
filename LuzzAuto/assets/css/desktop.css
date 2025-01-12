@@ -1080,13 +1080,11 @@ section.aboutUs_history p {
 
 #list_filter #list_filter_marca,
 #list_filter #list_filter_modello,
-#list_filter #list_filter_anno,
 #list_filter #list_filter_colore,
 #list_filter #list_filter_alimentazione,
 #list_filter #list_filter_cambio,
 #list_filter #list_filter_trazione,
 #list_filter #list_filter_potenza,
-#list_filter #list_filter_posti,
 #list_filter #list_filter_condizione,
 #list_filter #list_filter_prezzo,
 #list_filter #list_filter_chilometraggio {
@@ -1094,6 +1092,19 @@ section.aboutUs_history p {
     padding: 0.5em;
     box-sizing: border-box;
 }
+
+#list_filter #list_filter_anno {
+    width: 8em;
+    padding: 0.5em;
+    box-sizing: border-box;
+}
+
+#list_filter #list_filter_posti {
+    width: 10em;
+    padding: 0.5em;
+    box-sizing: border-box;
+}
+
 
 #list_filter #list_filter_potenza,
 #list_filter #list_filter_peso {
