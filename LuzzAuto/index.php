@@ -40,7 +40,6 @@ if(isset($_GET["marca"]) || isset($_GET["modello"]) || isset($_GET["condizione"]
 	}
 
 	// PASSAGGIO A LISTINO.PHP
-	$_GET["hop"] = "1";
 	header("location: listino.php");
 
 } else {
