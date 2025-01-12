@@ -117,7 +117,7 @@
                                     <option value="benzina">Benzina</option>
                                     <option value="gasolio">Gasolio</option>
                                     <option value="elettrico">Elettrico</option>
-                                    <option value="gpl">Ibrido <abbr title="">GPL</abbr></option>
+                                    <option value="gpl">Ibrido <abbr title="Gas petrolio liquefatti">GPL</abbr></option>
                                     <option value="plugin">Ibrido <span lang="en-GB">Plug-in</span></option>
                                 </select>
                             </div>
@@ -125,7 +125,7 @@
                             <div class="list_input_container">
                                 <label for="list_filter_cambio" id="list_label_cambio">Cambio</label>
                                 <select id="list_filter_cambio" class="list_insert" name="cambio" aria-label="Campo di inserimento del cambio dell'auto">
-                                    <option disabled selected value>Qualsiasi</option>
+                                    <option value="qualsiasi">Qualsiasi</option>
                                     <option value="manuale">Manuale</option>
                                     <option value="automatico">Automatico</option>
                                 </select>
@@ -223,6 +223,10 @@
                     -->
 
                 </form>
+
+                <div class="form_errors">
+                    [err]
+                </div>
             </section>
 
             <section id="list" aria-label="Sezione lista automobili filtrata">
