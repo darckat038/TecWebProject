@@ -19,7 +19,7 @@ $registrazioneHTML = file_get_contents('registrazione.html');
 
 $err = "";
 
-//CONTROLLO SE UTENTE IN SESSION STORAGE GIA' SETTATO da fare
+//CONTROLLO SE UTENTE IN SESSION STORAGE GIA' SETTATO
 session_start();
 if (isset($_SESSION["utente"])) {
 	header("location: utente.php");
@@ -32,6 +32,9 @@ if(isset($_POST["nome"]) && isset($_POST["cognome"]) && isset($_POST["username"]
 
 	if(empty($_POST["nome"]) || empty($_POST["cognome"]) || empty($_POST["username"]) || empty($_POST["password"]) || empty($_POST["password2"]) || empty($_POST["data"])){
 		$err = $err . "<p>Devi compilare tutti i campi.</p>";
+		$registrazioneHTML = ripristinoInput();
+		echo str_replace("[err]", $err, $registrazioneHTML);
+		exit();
 	}
 	else{
 
@@ -83,8 +86,7 @@ if(isset($_POST["nome"]) && isset($_POST["cognome"]) && isset($_POST["username"]
 			else{
 				if($ris){
 					$_SESSION['utente'] = $_POST["username"];
-					$_SESSION['pass'] = password_hash($_POST["password"], PASSWORD_DEFAULT);
-					header("location: utente.html");
+					header("location: utente.php");
 				}
 				else{
 					header("location: 500.html");
@@ -104,7 +106,6 @@ if(isset($_POST["nome"]) && isset($_POST["cognome"]) && isset($_POST["username"]
 else{
 	$registrazioneHTML = ripristinoInput();
 	echo str_replace("[err]", $err, $registrazioneHTML);
-
 }
 
 

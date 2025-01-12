@@ -78,6 +78,40 @@ class DBConnection {
 			
 	}
 
+	//FUNZIONE DI LOGIN DI UN UTENTE
+	public function loginUser($username, $password) {
+
+		$queryControllo = "SELECT username, password FROM Utente WHERE username = ?";
+		// Preparazione dello statement
+		$stmt = $this->connection->prepare($queryControllo);
+		if ($stmt === false) {
+			die("Errore nella preparazione dello statement: " . $this->connection->error);
+		}
+		// Bind dei parametri
+		$stmt->bind_param("s", $username);
+		// Esecuzione della query
+		if (!$stmt->execute()) {
+			die("Errore nell'esecuzione dello statement: " . $stmt->error);
+		}
+		// Ottenimento del risultato
+		$result = $stmt->get_result();
+		$rows = $result->fetch_all(MYSQLI_ASSOC);
+		$numRows = count($rows);
+
+		if($numRows == 0){
+			return -1;
+		}
+		else{
+			if(password_verify($password, $rows[0]['password'])){
+				return 1;
+			}
+			else{
+				return 0;
+			}
+		}
+			
+	}
+
 	// FUNZIONE PER RICAVARE I VEICOLI CON FILTRI APPLICATI PRESENTI NEL DB
 	/*
 	* Uso array associativo params dove metto i vari valori. Se valore vuoto, non lo setto in params
