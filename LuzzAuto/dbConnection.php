@@ -93,6 +93,9 @@ class DBConnection {
 
 		// Bind dei parametri (s = stringa, i = intero, d = double/float, b = blob)
 
+		// Esecuzione della query
+		$result = $stmt->execute();
+
 		return $result;
 	}
 
