@@ -15,3 +15,5 @@
 
 ## I bottoni devono avere comunque il formato link (testo sottolineato ecc)?
 ### vale anche per i riquadri tipo i veicoli in listino?
+
+## Devo controllare htmlspecialchars della password o non serve perchè non sarà mai visualizzata in chiaro?
