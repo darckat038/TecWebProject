@@ -78,12 +78,74 @@ class DBConnection {
 			
 	}
 
+	//FUNZIONE DI LOGIN DI UN UTENTE
+	public function loginUser($username, $password) {
+
+		$queryControllo = "SELECT username, password FROM Utente WHERE username = ?";
+		// Preparazione dello statement
+		$stmt = $this->connection->prepare($queryControllo);
+		if ($stmt === false) {
+			die("Errore nella preparazione dello statement: " . $this->connection->error);
+		}
+		// Bind dei parametri
+		$stmt->bind_param("s", $username);
+		// Esecuzione della query
+		if (!$stmt->execute()) {
+			die("Errore nell'esecuzione dello statement: " . $stmt->error);
+		}
+		// Ottenimento del risultato
+		$result = $stmt->get_result();
+		$rows = $result->fetch_all(MYSQLI_ASSOC);
+		$numRows = count($rows);
+
+		if($numRows == 0){
+			return -1;
+		}
+		else{
+			if(password_verify($password, $rows[0]['password'])){
+				return 1;
+			}
+			else{
+				return 0;
+			}
+		}
+			
+	}
+
 	// FUNZIONE PER RICAVARE I VEICOLI CON FILTRI APPLICATI PRESENTI NEL DB
+	/*
+	* Uso array associativo params dove metto i vari valori. Se valore vuoto, non lo setto in params
+	*/
 	public function getFilteredVehicles($params) {
+
+		$query = "SELECT * FROM Veicolo";
+
 		$result = array();
 		//DA INSERIRE FILTRI
 
-		$query = "SELECT * FROM Veicolo WHERE marca IN (?) AND modello IN (?)";
+		// Se params non è vuoto, aggiungo clausola WHERE
+		if(!empty($params)) {
+			$query .= " WHERE";
+		}
+
+		// Faccio controllo per ogni parametro auto
+
+		if(isset($params["marca"])) {
+			$query .= " marca LIKE %?% AND";
+		}
+
+		if(isset($params["modello"])) {
+			$query .= " modello LIKE %?% AND";
+		}
+
+		if(isset($params["anno"])) {
+			$query .= " anno = ? AND";
+		}
+
+		// DA FINIRE
+
+		//rimuovo AND dalla stringa
+		$query = substr($query, 0, -4);
 
 		// Preparazione dello statement
 		$stmt = $this->connection->prepare($query);
@@ -92,6 +154,17 @@ class DBConnection {
 		}
 
 		// Bind dei parametri (s = stringa, i = intero, d = double/float, b = blob)
+		// DA FARE
+
+		// Esecuzione della query
+		if (!$stmt->execute()) {
+			die("Errore nell'esecuzione dello statement: " . $stmt->error);
+		}
+
+		// Ottenimento del risultato
+		$result = $stmt->get_result();
+		$rows = $result->fetch_all(MYSQLI_ASSOC);
+		$numRows = count($rows);
 
 		return $result;
 	}
