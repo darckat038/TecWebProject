@@ -274,7 +274,7 @@ a:visited {
 }
 
 
-
+/*Gestione prenotazione*/
 
 #labelPrenAdmin, #labelAzioneAdmin{
     display: block;
@@ -294,7 +294,7 @@ a:visited {
 }
 
 
-#eliminaPrenAdmin{
+#inviaAzioneAdmin{
     display: flex;
     margin: auto;
     margin-top: 1em;
@@ -307,6 +307,7 @@ a:visited {
 }
 
 
+/*Aggiungi Automobile*/
 
 #labelMarcaAdmin, #labelModelloAdmin, #labelAnnoAdmin, #labelColoreAdmin,
 #labelAlimAdmin, #labelCambioAdmin, #labelTrazioneAdmin, #labelPotenzaAdmin, 
@@ -319,15 +320,18 @@ a:visited {
 
 #marcaAdmin, #modelloAdmin, #annoAdmin, #coloreAdmin, #alimentazioneAdmin, 
 #cambioAdmin, #trazioneAdmin, #potenzaAdmin, #pesoAdmin, #numero_postiAdmin, 
-#condizioneAdmin, #chilometraggioAdmin, #prezzoAdmin{
+#condizioneAdmin, #chilometraggioAdmin, #prezzoAdmin {
     width: 100%; 
-    padding: 0.4em;
+    padding: 0.4em; 
     border: 1px solid white; 
     border-radius: 4px; 
-    background-color:black; 
+    background-color: #ccc; 
     color: var(--form-border-input-color); 
-    font-size: 16px;
-    cursor: pointer;
+    font-size: 16px; 
+    color: var(--form-border-input-color);
+    height: auto;
+    color: black;
+    box-sizing: border-box; 
 }
 
 #bottoneAggiungi{
@@ -344,7 +348,7 @@ a:visited {
 
 
 
-
+/*Elimina Auto*/
 
 #labelEliminaAutoAdmin{
     display: block;
