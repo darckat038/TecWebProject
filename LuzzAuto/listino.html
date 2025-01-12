@@ -82,80 +82,80 @@
                         
                             <div class="list_input_container">
                                 <label for="list_filter_marca" id="list_label_marca">Marca</label>
-                                <input type="text" id="list_filter_marca" class="list_insert" name="marca" placeholder="Qualsiasi" aria-label="Campo di inserimento della marca dell'auto">
+                                <input type="text" id="list_filter_marca" class="list_insert" value="[marca]" name="marca" placeholder="Qualsiasi" aria-label="Campo di inserimento della marca dell'auto">
                             </div>
 
                             <div class="list_input_container">
                                 <label for="list_filter_modello" id="list_label_modello">Modello</label>
-                                <input type="text" id="list_filter_modello" class="list_insert" name="modello" placeholder="Qualsiasi" aria-label="Campo di inserimento del modello dell'auto">
+                                <input type="text" id="list_filter_modello" class="list_insert" value="[modello]" name="modello" placeholder="Qualsiasi" aria-label="Campo di inserimento del modello dell'auto">
                             </div>
 
                             <div class="list_input_container">
                                 <label for="list_filter_anno" id="list_label_anno">Anno</label>
                                 <div>
-                                    <input type="number" id="list_filter_anno" class="list_insert" name="anno" step="1" placeholder="Qualsiasi" aria-label="Campo di inserimento dell'anno di produzione dell'auto">
+                                    <input type="number" id="list_filter_anno" class="list_insert" value="[anno]" name="anno" step="1" placeholder="Qualsiasi" aria-label="Campo di inserimento dell'anno di produzione dell'auto">
                                 </div>
                             </div>
 
                             <div class="list_input_container">
                                 <label for="list_filter_colore" id="list_label_colore">Colore</label>
                                 <select id="list_filter_colore" class="list_insert" name="colore" aria-label="Campo di inserimento del colore dell'auto">
-                                    <option value="qualsiasi">Qualsiasi</option>
-                                    <option value="bianco">Bianco</option>
-                                    <option value="nero">Nero</option>
-                                    <option value="grigio">Grigio</option>
-                                    <option value="rosso">Rosso</option>
-                                    <option value="blu">Blu</option>
-                                    <option value="verde">Verde</option>
-                                    <option value="arancione">Arancione</option>
-                                    <option value="giallo">Giallo</option>
+                                    <option [qualsiasi]value="qualsiasi">Qualsiasi</option>
+                                    <option [bianco]value="bianco">Bianco</option>
+                                    <option [nero]value="nero">Nero</option>
+                                    <option [grigio]value="grigio">Grigio</option>
+                                    <option [rosso]value="rosso">Rosso</option>
+                                    <option [blu]value="blu">Blu</option>
+                                    <option [verde]value="verde">Verde</option>
+                                    <option [arancione]value="arancione">Arancione</option>
+                                    <option [giallo]value="giallo">Giallo</option>
                                 </select>
                             </div>
 
                             <div class="list_input_container">
                                 <label for="list_filter_alimentazione" id="list_label_alimentazione">Alimentazione</label>
                                 <select id="list_filter_alimentazione" class="list_insert" name="alimentazione" aria-label="Campo di inserimento dell'alimentazione dell'auto">
-                                    <option value="qualsiasi">Qualsiasi</option>
-                                    <option value="benzina">Benzina</option>
-                                    <option value="gasolio">Gasolio</option>
-                                    <option value="elettrico">Elettrico</option>
-                                    <option value="gpl">Ibrido <abbr title="Gas petrolio liquefatti">GPL</abbr></option>
-                                    <option value="plugin">Ibrido <span lang="en-GB">Plug-in</span></option>
+                                    <option [qualsiasi]value="qualsiasi">Qualsiasi</option>
+                                    <option [benzina]value="benzina">Benzina</option>
+                                    <option [gasolio]value="gasolio">Gasolio</option>
+                                    <option [elettrico]value="elettrico">Elettrico</option>
+                                    <option [gpl]value="gpl">Ibrido <abbr title="Gas petrolio liquefatti">GPL</abbr></option>
+                                    <option [plugin]value="plugin">Ibrido <span lang="en-GB">Plug-in</span></option>
                                 </select>
                             </div>
 
                             <div class="list_input_container">
                                 <label for="list_filter_cambio" id="list_label_cambio">Cambio</label>
                                 <select id="list_filter_cambio" class="list_insert" name="cambio" aria-label="Campo di inserimento del cambio dell'auto">
-                                    <option value="qualsiasi">Qualsiasi</option>
-                                    <option value="manuale">Manuale</option>
-                                    <option value="automatico">Automatico</option>
+                                    <option [qualsiasi]value="qualsiasi">Qualsiasi</option>
+                                    <option [manuale]value="manuale">Manuale</option>
+                                    <option [automatico]value="automatico">Automatico</option>
                                 </select>
                             </div>
 
                             <div class="list_input_container">
                                 <label for="list_filter_trazione" id="list_label_trazione">Trazione</label>
                                 <select id="list_filter_trazione" class="list_insert" name="trazione" aria-label="Campo di inserimento della trazione dell'auto">
-                                    <option value="qualsiasi">Qualsiasi</option>
-                                    <option value="anteriore">Anteriore</option>
-                                    <option value="posteriore">Posteriore</option>
-                                    <option value="integrale">Integrale</option>
+                                    <option [qualsiasi]value="qualsiasi">Qualsiasi</option>
+                                    <option [anteriore]value="anteriore">Anteriore</option>
+                                    <option [posteriore]value="posteriore">Posteriore</option>
+                                    <option [integrale]value="integrale">Integrale</option>
                                 </select>
                             </div>
 
                             <div class="list_input_container">
                                 <label for="list_filter_potenza" id="list_label_potenza">Potenza (<abbr title="cavalli vapore">CV</abbr>)</label>
                                 <div id="list_filter_potenza" class="list_insert">
-                                    Da <input type="number" class="list_internal_insert" name="potenzaMin" min="0" step="1" placeholder="qualsiasi" aria-label="Campo di inserimento della potenza minima dell'auto in cavalli vapore">
-                                    a <input type="number" class="list_internal_insert" name="potenzaMax" min="0" step="1" placeholder="qualsiasi" aria-label="Campo di inserimento della potenza massima dell'auto in cavalli vapore">
+                                    Da <input type="number" class="list_internal_insert" value="[potenzaMin]" name="potenzaMin" min="0" step="1" placeholder="qualsiasi" aria-label="Campo di inserimento della potenza minima dell'auto in cavalli vapore">
+                                    a <input type="number" class="list_internal_insert" value="[potenzaMax]" name="potenzaMax" min="0" step="1" placeholder="qualsiasi" aria-label="Campo di inserimento della potenza massima dell'auto in cavalli vapore">
                                 </div>
                             </div>
 
                             <div class="list_input_container">
                                 <label for="list_filter_peso" id="list_label_peso">Peso (<abbr title="chilogrammi">kg</abbr>)</label>
                                 <div id="list_filter_peso" class="list_insert">
-                                    Da <input type="number" class="list_internal_insert" name="pesoMin" min="0" step="1" placeholder="qualsiasi" aria-label="Campo di inserimento del peso minimo dell'auto in chilogrammi">
-                                    a <input type="number" class="list_internal_insert" name="pesoMax" min="0" step="1" placeholder="qualsiasi" aria-label="Campo di inserimento del peso massimo dell'auto in chilogrammi">
+                                    Da <input type="number" class="list_internal_insert" value="[pesoMin]" name="pesoMin" min="0" step="1" placeholder="qualsiasi" aria-label="Campo di inserimento del peso minimo dell'auto in chilogrammi">
+                                    a <input type="number" class="list_internal_insert" value="[pesoMax]" name="pesoMax" min="0" step="1" placeholder="qualsiasi" aria-label="Campo di inserimento del peso massimo dell'auto in chilogrammi">
                                 </div>
                             </div>
 
@@ -164,7 +164,7 @@
                                 <div class="list_insert" id="list_filter_neopatentati">
                                     <label class="interruttore" for="neopatentatiID">
                                         <p>Interruttore qui</p>
-                                        <input type="checkbox" name="neopatentati" id="neopatentatiID" value="true" aria-label="Mettere spunta se neopatentati abilitati alla guida dell'auto">
+                                        <input type="checkbox" name="neopatentati" id="neopatentatiID" [neopatentati]value="true" aria-label="Mettere spunta se neopatentati abilitati alla guida dell'auto">
                                         <div class="interruttore-slider">
                                             <div class="interruttore-knob"></div>
                                         </div>
@@ -175,7 +175,7 @@
                             <div class="list_input_container">
                                 <label for="list_filter_posti" id="list_label_posti">Numero posti</label>
                                 <div>
-                                    <input type="number" id="list_filter_posti" class="list_insert" name="posti" min="1" max="9" step="1" placeholder="Qualsiasi" aria-label="Campo di inserimento del numero di posti dell'auto">
+                                    <input type="number" id="list_filter_posti" class="list_insert" value="[posti]" name="posti" min="1" max="9" step="1" placeholder="Qualsiasi" aria-label="Campo di inserimento del numero di posti dell'auto">
                                 </div>
                             </div>
                     </fieldset>
@@ -191,21 +191,21 @@
                         <div class="list_input_container">
                             <label for="list_filter_condizione" id="list_label_condizione">Condizione</label>
                             <select id="list_filter_condizione" name="condizione" class="list_insert" aria-label="Campo di inserimento della condizione dell'auto">
-                                <option value="qualsiasi">Qualsiasi</option>
-                                <option value="nuovo">Nuovo</option>
-                                <option value="usato">Usato</option>
-                                <option value="km0"><abbr title="Chilometro zero">KM 0</abbr></option>
+                                <option [qualsiasi]value="qualsiasi">Qualsiasi</option>
+                                <option [nuovo]value="nuovo">Nuovo</option>
+                                <option [usato]value="usato">Usato</option>
+                                <option [km0]value="km0"><abbr title="Chilometro zero">KM 0</abbr></option>
                             </select>
                         </div>
                         
                         <div class="list_input_container">
                             <label for="list_filter_prezzo" id="list_label_prezzo">Prezzo massimo (<abbr title="Euro">&euro;</abbr>)</label>
-                            <input type="number" id="list_filter_prezzo" class="list_insert" name="prezzoMax" min="0" step="500" placeholder="Qualsiasi" aria-label="Campo di inserimento del prezzo massimo dell'auto">
+                            <input type="number" id="list_filter_prezzo" class="list_insert" value="[prezzoMax]" name="prezzoMax" min="0" step="500" placeholder="Qualsiasi" aria-label="Campo di inserimento del prezzo massimo dell'auto">
                         </div>
 
                         <div class="list_input_container">
                             <label for="list_filter_chilometraggio" id="list_label_chilometraggio">Chilometraggio massimo (<abbr title="chilometri">km</abbr>)</label>
-                            <input type="number" id="list_filter_chilometraggio" class="list_insert" name="chilometraggio" min="0" step="100" placeholder="Qualsiasi" aria-label="Campo di inserimento del chilometraggio massimo dell'auto">
+                            <input type="number" id="list_filter_chilometraggio" class="list_insert" value="[chilometraggio]" name="chilometraggio" min="0" step="100" placeholder="Qualsiasi" aria-label="Campo di inserimento del chilometraggio massimo dell'auto">
                         </div>
 
                     </fieldset>

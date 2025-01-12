@@ -40,7 +40,7 @@ function ripristinoInput(){
 	$listinoHTML = str_replace("[potenzaMax]", htmlspecialchars(isset($_GET['potenzaMax']) ? $_GET['potenzaMax'] : ''), $listinoHTML);
 	$listinoHTML = str_replace("[pesoMin]", htmlspecialchars(isset($_GET['pesoMin']) ? $_GET['pesoMin'] : ''), $listinoHTML);
 	$listinoHTML = str_replace("[pesoMax]", htmlspecialchars(isset($_GET['pesoMax']) ? $_GET['pesoMax'] : ''), $listinoHTML);
-	$listinoHTML = str_replace("[neopatentati]", htmlspecialchars(isset($_GET['neopatentati']) ? 'checked' : ''), $listinoHTML);
+	$listinoHTML = str_replace("[neopatentati]", htmlspecialchars(isset($_GET['neopatentati']) ? 'checked ' : ''), $listinoHTML);
 	$listinoHTML = str_replace("[posti]", htmlspecialchars(isset($_GET['posti']) ? $_GET['posti'] : ''), $listinoHTML);
 
 	//replace condizione
