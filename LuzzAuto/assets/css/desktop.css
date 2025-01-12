@@ -181,7 +181,7 @@ select option {
     background-color: white;
     border-radius: 50%;
     top: 48%;
-    left: 0.5px;
+    left: 1px;
     transform: translateY(-50%);
     transition: transform 0.3s;
     border: solid 1px black;    /* Per migliore visibilità */
