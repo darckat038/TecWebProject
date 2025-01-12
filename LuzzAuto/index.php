@@ -6,7 +6,14 @@ function ripristinoInput(){
 	// Se c'è input salvato in $_GET, mette quello, altrimenti valore di default (stringa vuota o select default)
 	$indexHTML = str_replace("[marca]", htmlspecialchars(isset($_GET['marca']) ? $_GET['marca'] : ''), $indexHTML);
 	$indexHTML = str_replace("[modello]", htmlspecialchars(isset($_GET['modello']) ? $_GET['modello'] : ''), $indexHTML);
-	$indexHTML = str_replace("[condizione]", htmlspecialchars(isset($_GET['condizione']) ? $_GET['condizione'] : '-- Qualsiasi --'), $indexHTML);
+
+	//replace condizione
+	if(htmlspecialchars(isset($_GET['condizione']))) {
+		$indexHTML = str_replace("[" . $_GET['condizione'] . "]", "selected ", $indexHTML);
+	}
+	// rimpiazzo di default -> seleziono qualsiasi
+	$indexHTML = str_replace(["[qualsiasi]", "[nuovo]", "[usato]", "[km0]"], ["selected ", "", "", ""], $indexHTML);
+
 	$indexHTML = str_replace("[prezzoMax]", htmlspecialchars(isset($_GET['prezzoMax']) ? $_GET['prezzoMax'] : ''), $indexHTML);
 	return $indexHTML;
 }
@@ -28,7 +35,7 @@ if(isset($_GET["marca"]) || isset($_GET["modello"]) || isset($_GET["condizione"]
 	if (!preg_match("/^[A-Za-z0-9\-]*$/", $_GET["modello"])) {
 		$err = $err . "<p>Modello non valido, puoi usare solo lettere, numeri e il carattere \"-\".</p>";
 	}
-	if ($_GET["prezzoMax"] != "" && doubleval($_GET["prezzoMax"]) <= 0) {
+	if (!empty($_GET["prezzoMax"]) && doubleval($_GET["prezzoMax"]) <= 0) {
 		$err = $err . "<p>Prezzo non valido, inserisci un prezzo maggiore di 0.</p>";
 	}
 
@@ -40,7 +47,9 @@ if(isset($_GET["marca"]) || isset($_GET["modello"]) || isset($_GET["condizione"]
 	}
 
 	// PASSAGGIO A LISTINO.PHP
-	header("location: listino.php");
+	// Aggiungo i valori di default di listino
+	$queryString = http_build_query($_GET) . "&anno=&colore=qualsiasi&alimentazione=qualsiasi&cambio=qualsiasi&trazione=qualsiasi&potenzaMin=&potenzaMax=&pesoMin=&pesoMax=&posti=&chilometraggio=";
+	header("location: listino.php?$queryString");
 
 } else {
 	$indexHTML = ripristinoInput();

@@ -71,11 +71,11 @@
                         <legend>PREFERENZE</legend>
                         
                         <label for="home_condizione" id="home_label_condizione">Condizione</label>
-                        <select id="home_condizione" name="condizione" class="home_insert" value="[condizione]" aria-label="Campo di selezione della condizione dell'auto">
-                            <option value="qualsiasi">Qualsiasi</option>
-                            <option value="nuovo">Nuovo</option>
-                            <option value="usato">Usato</option>
-                            <option value="km0"><abbr title="Chilometro zero">KM 0</abbr></option>
+                        <select id="home_condizione" name="condizione" class="home_insert" aria-label="Campo di selezione della condizione dell'auto">
+                            <option [qualsiasi]value="qualsiasi">Qualsiasi</option>
+                            <option [nuovo]value="nuovo">Nuovo</option>
+                            <option [usato]value="usato">Usato</option>
+                            <option [km0]value="km0"><abbr title="Chilometro zero">KM 0</abbr></option>
                         </select>
                     
                         <label for="home_prezzoMax" id="home_label_prezzo">Prezzo massimo (<abbr title="Euro">&euro;</abbr>)</label>
