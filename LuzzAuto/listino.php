@@ -6,10 +6,52 @@ function ripristinoInput(){
 	// Se c'è input salvato in $_GET, mette quello, altrimenti valore di default (stringa vuota o select default)
 	$listinoHTML = str_replace("[marca]", htmlspecialchars(isset($_GET['marca']) ? $_GET['marca'] : ''), $listinoHTML);
 	$listinoHTML = str_replace("[modello]", htmlspecialchars(isset($_GET['modello']) ? $_GET['modello'] : ''), $listinoHTML);
-	
-	$listinoHTML = str_replace("[condizione]", htmlspecialchars(isset($_GET['condizione']) ? $_GET['condizione'] : '-- Qualsiasi --'), $listinoHTML);
+	$listinoHTML = str_replace("[anno]", htmlspecialchars(isset($_GET['anno']) ? $_GET['anno'] : ''), $listinoHTML);
+
+	//replace colore
+	if(htmlspecialchars(isset($_GET['colore']))) {
+		$listinoHTML = str_replace("[" . $_GET['colore'] . "]", "selected ", $listinoHTML);
+	}
+	// rimpiazzo di default -> seleziono qualsiasi
+	$listinoHTML = str_replace(["[qualsiasi]", "[bianco]", "[nero]", "[grigio]", "[rosso]", "[blu]", "[verde]", "[arancione]", "[giallo]"], ["selected ", "", "", "", "", "", "", "", ""], $listinoHTML);
+
+	//replace alimentazione
+	if(htmlspecialchars(isset($_GET['alimentazione']))) {
+		$listinoHTML = str_replace("[" . $_GET['alimentazione'] . "]", "selected ", $listinoHTML);
+	}
+	// rimpiazzo di default -> seleziono qualsiasi
+	$listinoHTML = str_replace(["[qualsiasi]", "[benzina]", "[gasolio]", "[elettrico]", "[gpl]", "[plugin]"], ["selected ", "", "", "", "", ""], $listinoHTML);
+
+	//replace cambio
+	if(htmlspecialchars(isset($_GET['cambio']))) {
+		$listinoHTML = str_replace("[" . $_GET['cambio'] . "]", "selected ", $listinoHTML);
+	}
+	// rimpiazzo di default -> seleziono qualsiasi
+	$listinoHTML = str_replace(["[qualsiasi]", "[manuale]", "[automatico]"], ["selected ", "", ""], $listinoHTML);
+
+	//replace trazione
+	if(htmlspecialchars(isset($_GET['trazione']))) {
+		$listinoHTML = str_replace("[" . $_GET['trazione'] . "]", "selected ", $listinoHTML);
+	}
+	// rimpiazzo di default -> seleziono qualsiasi
+	$listinoHTML = str_replace(["[qualsiasi]", "[anteriore]", "[posteriore]", "[integrale]"], ["selected ", "", "", ""], $listinoHTML);
+
+	$listinoHTML = str_replace("[potenzaMin]", htmlspecialchars(isset($_GET['potenzaMin']) ? $_GET['potenzaMin'] : ''), $listinoHTML);
+	$listinoHTML = str_replace("[potenzaMax]", htmlspecialchars(isset($_GET['potenzaMax']) ? $_GET['potenzaMax'] : ''), $listinoHTML);
+	$listinoHTML = str_replace("[pesoMin]", htmlspecialchars(isset($_GET['pesoMin']) ? $_GET['pesoMin'] : ''), $listinoHTML);
+	$listinoHTML = str_replace("[pesoMax]", htmlspecialchars(isset($_GET['pesoMax']) ? $_GET['pesoMax'] : ''), $listinoHTML);
+	$listinoHTML = str_replace("[neopatentati]", htmlspecialchars(isset($_GET['neopatentati']) ? 'checked' : ''), $listinoHTML);
+	$listinoHTML = str_replace("[posti]", htmlspecialchars(isset($_GET['posti']) ? $_GET['posti'] : ''), $listinoHTML);
+
+	//replace condizione
+	if(htmlspecialchars(isset($_GET['condizione']))) {
+		$listinoHTML = str_replace("[" . $_GET['condizione'] . "]", "selected ", $listinoHTML);
+	}
+	// rimpiazzo di default -> seleziono qualsiasi
+	$listinoHTML = str_replace(["[qualsiasi]", "[nuovo]", "[usato]", "[km0]"], ["selected ", "", "", ""], $listinoHTML);
 
 	$listinoHTML = str_replace("[prezzoMax]", htmlspecialchars(isset($_GET['prezzoMax']) ? $_GET['prezzoMax'] : ''), $listinoHTML);
+	$listinoHTML = str_replace("[chilometraggio]", htmlspecialchars(isset($_GET['chilometraggio']) ? $_GET['chilometraggio'] : ''), $listinoHTML);
 	return $listinoHTML;
 }
 
@@ -33,11 +75,11 @@ if(isset($_GET["marca"]) || isset($_GET["modello"]) || isset($_GET["anno"]) || i
 	if (!preg_match("/^[A-Za-z0-9\-]*$/", $_GET["modello"])) {
 		$err = $err . "<p>Modello non valido, puoi usare solo lettere, numeri e il carattere \"-\".</p>";
 	}
-	if ($_GET["anno"] != "" && (intval($_GET["anno"]) < 1990 || intval($_GET["anno"]) > 2024)) {
+	if (!empty($_GET["anno"]) && (intval($_GET["anno"]) < 1990 || intval($_GET["anno"]) > 2024)) {
 		$err = $err . "<p>Anno non valido, inserisci un anno compreso tra 1990 e 2024</p>";
 	}
-	if ($_GET["prezzoMax"] != "" && doubleval($_GET["prezzoMax"]) <= 0) {
-		$err = $err . "<p>Prezzo non valido, inserisci un prezzo maggiore di 0.</p>"; 
+	if (!empty($_GET["prezzoMax"]) && doubleval($_GET["prezzoMax"]) <= 0) {
+		$err = $err . "<p>Prezzo non valido, inserisci un prezzo maggiore di 0.</p>";
 	}
 
 	//CONTROLLO ERRORI
@@ -71,7 +113,7 @@ if(isset($_GET["marca"]) || isset($_GET["modello"]) || isset($_GET["anno"]) || i
 		header("location: 500.html");
 		exit();
 	}
-		*/
+	*/
 } else {
 	$listinoHTML = ripristinoInput();
 	echo str_replace("[err]", $err, $listinoHTML);
