@@ -1041,6 +1041,11 @@ section.aboutUs_history img {
     box-sizing: border-box;
 }
 
+#list_filter #list_filter_anno {
+    /* indico larghezza del campo input in cifre*/
+    width: 4ch;
+}
+
 #list_filter #list_filter_potenza,
 #list_filter #list_filter_peso {
     display: flex;
