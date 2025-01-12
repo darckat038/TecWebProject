@@ -86,7 +86,14 @@ if(isset($_POST["nome"]) && isset($_POST["cognome"]) && isset($_POST["username"]
 			else{
 				if($ris){
 					$_SESSION['utente'] = $_POST["username"];
-					header("location: utente.php");
+					//CONTROLLO BACK TO ORIGIN PER TORNARE ALLA PAGINA DI PROVENIENZA
+                    if(isset($_COOKIE['backToOrigin'])){
+                        header("location: " . $_COOKIE['backToOrigin']);
+                        setcookie("backToOrigin", "", time() - 3600, "/");
+                    }
+                    else{
+                        header("location: utente.php");
+                    }
 				}
 				else{
 					header("location: 500.html");
