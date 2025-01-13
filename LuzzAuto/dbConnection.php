@@ -205,11 +205,13 @@ class DBConnection {
 			die("Errore nella preparazione dello statement: " . $this->connection->error);
 		}
 
-		// Bind dei parametri (s = stringa, i = intero, d = double/float, b = blob)
-		$stmt->bind_param("ssissssiiiiiisdi", $params["marca"], $params["modello"], $params["anno"], $params["colore"], 
-									$params["alimentazione"], $params["cambio"], $params["trazione"], 
-									$params["potenzaMin"], $params["potenzaMax"], $params["pesoMin"], $params["pesoMax"], 
-									$params["neopatentati"], $params["posti"], $params["condizione"], $params["prezzoMax"], $params["chilometraggio"]);
+		if(!empty($params)) {
+			// Bind dei parametri (s = stringa, i = intero, d = double/float, b = blob)
+			$stmt->bind_param("ssissssiiiiiisdi", $params["marca"], $params["modello"], $params["anno"], $params["colore"], 
+										$params["alimentazione"], $params["cambio"], $params["trazione"], 
+										$params["potenzaMin"], $params["potenzaMax"], $params["pesoMin"], $params["pesoMax"], 
+										$params["neopatentati"], $params["posti"], $params["condizione"], $params["prezzoMax"], $params["chilometraggio"]);
+		}
 
 		// Esecuzione della query
 		if (!$stmt->execute()) {
