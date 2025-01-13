@@ -9,7 +9,7 @@
     Vedi pagina about.html, section Numeri
 
 ## Aggiunta e modifica auto in catalogo
-### come fare inserimento immagini?
+### come fare inserimento immagini nel database?
 
 ### come gestire testo "alt" delle immagini (js per corretta visualizzazione, come inserire nel form e salvare nel DB)?
 
