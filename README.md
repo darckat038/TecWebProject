@@ -19,6 +19,10 @@ Progetto del corso di Tecnologie Web della laurea in Informatica presso l'Univer
 
 ### Creazione del server in locale con docker
 Nella cartella LuzzAuto:
+Per eliminare i volumi associati se avete già un container errato:
+```cmd
+docker-compose down -v
+```
 ```cmd
 docker-compose build
 ```
