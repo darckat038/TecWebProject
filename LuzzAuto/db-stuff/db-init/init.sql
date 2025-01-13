@@ -36,8 +36,8 @@ create table Prenotazione
     idAuto   int         not null,
     dataOra  datetime    not null,
     stato    int         not null,
-    constraint Prenotazione_Auto_id_fk
-        foreign key (idAuto) references Auto (id),
+    constraint Prenotazione_Veicolo_id_fk
+        foreign key (idAuto) references Veicolo (id),
     constraint Prenotazione_Utente_username_fk
         foreign key (username) references Utente (username)
 );
