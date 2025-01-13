@@ -1795,6 +1795,9 @@ document.querySelectorAll('#list_filter .list_insert').forEach(select => {
     margin-top: -0.5em; 
 }
 
+
+/*tabella prenotazioni*/
+
 .tabellaPrenUtente {
     width: 100%;
     border-collapse: collapse;
@@ -1817,34 +1820,48 @@ document.querySelectorAll('#list_filter .list_insert').forEach(select => {
     display: block;
 }
 
+/*Gestione prenotazioni*/
 
 #labelPrenUtente{
+    position: absolute;
     display: block;
-    margin-left: 0.3em;
+    margin-left: 0.7em;
+    margin-top: 1.2em;
+    color: var(--form-border-input-color);
+    background-color: var(--navbar-bg-color);
+    padding: 0 0.3em;
 }
 
 #gestPrenUtente{
     width: 100%; 
-    padding: 0.5em;
-    border: 1px solid white; 
-    border-radius: 4px; 
-    background-color:black; 
+    padding: 0.8em; 
+    border: 1px solid var(--form-border-input-color); 
+    border-radius: 5px; 
+    margin-top: 2em;
+    background-color:black;
     color: var(--form-border-input-color); 
     font-size: 16px;
-    cursor: pointer; 
+    cursor: pointer;
+    color: white; 
 }
-
 
 #eliminaPrenUtente{
     display: flex;
     margin: auto;
     margin-top: 1em;
-    padding: 0.5em 0.8em;
-    background-color: white; 
-    color: black;
+    padding: 0.5em 2em;
+    color: white;
     font-size: 16px;
-    border-radius: 5px;
     cursor: pointer;
+    font-size: 18px;
+    border-radius: 20px;
+    background-color: black;
+    border: 1px solid white;
+}
+
+#eliminaPrenUtente:hover{
+    background-color: white;
+    color: black;
 }
 
 /*#endregion Utente*/
@@ -1870,7 +1887,7 @@ document.querySelectorAll('#list_filter .list_insert').forEach(select => {
     padding: 2.5em;
     border-radius: 1.5em;
     margin-top: 8em;
-    width: 70vw;
+    width: 80vw;
     box-shadow: rgba(115, 115, 115, 0.35) 0px 5px 15px;
 }
 
@@ -1888,7 +1905,7 @@ document.querySelectorAll('#list_filter .list_insert').forEach(select => {
     font-size: 100%;
     font-family: "Lexend", Roboto, sans-serif;
     padding-left: 1em;
-    margin-top: 3em;
+    margin-top: 5em;
     padding: 2em; 
 }
 
@@ -1942,20 +1959,27 @@ document.querySelectorAll('#list_filter .list_insert').forEach(select => {
 /*Gestione prenotazione*/
 
 #labelPrenAdmin, #labelAzioneAdmin{
+    position: absolute;
     display: block;
-    margin-left: 0.3em;
-    margin-top: 0.5em;
+    margin-left: 0.7em;
+    margin-top: 1.2em;
+    color: var(--form-border-input-color);
+    background-color: var(--navbar-bg-color);
+    padding: 0 0.3em;
 }
 
 #gestPrenAdmin, #azioneAdmin{
     width: 100%; 
-    padding: 0.4em;
-    border: 1px solid white; 
-    border-radius: 4px; 
+    padding: 0.8em;
+    border: 1px solid var(--form-border-input-color); 
+    border-radius: 5px; 
     background-color:black; 
     color: var(--form-border-input-color); 
     font-size: 16px;
-    cursor: pointer; 
+    cursor: pointer;
+    margin-top: 2em;
+    color: white;
+
 }
 
 
@@ -1963,12 +1987,18 @@ document.querySelectorAll('#list_filter .list_insert').forEach(select => {
     display: flex;
     margin: auto;
     margin-top: 1em;
-    padding: 0.5em 0.8em;
-    background-color: white; 
-    color: black;
-    font-size: 16px;
-    border-radius: 5px;
+    padding: 0.5em 2em;
+    color: white;
+    font-size: 18px;
+    border-radius: 20px;
     cursor: pointer;
+    background-color: black;
+    border: 1px solid white;
+}
+
+#inviaAzioneAdmin:hover{
+    background-color: white;
+    color: black;
 }
 
 
@@ -1977,59 +2007,75 @@ document.querySelectorAll('#list_filter .list_insert').forEach(select => {
 #labelMarcaAdmin, #labelModelloAdmin, #labelAnnoAdmin, #labelColoreAdmin,
 #labelAlimAdmin, #labelCambioAdmin, #labelTrazioneAdmin, #labelPotenzaAdmin, 
 #labelPesoAdmin, #labelPostiAdmin, #labelCondizioniAdmin, #labelChilometriAdmin,
-#labelPrezzoAdmin, #labelNeopAdmin{
+#labelPrezzoAdmin, #labelNeopAdmin, #labelNeopAdmin{
+    position: absolute;
     display: block;
-    margin-left: 0.3em;
-    margin-top: 1.5em;
+    margin-left: 0.7em;
+    margin-top: 1.2em;
     color: var(--form-border-input-color);
+    background-color: var(--navbar-bg-color);
+    padding: 0 0.3em;
 }
 
 #marcaAdmin, #modelloAdmin, #annoAdmin, #coloreAdmin, #alimentazioneAdmin, 
 #cambioAdmin, #trazioneAdmin, #potenzaAdmin, #pesoAdmin, #numero_postiAdmin, 
-#condizioneAdmin, #chilometraggioAdmin, #prezzoAdmin {
+#condizioneAdmin, #chilometraggioAdmin, #prezzoAdmin, #neopatentatiAdmin {
     width: 100%; 
-    padding: 1em; 
-    border: 1px solid white; 
+    padding: 0.8em; 
+    border: 1px solid var(--form-border-input-color); 
     border-radius: 5px; 
     background-color: black; 
     color: var(--form-border-input-color); 
     font-size: 16px; 
     color: var(--form-border-input-color);
     height: auto;
-    color: white;
     box-sizing: border-box; 
+    margin-top: 2em;
+    color: white;
 }
 
 #bottoneAggiungi{
     display: flex;
     margin: auto;
     margin-top: 1em;
-    padding: 0.5em 0.8em;
-    background-color: white; 
-    color: black;
-    font-size: 16px;
-    border-radius: 5px;
+    padding: 0.5em 2em;
+    color: white;
     cursor: pointer;
+    font-size: 18px;
+    border-radius: 20px;
+    background-color: black;
+    border: 1px solid white;
 }
 
+#bottoneAggiungi:hover{
+    background-color: white;
+    color: black;
+}
 
 
 /*Elimina Auto*/
 
 #labelEliminaAutoAdmin{
+    position: absolute;
     display: block;
-    margin-left: 0.3em;
+    margin-left: 0.7em;
+    margin-top: 1.2em;
+    color: var(--form-border-input-color);
+    background-color: var(--navbar-bg-color);
+    padding: 0 0.3em;
 }
 
 #eliminaAutoAdmin{
     width: 100%; 
-    padding: 0.5em;
-    border: 1px solid white; 
-    border-radius: 4px; 
-    background-color:black; 
+    padding: 0.8em; 
+    border: 1px solid var(--form-border-input-color); 
+    border-radius: 5px; 
+    margin-top: 2em;
+    background-color:black;
     color: var(--form-border-input-color); 
     font-size: 16px;
-    cursor: pointer; 
+    cursor: pointer;
+    color: white; 
 }
 
 
@@ -2037,12 +2083,19 @@ document.querySelectorAll('#list_filter .list_insert').forEach(select => {
     display: flex;
     margin: auto;
     margin-top: 1em;
-    padding: 0.5em 0.8em;
-    background-color: white; 
-    color: black;
+    padding: 0.5em 2em;
+    color: white;
     font-size: 16px;
-    border-radius: 5px;
     cursor: pointer;
+    font-size: 18px;
+    border-radius: 20px;
+    background-color: black;
+    border: 1px solid white;
+}
+
+#eliminaButtonAdmin:hover{
+    background-color: white;
+    color: black;
 }
 
 /*#endregion Amministratore*/
