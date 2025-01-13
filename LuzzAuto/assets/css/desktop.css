@@ -737,8 +737,9 @@ input[type="datetime-local"]::-webkit-calendar-picker-indicator {
     font-weight: 500;
 }
 
-section {
-    margin-top: 4em;
+#aboutUs_luzzauto, #aboutUs_dreamToReal, #aboutUs_unique, 
+#aboutUs_mobility, #aboutUs_future, #aboutUs_outNums, 
+#aboutUs_reachUs, #aboutUs_ourTeam{
     width: 80%;
 }
 
