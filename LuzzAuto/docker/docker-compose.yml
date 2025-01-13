@@ -6,6 +6,7 @@ services:
       context: .
       dockerfile: Dockerfile
     container_name: php_server-8_2_26
+    restart: always
     ports:
       - "8080:80"
     volumes:
