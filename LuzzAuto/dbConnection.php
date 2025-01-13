@@ -126,76 +126,76 @@ class DBConnection {
 		// Se params non è vuoto, aggiungo clausola WHERE
 		if(!empty($params)) {
 			$query .= " WHERE";
+
+			// Faccio controllo per ogni parametro auto
+
+			if(isset($params["marca"])) {
+				$query .= " marca LIKE %?% AND";
+			}
+
+			if(isset($params["modello"])) {
+				$query .= " modello LIKE %?% AND";
+			}
+
+			if(isset($params["anno"])) {
+				$query .= " anno = %?% AND";
+			}
+
+			if(isset($params["colore"])) {
+				$query .= " colore LIKE %?% AND";
+			}
+
+			if(isset($params["alimentazione"])) {
+				$query .= " alimentazione LIKE %?% AND";
+			}
+
+			if(isset($params["cambio"])) {
+				$query .= " cambio LIKE %?% AND";
+			}
+
+			if(isset($params["trazione"])) {
+				$query .= " trazione LIKE %?% AND";
+			}
+
+			if(isset($params["potenzaMin"])) {
+				$query .= " potenza >= ? AND";
+			}
+
+			if(isset($params["potenzaMax"])) {
+				$query .= " potenza <= ? AND";
+			}
+
+			if(isset($params["pesoMin"])) {
+				$query .= " peso >= ? AND";
+			}
+
+			if(isset($params["pesoMax"])) {
+				$query .= " peso <= ? AND";
+			}
+
+			if(isset($params["neopatentati"])) {
+				$query .= " neopatentati = ? AND";
+			}
+
+			if(isset($params["posti"])) {
+				$query .= " posti = ? AND";
+			}
+
+			if(isset($params["condizione"])) {
+				$query .= " condizione LIKE %?% AND";
+			}
+
+			if(isset($params["prezzoMax"])) {
+				$query .= " prezzo <= ? AND";
+			}
+
+			if(isset($params["chilometraggio"])) {
+				$query .= " posti <= ? AND";
+			}
+
+			//rimuovo ULTIMO AND dalla stringa
+			$query = substr($query, 0, -4);
 		}
-
-		// Faccio controllo per ogni parametro auto
-
-		if(isset($params["marca"])) {
-			$query .= " marca LIKE %?% AND";
-		}
-
-		if(isset($params["modello"])) {
-			$query .= " modello LIKE %?% AND";
-		}
-
-		if(isset($params["anno"])) {
-			$query .= " anno = %?% AND";
-		}
-
-		if(isset($params["colore"])) {
-			$query .= " colore LIKE %?% AND";
-		}
-
-		if(isset($params["alimentazione"])) {
-			$query .= " alimentazione LIKE %?% AND";
-		}
-
-		if(isset($params["cambio"])) {
-			$query .= " cambio LIKE %?% AND";
-		}
-
-		if(isset($params["trazione"])) {
-			$query .= " trazione LIKE %?% AND";
-		}
-
-		if(isset($params["potenzaMin"])) {
-			$query .= " potenza >= ? AND";
-		}
-
-		if(isset($params["potenzaMax"])) {
-			$query .= " potenza <= ? AND";
-		}
-
-		if(isset($params["pesoMin"])) {
-			$query .= " peso >= ? AND";
-		}
-
-		if(isset($params["pesoMax"])) {
-			$query .= " peso <= ? AND";
-		}
-
-		if(isset($params["neopatentati"])) {
-			$query .= " neopatentati = ? AND";
-		}
-
-		if(isset($params["posti"])) {
-			$query .= " posti = ? AND";
-		}
-
-		if(isset($params["condizione"])) {
-			$query .= " condizione LIKE %?% AND";
-		}
-
-		if(isset($params["prezzoMax"])) {
-			$query .= " prezzo <= ? AND";
-		}
-
-		if(isset($params["chilometraggio"])) {
-			$query .= " posti <= ? AND";
-		}
-
-		//rimuovo ULTIMO AND dalla stringa
-		$query = substr($query, 0, -4);
 
 		$query .= " ORDER BY ID ASC";
 
