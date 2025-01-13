@@ -12,6 +12,7 @@ $formORbuttonsHTML = "";
 //CONTROLLO SE UTENTE IN SESSION STORAGE GIA' SETTATO
 session_start();
 if (isset($_SESSION["utente"])) {
+    //IMPOSTO HTML DEL FORM
 	$formORbuttonsHTML = "
     
     <form id='test_drive_form' method='post'>
@@ -42,8 +43,11 @@ if (isset($_SESSION["utente"])) {
     </div>
     
     ";
+
+
 }
 else{
+    //IMPOSTO HTML DEI BOTTONI
     $formORbuttonsHTML = "
     
     <p>Accedi al tuo profilo per usufruire del servizio di <span lang='en-GB'>Test Drive</span> :</p>
