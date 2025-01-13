@@ -2007,6 +2007,19 @@ document.querySelectorAll('#list_filter .list_insert').forEach(select => {
 /*#endregion Utente*/
 
 
+
+/*#region Amministratore*/
+
+/******************* 
+    AMMINISTRATORE  
+********************/
+
+
+
+/*#endregion Amministratore*/
+
+
+
 /* FOOTER */
 
 footer {
