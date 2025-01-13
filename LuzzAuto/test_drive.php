@@ -25,6 +25,7 @@ $formHTML = "
 
                 <label id='test_drive_label_auto' for='test_drive_select_auto'>Auto</label>
                 <select name='test_drive_select_auto' id='test_drive_select_auto' class='test_drive_input' aria-required='true' aria-label='Campo di scelta della macchina' required data-msg-required='Per favore, seleziona la macchina' data-msg-invalid:='Ci dispiace, formato non corretto'>
+                    <option value=''>--seleziona--</option>
                     [veicoli]
                 </select>
 
