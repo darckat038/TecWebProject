@@ -1891,7 +1891,7 @@ document.querySelectorAll('#list_filter .list_insert').forEach(select => {
     padding: 2em;
     border-radius: 1.5em;
     margin-top: 8em;
-    width: 66vw;
+    width: 50em;
     height: auto;
 }
 
@@ -1969,40 +1969,51 @@ document.querySelectorAll('#list_filter .list_insert').forEach(select => {
     display: block;
 }
 
-.sectionPrenUtente{
-    display: grid;
-    grid-template-columns: 1fr auto;
-    column-gap: 1em;
-    align-items: start;
-    margin: 1em 0;
-}
+
+/*gestione prenotazioni*/
 
 #labelPrenUtente{
-    grid-column: 1;
-    grid-row: 1;
+    position: absolute;
+    display: block;
+    margin-left: 0.7em;
+    margin-top: 1.2em;
+    color: var(--form-border-input-color);
+    background-color: var(--navbar-bg-color);
+    padding: 0 0.3em;
 }
 
 #gestPrenUtente{
-    grid-column: 1;
-    grid-row: 2;
-    padding: 0.5em;
-    border: 1px solid white; 
-    border-radius: 4px; 
-    background-color:black; 
+    width: 100%; 
+    padding: 0.8em; 
+    border: 1px solid var(--form-border-input-color); 
+    border-radius: 5px; 
+    margin-top: 2em;
+    background-color:black;
     color: var(--form-border-input-color); 
     font-size: 16px;
-    cursor: pointer; 
+    cursor: pointer;
+    color: white; 
 }
 
 #eliminaPrenUtente{
-    grid-column: 3;
-    grid-row: 2;
-    align-self: center;
-    justify-self: end;
-    padding: 0.5em 1.5em;
+    display: flex;
+    margin: auto;
+    margin-top: 1em;
+    padding: 0.5em 2em;
+    color: white;
     font-size: 16px;
-    border-radius: 5px;
+    cursor: pointer;
+    font-size: 18px;
+    border-radius: 20px;
+    background-color: black;
+    border: 1px solid white;
 }
+
+#eliminaPrenUtente:hover{
+    background-color: white;
+    color: black;
+}
+
 
 /*#endregion Utente*/
 
@@ -2028,7 +2039,7 @@ document.querySelectorAll('#list_filter .list_insert').forEach(select => {
     padding: 2em;
     border-radius: 1.5em;
     margin-top: 8em;
-    width: 66vw;
+    width: 50em;
     height: auto;
 }
 
@@ -2093,137 +2104,144 @@ document.querySelectorAll('#list_filter .list_insert').forEach(select => {
 
 /*Gestione prenotazione*/
 
-.sectionGestPrenAdmin {
-    display: grid;
-    grid-template-columns: 1fr 1fr auto; 
-    column-gap: 1em;
-    align-items: start; 
-    margin: 1em 0;
+#labelPrenAdmin, #labelAzioneAdmin{
+    position: absolute;
+    display: block;
+    margin-left: 0.7em;
+    margin-top: 1.2em;
+    color: var(--form-border-input-color);
+    background-color: var(--navbar-bg-color);
+    padding: 0 0.3em;
 }
 
-#labelPrenAdmin {
-    grid-column: 1; 
-    grid-row: 1; 
-}
-#gestPrenAdmin {
-    grid-column: 1; 
-    grid-row: 2;
-    padding: 0.4em;
-    border: 1px solid white; 
-    border-radius: 4px; 
+#gestPrenAdmin, #azioneAdmin{
+    width: 100%; 
+    padding: 0.8em;
+    border: 1px solid var(--form-border-input-color); 
+    border-radius: 5px; 
     background-color:black; 
     color: var(--form-border-input-color); 
     font-size: 16px;
     cursor: pointer;
-}
-#labelAzioneAdmin {
-    grid-column: 2; 
-    grid-row: 1; 
-}
-#azioneAdmin {
-    grid-column: 2; 
-    grid-row: 2;
-    padding: 0.4em;
-    border: 1px solid white; 
-    border-radius: 4px; 
-    background-color:black; 
-    color: var(--form-border-input-color); 
-    font-size: 16px;
-    cursor: pointer; 
+    margin-top: 2em;
+    color: white;
+
 }
 
+
 #inviaAzioneAdmin{
-    grid-column: 3; 
-    grid-row:   2;
-    align-self: center; 
-    justify-self: end;
-    padding: 0.5em 1.5em; 
-    font-size: 16px; 
-    border-radius: 5px;
+    display: flex;
+    margin: auto;
+    margin-top: 1em;
+    padding: 0.5em 2em;
+    color: white;
+    font-size: 18px;
+    border-radius: 20px;
+    cursor: pointer;
+    background-color: black;
+    border: 1px solid white;
+}
+
+#inviaAzioneAdmin:hover{
+    background-color: white;
+    color: black;
 }
 
 
 /*Aggiungi Automobile*/
-#formAdmin {
-    display: flex;
-    flex-wrap: wrap;
-}
 
 #labelMarcaAdmin, #labelModelloAdmin, #labelAnnoAdmin, #labelColoreAdmin,
 #labelAlimAdmin, #labelCambioAdmin, #labelTrazioneAdmin, #labelPotenzaAdmin, 
 #labelPesoAdmin, #labelPostiAdmin, #labelCondizioniAdmin, #labelChilometriAdmin,
-#labelPrezzoAdmin, #labelNeopAdmin{
-    font-weight: bold;
-    margin-bottom: 5px;
+#labelPrezzoAdmin, #labelNeopAdmin, #labelNeopAdmin{
+    position: absolute;
     display: block;
-    color: var(--text-color);
+    margin-left: 0.7em;
+    margin-top: 1.2em;
+    color: var(--form-border-input-color);
+    background-color: var(--navbar-bg-color);
+    padding: 0 0.3em;
 }
 
 #marcaAdmin, #modelloAdmin, #annoAdmin, #coloreAdmin, #alimentazioneAdmin, 
 #cambioAdmin, #trazioneAdmin, #potenzaAdmin, #pesoAdmin, #numero_postiAdmin, 
-#condizioneAdmin, #chilometraggioAdmin, #prezzoAdmin{
-    margin-bottom: 1em;
-    font-size: 16px;
-    padding: 10px;
-    border: 1px solid white; 
-    border-radius: 4px; 
-    background-color:#ccc; 
-    box-sizing: border-box;
-}
-
-#formAdmin > * {
-    
-    flex-grow: 1;
-    /*flex-shrink: 1;*/
-    flex-basis: 50%;
+#condizioneAdmin, #chilometraggioAdmin, #prezzoAdmin, #neopatentatiAdmin {
+    width: 100%; 
+    padding: 0.8em; 
+    border: 1px solid var(--form-border-input-color); 
+    border-radius: 5px; 
+    background-color: black; 
+    color: var(--form-border-input-color); 
+    font-size: 16px; 
+    color: var(--form-border-input-color);
+    height: auto;
+    box-sizing: border-box; 
+    margin-top: 2em;
+    color: white;
 }
 
 #bottoneAggiungi{
-    margin-top: 2em;
-    font-size: 16px;
-    padding: 10px;
+    display: flex;
+    margin: auto;
+    margin-top: 1em;
+    padding: 0.5em 2em;
+    color: white;
+    cursor: pointer;
+    font-size: 18px;
+    border-radius: 20px;
+    background-color: black;
     border: 1px solid white;
-    border-radius: 4px;
-    box-sizing: border-box;
+}
+
+#bottoneAggiungi:hover{
+    background-color: white;
+    color: black;
 }
 
 
-
-/*Elimina Automobile*/
-
-.sectionEliminaAdmin{
-    display: grid;
-    grid-template-columns: 1fr auto;
-    column-gap: 1em;
-    align-items: start;
-    margin: 1em 0;
-}
+/*Elimina Auto*/
 
 #labelEliminaAutoAdmin{
-    grid-column: 1;
-    grid-row: 1;
+    position: absolute;
+    display: block;
+    margin-left: 0.7em;
+    margin-top: 1.2em;
+    color: var(--form-border-input-color);
+    background-color: var(--navbar-bg-color);
+    padding: 0 0.3em;
 }
 
 #eliminaAutoAdmin{
-    grid-column: 1;
-    grid-row: 2;
-    padding: 0.5em;
-    border: 1px solid white; 
-    border-radius: 4px; 
-    background-color:black; 
+    width: 100%; 
+    padding: 0.8em; 
+    border: 1px solid var(--form-border-input-color); 
+    border-radius: 5px; 
+    margin-top: 2em;
+    background-color:black;
     color: var(--form-border-input-color); 
     font-size: 16px;
-    cursor: pointer; 
+    cursor: pointer;
+    color: white; 
 }
 
+
 #eliminaButtonAdmin{
-    grid-column: 3;
-    grid-row: 2;
-    align-self: center;
-    justify-self: end;
-    padding: 0.5em 1.5em;
+    display: flex;
+    margin: auto;
+    margin-top: 1em;
+    padding: 0.5em 2em;
+    color: white;
     font-size: 16px;
-    border-radius: 5px;
+    cursor: pointer;
+    font-size: 18px;
+    border-radius: 20px;
+    background-color: black;
+    border: 1px solid white;
+}
+
+#eliminaButtonAdmin:hover{
+    background-color: white;
+    color: black;
 }
 
 /*#endregion Amministratore*/
