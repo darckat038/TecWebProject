@@ -1,6 +1,6 @@
 <?php
 
-function ripristinoInput(){
+function ripristinoInput() {
 	$listinoHTML = file_get_contents("listino.html");
 	//RIPRISTINO DELL'INPUT INSERITO
 	// Se c'è input salvato in $_GET, mette quello, altrimenti valore di default (stringa vuota o select default)
@@ -52,6 +52,7 @@ function ripristinoInput(){
 
 	$listinoHTML = str_replace("[prezzoMax]", htmlspecialchars(isset($_GET['prezzoMax']) ? $_GET['prezzoMax'] : ''), $listinoHTML);
 	$listinoHTML = str_replace("[chilometraggio]", htmlspecialchars(isset($_GET['chilometraggio']) ? $_GET['chilometraggio'] : ''), $listinoHTML);
+
 	return $listinoHTML;
 }
 
@@ -69,17 +70,35 @@ if(isset($_GET["marca"]) || isset($_GET["modello"]) || isset($_GET["anno"]) || i
 	|| isset($_GET["prezzoMax"]) || isset($_GET["chilometraggio"])) {
 
     //CONTROLLI SULL'INPUT
-	if (!preg_match("/^[A-Za-z0-9\-]*$/", $_GET["marca"])) {
-		$err = $err . "<p>Marca non valida, puoi usare solo lettere, numeri e il carattere \"-\".</p>";
+	if (!preg_match("/^([A-Za-z0-9\-]+( [A-Za-z0-9\-]+)*)?$/", $_GET["marca"])) {
+		$err = $err . "<p>Marca non valida, puoi usare solo lettere, numeri, spazi(non all'inizio e alla fine) e il carattere \"-\".</p>";
 	}
-	if (!preg_match("/^[A-Za-z0-9\-]*$/", $_GET["modello"])) {
-		$err = $err . "<p>Modello non valido, puoi usare solo lettere, numeri e il carattere \"-\".</p>";
+	if (!preg_match("/^([A-Za-z0-9\-]+( [A-Za-z0-9\-]+)*)?$/", $_GET["modello"])) {
+		$err = $err . "<p>Modello non valido, puoi usare solo lettere, numeri, spazi(non all'inizio e alla fine) e il carattere \"-\".</p>";
 	}
 	if (!empty($_GET["anno"]) && (intval($_GET["anno"]) < 1990 || intval($_GET["anno"]) > 2024)) {
 		$err = $err . "<p>Anno non valido, inserisci un anno compreso tra 1990 e 2024</p>";
 	}
+	if (!empty($_GET["potenzaMin"]) && (intval($_GET["potenzaMin"]) <= 0) || (!empty($_GET["potenzaMax"]) ? (intval($_GET["potenzaMin"]) > intval($_GET["potenzaMax"])) : false)) {
+		$err = $err . "<p>Potenza minima non valida, inserisci una potenza maggiore di 0 e minore o uguale alla potenza massima.</p>";
+	}
+	if (!empty($_GET["potenzaMax"]) && (intval($_GET["potenzaMax"]) <= 0) || (!empty($_GET["potenzaMin"]) ? (intval($_GET["potenzaMax"]) < intval($_GET["potenzaMin"])) : false)) {
+		$err = $err . "<p>Potenza massima non valida, inserisci una potenza maggiore di 0 e maggiore o uguale alla potenza minima.</p>";
+	}
+	if (!empty($_GET["pesoMin"]) && (intval($_GET["pesoMin"]) <= 0) || (!empty($_GET["pesoMax"]) ? (intval($_GET["pesoMin"]) > intval($_GET["pesoMax"])) : false)) {
+		$err = $err . "<p>Peso minimo non valido, inserisci un peso maggiore di 0 e minore o uguale al peso massimo.</p>";
+	}
+	if (!empty($_GET["pesoMax"]) && (intval($_GET["pesoMax"]) <= 0) || (!empty($_GET["pesoMin"]) ? (intval($_GET["pesoMax"]) < intval($_GET["pesoMin"])) : false)) {
+		$err = $err . "<p>Peso massimo non valido, inserisci un peso maggiore di 0 e maggiore o uguale al peso minimo.</p>";
+	}
+	if (!empty($_GET["posti"]) && (intval($_GET["posti"]) <= 0)) {
+		$err = $err . "<p>Numero di posti non valido, inserisci un numero maggiore di 0.</p>";
+	}
 	if (!empty($_GET["prezzoMax"]) && doubleval($_GET["prezzoMax"]) <= 0) {
 		$err = $err . "<p>Prezzo non valido, inserisci un prezzo maggiore di 0.</p>";
+	}
+	if (!empty($_GET["chilometraggio"]) && intval($_GET["chilometraggio"]) < 0) {
+		$err = $err . "<p>Chilometraggio non valido, inserisci un numero maggiore o uguale a 0.</p>";
 	}
 
 	//CONTROLLO ERRORI
@@ -88,6 +107,16 @@ if(isset($_GET["marca"]) || isset($_GET["modello"]) || isset($_GET["anno"]) || i
 		echo str_replace("[err]", $err, $listinoHTML);
 		exit();
 	}
+
+	//SE NON CI SONO ERRORI MI SALVO I VALORI IN SESSION
+	/*
+	foreach($_GET as $param => $value) {
+		$_SESSION[$param] = $value;
+	}
+	*/
+
+	$listinoHTML = ripristinoInput();
+	echo str_replace("[err]", $err, $listinoHTML);
 
 	//ESECUZIONE DELLA QUERY
 	/*
