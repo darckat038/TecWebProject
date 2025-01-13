@@ -97,8 +97,8 @@ if(isset($_GET["marca"]) || isset($_GET["modello"]) || isset($_GET["anno"]) || i
 	if (!empty($_GET["prezzoMax"]) && doubleval($_GET["prezzoMax"]) <= 0) {
 		$err = $err . "<p>Prezzo non valido, inserisci un prezzo maggiore di 0.</p>";
 	}
-	if (!empty($_GET["chilometraggio"]) && intval($_GET["chilometraggio"]) < 0) {
-		$err = $err . "<p>Chilometraggio non valido, inserisci un numero maggiore o uguale a 0.</p>";
+	if (!empty($_GET["chilometraggio"]) && intval($_GET["chilometraggio"]) <= 0) {
+		$err = $err . "<p>Chilometraggio non valido, inserisci un numero maggiore di 0.</p>";
 	}
 
 	//CONTROLLO ERRORI
@@ -115,9 +115,9 @@ if(isset($_GET["marca"]) || isset($_GET["modello"]) || isset($_GET["anno"]) || i
 	}
 	*/
 
-	$listinoHTML = ripristinoInput();
-	echo str_replace("[err]", $err, $listinoHTML);
-	exit();
+	// $listinoHTML = ripristinoInput();
+	// echo str_replace("[err]", $err, $listinoHTML);
+	// exit();
 
 	//ESECUZIONE DELLA QUERY
 	try{
@@ -125,23 +125,36 @@ if(isset($_GET["marca"]) || isset($_GET["modello"]) || isset($_GET["anno"]) || i
 
 		//IMPOSTARE DATI COME INDICATO NEI FILTRI
 		$params = array();
+
 		foreach($_GET as $param => $value) {
 			switch($param) {
+				// Per i valori double o interi, se uso intval/doubleval e ho stringa vuota di partenza, diventa 0/0.0
+
+				// Per i valori interi	
 				case "potenzaMin":
 				case "potenzaMax":
 				case "pesoMin":
-				case "pesoMin":
+				case "pesoMax":
 				case "posti":
 				case "anno":
-				case "chilometraggio":
 				case "neopatentati":
-					$params[$param] = intval($value);
+				case "chilometraggio":
+					if(intval($value) != 0) {
+						$params[$param] = intval($value);
+					}
 					break;
+				// Per i valori double	
 				case "prezzoMax":
-					$params[$param] = doubleval($value);
+					if(doubleval($value) != 0) {
+						$params[$param] = doubleval($value);
+					}
 					break;
+				// Per le stringhe
 				default:
-				$params[$param] = $value;
+					if((strcmp($value, "qualsiasi") !== 0) && !empty($value)) {
+						$params[$param] = $value;
+					}
+					break;
 			}
 		}
 
@@ -151,15 +164,23 @@ if(isset($_GET["marca"]) || isset($_GET["modello"]) || isset($_GET["anno"]) || i
 		unset($db);
 
 		if($ris){
-			
+			$cars = "";
+			foreach($ris as $vehicle) {
+				$cars .= json_encode($vehicle);
+			}
+			$listinoHTML = ripristinoInput();
+			echo str_replace("[err]", $err, $listinoHTML);
+			echo $cars;
 		}
-		else{
-			header("location: 500.html");
-			exit();
+		else {
+			$listinoHTML = ripristinoInput();
+			echo str_replace("[err]", $err, $listinoHTML);
+			echo "Nessun veicolo compatibile";
 		}
 	}
-	catch(Exception){
-		header("location: 500.html");
+	catch(Exception $e){
+		// header("location: 500.html");
+		echo $e;
 		exit();
 	}
 

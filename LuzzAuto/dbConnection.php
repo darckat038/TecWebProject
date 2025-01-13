@@ -126,71 +126,106 @@ class DBConnection {
 		// Se params non è vuoto, aggiungo clausola WHERE
 		if(!empty($params)) {
 			$query .= " WHERE";
+			$paramS = "";
+			$paramA = array();
 
 			// Faccio controllo per ogni parametro auto
 
 			if(isset($params["marca"])) {
-				$query .= " marca LIKE %?% AND";
+				$query .= " marca LIKE ? AND";
+				array_push($paramA, "%" . $params["marca"] . "%");
+				$paramS .= "s";
 			}
 
 			if(isset($params["modello"])) {
-				$query .= " modello LIKE %?% AND";
+				$query .= " modello LIKE ? AND";
+				array_push($paramA, "%" . $params["modello"] . "%");
+				$paramS .= "s";
 			}
 
 			if(isset($params["anno"])) {
-				$query .= " anno = %?% AND";
+				$query .= " anno = ? AND";
+				array_push($paramA, $params["anno"]);
+				$paramS .= "i";
 			}
 
 			if(isset($params["colore"])) {
-				$query .= " colore LIKE %?% AND";
+				$query .= " colore LIKE ? AND";
+				array_push($paramA, "%" . $params["colore"] . "%");
+				$paramS .= "s";
 			}
 
 			if(isset($params["alimentazione"])) {
-				$query .= " alimentazione LIKE %?% AND";
+				$query .= " alimentazione LIKE ? AND";
+				array_push($paramA, "%" . $params["alimentazione"] . "%");
+				$paramS .= "s";
 			}
 
 			if(isset($params["cambio"])) {
-				$query .= " cambio LIKE %?% AND";
+				$query .= " cambio LIKE ? AND";
+				array_push($paramA, "%" . $params["cambio"] . "%");
+				$paramS .= "s";
 			}
 
 			if(isset($params["trazione"])) {
-				$query .= " trazione LIKE %?% AND";
+				$query .= " trazione LIKE ? AND";
+				array_push($paramA, "%" . $params["trazione"] . "%");
+				$paramS .= "s";
 			}
 
 			if(isset($params["potenzaMin"])) {
 				$query .= " potenza >= ? AND";
+				array_push($paramA, $params["potenzaMin"]);
+				$paramS .= "i";
 			}
 
 			if(isset($params["potenzaMax"])) {
 				$query .= " potenza <= ? AND";
+				array_push($paramA, $params["potenzaMax"]);
+				$paramS .= "i";
 			}
 
 			if(isset($params["pesoMin"])) {
 				$query .= " peso >= ? AND";
+				array_push($paramA, $params["pesoMin"]);
+				$paramS .= "i";
 			}
 
 			if(isset($params["pesoMax"])) {
 				$query .= " peso <= ? AND";
+				array_push($paramA, $params["pesoMax"]);
+				$paramS .= "i";
 			}
 
 			if(isset($params["neopatentati"])) {
 				$query .= " neopatentati = ? AND";
+				array_push($paramA, $params["neopatentati"]);
+				$paramS .= "i";
 			}
 
 			if(isset($params["posti"])) {
-				$query .= " posti = ? AND";
+				$query .= " numeroPosti = ? AND";
+				array_push($paramA, $params["posti"]);
+				$paramS .= "i";
 			}
 
 			if(isset($params["condizione"])) {
-				$query .= " condizione LIKE %?% AND";
+				$query .= " condizione LIKE ? AND";
+				array_push($paramA, "%" . $params["condizione"] . "%");
+				$paramS .= "s";
 			}
 
 			if(isset($params["prezzoMax"])) {
 				$query .= " prezzo <= ? AND";
+				$query .= " chilometraggio <= ? AND";
+				array_push($paramA, $params["prezzoMax"]);
+				$paramS .= "d";
 			}
 
 			if(isset($params["chilometraggio"])) {
-				$query .= " posti <= ? AND";
+				$query .= " chilometraggio <= ? AND";
+				array_push($paramA, $params["chilometraggio"]);
+				$paramS .= "i";
 			}
 
 			//rimuovo ULTIMO AND dalla stringa
@@ -199,19 +234,31 @@ class DBConnection {
 
 		$query .= " ORDER BY ID ASC";
 
+		// echo $query . " ";
+		// exit();
+
 		// Preparazione dello statement
 		$stmt = $this->connection->prepare($query);
 		if ($stmt === false) {
 			die("Errore nella preparazione dello statement: " . $this->connection->error);
 		}
 
+		// echo $stmt->param_count;
+
 		if(!empty($params)) {
 			// Bind dei parametri (s = stringa, i = intero, d = double/float, b = blob)
+			echo $paramS . json_encode($paramA);
+			$stmt->bind_param($paramS, ...$paramA);
+
+			/*
 			$stmt->bind_param("ssissssiiiiiisdi", $params["marca"], $params["modello"], $params["anno"], $params["colore"], 
 										$params["alimentazione"], $params["cambio"], $params["trazione"], 
 										$params["potenzaMin"], $params["potenzaMax"], $params["pesoMin"], $params["pesoMax"], 
 										$params["neopatentati"], $params["posti"], $params["condizione"], $params["prezzoMax"], $params["chilometraggio"]);
+										*/
 		}
+
+		// exit();
 
 		// Esecuzione della query
 		if (!$stmt->execute()) {
