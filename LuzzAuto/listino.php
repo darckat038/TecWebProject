@@ -117,14 +117,34 @@ if(isset($_GET["marca"]) || isset($_GET["modello"]) || isset($_GET["anno"]) || i
 
 	$listinoHTML = ripristinoInput();
 	echo str_replace("[err]", $err, $listinoHTML);
+	exit();
 
 	//ESECUZIONE DELLA QUERY
-	/*
 	try{
 		$db = new DBConnection();
 
 		//IMPOSTARE DATI COME INDICATO NEI FILTRI
 		$params = array();
+		foreach($_GET as $param => $value) {
+			switch($param) {
+				case "potenzaMin":
+				case "potenzaMax":
+				case "pesoMin":
+				case "pesoMin":
+				case "posti":
+				case "anno":
+				case "chilometraggio":
+				case "neopatentati":
+					$params[$param] = intval($value);
+					break;
+				case "prezzoMax":
+					$params[$param] = doubleval($value);
+					break;
+				default:
+				$params[$param] = $value;
+			}
+		}
+
 		$ris = $db->getFilteredVehicles($params);
 
 		$db->closeConnection();
@@ -142,7 +162,7 @@ if(isset($_GET["marca"]) || isset($_GET["modello"]) || isset($_GET["anno"]) || i
 		header("location: 500.html");
 		exit();
 	}
-	*/
+
 } else {
 	$listinoHTML = ripristinoInput();
 	echo str_replace("[err]", $err, $listinoHTML);
