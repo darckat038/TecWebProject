@@ -234,7 +234,7 @@ select option {
     background-image: url(../img/Background/Luzzauto/LuzzAuto_facciata1.png);
     background-repeat: no-repeat;
     background-color: white;
-    background-size:cover;
+    background-size: cover;
 }
 
 .login_content{
@@ -242,7 +242,7 @@ select option {
     color: var(--form-text-color);
     padding: 2.5em;
     border-radius: 1.5em;
-    margin-top: 10em;
+    margin-top: 15em;
     box-shadow: rgba(115, 115, 115, 0.35) 0px 5px 15px;
 }
 
@@ -2019,19 +2019,10 @@ footer {
 }
 
 footer.shortPageFooter {
-   position: absolute;
-   bottom: 0;
+   margin: 7em auto 0;
 }
 
 footer p {
     display: inline-block;
-    margin: auto 0;
-}
-
-footer img.imgValidHTMLCode {
-    margin-right: 1em;
-}
-
-footer img.imgValidCSSCode {
-    margin-left: 1em;
+    margin: auto 1em;
 }
