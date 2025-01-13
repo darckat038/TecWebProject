@@ -139,13 +139,65 @@ class DBConnection {
 		}
 
 		if(isset($params["anno"])) {
-			$query .= " anno = ? AND";
+			$query .= " anno = %?% AND";
 		}
 
-		// DA FINIRE
+		if(isset($params["colore"])) {
+			$query .= " colore LIKE %?% AND";
+		}
 
-		//rimuovo AND dalla stringa
+		if(isset($params["alimentazione"])) {
+			$query .= " alimentazione LIKE %?% AND";
+		}
+
+		if(isset($params["cambio"])) {
+			$query .= " cambio LIKE %?% AND";
+		}
+
+		if(isset($params["trazione"])) {
+			$query .= " trazione LIKE %?% AND";
+		}
+
+		if(isset($params["potenzaMin"])) {
+			$query .= " potenza >= ? AND";
+		}
+
+		if(isset($params["potenzaMax"])) {
+			$query .= " potenza <= ? AND";
+		}
+
+		if(isset($params["pesoMin"])) {
+			$query .= " peso >= ? AND";
+		}
+
+		if(isset($params["pesoMax"])) {
+			$query .= " peso <= ? AND";
+		}
+
+		if(isset($params["neopatentati"])) {
+			$query .= " neopatentati = ? AND";
+		}
+
+		if(isset($params["posti"])) {
+			$query .= " posti = ? AND";
+		}
+
+		if(isset($params["condizione"])) {
+			$query .= " condizione LIKE %?% AND";
+		}
+
+		if(isset($params["prezzoMax"])) {
+			$query .= " prezzo <= ? AND";
+		}
+
+		if(isset($params["chilometraggio"])) {
+			$query .= " posti <= ? AND";
+		}
+
+		//rimuovo ULTIMO AND dalla stringa
 		$query = substr($query, 0, -4);
+
+		$query .= " ORDER BY ID ASC";
 
 		// Preparazione dello statement
 		$stmt = $this->connection->prepare($query);
@@ -154,7 +206,10 @@ class DBConnection {
 		}
 
 		// Bind dei parametri (s = stringa, i = intero, d = double/float, b = blob)
-		// DA FARE
+		$stmt->bind_param("ssissssiiiiiisdi", $params["marca"], $params["modello"], $params["anno"], $params["colore"], 
+									$params["alimentazione"], $params["cambio"], $params["trazione"], 
+									$params["potenzaMin"], $params["potenzaMax"], $params["pesoMin"], $params["pesoMax"], 
+									$params["neopatentati"], $params["posti"], $params["condizione"], $params["prezzoMax"], $params["chilometraggio"]);
 
 		// Esecuzione della query
 		if (!$stmt->execute()) {
@@ -164,9 +219,8 @@ class DBConnection {
 		// Ottenimento del risultato
 		$result = $stmt->get_result();
 		$rows = $result->fetch_all(MYSQLI_ASSOC);
-		$numRows = count($rows);
 
-		return $result;
+		return $rows;
 	}
 
 	//FUNZIONE PER RICAVARE TUTTI I VEICOLI PRESENTI NEL DB
@@ -180,17 +234,15 @@ class DBConnection {
 		}
 
 		// Esecuzione della query
-		$result = $stmt->execute();
-
-		// Controllo del risultato
-		if ($result) {
-			$ret = ($stmt->get_result())->fetch_all(MYSQLI_ASSOC);
-			$stmt->close();
-			return $ret;
-		} else {
-			$stmt->close();
-			return false;
+		if (!$stmt->execute()) {
+			die("Errore nell'esecuzione dello statement: " . $stmt->error);
 		}
+
+		// Ottenimento del risultato
+		$result = $stmt->get_result();
+		$rows = $result->fetch_all(MYSQLI_ASSOC);
+
+		return $rows;
 	}
 
 	//FUNZIONE PER INSERIRE NUOVO VEICOLO IN VEICOLI NEL DB
@@ -210,7 +262,11 @@ class DBConnection {
 						$KGpeso, $neoP, $nPosti, $condizione, $chilometraggio, $prezzo);
 
 		// Esecuzione della query
-		$result = $stmt->execute();
+		if (!$stmt->execute()) {
+			die("Errore nell'esecuzione dello statement: " . $stmt->error);
+		}
+
+		$result = $stmt->get_result();
 
 		// Controllo del risultato
 		if ($result) {
