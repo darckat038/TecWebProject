@@ -257,9 +257,8 @@ class DBConnection {
 		return $rows;
 	}
 
-	//FUNZIONE PER RICAVARE TUTTI I VEICOLI PRESENTI NEL DB
-	public function getAllVehicles() {
-		$query = "SELECT * FROM Veicolo ORDER BY ID ASC;";
+	public function getAllVehicleColors() {
+		$query = "SELECT DISTINCT colore FROM Veicolo";
 
 		// Preparazione dello statement
 		$stmt = $this->connection->prepare($query);
@@ -275,8 +274,12 @@ class DBConnection {
 		// Ottenimento del risultato
 		$result = $stmt->get_result();
 		$rows = $result->fetch_all(MYSQLI_ASSOC);
+		$colors = array();
 
-		return $rows;
+		foreach($rows as $color)
+			array_push($colors, $color["colore"]);
+			
+		return $colors;
 	}
 
 	//FUNZIONE PER INSERIRE NUOVO VEICOLO IN VEICOLI NEL DB
