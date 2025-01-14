@@ -49,10 +49,10 @@
       <main class="utente_content">
 
         <h1><span id="saluto"></span> [nome]</h1>
-        
+
         <section class="riquadriUtente">
           <section class="riquadroInfoUtente">
-            <h2 class="nomeRiqUtente">Informazioni Utente</h2>
+            <span class="nomeRiqUtente">Informazioni Utente</span>
             <p id="userImage"></p>
             <p><strong>Nome:</strong><span> [nome]</span></p>
             <p><strong>Cognome:</strong><span> [cognome]</span></p>
@@ -63,7 +63,7 @@
         </section>
 
         <section >
-          <h2 class="nomeRiqPrenUtente">Prenotazioni</h2>
+          <span class="nomeRiqPrenUtente">Prenotazioni</span>
           <table class="tabellaPrenUtente">
             <thead>
               <tr>
@@ -90,19 +90,31 @@
           </table>
         </section>
 
+
         <section class="riquadriUtente">
-            <h2 class="nomeRiqUtente">Gestione Prenotazioni</h2>
-            <section class="sectionPrenUtente">
-                  <label for="gestPrenUtente" id="labelPrenUtente"><strong>Prenotazioni:</strong> </label>
-                  <select id="gestPrenUtente" name="gestPrenUtente" aria-label="Campo di inserimento della prenotazione che desideri annullare">
-                      <option value="Fiat">001 - Fiat Panda</option>
-                      <option value="Ford">002 - Ford Mustang</option>
-                  </select>
-                  <button id="eliminaPrenUtente" aria-label="Elimina la prenotazione selezionata">
-                    Elimina
-                  </button>
-            </section>
-        </section>
+          [formORbuttons]
+          <!-- 
+          <form method="post" action="">
+
+                    <span class="nomeRiqUtente">Gestione Prenotazioni</span>
+
+                    <label id="labelPrenUtente" for="gestPrenUtente"><strong>Prenotazioni:</strong> </label>
+                    <select name="gestPrenUtente" id="gestPrenUtente" aria-required="true" aria-label="Campo di inserimento della prenotazione che desideri annullare" required data-msg-required="Per favore, seleziona la prenotazione">
+                        <option value="Fiat">001 - Fiat Panda</option>
+                        <option value="Ford">002 - Ford Mustang</option>
+                    </select>
+
+                    <input id="eliminaPrenUtente" type="submit" value="Elimina" aria-label="Elimina la prenotazione selezionata">
+
+          </form>
+
+          <div class="form_errors">
+            [err]
+          </div>
+          --> 
+      </section>
+
+
 
       </main>
 

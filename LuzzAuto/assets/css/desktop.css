@@ -1934,13 +1934,16 @@ document.querySelectorAll('#list_filter .list_insert').forEach(select => {
     position: absolute;
     padding: 0 0.5em;
     margin-top: -1.9em;
+    font-weight: bold;
+    font-size: 25px;
     color: var(--form-border-input-color);
 }
 
 .nomeRiqPrenUtente{
     color: var(--form-border-input-color);
     padding-left: 3em;
-    padding-top: 1em;
+    font-weight: bold;
+    font-size: 25px;
 }
 
 #userImage{

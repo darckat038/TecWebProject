@@ -1783,13 +1783,17 @@ document.querySelectorAll('#list_filter .list_insert').forEach(select => {
     margin-left: -1.5em;
     position: absolute;
     padding: 0 0.3em;
-    margin-top: -3em;
+    margin-top: -2.8em;
+    font-weight: bold;
+    font-size: 25px;
     color: var(--form-border-input-color);
 }
 
 .nomeRiqPrenUtente{
     color: var(--form-border-input-color);
     padding-top: 1em;
+    font-weight: bold;
+    font-size: 25px;
 }
 
 #userImage{
