@@ -1,88 +1,68 @@
-/*
-function deleteErrorMessagesOnLoad() {
-	let indexBody = document.getElementsByTagName("body");
-
-	indexBody.addEventListener("load", function() {
-		
-	})
-	return;
-}
-*/
+window.addEventListener('load', function () {
+	validateFastSearch();
+});
 
 function validateFastSearch() {
 	let form = document.getElementById("home_fastSearch_form");
 
 	form.addEventListener("submit", function(event) {
-		if(!( validateMarca(form) && validateModello(form) && validatePrezzo(form) )) {
-			focusOnTopmostError();
-			event.preventDefault();
+
+		var ok = true;
+		let msg = "";
+
+		console.log("submit event");
+		resetFormError();
+		if(!validateMarca()) {
+			ok = false;
+			msg += "<p tabindex=\"0\" id=\"marca_err\">Marca non valida, puoi usare solo lettere, numeri, spazi(non all'inizio e alla fine) e il carattere \"-\".</p>";
 		}
-	})
+		if(!validateModello()) {
+			ok = false;
+			msg += "<p id=\"modello_err\">Modello non valido, puoi usare solo lettere, numeri, spazi(non all'inizio e alla fine) e il carattere \"-\".</p>";
+		}
+		if(!validatePrezzo()) {
+			ok = false;
+			msg += "<p id=\"prezzoMax_err\">Prezzo non valido, inserisci un prezzo maggiore di 0.</p>";;
+		}
+		if(!ok) {
+			console.log("Prevenzione del submit, errore trovato.");
+			addFormError(msg);
+			event.preventDefault();
+		} else {
+			console.log("Tutto ok, il form verrà inviato.");
+		}
+	});
 }
 
-function validateMarca(form) {
-	const allowedChars = /^[A-Za-z0-9\-]+$/; // lettere maiuscole e minuscole, numeri e il carattere trattino(-)
+/*
+* Controllo la marca del veicolo
+*/
+function validateMarca() {
+	const allowedChars = /^([A-Za-z0-9\-]+( [A-Za-z0-9\-]+)*)?$/; // lettere maiuscole e minuscole, numeri e il carattere trattino(-)
+
+	var marca = document.getElementById("home_marca").value;
+
+	return allowedChars.test(marca);
 }
 
+/*
+* Controllo il modello del veicolo
+*/
 function validateModello() {
-	const allowedChars = /^[A-Za-z0-9\-]+$/; // lettere maiuscole e minuscole, numeri e il carattere trattino(-)
+	const allowedChars = /^([A-Za-z0-9\-]+( [A-Za-z0-9\-]+)*)?$/; // lettere maiuscole e minuscole, numeri e il carattere trattino(-)
+
+	var modello = document.getElementById("home_modello").value;
+
+	return allowedChars.test(modello);
 }
 
-function validatePrezzo(form) {
-	var id = "home_prezzo";
-	var username = form;
+/*
+* Controllo il prezzo massimo inserito
+*/
+function validatePrezzo() {
+	var prezzoMax = document.getElementById("home_prezzoMax").value;
+
+	console.log(prezzoMax);
 	
-	if (prezzoMax <= 0) {
-		showErrorMessage(id, 'Prezzo massimo non valido, devi inserire un valore più grande di 0.');
-		return false;
-	}
-	removeErrorMessage(id);
-	return true;
-}
-
-/*
- * Mostra messaggio di errore a seguito di validazione
- */
-function showErrorMessage(id, message) {
-	var element = document.getElementById(id);
-	var messageTarget = document.getElementById(id + '-hint');
-
-	removeErrorMessage(id);
-
-	element.classList.add('invalid');
-	if (element.tagName != 'DIV') {
-		element.setAttribute("aria-invalid", true);
-	}
-
-	messageTarget.classList.add("error-message");
-	messageTarget.innerHTML = message;
-	return;
-}
-
-/*
- * Rimuove messaggio di errore a seguito di validazione
- */
-function removeErrorMessage(id) {
-	var element = document.getElementById(id);
-	var messageTarget = document.getElementById(id + '-hint');
-
-	element.classList.remove('invalid');
-	if (element.tagName != 'DIV') {
-		element.setAttribute("aria-invalid", false);
-	}
-
-	messageTarget.classList.remove("error-message");
-	messageTarget.innerHTML = '';
-	return;
-}
-
-/*
- * Pone il focus sul primo errore del form.
- */
-function focusOnTopmostError() {
-	var invalidFields = document.getElementsByClassName('invalid');
-	if (invalidFields) {
-		invalidFields[0].focus();
-	}
-	return;
+	return (prezzoMax != "" ? prezzoMax > 0 : true);
 }
