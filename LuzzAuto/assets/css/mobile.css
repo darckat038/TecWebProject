@@ -1345,6 +1345,13 @@ document.querySelectorAll('#list_filter .list_insert').forEach(select => {
     padding: 0.5em;
     margin: 0.2em;
     align-self: center;
+    text-align: center;
+    text-decoration: none;
+    color: white;
+}
+
+#details #details_buttons .list_button:hover {
+    color: black;
 }
 
 /*#endregion Auto*/

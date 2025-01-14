@@ -204,4 +204,41 @@ if(isset($_GET["marca"]) || isset($_GET["modello"]) || isset($_GET["anno"]) || i
 	echo str_replace("[err]", $err, $listinoHTML);
 }
 
+
+
+
+
+
+
+
+
+
+/*
+------ SOLUZIONE ELIMINA FILTRI IN PHP --------
+
+if(isset($_GET['action']) && $_GET['action'] == 'Applica-filtri'){
+	.........
+	if(isset($_COOKIE["page"])){
+		contruisci la sezione con tutti i filtri vuoti
+		elimina il cookie
+	}
+	else{
+		costruisci la sezione ripristinano i valori degli input
+	}
+	.........
+
+	//QUESTO PEZZO SOPRA PUO' ESSERE RIDOTTO FACENDO GLI STR REPLACE CONSIZIONALI IN BASE A isset($_COOKIE["page"]) ? "" : $_GET
+	//POI ELIMINO IL COOKIE
+}
+else if(isset($_GET['action']) && $_GET['action'] == 'Rimuovi-filtri'){
+	setcookie("page", str_replace("Rimuovi-Filtri", "Applica-filtri", $_SESSION[SESSION URI]);
+	header("location: " . $_COOKIE["page"]);
+}
+else{
+	.........
+}
+
+
+*/
+
 ?>
