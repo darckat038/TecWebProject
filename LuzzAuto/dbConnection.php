@@ -217,7 +217,6 @@ class DBConnection {
 
 			if(isset($params["prezzoMax"])) {
 				$query .= " prezzo <= ? AND";
-				$query .= " chilometraggio <= ? AND";
 				array_push($paramA, $params["prezzoMax"]);
 				$paramS .= "d";
 			}
