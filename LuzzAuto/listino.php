@@ -69,7 +69,7 @@ if(isset($_GET["marca"]) || isset($_GET["modello"]) || isset($_GET["anno"]) || i
 	|| isset($_GET["pesoMin"]) || isset($_GET["pesoMax"]) || isset($_GET["neopatentati"]) || isset($_GET["posti"]) || isset($_GET["condizione"]) 
 	|| isset($_GET["prezzoMax"]) || isset($_GET["chilometraggio"])) {
 
-    //CONTROLLI SULL'INPUT
+	//CONTROLLI SULL'INPUT
 	if (!preg_match("/^([A-Za-z0-9\-]+( [A-Za-z0-9\-]+)*)?$/", $_GET["marca"])) {
 		$err = $err . "<p>Marca non valida, puoi usare solo lettere, numeri, spazi(non all'inizio e alla fine) e il carattere \"-\".</p>";
 	}
@@ -108,17 +108,6 @@ if(isset($_GET["marca"]) || isset($_GET["modello"]) || isset($_GET["anno"]) || i
 		exit();
 	}
 
-	//SE NON CI SONO ERRORI MI SALVO I VALORI IN SESSION
-	/*
-	foreach($_GET as $param => $value) {
-		$_SESSION[$param] = $value;
-	}
-	*/
-
-	// $listinoHTML = ripristinoInput();
-	// echo str_replace("[err]", $err, $listinoHTML);
-	// exit();
-
 	//ESECUZIONE DELLA QUERY
 	try{
 		$db = new DBConnection();
@@ -150,6 +139,8 @@ if(isset($_GET["marca"]) || isset($_GET["modello"]) || isset($_GET["anno"]) || i
 					}
 					break;
 				// Per le stringhe
+				case "action":
+					break;
 				default:
 					if((strcmp($value, "qualsiasi") !== 0) && !empty($value)) {
 						$params[$param] = $value;
@@ -163,27 +154,53 @@ if(isset($_GET["marca"]) || isset($_GET["modello"]) || isset($_GET["anno"]) || i
 		$db->closeConnection();
 		unset($db);
 
+		$listaAuto = '';
+
 		if($ris){
-			$cars = "";
+			// Qui ci sono auto
+			$listaAuto = '<dl id="list_car_list">';
 			foreach($ris as $vehicle) {
-				$cars .= json_encode($vehicle);
+				$listaAuto .= '
+					<a class="list_car_item" href="javascript:void(0);">
+						<div class="list_car_image">
+							<img src="" alt="Testo alternativo">
+						</div>
+						<dl class="list_car_info">
+							<div>
+								<dd>Marca</dd>
+								<dt>' . $vehicle["marca"] . '</dt>
+							</div>
+							<div>
+								<dd>Modello</dd>
+								<dt>' . $vehicle["modello"] . '</dt>
+							</div>
+							<div>
+								<dd>Condizioni</dd>
+								<dt>' . $vehicle["condizione"] . '</dt>
+							</div>
+							<div>
+								<dd>Prezzo</dd>
+								<dt><abbr title="Euro">&euro;</abbr> ' . $vehicle["prezzo"] . '</dt>
+							</div>
+						</dl>
+					</a>';
 			}
+			$listaAuto .='</dl>';
 			$listinoHTML = ripristinoInput();
-			echo str_replace("[err]", $err, $listinoHTML);
-			echo $cars;
+			$listinoHTML = str_replace("[err]", $err, $listinoHTML);
 		}
 		else {
+			// Qui non ci sono auto
 			$listinoHTML = ripristinoInput();
-			echo str_replace("[err]", $err, $listinoHTML);
-			echo "Nessun veicolo compatibile";
+			$listinoHTML = str_replace("[err]", $err, $listinoHTML);
+			$listaAuto ='<p class="list_car_list_empty">Nessun Veicolo Compatibile</p>';
 		}
+		echo preg_replace('/<dl id="list_car_list">.*?<\/dl>\s*<\/section>/s', $listaAuto, $listinoHTML);
 	}
 	catch(Exception $e){
-		// header("location: 500.html");
-		echo $e;
+		header("location: 500.html");
 		exit();
 	}
-
 } else {
 	$listinoHTML = ripristinoInput();
 	echo str_replace("[err]", $err, $listinoHTML);
