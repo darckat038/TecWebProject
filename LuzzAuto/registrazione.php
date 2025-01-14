@@ -40,7 +40,7 @@ if(isset($_POST["nome"]) && isset($_POST["cognome"]) && isset($_POST["username"]
 
 		//CONTROLLI SULL'INPUT
 		if (!preg_match("/^[A-Za-z]+$/", $_POST["nome"])) {
-			$err = $err . "<p>Nome non valido, puoi usare solo lettere</p>";
+			$err = $err . "<p>Nome non valido, puoi usare solo lettere.</p>";
 		}
 		if (!preg_match("/^[A-Za-z]+$/", $_POST["cognome"])) {
 			$err = $err . "<p>Cognome non valido, puoi usare solo lettere</p>";
