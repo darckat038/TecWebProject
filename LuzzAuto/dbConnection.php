@@ -311,6 +311,31 @@ class DBConnection {
 		
 	}
 
+
+	public function getNomeCognomeUser($username) {
+		$query = "SELECT nome, cognome, username FROM Utente WHERE username = '$username';";
+
+		// Preparazione dello statement
+		$stmt = $this->connection->prepare($query);
+		if ($stmt === false) {
+			die("Errore nella preparazione dello statement: " . $this->connection->error);
+		}
+
+		// Esecuzione della query
+		if (!$stmt->execute()) {
+			die("Errore nell'esecuzione dello statement: " . $stmt->error);
+		}
+
+		// Ottenimento del risultato
+		$result = $stmt->get_result();
+		$rows = $result->fetch_all(MYSQLI_ASSOC);
+
+		return $rows;
+	}
+
+
+
+
 	
 }
 
