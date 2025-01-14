@@ -1493,7 +1493,7 @@ document.querySelectorAll('#list_filter .list_insert').forEach(select => {
     border-radius: 1em;
     font-size: 100%;
     box-shadow: rgba(115, 115, 115, 0.35) 0px 5px 15px;
-    width: fit-content;
+    width: 35em;
 }
 
 #home_fastSearch .home_sectionTitle {
@@ -1538,7 +1538,7 @@ document.querySelectorAll('#list_filter .list_insert').forEach(select => {
 #home_fastSearch label#home_label_modello,
 #home_fastSearch #home_label_prezzo {
     margin-top: -0.85em;
-    margin-left: 5em;
+    margin-left: 8em;
 }
 
 #home_fastSearch #home_modello,
@@ -1557,7 +1557,7 @@ document.querySelectorAll('#list_filter .list_insert').forEach(select => {
 }
 
 #home_fastSearch #home_label_prezzo {
-    margin-left: 5em;
+    margin-left: 6.5em;
 }
 
 /* input type range
