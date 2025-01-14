@@ -1259,13 +1259,13 @@ document.querySelectorAll('#list_filter .list_insert').forEach(select => {
 }
 
 
-.list_car_item a {
+#list_car_list a {
     text-decoration: none; /* Rimuove il sottolineato */
     color: black; /* Testo nero */
     transition: color 0.3s ease;
 }
 
-.list_car_item:hover a {
+#list_car_list:hover a {
     color: white; /* Colore bianco durante l'hover del div */
 }
 
