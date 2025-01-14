@@ -1,3 +1,5 @@
+//INCLUDERE NELLA PAGINA HTML IL VALIDATION TOOL
+
 function validateLoginData(){
     let form = document.getElementById('signup_form');
     form.addEventListener('submit', function (event){
