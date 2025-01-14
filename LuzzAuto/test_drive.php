@@ -94,7 +94,6 @@ if (isset($_SESSION["utente"])) {
         exit();
     }
 
-
 }
 else{
     //IMPOSTO HTML DEI BOTTONI

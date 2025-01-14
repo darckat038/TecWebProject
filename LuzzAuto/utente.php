@@ -63,9 +63,6 @@ $formHTML = "
 
           </form>
 
-          <div class='form_errors'>
-            [err]
-          </div>
 ";
 
 $formORbuttonsHTML = $formHTML;
