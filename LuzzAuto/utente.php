@@ -7,6 +7,8 @@ if (!isset($_SESSION["utente"])) {
     exit();
 }
 
+
+//INFORMAZIONI UTENTE
 require_once 'dbConnection.php';
 use DB\DBConnection;
 
@@ -36,6 +38,7 @@ try {
     exit();
 }
 
+
 // Carico template html
 $pagina = file_get_contents('utente.html');
 
@@ -44,6 +47,48 @@ $pagina = str_replace('[nome]', htmlspecialchars($nome), $pagina);
 $pagina = str_replace('[cognome]', htmlspecialchars($cognome), $pagina);
 $pagina = str_replace('[username]', htmlspecialchars($username), $pagina);
 
+
+
+//TABELLA PRENOTAZIONI
+
+//esecuzione della query
+try{
+    $db = new DBConnection();
+    $prenotazione = $db->getPrenotazioni($username);
+    $db->closeConnection();
+
+    unset($db);
+
+    $campiTabella = '';
+
+    if(empty($prenotazione)) {
+        //non ci sono prenotazioni
+        $campiTabella = "<tr><td colspan='5'>Non ci sono prenotazioni disponibili.</td></tr>";
+    }else{
+        foreach ($prenotazione as $row) {
+            $val = $row["codice"] . "-" . $row["marca"] . "-" . $row['modello'] . "-" . $row['dataOra'] . "-" . $row['stato']; 
+            $campiTabella .= "<tr>
+                                <td>" . $row["codice"] . "</td>
+                                <td>" . $row["marca"] . " " . $row['modello'] . "</td>
+                                <td>" . $row['dataOra'] . "</td>
+                                <td>" . $row['stato'] . "</td>
+                              </tr>";
+        } 
+
+    }  
+    $pagina = str_replace("[campiTabella]", $campiTabella, $pagina);
+
+}   
+catch(Exception $e){
+    header("location: 500.html");
+    exit();
+}
+
+
+
+
+
+//GESTIONE PRENOTAZIONE
 $err = "";
 
 $formORbuttonsHTML= "";
@@ -61,7 +106,7 @@ $formHTML = "
 
                     <input id='eliminaPrenUtente' type='submit' value='Elimina' aria-label='Elimina la prenotazione selezionata'>
 
-          </form>
+            </form>
 
 ";
 
@@ -70,33 +115,30 @@ $formORbuttonsHTML = $formHTML;
 $pagina = str_replace("[formORbuttons]", $formORbuttonsHTML, $pagina);
 
 
-
-
-//ESECUZIONE DELLA QUERY
+//esecuzione della query
 try{
     $db = new DBConnection();
-    $prenotazione = $db->getPrenotazione($username);
+    $prenotazione = $db->getPrenEllimina($username);
     $db->closeConnection();
 
     unset($db);
 
-    $veicoli = '';
     $prenotazioni = '';
 
-    //INSERIMENTO DEI VEICOLI NEL SELECT
+    //inserimento veicoli nel select
     foreach($prenotazione as $row){
         $val = $row["codice"] . "-" . $row["marca"] . "-" . $row['modello'];
 
-        //REIMPOSTO IL VALORE SETTATO
+        //reimposto il valore settato
         if(isset($_POST['gestPrenUtente']) && $_POST['gestPrenUtente'] == $val){
-            $veicoli .= "<option value='" . $val . "' selected>" . $row["codice"] . " - " . $row["marca"] . " " . $row['modello'] . "</option>";
+            $prenotazioni .= "<option value='" . $val . "' selected>" . $row["codice"] . " - " . $row["marca"] . " " . $row['modello'] . "</option>";
         }
         else{
-            $veicoli .= "<option value='" . $val . "'>" . $row["codice"] . " - " . $row["marca"] . " " . $row['modello'] . "</option>";
+            $prenotazioni .= "<option value='" . $val . "'>" . $row["codice"] . " - " . $row["marca"] . " " . $row['modello'] . "</option>";
         }
         
     }
-    $pagina = str_replace("[prenotazioni]", $veicoli, $pagina);
+    $pagina = str_replace("[prenotazioni]", $prenotazioni, $pagina);
 
 }
     

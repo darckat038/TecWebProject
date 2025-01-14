@@ -439,8 +439,8 @@ class DBConnection {
 	}
 	
 
-	//FUNZIONE PER PRENDERE LE PRENOTAZIONI DI UN USERNAME
-	public function getPrenotazione($username) {
+	//FUNZIONE PER PRENDERE LE PRENOTAZIONI DI UN USERNAME(codice, marca, modello)
+	public function getPrenEllimina($username) {
 		$query = "SELECT p.codice, v.marca, v.modello
 				  FROM Prenotazione p
 				  JOIN Veicolo v ON p.idAuto = v.id
@@ -463,6 +463,31 @@ class DBConnection {
 
 		return $rows;
 	}
+
+		//FUNZIONE PER PRENDERE LE PRENOTAZIONI DI UN USERNAME(codice, marca, modello, data, stato)
+		public function getPrenotazioni($username) {
+			$query = "SELECT p.codice, v.marca, v.modello, p.dataOra, p.stato
+					  FROM Prenotazione p
+					  JOIN Veicolo v ON p.idAuto = v.id
+					  WHERE p.username = '$username';";
+	
+			// Preparazione dello statement
+			$stmt = $this->connection->prepare($query);
+			if ($stmt === false) {
+				die("Errore nella preparazione dello statement: " . $this->connection->error);
+			}
+	
+			// Esecuzione della query
+			if (!$stmt->execute()) {
+				die("Errore nell'esecuzione dello statement: " . $stmt->error);
+			}
+	
+			// Ottenimento del risultato
+			$result = $stmt->get_result();
+			$rows = $result->fetch_all(MYSQLI_ASSOC);
+	
+			return $rows;
+		}
 
 
 	
