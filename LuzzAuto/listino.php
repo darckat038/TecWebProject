@@ -211,6 +211,9 @@ if(isset($_GET['action']) && $_GET['action'] == 'Applica-filtri'){
 		costruisci la sezione ripristinano i valori degli input
 	}
 	.........
+
+	//QUESTO PEZZO SOPRA PUO' ESSERE RIDOTTO FACENDO GLI STR REPLACE CONSIZIONALI IN BASE A isset($_COOKIE["page"]) ? "" : $_GET
+	//POI ELIMINO IL COOKIE
 }
 else if(isset($_GET['action']) && $_GET['action'] == 'Rimuovi-filtri'){
 	setcookie("page", str_replace("Rimuovi-Filtri", "Applica-filtri", $_SESSION[SESSION URI]);
