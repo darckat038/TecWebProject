@@ -1245,8 +1245,7 @@ document.querySelectorAll('#list_filter .list_insert').forEach(select => {
     padding: 1em; /* Spaziatura interna */
     overflow: hidden; /* Evita fuoriuscite */
     transition:  /* Effetto di transizione */
-        background-color 0.3s ease, 
-        color 0.3s ease, 
+        background-color 0.3s ease,
         border-radius 0.3s ease;
     display: flex; /* Disposizione orizzontale delle colonne */
 }
@@ -1262,10 +1261,9 @@ document.querySelectorAll('#list_filter .list_insert').forEach(select => {
 #list_car_list a {
     text-decoration: none; /* Rimuove il sottolineato */
     color: black; /* Testo nero */
-    transition: color 0.3s ease;
 }
 
-#list_car_list:hover a {
+#list_car_list a:hover {
     color: white; /* Colore bianco durante l'hover del div */
 }
 
@@ -1308,6 +1306,7 @@ document.querySelectorAll('#list_filter .list_insert').forEach(select => {
     flex-direction: column;
     justify-content: center;
     gap: 0.5em;
+    transition: color 0.3s ease;
 }
 
 .list_car_item .list_car_info dd {
@@ -1404,6 +1403,7 @@ document.querySelectorAll('#list_filter .list_insert').forEach(select => {
     padding: 0.5em;
     margin: 0.2em;
     align-self: center;
+    text-align: center;
 }
 
 /*#endregion Auto*/
