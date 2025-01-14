@@ -4,9 +4,9 @@ function ripristinoInput() {
 	$listinoHTML = file_get_contents("listino.html");
 	//RIPRISTINO DELL'INPUT INSERITO
 	// Se c'è input salvato in $_GET, mette quello, altrimenti valore di default (stringa vuota o select default)
-	$listinoHTML = str_replace("[marca]", htmlspecialchars(isset($_GET['marca']) ? $_GET['marca'] : ''), $listinoHTML);
-	$listinoHTML = str_replace("[modello]", htmlspecialchars(isset($_GET['modello']) ? $_GET['modello'] : ''), $listinoHTML);
-	$listinoHTML = str_replace("[anno]", htmlspecialchars(isset($_GET['anno']) ? $_GET['anno'] : ''), $listinoHTML);
+	$listinoHTML = str_replace('value="[marca]"', htmlspecialchars(isset($_GET['marca']) ? 'value="' . $_GET['marca'] . '"' : ''), $listinoHTML);
+	$listinoHTML = str_replace('value="[modello]"', htmlspecialchars(isset($_GET['modello']) ? 'value="' . $_GET['modello'] . '"' : ''), $listinoHTML);
+	$listinoHTML = str_replace('value="[anno]"', htmlspecialchars(isset($_GET['anno']) ? 'value="' . $_GET['anno'] . '"' : ''), $listinoHTML);
 
 	//replace colore
 	if(htmlspecialchars(isset($_GET['colore']))) {
@@ -36,12 +36,12 @@ function ripristinoInput() {
 	// rimpiazzo di default -> seleziono qualsiasi
 	$listinoHTML = str_replace(["[qualsiasi]", "[anteriore]", "[posteriore]", "[integrale]"], ["selected ", "", "", ""], $listinoHTML);
 
-	$listinoHTML = str_replace("[potenzaMin]", htmlspecialchars(isset($_GET['potenzaMin']) ? $_GET['potenzaMin'] : ''), $listinoHTML);
-	$listinoHTML = str_replace("[potenzaMax]", htmlspecialchars(isset($_GET['potenzaMax']) ? $_GET['potenzaMax'] : ''), $listinoHTML);
-	$listinoHTML = str_replace("[pesoMin]", htmlspecialchars(isset($_GET['pesoMin']) ? $_GET['pesoMin'] : ''), $listinoHTML);
-	$listinoHTML = str_replace("[pesoMax]", htmlspecialchars(isset($_GET['pesoMax']) ? $_GET['pesoMax'] : ''), $listinoHTML);
+	$listinoHTML = str_replace('value="[potenzaMin]"', htmlspecialchars(isset($_GET['potenzaMin']) ? 'value="' . $_GET['potenzaMin'] . '"' : ''), $listinoHTML);
+	$listinoHTML = str_replace('value="[potenzaMax]"', htmlspecialchars(isset($_GET['potenzaMax']) ? 'value="' . $_GET['potenzaMax'] . '"' : ''), $listinoHTML);
+	$listinoHTML = str_replace('value="[pesoMin]"', htmlspecialchars(isset($_GET['pesoMin']) ? 'value="' . $_GET['pesoMin'] . '"' : ''), $listinoHTML);
+	$listinoHTML = str_replace('value="[pesoMax]"', htmlspecialchars(isset($_GET['pesoMax']) ? 'value="' . $_GET['pesoMax'] . '"' : ''), $listinoHTML);
 	$listinoHTML = str_replace("[neopatentati]", htmlspecialchars(isset($_GET['neopatentati']) ? 'checked ' : ''), $listinoHTML);
-	$listinoHTML = str_replace("[posti]", htmlspecialchars(isset($_GET['posti']) ? $_GET['posti'] : ''), $listinoHTML);
+	$listinoHTML = str_replace('value="[posti]"', htmlspecialchars(isset($_GET['posti']) ? 'value="' . $_GET['posti'] . '"' : ''), $listinoHTML);
 
 	//replace condizione
 	if(htmlspecialchars(isset($_GET['condizione']))) {
@@ -69,7 +69,7 @@ if(isset($_GET["marca"]) || isset($_GET["modello"]) || isset($_GET["anno"]) || i
 	|| isset($_GET["pesoMin"]) || isset($_GET["pesoMax"]) || isset($_GET["neopatentati"]) || isset($_GET["posti"]) || isset($_GET["condizione"]) 
 	|| isset($_GET["prezzoMax"]) || isset($_GET["chilometraggio"])) {
 
-    //CONTROLLI SULL'INPUT
+	//CONTROLLI SULL'INPUT
 	if (!preg_match("/^([A-Za-z0-9\-]+( [A-Za-z0-9\-]+)*)?$/", $_GET["marca"])) {
 		$err = $err . "<p>Marca non valida, puoi usare solo lettere, numeri, spazi(non all'inizio e alla fine) e il carattere \"-\".</p>";
 	}
@@ -107,17 +107,6 @@ if(isset($_GET["marca"]) || isset($_GET["modello"]) || isset($_GET["anno"]) || i
 		echo str_replace("[err]", $err, $listinoHTML);
 		exit();
 	}
-
-	//SE NON CI SONO ERRORI MI SALVO I VALORI IN SESSION
-	/*
-	foreach($_GET as $param => $value) {
-		$_SESSION[$param] = $value;
-	}
-	*/
-
-	// $listinoHTML = ripristinoInput();
-	// echo str_replace("[err]", $err, $listinoHTML);
-	// exit();
 
 	//ESECUZIONE DELLA QUERY
 	try{
@@ -163,27 +152,53 @@ if(isset($_GET["marca"]) || isset($_GET["modello"]) || isset($_GET["anno"]) || i
 		$db->closeConnection();
 		unset($db);
 
+		$listaAuto = '';
+
 		if($ris){
-			$cars = "";
+			// Qui ci sono auto
+			$listaAuto = '<dl id="list_car_list">';
 			foreach($ris as $vehicle) {
-				$cars .= json_encode($vehicle);
+				$listaAuto .= '
+					<a class="list_car_item" href="javascript:void(0);">
+						<div class="list_car_image">
+							<img src="" alt="Testo alternativo">
+						</div>
+						<dl class="list_car_info">
+							<div>
+								<dd>Marca</dd>
+								<dt>' . $vehicle["marca"] . '</dt>
+							</div>
+							<div>
+								<dd>Modello</dd>
+								<dt>' . $vehicle["modello"] . '</dt>
+							</div>
+							<div>
+								<dd>Condizioni</dd>
+								<dt>' . $vehicle["condizione"] . '</dt>
+							</div>
+							<div>
+								<dd>Prezzo</dd>
+								<dt><abbr title="Euro">&euro;</abbr> ' . $vehicle["prezzo"] . '</dt>
+							</div>
+						</dl>
+					</a>';
 			}
+			$listaAuto .='</dl>';
 			$listinoHTML = ripristinoInput();
-			echo str_replace("[err]", $err, $listinoHTML);
-			echo $cars;
+			$listinoHTML = str_replace("[err]", $err, $listinoHTML);
 		}
 		else {
+			// Qui non ci sono auto
 			$listinoHTML = ripristinoInput();
-			echo str_replace("[err]", $err, $listinoHTML);
-			echo "Nessun veicolo compatibile";
+			$listinoHTML = str_replace("[err]", $err, $listinoHTML);
+			$listaAuto ='<p class="list_car_list_empty">Nessun Veicolo Compatibile</p>';
 		}
+		echo preg_replace('/<dl id="list_car_list">.*?<\/dl>\s*<\/section>/s', $listaAuto, $listinoHTML);
 	}
 	catch(Exception $e){
-		// header("location: 500.html");
-		echo $e;
+		header("location: 500.html");
 		exit();
 	}
-
 } else {
 	$listinoHTML = ripristinoInput();
 	echo str_replace("[err]", $err, $listinoHTML);

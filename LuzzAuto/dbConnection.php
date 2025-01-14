@@ -194,7 +194,6 @@ class DBConnection {
 		$query = "SELECT * FROM Veicolo";
 
 		$result = array();
-		//DA INSERIRE FILTRI
 
 		// Se params non è vuoto, aggiungo clausola WHERE
 		if(!empty($params)) {
@@ -306,9 +305,6 @@ class DBConnection {
 
 		$query .= " ORDER BY ID ASC";
 
-		// echo $query . " ";
-		// exit();
-
 		// Preparazione dello statement
 		$stmt = $this->connection->prepare($query);
 		if ($stmt === false) {
@@ -319,18 +315,8 @@ class DBConnection {
 
 		if(!empty($params)) {
 			// Bind dei parametri (s = stringa, i = intero, d = double/float, b = blob)
-			echo $paramS . json_encode($paramA);
 			$stmt->bind_param($paramS, ...$paramA);
-
-			/*
-			$stmt->bind_param("ssissssiiiiiisdi", $params["marca"], $params["modello"], $params["anno"], $params["colore"], 
-										$params["alimentazione"], $params["cambio"], $params["trazione"], 
-										$params["potenzaMin"], $params["potenzaMax"], $params["pesoMin"], $params["pesoMax"], 
-										$params["neopatentati"], $params["posti"], $params["condizione"], $params["prezzoMax"], $params["chilometraggio"]);
-										*/
 		}
-
-		// exit();
 
 		// Esecuzione della query
 		if (!$stmt->execute()) {
@@ -366,6 +352,35 @@ class DBConnection {
 		return $rows;
 	}
 
+	//FUNZIONE PER RICAVARE DETTAGLI VEICOLO DA ID
+	public function getVehicleDetails($id) {
+		$query = "SELECT * FROM Veicolo WHERE ID = ?";
+
+		// Preparazione dello statement
+		$stmt = $this->connection->prepare($query);
+		if ($stmt === false) {
+			die("Errore nella preparazione dello statement: " . $this->connection->error);
+		}
+
+		// Bind dei parametri (s = stringa, i = intero, d = double/float, b = blob)
+		$stmt->bind_param("i", $id);
+
+		// Esecuzione della query
+		if (!$stmt->execute()) {
+			die("Errore nell'esecuzione dello statement: " . $stmt->error);
+		}
+
+		// Ottenimento del risultato
+		$result = $stmt->get_result();
+		$row = $result->fetch_all(MYSQLI_ASSOC);
+
+		if(count($row) == 1){
+			return $row[0];
+		}
+
+		return -1;
+	}
+
 	//FUNZIONE PER INSERIRE NUOVO VEICOLO IN VEICOLI NEL DB
 	public function insertNewVehicle($marca, $modello, $anno, $colore, $alimentazione, $cambio, $trazione, $CVpotenza, $KGpeso, $neoP, $nPosti, $condizione, $chilometraggio, $prezzo) {
 		
@@ -397,6 +412,31 @@ class DBConnection {
 		}
 		
 	}
+
+
+	public function getNomeCognomeUser($username) {
+		$query = "SELECT nome, cognome, username FROM Utente WHERE username = '$username';";
+
+		// Preparazione dello statement
+		$stmt = $this->connection->prepare($query);
+		if ($stmt === false) {
+			die("Errore nella preparazione dello statement: " . $this->connection->error);
+		}
+
+		// Esecuzione della query
+		if (!$stmt->execute()) {
+			die("Errore nell'esecuzione dello statement: " . $stmt->error);
+		}
+
+		// Ottenimento del risultato
+		$result = $stmt->get_result();
+		$rows = $result->fetch_all(MYSQLI_ASSOC);
+
+		return $rows;
+	}
+
+
+
 
 	
 }
