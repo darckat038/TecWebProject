@@ -279,6 +279,35 @@ class DBConnection {
 		return $rows;
 	}
 
+	//FUNZIONE PER RICAVARE DETTAGLI VEICOLO DA ID
+	public function getVehicleDetails($id) {
+		$query = "SELECT * FROM Veicolo WHERE ID = ?";
+
+		// Preparazione dello statement
+		$stmt = $this->connection->prepare($query);
+		if ($stmt === false) {
+			die("Errore nella preparazione dello statement: " . $this->connection->error);
+		}
+
+		// Bind dei parametri (s = stringa, i = intero, d = double/float, b = blob)
+		$stmt->bind_param("i", $id);
+
+		// Esecuzione della query
+		if (!$stmt->execute()) {
+			die("Errore nell'esecuzione dello statement: " . $stmt->error);
+		}
+
+		// Ottenimento del risultato
+		$result = $stmt->get_result();
+		$row = $result->fetch_all(MYSQLI_ASSOC);
+
+		if(count($row) == 1){
+			return $row[0];
+		}
+
+		return -1;
+	}
+
 	//FUNZIONE PER INSERIRE NUOVO VEICOLO IN VEICOLI NEL DB
 	public function insertNewVehicle($marca, $modello, $anno, $colore, $alimentazione, $cambio, $trazione, $CVpotenza, $KGpeso, $neoP, $nPosti, $condizione, $chilometraggio, $prezzo) {
 		
