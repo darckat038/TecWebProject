@@ -113,7 +113,7 @@ if(isset($_POST['test_drive_select_auto']) && isset($_POST['test_drive_date'])){
         //  ---------- GROSSA MODIFICA? : avere id auto da selezionare per selezionre auto precisa ?--> le altre info dell'auto? -->? link che rimanda al listino?
         //
 
-        //CONTROLLI SULL'INPUT sia di veicolo perchè potrebbe essere cambiato da ispeziona che di data non al passato
+        //CONTROLLI SULL'INPUT
         if (!preg_match("/^[A-Za-z0-9\-\s]+$/", $_POST["test_drive_select_auto"])) {
 			$err = $err . "<p>Auto non valida</p>";
 		}
