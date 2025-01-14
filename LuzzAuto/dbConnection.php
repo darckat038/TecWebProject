@@ -112,6 +112,79 @@ class DBConnection {
 			
 	}
 
+	//FUNZIONE DI REGISTRAZIONE DI UN UTENTE NEL DB
+	public function insertPrenotazione($username, $idAuto, $data) {
+
+		$queryControllo = "SELECT * FROM Veicolo WHERE id = ?";
+		// Preparazione dello statement
+		$stmt = $this->connection->prepare($queryControllo);
+		if ($stmt === false) {
+			die("Errore nella preparazione dello statement: " . $this->connection->error);
+		}
+		// Bind dei parametri
+		$stmt->bind_param("i", $idAuto);
+		// Esecuzione della query
+		if (!$stmt->execute()) {
+			die("Errore nell'esecuzione dello statement: " . $stmt->error);
+		}
+		// Ottenimento del risultato
+		$result = $stmt->get_result();
+		$rows = $result->fetch_all(MYSQLI_ASSOC);
+		$numRows = count($rows);
+
+		if($numRows == 0){
+			return -1;
+			//L'AUTO NON ESISTE
+		}
+
+		$queryControllo2 = "SELECT * FROM Prenotazione WHERE username = ? AND idAuto = ? AND dataOra = ?";
+		// Preparazione dello statement
+		$stmt2 = $this->connection->prepare($queryControllo2);
+		if ($stmt2 === false) {
+			die("Errore nella preparazione dello statement: " . $this->connection->error);
+		}
+		// Bind dei parametri
+		$stmt2->bind_param("sis", $username, $idAuto, $data);
+		// Esecuzione della query
+		if (!$stmt2->execute()) {
+			die("Errore nell'esecuzione dello statement: " . $stmt2->error);
+		}
+		// Ottenimento del risultato
+		$result2 = $stmt2->get_result();
+		$rows2 = $result2->fetch_all(MYSQLI_ASSOC);
+		$numRows2 = count($rows2);
+
+		if($numRows2 != 0){
+			return -2;
+			//PRENOTAZIONE GIA' ESISTENTE
+		}
+
+		// Preparazione della query SQL con placeholder
+		$query = "INSERT INTO Prenotazione (username, idAuto, dataOra, stato) VALUES (?, ?, ?, 0)";
+
+		// Preparazione dello statement
+		$stmt = $this->connection->prepare($query);
+		if ($stmt === false) {
+			die("Errore nella preparazione dello statement: " . $this->connection->error);
+		}
+
+		// Bind dei parametri ("sssss" = 5 stringhe)
+		$stmt->bind_param("sis", $username, $idAuto, $data);
+
+		// Esecuzione della query
+		$result = $stmt->execute();
+
+		// Controllo del risultato
+		if ($result) {
+			return 1;
+			//INSERITA CON SUCCESSO
+		} else {
+			return 0;
+			//ERRORE NELL'INSERIMENTO
+		}
+			
+	}
+
 	// FUNZIONE PER RICAVARE I VEICOLI CON FILTRI APPLICATI PRESENTI NEL DB
 	/*
 	* Uso array associativo params dove metto i vari valori. Se valore vuoto, non lo setto in params
@@ -282,6 +355,35 @@ class DBConnection {
 		return $colors;
 	}
 
+	//FUNZIONE PER RICAVARE DETTAGLI VEICOLO DA ID
+	public function getVehicleDetails($id) {
+		$query = "SELECT * FROM Veicolo WHERE ID = ?";
+
+		// Preparazione dello statement
+		$stmt = $this->connection->prepare($query);
+		if ($stmt === false) {
+			die("Errore nella preparazione dello statement: " . $this->connection->error);
+		}
+
+		// Bind dei parametri (s = stringa, i = intero, d = double/float, b = blob)
+		$stmt->bind_param("i", $id);
+
+		// Esecuzione della query
+		if (!$stmt->execute()) {
+			die("Errore nell'esecuzione dello statement: " . $stmt->error);
+		}
+
+		// Ottenimento del risultato
+		$result = $stmt->get_result();
+		$row = $result->fetch_all(MYSQLI_ASSOC);
+
+		if(count($row) == 1){
+			return $row[0];
+		}
+
+		return -1;
+	}
+
 	//FUNZIONE PER INSERIRE NUOVO VEICOLO IN VEICOLI NEL DB
 	public function insertNewVehicle($marca, $modello, $anno, $colore, $alimentazione, $cambio, $trazione, $CVpotenza, $KGpeso, $neoP, $nPosti, $condizione, $chilometraggio, $prezzo) {
 		
@@ -313,6 +415,31 @@ class DBConnection {
 		}
 		
 	}
+
+
+	public function getNomeCognomeUser($username) {
+		$query = "SELECT nome, cognome, username FROM Utente WHERE username = '$username';";
+
+		// Preparazione dello statement
+		$stmt = $this->connection->prepare($query);
+		if ($stmt === false) {
+			die("Errore nella preparazione dello statement: " . $this->connection->error);
+		}
+
+		// Esecuzione della query
+		if (!$stmt->execute()) {
+			die("Errore nell'esecuzione dello statement: " . $stmt->error);
+		}
+
+		// Ottenimento del risultato
+		$result = $stmt->get_result();
+		$rows = $result->fetch_all(MYSQLI_ASSOC);
+
+		return $rows;
+	}
+
+
+
 
 	
 }
