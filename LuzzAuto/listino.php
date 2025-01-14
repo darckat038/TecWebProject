@@ -187,7 +187,7 @@ if(isset($_GET['action']) && $_GET['action'] == 'Applica filtri') {
 				$listaAuto = '<dl id="list_car_list">';
 				foreach($ris as $vehicle) {
 					$listaAuto .= '
-						<a class="list_car_item" href="javascript:void(0);">
+						<a class="list_car_item" href="auto.php?id=' . $vehicle["id"] . '">
 							<div class="list_car_image">
 								<img src="" alt="Testo alternativo">
 							</div>
