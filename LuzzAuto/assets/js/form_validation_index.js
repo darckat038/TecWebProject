@@ -14,6 +14,7 @@ function validateFastSearch() {
 
 	form.addEventListener("submit", function(event) {
 		if(!( validateMarca(form) && validateModello(form) && validatePrezzo(form) )) {
+			focusOnTopmostError();
 			event.preventDefault();
 		}
 	})

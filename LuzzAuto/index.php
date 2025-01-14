@@ -12,7 +12,7 @@ function ripristinoInput(){
 		$indexHTML = str_replace("[" . $_GET['condizione'] . "]", "selected ", $indexHTML);
 	}
 	// rimpiazzo di default -> seleziono qualsiasi
-	$indexHTML = str_replace(["[qualsiasi]", "[nuovo]", "[usato]", "[km0]"], ["selected ", "", "", ""], $indexHTML);
+	$indexHTML = str_replace(["[qualsiasiCd]", "[nuovo]", "[usato]", "[km0]"], ["selected ", "", "", ""], $indexHTML);
 
 	$indexHTML = str_replace("[prezzoMax]", htmlspecialchars(isset($_GET['prezzoMax']) ? $_GET['prezzoMax'] : ''), $indexHTML);
 	return $indexHTML;
@@ -29,14 +29,14 @@ $err = "";
 if(isset($_GET["marca"]) || isset($_GET["modello"]) || isset($_GET["condizione"]) || isset($_GET["prezzoMax"])) {
 
     //CONTROLLI SULL'INPUT
-	if (!preg_match("/^[A-Za-z0-9\-]*$/", $_GET["marca"])) {
-		$err = $err . "<p>Marca non valida, puoi usare solo lettere, numeri e il carattere \"-\".</p>";
+	if (!preg_match("/^([A-Za-z0-9\-]+( [A-Za-z0-9\-]+)*)?$/", $_GET["marca"])) {
+		$err = $err . "<p id=\"marca_err\">Marca non valida, puoi usare solo lettere, numeri, spazi(non all'inizio e alla fine) e il carattere \"-\".</p>";
 	}
-	if (!preg_match("/^[A-Za-z0-9\-]*$/", $_GET["modello"])) {
-		$err = $err . "<p>Modello non valido, puoi usare solo lettere, numeri e il carattere \"-\".</p>";
+	if (!preg_match("/^([A-Za-z0-9\-]+( [A-Za-z0-9\-]+)*)?$/", $_GET["modello"])) {
+		$err = $err . "<p id=\"modello_err\">Modello non valido, puoi usare solo lettere, numeri, spazi(non all'inizio e alla fine) e il carattere \"-\".</p>";
 	}
 	if (!empty($_GET["prezzoMax"]) && doubleval($_GET["prezzoMax"]) <= 0) {
-		$err = $err . "<p>Prezzo non valido, inserisci un prezzo maggiore di 0.</p>";
+		$err = $err . "<p id=\"prezzoMax_err\">Prezzo non valido, inserisci un prezzo maggiore di 0.</p>";
 	}
 
 	//CONTROLLO ERRORI
@@ -48,7 +48,7 @@ if(isset($_GET["marca"]) || isset($_GET["modello"]) || isset($_GET["condizione"]
 
 	// PASSAGGIO A LISTINO.PHP
 	// Aggiungo i valori di default di listino
-	$queryString = http_build_query($_GET) . "&anno=&colore=qualsiasi&alimentazione=qualsiasi&cambio=qualsiasi&trazione=qualsiasi&potenzaMin=&potenzaMax=&pesoMin=&pesoMax=&posti=&chilometraggio=";
+	$queryString = http_build_query($_GET) . "&anno=&colore=qualsiasi&alimentazione=qualsiasi&cambio=qualsiasi&trazione=qualsiasi&potenzaMin=&potenzaMax=&pesoMin=&pesoMax=&posti=&chilometraggio=&action=Applica+filtri";
 	header("location: listino.php?$queryString");
 
 } else {

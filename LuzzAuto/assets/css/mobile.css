@@ -25,6 +25,7 @@
     --form-border-input-color: #919191;
     --form-text-color: #ffffff;
     --form-error-text-color: #ff2910;
+    --form-success-text-color: #3cd33e;
 
 }
 
@@ -153,6 +154,20 @@ select option {
     text-align: center;
     margin-top: 1em;
     color: var(--form-error-text-color);
+}
+
+.form_success{
+    text-align: center;
+    margin-top: 1em;
+    color: var(--form-success-text-color);
+}
+.form_success a{
+    color: var(--not-visited-link);
+    text-underline-offset: 0.3em;
+}
+.form_success a:visited{
+    color: var(--visited-link);
+    text-underline-offset: 0.3em;
 }
 
 /******************* 
@@ -687,7 +702,7 @@ input[type="datetime-local"]::-webkit-calendar-picker-indicator {
     color: var(--form-border-input-color);
 }
 
-#test_drive_prenota a{
+#test_drive_prenota > a{
     background-color: var(--form-bg-color);
     border: 1px solid white;
     padding: 1em 1.5em 1.35em 1.5em;
@@ -696,7 +711,7 @@ input[type="datetime-local"]::-webkit-calendar-picker-indicator {
     font-family: "Lexend", Roboto, sans-serif;
 }
 
-#test_drive_prenota a:hover{
+#test_drive_prenota > a:hover{
     background-color: var(--form-text-color);
     color: var(--form-bg-color);
 }

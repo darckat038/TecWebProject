@@ -100,22 +100,14 @@
                             <div class="list_input_container">
                                 <label for="list_filter_colore" id="list_label_colore">Colore</label>
                                 <select id="list_filter_colore" class="list_insert" name="colore" aria-label="Campo di inserimento del colore dell'auto">
-                                    <option [qualsiasi]value="qualsiasi">Qualsiasi</option>
-                                    <option [bianco]value="bianco">Bianco</option>
-                                    <option [nero]value="nero">Nero</option>
-                                    <option [grigio]value="grigio">Grigio</option>
-                                    <option [rosso]value="rosso">Rosso</option>
-                                    <option [blu]value="blu">Blu</option>
-                                    <option [verde]value="verde">Verde</option>
-                                    <option [arancione]value="arancione">Arancione</option>
-                                    <option [giallo]value="giallo">Giallo</option>
+                                    [colori]
                                 </select>
                             </div>
 
                             <div class="list_input_container">
                                 <label for="list_filter_alimentazione" id="list_label_alimentazione">Alimentazione</label>
                                 <select id="list_filter_alimentazione" class="list_insert" name="alimentazione" aria-label="Campo di inserimento dell'alimentazione dell'auto">
-                                    <option [qualsiasi]value="qualsiasi">Qualsiasi</option>
+                                    <option [qualsiasiA]value="qualsiasi">Qualsiasi</option>
                                     <option [benzina]value="benzina">Benzina</option>
                                     <option [gasolio]value="gasolio">Gasolio</option>
                                     <option [elettrico]value="elettrico">Elettrico</option>
@@ -127,7 +119,7 @@
                             <div class="list_input_container">
                                 <label for="list_filter_cambio" id="list_label_cambio">Cambio</label>
                                 <select id="list_filter_cambio" class="list_insert" name="cambio" aria-label="Campo di inserimento del cambio dell'auto">
-                                    <option [qualsiasi]value="qualsiasi">Qualsiasi</option>
+                                    <option [qualsiasiCb]value="qualsiasi">Qualsiasi</option>
                                     <option [manuale]value="manuale">Manuale</option>
                                     <option [automatico]value="automatico">Automatico</option>
                                 </select>
@@ -136,7 +128,7 @@
                             <div class="list_input_container">
                                 <label for="list_filter_trazione" id="list_label_trazione">Trazione</label>
                                 <select id="list_filter_trazione" class="list_insert" name="trazione" aria-label="Campo di inserimento della trazione dell'auto">
-                                    <option [qualsiasi]value="qualsiasi">Qualsiasi</option>
+                                    <option [qualsiasiT]value="qualsiasi">Qualsiasi</option>
                                     <option [anteriore]value="anteriore">Anteriore</option>
                                     <option [posteriore]value="posteriore">Posteriore</option>
                                     <option [integrale]value="integrale">Integrale</option>
@@ -191,7 +183,7 @@
                         <div class="list_input_container">
                             <label for="list_filter_condizione" id="list_label_condizione">Condizione</label>
                             <select id="list_filter_condizione" name="condizione" class="list_insert" aria-label="Campo di inserimento della condizione dell'auto">
-                                <option [qualsiasi]value="qualsiasi">Qualsiasi</option>
+                                <option [qualsiasiCd]value="qualsiasi">Qualsiasi</option>
                                 <option [nuovo]value="nuovo">Nuovo</option>
                                 <option [usato]value="usato">Usato</option>
                                 <option [km0]value="km0"><abbr title="Chilometro zero">KM 0</abbr></option>
@@ -211,8 +203,8 @@
                     </fieldset>
 
                     <div id="list_filter_buttons">
-                        <input type="reset" value="Rimuovi filtri" class="list_button" aria-label="Bottone per rimuovere ogni filtro selezionato">
-                        <input type="submit" value="Applica filtri" class="list_button" id="list_clear" aria-label="Bottone di ricerca per filtrare veicoli con opzioni selezionate">
+                        <input type="submit" name="action" value="Rimuovi filtri" class="list_button" aria-label="Bottone per rimuovere ogni filtro selezionato">
+                        <input type="submit" name="action" value="Applica filtri" class="list_button" id="list_clear" aria-label="Bottone di ricerca per filtrare veicoli con opzioni selezionate">
                     </div>
 
                     <!-- 
