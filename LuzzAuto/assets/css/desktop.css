@@ -1000,6 +1000,7 @@ section.aboutUs_history p {
     display: flex;
     flex-direction: column;
     align-items: center;
+    width: 100%;
 }
 
 .list_sectionTitle {
