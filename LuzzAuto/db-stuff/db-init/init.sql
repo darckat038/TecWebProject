@@ -1,4 +1,4 @@
-/* Se hai bisogno di aggiungere un veicolo, segui le indicazioni sotto. */
+/* Se hai bisogno di aggiungere qualcosa, segui le indicazioni sotto. */
 create table Veicolo
 (
     id             int auto_increment
@@ -110,3 +110,49 @@ INSERT INTO Veicolo (marca, modello, condizione, prezzo, anno, chilometraggio, c
 VALUES ('DM - Digital Motion', 'Mudol', 'Nuovo', 65800, 2024, 0, 'Blu chiaro', 'Elettrico', 'Automatico', 'Integrale', 490, 1765, 0, 5, 'mudol.jpeg+mudol-interni.jpeg');
 
 /* ? */
+
+
+
+
+
+
+
+
+
+
+
+/*
+    TABELLA Utente:
+
+                                    ### LINEE GUIDA: ###
+    username: stringa, non più lunga di 30 caratteri
+    password: stringa, non più lunga di 255 caratteri
+    nome: stringa, non più lunga di 30 caratteri
+    cognome: stringa, non più lunga di 30 caratteri
+    dataNascita: data, formato "YYYY-MM-DD"
+
+    ESEMPIO DI INSERIMENTO DI UN UTENTE:
+    INSERT INTO Utente (username, password, nome, cognome, dataNascita)
+    VALUES ('mario.rossi', 'password', 'Mario', 'Rossi', '1990-01-01');
+*/
+
+
+
+
+
+
+
+
+/*
+    TABELLA Prenotazione:
+
+                                    ### LINEE GUIDA: ###
+    username: stringa, non più lunga di 30 caratteri
+    idAuto: int, corrispondente all'id del veicolo
+    dataOra: data e ora, formato "YYYY-MM-DD HH:MM:SS"
+    stato: 0=?, 1=confermata, -1=?
+
+    ESEMPIO DI INSERIMENTO DI UNA PRENOTAZIONE:
+    INSERT INTO Prenotazione (username, idAuto, dataOra, stato)
+    VALUES ('mario.rossi', 1, '2024-01-01 12:00:00', 0);
+*/
