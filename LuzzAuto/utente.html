@@ -65,18 +65,23 @@
         
         <section id="prenotazioni_utente">
           <span class="nomeRiqPrenUtente">Prenotazioni</span>
-          <table class="tabellaPrenUtente">
+          [campiTabella]
+          
+          <!-- 
+          <p id="sum">
+          La tabella descrive le prenotazioni dei test drive da parte dell'utente, è organizzata in colonne
+          con numero prenotazione, modello auto, Data test drive e stato della prenotazione 
+          </p>
+          <table class="tabellaPrenUtente" aria-describedby="sum">
             <thead>
               <tr>
-                <th><abbr title="Numero prenotazione">Num. Pren.</abbr></th>
-                <th>Modello Auto</th>
+                <th scope="col"><abbr title="Numero prenotazione">Num. Pren.</abbr></th>
+                <th abbr="modello">Modello Auto</th>
                 <th>Data Test Drive</th>
                 <th>Stato</th>
               </tr>
             </thead>
-            <tbody>
-            [campiTabella]
-            <!-- 
+            <tbody> 
               <tr>
                 <td>001</td>
                 <td>Fiat Panda</td>
@@ -89,9 +94,10 @@
                 <td><date>22-12-2024</date> 10:00</td>
                 <td>In elabo</td>
               </tr>
-            -->
           </tbody>
           </table>
+          -->
+          
         </section>
 
 
