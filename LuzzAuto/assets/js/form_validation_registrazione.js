@@ -1,16 +1,40 @@
 //INCLUDERE NELLA PAGINA HTML IL VALIDATION TOOL
 
-function validateLoginData(){
+function validateRegisterData(){
     let form = document.getElementById('signup_form');
     form.addEventListener('submit', function (event){
         resetFormError();
+        let msg = "";
+        let ok = true;
         if(!validateNome()){
+            msg += "<p>Nome non valido, può contenere solo lettere.</p>";
+            ok = false;
+        }
+        if(!validateCognome()){
+            msg+="<p>Cognome non valido, può contenere solo lettere.</p>";
+            ok = false;
+        }
+        if(!validateUsername()){
+            msg+="<p><span lang'en-GB'>Username</span>  non valido, può contenere al massimo 30 caratteri tra lettere e numeri.</p>";
+            ok = false;
+        }
+        if(!validatePassword()){
+            msg+="<p><span lang'en-GB'>Password</span>  non valida, deve essere di almeno 8 caratteri e contenere almeno una lettera e un numero.</p>";
+            ok = false;
+        }
+        if(!validatePasswordRepeat()){
+            msg+="<p>Le <span lang'en-GB'>password</span> non coincidono.</p>";
+            ok = false;
+        }
+        if(!validateDate()){
+            msg+="<p>La data non è valida.</p>";
+            ok = false;
+        }
+
+
+        if(!ok){
+            addFormError(msg);
             event.preventDefault();
-            var errorDiv = document.getElementsByClassName('form_errors');
-            if (errorDiv) {
-                errorDiv[0].focus();
-            }
-            
         }
     });
 }
@@ -19,12 +43,59 @@ function validateNome(){
     var nome = document.getElementById("signup_nome").value;
     const validChars = /^[A-Za-z]+$/;
     if(!validChars.test(nome)){
-        addFormError("<p>Nome non valido, può contenere solo lettere.</p>")
+        return false;
+    }
+    return true;
+}
+
+function validateCognome(){
+    var cognome = document.getElementById("signup_cognome").value;
+    const validChars = /^[A-Za-z]+$/;
+    if(!validChars.test(cognome)){
+        return false;
+    }
+    return true;
+}
+
+function validateUsername(){
+    var username = document.getElementById("signup_username").value;
+    const validChars = /^[A-Za-z0-9]+$/;
+    if(!validChars.test(username) || username.length > 30){
+        return false;
+    }
+    return true;
+}
+
+function validatePassword(){
+    var password = document.getElementById("signup_pass").value;
+    const validLetter = /[a-zA-Z]/;
+    const validNumber = /\d/;
+    if(!validLetter.test(password) || !validNumber.test(password) || password.length < 8){
+        return false;
+    }
+    return true;
+}
+
+function validatePasswordRepeat(){
+    var password = document.getElementById("signup_pass").value;
+    var password2 = document.getElementById("signup_pass2").value;
+    if(password != password2){
+        return false;
+    }
+    return true;
+}
+
+function validateDate(){
+    var date = document.getElementById("signup_data").value;
+    const validChars = /^[0-9\-]+$/;
+    var today = new Date();
+    var dataOggi = new Date(today.getFullYear()+'-'+ today.getMonth()+1+'-'+today.getDdate());
+    if(!validChars.test(date) || dataOggi < date){
         return false;
     }
     return true;
 }
 
 window.addEventListener('load', function () {
-	validateLoginData();
+	validateRegisterData();
 });
