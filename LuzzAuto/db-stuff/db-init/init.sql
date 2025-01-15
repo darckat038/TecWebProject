@@ -2,7 +2,7 @@ create table Veicolo
 (
     id             int auto_increment
         primary key,
-    marca          varchar(30) not null,
+    marca          varchar(32) not null,
     modello        varchar(30) not null,
     condizione     varchar(30) null,
     prezzo         double      null,
@@ -15,7 +15,8 @@ create table Veicolo
     potenza        int         null,
     peso           int         null,
     neopatentati   int         null,
-    numeroPosti    int         null
+    numeroPosti    int         null,
+    foto           varchar(255) null
 );
 
 create table Utente
@@ -43,5 +44,5 @@ create table Prenotazione
 );
 
 
-INSERT INTO Veicolo (marca, modello, condizione, prezzo, anno, chilometraggio, colore, alimentazione, cambio, trazione, potenza, peso, neopatentati, numeroPosti)
-VALUES ('DM - Digital Motion', 'Mudol', 'Nuova', 65800, 2024, 0, 'Blu chiaro', 'Elettrico', 'Automatico', 'Integrale', 490, 1765, 0, 5);
+INSERT INTO Veicolo (marca, modello, condizione, prezzo, anno, chilometraggio, colore, alimentazione, cambio, trazione, potenza, peso, neopatentati, numeroPosti, foto)
+VALUES ('DM - Digital Motion', 'Mudol', 'Nuova', 65800, 2024, 0, 'Blu chiaro', 'Elettrico', 'Automatico', 'Integrale', 490, 1765, 0, 5, 'mudol.jpeg+mudol-interni.jpeg');
