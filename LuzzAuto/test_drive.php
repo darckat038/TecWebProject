@@ -20,7 +20,7 @@ $formORbuttonsHTML = "";
 
 $formHTML = "
         
-        <form id='test_drive_form' method='post'>
+        <form id='test_drive_form' method='post' action='test_drive.php#test_drive_prenota'>
             <fieldset>
 
                 <legend>Prenota <span lang='en-GB'>Test Drive</span></legend>
