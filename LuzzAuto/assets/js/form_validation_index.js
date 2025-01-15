@@ -1,5 +1,6 @@
-window.addEventListener('load', function () {
+document.addEventListener("DOMContentLoaded", function () {
 	validateFastSearch();
+	imgErrorHandler();
 });
 
 function validateFastSearch() {
@@ -21,6 +22,10 @@ function validateFastSearch() {
 			msg += "<p id=\"modello_err\">Modello non valido, puoi usare solo lettere, numeri, spazi(non all'inizio e alla fine) e il carattere \"-\".</p>";
 		}
 		if(!validatePrezzo()) {
+			ok = false;
+			msg += "<p id=\"prezzoMax_err\">Prezzo non valido, inserisci un prezzo maggiore di 0.</p>";;
+		}
+		if(!validateCondizione()) {
 			ok = false;
 			msg += "<p id=\"prezzoMax_err\">Prezzo non valido, inserisci un prezzo maggiore di 0.</p>";;
 		}
@@ -57,6 +62,17 @@ function validateModello() {
 }
 
 /*
+* Controllo il modello del veicolo
+*/
+function validateCondizione() {
+	const allowedChars = /^([A-Za-z0-9]+( [A-Za-z0-9]+)*)?$/; // lettere maiuscole e minuscole, numeri
+
+	var condizione = document.getElementById("home_condizione").value;
+
+	return allowedChars.test(condizione);
+}
+
+/*
 * Controllo il prezzo massimo inserito
 */
 function validatePrezzo() {
@@ -65,4 +81,21 @@ function validatePrezzo() {
 	console.log(prezzoMax);
 	
 	return (prezzoMax != "" ? prezzoMax > 0 : true);
+}
+
+/*
+ * Utilizzato per eliminare il border radius che andrebbe altrimenti a coprire il testo alt 
+ */
+function imgErrorHandler() {
+
+	let imgs = document.getElementsByClassName("stemma_brand");
+
+	console.log(imgs);
+
+	for (let img of imgs) {
+        img.addEventListener("error", function() {
+            // Imposta il border-radius a 0
+            this.style.borderRadius = 0;
+        });
+    }
 }
