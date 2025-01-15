@@ -44,5 +44,30 @@ create table Prenotazione
 );
 
 
+/*
+    TABELLA Veicolo:
+    marca: per esteso; se necessario sigla e nome, es. "DM - Digital Motion", sempre con questo formato
+    modello: stringa, sempre con la maiuscola iniziale
+    condizione: solo "Nuovo", "Usato" o "KM 0"
+    prezzo: double, no apostrofi o altre cose strane
+    anno: int
+    chilometraggio: int
+    colore: stringa a piacere ma non mettere cose troppo complesse come "Blu metallizzato fiordaliso", meglio "Blu chiaro", sempre con la maiuscola iniziale
+    alimentazione: solo "Benzina", "Gasolio", "Elettrico", "Ibrido GPL" o "Ibrido Plug-in"
+    cambio: solo "Manuale" o "Automatico"
+    trazione: solo "Anteriore", "Posteriore" o "Integrale"
+    potenza: int
+    peso: int
+    neopatentati: 0=non abilitati, 1=abilitati
+    numeroPosti: int
+    foto: nome del file immagine, se ce ne sono più di una separare con "+", es. "mudol.jpeg+mudol-interni.jpeg"; ATTENZIONE: in listino la copertina è sempre la prima foto
+
+    Attenzione alle maiuscole ed agli spazi nelle stringhe.
+
+    ESEMPIO DI INSERIMENTO DI UN VEICOLO:
+    INSERT INTO Veicolo (marca, modello, condizione, prezzo, anno, chilometraggio, colore, alimentazione, cambio, trazione, potenza, peso, neopatentati, numeroPosti, foto)
+    VALUES ('DM - Digital Motion', 'Mudol', 'Nuovo', 65800, 2024, 0, 'Blu chiaro', 'Elettrico', 'Automatico', 'Integrale', 490, 1765, 0, 5, 'mudol.jpeg+mudol-interni.jpeg');
+*/
+
 INSERT INTO Veicolo (marca, modello, condizione, prezzo, anno, chilometraggio, colore, alimentazione, cambio, trazione, potenza, peso, neopatentati, numeroPosti, foto)
-VALUES ('DM - Digital Motion', 'Mudol', 'Nuova', 65800, 2024, 0, 'Blu chiaro', 'Elettrico', 'Automatico', 'Integrale', 490, 1765, 0, 5, 'mudol.jpeg+mudol-interni.jpeg');
+VALUES ('DM - Digital Motion', 'Mudol', 'Nuovo', 65800, 2024, 0, 'Blu chiaro', 'Elettrico', 'Automatico', 'Integrale', 490, 1765, 0, 5, 'mudol.jpeg+mudol-interni.jpeg');
