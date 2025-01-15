@@ -936,6 +936,7 @@ section.aboutUs_history p {
     background-position: center;
     width: 100%;
     padding: 5em 0;
+    margin-top: 2em;
 }
 
 #aboutUs_ourTeam > dl {
@@ -1243,11 +1244,21 @@ document.querySelectorAll('#list_filter .list_insert').forEach(select => {
     width: 100%;
 }
 
+#list .list_sectionTitle {
+    font-size: 4em;
+}
+
 #list_car_list {
     display: flex;
     flex-wrap: wrap; /* Permette di andare a capo se lo spazio finisce */
     gap: 1em; /* Distanza tra i riquadri */
     justify-content: center; /* Allinea gli elementi a sinistra */
+}
+
+p.list_car_list_empty {
+    text-align: center;
+    color: #000000;
+    font-size: 2em;
 }
 
 .list_car_item {
@@ -1971,6 +1982,7 @@ document.querySelectorAll('#list_filter .list_insert').forEach(select => {
     margin-top: -1.5em; 
 }
 
+/*tabella prenotazioni*/
 
 .tabellaPrenUtente {
     width: calc(100% - 6em); /* 100% meno il padding a sinistra e a destra */
@@ -1993,6 +2005,20 @@ document.querySelectorAll('#list_filter .list_insert').forEach(select => {
 .tabellaPrenUtente date{
     display: block;
 }
+
+#prenIndispUtente{
+    margin-top: 0.4em;
+    margin-left: 4.7em;
+}
+
+#accettatoUtente{
+    color: #4caf50;
+}
+
+#rifiutatoUtente{
+    color: red;
+}
+
 
 
 /*gestione prenotazioni*/
@@ -2271,12 +2297,10 @@ document.querySelectorAll('#list_filter .list_insert').forEach(select => {
 
 /*#endregion Amministratore*/
 
-
-
 /* FOOTER */
 
 footer {
-    margin-top: 1em;
+    margin-top: 2em;
     background-color: var(--navbar-bg-color);
     color: var(--navbar-text-color);
     display: inline-block;
