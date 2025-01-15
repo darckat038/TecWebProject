@@ -154,7 +154,7 @@ if(isset($_POST['test_drive_select_auto']) && isset($_POST['test_drive_date'])){
             if($ris==1){
                 //PRENOTAZIONE INVIATA CON SUCCESSO
                 $succ .= "<p> Prenotazione inviata con SUCCESSO.</p>" . 
-                "<p>Visita la tua <a href='utente.php'>Area personale</a> per visualizzarne i dettagli.</p>";
+                "<p>Visita la tua <a href='utente.php#prenotazioni_utente'>Area personale</a> per visualizzarne i dettagli.</p>";
             }
             if($ris==0){
                 header("location: 500.html");
