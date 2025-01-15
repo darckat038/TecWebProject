@@ -19,3 +19,5 @@
 ## Devo controllare htmlspecialchars della password o non serve perchè non sarà mai visualizzata in chiaro?
 
 ## Discorso reset button per form filtro listino
+
+## Come font con le grazie va bene uno qualunque?

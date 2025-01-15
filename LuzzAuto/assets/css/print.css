@@ -1,0 +1,19 @@
+@import url('https://fonts.googleapis.com/css2?family=Aleo:ital,wght@0,100..900;1,100..900&display=swap');
+
+@page {
+	margin: 1cm;
+	size: A4;
+}
+
+* {
+	font-family: "Aleo", "Times New Roman", serif;
+	line-height: 1.5em;
+	text-decoration: none;
+	color: black;
+	background-image: none;
+	break-before: auto;
+}
+
+#menu-button-container, #menu{
+    display: none;
+}
