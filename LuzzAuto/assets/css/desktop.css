@@ -1971,6 +1971,7 @@ document.querySelectorAll('#list_filter .list_insert').forEach(select => {
     margin-top: -1.5em; 
 }
 
+/*tabella prenotazioni*/
 
 .tabellaPrenUtente {
     width: calc(100% - 6em); /* 100% meno il padding a sinistra e a destra */
@@ -1993,6 +1994,20 @@ document.querySelectorAll('#list_filter .list_insert').forEach(select => {
 .tabellaPrenUtente date{
     display: block;
 }
+
+#prenIndispUtente{
+    margin-top: 0.4em;
+    margin-left: 4.7em;
+}
+
+#accettatoUtente{
+    color: #4caf50;
+}
+
+#rifiutatoUtente{
+    color: red;
+}
+
 
 
 /*gestione prenotazioni*/
