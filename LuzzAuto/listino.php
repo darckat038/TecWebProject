@@ -188,8 +188,14 @@ if(isset($_GET['action']) && $_GET['action'] == 'Applica filtri') {
 				foreach($ris as $vehicle) {
 					$listaAuto .= '
 						<a class="list_car_item" href="auto.php?id=' . $vehicle["id"] . '">
-							<div class="list_car_image">
-								<img src="" alt="Testo alternativo">
+							<div class="list_car_image">';
+								
+							// Gestione delle immagini
+							$fotos = explode(separator: "+", string: $vehicle['foto']);
+							$foto = '<img src="assets/img/Cars/' . htmlspecialchars(string: $vehicle['marca']) . '/' . htmlspecialchars(string: $fotos[0]) . '" alt="Immagine auto">';
+							$listaAuto .= $foto;
+
+					$listaAuto .= '
 							</div>
 							<dl class="list_car_info">
 								<div>
@@ -219,7 +225,7 @@ if(isset($_GET['action']) && $_GET['action'] == 'Applica filtri') {
 				// Qui non ci sono auto
 				$listinoHTML = ripristinoInput();
 				$listinoHTML = str_replace("[err]", $err, $listinoHTML);
-				$listaAuto ='<p class="list_car_list_empty">Nessun Veicolo Compatibile</p>';
+				$listaAuto ='<p class="list_car_list_empty">Nessun veicolo compatibile con i filtri impostati</p>';
 			}
 
 			if(isset($_COOKIE["isFilterRemoved"])) {

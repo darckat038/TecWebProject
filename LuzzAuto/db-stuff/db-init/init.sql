@@ -46,7 +46,7 @@ create table Prenotazione
 
 /*
     TABELLA Veicolo:
-    marca: per esteso; se necessario sigla e nome, es. "DM - Digital Motion", sempre con questo formato
+    marca: per esteso; se necessario sigla e nome, es. "DM - Digital Motion", sempre con questo formato. Inoltre deve essere uguale a come è scritto nel folder img/Cars/
     modello: stringa, sempre con la maiuscola iniziale
     condizione: solo "Nuovo", "Usato" o "KM 0"
     prezzo: double, no apostrofi o altre cose strane
