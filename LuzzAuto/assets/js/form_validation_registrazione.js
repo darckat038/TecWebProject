@@ -1,9 +1,14 @@
 //INCLUDERE NELLA PAGINA HTML IL VALIDATION TOOL
+window.addEventListener('load', function () {
+	validateRegisterData();
+});
 
 function validateRegisterData(){
+    
     let form = document.getElementById('signup_form');
     form.addEventListener('submit', function (event){
         resetFormError();
+        
         let msg = "";
         let ok = true;
         if(!validateNome()){
@@ -31,11 +36,11 @@ function validateRegisterData(){
             ok = false;
         }
 
-
         if(!ok){
             addFormError(msg);
             event.preventDefault();
         }
+        
     });
 }
 
@@ -89,13 +94,12 @@ function validateDate(){
     var date = document.getElementById("signup_data").value;
     const validChars = /^[0-9\-]+$/;
     var today = new Date();
-    var dataOggi = new Date(today.getFullYear()+'-'+ today.getMonth()+1+'-'+today.getDdate());
+    const month = ["01","02","03","04","05","06","07","08","09","10","11","12"];
+    var dataOggi = today.getFullYear().toString()+"-"+month[today.getMonth()]+"-"+today.getDate();
+    
     if(!validChars.test(date) || dataOggi < date){
         return false;
     }
     return true;
 }
 
-window.addEventListener('load', function () {
-	validateRegisterData();
-});

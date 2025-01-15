@@ -63,17 +63,44 @@ try{
 
     if(empty($prenotazione)) {
         //non ci sono prenotazioni
-        $campiTabella = "<tr><td colspan='5'>Non ci sono prenotazioni disponibili.</td></tr>";
+        $campiTabella = "<p id='prenIndispUtente'>Non ci sono prenotazioni disponibili.</p>";
     }else{
+        $campiTabella .= "  
+                            <p id='sum'>
+                            La tabella descrive le prenotazioni dei test drive da parte dell'utente, è organizzata in colonne
+                            con numero prenotazione, modello auto, data test drive e stato della prenotazione 
+                            </p>
+                            <table class='tabellaPrenUtente' aria-describedby='sum'>
+                                <thead>
+                                <tr>
+                                    <th scope='col'><abbr title='Numero prenotazione'>Num. Pren.</abbr></th>
+                                    <th scope='col' abbr='modello'>Modello Auto</th>
+                                    <th scope='col' abbr='data'>Data Test Drive</th>
+                                    <th scope='col' >Stato</th>
+                                </tr>
+                                </thead>
+                                <tbody>";
         foreach ($prenotazione as $row) {
+
+            $statoTestuale = "";
+            if($row['stato'] == 1){
+                $statoTestuale = "<span id='accettatoUtente'>Accettato</span>";
+            }else if($row['stato'] == -1){
+                $statoTestuale = "<span id='rifiutatoUtente'>Rifiutato</span>";
+            }else{
+                $statoTestuale = "<span id='attesaUtente'>In attesa</span>";
+            }
+
             $val = $row["codice"] . "-" . $row["marca"] . "-" . $row['modello'] . "-" . $row['dataOra'] . "-" . $row['stato']; 
             $campiTabella .= "<tr>
                                 <td>" . $row["codice"] . "</td>
                                 <td>" . $row["marca"] . " " . $row['modello'] . "</td>
                                 <td>" . $row['dataOra'] . "</td>
-                                <td>" . $row['stato'] . "</td>
+                                <td>" . $statoTestuale . "</td>
                               </tr>";
-        } 
+        }
+        $campiTabella .= "</tbody>
+                          </table>"; 
 
     }  
     $pagina = str_replace("[campiTabella]", $campiTabella, $pagina);
