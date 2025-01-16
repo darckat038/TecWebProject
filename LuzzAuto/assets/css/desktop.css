@@ -1912,7 +1912,7 @@ p.list_car_list_empty {
 ********************/
 
 #utente_body{
-    background-image: url(/LuzzAuto/assets/img/Background/Luzzauto/LuzzAuto_facciata1.png);
+    background-image: url(../img/Background/Luzzauto/LuzzAuto_facciata1.png);
     background-repeat: no-repeat;
     background-color: white;
     background-size:cover;
