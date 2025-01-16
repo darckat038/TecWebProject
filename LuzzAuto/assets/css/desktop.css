@@ -2083,7 +2083,7 @@ p.list_car_list_empty {
 ********************/
 
 #admin_body{
-    background-image: url(/LuzzAuto/assets/img/Background/Luzzauto/LuzzAuto_facciata1.png);
+    background-image: url(../img/Background/Luzzauto/LuzzAuto_facciata1.png);
     background-repeat: no-repeat;
     background-color: white;
     background-size:cover;
@@ -2095,7 +2095,7 @@ p.list_car_list_empty {
     color: var(--navbar-text-color);
     padding: 2em;
     border-radius: 1.5em;
-    margin-top: 8em;
+    margin: 8em auto auto auto;
     width: 50em;
     height: auto;
 }
