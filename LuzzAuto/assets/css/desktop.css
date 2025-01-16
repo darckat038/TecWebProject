@@ -1900,7 +1900,7 @@ document.querySelectorAll('#list_filter .list_insert').forEach(select => {
 ********************/
 
 #utente_body{
-    background-image: url(/LuzzAuto/assets/img/Background/Luzzauto/LuzzAuto_facciata1.png);
+    background-image: url(../img/Background/Luzzauto/LuzzAuto_facciata1.png);
     background-repeat: no-repeat;
     background-color: white;
     background-size:cover;
@@ -1954,15 +1954,9 @@ document.querySelectorAll('#list_filter .list_insert').forEach(select => {
     color: var(--form-border-input-color);
 }
 
-.nomeRiqPrenUtente{
-    color: var(--form-border-input-color);
-    padding-left: 3em;
-    font-weight: bold;
-    font-size: 25px;
-}
 
 #userImage{
-    background-image: url('../img/ImmagineUtente/ImmagineUtente.svg');
+    background-image: url(../img/ImmagineUtente/ImmagineUtente.svg);
     float: right; 
     width: 12em;
     height: 12em;
@@ -1972,6 +1966,12 @@ document.querySelectorAll('#list_filter .list_insert').forEach(select => {
 }
 
 /*tabella prenotazioni*/
+.nomeRiqPrenUtente{
+    color: var(--form-border-input-color);
+    padding-left: 3em;
+    font-weight: bold;
+    font-size: 25px;
+}
 
 .tabellaPrenUtente {
     width: calc(100% - 6em); /* 100% meno il padding a sinistra e a destra */
@@ -1993,6 +1993,11 @@ document.querySelectorAll('#list_filter .list_insert').forEach(select => {
 
 .tabellaPrenUtente date{
     display: block;
+}
+
+#descTable{
+    position: absolute;
+    left: -999em;
 }
 
 #prenIndispUtente{

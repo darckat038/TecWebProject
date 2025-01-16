@@ -1749,7 +1749,7 @@ document.querySelectorAll('#list_filter .list_insert').forEach(select => {
 ********************/
 
 #utente_body{
-    background-image: url(/LuzzAuto/assets/img/Background/Luzzauto/LuzzAuto_facciata1.png);
+    background-image: url(../img/Background/Luzzauto/LuzzAuto_facciata1.png);
     background-repeat: no-repeat;
     background-color: white;
     background-size:auto;
@@ -1812,7 +1812,7 @@ document.querySelectorAll('#list_filter .list_insert').forEach(select => {
 }
 
 #userImage{
-    background-image: url('../img/ImmagineUtente/ImmagineUtente.svg');
+    background-image: url(../img/ImmagineUtente/ImmagineUtente.svg);
     width: 8em;
     height: 8em;
     background-size: cover; 
@@ -1843,6 +1843,19 @@ document.querySelectorAll('#list_filter .list_insert').forEach(select => {
 
 .tabellaPrenUtente date{
     display: block;
+}
+
+#descTable{
+    position: absolute;
+    left: -999em;
+}
+
+#accettatoUtente{
+    color: #4caf50;
+}
+
+#rifiutatoUtente{
+    color: red;
 }
 
 /*Gestione prenotazioni*/
