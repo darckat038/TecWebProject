@@ -104,33 +104,26 @@
 
 
         <section class="riquadriUtente">
-          [formORbuttons]
-          <!-- 
-          <form method="post" action="">
+          <form method='post' action='utente.php'>
 
-                    <span class="nomeRiqUtente">Gestione Prenotazioni</span>
+            <span class='nomeRiqUtente'>Gestione Prenotazioni</span>
 
-                    <label id="labelPrenUtente" for="gestPrenUtente"><strong>Prenotazioni:</strong> </label>
-                    <select name="gestPrenUtente" id="gestPrenUtente" aria-required="true" aria-label="Campo di inserimento della prenotazione che desideri annullare" required data-msg-required="Per favore, seleziona la prenotazione">
-                        <option value="Fiat">001 - Fiat Panda</option>
-                        <option value="Ford">002 - Ford Mustang</option>
-                    </select>
+            <label id='labelPrenUtente' for='gestPrenUtente'><strong>Prenotazioni:</strong> </label>
+            <select name='gestPrenUtente' id='gestPrenUtente' aria-required='true' aria-label='Campo di inserimento della prenotazione che desideri annullare' required data-msg-required='Per favore, seleziona la prenotazione'>
+            <option value=''>--seleziona--</option>
+            [prenotazioni]
+            </select>
 
-                    <input id="eliminaPrenUtente" type="submit" value="Elimina" aria-label="Elimina la prenotazione selezionata">
-
+            <input id='eliminaPrenUtente' type='submit' value='Elimina' aria-label='Elimina la prenotazione selezionata'>
           </form>
 
-          <div class="form_errors">
-            [err]
-          </div>
-          --> 
-      </section>
-      <div class='form_errors'>
-        [err]
-      </div>
-      <div class='form_success'>
-        [succ]
-    </div>
+        </section>
+              <div class='form_errors'>
+                [err]
+              </div>
+              <div class='form_success'>
+                [succ]
+              </div>
 
       </main>
 

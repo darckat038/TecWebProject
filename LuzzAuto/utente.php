@@ -121,29 +121,6 @@ $err = "";
 
 $succ="";
 
-$formORbuttonsHTML= "";
-
-$formHTML = "
-            <form method='post'>
-
-                    <span class='nomeRiqUtente'>Gestione Prenotazioni</span>
-
-                    <label id='labelPrenUtente' for='gestPrenUtente'><strong>Prenotazioni:</strong> </label>
-                    <select name='gestPrenUtente' id='gestPrenUtente' aria-required='true' aria-label='Campo di inserimento della prenotazione che desideri annullare' required data-msg-required='Per favore, seleziona la prenotazione'>
-                    <option value=''>--seleziona--</option>
-                    [prenotazioni]
-                    </select>
-
-                    <input id='eliminaPrenUtente' type='submit' value='Elimina' aria-label='Elimina la prenotazione selezionata'>
-
-            </form>
-
-";
-
-$formORbuttonsHTML = $formHTML;
-
-$pagina = str_replace("[formORbuttons]", $formORbuttonsHTML, $pagina);
-
 
 //esecuzione della query
 try{
