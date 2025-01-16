@@ -100,7 +100,7 @@ INSERT INTO Veicolo (marca, modello, condizione, prezzo, anno, chilometraggio, c
 VALUES ('ESU - European Sports Unlimited', 'Muriald', 'KM 0', 1200000, 2020, 0, 'Verde chiaro', 'Benzina', 'Automatico', 'Integrale', 850, 1400, 0, 2, 'muriald.jpeg+muriald-interni.jpeg');
 
 INSERT INTO Veicolo (marca, modello, condizione, prezzo, anno, chilometraggio, colore, alimentazione, cambio, trazione, potenza, peso, neopatentati, numeroPosti, foto)
-VALUES ('ESU - European Sports Unlimited', 'Belzuny', 'Nuovo', 56600, 2024, 0, 'Blu chiaro', 'Gasolio', 'Automatico', 'Integrale', 450, 2200, 0, 5, 'belzuny.jpeg+belzuny-interni.jpeg');
+VALUES ('ESU - European Sports Unlimited', 'Belzuny', 'Nuovo', 56600, 2024, 0, 'Arancione', 'Gasolio', 'Automatico', 'Integrale', 450, 2200, 0, 5, 'belzuny.jpeg+belzuny-interni.jpeg');
 
 /* DM */
 INSERT INTO Veicolo (marca, modello, condizione, prezzo, anno, chilometraggio, colore, alimentazione, cambio, trazione, potenza, peso, neopatentati, numeroPosti, foto)
