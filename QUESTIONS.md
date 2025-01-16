@@ -28,6 +28,7 @@ NO
 RIMUOVI FILTRI FA ANCHE RICERCA DEFAULT (CON FILTRI VUOTI)
 
 ## Link listino da breadcrumb auto deve contenere filtri di listino applicati?
+NO
 
 ## Serve un banner per avviso utilizzo cookie?
 NO
