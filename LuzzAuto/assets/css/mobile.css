@@ -53,8 +53,6 @@ html, body {
 body{
     background-color: var(--bg-color);
     color: var(--text-color);
-    display: flex;
-    flex-direction: column;
     font-size: 100%;
     font-family: "Lexend", Roboto, sans-serif;
     line-height: 1.5em;
@@ -181,6 +179,7 @@ select option {
     flex-direction: column;
     overflow: hidden;
     position: absolute;
+    top:0;
     width: 100%;
     padding-top: 1em;
     padding-bottom: 1em;
@@ -286,10 +285,10 @@ h1.hide{
     color: var(--navbar-text-color);
     background-color: var(--navbar-bg-color);
     width: 100%;
-    margin-top: 3.5em;
     border-top: 1px solid var(--form-border-input-color);
     border-bottom: 1px solid var(--form-border-input-color);
     position: absolute;
+    top:3.5em;
 }
 
 #breadcrumb p {
@@ -609,10 +608,9 @@ input[type="date"]::-webkit-calendar-picker-indicator {
 
 #test_drive_consulenti > img{
     border-radius: 1em 0 1em 0;
-    height: 60%;
-    width: 60%;
-    margin-bottom: 1em;
-    margin-top: 1em;
+    height: 40vh;
+    width: 40vh;
+    margin: auto;
 }
 
 #test_drive_consulenti > h3{
@@ -632,7 +630,6 @@ input[type="date"]::-webkit-calendar-picker-indicator {
     color: var(--form-text-color);
     border-radius: 2em 0 2em 0;
     width: 90%;
-    padding-bottom: 6em;
     margin-bottom: 4em;
     box-shadow: rgba(17, 17, 26, 0.1) 0px 1px 0px, rgba(17, 17, 26, 0.1) 0px 8px 24px, rgba(17, 17, 26, 0.1) 0px 16px 48px;
 }
