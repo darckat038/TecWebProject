@@ -416,6 +416,9 @@ class DBConnection {
 		
 	}
 
+
+	
+
 	//FUNZIONE PER PRENDERE NOME, COGNOME E USERNAME DA USERNAME
 	public function getNomeCognomeUser($username) {
 		$query = "SELECT nome, cognome, username FROM Utente WHERE username = '$username';";
