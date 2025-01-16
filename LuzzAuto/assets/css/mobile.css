@@ -1909,7 +1909,7 @@ document.querySelectorAll('#list_filter .list_insert').forEach(select => {
 ********************/
 
 #admin_body{
-    background-image: url(/LuzzAuto/assets/img/Background/Luzzauto/LuzzAuto_facciata1.png);
+    background-image: url(../img/Background/Luzzauto/LuzzAuto_facciata1.png);
     background-repeat: no-repeat;
     background-color: white;
     background-size:auto;
@@ -1921,7 +1921,7 @@ document.querySelectorAll('#list_filter .list_insert').forEach(select => {
     color: var(--form-text-color);
     padding: 2.5em;
     border-radius: 1.5em;
-    margin-top: 8em;
+    margin: 8em auto auto auto;
     width: 80vw;
     box-shadow: rgba(115, 115, 115, 0.35) 0px 5px 15px;
 }
