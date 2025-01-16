@@ -7,9 +7,9 @@ function ripristinoInput($listinoHTML) {
 	// $listinoHTML = file_get_contents("listino.html");
 	//RIPRISTINO DELL'INPUT INSERITO
 	// Se c'è input salvato in $_GET, mette quello, altrimenti valore di default (stringa vuota o select default)
-	$listinoHTML = str_replace('[marca]', htmlspecialchars(isset($_COOKIE["isFilterRemoved"]) ? '' : (isset($_GET['marca']) ? $_GET['marca'] : '')), $listinoHTML);
-	$listinoHTML = str_replace('[modello]', htmlspecialchars(isset($_COOKIE["isFilterRemoved"]) ? '' : (isset($_GET['modello']) ? $_GET['modello'] : '')), $listinoHTML);
-	$listinoHTML = str_replace('[anno]', htmlspecialchars(isset($_COOKIE["isFilterRemoved"]) ? '' : (isset($_GET['anno']) ? $_GET['anno'] : '')), $listinoHTML);
+	$listinoHTML = str_replace('[marca]', htmlspecialchars(isset($_GET['marca']) ? $_GET['marca'] : ''), $listinoHTML);
+	$listinoHTML = str_replace('[modello]', htmlspecialchars(isset($_GET['modello']) ? $_GET['modello'] : ''), $listinoHTML);
+	$listinoHTML = str_replace('[anno]', htmlspecialchars(isset($_GET['anno']) ? $_GET['anno'] : ''), $listinoHTML);
 	
 	// rimpiazzo di default -> seleziono qualsiasi
 	
@@ -28,7 +28,7 @@ function ripristinoInput($listinoHTML) {
 
 		foreach($colori as $color) {
 			//replace colore
-			if(isset($_COOKIE["isFilterRemoved"]) || !(isset($_GET['colore']) && $_GET['colore'] == strtolower($color))) {
+			if(!(isset($_GET['colore']) && $_GET['colore'] == strtolower($color))) {
 				$listaColori .= '<option ' . (strcmp(strtolower($color),"qualsiasi") !== 0 ? 'value="' . strtolower($color) : 'selected value="qualsiasi') . '">' . $color . '</option>';
 			}
 			else {
@@ -42,42 +42,42 @@ function ripristinoInput($listinoHTML) {
 	$listinoHTML = str_replace("[colori]", $listaColori, $listinoHTML);
 
 	//replace alimentazione
-	if(!isset($_COOKIE["isFilterRemoved"]) && htmlspecialchars(isset($_GET['alimentazione']))) {
+	if(htmlspecialchars(isset($_GET['alimentazione']))) {
 		$listinoHTML = str_replace("[" . $_GET['alimentazione'] . "]", "selected ", $listinoHTML);
 	}
 	// rimpiazzo di default -> seleziono qualsiasi
 	$listinoHTML = str_replace(["[qualsiasiA]", "[benzina]", "[gasolio]", "[elettrico]", "[gpl]", "[plugin]"], ["selected ", "", "", "", "", ""], $listinoHTML);
 
 	//replace cambio
-	if(!isset($_COOKIE["isFilterRemoved"]) && htmlspecialchars(isset($_GET['cambio']))) {
+	if(htmlspecialchars(isset($_GET['cambio']))) {
 		$listinoHTML = str_replace("[" . $_GET['cambio'] . "]", "selected ", $listinoHTML);
 	}
 	// rimpiazzo di default -> seleziono qualsiasi
 	$listinoHTML = str_replace(["[qualsiasiCb]", "[manuale]", "[automatico]"], ["selected ", "", ""], $listinoHTML);
 
 	//replace trazione
-	if(!isset($_COOKIE["isFilterRemoved"]) && htmlspecialchars(isset($_GET['trazione']))) {
+	if(htmlspecialchars(isset($_GET['trazione']))) {
 		$listinoHTML = str_replace("[" . $_GET['trazione'] . "]", "selected ", $listinoHTML);
 	}
 	// rimpiazzo di default -> seleziono qualsiasi
 	$listinoHTML = str_replace(["[qualsiasiT]", "[anteriore]", "[posteriore]", "[integrale]"], ["selected ", "", "", ""], $listinoHTML);
 
-	$listinoHTML = str_replace('[potenzaMin]', htmlspecialchars(isset($_COOKIE["isFilterRemoved"]) ? '' : (isset($_GET['potenzaMin']) ? $_GET['potenzaMin'] : '')), $listinoHTML);
-	$listinoHTML = str_replace('[potenzaMax]', htmlspecialchars(isset($_COOKIE["isFilterRemoved"]) ? '' : (isset($_GET['potenzaMax']) ? $_GET['potenzaMax'] : '')), $listinoHTML);
-	$listinoHTML = str_replace('[pesoMin]', htmlspecialchars(isset($_COOKIE["isFilterRemoved"]) ? '' : (isset($_GET['pesoMin']) ? $_GET['pesoMin'] : '')), $listinoHTML);
-	$listinoHTML = str_replace('[pesoMax]', htmlspecialchars(isset($_COOKIE["isFilterRemoved"]) ? '' : (isset($_GET['pesoMax']) ? $_GET['pesoMax'] : '')), $listinoHTML);
-	$listinoHTML = str_replace("[neopatentati]", htmlspecialchars(isset($_COOKIE["isFilterRemoved"]) ? '' : (isset($_GET['neopatentati']) ? 'checked ' : '')), $listinoHTML);
-	$listinoHTML = str_replace('[posti]', htmlspecialchars(isset($_COOKIE["isFilterRemoved"]) ? '' : (isset($_GET['posti']) ? $_GET['posti'] : '')), $listinoHTML);
+	$listinoHTML = str_replace('[potenzaMin]', htmlspecialchars(isset($_GET['potenzaMin']) ? $_GET['potenzaMin'] : ''), $listinoHTML);
+	$listinoHTML = str_replace('[potenzaMax]', htmlspecialchars(isset($_GET['potenzaMax']) ? $_GET['potenzaMax'] : ''), $listinoHTML);
+	$listinoHTML = str_replace('[pesoMin]', htmlspecialchars(isset($_GET['pesoMin']) ? $_GET['pesoMin'] : ''), $listinoHTML);
+	$listinoHTML = str_replace('[pesoMax]', htmlspecialchars(isset($_GET['pesoMax']) ? $_GET['pesoMax'] : ''), $listinoHTML);
+	$listinoHTML = str_replace("[neopatentati]", htmlspecialchars(isset($_GET['neopatentati']) ? 'checked ' : ''), $listinoHTML);
+	$listinoHTML = str_replace('[posti]', htmlspecialchars(isset($_GET['posti']) ? $_GET['posti'] : ''), $listinoHTML);
 
 	//replace condizione
-	if(!isset($_COOKIE["isFilterRemoved"]) && htmlspecialchars(isset($_GET['condizione']))) {
+	if(htmlspecialchars(isset($_GET['condizione']))) {
 		$listinoHTML = str_replace("[" . $_GET['condizione'] . "]", "selected ", $listinoHTML);
 	}
 	// rimpiazzo di default -> seleziono qualsiasi
 	$listinoHTML = str_replace(["[qualsiasiCd]", "[nuovo]", "[usato]", "[km0]"], ["selected ", "", "", ""], $listinoHTML);
 
-	$listinoHTML = str_replace("[prezzoMax]", htmlspecialchars(isset($_COOKIE["isFilterRemoved"]) ? '' : (isset($_GET['prezzoMax']) ? $_GET['prezzoMax'] : '')), $listinoHTML);
-	$listinoHTML = str_replace("[chilometraggio]", htmlspecialchars(isset($_COOKIE["isFilterRemoved"]) ? '' : (isset($_GET['chilometraggio']) ? $_GET['chilometraggio'] : '')), $listinoHTML);
+	$listinoHTML = str_replace("[prezzoMax]", htmlspecialchars(isset($_GET['prezzoMax']) ? $_GET['prezzoMax'] : ''), $listinoHTML);
+	$listinoHTML = str_replace("[chilometraggio]", htmlspecialchars(isset($_GET['chilometraggio']) ? $_GET['chilometraggio'] : ''), $listinoHTML);
 
 	return $listinoHTML;
 }
@@ -150,7 +150,7 @@ function getVehiclesFromDB($params, $listinoHTML) {
 //DA SOSTITUIRE CON PERCORSO FILE HTML
 $listinoHTML = file_get_contents("listino.html");
 
-session_start();
+// session_start();
 
 $err = "";
 
@@ -256,24 +256,41 @@ if(isset($_GET['action']) && $_GET['action'] == 'Applica filtri') {
 		}
 
 		// Qui chiamo funziona per ricavare auto
-		$listinoHTML = getVehiclesFromDB($params, $listinoHTML);;
+		$listinoHTML = getVehiclesFromDB($params, $listinoHTML);
 
+		echo str_replace("[err]", $err, $listinoHTML);
+	}
+		
+} else if(isset($_GET['action']) && $_GET['action'] == 'Rimuovi filtri') {
+	unset($_GET);
+	$listinoHTML = getVehiclesFromDB(array(), $listinoHTML);
+	echo str_replace("[err]", $err, $listinoHTML);
+} else {
+	$listinoHTML = getVehiclesFromDB(array(), $listinoHTML);
+	echo str_replace("[err]", $err, $listinoHTML);
+}
+
+/*
+
+isset($_GET['marca']) ? $_GET['marca'] : '')
+
+if(isset($_GET['action']) && $_GET['action'] == 'Applica filtri') {
+	if() {
+	
 		if(isset($_COOKIE["isFilterRemoved"])) {
 			setcookie("isFilterRemoved", "", time() - 3600, "/");
 		}
-
-		echo str_replace("[err]", $err, $listinoHTML);
-			
-	} else {
-		// Se ho impostato come valore nel GET solo action=Applica+filtri
-		header("location: listino.php");
+	}  else {
+	// Se ho impostato come valore nel GET solo action=Applica+filtri
+	header("location: listino.php");
 	}
 } else if (isset($_GET['action']) && $_GET['action'] == 'Rimuovi filtri') {
 	setcookie("isFilterRemoved", str_replace("Rimuovi+filtri", "Applica+filtri", $_SERVER["REQUEST_URI"]));
 	header("location: " . str_replace("Rimuovi+filtri", "Applica+filtri", $_SERVER["REQUEST_URI"]));
 } else {
-	$listinoHTML = getVehiclesFromDB(array(), $listinoHTML);;
-	echo str_replace("[err]", $err, $listinoHTML);
+ 
 }
+
+*/
 
 ?>

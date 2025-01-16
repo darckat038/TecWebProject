@@ -25,10 +25,10 @@
 - [ ] NO
 
 ## Discorso reset button per form filtro listino
-- [ ] RIMUOVI FILTRI FA ANCHE RICERCA DEFAULT (CON FILTRI VUOTI)
+- [x] RIMUOVI FILTRI FA ANCHE RICERCA DEFAULT (CON FILTRI VUOTI)
 
 ## Link listino da breadcrumb auto deve contenere filtri di listino applicati?
-- [ ] NO
+- [x] NO
 
 ## Serve un banner per avviso utilizzo cookie?
 - [ ] NO
