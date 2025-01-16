@@ -1,42 +1,37 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Errore 404 | LuzzAuto</title>
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            text-align: center;
-            padding: 50px;
-        }
-        h1 {
-            font-size: 50px;
-        }
-        p {
-            font-size: 20px;
-        }
-        a {
-            color: #007BFF;
-            text-decoration: none;
-        }
-        a:hover {
-            text-decoration: underline;
-        }
-    </style>
-</head>
-<body>
-    <h1>Errore 404</h1>
-    <h2>Oh, hai sbagliato strada?</h2>
-    <p><a href="/">Usa il navigatore e torna alla home</a></p>
-    <!--
-        Ehi! Sei fuori pista!
-        <a href=home> Chiama la safety car e torna alla home
-
-            OPPURE
-
-        Oh, hai sbagliato strada?
-        <a href=home> Usa il navigatore e torna alla home
-    -->
-</body>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <script src="assets/js/rand_message.js"></script>
+        <title>Errore 404 | LuzzAuto</title>
+        <link rel="icon" href="assets/img/Logo/icona.webp" type="image/x-icon">
+        <style>
+            body {
+                font-family: Arial, sans-serif;
+                text-align: center;
+                padding: 50px;
+            }
+            h1 {
+                font-size: 50px;
+            }
+            p {
+                font-size: 20px;
+            }
+            a {
+                color: #007BFF;
+                text-decoration: none;
+            }
+            a:hover {
+                text-decoration: underline;
+            }
+        </style>
+    </head>
+    <body>
+        <h1>Errore 404</h1>
+        <div id="message">
+            <h2>Oh, hai sbagliato strada?</h2>
+            <p><a href="/">Usa il navigatore e torna alla <span lang="en-GB">home</span></a></p>
+        </div>
+    </body>
 </html>

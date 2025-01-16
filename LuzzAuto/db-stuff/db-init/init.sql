@@ -94,7 +94,7 @@ VALUES ('EXFiat - EXcellence Fiat', 'Nove Renne', 'Usato', 0, 1823, 1320000000, 
 
 /* ESU */
 INSERT INTO Veicolo (marca, modello, condizione, prezzo, anno, chilometraggio, colore, alimentazione, cambio, trazione, potenza, peso, neopatentati, numeroPosti, foto)
-VALUES ('ESU - European Sports Unlimited', 'Piövegg', 'Nuovo', 2300000, 2023, 0, 'Nero', 'Gasolio', 'Manuale', 'Posteriore', 1000, 1300, 0, 2, 'piövegg-1.jpg+piövegg-2.jpg+piövegg-interni.jpg');
+VALUES ('ESU - European Sports Unlimited', 'Piövegg', 'Nuovo', 2300000, 2023, 0, 'Nero', 'Gasolio', 'Manuale', 'Posteriore', 1000, 1300, 0, 2, 'piövegg-1.jpg+piövegg-2.jpg+piövegg-interni.jpeg');
 
 INSERT INTO Veicolo (marca, modello, condizione, prezzo, anno, chilometraggio, colore, alimentazione, cambio, trazione, potenza, peso, neopatentati, numeroPosti, foto)
 VALUES ('ESU - European Sports Unlimited', 'Muriald', 'KM 0', 1200000, 2020, 0, 'Verde chiaro', 'Benzina', 'Automatico', 'Integrale', 850, 1400, 0, 2, 'muriald.jpeg+muriald-interni.jpeg');
@@ -150,7 +150,7 @@ VALUES ('DM - Digital Motion', 'Mudol', 'Nuovo', 65800, 2024, 0, 'Blu chiaro', '
     username: stringa, non più lunga di 30 caratteri
     idAuto: int, corrispondente all'id del veicolo
     dataOra: data e ora, formato "YYYY-MM-DD HH:MM:SS"
-    stato: 0=?, 1=confermata, -1=?
+    stato: 0=pendente, 1=confermata, -1=rifiutata
 
     ESEMPIO DI INSERIMENTO DI UNA PRENOTAZIONE:
     INSERT INTO Prenotazione (username, idAuto, dataOra, stato)

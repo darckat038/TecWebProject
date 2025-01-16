@@ -6,30 +6,32 @@ window.addEventListener('load', function () {
 function validateTestDriveData(){
     
     let form = document.getElementById('test_drive_form');
-    form.addEventListener('submit', function (event){
-        resetFormError();
-        let div = document.getElementsByClassName("form_success")[0];
-        div.innerHTML = "";
-        
-        let msg = "";
-        let ok = true;
-        
-        if(!validateAuto()){
-            msg+="<p>L'auto non è valida.</p>";
-            ok = false;
-        }
-
-        if(!validateDate()){
-            msg+="<p>La data non è valida.</p>";
-            ok = false;
-        }
-
-        if(!ok){
-            addFormError(msg);
-            event.preventDefault();
-        }
-        
-    });
+    if(form){
+        form.addEventListener('submit', function (event){
+            resetFormError();
+            let div = document.getElementsByClassName("form_success")[0];
+            div.innerHTML = "";
+            
+            let msg = "";
+            let ok = true;
+            
+            if(!validateAuto()){
+                msg+="<p>L'auto non è valida.</p>";
+                ok = false;
+            }
+    
+            if(!validateDate()){
+                msg+="<p>La data non è valida.</p>";
+                ok = false;
+            }
+    
+            if(!ok){
+                addFormError(msg);
+                event.preventDefault();
+            }
+            
+        });
+    }
 }
 
 function validateAuto(){
