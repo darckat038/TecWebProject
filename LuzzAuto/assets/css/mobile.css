@@ -1809,7 +1809,7 @@ document.querySelectorAll('#list_filter .list_insert').forEach(select => {
 }
 
 #userImage{
-    background-image: url('../img/ImmagineUtente/ImmagineUtente.svg');
+    background-image: url(../img/ImmagineUtente/ImmagineUtente.svg);
     width: 8em;
     height: 8em;
     background-size: cover; 
@@ -1840,6 +1840,19 @@ document.querySelectorAll('#list_filter .list_insert').forEach(select => {
 
 .tabellaPrenUtente date{
     display: block;
+}
+
+#descTable{
+    position: absolute;
+    left: -999em;
+}
+
+#accettatoUtente{
+    color: #4caf50;
+}
+
+#rifiutatoUtente{
+    color: red;
 }
 
 /*Gestione prenotazioni*/

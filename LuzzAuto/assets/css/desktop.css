@@ -1966,15 +1966,9 @@ p.list_car_list_empty {
     color: var(--form-border-input-color);
 }
 
-.nomeRiqPrenUtente{
-    color: var(--form-border-input-color);
-    padding-left: 3em;
-    font-weight: bold;
-    font-size: 25px;
-}
 
 #userImage{
-    background-image: url('../img/ImmagineUtente/ImmagineUtente.svg');
+    background-image: url(../img/ImmagineUtente/ImmagineUtente.svg);
     float: right; 
     width: 12em;
     height: 12em;
@@ -1984,6 +1978,12 @@ p.list_car_list_empty {
 }
 
 /*tabella prenotazioni*/
+.nomeRiqPrenUtente{
+    color: var(--form-border-input-color);
+    padding-left: 3em;
+    font-weight: bold;
+    font-size: 25px;
+}
 
 .tabellaPrenUtente {
     width: calc(100% - 6em); /* 100% meno il padding a sinistra e a destra */
@@ -2005,6 +2005,11 @@ p.list_car_list_empty {
 
 .tabellaPrenUtente date{
     display: block;
+}
+
+#descTable{
+    position: absolute;
+    left: -999em;
 }
 
 #prenIndispUtente{

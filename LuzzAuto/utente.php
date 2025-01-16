@@ -8,6 +8,7 @@ if (!isset($_SESSION["utente"])) {
 }
 
 
+
 //INFORMAZIONI UTENTE
 require_once 'dbConnection.php';
 use DB\DBConnection;
@@ -66,11 +67,11 @@ try{
         $campiTabella = "<p id='prenIndispUtente'>Non ci sono prenotazioni disponibili.</p>";
     }else{
         $campiTabella .= "  
-                            <p id='sum'>
+                            <p id='descTable'>
                             La tabella descrive le prenotazioni dei test drive da parte dell'utente, è organizzata in colonne
                             con numero prenotazione, modello auto, data test drive e stato della prenotazione 
                             </p>
-                            <table class='tabellaPrenUtente' aria-describedby='sum'>
+                            <table class='tabellaPrenUtente' aria-describedby='descTable'>
                                 <thead>
                                 <tr>
                                     <th scope='col'><abbr title='Numero prenotazione'>Num. Pren.</abbr></th>
@@ -117,6 +118,8 @@ catch(Exception $e){
 
 //GESTIONE PRENOTAZIONE
 $err = "";
+
+$succ="";
 
 $formORbuttonsHTML= "";
 
@@ -175,10 +178,66 @@ catch(Exception $e){
 }
 
 
+if (isset($_POST['gestPrenUtente'])) {
+
+    // Controllo sul campo vuoto
+    if (empty($_POST['gestPrenUtente'])) {
+        $err .= "<p>Devi compilare tutti i campi.</p>";
+        $pagina = str_replace("[err]", $err, $pagina);
+        $pagina = str_replace("[succ]", $succ, $pagina);
+        echo $pagina;
+        exit();
+    }
+
+    // Controllo sull'input (validazione)
+    if (!preg_match("/^[A-Za-z0-9\-\s]+$/", $_POST["gestPrenUtente"])) {
+        $err .= "<p>Auto non valida</p>";
+    }
+
+    // Restituzione errori in caso di problemi di validazione
+    if (!empty($err)) {
+        $pagina = str_replace("[err]", $err, $pagina);
+        $pagina = str_replace("[succ]", $succ, $pagina);
+        echo $pagina;
+        exit();
+    }
+
+    // Recupero ID della prenotazione
+    $idPrenotazione = explode("-", $_POST["gestPrenUtente"])[0];
+    $idPrenotazione = htmlspecialchars($idPrenotazione);
+
+    // Tentativo di cancellazione della prenotazione
+    try {
+        $db = new DBConnection();
+        $ris = $db->deletePrenotazione($idPrenotazione); // Assume che la funzione restituisca un booleano (true/false)
+        $db->closeConnection();
+        unset($db);
+
+        if (!$ris) {
+            // Prenotazione non trovata
+            $err .= "<p>Prenotazione non esiste. (ID: " . $idPrenotazione . ")</p>";
+        } else {
+            // Prenotazione cancellata con successo
+            $succ .= "<p>Prenotazione cancellata con SUCCESSO.</p>";
+        }
+
+    } catch (Exception $e) {
+        // Gestione errori e logging
+        error_log("Errore: " . $e->getMessage());
+        header("location: 500.html");
+        exit();
+    }
+
+    // Aggiornamento della pagina con esito finale
+    $pagina = str_replace("[err]", $err, $pagina);
+    $pagina = str_replace("[succ]", $succ, $pagina);
+
+}
+
+
 
 echo $pagina;
 ?>
-
 
 
 
