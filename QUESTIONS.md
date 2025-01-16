@@ -18,7 +18,9 @@
 
 ## Devo controllare htmlspecialchars della password o non serve perchè non sarà mai visualizzata in chiaro?
 
-## Discorso reset button per form filtro listino
+## Discorso reset button per form filtro listino 
+
+## Link listino da breadcrumb auto deve contenere filtri di listino applicati?
 
 ## Serve un banner per avviso utilizzo cookie?
 
