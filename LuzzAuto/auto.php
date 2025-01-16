@@ -5,6 +5,16 @@ use DB\DBConnection;
 
 $autoHTML = file_get_contents(filename: 'auto.html');
 
+if (!isset($_GET['id'])) {
+    if(!isset($_COOKIE['auto_details_id'])){
+        header(header: "location: listino.php");
+        exit();
+    }
+    $_GET['id'] = $_COOKIE['auto_details_id'];
+}
+
+setcookie('auto_details_id', $_GET['id'], time() + 3600, '/');
+
 try {
     $connessione = new DBConnection();
     $dettagli = $connessione->getVehicleDetails($_GET['id']);
@@ -77,7 +87,7 @@ try {
             <dt>€ ' . $dettagli['prezzo'] . '</dt>
         </dl>
 
-        <a class="list_button" href="">Prenota un test drive</a>';
+        <a class="list_button" href="test_drive.php#test_drive_prenota">Prenota un test drive</a>';
 
     } else {
         $immagini = "<img src=\"assets/img/Content/auto_non_trovata.png\" alt=\"Auto ricoperta di schiuma\">";
