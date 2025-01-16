@@ -9,16 +9,16 @@ NO, RIMUOVERE I DIV, AL POSTO DI h3 USARE I dt CON SFONDO ICONA (AGGIUSTATA CON 
 ## Aggiunta e modifica auto in catalogo
 NO MODIFICA
 
-### come fare inserimento immagini nel database?
+## come fare inserimento immagini nel database?
 COPIARE L'IMMAGINE CARICATA DALL'UTENTE NEL SERVER NELLA CARTELLA CORRETTA E IMPOSTARE IL PATH DELL'IMMAGINE NEL SERVER NEL CAMPO DEL DB
 
-### come gestire testo "alt" delle immagini (js per corretta visualizzazione, come inserire nel form e salvare nel DB)?
+## come gestire testo "alt" delle immagini (js per corretta visualizzazione, come inserire nel form e salvare nel DB)?
 L'AMMINISTRATORE NEL CAMPO DESCRIZIONE INSERISCE ALT CHE DEVE ESSERE DI MAX 100 CARATTERI
 
 ## I bottoni devono avere comunque il formato link (testo sottolineato ecc)?
 I BOTTONI FUORI DAI FORM DEVONO AVERE DISTINTI IN VISITATI E NON VISITATI
 
-### vale anche per i riquadri tipo i veicoli in listino?
+## vale anche per i riquadri tipo i veicoli in listino?
 METTERE LINK SOTTO CHE TI MANDA AL DETTAGLIO DELL'AUTO
 
 ## Devo controllare htmlspecialchars della password o non serve perchè non sarà mai visualizzata in chiaro?
