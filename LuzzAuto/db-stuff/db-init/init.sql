@@ -150,7 +150,7 @@ VALUES ('DM - Digital Motion', 'Mudol', 'Nuovo', 65800, 2024, 0, 'Blu chiaro', '
     username: stringa, non più lunga di 30 caratteri
     idAuto: int, corrispondente all'id del veicolo
     dataOra: data e ora, formato "YYYY-MM-DD HH:MM:SS"
-    stato: 0=?, 1=confermata, -1=?
+    stato: 0=pendente, 1=confermata, -1=rifiutata
 
     ESEMPIO DI INSERIMENTO DI UNA PRENOTAZIONE:
     INSERT INTO Prenotazione (username, idAuto, dataOra, stato)
