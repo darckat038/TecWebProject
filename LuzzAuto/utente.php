@@ -191,7 +191,7 @@ if (isset($_POST['gestPrenUtente'])) {
 
     // Controllo sull'input (validazione)
     if (!preg_match("/^[A-Za-z0-9\-\s]+$/", $_POST["gestPrenUtente"])) {
-        $err .= "<p>Auto non valida</p>";
+        $err .= "<p>Prenotazione non valida</p>";
     }
 
     // Restituzione errori in caso di problemi di validazione
@@ -213,12 +213,12 @@ if (isset($_POST['gestPrenUtente'])) {
         $db->closeConnection();
         unset($db);
 
-        if (!$ris) {
+        if ($ris==true) {
+                // Prenotazione cancellata con successo
+                 $succ .= "<p>Prenotazione cancellata con SUCCESSO.</p>";
+        } else {
             // Prenotazione non trovata
             $err .= "<p>Prenotazione non esiste. (ID: " . $idPrenotazione . ")</p>";
-        } else {
-            // Prenotazione cancellata con successo
-            $succ .= "<p>Prenotazione cancellata con SUCCESSO.</p>";
         }
 
     } catch (Exception $e) {
@@ -233,7 +233,6 @@ if (isset($_POST['gestPrenUtente'])) {
     $pagina = str_replace("[succ]", $succ, $pagina);
 
 }
-
 
 
 echo $pagina;
