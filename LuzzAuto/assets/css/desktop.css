@@ -56,7 +56,8 @@ html { scroll-behavior: smooth; }
     color: var(--navbar-text-color);
     display: inline-flex;
     overflow: hidden;
-    position: absolute;
+    position:absolute;
+    top: 0;
     width: 100%;
     padding-top: 1em;
     padding-bottom: 1em;
@@ -100,7 +101,6 @@ h1.hide{
     border-radius: 1em;
     padding: 0.4em 0.6em;
 }
-
 /******************* 
      BREADCRUMB
 ********************/
@@ -109,7 +109,8 @@ h1.hide{
     color: var(--navbar-text-color);
     background-color: var(--navbar-bg-color);
     width: 100%;
-    margin-top: 3.5em;
+    position:absolute;
+    top: 3.5em;
     border-top: 1px solid var(--form-border-input-color);
     position: absolute;
 }
@@ -125,8 +126,6 @@ h1.hide{
 body {
     background-color: var(--bg-color);
     color: var(--text-color);
-    display: flex;
-    flex-direction: column;
     font-size: 100%;
     font-family: "Lexend", Roboto, sans-serif;
     line-height: 1.5em;
@@ -257,8 +256,9 @@ select option {
     color: var(--form-text-color);
     padding: 2.5em;
     border-radius: 1.5em;
-    margin-top: 15em;
+    margin: 15em auto auto auto;
     box-shadow: rgba(115, 115, 115, 0.35) 0px 5px 15px;
+    width: fit-content;
 }
 
 .login_content > h1, .login_content > p{
@@ -351,7 +351,8 @@ select option {
     color: var(--form-text-color);
     padding: 2.5em;
     border-radius: 1.5em;
-    margin-top: 10em;
+    margin: 10em auto auto auto;
+    width: fit-content;
     margin-bottom: 6em;
     box-shadow: rgba(115, 115, 115, 0.35) 0px 5px 15px;
 }
@@ -1357,7 +1358,7 @@ p.list_car_list_empty {
 
 
 #details {
-    margin-top: 8em;
+    margin: 8em auto auto auto;
     display: flex;
     flex-direction: row;
     align-items: center;
@@ -1923,7 +1924,7 @@ p.list_car_list_empty {
     color: var(--navbar-text-color);
     padding: 2em;
     border-radius: 1.5em;
-    margin-top: 8em;
+    margin: 8em auto auto auto;
     width: 50em;
     height: auto;
 }
