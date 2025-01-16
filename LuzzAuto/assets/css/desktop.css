@@ -1647,16 +1647,29 @@ p.list_car_list_empty {
     padding: 0 0 1em;
     font-size: 100%;
     background-color: white;
+    /* background-color: var(--navbar-bg-color);
+    color: var(--navbar-text-color); */
 }
+
+#home_new div.home_car_item:hover {
+    transform: scale(1.2);
+    transition-duration: 0.5s;
+}
+
+#home_new div.home_car_item:not(:hover) {
+    transform: scale(1);
+    transition-duration: 0.5s;
+}  
 
 #home_new div.home_car_item dt {
     font-weight:450;
     font-size: 1.3em;
-    margin: 0.5em 0;
+    padding: 0.5em 0 1em;
+    background-color: var(--navbar-bg-color);
 }
 
 #home_new div.home_car_item dd {
-    padding: 0 1em 1em;
+    padding: 0.5em 1em 1em;
     font-weight: 300;
     font-size: 1.1em;
 }
@@ -1665,16 +1678,7 @@ p.list_car_list_empty {
     object-fit: cover;
     width: 100%;
     border-radius: 0;
-}
-
-#home_new div:hover {
-    transform: scale(1.2);
-    transition-duration: 0.5s;
-}
-
-#home_new div:not(:hover) {
-    transform: scale(1);
-    transition-duration: 0.5s;
+    margin-bottom: 0;
 }
 
 /* ---- WORK WITH US ---- */
