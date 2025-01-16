@@ -1070,8 +1070,6 @@ section.aboutUs_history p {
 
     flex: 1 1 calc(33.333% - 1em);
     box-sizing: border-box;
-
-
 }
 
 #list_filter legend {
@@ -1127,11 +1125,13 @@ section.aboutUs_history p {
 
 #list_filter #list_filter_potenza,
 #list_filter #list_filter_peso {
-    display: flex;
-    flex-wrap: nowrap;
-    gap: 1em;
-    justify-content: space-between;
-    align-items: center;
+    padding: 0;
+    border: 0;
+}
+
+#list_filter #list_filter_potenza input,
+#list_filter #list_filter_peso input {
+    width: 5.5em;
 }
 
 #list_filter #list_filter_neopatentati {
@@ -1140,6 +1140,7 @@ section.aboutUs_history p {
     gap: 1em;
     font-size: 1em;
     width: 13em;
+    margin-top: 1.2em;
 }
 
 
@@ -1150,6 +1151,18 @@ section.aboutUs_history p {
     height: 25px;
     padding: 0;
     top: 0.2em;
+}
+
+#list_filter #list_label_neopatentati {
+    align-self: center;
+    padding: 0;
+}
+
+#list_filter #list_label_potenza,
+#list_filter #list_label_peso {
+    align-self: center;
+    padding: 0;
+    top: 0;
 }
 
 #list_filter .list_insert {

@@ -24,10 +24,6 @@
 
     </head>
 
-    <!--
-    INSERIMENTO PHP PER FILTRO
-    -->
-
     <body>
 
         <nav class="topNavBar">
@@ -137,40 +133,40 @@
                             </div>
 
                             <div class="list_input_container">
-                                <label for="list_filter_potenza" id="list_label_potenza">Potenza (<abbr title="cavalli vapore">CV</abbr>)</label>
-                                <div id="list_filter_potenza" class="list_insert">
-                                    Da <input type="number" class="list_internal_insert" value="[potenzaMin]" name="potenzaMin" placeholder="qualsiasi" aria-label="Campo di inserimento della potenza minima dell'auto in cavalli vapore">
-                                    a <input type="number" class="list_internal_insert" value="[potenzaMax]" name="potenzaMax" placeholder="qualsiasi" aria-label="Campo di inserimento della potenza massima dell'auto in cavalli vapore">
-                                </div>
-                            </div>
-
-                            <div class="list_input_container">
-                                <label for="list_filter_peso" id="list_label_peso">Peso (<abbr title="chilogrammi">kg</abbr>)</label>
-                                <div id="list_filter_peso" class="list_insert">
-                                    Da <input type="number" class="list_internal_insert" value="[pesoMin]" name="pesoMin" placeholder="qualsiasi" aria-label="Campo di inserimento del peso minimo dell'auto in chilogrammi">
-                                    a <input type="number" class="list_internal_insert" value="[pesoMax]" name="pesoMax" placeholder="qualsiasi" aria-label="Campo di inserimento del peso massimo dell'auto in chilogrammi">
-                                </div>
-                            </div>
-
-                            <div class="list_input_container">
-                                <label for="list_filter_neopatentati" id="list_label_neopatentati">Idoneità neopatentati</label>
-                                <div class="list_insert" id="list_filter_neopatentati">
-                                    <label class="interruttore" for="neopatentatiID">
-                                        <p>Interruttore qui</p>
-                                        <input type="checkbox" name="neopatentati" id="neopatentatiID" [neopatentati]value="1" aria-label="Mettere spunta se neopatentati abilitati alla guida dell'auto">
-                                        <div class="interruttore-slider">
-                                            <div class="interruttore-knob"></div>
-                                        </div>
-                                    </label>
-                                </div>
-                            </div>
-
-                            <div class="list_input_container">
                                 <label for="list_filter_posti" id="list_label_posti">Numero posti</label>
                                 <div>
                                     <input type="number" id="list_filter_posti" class="list_insert" value="[posti]" name="posti" placeholder="Qualsiasi" aria-label="Campo di inserimento del numero di posti dell'auto">
                                 </div>
                             </div>
+
+                            <div class="list_input_container">
+                                <label for="list_filter_potenza" id="list_label_potenza">Potenza (<abbr title="cavalli vapore">CV</abbr>):</label>
+                                <div id="list_filter_potenza" class="list_insert">
+                                    Da <input type="number" class="list_insert" value="[potenzaMin]" name="potenzaMin" placeholder="qualsiasi" aria-label="Campo di inserimento della potenza minima dell'auto in cavalli vapore">
+                                    a <input type="number" class="list_insert" value="[potenzaMax]" name="potenzaMax" placeholder="qualsiasi" aria-label="Campo di inserimento della potenza massima dell'auto in cavalli vapore">
+                                </div>
+                            </div>
+
+                            <div class="list_input_container">
+                                <label for="list_filter_peso" id="list_label_peso">Peso (<abbr title="chilogrammi">kg</abbr>):</label>
+                                <div id="list_filter_peso" class="list_insert">
+                                    Da <input type="number" class="list_insert" value="[pesoMin]" name="pesoMin" placeholder="qualsiasi" aria-label="Campo di inserimento del peso minimo dell'auto in chilogrammi">
+                                    a <input type="number" class="list_insert" value="[pesoMax]" name="pesoMax" placeholder="qualsiasi" aria-label="Campo di inserimento del peso massimo dell'auto in chilogrammi">
+                                </div>
+                            </div>
+
+                            
+                            <label for="list_filter_neopatentati" id="list_label_neopatentati">Idoneità neopatentati:</label>
+                            <div id="list_filter_neopatentati">
+                                <label class="interruttore" for="neopatentatiID">
+                                    <p>Interruttore qui</p>
+                                    <input type="checkbox" name="neopatentati" id="neopatentatiID" [neopatentati]value="1" aria-label="Mettere spunta se neopatentati abilitati alla guida dell'auto">
+                                    <div class="interruttore-slider">
+                                        <div class="interruttore-knob"></div>
+                                    </div>
+                                </label>
+                            </div>
+                            
                     </fieldset>
                 
                     <!-- Fieldset per preferenze di acquisto 
