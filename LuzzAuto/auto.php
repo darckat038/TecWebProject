@@ -23,11 +23,13 @@ try {
     if ($dettagli != -1) {
         $immagini = "";
         $fotos = explode(separator: "+", string: $dettagli['foto']); // Divide la stringa in un array di nomi di foto
+        $alts = explode(separator:'+', string: $dettagli['alts']); // Divide la stringa in un array di alt
 
         // Itera sull'array dei nomi di foto
         foreach ($fotos as $foto) {
             // Genera il codice HTML per ogni immagine
-            $immagini .= '<img src="assets/img/Cars/' . htmlspecialchars(string: $dettagli['marca']) . '/' . htmlspecialchars(string: $foto) . '" alt="Immagine auto">';
+            $immagini .= '<img src="assets/img/Cars/' . htmlspecialchars(string: $dettagli['marca']) . '/' . htmlspecialchars(string: $foto) . '" 
+            alt="' . htmlspecialchars(string: $alts[array_search(needle: $foto, haystack: $fotos)]) . '">';
         }
 
         $stringaDettagli = '
