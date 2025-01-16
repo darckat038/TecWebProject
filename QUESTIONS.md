@@ -31,7 +31,7 @@
 - [x] NO
 
 ## Serve un banner per avviso utilizzo cookie?
-- [ ] NO
+- [x] NO
 
 ## Come font con le grazie va bene uno qualunque?
 - [ ] SI
@@ -43,13 +43,13 @@
 - [x] METTERE SFONDO NERO TESTO BIANCO E IL NOME DELA MACCHINA COME LINK - (Impostati utilizzando id attuali del DB, da cambiare eventualmente)
 
 ## abbreviazioni nei select
-- [ ] TOGLIERE I TAG abbr NEI SELECT
+- [x] TOGLIERE I TAG abbr NEI SELECT
 
 ## breadcrumb nel listino
-- [ ] LINK LISTINO COME DEFAULT
+- [x] LINK LISTINO COME DEFAULT
 
 ## in dettaglio auto link listino auto nel menu cliccabile?
-- [ ] SI
+- [x] SI
 
 ## IL COLORE DEI LINK VISITATI DEVE ESSERE MANTENUTO ANCHE IN CASO DI HOVER? (VEDI TEST DRIVE)
 - [ ]PROBABILMENTE SI
