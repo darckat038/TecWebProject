@@ -23,3 +23,5 @@
 ## Serve un banner per avviso utilizzo cookie?
 
 ## Come font con le grazie va bene uno qualunque?
+
+## Per dei salvataggi di valori poco importanti va bene usare i cookies o quando possibile usare la sessione?

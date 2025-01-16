@@ -79,14 +79,17 @@ if (isset($_SESSION["utente"])) {
         foreach($ris as $row){
             $val = $row["id"] . "-" . $row["marca"] . "-" . $row['modello'];
             //REIMPOSTO IL VALORE SETTATO
-            if(isset($_POST['test_drive_select_auto']) && $_POST['test_drive_select_auto'] == $val){
+            if((isset($_POST['test_drive_select_auto']) && $_POST['test_drive_select_auto'] == $val) || (isset($_COOKIE['auto_details_id']) && $_COOKIE['auto_details_id'] == $row["id"])){
                 $veicoli .= "<option value='" . $row["id"] . "-" . $row["marca"] . "-" . $row['modello'] . "' selected>" . $row["id"] . " - " . $row["marca"] . " " . $row['modello'] ."</option>";
             }
             else{
                 $veicoli .= "<option value='" . $row["id"] . "-" . $row["marca"] . "-" . $row['modello'] . "'>" . $row["id"] . " - " . $row["marca"] . " " . $row['modello'] ."</option>";
             }
-            
         }
+        if(isset($_COOKIE['auto_details_id'])){
+            setcookie("auto_details_id", "", time()-7200, "/");
+        }
+        $test_driveHTML = ripristinoInput($test_driveHTML);
         $test_driveHTML = str_replace("[veicoli]", $veicoli, $test_driveHTML);
     }
     catch(Exception $e){
