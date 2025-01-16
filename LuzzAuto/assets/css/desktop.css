@@ -1176,14 +1176,6 @@ section.aboutUs_history p {
     font-size: 100%;
 }
 
-#list_filter .list_internal_insert {
-    height: 2em;
-    background-color: var(--form-bg-color);
-    color: var(--form-text-color);
-    font-family: "Lexend", Roboto, sans-serif;
-    font-size: 100%;
-    width: 5.5em;
-}
 
 /*
 

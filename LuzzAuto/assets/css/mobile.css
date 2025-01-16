@@ -1008,8 +1008,6 @@ section.aboutUs_history img {
 
     flex: 1 1 calc(33.333% - 1em);
     box-sizing: border-box;
-
-
 }
 
 #list_filter legend {
@@ -1041,8 +1039,6 @@ section.aboutUs_history img {
 #list_filter #list_filter_alimentazione,
 #list_filter #list_filter_cambio,
 #list_filter #list_filter_trazione,
-#list_filter #list_filter_potenza,
-#list_filter #list_filter_peso,
 #list_filter #list_filter_condizione,
 #list_filter #list_filter_prezzo,
 #list_filter #list_filter_chilometraggio {
@@ -1065,11 +1061,13 @@ section.aboutUs_history img {
 
 #list_filter #list_filter_potenza,
 #list_filter #list_filter_peso {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 1em;
-    justify-content: space-between;
-    align-items: center;
+    padding: 0;
+    border: 0;
+}
+
+#list_filter #list_filter_potenza input,
+#list_filter #list_filter_peso input {
+    width: 5.5em;
 }
 
 #list_filter #list_filter_neopatentati {
@@ -1090,8 +1088,17 @@ section.aboutUs_history img {
     top: 0.2em;
 }
 
+#list_filter #list_label_neopatentati {
+    align-self: center;
+    padding: 0;
+}
 
-
+#list_filter #list_label_potenza,
+#list_filter #list_label_peso {
+    align-self: center;
+    padding: 0;
+    top: 0;
+}
 
 #list_filter .list_insert {
     height: 3em;
@@ -1104,14 +1111,6 @@ section.aboutUs_history img {
     font-size: 100%;
 }
 
-#list_filter .list_internal_insert {
-    height: 2em;
-    background-color: var(--form-bg-color);
-    color: var(--form-text-color);
-    font-family: "Lexend", Roboto, sans-serif;
-    font-size: 100%;
-    width: 5.5em;
-}
 
 /*
 
@@ -1213,15 +1212,10 @@ document.querySelectorAll('#list_filter .list_insert').forEach(select => {
     cursor: pointer; /* Cambia il cursore in puntatore */
 }
 
-#list_car_list a {
-    text-decoration: none; /* Rimuove il sottolineato */
-    color: black; /* Testo nero */
+.list_car_item .list_car_item_link {
+    position: relative;
+    margin-top: 5em;
 }
-
-#list_car_list a:hover {
-    color: white; /* Colore bianco durante l'hover del div */
-}
-
 
 .list_car_item .list_car_image {
     max-height: 12em; /* Altezza fissa */
