@@ -1071,9 +1071,6 @@ section.aboutUs_history img {
 }
 
 #list_filter #list_filter_neopatentati {
-    display: flex;
-    align-items: center;
-    gap: 1em;
     font-size: 1em;
     width: 13em;
 }
@@ -1253,10 +1250,6 @@ document.querySelectorAll('#list_filter .list_insert').forEach(select => {
 .list_car_item .list_car_info {
     flex: 1; /* Occupa lo spazio rimanente */
     padding: 0.5em;
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-start;
-    gap: 0.5em;
     transition: color 0.3s ease;
 }
 

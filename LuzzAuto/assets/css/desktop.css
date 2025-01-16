@@ -1135,12 +1135,8 @@ section.aboutUs_history p {
 }
 
 #list_filter #list_filter_neopatentati {
-    display: flex;
-    align-items: center;
-    gap: 1em;
-    font-size: 1em;
     width: 13em;
-    margin-top: 1.2em;
+    margin-top: 2em;
 }
 
 
@@ -1296,9 +1292,7 @@ p.list_car_list_empty {
 
 .list_car_item .list_car_image {
     flex: 0 0 23em; /* Larghezza fissa della colonna immagine */
-    display: flex; /* Disposizione orizzontale delle colonne */
-    align-items: center; /* Centra verticalmente l'immagine */
-    justify-content: center; /* Centra orizzontalmente l'immagine */
+    
     overflow: hidden; /* Evita fuoriuscite */
     border-radius: 0; /* Angoli a 90 gradi */
     transition:  /* Effetto di transizione */
@@ -1329,10 +1323,6 @@ p.list_car_list_empty {
 .list_car_item .list_car_info {
     flex: 1; /* Occupa lo spazio rimanente */
     padding: 1em;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    gap: 0.5em;
     transition: color 0.3s ease;
 }
 
