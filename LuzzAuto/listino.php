@@ -101,7 +101,7 @@ function getVehiclesFromDB($params, $listinoHTML) {
 			$listaAuto = '<dl id="list_car_list">';
 			foreach($ris as $vehicle) {
 				$listaAuto .= '
-					<a class="list_car_item" href="auto.php?id=' . $vehicle["id"] . '">
+					<div class="list_car_item">
 						<div class="list_car_image">';
 							
 						// Gestione delle immagini
@@ -112,25 +112,28 @@ function getVehiclesFromDB($params, $listinoHTML) {
 
 				$listaAuto .= '
 						</div>
-						<dl class="list_car_info">
-							<div>
-								<dd>Marca</dd>
-								<dt>' . $vehicle["marca"] . '</dt>
-							</div>
-							<div>
-								<dd>Modello</dd>
-								<dt>' . $vehicle["modello"] . '</dt>
-							</div>
-							<div>
-								<dd>Condizioni</dd>
-								<dt>' . $vehicle["condizione"] . '</dt>
-							</div>
-							<div>
-								<dd>Prezzo</dd>
-								<dt><abbr title="Euro">&euro;</abbr> ' . $vehicle["prezzo"] . '</dt>
-							</div>
-						</dl>
-					</a>';
+						<div>
+							<dl class="list_car_info">
+								<div>
+									<dd>Marca</dd>
+									<dt>' . $vehicle["marca"] . '</dt>
+								</div>
+								<div>
+									<dd>Modello</dd>
+									<dt>' . $vehicle["modello"] . '</dt>
+								</div>
+								<div>
+									<dd>Condizioni</dd>
+									<dt>' . $vehicle["condizione"] . '</dt>
+								</div>
+								<div>
+									<dd>Prezzo</dd>
+									<dt><abbr title="Euro">&euro;</abbr> ' . $vehicle["prezzo"] . '</dt>
+								</div>
+							</dl>
+							<a class="list_car_item_link" href="auto.php?id=' . $vehicle["id"] . '">Vedi dettagli</a>
+						</div>
+					</div>';
 			}
 			$listaAuto .='</dl>';
 		} else {

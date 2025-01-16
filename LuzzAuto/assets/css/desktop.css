@@ -1295,17 +1295,11 @@ p.list_car_list_empty {
     background-color: black; /* Sfondo nero */
     color: white; /* Testo bianco */
     border-radius: 1em; /* Angoli arrotondati */
-    cursor: pointer; /* Cambia il cursore in puntatore */
 }
 
-
-#list_car_list a {
-    text-decoration: none; /* Rimuove il sottolineato */
-    color: black; /* Testo nero */
-}
-
-#list_car_list a:hover {
-    color: white; /* Colore bianco durante l'hover del div */
+.list_car_item .list_car_item_link {
+    position: relative;
+    margin-top: 5em;
 }
 
 .list_car_item .list_car_image {
