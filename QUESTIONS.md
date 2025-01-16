@@ -36,6 +36,18 @@ SI
 ## Per dei salvataggi di valori poco importanti va bene usare i cookies o quando possibile usare la sessione?
 SI VA BENE COOKIES
 
+## nome auto in index sezione ultimi arrivi
+METTERE SFONDO NERO TESTO BIANCO E IL NOME DELA MACCHINA COME LINK
+
+## abbreviazioni nei select
+TOGLIERE I TAG abbr NEI SELECT
+
+## breadcrumb nel listino
+LINK LISTINO COME DEFAULT
+
+## in dettaglio auto link listino auto nel menu cliccabile?
+SI
+
 
 !DOCUMENTARE TUTTE LE COSE CHE PUO' FARE L'UTENTE
 
