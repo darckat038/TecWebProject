@@ -27,6 +27,8 @@ NO
 ## Discorso reset button per form filtro listino
 RIMUOVI FILTRI FA ANCHE RICERCA DEFAULT (CON FILTRI VUOTI)
 
+## Link listino da breadcrumb auto deve contenere filtri di listino applicati?
+
 ## Serve un banner per avviso utilizzo cookie?
 NO
 
@@ -51,4 +53,4 @@ SI
 ## IL COLORE DEI LINK VISITATI DEVE ESSERE MANTENUTO ANCHE IN CASO DI HOVER? (VEDI TEST DRIVE)
 PROBABILMENTE SI
 
-### !DOCUMENTARE TUTTE LE COSE CHE PUO' FARE L'UTENTE
+# !DOCUMENTARE TUTTE LE COSE CHE PUO' FARE L'UTENTE
