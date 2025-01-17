@@ -309,11 +309,10 @@ a:visited {
     text-underline-offset: 0.3em;
 }
 
+/*#region Login*/
 /******************* 
         LOGIN
 ********************/
-
-/*#region Login*/
 
 #login_body{
     background-image: url(../img/Background/Luzzauto/LuzzAuto_facciata1.png);
@@ -392,11 +391,10 @@ legend{
 
 /*#endregion Login*/
 
+/*#region SignIn*/
 /******************* 
         SIGNIN
 ********************/
-
-/*#region SignIn*/
 
 #signup_body{
     background-image: url(../img/Background/Luzzauto/LuzzAuto_facciata1.png);
@@ -477,11 +475,10 @@ input[type="date"]::-webkit-calendar-picker-indicator {
 
 /*#endregion SignIn*/
 
+/*#region TestDrive*/
 /******************* 
      TEST DRIVE
 ********************/
-
-/*#region TestDrive*/
 
 #test_drive_header {
     background-color: var(--navbar-bg-color);
@@ -497,6 +494,7 @@ input[type="date"]::-webkit-calendar-picker-indicator {
     width: 100%;
     color: white;
 }
+
 #test_drive_header h1{
     font-size: 5em;
     margin-top: 0.5em;
@@ -504,12 +502,14 @@ input[type="date"]::-webkit-calendar-picker-indicator {
     margin-left: 10%;
     line-height: 1em;
 }
+
 #test_drive_header p {
     font-size: 1.7em;
     margin-left: 10%;
     margin-bottom: 1.5em;
     line-height: 1.2em;
 }
+
 #test_drive_prenotaAnchor{
     background-color: var(--form-bg-color);
     border: 1px solid white;
@@ -520,15 +520,16 @@ input[type="date"]::-webkit-calendar-picker-indicator {
     font-family: "Lexend", Roboto, sans-serif;
     margin-left: 10%;
 }
+
 #test_drive_prenotaAnchor:hover{
     background-color: var(--form-text-color);
     color: var(--form-bg-color);
 }
+
 #test_drive_prenotaAnchor:hover:visited{
     background-color: var(--form-text-color);
     color: var(--visited-link);
 }
-
 
 #test_drive_main {
     display: flex;
@@ -536,13 +537,16 @@ input[type="date"]::-webkit-calendar-picker-indicator {
     align-items: center;
     width: 100%;
 }
+
 #test_drive_main section{
     margin-top: 5em;
 }
+
 #test_drive_main p {
     font-size: 1.15em;
     font-weight: 300;
 }
+
 #test_drive_main > section > h3 {
     font-size: 1.5em;
     font-weight: 500;
@@ -561,7 +565,6 @@ input[type="date"]::-webkit-calendar-picker-indicator {
     text-align: center;
 }
 
-
 #test_drive_comefunziona{
     background-color: var(--cards-bg-color);
     color: var(--cards-text-color);
@@ -571,13 +574,16 @@ input[type="date"]::-webkit-calendar-picker-indicator {
     text-align: center;
     width: 90%;
 }
+
 #test_drive_comefunziona > h3{
     margin-bottom: 1.5em;
     line-height: 1.2em;
 }
+
 #test_drive_comefunziona dl{
     margin: 0 30%;
 }
+
 #test_drive_comefunziona dl dt{
     font-size: 1.2em;
     font-weight: 450;
@@ -587,6 +593,7 @@ input[type="date"]::-webkit-calendar-picker-indicator {
     margin-right: -50%;
     text-align: center;
 }
+
 #test_drive_comefunziona dl dd{
     font-size: 1em;
     font-weight: 300;
@@ -706,6 +713,7 @@ input[type="datetime-local"]::-webkit-calendar-picker-indicator {
     background-color: var(--form-text-color);
     color: var(--form-bg-color);
 }
+
 #test_drive_prenota > a:hover:visited{
     background-color: var(--form-text-color);
     color: var(--visited-link);
@@ -713,11 +721,10 @@ input[type="datetime-local"]::-webkit-calendar-picker-indicator {
 
 /*#endregion TestDrive*/
 
+/*#region About us*/
 /*******************
         ABOUT US
 ********************/
-
-/*#region About us*/
 
 /* HEADER */
 
@@ -811,24 +818,69 @@ section.aboutUs_history img {
     margin-top: 3em;
     display: inline-block;
     text-align: center;
-    padding-bottom: 3em;
+    padding-bottom: 1em;
     background-color: #dfdfdf;
     width: 100%;
 }
 
 #aboutUs_ourNums h2 {
     margin-top: 1em;
-    margin-bottom: 1em;
+    margin-bottom: 3em;
+    padding-bottom: 2em;
 }
 
-#aboutUs_ourNums img {
-    margin-top: 1.5em;
-    object-fit: contain;
+#aboutUs_ourNums > dl dt {
+    position: relative;
+    font-weight: 450;
+    font-size: 1.3em;
+}
+
+#aboutUs_ourNums > dl dt::before {
+    content: "";
+    position: absolute;
+    top: -3.5em;
+    left: 50%;
+    transform: translateX(-50%);
     width: 3em;
+    height: 3em;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
 }
 
-#aboutUs_ourNums p {
-    margin: 0 1em 0;
+#aboutUs_ourNums > dl dd {
+    font-weight: 350;
+    margin: 0.5em 0 7em;
+    font-size: 1.15em;
+    padding: 0 1.5em;
+}
+
+#aboutUs_ourNums dd.aboutUs_warranty {
+    margin-bottom: 3em;
+}
+
+#aboutUs_ourNums dt.aboutUs_soldCars::before {
+    background-image: url("../img/Icons/car/icons8-auto-sf-black-filled-96.png");
+}
+
+#aboutUs_ourNums dt.aboutUs_custSat::before {
+    background-image: url("../img/Icons/star/star.png");
+}
+
+#aboutUs_ourNums dt.aboutUs_yearsExp::before {
+    background-image: url("../img/Icons/exp/icons8-experience-parzival’-1997-detailed-outline-96.png");
+}
+
+#aboutUs_ourNums dt.aboutUs_savedEmiss::before {
+    background-image: url("../img/Icons/co2/icons8-riduzione-della-co2-ios-17-filled-96.png");
+}
+
+#aboutUs_ourNums dt.aboutUs_testDrives::before {
+    background-image: url("../img/Icons/wheel/icons8-volante-glyph-neue-96.png");
+}
+
+#aboutUs_ourNums dt.aboutUs_warranty::before {
+    background-image: url("../img/Icons/warranty/icons8-garanzia-color-96.png");
 }
 
 /* ---- LOCATION ---- */
@@ -899,13 +951,10 @@ section.aboutUs_history img {
 
 /*#endregion About us*/
 
-
-
+/*#region Listino*/
 /******************* 
     LISTINO
 ********************/
-
-/*#region Listino*/
 
 #list_main {
     background-image: none;    /* Immagine di sfondo eventualmente */
@@ -917,7 +966,6 @@ section.aboutUs_history img {
     text-align: center;
     margin: 1em;
 }
-
 
 /* FILTRO */
 
@@ -932,7 +980,6 @@ section.aboutUs_history img {
     box-shadow: rgba(115, 115, 115, 0.35) 0px 5px 15px;
     width: fit-content;
  }
-
 
 /* Header con titolo e pulsante */
 #list_filter_header {
@@ -956,7 +1003,6 @@ section.aboutUs_history img {
     margin: 1em;
     transition: transform 0.3s ease-out;
 }
-
 
 /* Checkbox nascosto */
 .list_toggle_input {
@@ -985,11 +1031,9 @@ section.aboutUs_history img {
     margin: 1em 0;
 }
 
-
 #list_filter #list_filter_preferences {
     flex-wrap: nowrap;
 }
-
 
 #list_filter fieldset {
     padding: 0 0.5em;
@@ -1014,7 +1058,6 @@ section.aboutUs_history img {
 #list_filter .input-container {
     position: relative;
 }
-
 
 #list_filter label {
     background-color: var(--form-bg-color);
@@ -1101,9 +1144,7 @@ section.aboutUs_history img {
     font-size: 100%;
 }
 
-
 /*
-
 PER METTERE IL PLACEHOLDER DI COLORE GRIGIO NEI SELECT
 
 
@@ -1135,8 +1176,6 @@ document.querySelectorAll('#list_filter .list_insert').forEach(select => {
 });
 
 */
-
-
 
 #list_filter #list_filter_buttons {
     display: flex;
@@ -1204,7 +1243,13 @@ document.querySelectorAll('#list_filter .list_insert').forEach(select => {
 
 .list_car_item .list_car_item_link {
     position: relative;
-    margin-top: 5em;
+        left: 6.5em;
+        bottom: 0.5em;
+        margin: 3em auto 0;
+        background-color: black;
+        border: 1px solid white;
+        padding: 0.7em;
+        border-radius: 1.5em;
 }
 
 .list_car_item .list_car_image {
@@ -1239,7 +1284,6 @@ document.querySelectorAll('#list_filter .list_insert').forEach(select => {
     transform: scale(1.05); /* Ingrandisce l'immagine */
 }
 
-
 .list_car_item .list_car_info {
     flex: 1; /* Occupa lo spazio rimanente */
     padding: 0.5em;
@@ -1258,13 +1302,10 @@ document.querySelectorAll('#list_filter .list_insert').forEach(select => {
 
 /*#endregion Listino*/
 
-
 /*#region Auto*/
-
 /******************* 
         AUTO
 ********************/
-
 
 #details {
     margin-top: 8em;
@@ -1345,10 +1386,7 @@ document.querySelectorAll('#list_filter .list_insert').forEach(select => {
 
 /*#endregion Auto*/
 
-
-
 /*#region Home*/
-
 /******************* 
         HOME
 ********************/
@@ -1797,7 +1835,6 @@ document.querySelectorAll('#list_filter .list_insert').forEach(select => {
     margin-top: -0.5em; 
 }
 
-
 /*tabella prenotazioni*/
 
 .tabellaPrenUtente {
@@ -1816,7 +1853,6 @@ document.querySelectorAll('#list_filter .list_insert').forEach(select => {
     padding: 0.4em;
     border: 1px solid var(--form-border-input-color);
 }
-
 
 .tabellaPrenUtente date{
     display: block;
@@ -1881,9 +1917,7 @@ document.querySelectorAll('#list_filter .list_insert').forEach(select => {
 
 /*#endregion Utente*/
 
-
 /*#region Amministratore*/
-
 /******************* 
     AMMINISTRATORE  
 ********************/
@@ -1947,7 +1981,6 @@ document.querySelectorAll('#list_filter .list_insert').forEach(select => {
     padding-top: 1em;
 }
 
-
 .tabellaPrenAdmin {
     width: 100%;
     border-collapse: collapse;
@@ -1965,11 +1998,9 @@ document.querySelectorAll('#list_filter .list_insert').forEach(select => {
     border: 1px solid var(--form-border-input-color);
 }
 
-
 .tabellaPrenAdmin date{
     display: block;
 }
-
 
 /*Gestione prenotazione*/
 
@@ -1997,7 +2028,6 @@ document.querySelectorAll('#list_filter .list_insert').forEach(select => {
 
 }
 
-
 #inviaAzioneAdmin{
     display: flex;
     margin: auto;
@@ -2015,7 +2045,6 @@ document.querySelectorAll('#list_filter .list_insert').forEach(select => {
     background-color: white;
     color: black;
 }
-
 
 /*Aggiungi Automobile*/
 
@@ -2067,7 +2096,6 @@ document.querySelectorAll('#list_filter .list_insert').forEach(select => {
     color: black;
 }
 
-
 /*Elimina Auto*/
 
 #labelEliminaAutoAdmin{
@@ -2093,7 +2121,6 @@ document.querySelectorAll('#list_filter .list_insert').forEach(select => {
     color: white; 
 }
 
-
 #eliminaButtonAdmin{
     display: flex;
     margin: auto;
@@ -2114,7 +2141,6 @@ document.querySelectorAll('#list_filter .list_insert').forEach(select => {
 }
 
 /*#endregion Amministratore*/
-
 
 /* FOOTER */
 
