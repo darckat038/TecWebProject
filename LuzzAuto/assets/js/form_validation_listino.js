@@ -61,6 +61,73 @@ function validateModello() {
 }
 
 /*
+* Controllo l'anno del veicolo
+*/
+function validateAnno() {
+	const allowedChars = /^(\d{4})?$/; // solo numeri, 4 cifre
+
+	var anno = document.getElementById("list_filter_anno").value;
+
+	return allowedChars.test(anno) && (anno >= 1990 && anno <= 2024); ;
+}
+
+/*
+* Controllo il colore del veicolo
+*/
+function validateColore() {
+	const allowedChars = /^([A-Za-z]+( [A-Za-z]+)*)?$/; // lettere maiuscole e minuscole
+
+	var colore = document.getElementById("list_filter_colore").value;
+
+	return allowedChars.test(colore);
+}
+
+/*
+* Controllo il tipo di alimentazione del veicolo
+*/
+function validateAlimentazione() {
+	const allowedChars = /^([A-Za-z]+( [A-Za-z]+)*)?$/; // lettere maiuscole e minuscole
+
+	var alimentazione = document.getElementById("list_filter_alimentazione").value;
+
+	return allowedChars.test(alimentazione);
+}
+
+/*
+* Controllo il tipo di cambio del veicolo
+*/
+function validateCambio() {
+	const allowedChars = /^([A-Za-z]+( [A-Za-z]+)*)?$/; // lettere maiuscole e minuscole
+
+	var cambio = document.getElementById("list_filter_cambio").value;
+
+	return allowedChars.test(cambio);
+}
+
+/*
+* Controllo il tipo di trazione del veicolo
+*/
+function validateTrazione() {
+	const allowedChars = /^([A-Za-z]+( [A-Za-z]+)*)?$/; // lettere maiuscole e minuscole
+
+	var trazione = document.getElementById("list_filter_trazione").value;
+
+	return allowedChars.test(trazione);
+}
+
+/*
+* Controllo la potenza minima del veicolo
+*/
+function validatePotenzaMin() {
+	const allowedChars = /^(\d+)?$/; // solo numeri
+
+	var potenzaMin = document.getElementById("list_filter_potenzaMin").value;
+	var potenzaMax = document.getElementById("list_filter_potenzaMax").value;
+
+	return allowedChars.test(potenzaMin) && (potenzaMax ? potenzaMin <= potenzaMax : true);
+}
+
+/*
 * Controllo il modello del veicolo
 */
 function validateCondizione() {
