@@ -19,7 +19,7 @@
 - [x] I BOTTONI FUORI DAI FORM DEVONO AVERE DISTINTI IN VISITATI E NON VISITATI
 
 ## vale anche per i riquadri tipo i veicoli in listino?
-- [ ] METTERE LINK SOTTO CHE TI MANDA AL DETTAGLIO DELL'AUTO
+- [x] METTERE LINK SOTTO CHE TI MANDA AL DETTAGLIO DELL'AUTO
 
 ## Devo controllare htmlspecialchars della password o non serve perchè non sarà mai visualizzata in chiaro?
 - [x] NO
@@ -52,6 +52,6 @@
 - [x] SI
 
 ## IL COLORE DEI LINK VISITATI DEVE ESSERE MANTENUTO ANCHE IN CASO DI HOVER? (VEDI TEST DRIVE)
-- [x]PROBABILMENTE SI
+- [x] PROBABILMENTE SI
 
 - [ ] # !DOCUMENTARE TUTTE LE COSE CHE PUO' FARE L'UTENTE

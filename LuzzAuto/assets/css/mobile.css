@@ -1216,22 +1216,22 @@ document.querySelectorAll('#list_filter .list_insert').forEach(select => {
 }
 
 .list_car_item {
-    width: 15em; /* Larghezza fissa */
-    height: 30em; /* Altezza fissa */
-    background-color: white; /* Sfondo bianco */
-    color: black; /* Testo nero */
-    border: 1px solid black; /* Bordo sottile nero */
-    border-radius: 0; /* Angoli a 90 gradi */
-    box-sizing: border-box; /* Include il bordo nella larghezza/altezza */
-    padding: 0.5em; /* Spaziatura interna */
-    overflow: hidden; /* Evita fuoriuscite */
-    transition:  /* Effetto di transizione */
+    width: 15em;
+    height: 32em;
+    background-color: white;
+    color: black;
+    border: 1px solid black;
+    border-radius: 0;
+    box-sizing: border-box;
+    padding: 1em;
+    overflow: hidden;
+    transition: /* Effetto di transizione */ 
         background-color 0.3s ease, 
         border-radius 0.3s ease;
-    display: flex; /* Disposizione orizzontale delle colonne */
+    display: flex;
     flex-direction: column;
-    justify-content: center;
     align-items: center;
+    position: relative;
 }
 
 .list_car_item:hover {
@@ -1242,14 +1242,13 @@ document.querySelectorAll('#list_filter .list_insert').forEach(select => {
 }
 
 .list_car_item .list_car_item_link {
-    position: relative;
-        left: 6.5em;
-        bottom: 0.5em;
-        margin: 3em auto 0;
-        background-color: black;
-        border: 1px solid white;
-        padding: 0.7em;
-        border-radius: 1.5em;
+    position: absolute;
+    left: 6.5em;
+    bottom: 0.5em;
+    background-color: black;
+    border: 1px solid white;
+    padding: 0.7em;
+    border-radius: 1em;
 }
 
 .list_car_item .list_car_image {
@@ -1336,6 +1335,10 @@ document.querySelectorAll('#list_filter .list_insert').forEach(select => {
     border-radius: 1em;
 }
 
+#details #details_box p {
+    display: none;
+}
+
 #details #details_box #details_box_info {
     margin: 1em;
 }
@@ -1376,12 +1379,14 @@ document.querySelectorAll('#list_filter .list_insert').forEach(select => {
     margin: 0.2em;
     align-self: center;
     text-align: center;
-    text-decoration: none;
-    color: white;
 }
 
 #details #details_buttons .list_button:hover {
     color: black;
+}
+
+#details #details_buttons .list_button:visited {
+    color: var(--visited-link);
 }
 
 /*#endregion Auto*/

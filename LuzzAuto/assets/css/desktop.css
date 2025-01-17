@@ -1303,6 +1303,7 @@ p.list_car_list_empty {
         background-color 0.3s ease,
         border-radius 0.3s ease;
     display: flex; /* Disposizione orizzontale delle colonne */
+    position: relative;
 }
 
 .list_car_item:hover {
@@ -1312,14 +1313,13 @@ p.list_car_list_empty {
 }
 
 .list_car_item .list_car_item_link {
-    position: relative;
-        left: 9.5em;
-        bottom: 0.5em;
-        margin: 3em auto 0;
-        background-color: black;
-        border: 1px solid white;
-        padding: 0.7em;
-        border-radius: 1.5em;
+    position: absolute;
+    right: 0.5em;
+    bottom: 0.5em;
+    background-color: black;
+    border: 1px solid white;
+    padding: 0.7em;
+    border-radius: 1em;
 }
 
 .list_car_item .list_car_image {
@@ -1403,6 +1403,10 @@ p.list_car_list_empty {
     background-color: white;
 }
 
+#details #details_box p {
+    text-align: center;
+}
+
 #details #details_box #details_box_info {
     margin-top: 1em;
 }
@@ -1444,12 +1448,14 @@ p.list_car_list_empty {
     margin: 0.2em;
     align-self: center;
     text-align: center;
-    text-decoration: none;
-    color: white;
 }
 
 #details #details_buttons .list_button:hover {
     color: black;
+}
+
+#details #details_buttons .list_button:visited {
+    color: var(--visited-link);
 }
 
 /*#endregion Auto*/
