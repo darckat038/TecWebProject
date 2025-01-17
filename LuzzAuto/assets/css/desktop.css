@@ -1315,7 +1315,6 @@ p.list_car_list_empty {
     position: relative;
         left: 9.5em;
         bottom: 0.5em;
-        margin: 3em auto 0;
         background-color: black;
         border: 1px solid white;
         padding: 0.7em;
@@ -1401,6 +1400,10 @@ p.list_car_list_empty {
     transform: scale(4);
     border-radius: 0.1em;
     background-color: white;
+}
+
+#details #details_box p {
+    text-align: center;
 }
 
 #details #details_box #details_box_info {

@@ -1245,7 +1245,6 @@ document.querySelectorAll('#list_filter .list_insert').forEach(select => {
     position: relative;
         left: 6.5em;
         bottom: 0.5em;
-        margin: 3em auto 0;
         background-color: black;
         border: 1px solid white;
         padding: 0.7em;
@@ -1334,6 +1333,10 @@ document.querySelectorAll('#list_filter .list_insert').forEach(select => {
 #details #details_box #details_box_carousel img {
     max-width: 20em;
     border-radius: 1em;
+}
+
+#details #details_box p {
+    display: none;
 }
 
 #details #details_box #details_box_info {
