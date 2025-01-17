@@ -504,6 +504,10 @@ input[type="date"]::-webkit-calendar-picker-indicator {
     background-color: var(--form-text-color);
     color: var(--form-bg-color);
 }
+#test_drive_prenotaAnchor:hover:visited{
+    background-color: var(--form-text-color);
+    color: var(--visited-link);
+}
 
 
 #test_drive_main {
@@ -597,9 +601,9 @@ input[type="date"]::-webkit-calendar-picker-indicator {
     color: var(--form-text-color);
     border-radius: 2em 0 2em 0;
     width: 80%;
-    padding-bottom: 6em;
     margin-bottom: 4em;
     box-shadow: rgba(17, 17, 26, 0.1) 0px 1px 0px, rgba(17, 17, 26, 0.1) 0px 8px 24px, rgba(17, 17, 26, 0.1) 0px 16px 48px;
+    padding-bottom: 3em;
 }
 
 #test_drive_prenota > h3{
@@ -695,6 +699,10 @@ input[type="datetime-local"]::-webkit-calendar-picker-indicator {
 #test_drive_prenota > a:hover{
     background-color: var(--form-text-color);
     color: var(--form-bg-color);
+}
+#test_drive_prenota > a:hover:visited{
+    background-color: var(--form-text-color);
+    color: var(--visited-link);
 }
 
 /*#endregion TestDrive*/
