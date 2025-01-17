@@ -19,7 +19,7 @@
 - [x] I BOTTONI FUORI DAI FORM DEVONO AVERE DISTINTI IN VISITATI E NON VISITATI
 
 ## vale anche per i riquadri tipo i veicoli in listino?
-- [ ] METTERE LINK SOTTO CHE TI MANDA AL DETTAGLIO DELL'AUTO
+- [x] METTERE LINK SOTTO CHE TI MANDA AL DETTAGLIO DELL'AUTO
 
 ## Devo controllare htmlspecialchars della password o non serve perchè non sarà mai visualizzata in chiaro?
 - [x] NO
