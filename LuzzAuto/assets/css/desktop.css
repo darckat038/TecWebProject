@@ -101,6 +101,7 @@ h1.hide{
     border-radius: 1em;
     padding: 0.4em 0.6em;
 }
+
 /******************* 
      BREADCRUMB
 ********************/
@@ -228,21 +229,21 @@ select option {
     margin-top: 1em;
     color: var(--form-success-text-color);
 }
+
 .form_success a{
     color: var(--not-visited-link);
     text-underline-offset: 0.3em;
 }
+
 .form_success a:visited{
     color: var(--visited-link);
     text-underline-offset: 0.3em;
 }
 
-
+/*#region Login*/
 /******************* 
         LOGIN
 ********************/
-
-/*#region Login*/
 
 #login_body{
     background-image: url(../img/Background/Luzzauto/LuzzAuto_facciata1.png);
@@ -333,11 +334,10 @@ select option {
 
 /*#endregion Login*/
 
+/*#region SignIn*/
 /******************* 
         SIGNIN
 ********************/
-
-/*#region SignIn*/
 
 #signup_body{
     background-image: url(../img/Background/Luzzauto/LuzzAuto_facciata1.png);
@@ -454,16 +454,12 @@ input[type="date"]::-webkit-calendar-picker-indicator {
     color: var(--form-bg-color);
 }
 
-
-
-
 /*#endregion SignIn*/
 
+/*#region TestDrive*/
 /******************* 
      TEST DRIVE
 ********************/
-
-/*#region TestDrive*/
 
 #test_drive_header {
     background-color: var(--navbar-bg-color);
@@ -479,17 +475,20 @@ input[type="date"]::-webkit-calendar-picker-indicator {
     width: 100%;
     color: white;
 }
+
 #test_drive_header h1{
     font-size: 8em;
     margin-top: -0.5em;
     margin-bottom: 0.5em;
     margin-left: 10%;
 }
+
 #test_drive_header p {
     font-size: 1.7em;
     margin-left: 10%;
     margin-bottom: 1.5em;
 }
+
 #test_drive_prenotaAnchor{
     background-color: var(--form-bg-color);
     border: 1px solid white;
@@ -500,15 +499,16 @@ input[type="date"]::-webkit-calendar-picker-indicator {
     font-family: "Lexend", Roboto, sans-serif;
     margin-left: 10%;
 }
+
 #test_drive_prenotaAnchor:hover{
     background-color: var(--form-text-color);
     color: var(--form-bg-color);
 }
+
 #test_drive_prenotaAnchor:hover:visited{
     background-color: var(--form-text-color);
     color: var(--visited-link);
 }
-
 
 #test_drive_main {
     display: flex;
@@ -516,13 +516,16 @@ input[type="date"]::-webkit-calendar-picker-indicator {
     align-items: center;
     width: 100%;
 }
+
 #test_drive_main section{
     margin-top: 5em;
 }
+
 #test_drive_main p {
     font-size: 1.15em;
     font-weight: 300;
 }
+
 #test_drive_main > section > h3 {
     font-size: 1.5em;
     font-weight: 500;
@@ -541,7 +544,6 @@ input[type="date"]::-webkit-calendar-picker-indicator {
     text-align: center;
 }
 
-
 #test_drive_comefunziona{
     background-color: var(--cards-bg-color);
     color: var(--cards-text-color);
@@ -551,23 +553,25 @@ input[type="date"]::-webkit-calendar-picker-indicator {
     text-align: center;
     width: 60%;
 }
+
 #test_drive_comefunziona > h3{
     margin-bottom: 1.5em;
 }
+
 #test_drive_comefunziona dl{
     margin: 0 30%;
 }
+
 #test_drive_comefunziona dl dt{
     font-size: 1.2em;
     font-weight: 450;
     margin-top: 2em;
 }
+
 #test_drive_comefunziona dl dd{
     font-size: 1em;
     font-weight: 300;
 }
-
-
 
 #test_drive_consulenti{
     text-align: center;
@@ -592,8 +596,6 @@ input[type="date"]::-webkit-calendar-picker-indicator {
     font-size: 1.15em;
     font-weight: 300;
 }
-
-
 
 #test_drive_prenota{
     text-align: center;
@@ -684,9 +686,6 @@ input[type="datetime-local"]::-webkit-calendar-picker-indicator {
     margin-top: 8.2em;
 }
 
-
-
-
 #test_drive_prenota > a{
     background-color: var(--form-bg-color);
     border: 1px solid white;
@@ -707,11 +706,10 @@ input[type="datetime-local"]::-webkit-calendar-picker-indicator {
 
 /*#endregion TestDrive*/
 
+/*#region About us*/
 /*******************
         ABOUT US
 ********************/
-
-/*#region About us*/
 
 /* HEADER */
 
@@ -1047,12 +1045,10 @@ section.aboutUs_history p {
 
 /*#endregion About us*/
 
-
+/*#region Listino*/
 /******************* 
     LISTINO
 ********************/
-
-/*#region Listino*/
 
 #list_main {
     background-image: none;    /* Immagine di sfondo eventualmente */
@@ -1067,13 +1063,11 @@ section.aboutUs_history p {
     margin: 1em;
 }
 
-
 /* FILTRO */
 
 #list_filter {
     background-color: var(--form-bg-color);
     color: var(--form-text-color);
-    
     margin: 8em auto 0;
     padding: 2%;
     border-radius: 1em;
@@ -1094,11 +1088,9 @@ section.aboutUs_history p {
     margin: 1em 0;
 }
 
-
 #list_filter #list_filter_preferences {
     flex-wrap: nowrap;
 }
-
 
 #list_filter fieldset {
     padding: 0 0.5em;
@@ -1123,7 +1115,6 @@ section.aboutUs_history p {
 #list_filter .input-container {
     position: relative;
 }
-
 
 #list_filter label {
     background-color: var(--form-bg-color);
@@ -1162,7 +1153,6 @@ section.aboutUs_history p {
     box-sizing: border-box;
 }
 
-
 #list_filter #list_filter_potenza,
 #list_filter #list_filter_peso {
     padding: 0;
@@ -1178,7 +1168,6 @@ section.aboutUs_history p {
     width: 13em;
     margin-top: 2em;
 }
-
 
 #list_filter #list_filter_neopatentati .interruttore {
     position: relative;
@@ -1212,15 +1201,12 @@ section.aboutUs_history p {
     font-size: 100%;
 }
 
-
 /*
-
 #list_filter .list_insert .placeholder {
     color: var(--form-bg-color);
 }
 
 PER METTERE IL PLACEHOLDER DI COLORE GRIGIO NEI SELECT
-
 
 #list_filter .list_insert option[selected],
 #list_filter .list_insert:focus option[selected],
@@ -1331,13 +1317,11 @@ p.list_car_list_empty {
 
 .list_car_item .list_car_image {
     flex: 0 0 23em; /* Larghezza fissa della colonna immagine */
-    
     overflow: hidden; /* Evita fuoriuscite */
     border-radius: 0; /* Angoli a 90 gradi */
     transition:  /* Effetto di transizione */
         border-radius 0.3s ease,
         transform 10s ease;
-
     text-align: center;     /* Centra il testo alt */
 }
 
@@ -1358,7 +1342,6 @@ p.list_car_list_empty {
     transform: scale(1.05); /* Ingrandisce l'immagine */
 }
 
-
 .list_car_item .list_car_info {
     flex: 1; /* Occupa lo spazio rimanente */
     padding: 1em;
@@ -1377,13 +1360,10 @@ p.list_car_list_empty {
 
 /*#endregion Listino*/
 
-
 /*#region Auto*/
-
 /******************* 
         AUTO
 ********************/
-
 
 #details {
     margin: 8em auto auto auto;
@@ -1467,9 +1447,7 @@ p.list_car_list_empty {
 
 /*#endregion Auto*/
 
-
 /*#region Home*/
-
 /******************* 
         HOME
 ********************/
@@ -1933,9 +1911,7 @@ p.list_car_list_empty {
 
 /*#endregion Home*/
 
-
 /*#region Utente*/
-
 /******************* 
         UTENTE
 ********************/
@@ -1946,7 +1922,6 @@ p.list_car_list_empty {
     background-color: white;
     background-size:cover;
 }
-
 
 .utente_content{
     background-color: var(--navbar-bg-color);
@@ -1995,7 +1970,6 @@ p.list_car_list_empty {
     color: var(--form-border-input-color);
 }
 
-
 #userImage{
     background-image: url(../img/ImmagineUtente/ImmagineUtente.svg);
     float: right; 
@@ -2031,7 +2005,6 @@ p.list_car_list_empty {
     border: 1px solid var(--form-border-input-color);
 }
 
-
 .tabellaPrenUtente date{
     display: block;
 }
@@ -2053,8 +2026,6 @@ p.list_car_list_empty {
 #rifiutatoUtente{
     color: red;
 }
-
-
 
 /*gestione prenotazioni*/
 
@@ -2100,13 +2071,9 @@ p.list_car_list_empty {
     color: black;
 }
 
-
 /*#endregion Utente*/
 
-
-
 /*#region Amministratore*/
-
 /******************* 
     AMMINISTRATORE  
 ********************/
@@ -2117,7 +2084,6 @@ p.list_car_list_empty {
     background-color: white;
     background-size:cover;
 }
-
 
 .admin_content{
     background-color: var(--navbar-bg-color);
@@ -2133,7 +2099,6 @@ p.list_car_list_empty {
     text-align: center;
 }
 
-
 .riquadriAdmin{ 
     border-radius: 0.5em;
     border: 1px solid var(--form-border-input-color);
@@ -2147,7 +2112,6 @@ p.list_car_list_empty {
     padding: 2em; 
 }
 
-
 .nomeRiqAdmin{
     background-color: var(--navbar-bg-color);
     margin-left: 1em;
@@ -2157,14 +2121,11 @@ p.list_car_list_empty {
     color: var(--form-border-input-color);
 }
     
-
 .nomeRiqPrenAdmin{
     color: var(--form-border-input-color);
     padding-left: 3em;
     padding-top: 1em;
 }
-    
-
 
 /* tabella prenotazione */
 .tabellaPrenAdmin {
@@ -2211,9 +2172,7 @@ p.list_car_list_empty {
     cursor: pointer;
     margin-top: 2em;
     color: white;
-
 }
-
 
 #inviaAzioneAdmin{
     display: flex;
@@ -2232,7 +2191,6 @@ p.list_car_list_empty {
     background-color: white;
     color: black;
 }
-
 
 /*Aggiungi Automobile*/
 
@@ -2284,7 +2242,6 @@ p.list_car_list_empty {
     color: black;
 }
 
-
 /*Elimina Auto*/
 
 #labelEliminaAutoAdmin{
@@ -2309,7 +2266,6 @@ p.list_car_list_empty {
     cursor: pointer;
     color: white; 
 }
-
 
 #eliminaButtonAdmin{
     display: flex;
