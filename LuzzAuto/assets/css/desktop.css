@@ -897,6 +897,7 @@ section.aboutUs_history p {
 #aboutUs_ourNums > dl dd {
     margin-top: 1.5em;
     font-size: 1.3em;
+    font-weight: 350;
 }
 
 #aboutUs_ourNums .aboutUs_soldCars {
