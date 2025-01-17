@@ -13,7 +13,7 @@
 
     --link-bg-color: #000000;
     --not-visited-link: #ffffff;
-    --visited-link: #999afc;
+    --visited-link: #5f62fc;
 
     --button-bg-color: #2f2ecc;
     --button-text-color: #ffffff;
@@ -48,15 +48,6 @@ body.purple {
 html, body {
     width: 100%;
     height: 100%;
-}
-
-body{
-    background-color: var(--bg-color);
-    color: var(--text-color);
-    font-size: 100%;
-    font-family: "Lexend", Roboto, sans-serif;
-    line-height: 1.5em;
-    align-content: center;
 }
 
 a{
@@ -302,8 +293,6 @@ h1.hide{
 body {
     background-color: var(--bg-color);
     color: var(--text-color);
-    display: flex;
-    flex-direction: column;
     font-size: 100%;
     font-family: "Lexend", Roboto, sans-serif;
     line-height: 1.5em;
@@ -535,6 +524,10 @@ input[type="date"]::-webkit-calendar-picker-indicator {
     background-color: var(--form-text-color);
     color: var(--form-bg-color);
 }
+#test_drive_prenotaAnchor:hover:visited{
+    background-color: var(--form-text-color);
+    color: var(--visited-link);
+}
 
 
 #test_drive_main {
@@ -632,6 +625,7 @@ input[type="date"]::-webkit-calendar-picker-indicator {
     width: 90%;
     margin-bottom: 4em;
     box-shadow: rgba(17, 17, 26, 0.1) 0px 1px 0px, rgba(17, 17, 26, 0.1) 0px 8px 24px, rgba(17, 17, 26, 0.1) 0px 16px 48px;
+    padding-bottom: 3em;
 }
 
 #test_drive_prenota > h3{
@@ -711,6 +705,10 @@ input[type="datetime-local"]::-webkit-calendar-picker-indicator {
 #test_drive_prenota > a:hover{
     background-color: var(--form-text-color);
     color: var(--form-bg-color);
+}
+#test_drive_prenota > a:hover:visited{
+    background-color: var(--form-text-color);
+    color: var(--visited-link);
 }
 
 /*#endregion TestDrive*/
@@ -910,7 +908,7 @@ section.aboutUs_history img {
 /*#region Listino*/
 
 #list_main {
-    background-image: white;    /* Immagine di sfondo eventualmente */
+    background-image: none;    /* Immagine di sfondo eventualmente */
 }
 
 .list_sectionTitle {
@@ -982,11 +980,6 @@ section.aboutUs_history img {
 .list_toggle_input:checked ~ #list_filter_header #list_toggle_button {
     transform: rotate(180deg);
 }
-
-
-
-
-
 
 #list_filter form {
     margin: 1em 0;
@@ -1303,9 +1296,6 @@ document.querySelectorAll('#list_filter .list_insert').forEach(select => {
 }
 
 #details #details_box #details_box_info {
-    display: flex;
-    flex-direction: column;
-    gap: 1em;
     margin: 1em;
 }
 

@@ -16,7 +16,7 @@
 - [ ] L'AMMINISTRATORE NEL CAMPO DESCRIZIONE INSERISCE ALT CHE DEVE ESSERE DI MAX 100 CARATTERI
 
 ## I bottoni devono avere comunque il formato link (testo sottolineato ecc)?
-- [ ] I BOTTONI FUORI DAI FORM DEVONO AVERE DISTINTI IN VISITATI E NON VISITATI
+- [x] I BOTTONI FUORI DAI FORM DEVONO AVERE DISTINTI IN VISITATI E NON VISITATI
 
 ## vale anche per i riquadri tipo i veicoli in listino?
 - [ ] METTERE LINK SOTTO CHE TI MANDA AL DETTAGLIO DELL'AUTO
@@ -34,10 +34,10 @@
 - [x] NO
 
 ## Come font con le grazie va bene uno qualunque?
-- [ ] SI
+- [x] SI
 
 ## Per dei salvataggi di valori poco importanti va bene usare i cookies o quando possibile usare la sessione?
-- [ ] SI VA BENE COOKIES
+- [x] SI VA BENE COOKIES
 
 ## nome auto in index sezione ultimi arrivi
 - [x] METTERE SFONDO NERO TESTO BIANCO E IL NOME DELA MACCHINA COME LINK - (Impostati utilizzando id attuali del DB, da cambiare eventualmente)
@@ -52,6 +52,6 @@
 - [x] SI
 
 ## IL COLORE DEI LINK VISITATI DEVE ESSERE MANTENUTO ANCHE IN CASO DI HOVER? (VEDI TEST DRIVE)
-- [ ]PROBABILMENTE SI
+- [x]PROBABILMENTE SI
 
 - [ ] # !DOCUMENTARE TUTTE LE COSE CHE PUO' FARE L'UTENTE
