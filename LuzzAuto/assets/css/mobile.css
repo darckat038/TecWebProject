@@ -50,15 +50,6 @@ html, body {
     height: 100%;
 }
 
-body{
-    background-color: var(--bg-color);
-    color: var(--text-color);
-    font-size: 100%;
-    font-family: "Lexend", Roboto, sans-serif;
-    line-height: 1.5em;
-    align-content: center;
-}
-
 a{
     color: var(--not-visited-link);
     text-underline-offset: 0.3em;
@@ -302,8 +293,6 @@ h1.hide{
 body {
     background-color: var(--bg-color);
     color: var(--text-color);
-    display: flex;
-    flex-direction: column;
     font-size: 100%;
     font-family: "Lexend", Roboto, sans-serif;
     line-height: 1.5em;
@@ -919,7 +908,7 @@ section.aboutUs_history img {
 /*#region Listino*/
 
 #list_main {
-    background-image: white;    /* Immagine di sfondo eventualmente */
+    background-image: none;    /* Immagine di sfondo eventualmente */
 }
 
 .list_sectionTitle {
@@ -991,11 +980,6 @@ section.aboutUs_history img {
 .list_toggle_input:checked ~ #list_filter_header #list_toggle_button {
     transform: rotate(180deg);
 }
-
-
-
-
-
 
 #list_filter form {
     margin: 1em 0;
@@ -1312,9 +1296,6 @@ document.querySelectorAll('#list_filter .list_insert').forEach(select => {
 }
 
 #details #details_box #details_box_info {
-    display: flex;
-    flex-direction: column;
-    gap: 1em;
     margin: 1em;
 }
 
