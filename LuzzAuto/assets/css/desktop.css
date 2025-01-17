@@ -1022,9 +1022,6 @@ section.aboutUs_history p {
 #list_main {
     background-image: none;    /* Immagine di sfondo eventualmente */
     background-color: white;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
     width: 100%;
 }
 
@@ -1226,7 +1223,6 @@ document.querySelectorAll('#list_filter .list_insert').forEach(select => {
 }
 
 .list_button {
-    display: flex;
     margin: 3em auto 0;
     color: var(--form-text-color);
     background-color: var(--form-bg-color);
