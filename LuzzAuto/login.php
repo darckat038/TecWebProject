@@ -47,16 +47,24 @@ if(isset($_POST["username"]) && isset($_POST["password"])){
 			}
 			else{
 				if($ris == 1){
-					$_SESSION['utente'] = $_POST["username"];
-                    //CONTROLLO BACK TO ORIGIN PER TORNARE ALLA PAGINA DI PROVENIENZA
-                    if(isset($_COOKIE['backToOrigin'])){
-                        header("location: " . $_COOKIE['backToOrigin']);
-                        setcookie("backToOrigin", "", time() - 3600, "/");
-                    }
-                    else{
-                        header("location: utente.php");
-                    }
-					
+					if($_POST["username"] == "admin"){
+						$_SESSION['utente'] = $_POST["username"];
+						if(isset($_COOKIE['backToOrigin'])){
+							setcookie("backToOrigin", "", time() - 3600, "/");
+						}
+						header("location: amministratore.php");
+					}
+					else{
+						$_SESSION['utente'] = $_POST["username"];
+						//CONTROLLO BACK TO ORIGIN PER TORNARE ALLA PAGINA DI PROVENIENZA
+						if(isset($_COOKIE['backToOrigin'])){
+							header("location: " . $_COOKIE['backToOrigin']);
+							setcookie("backToOrigin", "", time() - 3600, "/");
+						}
+						else{
+							header("location: utente.php");
+						}
+					}
 				}
 				else{
 					$err = $err . "<p><span lang='en-GB'>Password</span> errata.</p>";
