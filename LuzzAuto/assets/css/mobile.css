@@ -1296,9 +1296,6 @@ document.querySelectorAll('#list_filter .list_insert').forEach(select => {
 }
 
 #details #details_box #details_box_info {
-    display: flex;
-    flex-direction: column;
-    gap: 1em;
     margin: 1em;
 }
 
