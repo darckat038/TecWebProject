@@ -1243,7 +1243,13 @@ document.querySelectorAll('#list_filter .list_insert').forEach(select => {
 
 .list_car_item .list_car_item_link {
     position: relative;
-    margin-top: 5em;
+        left: 6.5em;
+        bottom: 0.5em;
+        margin: 3em auto 0;
+        background-color: black;
+        border: 1px solid white;
+        padding: 0.7em;
+        border-radius: 1.5em;
 }
 
 .list_car_item .list_car_image {
