@@ -23,11 +23,11 @@ function validateFastSearch() {
 		}
 		if(!validatePrezzo()) {
 			ok = false;
-			msg += "<p id=\"prezzoMax_err\">Prezzo non valido, inserisci un prezzo maggiore di 0.</p>";;
+			msg += "<p id=\"prezzoMax_err\">Prezzo non valido, inserisci un prezzo maggiore di 0.</p>";
 		}
 		if(!validateCondizione()) {
 			ok = false;
-			msg += "<p id=\"prezzoMax_err\">Prezzo non valido, inserisci un prezzo maggiore di 0.</p>";;
+			msg += "<p id=\"condizione_err\">Selezione condizione non valida. Selezionare nuovamente la scelta desiderata.</p>";
 		}
 		if(!ok) {
 			console.log("Prevenzione del submit, errore trovato.");
