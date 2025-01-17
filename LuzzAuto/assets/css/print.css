@@ -11,9 +11,68 @@
 	text-decoration: none;
 	color: black;
 	background-image: none;
-	break-before: auto;
+	break-before:avoid;
+	font-size: 1em;
 }
 
-#menu-button-container, #menu{
+#menu-button-container, #menu, form, #home_fastSearch, #list_filter{
     display: none;
+}
+
+body {
+    align-items: center;
+	text-align: center;
+	margin-top: 2cm;
+}
+
+a:after {
+	content: " [" attr(href) "]";
+}
+
+.topNavBar, #breadcrumb{
+	position: absolute;
+	top:0;
+	left: 0;
+}
+
+#breadcrumb{
+	margin-top: 1cm;
+}
+
+header{
+	margin-top: 8cm;
+	break-after: page;
+}
+
+img{
+	width: 25%;
+	display: block;
+	page-break-inside: avoid;
+	break-inside: avoid;
+	margin: 0 auto;
+}
+
+#aboutUs_reachUs, #list_car_list{
+	break-before: page;
+}
+
+#aboutUs_reachUs img{
+	width: 50%;
+}
+
+/*IMMAGINI INUTILI*/
+#home_clients_reviews img, #aboutUs_ourNums img{
+	display: none;
+}
+
+footer {
+    text-align: center;
+    padding: 1em 0;
+    width: 100%;
+	position: absolute;
+	bottom: 0;
+}
+
+footer  img{
+	width: 10%;
 }
