@@ -1507,25 +1507,28 @@ document.querySelectorAll('#list_filter .list_insert').forEach(select => {
     height: fit-content;
     padding: 0 0 1em;
     font-size: 100%;
-    background-color: white;
+    background-color: var(--content-text-bg-color);
 }
 
 #home_new div.home_car_item dt {
-    font-weight:450;
+    font-weight: 450;
     font-size: 1.3em;
-    margin: 0.5em 0;
+    padding: 0.5em 0 1em;
+    background-color: var(--navbar-bg-color);
+    color: var(--navbar-text-color);
 }
 
 #home_new div.home_car_item dd {
-    padding: 0 1em 1em;
+    padding: 0.7em 1em 1em;
     font-weight: 300;
     font-size: 1.1em;
+    background-color: var(--content-text-bg-color);
 }
 
 #home_new img {
     object-fit: cover;
     width: 100%;
-    border-radius: 0;
+    display: block;
 }
 
 /* ---- WORK WITH US ---- */
