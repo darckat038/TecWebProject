@@ -34,10 +34,10 @@
 - [x] NO
 
 ## Come font con le grazie va bene uno qualunque?
-- [ ] SI
+- [x] SI
 
 ## Per dei salvataggi di valori poco importanti va bene usare i cookies o quando possibile usare la sessione?
-- [ ] SI VA BENE COOKIES
+- [x] SI VA BENE COOKIES
 
 ## nome auto in index sezione ultimi arrivi
 - [x] METTERE SFONDO NERO TESTO BIANCO E IL NOME DELA MACCHINA COME LINK - (Impostati utilizzando id attuali del DB, da cambiare eventualmente)
