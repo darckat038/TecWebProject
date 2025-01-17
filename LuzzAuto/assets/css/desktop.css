@@ -1633,11 +1633,10 @@ p.list_car_list_empty {
     overflow: hidden;
     max-width: 25em;
     height: fit-content;
+    text-align: center;
     padding: 0 0 1em;
     font-size: 100%;
-    background-color: white;
-    /* background-color: var(--navbar-bg-color);
-    color: var(--navbar-text-color); */
+    background-color: var(--content-text-bg-color);
 }
 
 #home_new div.home_car_item:hover {
@@ -1655,19 +1654,20 @@ p.list_car_list_empty {
     font-size: 1.3em;
     padding: 0.5em 0 1em;
     background-color: var(--navbar-bg-color);
+    color: var(--navbar-text-color);
 }
 
 #home_new div.home_car_item dd {
     padding: 0.5em 1em 1em;
     font-weight: 300;
     font-size: 1.1em;
+    background-color: var(--content-text-bg-color);
 }
 
 #home_new img {
     object-fit: cover;
     width: 100%;
-    border-radius: 0;
-    margin-bottom: 0;
+    display: block;
 }
 
 /* ---- WORK WITH US ---- */
