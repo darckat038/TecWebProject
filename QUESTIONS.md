@@ -4,7 +4,7 @@
 - [x] SI E' POSSIBILE
 
 ## È possibile avere un dl con all'interno div che contengono h3 e p al posto di dt e dd?
-- [ ] NO, RIMUOVERE I DIV, AL POSTO DI h3 USARE I dt CON SFONDO ICONA (AGGIUSTATA CON PADDING DELL'h3 SIZE E POSITION) E AL POSTO DEI p USARE I dd.
+- [x] NO, RIMUOVERE I DIV, AL POSTO DI h3 USARE I dt CON SFONDO ICONA (AGGIUSTATA CON PADDING DELL'h3 SIZE E POSITION) E AL POSTO DEI p USARE I dd.
 
 ## Aggiunta e modifica auto in catalogo
 - [ ] NO MODIFICA
