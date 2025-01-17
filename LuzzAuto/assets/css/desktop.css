@@ -837,6 +837,7 @@ section.aboutUs_history p {
 
 #aboutUs_future {
     text-align: center;
+    margin-bottom: 4em;
 }
 
 #aboutUs_future p {
@@ -855,55 +856,90 @@ section.aboutUs_history p {
 
 #aboutUs_ourNums h2 {
     margin-bottom: 2em;
+    padding-bottom: 2em;
 }
 
 #aboutUs_ourNums > dl {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
-    gap: 5em;
+    column-gap: 4em;
+    row-gap: 12em;
     grid-template-areas: 
     "a b c"
     "d e f";
 }
 
-#aboutUs_ourNums img {
-    margin-top: 1.5em;
-    object-fit: contain;
-    width: 3em;
-}
-
-#aboutUs_ourNums > dl h3 {
+#aboutUs_ourNums > dl dt {
+    position: relative;
     font-size: 1.6em;
     font-weight: 450;
 }
 
-#aboutUs_ourNums > dl p {
-    margin-top: 0.7em;
+#aboutUs_ourNums > dl dt::before {
+    content: "";
+    position: absolute;
+    top: -4em;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 3em;
+    height: 3em;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
+    
+}
+
+#aboutUs_ourNums > dl dd {
+    margin-top: 1.5em;
     font-size: 1.3em;
 }
 
-#aboutUs_ourNums #aboutUs_soldCars {
+#aboutUs_ourNums .aboutUs_soldCars {
     grid-area: a;
 }
 
-#aboutUs_ourNums #aboutUs_custSat {
+#aboutUs_ourNums dt.aboutUs_soldCars::before {
+    background-image: url("../img/Icons/car/icons8-auto-sf-black-filled-96.png");
+}
+
+#aboutUs_ourNums .aboutUs_custSat {
     grid-area: b;
 }
 
-#aboutUs_ourNums #aboutUs_yearsExp {
+#aboutUs_ourNums dt.aboutUs_custSat::before {
+    background-image: url("../img/Icons/star/star.png");
+}
+
+#aboutUs_ourNums .aboutUs_yearsExp {
     grid-area: c;
 }
 
-#aboutUs_ourNums #aboutUs_savedEmiss {
+#aboutUs_ourNums dt.aboutUs_yearsExp::before {
+    background-image: url("../img/Icons/exp/icons8-experience-parzival’-1997-detailed-outline-96.png");
+}
+
+#aboutUs_ourNums .aboutUs_savedEmiss {
     grid-area: d;
 }
 
-#aboutUs_ourNums #aboutUs_testDrives {
+#aboutUs_ourNums dt.aboutUs_savedEmiss::before {
+    background-image: url("../img/Icons/co2/icons8-riduzione-della-co2-ios-17-filled-96.png");
+}
+
+#aboutUs_ourNums .aboutUs_testDrives {
     grid-area: e;
 }
 
-#aboutUs_ourNums #aboutUs_warranty {
+#aboutUs_ourNums dt.aboutUs_testDrives::before {
+    background-image: url("../img/Icons/wheel/icons8-volante-glyph-neue-96.png");
+}
+
+#aboutUs_ourNums .aboutUs_warranty {
     grid-area: f;
+}
+
+#aboutUs_ourNums dt.aboutUs_warranty::before {
+    background-image: url("../img/Icons/warranty/icons8-garanzia-color-96.png");
 }
 
 /* ---- LOCATION ---- */
