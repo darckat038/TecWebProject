@@ -22,7 +22,7 @@
 - [ ] METTERE LINK SOTTO CHE TI MANDA AL DETTAGLIO DELL'AUTO
 
 ## Devo controllare htmlspecialchars della password o non serve perchè non sarà mai visualizzata in chiaro?
-- [ ] NO
+- [x] NO
 
 ## Discorso reset button per form filtro listino
 - [x] RIMUOVI FILTRI FA ANCHE RICERCA DEFAULT (CON FILTRI VUOTI)
