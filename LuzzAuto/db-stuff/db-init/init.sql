@@ -47,6 +47,12 @@ create table Prenotazione
 
 
 /*
+INSERIMENTO UTENTI BASE
+*/
+INSERT INTO Utente (username, password, nome, cognome, dataNascita) VALUES ("user", "$2y$10$1dHGE98yho9p0CmQifWsROlgG/eScdJhIQhiwx9gqHBUz5hPHCYJ6", "user", "user", "2025-01-01");
+INSERT INTO Utente (username, password, nome, cognome, dataNascita) VALUES ("admin", "$2y$10$lWpeMfosLTT14Ex827SfKOk0E22zml9vuvqcH0BpICKB6r1qUwwnS", "admin", "admin", "2025-01-01");
+
+/*
     TABELLA Veicolo:
 
                                     ### LINEE GUIDA: ###

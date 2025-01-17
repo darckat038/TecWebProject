@@ -88,6 +88,11 @@ if (!isset($_SESSION["utente"])) {
     header("location: login.php");
     exit();
 }
+// Controllo se l'utente è loggato
+if (isset($_SESSION["utente"]) && $_SESSION["utente"]=="admin") {
+    header("location: amministratore.php");
+    exit();
+}
 
 
 
