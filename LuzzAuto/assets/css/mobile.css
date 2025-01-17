@@ -811,24 +811,69 @@ section.aboutUs_history img {
     margin-top: 3em;
     display: inline-block;
     text-align: center;
-    padding-bottom: 3em;
+    padding-bottom: 1em;
     background-color: #dfdfdf;
     width: 100%;
 }
 
 #aboutUs_ourNums h2 {
     margin-top: 1em;
-    margin-bottom: 1em;
+    margin-bottom: 3em;
+    padding-bottom: 2em;
 }
 
-#aboutUs_ourNums img {
-    margin-top: 1.5em;
-    object-fit: contain;
+#aboutUs_ourNums > dl dt {
+    position: relative;
+    font-weight: 450;
+    font-size: 1.3em;
+}
+
+#aboutUs_ourNums > dl dt::before {
+    content: "";
+    position: absolute;
+    top: -3.5em;
+    left: 50%;
+    transform: translateX(-50%);
     width: 3em;
+    height: 3em;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
 }
 
-#aboutUs_ourNums p {
-    margin: 0 1em 0;
+#aboutUs_ourNums > dl dd {
+    font-weight: 350;
+    margin: 0.5em 0 7em;
+    font-size: 1.15em;
+    padding: 0 1.5em;
+}
+
+#aboutUs_ourNums dd.aboutUs_warranty {
+    margin-bottom: 3em;
+}
+
+#aboutUs_ourNums dt.aboutUs_soldCars::before {
+    background-image: url("../img/Icons/car/icons8-auto-sf-black-filled-96.png");
+}
+
+#aboutUs_ourNums dt.aboutUs_custSat::before {
+    background-image: url("../img/Icons/star/star.png");
+}
+
+#aboutUs_ourNums dt.aboutUs_yearsExp::before {
+    background-image: url("../img/Icons/exp/icons8-experience-parzival’-1997-detailed-outline-96.png");
+}
+
+#aboutUs_ourNums dt.aboutUs_savedEmiss::before {
+    background-image: url("../img/Icons/co2/icons8-riduzione-della-co2-ios-17-filled-96.png");
+}
+
+#aboutUs_ourNums dt.aboutUs_testDrives::before {
+    background-image: url("../img/Icons/wheel/icons8-volante-glyph-neue-96.png");
+}
+
+#aboutUs_ourNums dt.aboutUs_warranty::before {
+    background-image: url("../img/Icons/warranty/icons8-garanzia-color-96.png");
 }
 
 /* ---- LOCATION ---- */
