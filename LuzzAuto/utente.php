@@ -143,7 +143,6 @@ $pagina = str_replace("[campiTabella]", $campiTabella, $pagina);
 //GESTIONE PRENOTAZIONE
 $err = "";
 
-$succ="";
 
 //esecuzione della query
 try{
@@ -184,7 +183,6 @@ if (isset($_POST['gestPrenUtente'])) {
     if (empty($_POST['gestPrenUtente'])) {
         $err .= "<p>Devi compilare tutti i campi.</p>";
         $pagina = str_replace("[err]", $err, $pagina);
-        $pagina = str_replace("[succ]", $succ, $pagina);
         echo $pagina;
         exit();
     }
@@ -197,7 +195,6 @@ if (isset($_POST['gestPrenUtente'])) {
     // Restituzione errori in caso di problemi di validazione
     if (!empty($err)) {
         $pagina = str_replace("[err]", $err, $pagina);
-        $pagina = str_replace("[succ]", $succ, $pagina);
         echo $pagina;
         exit();
     }
@@ -215,7 +212,7 @@ if (isset($_POST['gestPrenUtente'])) {
 
         if ($ris==true) {
                 // Prenotazione cancellata con successo
-                 $succ .= "<p>Prenotazione cancellata con SUCCESSO.</p>";
+                header("location: utente.php");
         } else {
             // Prenotazione non trovata
             $err .= "<p>Prenotazione non esiste. (ID: " . $idPrenotazione . ")</p>";
@@ -230,10 +227,9 @@ if (isset($_POST['gestPrenUtente'])) {
 
     // Aggiornamento della pagina con esito finale
     $pagina = str_replace("[err]", $err, $pagina);
-    $pagina = str_replace("[succ]", $succ, $pagina);
 
 }else{
-    
+    $pagina = str_replace("[err]", $err, $pagina);
 }
 
 
