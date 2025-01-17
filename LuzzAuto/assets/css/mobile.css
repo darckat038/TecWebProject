@@ -50,15 +50,6 @@ html, body {
     height: 100%;
 }
 
-body{
-    background-color: var(--bg-color);
-    color: var(--text-color);
-    font-size: 100%;
-    font-family: "Lexend", Roboto, sans-serif;
-    line-height: 1.5em;
-    align-content: center;
-}
-
 a{
     color: var(--not-visited-link);
     text-underline-offset: 0.3em;
