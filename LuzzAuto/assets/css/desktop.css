@@ -1931,7 +1931,7 @@ p.list_car_list_empty {
 
 #utente_body{
     background-image: url(../img/Background/Luzzauto/LuzzAuto_facciata1.png);
-    background-repeat: no-repeat;
+    background-repeat: repeat-y;
     background-color: white;
     background-size:cover;
 }
@@ -2117,7 +2117,7 @@ p.list_car_list_empty {
 
 #admin_body{
     background-image: url(../img/Background/Luzzauto/LuzzAuto_facciata1.png);
-    background-repeat: no-repeat;
+    background-repeat: repeat-y;
     background-color: white;
     background-size:cover;
 }
@@ -2262,7 +2262,7 @@ p.list_car_list_empty {
 #labelMarcaAdmin, #labelModelloAdmin, #labelAnnoAdmin, #labelColoreAdmin,
 #labelAlimAdmin, #labelCambioAdmin, #labelTrazioneAdmin, #labelPotenzaAdmin, 
 #labelPesoAdmin, #labelPostiAdmin, #labelCondizioniAdmin, #labelChilometriAdmin,
-#labelPrezzoAdmin, #labelNeopAdmin, #labelNeopAdmin{
+#labelPrezzoAdmin, #labelNeopAdmin, #labelNeopAdmin, #labelimmagineOutAdmin, #labelimmagineInAdmin{
     position: absolute;
     display: block;
     margin-left: 0.7em;
@@ -2274,12 +2274,23 @@ p.list_car_list_empty {
 
 #marcaAdmin, #modelloAdmin, #annoAdmin, #coloreAdmin, #alimentazioneAdmin, 
 #cambioAdmin, #trazioneAdmin, #potenzaAdmin, #pesoAdmin, #numero_postiAdmin, 
-#condizioneAdmin, #chilometraggioAdmin, #prezzoAdmin, #neopatentatiAdmin {
+#condizioneAdmin, #chilometraggioAdmin, #prezzoAdmin, #neopatentatiAdmin{
     width: 100%; 
     padding: 0.8em; 
     border: 1px solid var(--form-border-input-color); 
     border-radius: 5px; 
     background-color: black; 
+    color: var(--form-border-input-color); 
+    font-size: 16px; 
+    color: var(--form-border-input-color);
+    height: auto;
+    box-sizing: border-box; 
+    margin-top: 2em;
+    color: white;
+}
+#immagineOutAdmin, #immagineInAdmin{
+    width: 100%; 
+    padding: 0.8em; 
     color: var(--form-border-input-color); 
     font-size: 16px; 
     color: var(--form-border-input-color);

@@ -12,10 +12,11 @@
     <meta name="author" content="Artusi Emanuele, Bellon Filippo, Diviesti Filippo, Righetto Filippo">
 
     <link rel="stylesheet" media="screen and (max-width:1024px)" href="assets/css/mobile.css" type="text/css">
-    <link rel="stylesheet" media="screen and (min-width:1024px)" href="assets/css/desktop.css" type="text/css">
+    <link rel="stylesheet" media="screen and (min-width:1025px)" href="assets/css/desktop.css" type="text/css">
     <link rel="stylesheet" media="print" href="assets/css/print.css" type="text/css">
 
     <script src="assets/js/file.js"></script>
+    <script src="assets/js/toggle.js"></script>
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -94,7 +95,9 @@
     <section class="riquadriAdmin">
         <form method="post" action="">
           <fieldset>
+
             <legend class="nomeRiqAdmin">Gestione Prenotazioni</legend>
+
             <label for="gestPrenAdmin" id="labelPrenAdmin"><strong>Prenotazioni:</strong> </label>
             <select id="gestPrenAdmin" name="gestPrenAdmin" aria-label="Campo di inserimento della prenotazione che desideri gestire">
                 <option value="Fiat">001 - Fiat Panda</option>
@@ -118,6 +121,12 @@
         <fieldset>
 
           <legend class="nomeRiqAdmin">Aggiungi Automobile</legend>
+
+          <label for="immagineOutAdmin" id="labelimmagineOutAdmin">Immagine esterna dell'auto:</label>
+          <input type="file" id="immagineOutAdmin" name="immagineOutAdmin" placeholder="Carica" aria-label="Campo di inserimento dell'immagine dell'auto vista da fuori." required>
+
+          <label for="immagineInAdmin" id="labelimmagineInAdmin">Immagine interni dell'auto:</label>
+          <input type="file" id="immagineInAdmin" name="immagineInAdmin" placeholder="Carica" aria-label="Campo di inserimento dell'immagine degli interni dell'auto" required>
 
           <label for="marcaAdmin" id="labelMarcaAdmin">Marca:</label>
           <input type="text" id="marcaAdmin" name="marcaAdmin" placeholder="Inserisci" aria-label="Campo di inserimento della marca dell'auto" required>
