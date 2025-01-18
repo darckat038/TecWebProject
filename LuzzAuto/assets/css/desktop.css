@@ -1944,10 +1944,34 @@ p.list_car_list_empty {
     margin: 8em auto auto auto;
     width: 50em;
     height: auto;
+    position: relative;
 }
 
 .utente_content > h1{
     text-align: center;
+}
+
+#utente_logout{
+    position: absolute;
+    top: 1em;
+    right: 1em;
+    background-color: var(--form-bg-color);
+    border: 1px solid white;
+    padding: 0.3em 1.5em 0.5em 1.5em;
+    border-radius: 1.5em;
+    max-width: 10em;
+    font-size: 100%;
+    font-family: "Lexend", Roboto, sans-serif;
+}
+
+#utente_logout:hover{
+    background-color: var(--form-text-color);
+    color: var(--form-bg-color);
+}
+
+#utente_logout:hover:visited{
+    background-color: var(--form-text-color);
+    color: var(--visited-link);
 }
 
 .riquadriUtente{ 
@@ -1970,9 +1994,6 @@ p.list_car_list_empty {
     margin-top: -1.5em; 
 }
 
-.riquadriUtente p{
-    margin-bottom: 2em;
-}
 
 .riquadriUtente dt{
     color: var(--form-border-input-color);
