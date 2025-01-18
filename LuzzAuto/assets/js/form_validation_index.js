@@ -47,7 +47,7 @@ function validateMarca() {
 
 	var marca = document.getElementById("home_marca").value;
 
-	return allowedChars.test(marca);
+	return allowedChars.test(marca ? marca : "");
 }
 
 /*
@@ -58,7 +58,7 @@ function validateModello() {
 
 	var modello = document.getElementById("home_modello").value;
 
-	return allowedChars.test(modello);
+	return allowedChars.test(modello ? modello : "");
 }
 
 /*
@@ -69,7 +69,7 @@ function validateCondizione() {
 
 	var condizione = document.getElementById("home_condizione").value;
 
-	return allowedChars.test(condizione);
+	return allowedChars.test(condizione ? condizione : "");
 }
 
 /*
@@ -80,7 +80,7 @@ function validatePrezzo() {
 
 	console.log(prezzoMax);
 	
-	return (prezzoMax != "" ? prezzoMax > 0 : true);
+	return (prezzoMax && prezzoMax != "" ? prezzoMax > 0 : true);
 }
 
 /*
