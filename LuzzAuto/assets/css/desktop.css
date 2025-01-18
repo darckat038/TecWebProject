@@ -1884,11 +1884,9 @@ p.list_car_list_empty {
     border-radius: 1.5em;
     max-width: 25em;
     height: fit-content;
-    padding: 0 0 1em;
     font-size: 100%;
     background-color: rgb(223, 223, 223);
     color: var(--content-text-color);
-    background-color: var();
 }
 
 #home_reviews div.home_review_item:hover {
@@ -1899,27 +1897,51 @@ p.list_car_list_empty {
 #home_reviews dl dt {
     font-weight:450;
     font-size: 1.3em;
-    margin: 1em 0 0.5em;
+    margin-bottom: 0.5em;
+    position: relative;
+    padding-top: 2.5em;
+}
+
+#home_reviews dl dt::before {
+    content: "";
+    position: absolute;
+    top: -2.5em;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 4em;
+    height: 4em;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
+    box-shadow: 0px 10px 25px 0px rgba(0, 0, 0, 0.3);
+    border-radius: 50%;
+    background-image: url("../img/ImmagineUtente/ImmagineUtente.svg");
+    background-color: white;
 }
 
 #home_reviews dl dd {
-    padding: 0 1em 1em;
+    padding: 0 1em 6em;
     font-weight: 300;
     font-size: 1.1em;
+    position: relative;
 }
 
-#home_reviews div img.home_users_review_img {
-    box-shadow: 0px 10px 25px 0px rgba(0, 0, 0, 0.3);
-    object-fit: contain;
-    width: 5em;
-    margin-top: -10%;
-    background-color: white;
-    border-radius: 50%;
-}
-
-#home_reviews img.home_star_image {
-    object-fit: contain;
+#home_reviews dl dd::after {
+    content: "";
+    position: absolute;
+    top: 6.5em;
+    left: 50%;
+    transform: translateX(-50%);
     width: 4em;
+    height: 4em;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-image: url("../img/Icons/star/star.png");
+}
+
+#home_reviews dl div#home_second_review dd::after {
+    top: 8em;
 }
 
 /*#endregion Home*/
