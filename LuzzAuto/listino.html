@@ -13,6 +13,8 @@
         <link rel="stylesheet" media="print" href="assets/css/print.css" type="text/css">
 
         <script src="assets/js/toggle.js"></script>
+        <script src="assets/js/form_validation_tool.js"></script>
+        <script src="assets/js/form_validation_listino.js"></script>
 
         <meta name="description" content="Scopri il nostro catalogo auto e filtralo in base alle preferenze.">
         <meta name="keywords" content="luzzauto, concessionario, macchina, auto, automobili, guida, vetture, test">
@@ -142,16 +144,16 @@
                             <div class="list_input_container">
                                 <label for="list_filter_potenza" id="list_label_potenza">Potenza (<abbr title="cavalli vapore">CV</abbr>):</label>
                                 <div id="list_filter_potenza" class="list_insert">
-                                    Da <input type="number" class="list_insert" value="[potenzaMin]" name="potenzaMin" placeholder="qualsiasi" aria-label="Campo di inserimento della potenza minima dell'auto in cavalli vapore">
-                                    a <input type="number" class="list_insert" value="[potenzaMax]" name="potenzaMax" placeholder="qualsiasi" aria-label="Campo di inserimento della potenza massima dell'auto in cavalli vapore">
+                                    Da <input type="number" id="list_filter_potenzaMin" class="list_insert" value="[potenzaMin]" name="potenzaMin" placeholder="qualsiasi" aria-label="Campo di inserimento della potenza minima dell'auto in cavalli vapore">
+                                    a <input type="number"  id="list_filter_potenzaMax"class="list_insert" value="[potenzaMax]" name="potenzaMax" placeholder="qualsiasi" aria-label="Campo di inserimento della potenza massima dell'auto in cavalli vapore">
                                 </div>
                             </div>
 
                             <div class="list_input_container">
                                 <label for="list_filter_peso" id="list_label_peso">Peso (<abbr title="chilogrammi">kg</abbr>):</label>
                                 <div id="list_filter_peso" class="list_insert">
-                                    Da <input type="number" class="list_insert" value="[pesoMin]" name="pesoMin" placeholder="qualsiasi" aria-label="Campo di inserimento del peso minimo dell'auto in chilogrammi">
-                                    a <input type="number" class="list_insert" value="[pesoMax]" name="pesoMax" placeholder="qualsiasi" aria-label="Campo di inserimento del peso massimo dell'auto in chilogrammi">
+                                    Da <input type="number" id="list_filter_pesoMin" class="list_insert" value="[pesoMin]" name="pesoMin" placeholder="qualsiasi" aria-label="Campo di inserimento del peso minimo dell'auto in chilogrammi">
+                                    a <input type="number" id="list_filter_pesoMax" class="list_insert" value="[pesoMax]" name="pesoMax" placeholder="qualsiasi" aria-label="Campo di inserimento del peso massimo dell'auto in chilogrammi">
                                 </div>
                             </div>
 
