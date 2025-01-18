@@ -11,7 +11,6 @@ function validateFastSearch() {
 		var ok = true;
 		let msg = "";
 
-		console.log("submit event");
 		resetFormError();
 		if(!validateMarca()) {
 			ok = false;
@@ -30,11 +29,8 @@ function validateFastSearch() {
 			msg += "<p id=\"condizione_err\">Selezione condizione non valida. Selezionare nuovamente la scelta desiderata.</p>";
 		}
 		if(!ok) {
-			console.log("Prevenzione del submit, errore trovato.");
 			addFormError(msg);
 			event.preventDefault();
-		} else {
-			console.log("Tutto ok, il form verrà inviato.");
 		}
 	});
 }
@@ -87,8 +83,6 @@ function validatePrezzo() {
 function imgErrorHandler() {
 
 	let imgs = document.getElementsByClassName("stemma_brand");
-
-	console.log(imgs);
 
 	for (let img of imgs) {
         img.addEventListener("error", function() {
