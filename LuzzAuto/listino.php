@@ -66,7 +66,7 @@ function ripristinoInput($listinoHTML) {
 	$listinoHTML = str_replace('[potenzaMax]', htmlspecialchars(isset($_GET['potenzaMax']) ? $_GET['potenzaMax'] : ''), $listinoHTML);
 	$listinoHTML = str_replace('[pesoMin]', htmlspecialchars(isset($_GET['pesoMin']) ? $_GET['pesoMin'] : ''), $listinoHTML);
 	$listinoHTML = str_replace('[pesoMax]', htmlspecialchars(isset($_GET['pesoMax']) ? $_GET['pesoMax'] : ''), $listinoHTML);
-	$listinoHTML = str_replace("[neopatentati]", htmlspecialchars(isset($_GET['neopatentati']) ? 'checked ' : ''), $listinoHTML);
+	$listinoHTML = str_replace("[neopatentati]", htmlspecialchars(isset($_GET['neopatentati']) && intval($_GET["neopatentati"]) == 1 ? 'checked ' : ''), $listinoHTML);
 	$listinoHTML = str_replace('[posti]', htmlspecialchars(isset($_GET['posti']) ? $_GET['posti'] : ''), $listinoHTML);
 
 	//replace condizione
@@ -217,9 +217,9 @@ if(isset($_GET['action']) && $_GET['action'] == 'Applica filtri') {
 				$err = $err . "<p>Prezzo non valido, inserisci un prezzo maggiore di 0.</p>";
 		}
 		if (isset($_GET["chilometraggio"]) && is_numeric($_GET["chilometraggio"]) && (!preg_match("/^(\d+)?$/", $_GET["chilometraggio"]) || intval($_GET["chilometraggio"]) <= 0)) {
-			$err = $err . "<p>Chilometraggio non valido, inserisci un numero maggiore di 0.</p>";
+			$err = $err . "<p>Chilometraggio non valido, inserisci un valore maggiore di 0.</p>";
 		}
-		if (!empty($_GET["neopatentati"]) && $_GET["neopatentati"] != "1") {
+		if (!empty($_GET["neopatentati"]) && intval($_GET["neopatentati"]) != 1) {
 			$err = $err . "<p>Selezione neopatentati non valida. Selezionare nuovamente la scelta desiderata.</p>";
 		}
 
