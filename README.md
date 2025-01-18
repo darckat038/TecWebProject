@@ -18,11 +18,12 @@ Progetto del corso di Tecnologie Web della laurea in Informatica presso l'Univer
 - Versione SQL Server: MariaDB 10.11.6
 
 ### Creazione del server in locale con docker
-Nella cartella LuzzAuto:
+Nella cartella LuzzAuto:  
 Per eliminare i volumi associati se avete già un container errato:
 ```cmd
 docker-compose down -v
 ```
+Successivamente creare il container:
 ```cmd
 docker-compose build
 ```
