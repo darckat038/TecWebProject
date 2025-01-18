@@ -172,10 +172,8 @@ if(isset($_GET['action']) && $_GET['action'] == 'Applica filtri') {
 		if (isset($_GET["modello"]) && !preg_match("/^([A-Za-z0-9\-]+( [A-Za-z0-9\-]+)*)?$/", $_GET["modello"])) {
 			$err = $err . "<p>Modello non valido, puoi usare solo lettere, numeri, spazi(non all'inizio e alla fine) e il carattere \"-\".</p>";
 		}
-		if (isset($_GET["anno"]) && $_GET["anno"] != "") {
-			if (!preg_match("/^\d{4}$/", $_GET["anno"]) || intval($_GET["anno"]) === 0 || intval($_GET["anno"]) < 1990 || intval($_GET["anno"]) > 2024) {
-				$err = $err . "<p>Anno non valido, inserisci un anno compreso tra 1990 e 2024, diverso da 0 e non negativo.</p>";
-			}
+		if (isset($_GET["anno"]) && is_numeric($_GET["anno"]) && (!preg_match("/^\d{1,4}$/", $_GET["anno"]) || intval($_GET["anno"]) <= 0)) {
+			$err = $err . "<p>Anno non valido, inserisci un anno maggiore di 0 e di massimo 4 cifre.</p>";
 		}
 		if (isset($_GET["colore"]) && !preg_match("/^([A-Za-z]+( [A-Za-z]+)*)?$/", $_GET["colore"])) {
 			$err = $err . "<p>Selezione colore non valida. Selezionare nuovamente la scelta desiderata.</p>";
@@ -189,41 +187,37 @@ if(isset($_GET['action']) && $_GET['action'] == 'Applica filtri') {
 		if (isset($_GET["trazione"]) && !preg_match("/^([A-Za-z]+( [A-Za-z]+)*)?$/", $_GET["trazione"])) {
 			$err = $err . "<p>Selezione trazione non valida. Selezionare nuovamente la scelta desiderata.</p>";
 		}
-		if (isset($_GET["potenzaMin"]) && $_GET["potenzaMin"] != "") {
-			if (!preg_match("/^(\d+)?$/", $_GET["potenzaMin"]) || (intval($_GET["potenzaMin"]) === 0) || (!empty($_GET["potenzaMax"]) ? (intval($_GET["potenzaMin"]) > intval($_GET["potenzaMax"])) : false)) {
+		if (isset($_GET["potenzaMin"]) && is_numeric($_GET["potenzaMin"])) {
+			if (!preg_match("/^(\d+)?$/", $_GET["potenzaMin"]) || intval($_GET["potenzaMin"]) <= 0 || (!empty($_GET["potenzaMax"]) ? (intval($_GET["potenzaMin"]) > intval($_GET["potenzaMax"])) : false)) {
 				$err = $err . "<p>Potenza minima non valida, inserisci una potenza maggiore di 0 e minore o uguale alla potenza massima.</p>";
 			}
 		}
-		if (isset($_GET["potenzaMax"]) && $_GET["potenzaMax"] != "") {
-			if (!preg_match("/^(\d+)?$/", $_GET["potenzaMax"]) || (intval($_GET["potenzaMax"]) === 0) || (!empty($_GET["potenzaMin"]) ? (intval($_GET["potenzaMax"]) < intval($_GET["potenzaMin"])) : false)) {
-				$err = $err . "<p>Potenza massima non valida, inserisci una potenza maggiore di 0 e minore o uguale alla potenza massima.</p>";
+		if (isset($_GET["potenzaMax"]) && is_numeric($_GET["potenzaMax"])) {
+			if (!preg_match("/^(\d+)?$/", $_GET["potenzaMax"]) || intval($_GET["potenzaMax"]) <= 0 || (!empty($_GET["potenzaMin"]) ? (intval($_GET["potenzaMax"]) < intval($_GET["potenzaMin"])) : false)) {
+				$err = $err . "<p>Potenza massima non valida, inserisci una potenza maggiore di 0 e maggiore o uguale alla potenza minima.</p>";
 			}
 		}
-		if (isset($_GET["pesoMin"]) && $_GET["pesoMin"] != "") {
-			if (!preg_match("/^(\d+)?$/", $_GET["pesoMin"]) || (intval($_GET["pesoMin"]) === 0) || (!empty($_GET["pesoMax"]) ? (intval($_GET["pesoMin"]) > intval($_GET["pesoMax"])) : false)) {
-				$err = $err . "<p>Peso minimo non valido, inserisci una potenza maggiore di 0 e minore o uguale alla potenza massima.</p>";
+		if (isset($_GET["pesoMin"]) && is_numeric($_GET["pesoMin"])) {
+			if (!preg_match("/^(\d+)?$/", $_GET["pesoMin"]) || intval($_GET["pesoMin"]) <= 0 || (!empty($_GET["pesoMax"]) ? (intval($_GET["pesoMin"]) > intval($_GET["pesoMax"])) : false)) {
+				$err = $err . "<p>Peso minimo non valido, inserisci un peso maggiore di 0 e minore o uguale al peso massimo.</p>";
 			}
 		}
-		if (isset($_GET["pesoMax"]) && $_GET["pesoMax"] != "") {
-			if (!preg_match("/^(\d+)?$/", $_GET["pesoMax"]) || (intval($_GET["pesoMax"]) === 0) || (!empty($_GET["pesoMin"]) ? (intval($_GET["pesoMax"]) < intval($_GET["pesoMin"])) : false)) {
-				$err = $err . "<p>Peso massimo non valido, inserisci una potenza maggiore di 0 e minore o uguale alla potenza massima.</p>";
+		if (isset($_GET["pesoMax"]) && is_numeric($_GET["pesoMax"])) {
+			if (!preg_match("/^(\d+)?$/", $_GET["pesoMax"]) || intval($_GET["pesoMax"]) <= 0 || (!empty($_GET["pesoMin"]) ? (intval($_GET["pesoMax"]) < intval($_GET["pesoMin"])) : false)) {
+				$err = $err . "<p>Peso massimo non valido, inserisci un peso maggiore di 0 e maggiore o uguale al peso minimo.</p>";
 			}
 		}
-		if (isset($_GET["posti"]) && $_GET["posti"] != "" && (!preg_match("/^(\d+)?$/", $_GET["posti"]) || (intval($_GET["posti"]) === 0))) {
+		if (isset($_GET["posti"]) && is_numeric($_GET["posti"]) && (!preg_match("/^(\d+)?$/", $_GET["anno"]) || intval($_GET["anno"]) <= 0)) {
 			$err = $err . "<p>Numero di posti non valido, inserisci un numero maggiore di 0.</p>";
 		}
 		if (isset($_GET["condizione"]) && !preg_match("/^([A-Za-z0-9]+( [A-Za-z0-9]+)*)?$/", $_GET["condizione"])) {
 			$err = $err . "<p>Selezione condizione non valida. Selezionare nuovamente la scelta desiderata.</p>";
 		}
-		if (isset($_GET["prezzoMax"]) && $_GET["prezzoMax"] != "") {
-			if (!preg_match("/^(\d+)?$/", $_GET["prezzoMax"]) || doubleval($_GET["prezzoMax"]) == 0) {
+		if (isset($_GET["prezzoMax"]) && is_numeric($_GET["prezzoMax"]) && (!preg_match("/^(\d+)?$/", $_GET["prezzoMax"]) || intval($_GET["prezzoMax"]) <= 0)) {
 				$err = $err . "<p>Prezzo non valido, inserisci un prezzo maggiore di 0.</p>";
-			}
 		}
-		if (isset($_GET["chilometraggio"]) && $_GET["chilometraggio"] != "") {
-			if (!preg_match("/^(\d+)?$/", $_GET["chilometraggio"]) || (intval($_GET["chilometraggio"]) == 0)) {
-				$err = $err . "<p>Chilometraggio non valido, inserisci un numero maggiore di 0.</p>";
-			}
+		if (isset($_GET["chilometraggio"]) && is_numeric($_GET["chilometraggio"]) && (!preg_match("/^(\d+)?$/", $_GET["chilometraggio"]) || intval($_GET["chilometraggio"]) <= 0)) {
+			$err = $err . "<p>Chilometraggio non valido, inserisci un numero maggiore di 0.</p>";
 		}
 		if (!empty($_GET["neopatentati"]) && $_GET["neopatentati"] != "1") {
 			$err = $err . "<p>Selezione neopatentati non valida. Selezionare nuovamente la scelta desiderata.</p>";
