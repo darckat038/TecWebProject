@@ -77,10 +77,8 @@ function validateCondizione() {
 */
 function validatePrezzo() {
 	var prezzoMax = document.getElementById("home_prezzoMax").value;
-
-	console.log(prezzoMax);
 	
-	return (prezzoMax && prezzoMax != "" ? prezzoMax > 0 : true);
+	return prezzoMax ? (isNaN(prezzoMax) || prezzoMax > 0) : true;
 }
 
 /*
