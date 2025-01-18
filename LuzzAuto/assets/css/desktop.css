@@ -1956,20 +1956,51 @@ p.list_car_list_empty {
     background-color: var(--navbar-bg-color);
     color: var(--navbar-text-color);
     margin: 0 3em 2em 3em;
-    font-size: 100%;
-    font-family: "Lexend", Roboto, sans-serif;
     padding-left: 1em;
     margin-top: 3em;
     padding: 2em; 
 }
 
-.riquadriUtente p{
-    padding: 0.2em;
-    color: var(--navbar-text-color);
+#userImage{
+    float: right; 
+    width: 10em;
+    height: 10em;
+    background-size: cover; 
+    background-position: center;
+    margin-top: -1.5em; 
 }
 
-.riquadriUtente span{
+.riquadriUtente p{
+    margin-bottom: 2em;
+}
+
+.riquadriUtente dt{
     color: var(--form-border-input-color);
+    float: left; 
+}
+
+.riquadriUtente dd{
+    margin-bottom: 0.5em;
+}
+
+.riquadriUtente a{
+    background-color: var(--form-bg-color);
+    border: 1px solid white;
+    padding: 0.3em 1.5em 0.5em 1.5em;
+    border-radius: 1.5em;
+    max-width: 10em;
+    font-size: 100%;
+    font-family: "Lexend", Roboto, sans-serif;
+}
+
+.riquadriUtente a:hover{
+    background-color: var(--form-text-color);
+    color: var(--form-bg-color);
+}
+
+.riquadriUtente a:hover:visited{
+    background-color: var(--form-text-color);
+    color: var(--visited-link);
 }
 
 .nomeRiqUtente{
@@ -1981,16 +2012,6 @@ p.list_car_list_empty {
     font-weight: bold;
     font-size: 25px;
     color: var(--form-border-input-color);
-}
-
-#userImage{
-    background-image: url(../img/ImmagineUtente/ImmagineUtente.svg);
-    float: right; 
-    width: 12em;
-    height: 12em;
-    background-size: cover; 
-    background-position: center;
-    margin-top: -1.5em; 
 }
 
 /*tabella prenotazioni*/

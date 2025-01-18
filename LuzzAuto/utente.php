@@ -33,7 +33,7 @@ function creaTabellaPrenotazioni($username) {
                                 <tr>
                                     <th scope='col'><abbr title='Numero prenotazione'>Num. Pren.</abbr></th>
                                     <th scope='col' abbr='modello'>Modello Auto</th>
-                                    <th scope='col' abbr='data'>Data Test Drive</th>
+                                    <th scope='col' abbr='data'>Data <span lang='en-GB'>Test Drive</span></th>
                                     <th scope='col' >Stato</th>
                                 </tr>
                                 </thead>

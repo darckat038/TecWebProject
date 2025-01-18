@@ -35,10 +35,10 @@
             <div class="menu-button-bar3" aria-hidden="true"></div>
         </a>
         <ul id="menu"  aria-label="menu del sito">
-            <li><a href="index.php"><span lang="eng">Home</span></a></li>
+            <li><a href="index.php"><span lang="en-GB">Home</span></a></li>
             <li><a href="about.html">Chi siamo</a></li>
             <li><a href="listino.php">Listino auto</a></li>
-            <li><a href="test_drive.html"><span lang="eng">Test drive</span></a></li>
+            <li><a href="test_drive.html"><span lang="en-GB">Test drive</span></a></li>
             <li id="here"><a href="utente.php">Area riservata</a></li>
         </ul>
       </nav>
@@ -53,21 +53,38 @@
         <h1><span id="saluto"></span> [nome]</h1>
 
         <section class="riquadriUtente">
-          <section class="riquadroInfoUtente">
-            <span class="nomeRiqUtente">Informazioni Utente</span>
-            <p id="userImage"></p>
-            <p><strong>Nome:</strong><span> [nome]</span></p>
-            <p><strong>Cognome:</strong><span> [cognome]</span></p>
-            <p><strong>Username:</strong><span> [username]</span></p>
-            <p><strong>Password:</strong><span> ************</span></p>
-            <p>Se desideri modificare i tuoi dati premere: <a href="">Modifica</a></p>
-            <a href="logout.php"><span lang="eng">Logout</span></a>
-          </section>
+          
+          <h2 class="nomeRiqUtente">Informazioni Utente</h2>
+          <img src="assets/img/ImmagineUtente/ImmagineUtente.svg" id="userImage"></img>
+
+          <!--
+          <p><strong>Nome:</strong><span> [nome]</span></p>
+          <p><strong>Cognome:</strong><span> [cognome]</span></p>
+          <p><strong>Username:</strong><span> [username]</span></p>
+          -->
+
+          <dl>
+            <dt>Nome:&nbsp;</dt>
+            <dd>[nome]</dd>
+
+            <dt>Cognome:&nbsp;</dt>
+            <dd>[cognome]</dd>
+
+            <dt><span lang="en-GB">Username:&nbsp;</span></dt>
+            <dd>[username]</dd>
+
+            <dt><span lang="en-GB">Password:&nbsp;</span></dt>
+            <dd>************</dd>
+          </dl>
+
+          <p>Se desideri modificare i tuoi dati premere: <a href="">Modifica</a></p>
+          <a href="logout.php" id="utente_logout"><span lang="en-GB">Logout</span></a>
+          
         </section>
 
         
         <section id="prenotazioni_utente">
-          <span class="nomeRiqPrenUtente">Prenotazioni</span>
+          <h2 class="nomeRiqPrenUtente">Prenotazioni</h2>
           [campiTabella]
           
           <!-- 
@@ -106,22 +123,23 @@
 
         <section class="riquadriUtente">
           <form method='post' action='utente.php'>
+            <fieldset>
+              <legend class='nomeRiqUtente'>Gestione Prenotazioni</legend>
 
-            <span class='nomeRiqUtente'>Gestione Prenotazioni</span>
+              <label id='labelPrenUtente' for='gestPrenUtente'><strong>Prenotazioni:</strong> </label>
+              <select name='gestPrenUtente' id='gestPrenUtente' aria-required='true' aria-label='Campo di inserimento della prenotazione che desideri annullare' required data-msg-required='Per favore, seleziona la prenotazione'>
+              <option value=''>--seleziona--</option>
+              [prenotazioni]
+              </select>
 
-            <label id='labelPrenUtente' for='gestPrenUtente'><strong>Prenotazioni:</strong> </label>
-            <select name='gestPrenUtente' id='gestPrenUtente' aria-required='true' aria-label='Campo di inserimento della prenotazione che desideri annullare' required data-msg-required='Per favore, seleziona la prenotazione'>
-            <option value=''>--seleziona--</option>
-            [prenotazioni]
-            </select>
-
-            <input id='eliminaPrenUtente' type='submit' value='Elimina' aria-label='Elimina la prenotazione selezionata'>
+              <input id='eliminaPrenUtente' type='submit' value='Elimina' aria-label='Elimina la prenotazione selezionata'>
+            </fieldset>
           </form>
 
         </section>
-              <div class='form_errors'>
-                [err]
-              </div>
+        <div class='form_errors'>
+          [err]
+        </div>
 
       </main>
 
