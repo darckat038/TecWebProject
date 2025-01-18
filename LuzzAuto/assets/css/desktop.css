@@ -2184,6 +2184,10 @@ p.list_car_list_empty {
 }
 
 /*Gestione prenotazione*/
+.admin_content legend{
+    font-size: 1.6em;
+    font-weight: 600;
+}
 
 #labelPrenAdmin, #labelAzioneAdmin{
     position: absolute;

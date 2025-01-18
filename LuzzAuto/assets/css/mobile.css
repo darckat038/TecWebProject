@@ -2005,16 +2005,14 @@ document.querySelectorAll('#list_filter .list_insert').forEach(select => {
 
 .nomeRiqAdmin{
     background-color: var(--navbar-bg-color);
-    margin-left: -0.7em;
-    position: absolute;
     padding: 0 0.3em;
-    margin-top: -1.9em;
     color: var(--form-border-input-color);
 }
 
 .nomeRiqPrenAdmin{
     color: var(--form-border-input-color);
     padding-top: 1em;
+    text-align: center;
 }
 
 .tabellaPrenAdmin {
@@ -2036,6 +2034,11 @@ document.querySelectorAll('#list_filter .list_insert').forEach(select => {
 
 .tabellaPrenAdmin date{
     display: block;
+}
+
+.admin_content legend{
+    font-size: 1.6em;
+    font-weight: 600;
 }
 
 /*Gestione prenotazione*/
