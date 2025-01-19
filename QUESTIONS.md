@@ -76,4 +76,7 @@
 - [ ] Nella pagina about togliere l'immagine della mappa e mettere solo un testo con l'indirizzo del concessionario e altre info
 - [ ] .manifest ??? (vedi_slide:113 pdf:html)
 - [ ] Fare bene le pagine 404.html e 500.html rassicurando l'utente
+- [ ] Nella relazione descrivere strategia mobile first
+- [ ] Eseguire e descrivere nella relazione tutti i controlli sull'accessibilità eseguiti con i vari tool
+- [ ] Rimuovere file php_info.php
 
