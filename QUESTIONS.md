@@ -55,3 +55,25 @@
 - [x] PROBABILMENTE SI
 
 - [ ] # !DOCUMENTARE TUTTE LE COSE CHE PUO' FARE L'UTENTE
+
+
+  
+# ALTRE MODIFICHE DA IMPLEMENTARE E DOCUMENTARE IN RELAZIONE
+- [ ] Nella pagina about.html dichiarare che il link con la mail porta effettivamente alla mail : indirizzomail@luzzauto.com(mail)
+- [ ] Modificare title area personale: NO username -> SI Area Personale | LuzzAuto Concessionario
+- [ ] Fix background troppo corto mobile in registrazione login utente amministratore
+- [ ] Attributo enctype nel form aggiunta auto (vedi_slide:93 pdf:html)
+- [ ] Modifica select auto in test_drive e amministratore (vedi_slide:95 pdf:html)
+- [ ] Inserire max-width:1080px newi contenuti di tutte le pagine (vedi_slide:49 pdf:css)
+- [ ] Tabella responsive mobile in utente e amministratore (vedi_slide:74 pdf:accessibilità)
+- [ ] Testo giustificato nel print.css
+- [ ] Aggiungere tabindex su tutti i link/funzionalità
+- [ ] Mettere placeholders di esempio in tutti gli input type text dei form (es: Fiat)
+- [ ] Agguingere "skip to content" in tutte le pagine
+- [ ] Controllare le description di tutte le pagine (max: 145 caratteri)
+- [ ] Controllare "above the fold" in tutte le pagine
+- [ ] Controllare/mdificare messaggi errore/successo di tutte le form (vedi_slide:122 pdf:principi di web design)
+- [ ] Nella pagina about togliere l'immagine della mappa e mettere solo un testo con l'indirizzo del concessionario e altre info
+- [ ] .manifest ??? (vedi_slide:113 pdf:html)
+- [ ] Fare bene le pagine 404.html e 500.html rassicurando l'utente
+
