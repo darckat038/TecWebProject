@@ -888,15 +888,27 @@ section.aboutUs_history img {
 #aboutUs_reachUs {
     border-radius: 1em;
     width: fit-content;
-    margin: 3em 0;
+    margin: 5em 0 3em;
     display: inline-block;
     text-align: center;
-    padding: 0 1em 1em 1em;
+    background-color: var(--form-bg-color);
+    color: var(--form-text-color);
 }
 
 #aboutUs_reachUs h2 {
     margin-top: 1em;
     margin-bottom: 1em;
+}
+
+#aboutUs_reachUs h3 {
+    font-size: 1.5em;
+}
+
+#aboutUs_reachUs p {
+    margin: 1em 1em 1em;
+    font-size: 1.15em;
+    font-weight: 300;
+    line-height: 1.6em;
 }
 
 #aboutUs_reachUs img {
@@ -1571,28 +1583,29 @@ document.querySelectorAll('#list_filter .list_insert').forEach(select => {
     color: var(--form-text-color);
     display: block;
     margin: 3em auto 5em;
-    padding: 3em 2em;
+    padding: 2em 1em;
     border-radius: 3em 0;
     font-size: 100%;
-    width:70%;
+    width: 75%;
     text-align: center;
     line-height: 1.8em;
 }
 
 #home_workWithUs h3 {
-    margin-bottom: 0.5em;
+    margin: 1em 0.5em 0.5em;
     font-size: 2em;
     font-weight: 450;
 }
 
 #home_workWithUs h4 {
-    margin-bottom: 2em;
+    margin-bottom: 1.5em;
     font-size: 1.5em;
     font-weight: 400;
 }
 
 #home_workWithUs p {
-    font-size: 1em;
+    font-size: 1.15em;
+    font-weight: 300;
 }
 
 #home_workWithUs #home_workWithUs_email {

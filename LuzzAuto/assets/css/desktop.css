@@ -950,17 +950,31 @@ section.aboutUs_history p {
 
 /* ---- LOCATION ---- */
 
-#aboutUs_reachUs {
+#aboutUs_reachUs{
     border-radius: 3em;
     margin-top: 4em;
     display: inline-block;
     text-align: center;
-    width: fit-content;
+    width: 70%;
     box-shadow: rgba(17, 17, 26, 0.1) 0px 1px 0px, rgba(17, 17, 26, 0.1) 0px 8px 24px, rgba(17, 17, 26, 0.1) 0px 16px 48px;
+    background-color: var(--form-bg-color);
+    color: var(--form-text-color);
+    line-height: 1.7em;
+    padding-bottom: 1.5em;
 }
 
 #aboutUs_reachUs h2 {
-    margin-top: 1em;
+    margin: 1em 2em 1em ;
+}
+
+#aboutUs_reachUs h3 {
+    font-size: 1.6em;
+}
+
+#aboutUs_reachUs p {
+    margin: 1em 2em 1em;
+    font-size: 1.15em;
+    font-weight: 300;
 }
 
 #aboutUs_reachUs img {
@@ -1726,6 +1740,7 @@ p.list_car_list_empty {
 
 #home_workWithUs p {
     font-size: 1.2em;
+    font-weight: 300;
 }
 
 #home_workWithUs #home_workWithUs_email {
