@@ -64,7 +64,6 @@
 - [ ] Fix background troppo corto mobile in registrazione login utente amministratore
 - [ ] Attributo enctype nel form aggiunta auto (vedi_slide:93 pdf:html)
 - [ ] Modifica select auto in test_drive e amministratore (vedi_slide:95 pdf:html)
-- [ ] Inserire max-width:1080px newi contenuti di tutte le pagine (vedi_slide:49 pdf:css)
 - [ ] Tabella responsive mobile in utente e amministratore (vedi_slide:74 pdf:accessibilità)
 - [ ] Testo giustificato nel print.css
 - [ ] Aggiungere tabindex su tutti i link/funzionalità
