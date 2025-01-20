@@ -74,6 +74,7 @@
 - [ ] Controllare "above the fold" in tutte le pagine
 - [ ] Controllare/mdificare messaggi errore/successo di tutte le form (vedi_slide:122 pdf:principi di web design)
 - [x] Nella pagina about togliere l'immagine della mappa e mettere solo un testo con l'indirizzo del concessionario e altre info
+- [ ] Aggiungere anche ontap oltre che onclick perchè i cellulari vecchi non fanno la conversione
 - [ ] .manifest ??? (vedi_slide:113 pdf:html)
 - [ ] Fare bene le pagine 404.html 403.html 500.html rassicurando l'utente
 - [ ] Impedire l'accesso diretto alle risorse della cartella assets
