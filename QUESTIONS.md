@@ -75,7 +75,8 @@
 - [ ] Controllare/mdificare messaggi errore/successo di tutte le form (vedi_slide:122 pdf:principi di web design)
 - [x] Nella pagina about togliere l'immagine della mappa e mettere solo un testo con l'indirizzo del concessionario e altre info
 - [ ] .manifest ??? (vedi_slide:113 pdf:html)
-- [ ] Fare bene le pagine 404.html e 500.html rassicurando l'utente
+- [ ] Fare bene le pagine 404.html 403.html 500.html rassicurando l'utente
+- [ ] Impedire l'accesso diretto alle risorse della cartella assets
 - [ ] Dare enfasi ad alcune parole chiave con tag <em> e <strong>
 - [ ] Nella relazione descrivere strategia mobile first
 - [ ] Eseguire e descrivere nella relazione tutti i controlli sull'accessibilità eseguiti con i vari tool
