@@ -81,4 +81,6 @@
 - [ ] Nella relazione descrivere strategia mobile first
 - [ ] Eseguire e descrivere nella relazione tutti i controlli sull'accessibilità eseguiti con i vari tool
 - [ ] Rimuovere file php_info.php
+- [ ] Sistemare dimensioni file immagini (max 1MB)
+- [ ] Rimuovere tutti i display: none
 
