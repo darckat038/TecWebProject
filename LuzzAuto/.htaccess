@@ -5,6 +5,8 @@ ErrorDocument 500 /500.html
 #[L,R=301] usato per dare permessi di lettura e scrittura
 
 RewriteEngine On
+
+RewriteRule ^auto\.html$ /auto.php [L,R=301]
 RewriteRule ^registrazione\.html$ /registrazione.php [L,R=301]
 RewriteRule ^login\.html$ /login.php [L,R=301]
 RewriteRule ^test\_drive\.html$ /test_drive.php [L,R=301]
@@ -12,3 +14,4 @@ RewriteRule ^listino\.html$ /listino.php [L,R=301]
 RewriteRule ^index\.html$ /index.php [L,R=301]
 RewriteRule ^utente\.html$ /utente.php [L,R=301]
 RewriteRule ^amministratore\.html$ /amministratore.php [L,R=301]
+RewriteRule ^(.*).php/(.*)$ /404.html [L,R=301]
