@@ -59,7 +59,7 @@
 
   
 # ALTRE MODIFICHE DA IMPLEMENTARE E DOCUMENTARE IN RELAZIONE
-- [ ] Nella pagina about.html dichiarare che il link con la mail porta effettivamente alla mail : indirizzomail@luzzauto.com(mail)
+- [x] Nella pagina about.html dichiarare che il link con la mail porta effettivamente alla mail : indirizzomail@luzzauto.com(mail)
 - [ ] Modificare title area personale: NO username -> SI Area Personale | LuzzAuto Concessionario
 - [ ] Fix background troppo corto mobile in registrazione login utente amministratore
 - [ ] Attributo enctype nel form aggiunta auto (vedi_slide:93 pdf:html)
@@ -73,7 +73,7 @@
 - [ ] Controllare le description di tutte le pagine (max: 145 caratteri)
 - [ ] Controllare "above the fold" in tutte le pagine
 - [ ] Controllare/mdificare messaggi errore/successo di tutte le form (vedi_slide:122 pdf:principi di web design)
-- [ ] Nella pagina about togliere l'immagine della mappa e mettere solo un testo con l'indirizzo del concessionario e altre info
+- [x] Nella pagina about togliere l'immagine della mappa e mettere solo un testo con l'indirizzo del concessionario e altre info
 - [ ] .manifest ??? (vedi_slide:113 pdf:html)
 - [ ] Fare bene le pagine 404.html e 500.html rassicurando l'utente
 - [ ] Nella relazione descrivere strategia mobile first
