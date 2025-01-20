@@ -1902,6 +1902,7 @@ p.list_car_list_empty {
     font-size: 100%;
     background-color: rgb(223, 223, 223);
     color: var(--content-text-color);
+    position: relative;
 }
 
 #home_reviews div.home_review_item:hover {
@@ -1944,7 +1945,7 @@ p.list_car_list_empty {
 #home_reviews dl dd::after {
     content: "";
     position: absolute;
-    top: 6.5em;
+    bottom: 1em;
     left: 50%;
     transform: translateX(-50%);
     width: 4em;
@@ -1953,10 +1954,6 @@ p.list_car_list_empty {
     background-repeat: no-repeat;
     background-size: contain;
     background-image: url("../img/Icons/star/star.png");
-}
-
-#home_reviews dl div#home_second_review dd::after {
-    top: 8em;
 }
 
 /*#endregion Home*/

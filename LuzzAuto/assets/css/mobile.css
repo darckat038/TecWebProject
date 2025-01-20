@@ -886,13 +886,16 @@ section.aboutUs_history img {
 /* ---- LOCATION ---- */
 
 #aboutUs_reachUs {
-    border-radius: 1em;
-    width: fit-content;
+    border-radius: 3em 0;
+    width: 80%;
     margin: 5em 0 3em;
     display: inline-block;
     text-align: center;
     background-color: var(--form-bg-color);
     color: var(--form-text-color);
+    font-size: 100%;
+    display: block;
+    padding: 2em 1em;
 }
 
 #aboutUs_reachUs h2 {
@@ -901,14 +904,20 @@ section.aboutUs_history img {
 }
 
 #aboutUs_reachUs h3 {
-    font-size: 1.5em;
+    font-size: 1.6em;
+    margin-bottom: 0.5em;
 }
 
 #aboutUs_reachUs p {
-    margin: 1em 1em 1em;
     font-size: 1.15em;
     font-weight: 300;
     line-height: 1.6em;
+    margin-bottom: 1em;
+}
+
+#aboutUs_reachUs #aboutUs_reachUs_email,
+#aboutUs_reachUs #aboutUs_reachUs_phone {
+    word-wrap: break-word;
 }
 
 #aboutUs_reachUs img {
@@ -1609,12 +1618,7 @@ document.querySelectorAll('#list_filter .list_insert').forEach(select => {
 }
 
 #home_workWithUs #home_workWithUs_email {
-    color: var(--not-visited-link);
     word-wrap: break-word;
-}
-
-#home_workWithUs #home_workWithUs_email:visited {
-    color: var(--visited-link);
 }
 
 /*
@@ -1781,7 +1785,7 @@ document.querySelectorAll('#list_filter .list_insert').forEach(select => {
 #home_reviews dl dd::after {
     content: "";
     position: absolute;
-    top: 6.5em;
+    bottom: 0.5em;
     left: 50%;
     transform: translateX(-50%);
     width: 4em;
@@ -1790,10 +1794,6 @@ document.querySelectorAll('#list_filter .list_insert').forEach(select => {
     background-repeat: no-repeat;
     background-size: contain;
     background-image: url("../img/Icons/star/star.png");
-}
-
-#home_reviews dl div#home_second_review dd::after {
-    top: 8em;
 }
 
 /*#endregion Home*/
