@@ -5,6 +5,16 @@ ErrorDocument 500 /500.html
 #[L,R=301] usato per dare permessi di lettura e scrittura
 
 RewriteEngine On
+
+# Blocca l'accesso diretto a CSS e immagini da URL inseriti manualmente
+RewriteCond %{HTTP_REFERER} ^$
+RewriteRule \.(css|jpg|jpeg|png|gif|svg|webp|ico)$ - [F,L]
+
+# Consenti comunque l'accesso ai file .php e .html
+RewriteCond %{REQUEST_URI} !\.(php|html)$
+RewriteCond %{REQUEST_FILENAME} !-f
+
+#Redirect dei file html ai file php corrispondenti
 RewriteRule ^registrazione\.html$ /registrazione.php [L,R=301]
 RewriteRule ^login\.html$ /login.php [L,R=301]
 RewriteRule ^test\_drive\.html$ /test_drive.php [L,R=301]
