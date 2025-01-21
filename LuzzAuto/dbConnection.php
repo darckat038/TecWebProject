@@ -579,7 +579,124 @@ class DBConnection {
 			return false; // Nessuna prenotazione corrisponde al codice fornito
 		}
 	}
+
+	public function updateNome($username, $nuovoNome) {
+    
+		// Query per aggiornare il nome dell'utente dato il suo username
+		$query = "UPDATE Utente SET nome = ? WHERE username = ?;";
+		
+		// Preparazione dello statement
+		$stmt = $this->connection->prepare($query);
+		if ($stmt === false) {
+			die("Errore nella preparazione dello statement: " . $this->connection->error);
+		}
+		
+		// Associazione dei parametri alla query
+		if (!$stmt->bind_param("ss", $nuovoNome, $username)) {
+			die("Errore nell'associazione dei parametri: " . $stmt->error);
+		}
+		
+		// Esecuzione dello statement
+		if (!$stmt->execute()) {
+			die("Errore nell'esecuzione dello statement: " . $stmt->error);
+		}
+		
+		// Controllo righe modificate
+		if ($stmt->affected_rows > 0) {
+			return true; // Nome aggiornato con successo
+		} else {
+			return false; // Nessun utente trovato con lo username fornito
+		}
+	}
+
+	public function updateCognome($username, $nuovoCognome) {
+    
+		// Query per aggiornare il nome dell'utente dato il suo username
+		$query = "UPDATE Utente SET cognome = ? WHERE username = ?;";
+		
+		// Preparazione dello statement
+		$stmt = $this->connection->prepare($query);
+		if ($stmt === false) {
+			die("Errore nella preparazione dello statement: " . $this->connection->error);
+		}
+		
+		// Associazione dei parametri alla query
+		if (!$stmt->bind_param("ss", $nuovoCognome, $username)) {
+			die("Errore nell'associazione dei parametri: " . $stmt->error);
+		}
+		
+		// Esecuzione dello statement
+		if (!$stmt->execute()) {
+			die("Errore nell'esecuzione dello statement: " . $stmt->error);
+		}
+		
+		// Controllo righe modificate
+		if ($stmt->affected_rows > 0) {
+			return true; // Nome aggiornato con successo
+		} else {
+			return false; // Nessun utente trovato con lo username fornito
+		}
+	}
+
+	public function updateUsername($username, $nuovoUsername) {
+		// Inizia la transazione
+		$this->connection->begin_transaction();
+	
+		try {
+			// Disabilita temporaneamente le foreign key
+			$this->connection->query("SET foreign_key_checks = 0;");
+	
+			// 1. Aggiornare la tabella Prenotazione
+			$queryPrenotazione = "UPDATE Prenotazione SET username = ? WHERE username = ?";
+			$stmtPrenotazione = $this->connection->prepare($queryPrenotazione);
+			if ($stmtPrenotazione === false) {
+				throw new Exception("Errore nella preparazione dello statement per Prenotazione: " . $this->connection->error);
+			}
+			if (!$stmtPrenotazione->bind_param("ss", $nuovoUsername, $username)) {
+				throw new Exception("Errore nell'associazione dei parametri per Prenotazione: " . $stmtPrenotazione->error);
+			}
+			if (!$stmtPrenotazione->execute()) {
+				throw new Exception("Errore nell'esecuzione dello statement per Prenotazione: " . $stmtPrenotazione->error);
+			}
+	
+			// 2. Aggiornare la tabella Utente
+			$queryUtente = "UPDATE Utente SET username = ? WHERE username = ?";
+			$stmtUtente = $this->connection->prepare($queryUtente);
+			if ($stmtUtente === false) {
+				throw new Exception("Errore nella preparazione dello statement per Utente: " . $this->connection->error);
+			}
+			if (!$stmtUtente->bind_param("ss", $nuovoUsername, $username)) {
+				throw new Exception("Errore nell'associazione dei parametri per Utente: " . $stmtUtente->error);
+			}
+			if (!$stmtUtente->execute()) {
+				throw new Exception("Errore nell'esecuzione dello statement per Utente: " . $stmtUtente->error);
+			}
+	
+			// Riabilita le foreign key
+			$this->connection->query("SET foreign_key_checks = 1;");
+	
+			// Commit della transazione se entrambe le operazioni sono riuscite
+			$this->connection->commit();
+	
+			return true;
+		} catch (Exception $e) {
+			// In caso di errore, rollback della transazione
+			$this->connection->rollback();
+	
+			// Gestisci l'errore
+			die("Errore: " . $e->getMessage());
+		}
+	}
+	
+	
+	
+	
+
+
+
+
 }
+
 
 
 ?>
