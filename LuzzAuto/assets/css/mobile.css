@@ -72,7 +72,8 @@ select option {
 /* CHECKBOX CUSTOM Sì/No */
 
 .interruttore p{
-    display: none;
+    position: absolute;
+    margin: -9999em;
 }
 
 /* Nascondi l'input checkbox */
@@ -1027,12 +1028,13 @@ section.aboutUs_history img {
 
 /* Checkbox nascosto */
 .list_toggle_input {
-    display: none;
+    position: absolute;
+    margin: -9999em;
 }
 
 /* Form nascosto di default su mobile */
 #list_filter_form {
-    display: none;
+    display: flex;
     flex-direction: column;
     gap: 1em;
     margin-top: 1em;
@@ -1040,7 +1042,7 @@ section.aboutUs_history img {
 
 /* Mostra il form quando il checkbox è selezionato */
 .list_toggle_input:checked ~ #list_filter_form {
-    display: flex;
+    position: static;
 }
 
 /* Ruota il pulsante quando il checkbox è selezionato */

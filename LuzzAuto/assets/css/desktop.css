@@ -151,7 +151,8 @@ select option {
 /* CHECKBOX CUSTOM Sì/No */
 
 .interruttore p{
-    display: none;
+    position: absolute;
+    margin: -9999em;
 }
 
 /* Nascondi l'input checkbox */
@@ -1092,11 +1093,13 @@ section.aboutUs_history p {
  }
 
 #list_toggle_button {
-    display: none; /* Nasconde il pulsante toggle su desktop */
+    position: absolute;
+    margin: -9999em;
 }
 
 .list_toggle_input {
-    display: none; /* Nasconde anche il checkbox su desktop */
+    position: absolute;
+    margin: -9999em;
 }
 
 #list_filter form {
