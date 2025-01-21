@@ -141,7 +141,7 @@ $err = "";
 //esecuzione della query
 try{
     $db = new DBConnection();
-    $prenotazione = $db->getPrenEllimina($username);
+    $prenotazione = $db->getPrenElimina($username);
     $db->closeConnection();
 
     unset($db);
