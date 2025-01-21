@@ -2343,8 +2343,13 @@ input[type="date"]::-webkit-calendar-picker-indicator {
     
 .nomeRiqPrenAdmin{
     color: var(--form-border-input-color);
-    padding-left: 3em;
-    padding-top: 1em;
+    font-size: 1.6em;
+    font-weight: 600;
+    margin-bottom: 0.7em;
+}
+
+.prenAdmin {
+    margin-top: 3em;
 }
 
 /* tabella prenotazione */
@@ -2367,6 +2372,10 @@ input[type="date"]::-webkit-calendar-picker-indicator {
 
 .tabellaPrenAdmin date{
     display: block;
+}
+
+.tabellaPrenAdmin td#prenIndispAdmin {
+    text-align: center;
 }
 
 /*Gestione prenotazione*/
