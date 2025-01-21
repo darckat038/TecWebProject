@@ -75,26 +75,27 @@ function switchToggle() {
                     inputs.forEach(input => {
                         input.setAttribute("tabindex", toggleInput.checked ? "-1" : "0");
                     });
+                    // Applica position e margin se è selezionato
+                    if (toggleInput.checked) {
+                        toggleButton.style.position = "absolute";
+                        toggleButton.style.margin = "-9999em";
+                        inputs.forEach(input => {
+                            input.style.position = "absolute";
+                            input.style.margin = "-9999em";
+                        });
+                    } else {
+                        toggleButton.style.position = "static";
+                        toggleButton.style.margin = "0";
+                        inputs.forEach(input => {
+                            input.style.position = "static";
+                            input.style.margin = "0";
+                        });
+                    }
                 });
 
                 FilterMenu.removeAttribute('tabindex'); // Rende tabbabile
 
-                // Applica position e margin se è selezionato
-                if (toggleInput.checked) {
-                    toggleButton.style.position = "absolute";
-                    toggleButton.style.margin = "-9999em";
-                    inputs.forEach(input => {
-                        input.style.position = "absolute";
-                        input.style.margin = "-9999em";
-                    });
-                } else {
-                    toggleButton.style.position = "static";
-                    toggleButton.style.margin = "0";
-                    inputs.forEach(input => {
-                        input.style.position = "static";
-                        input.style.margin = "0";
-                    });
-                }
+                
             } else {
                 FilterMenu.setAttribute('tabindex', '-1'); // Rimuove dalla tabulazione
                 // Gestisce il tabindex sugli input del form
