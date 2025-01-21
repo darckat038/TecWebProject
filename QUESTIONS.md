@@ -83,4 +83,5 @@
 - [ ] Rimuovere file php_info.php
 - [ ] Sistemare dimensioni file immagini (max 1MB)
 - [ ] Rimuovere tutti i display: none
+- [ ] Aggiungere tag time/date in tabelle amministratore e utente
 
