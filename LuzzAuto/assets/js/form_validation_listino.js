@@ -15,7 +15,7 @@ function validateFastSearch() {
 			resetFormError();
 			if(!validateMarca()) {
 				ok = false;
-				msg += "<p tabindex=\"0\" id=\"marca_err\">Marca non valida, puoi usare solo lettere, numeri, spazi(non all'inizio e alla fine) e il carattere \"-\".</p>";
+				msg += "<p id=\"marca_err\">Marca non valida, puoi usare solo lettere, numeri, spazi(non all'inizio e alla fine) e il carattere \"-\".</p>";
 			}
 			if(!validateModello()) {
 				ok = false;
