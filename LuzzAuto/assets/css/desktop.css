@@ -2144,6 +2144,131 @@ p.list_car_list_empty {
 
 /*#endregion Utente*/
 
+
+/*#region ModificaUtente*/
+/******************* 
+  Modifica Utente
+********************/
+
+#modUtente_body{
+    background-image: url(../img/Background/Luzzauto/LuzzAuto_facciata1.png);
+    background-repeat: no-repeat;
+    background-color: white;
+    background-size:cover;
+}
+
+.modUtente_content{
+    background-color: var(--form-bg-color);
+    color: var(--form-text-color);
+    padding: 2.5em;
+    border-radius: 1.5em;
+    margin: 10em auto auto auto;
+    width: fit-content;
+    margin-bottom: 6em;
+    box-shadow: rgba(115, 115, 115, 0.35) 0px 5px 15px;
+}
+
+.modUtente_content > h1, .modUtente_content > p{
+    text-align: center;
+}
+
+.modUtente_content > h1{
+    margin-bottom: 1em;
+}
+
+#modUtente_form{
+    margin: 1em 0;
+    border-radius: 1em;
+}
+
+#modUtente_form legend{
+    width: 100%;
+    text-align: center;
+    margin-bottom: 1em;
+}
+
+#modUtente_form fieldset{
+    display: flex;
+    flex-direction: column;
+}
+
+#modUtente_form fieldset .modUtente_input{
+    height: 3em;
+    border-radius: 0.5em;
+    border: 1px solid var(--form-border-input-color);
+    background-color: var(--form-bg-color);
+    color: var(--navbar-text-color);
+    margin: 0 5em 2em 5em;
+    font-size: 100%;
+    font-family: "Lexend", Roboto, sans-serif;
+    padding-left: 1em;
+}
+
+
+#modUtente_form label{
+    background-color: var(--form-bg-color);
+    margin-left: 6em;
+    position: absolute;
+    padding: 0 0.5em;
+}
+
+#modUtente_label_nome{
+    margin-top: -0.8em;
+    color: var(--form-border-input-color);
+}
+
+#modUtente_label_cognome{
+    margin-top: 4.5em;
+    color: var(--form-border-input-color);
+}
+
+#modUtente_label_username{
+    margin-top: 9.8em;
+    color: var(--form-border-input-color);
+}
+
+#modUtente_label_pass{
+    margin-top: 15em;
+    color: var(--form-border-input-color);
+}
+
+#modUtente_label_pass2{
+    margin-top: 20.2em;
+    color: var(--form-border-input-color);
+}
+
+#modUtente_label_data{
+    margin-top: 25.5em;
+    color: var(--form-border-input-color);
+}
+
+input[type="date"]::-webkit-calendar-picker-indicator {
+    background-color: white;
+    margin-right: 1em;
+    border-radius: 0.5em;
+}
+
+#modUtente_button{
+    color: var(--form-text-color);
+    background-color: var(--form-bg-color);
+    border: 1px solid white;
+    padding: 1em 1.5em;
+    border-radius: 1.5em;
+    max-width: 10em;
+    align-self: center;
+    font-size: 100%;
+    font-family: "Lexend", Roboto, sans-serif;
+}
+
+#modUtente_button:hover{
+    background-color: var(--form-text-color);
+    color: var(--form-bg-color);
+}
+
+/*#endregion ModificaUtente*/
+
+
+
 /*#region Amministratore*/
 /******************* 
     AMMINISTRATORE  
