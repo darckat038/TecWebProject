@@ -61,6 +61,7 @@ unset($db);
 
 $err = "";
 
+
 if(isset($_POST["nome"]) || isset($_POST["cognome"]) || isset($_POST["username"]) || (isset($_POST["password"]) && isset($_POST["password2"]))){
 
     if(!empty($_POST["nome"])){
@@ -111,6 +112,9 @@ if(isset($_POST["nome"]) || isset($_POST["cognome"]) || isset($_POST["username"]
         if(!empty($_POST['username'])){
             $ris = $db->updateUsername($username, $_POST['username']);
             $_SESSION["utente"] = $_POST['username'];
+        }
+        if(!empty($_POST['password']) && !empty($_POST['password2'])){
+            $ris = $db->updatePassword($username, $_POST['password'], $_POST['password2']);
         }
         $db->closeConnection();
         

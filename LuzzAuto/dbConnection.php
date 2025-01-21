@@ -688,10 +688,73 @@ class DBConnection {
 		}
 	}
 	
+	public function updatePassword($username, $vecchiaPassword, $nuovaPassword) {
+		// Query per ottenere la password corrente dell'utente
+		$query = "SELECT password FROM Utente WHERE username = ?;";
 	
+		// Preparazione dello statement
+		$stmt = $this->connection->prepare($query);
+		if ($stmt === false) {
+			die("Errore nella preparazione dello statement: " . $this->connection->error);
+		}
 	
+		// Associazione dei parametri alla query
+		if (!$stmt->bind_param("s", $username)) {
+			die("Errore nell'associazione dei parametri: " . $stmt->error);
+		}
+	
+		// Esecuzione della query
+		if (!$stmt->execute()) {
+			die("Errore nell'esecuzione della query: " . $stmt->error);
+		}
+	
+		// Recupero del risultato
+		$result = $stmt->get_result();
+		if ($result->num_rows === 0) {
+			// Utente non trovato
+			return -1;
+		}
+	
+		// Estrazione della password memorizzata
+		$row = $result->fetch_assoc();
+		$passwordMemorizzata = $row['password'];
+	
+		// Confronta la vecchia password con la password memorizzata nel database
+		if (!password_verify($vecchiaPassword, $passwordMemorizzata)) {
+			// La vecchia password non corrisponde
+			return -1;
+		}
+	
+		// Se la vecchia password è corretta, aggiorna con la nuova password
+		$queryUpdate = "UPDATE Utente SET password = ? WHERE username = ?;";
+		$stmtUpdate = $this->connection->prepare($queryUpdate);
+		if ($stmtUpdate === false) {
+			die("Errore nella preparazione dello statement per l'update della password: " . $this->connection->error);
+		}
+	
+		// Crittografa la nuova password usando PASSWORD_DEFAULT (BCRYPT)
+		$nuovaPasswordCriptata = password_hash($nuovaPassword, PASSWORD_DEFAULT);
+	
+		// Associazione dei parametri per l'update
+		if (!$stmtUpdate->bind_param("ss", $nuovaPasswordCriptata, $username)) {
+			die("Errore nell'associazione dei parametri per l'update: " . $stmtUpdate->error);
+		}
+	
+		// Esecuzione della query di aggiornamento
+		if (!$stmtUpdate->execute()) {
+			die("Errore nell'esecuzione della query di aggiornamento: " . $stmtUpdate->error);
+		}
+	
+		// Restituisce un valore di successo
+		if ($stmtUpdate->affected_rows > 0) {
+			return true; // La password è stata aggiornata con successo
+		} else {
+			return false; // Nessuna modifica (forse la nuova password è uguale alla vecchia)
+		}
+	}
 	
 
+	
 
 
 
