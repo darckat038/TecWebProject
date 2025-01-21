@@ -493,7 +493,7 @@ class DBConnection {
 		$query = "SELECT p.codice, v.marca, v.modello, p.dataOra, p.stato
 					FROM Prenotazione p
 					JOIN Veicolo v ON p.idAuto = v.id
-					WHERE p.username LIKE ?;
+					WHERE p.username LIKE ?
 					ORDER BY p.codice";
 
 		// Preparazione dello statement
