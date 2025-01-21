@@ -58,9 +58,10 @@ function menuOpenClose() {
 */
 function switchToggle() {
 
-    let FilterMenu = document.getElementById("list_toggle_button");
-    if(FilterMenu){
-        const toggleButton = document.getElementById('list_toggle_button');
+    const toggleButton = document.getElementById('list_toggle_button');
+
+    if(toggleButton){
+        
         const toggleInput = document.getElementById('list_toggle_filter');
         const filterForm = document.getElementById('list_filter_form');
         const inputs = filterForm.querySelectorAll("input, select");       
@@ -68,7 +69,7 @@ function switchToggle() {
         // Aggiorna tabindex in base alla larghezza dello schermo
         function updateTabIndex() {
             if (window.innerWidth <= 1024) {
-                FilterMenu.addEventListener("click", function() {
+                toggleButton.addEventListener("click", function() {
                     toggleInput.checked = !toggleInput.checked;
                     toggleButton.setAttribute('aria-expanded', toggleInput.checked.toString());
                     toggleButton.setAttribute('aria-label', toggleInput.checked ? 'Seleziona per comprimere il form filtro' : 'Seleziona per espandere il form filtro');
@@ -79,6 +80,8 @@ function switchToggle() {
                     if (toggleInput.checked) {
                         toggleButton.style.position = "absolute";
                         toggleButton.style.margin = "-9999em";
+                        filterForm.style.position = "absolute";
+                        filterForm.style.margin = "-9999em";
                         inputs.forEach(input => {
                             input.style.position = "absolute";
                             input.style.margin = "-9999em";
@@ -86,6 +89,8 @@ function switchToggle() {
                     } else {
                         toggleButton.style.position = "static";
                         toggleButton.style.margin = "0";
+                        filterForm.style.position = "static";
+                        filterForm.style.margin = "0";
                         inputs.forEach(input => {
                             input.style.position = "static";
                             input.style.margin = "0";
@@ -93,19 +98,19 @@ function switchToggle() {
                     }
                 });
 
-                FilterMenu.removeAttribute('tabindex'); // Rende tabbabile
+                toggleButton.removeAttribute('tabindex'); // Rende tabbabile
 
                 
             } else {
-                FilterMenu.setAttribute('tabindex', '-1'); // Rimuove dalla tabulazione
+                toggleButton.setAttribute('tabindex', '-1'); // Rimuove dalla tabulazione
                 // Gestisce il tabindex sugli input del form
                 inputs.forEach(input => {
                     input.setAttribute("tabindex", "0");
                     input.style.position = "static";
                     input.style.margin = "0";
                 });
-                toggleButton.style.position = "static";
-                toggleButton.style.margin = "0";
+                toggleButton.style.position = "absolute";
+                toggleButton.style.margin = "-9999em";
             }
         }
     }
