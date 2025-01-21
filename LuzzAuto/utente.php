@@ -54,7 +54,7 @@ function creaTabellaPrenotazioni($username) {
                 $campiTabella .= "<tr>
                                     <td>" . $row["codice"] . "</td>
                                     <td>" . $row["marca"] . " " . $row['modello'] . "</td>
-                                    <td>" . $row['dataOra'] . "</td>
+                                    <td><time datetime=''" . $row['dataOra'] . "'>" . $row['dataOra'] . "</time></td>
                                     <td>" . $statoTestuale . "</td>
                                   </tr>";
             }
@@ -70,17 +70,6 @@ function creaTabellaPrenotazioni($username) {
     return $campiTabella; // Restituisco il markup generato della tabella
 }
 
-
-
-
-
-
-
-
-
-
-
-
 session_start();
 
 // Controllo se l'utente è loggato
@@ -88,8 +77,8 @@ if (!isset($_SESSION["utente"])) {
     header("location: login.php");
     exit();
 }
-// Controllo se l'utente è loggato
-if (isset($_SESSION["utente"]) && $_SESSION["utente"]=="admin") {
+// Controllo se l'amministratore è loggato
+if (isset($_SESSION["utente"]) && $_SESSION["utente"] =="admin") {
     header("location: amministratore.php");
     exit();
 }
@@ -240,26 +229,3 @@ if (isset($_POST['gestPrenUtente'])) {
 
 echo $pagina;
 ?>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
