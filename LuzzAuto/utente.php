@@ -12,7 +12,7 @@ function creaTabellaPrenotazioni($username) {
         $db = new DBConnection();
         
         // Recupera le prenotazioni per l'utente
-        $prenotazione = $db->getPrenotazioni($username);
+        $prenotazione = $db->getPrenotazioniUtente($username);
         
         // Chiudi la connessione
         $db->closeConnection();
