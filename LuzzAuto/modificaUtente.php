@@ -53,6 +53,12 @@ $pagina = str_replace('[nome]', htmlspecialchars($nome), $pagina);
 $pagina = str_replace('[cognome]', htmlspecialchars($cognome), $pagina);
 $pagina = str_replace('[username]', htmlspecialchars($username), $pagina);
 
+$db = new DBConnection();
+/*$ris = $db->updateNome($username, $_POST["nome"]);*/
+$db->closeConnection();
+
+unset($db);
+
 $err = "";
 
 if(isset($_POST["nome"]) || isset($_POST["cognome"]) || isset($_POST["username"]) || (isset($_POST["password"]) && isset($_POST["password2"]))){
@@ -96,13 +102,21 @@ if(isset($_POST["nome"]) || isset($_POST["cognome"]) || isset($_POST["username"]
     //ESECUZIONE DELLA QUERY
     try{
         $db = new DBConnection();
-        /*$ris = $db->updateNome($username, $_POST["nome"]);*/
+        if(!empty($_POST['nome'])){
+            $ris = $db->updateNome($username, $_POST['nome']);
+        }
+        if(!empty($_POST['cognome'])){
+            $ris = $db->updateCognome($username, $_POST['cognome']);
+        }
+        if(!empty($_POST['username'])){
+            $ris = $db->updateUsername($username, $_POST['username']);
+            $_SESSION["utente"] = $_POST['username'];
+        }
         $db->closeConnection();
-
-        unset($db);
-
         
-
+        unset($db);
+        
+        header("location: utente.php");
     }
     catch(Exception){
         header("location: 500.html");
