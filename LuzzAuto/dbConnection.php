@@ -417,43 +417,93 @@ class DBConnection {
 	}
 
 
-	
-
 	//FUNZIONE PER PRENDERE NOME, COGNOME E USERNAME DA USERNAME
 	public function getNomeCognomeUser($username) {
-		$query = "SELECT nome, cognome, username FROM Utente WHERE username = '$username';";
-
+		$query = "SELECT nome, cognome, username FROM Utente WHERE username = ?;";
+	
 		// Preparazione dello statement
 		$stmt = $this->connection->prepare($query);
 		if ($stmt === false) {
 			die("Errore nella preparazione dello statement: " . $this->connection->error);
 		}
-
-		// Esecuzione della query
+	
+		// Binding dei parametri
+		$stmt->bind_param("s", $username);
+	
+		// Esecuzione dello statement
 		if (!$stmt->execute()) {
 			die("Errore nell'esecuzione dello statement: " . $stmt->error);
 		}
-
+	
 		// Ottenimento del risultato
 		$result = $stmt->get_result();
+		if ($result === false) {
+			die("Errore nell'ottenimento del risultato: " . $stmt->error);
+		}
+	
 		$rows = $result->fetch_all(MYSQLI_ASSOC);
-
+	
+		// Chiusura dello statement
+		$stmt->close();
+	
 		return $rows;
 	}
+	
 	
 
 	//FUNZIONE PER PRENDERE LE PRENOTAZIONI DI UN USERNAME(codice, marca, modello)
-	public function getPrenEllimina($username) {
+	public function getPrenElimina($username) {
 		$query = "SELECT p.codice, v.marca, v.modello
 				  FROM Prenotazione p
 				  JOIN Veicolo v ON p.idAuto = v.id
-				  WHERE p.username = '$username';";
+				  WHERE p.username = ?;";
+	
+		// Preparazione dello statement
+		$stmt = $this->connection->prepare($query);
+		if ($stmt === false) {
+			die("Errore nella preparazione dello statement: " . $this->connection->error);
+		}
+	
+		// Binding dei parametri
+		$stmt->bind_param("s", $username);
+	
+		// Esecuzione dello statement
+		if (!$stmt->execute()) {
+			die("Errore nell'esecuzione dello statement: " . $stmt->error);
+		}
+	
+		// Ottenimento del risultato
+		$result = $stmt->get_result();
+		if ($result === false) {
+			die("Errore nell'ottenimento del risultato: " . $stmt->error);
+		}
+	
+		$rows = $result->fetch_all(MYSQLI_ASSOC);
+	
+		// Chiusura dello statement
+		$stmt->close();
+	
+		return $rows;
+	}
+
+
+
+	//FUNZIONE PER PRENDERE LE PRENOTAZIONI DI UN USERNAME(codice, marca, modello, data, stato)
+	public function getPrenotazioniUtente($username) {
+		$query = "SELECT p.codice, v.marca, v.modello, p.dataOra, p.stato
+					FROM Prenotazione p
+					JOIN Veicolo v ON p.idAuto = v.id
+					WHERE p.username LIKE ?;
+					ORDER BY p.codice";
 
 		// Preparazione dello statement
 		$stmt = $this->connection->prepare($query);
 		if ($stmt === false) {
 			die("Errore nella preparazione dello statement: " . $this->connection->error);
 		}
+
+		// Binding dei parametri
+		$stmt->bind_param("s", $username);
 
 		// Esecuzione della query
 		if (!$stmt->execute()) {
@@ -467,93 +517,68 @@ class DBConnection {
 		return $rows;
 	}
 
-		//FUNZIONE PER PRENDERE LE PRENOTAZIONI DI UN USERNAME(codice, marca, modello, data, stato)
-		public function getPrenotazioniUtente($username) {
-			$query = "SELECT p.codice, v.marca, v.modello, p.dataOra, p.stato
-					  FROM Prenotazione p
-					  JOIN Veicolo v ON p.idAuto = v.id
-					  WHERE p.username = '$username';
-					  ORDER BY p.codice";
+
+	//FUNZIONE PER PRENDERE TUTTE LE PRENOTAZIONI PRESENTI NEL DB
+	public function getAllPrenotazioni() {
+		$query = "SELECT p.codice, v.marca, v.modello, p.dataOra, p.stato
+					FROM Prenotazione p
+					JOIN Veicolo v ON p.idAuto = v.id
+					ORDER BY p.codice";
 	
-			// Preparazione dello statement
-			$stmt = $this->connection->prepare($query);
-			if ($stmt === false) {
-				die("Errore nella preparazione dello statement: " . $this->connection->error);
-			}
-	
-			// Esecuzione della query
-			if (!$stmt->execute()) {
-				die("Errore nell'esecuzione dello statement: " . $stmt->error);
-			}
-	
-			// Ottenimento del risultato
-			$result = $stmt->get_result();
-			$rows = $result->fetch_all(MYSQLI_ASSOC);
-	
-			return $rows;
+		// Preparazione dello statement
+		$stmt = $this->connection->prepare($query);
+		if ($stmt === false) {
+			die("Errore nella preparazione dello statement: " . $this->connection->error);
 		}
-
-
-		//FUNZIONE PER PRENDERE TUTTE LE PRENOTAZIONI PRESENTI NEL DB
-		public function getAllPrenotazioni() {
-			$query = "SELECT p.codice, v.marca, v.modello, p.dataOra, p.stato
-					  FROM Prenotazione p
-					  JOIN Veicolo v ON p.idAuto = v.id
-					  ORDER BY p.codice";
 	
-			// Preparazione dello statement
-			$stmt = $this->connection->prepare($query);
-			if ($stmt === false) {
-				die("Errore nella preparazione dello statement: " . $this->connection->error);
-			}
-	
-			// Esecuzione della query
-			if (!$stmt->execute()) {
-				die("Errore nell'esecuzione dello statement: " . $stmt->error);
-			}
-	
-			// Ottenimento del risultato
-			$result = $stmt->get_result();
-			$rows = $result->fetch_all(MYSQLI_ASSOC);
-	
-			return $rows;
+		// Esecuzione dello statement
+		if (!$stmt->execute()) {
+			die("Errore nell'esecuzione dello statement: " . $stmt->error);
 		}
-
-
-		//FUNZIONE PER CANCELLARE LE PRENOTAZIONI
-		public function deletePrenotazione($codicePrenotazione) {
-			
-			$query = "DELETE FROM Prenotazione WHERE codice = ?;";
-		
-			// Preparazione dello statement
-			$stmt = $this->connection->prepare($query);
-			if ($stmt === false) {
-				die("Errore nella preparazione dello statement: " . $this->connection->error);
-			}
-		
-			// Associazione dei parametri alla query
-			if (!$stmt->bind_param("s", $codicePrenotazione)) {
-				die("Errore nell'associazione dei parametri: " . $stmt->error);
-			}
-		
-			// Esecuzione dello statement
-			if (!$stmt->execute()) {
-				die("Errore nell'esecuzione dello statement: " . $stmt->error);
-			}
-		
-			// Controllo righe eliminate
-			if ($stmt->affected_rows > 0) {
-				return true; // Prenotazione eliminata con successo
-			} else {
-				return false; // Nessuna prenotazione corrisponde al codice fornito
-			}
-		}
-		
-
-
-
-
 	
+		// Ottenimento del risultato
+		$result = $stmt->get_result();
+		if ($result === false) {
+			die("Errore nell'ottenimento del risultato: " . $stmt->error);
+		}
+	
+		$rows = $result->fetch_all(MYSQLI_ASSOC);
+	
+		// Chiusura dello statement
+		$stmt->close();
+	
+		return $rows;
+	}
+	
+
+	//FUNZIONE PER CANCELLARE LE PRENOTAZIONI
+	public function deletePrenotazione($codicePrenotazione) {
+		
+		$query = "DELETE FROM Prenotazione WHERE codice = ?;";
+	
+		// Preparazione dello statement
+		$stmt = $this->connection->prepare($query);
+		if ($stmt === false) {
+			die("Errore nella preparazione dello statement: " . $this->connection->error);
+		}
+	
+		// Associazione dei parametri alla query
+		if (!$stmt->bind_param("s", $codicePrenotazione)) {
+			die("Errore nell'associazione dei parametri: " . $stmt->error);
+		}
+	
+		// Esecuzione dello statement
+		if (!$stmt->execute()) {
+			die("Errore nell'esecuzione dello statement: " . $stmt->error);
+		}
+	
+		// Controllo righe eliminate
+		if ($stmt->affected_rows > 0) {
+			return true; // Prenotazione eliminata con successo
+		} else {
+			return false; // Nessuna prenotazione corrisponde al codice fornito
+		}
+	}
 }
 
 
