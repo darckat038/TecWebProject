@@ -136,7 +136,7 @@ catch(Exception $e){
     exit();
 }
 
-if (isset($_POST['gestPrenAdmin'])) {
+if (isset($_GET['confAzionePrenotazioni'])) {
 
     // Controllo sul campo prenotazione vuoto
     if (empty($_POST['gestPrenAdmin'])) {
