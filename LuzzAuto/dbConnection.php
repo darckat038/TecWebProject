@@ -303,7 +303,7 @@ class DBConnection {
 			$query = substr($query, 0, -4);
 		}
 
-		$query .= " ORDER BY ID ASC";
+		$query .= " ORDER BY marca ASC";
 
 		// Preparazione dello statement
 		$stmt = $this->connection->prepare($query);
