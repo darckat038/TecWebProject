@@ -98,6 +98,7 @@ $adminPage = file_get_contents('amministratore.html');
 $campiTabella = mostraTabellaPrenotazioni();
 $adminPage = str_replace("[campiTabella]", $campiTabella, $adminPage);
 
+// SELECT PRENOTAZIONI
 
 //esecuzione della query
 try{
@@ -138,13 +139,8 @@ $errGest = "";
 
 if (isset($_POST['gestPrenAdmin'])) {
 
-    // Controllo sul campo prenotazione vuoto
-    if (empty($_POST['gestPrenAdmin'])) {
-        $errGest .= "<p>Devi compilare tutti i campi.</p>";
-    }
-
     // Controllo sull'input (validazione)
-    if (!preg_match("/^[0-9]+$/", $_POST["gestPrenAdmin"])) {
+    if (empty($_POST['gestPrenAdmin']) || !preg_match("/^[0-9]+$/", $_POST["gestPrenAdmin"])) {
         $errGest .= "<p>Prenotazione selezionata non valida</p>";
     }
 
@@ -176,7 +172,10 @@ if (isset($_POST['gestPrenAdmin'])) {
             $db->closeConnection();
             unset($db);
 
-            if (!$ris) {
+            if ($ris) {
+                // Prenotazione aggiornata con successo
+                header("location: amministratore.php");
+            } else {
                 // Prenotazione non trovata
                 $errGest .= "<p>Prenotazione non esiste. (ID: " . $idPrenotazione . ")</p>";
             }
