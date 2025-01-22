@@ -19,6 +19,11 @@ function validateTestDriveData(){
                 msg+="<p>L'auto non è valida.</p>";
                 ok = false;
             }
+
+            if(!validateEmptyAuto()){
+                msg+="<p>Selezionare un'auto da eliminare.</p>";
+                ok = false;
+            }
     
             if(!validateDate()){
                 msg+="<p>La data non è valida.</p>";
@@ -34,10 +39,18 @@ function validateTestDriveData(){
     }
 }
 
+function validateEmptyAuto(){
+    var auto = document.getElementById("test_drive_select_auto").value;
+    if(auto == ""){
+        return false;
+    }
+    return true;
+}
+
 function validateAuto(){
     var auto = document.getElementById("test_drive_select_auto").value;
     const validChars = /^[A-Za-z0-9\-\s]+$/;
-    if(!validChars.test(auto)){
+    if(auto.split("-")[0] != "" &&  (!validChars.test(auto) || !isNumber(auto.split("-")[0]))){
         return false;
     }
     return true;

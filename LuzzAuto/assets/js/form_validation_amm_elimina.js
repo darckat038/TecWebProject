@@ -26,12 +26,12 @@ function validateFormEliminaAuto(){
             let ok = true;
             
             if(!validateAuto()){
-                msg+="<p>L'auto non è valida js.</p>";
+                msg+="<p>L'auto non è valida.</p>";
                 ok = false;
             }
     
             if(!validateEmptyAuto()){
-                msg+="<p>Selezionare un'auto da eliminare js.</p>";
+                msg+="<p>Selezionare un'auto da eliminare.</p>";
                 ok = false;
             }
     

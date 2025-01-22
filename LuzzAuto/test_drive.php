@@ -32,13 +32,13 @@ $formHTML = "
                 <legend>Prenota <span lang='en-GB'>Test Drive</span></legend>
 
                 <label id='test_drive_label_auto' for='test_drive_select_auto'>Auto</label>
-                <select name='test_drive_select_auto' id='test_drive_select_auto' class='test_drive_input' aria-required='true' aria-label='Campo di scelta della macchina' required data-msg-required='Per favore, seleziona la macchina' data-msg-invalid:='Ci dispiace, formato non corretto'>
+                <select name='test_drive_select_auto' id='test_drive_select_auto' class='test_drive_input' aria-required='true' required data-msg-required='Per favore, seleziona la macchina' data-msg-invalid:='Ci dispiace, formato non corretto'>
                     <option value=''>--seleziona--</option>
                     [veicoli]
                 </select>
 
                 <label id='test_drive_label_date' for='test_drive_date'>Data e ora</label>
-                <input id='test_drive_date' class='test_drive_input' type='datetime-local' name='test_drive_date' aria-required='true' aria-label='Campo di inserimento della data e ora della prenotazione' required data-msg-required='Per favore, inserisci data e ora della prenotazione' value='[data]'>
+                <input id='test_drive_date' class='test_drive_input' type='datetime-local' name='test_drive_date' aria-required='true' required data-msg-required='Per favore, inserisci data e ora della prenotazione' value='[data]'>
         
                 <input id='test_drive_prenotaBtn' type='submit' value='INVIA RICHIESTA' aria-label='Bottone di invio del form'>
 
