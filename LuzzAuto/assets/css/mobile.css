@@ -1362,7 +1362,8 @@ document.querySelectorAll('#list_filter .list_insert').forEach(select => {
 }
 
 #details #details_box p {
-    display: none;
+    position: absolute;
+    margin: -9999em;
 }
 
 #details #details_box #details_box_info {
