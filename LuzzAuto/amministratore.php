@@ -93,46 +93,40 @@ if (isset($_SESSION["utente"]) && $_SESSION["utente"] !="admin") {
 // Carico template html
 $adminPage = file_get_contents('amministratore.html');
 
-//TABELLA PRENOTAZIONI
+function setSelectPrenGest($adminPage) {//esecuzione della query
+    try{
+        $db = new DBConnection();
+        $prenotazione = $db->getAllPrenotazioni();
+        $db->closeConnection();
 
-$campiTabella = mostraTabellaPrenotazioni();
-$adminPage = str_replace("[campiTabella]", $campiTabella, $adminPage);
+        unset($db);
 
-// SELECT PRENOTAZIONI
+        $prenotazioni = '';
 
-//esecuzione della query
-try{
-    $db = new DBConnection();
-    $prenotazione = $db->getAllPrenotazioni();
-    $db->closeConnection();
+        //inserimento veicoli nel select
+        foreach($prenotazione as $row){
+            $val = $row["codice"];
 
-    unset($db);
-
-    $prenotazioni = '';
-
-    //inserimento veicoli nel select
-    foreach($prenotazione as $row){
-        $val = $row["codice"];
-
-        if($row['stato'] == 0){
-            //reimposto il valore settato se ci sono errori
-            if(isset($_POST['gestPrenAdmin']) && $_POST['gestPrenAdmin'] == $val) {
-                $prenotazioni .= "<option value='" . $val . "' selected>Prenotazione numero " . $row["codice"] . "</option>";
+            if($row['stato'] == 0){
+                //reimposto il valore settato se ci sono errori
+                if(isset($_POST['gestPrenAdmin']) && $_POST['gestPrenAdmin'] == $val) {
+                    $prenotazioni .= "<option value='" . $val . "' selected>Prenotazione numero " . $row["codice"] . "</option>";
+                }
+                else{
+                    $prenotazioni .= "<option value='" . $val . "'>Prenotazione numero " . $row["codice"] . "</option>";
+                }
             }
-            else{
-                $prenotazioni .= "<option value='" . $val . "'>Prenotazione numero " . $row["codice"] . "</option>";
-            }
+            
         }
-        
-    }
-    $adminPage = str_replace("[prenotazioni]", $prenotazioni, $adminPage);
+        $adminPage = str_replace("[prenotazioni]", $prenotazioni, $adminPage);
+        return $adminPage;
 
+    } catch(Exception $e){
+        header("location: 500.html");
+        exit();
+    }
 }
-    
-catch(Exception $e){
-    header("location: 500.html");
-    exit();
-}
+
 
 //GESTIONE PRENOTAZIONI
 $errGest = "";
@@ -172,10 +166,7 @@ if (isset($_POST['gestPrenAdmin'])) {
             $db->closeConnection();
             unset($db);
 
-            if ($ris) {
-                // Prenotazione aggiornata con successo
-                header("location: amministratore.php");
-            } else {
+            if (!$ris) {
                 // Prenotazione non trovata
                 $errGest .= "<p>Prenotazione non esiste. (ID: " . $idPrenotazione . ")</p>";
             }
@@ -187,14 +178,19 @@ if (isset($_POST['gestPrenAdmin'])) {
             exit();
         }
     }
-
-    // Aggiornamento della pagina con esito finale
-    $adminPage = str_replace("[errGest]", $errGest, $adminPage);
-
-} else {
-    $adminPage = str_replace("[errGest]", $errGest, $adminPage);
 }
 
+// Aggiornamento della pagina con esito finale
+$adminPage = str_replace("[errGest]", $errGest, $adminPage);
+
+//TABELLA PRENOTAZIONI
+
+$campiTabella = mostraTabellaPrenotazioni();
+$adminPage = str_replace("[campiTabella]", $campiTabella, $adminPage);
+
+// SELECT PRENOTAZIONI
+
+$adminPage = setSelectPrenGest($adminPage);
 
 //ELIMINA PRENOTAZIONE
 
