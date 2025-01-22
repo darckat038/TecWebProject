@@ -247,6 +247,7 @@ if(isset($_POST['eliminaAutoAdmin'])){
         $errElim .= "<p>Devi compilare tutti i campi.</p>";
         $adminPage = str_replace("[errElim]", $errElim, $adminPage);
         $adminPage = str_replace("[succElim]", $succElim, $adminPage);
+        $adminPage = setSelectAutoElim($adminPage);
         echo $adminPage;
         exit();
     }
@@ -258,6 +259,7 @@ if(isset($_POST['eliminaAutoAdmin'])){
     if(!empty($errElim)){
         $adminPage = str_replace("[errElim]", $errElim, $adminPage);
         $adminPage = str_replace("[succElim]", $succElim, $adminPage);
+        $adminPage = setSelectAutoElim($adminPage);
         echo $adminPage;
         exit();
     }
