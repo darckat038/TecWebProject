@@ -609,7 +609,6 @@ class DBConnection {
 
 	public function updateNome($username, $nuovoNome) {
     
-		// Query per aggiornare il nome dell'utente dato il suo username
 		$query = "UPDATE Utente SET nome = ? WHERE username = ?;";
 		
 		// Preparazione dello statement
@@ -623,22 +622,21 @@ class DBConnection {
 			die("Errore nell'associazione dei parametri: " . $stmt->error);
 		}
 		
-		// Esecuzione dello statement
+		// Esecuzione della query
 		if (!$stmt->execute()) {
 			die("Errore nell'esecuzione dello statement: " . $stmt->error);
 		}
 		
-		// Controllo righe modificate
+		// Controllo del risultato
 		if ($stmt->affected_rows > 0) {
-			return true; // Nome aggiornato con successo
+			return true; 
 		} else {
-			return false; // Nessun utente trovato con lo username fornito
+			return false;
 		}
 	}
 
 	public function updateCognome($username, $nuovoCognome) {
     
-		// Query per aggiornare il nome dell'utente dato il suo username
 		$query = "UPDATE Utente SET cognome = ? WHERE username = ?;";
 		
 		// Preparazione dello statement
@@ -652,16 +650,16 @@ class DBConnection {
 			die("Errore nell'associazione dei parametri: " . $stmt->error);
 		}
 		
-		// Esecuzione dello statement
+		// Esecuzione della query
 		if (!$stmt->execute()) {
 			die("Errore nell'esecuzione dello statement: " . $stmt->error);
 		}
 		
-		// Controllo righe modificate
+		// Controllo del risultato
 		if ($stmt->affected_rows > 0) {
-			return true; // Nome aggiornato con successo
+			return true; 
 		} else {
-			return false; // Nessun utente trovato con lo username fornito
+			return false; 
 		}
 	}
 

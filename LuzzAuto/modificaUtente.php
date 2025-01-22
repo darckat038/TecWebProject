@@ -128,7 +128,7 @@ if(isset($_POST["nome"]) || isset($_POST["cognome"]) || isset($_POST["username"]
         
         unset($db);
         
-        /*header("location: utente.php");*/
+        header("location: utente.php");
     }
     catch(Exception){
         header("location: 500.html");
