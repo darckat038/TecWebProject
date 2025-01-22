@@ -21,20 +21,16 @@ function validateFormEliminaAuto(){
         form.addEventListener('submit', function (event){
             let div = document.getElementsByClassName("form_errors")[2];
             div.innerHTML = "";
-
             let msg = "";
             let ok = true;
-            
             if(!validateAuto()){
                 msg+="<p>L'auto non è valida.</p>";
                 ok = false;
             }
-    
             if(!validateEmptyAuto()){
                 msg+="<p>Selezionare un'auto da eliminare.</p>";
                 ok = false;
             }
-    
             if(!ok){
                 div.innerHTML += msg;
                 event.preventDefault();

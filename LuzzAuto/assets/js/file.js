@@ -1,9 +1,6 @@
-
-
 document.addEventListener("DOMContentLoaded", function() {
   const oraCorrente = new Date().getHours();
   const salutoUtente = document.getElementById("saluto");
-
   let saluto;
   if (oraCorrente >= 5 && oraCorrente < 12) {
     saluto = "Buongiorno";
@@ -12,7 +9,5 @@ document.addEventListener("DOMContentLoaded", function() {
   } else {
     saluto = "Buonasera";
   }
-
   salutoUtente.textContent = `${saluto}`;
 });
-

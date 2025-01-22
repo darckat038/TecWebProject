@@ -7,10 +7,8 @@ document.addEventListener("DOMContentLoaded", function () {
         "<h2>Hai forato!</h2>                   <p><a href='/'>Chiama il carro attrezzi e torna alla <span lang='en-GB'>home</span></a></p>",
         "<h2>Bandiera nera!</h2>                <p><a href='/'>Fermati ai box e torna alla <span lang='en-GB'>home</span></a></p>"
     ];
-
     // Scegli un messaggio casualmente
     const randomMessage = messages[Math.floor(Math.random() * messages.length)];
-
     // Mostra il messaggio nella pagina
     document.getElementById('message').innerHTML = randomMessage;
 });

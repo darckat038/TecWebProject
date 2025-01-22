@@ -5,12 +5,9 @@ document.addEventListener("DOMContentLoaded", function () {
 
 function validateFastSearch() {
 	let form = document.getElementById("home_fastSearch_form");
-
 	form.addEventListener("submit", function(event) {
-
 		var ok = true;
 		let msg = "";
-
 		resetFormError(0);
 		if(!validateMarca()) {
 			ok = false;
@@ -40,9 +37,7 @@ function validateFastSearch() {
 */
 function validateMarca() {
 	const allowedChars = /^([A-Za-z0-9\-]+( [A-Za-z0-9\-]+)*)?$/; // lettere maiuscole e minuscole, numeri e il carattere trattino(-)
-
 	var marca = document.getElementById("home_marca").value;
-
 	return allowedChars.test(marca ? marca : "");
 }
 
@@ -51,9 +46,7 @@ function validateMarca() {
 */
 function validateModello() {
 	const allowedChars = /^([A-Za-z0-9\-]+( [A-Za-z0-9\-]+)*)?$/; // lettere maiuscole e minuscole, numeri e il carattere trattino(-)
-
 	var modello = document.getElementById("home_modello").value;
-
 	return allowedChars.test(modello ? modello : "");
 }
 
@@ -62,9 +55,7 @@ function validateModello() {
 */
 function validateCondizione() {
 	const allowedChars = /^([A-Za-z0-9]+( [A-Za-z0-9]+)*)?$/; // lettere maiuscole e minuscole, numeri
-
 	var condizione = document.getElementById("home_condizione").value;
-
 	return allowedChars.test(condizione ? condizione : "");
 }
 
@@ -73,7 +64,6 @@ function validateCondizione() {
 */
 function validatePrezzo() {
 	var prezzoMax = document.getElementById("home_prezzoMax").value;
-	
 	return prezzoMax ? (isNaN(prezzoMax) || prezzoMax > 0) : true;
 }
 
@@ -81,9 +71,7 @@ function validatePrezzo() {
  * Utilizzato per eliminare il border radius che andrebbe altrimenti a coprire il testo alt 
  */
 function imgErrorHandler() {
-
 	let imgs = document.getElementsByClassName("stemma_brand");
-
 	for (let img of imgs) {
         img.addEventListener("error", function() {
             // Imposta il border-radius a 0

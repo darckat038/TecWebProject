@@ -3,12 +3,10 @@ window.addEventListener('load', function () {
 	validateRegisterData();
 });
 
-function validateRegisterData(){
-    
+function validateRegisterData(){    
     let form = document.getElementById('signup_form');
     form.addEventListener('submit', function (event){
         resetFormError(0);
-        
         let msg = "";
         let ok = true;
         if(!validateNome()){
@@ -40,7 +38,6 @@ function validateRegisterData(){
             addFormError(msg, 0);
             event.preventDefault();
         }
-        
     });
 }
 
@@ -96,10 +93,8 @@ function validateDate(){
     var today = new Date();
     const month = ["01","02","03","04","05","06","07","08","09","10","11","12"];
     var dataOggi = today.getFullYear().toString()+"-"+month[today.getMonth()]+"-"+today.getDate();
-    
     if(!validChars.test(date) || dataOggi < date){
         return false;
     }
     return true;
 }
-

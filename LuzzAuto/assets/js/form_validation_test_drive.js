@@ -16,40 +16,31 @@ function isNumber(value){
 }
 
 function validateTestDriveData(){
-    
     let form = document.getElementById('test_drive_form');
     if(form){
         form.addEventListener('submit', function (event){
-            
             resetFormError(0);
-            
             let msg = "";
             let ok = true;
-
             if(!validateAuto()){
                 console.log("auto non valida");
                 msg+="<p>L'auto non è valida.</p>";
                 ok = false;
             }
-            
             if(!validateEmptyAuto()){
                 console.log("auto non selezionata");
                 msg+="<p>Selezionare un'auto da eliminare.</p>";
                 ok = false;
             }
-    
-            
             if(!validateDate()){
                 console.log("data non valida");
                 msg+="<p>La data non è valida js.</p>";
                 ok = false;
             }
-            
             if(!ok){
                 addFormError(msg, 0);
                 event.preventDefault();
             }
-
         });
     }
 }
@@ -86,4 +77,3 @@ function validateDate(){
     }
     return true;
 }
-
