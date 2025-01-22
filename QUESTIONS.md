@@ -76,7 +76,7 @@
 - [ ] Aggiungere anche ontap oltre che onclick perchè i cellulari vecchi non fanno la conversione
 - [ ] .manifest ??? (vedi_slide:113 pdf:html)
 - [ ] Fare bene le pagine 404.html 403.html 500.html rassicurando l'utente (Emanuele)
-- [ ] Impedire l'accesso diretto alle risorse della cartella assets
+- [x] Impedire l'accesso diretto alle risorse della cartella assets
 - [ ] Dare enfasi ad alcune parole chiave con tag <em> e <strong>
 - [ ] Nella relazione descrivere strategia mobile first
 - [ ] Togliere tutti gli attributi aria-label negli input di tutti i form a cui è già associata una label con il tag html
