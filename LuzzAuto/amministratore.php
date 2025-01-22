@@ -205,35 +205,91 @@ if (isset($_POST['gestPrenAdmin'])) {
 
 //ELIMINA PRENOTAZIONE
 
-//ESECUZIONE DELLA QUERY PER INSERIRE LE AUTO NEL SELECT
-try{
-    $a = array();
-    $db = new DBConnection();
-    $ris = $db->getFilteredVehicles($a);
-    $db->closeConnection();
-    unset($db);
-    $veicoliDaEliminare = '';
-    //INSERIMENTO DEI VEICOLI NEL SELECT
-    $marca = '';
-    foreach($ris as $row){
-        if($marca != $row["marca"]){
-            if($marca == ''){
-                $marca = $row["marca"];
-                $veicoliDaEliminare .= "<optgroup label='". $marca . "'>";
+function setSelectAutoElim($adminPage){
+    //ESECUZIONE DELLA QUERY PER INSERIRE LE AUTO NEL SELECT
+    try{
+        $a = array();
+        $db = new DBConnection();
+        $ris = $db->getFilteredVehicles($a);
+        $db->closeConnection();
+        unset($db);
+        $veicoliDaEliminare = '';
+        //INSERIMENTO DEI VEICOLI NEL SELECT
+        $marca = '';
+        foreach($ris as $row){
+            if($marca != $row["marca"]){
+                if($marca == ''){
+                    $marca = $row["marca"];
+                    $veicoliDaEliminare .= "<optgroup label='". $marca . "'>";
+                }
+                else{
+                    $marca = $row["marca"];
+                    $veicoliDaEliminare .= "</optgroup><optgroup label='". $marca . "'>";
+                }
             }
-            else{
-                $marca = $row["marca"];
-                $veicoliDaEliminare .= "</optgroup><optgroup label='". $marca . "'>";
-            }
+            $veicoliDaEliminare .= "<option value='" . $row["id"] . "-" . $row["marca"] . "-" . $row['modello'] . "'>" . $row["id"] . " - " . $row['modello'] ."</option>";
         }
-        $veicoliDaEliminare .= "<option value='" . $row["id"] . "-" . $row["marca"] . "-" . $row['modello'] . "'>" . $row["id"] . " - " . $row['modello'] ."</option>";
+
+        $adminPage = str_replace("[VeicoliDaEliminare]", $veicoliDaEliminare, $adminPage);
+        return $adminPage;
+    }
+    catch(Exception $e){
+        header("location: 500.html");
+        exit();
+    }
+}
+
+$errElim = '';
+$succElim = '';
+
+if(isset($_POST['eliminaAutoAdmin'])){
+    if(empty($_POST['eliminaAutoAdmin'])){
+        $errElim .= "<p>Devi compilare tutti i campi.</p>";
+        $adminPage = str_replace("[errElim]", $errElim, $adminPage);
+        $adminPage = str_replace("[succElim]", $succElim, $adminPage);
+        echo $adminPage;
+        exit();
     }
 
-    $adminPage = str_replace("[VeicoliDaEliminare]", $veicoliDaEliminare, $adminPage);
+    if(!preg_match("/^[A-Za-z0-9\-\s]+$/", $_POST["eliminaAutoAdmin"])){
+        $errElim = $errElim . "<p>Auto selezionata non valida.</p>";
+    }
+
+    if(!empty($errElim)){
+        $adminPage = str_replace("[errElim]", $errElim, $adminPage);
+        $adminPage = str_replace("[succElim]", $succElim, $adminPage);
+        echo $adminPage;
+        exit();
+    }
+
+    $idAuto = explode("-", $_POST["eliminaAutoAdmin"])[0];
+
+    try{
+        $db = new DBConnection();
+        $ris = $db->deleteAuto($idAuto);
+        $db->closeConnection();
+        unset($db);
+
+        if($ris == true){
+            $succElim .= "<p>Auto eliminata con successo.</p>";
+        }
+        else{
+            $errElim .= "<p>Auto non esiste. (ID: " . $idAuto . ")</p>";
+        }
+
+        $adminPage = str_replace("[errElim]", $errElim, $adminPage);
+        $adminPage = str_replace("[succElim]", $succElim, $adminPage);
+        $adminPage = setSelectAutoElim($adminPage);
+    }
+    catch(Exception $e){
+        header("location: 500.html");
+        exit();
+    }
 }
-catch(Exception $e){
-    header("location: 500.html");
-    exit();
+else{
+    $adminPage = setSelectAutoElim($adminPage);
+    $adminPage = str_replace("[errElim]", $errElim, $adminPage);
+    $adminPage = str_replace("[succElim]", $succElim, $adminPage);
 }
 
 echo $adminPage;

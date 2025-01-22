@@ -781,7 +781,34 @@ class DBConnection {
 	}
 	
 
+	//FUNZIONE PER CANCELLARE LE PRENOTAZIONI
+	public function deleteAuto($idAuto) {
+		
+		$query = "DELETE FROM Veicolo WHERE id = ?;";
 	
+		// Preparazione dello statement
+		$stmt = $this->connection->prepare($query);
+		if ($stmt === false) {
+			die("Errore nella preparazione dello statement: " . $this->connection->error);
+		}
+	
+		// Associazione dei parametri alla query
+		if (!$stmt->bind_param("d", $idAuto)) {
+			die("Errore nell'associazione dei parametri: " . $stmt->error);
+		}
+	
+		// Esecuzione dello statement
+		if (!$stmt->execute()) {
+			die("Errore nell'esecuzione dello statement: " . $stmt->error);
+		}
+	
+		// Controllo righe eliminate
+		if ($stmt->affected_rows > 0) {
+			return true; // Prenotazione eliminata con successo
+		} else {
+			return false; // Nessuna prenotazione corrisponde al codice fornito
+		}
+	}
 
 
 

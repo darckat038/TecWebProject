@@ -2147,7 +2147,6 @@ input[type="date"]::-webkit-calendar-picker-indicator {
 
 .riquadriAdmin p{
     padding: 0.1em;
-    color: var(--navbar-text-color);
 }
 
 .riquadriAdmin  span{

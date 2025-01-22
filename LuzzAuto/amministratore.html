@@ -175,17 +175,26 @@
 
 
     <section class="riquadriAdmin">
-      <form method="post" action="">
+      <form method="post" action="amministratore.php#eliminaButtonAdmin">
         <fieldset>
           <legend class="nomeRiqAdmin">Elimina Automobile</legend>
 
           <label for="eliminaAutoAdmin" id="labelEliminaAutoAdmin">Auto:</label>
           <select id="eliminaAutoAdmin" name="eliminaAutoAdmin" aria-label="Campo di inserimento dell'auto che desideri eliminare">
+              <option value=''>--seleziona--</option>
               [VeicoliDaEliminare]
           </select>
           <input type="submit" value="Elimina" id="eliminaButtonAdmin" aria-label="Elimina la prenotazione selezionata">
         </fieldset>
       </form>
+
+      <div class='form_errors'>
+        [errElim]
+      </div>
+
+      <div class='form_success'>
+          [succElim]
+      </div>
     </section>
 
 
