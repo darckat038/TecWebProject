@@ -71,17 +71,17 @@
 - [ ] Agguingere "skip to content" in tutte le pagine
 - [ ] Controllare le description di tutte le pagine (max: 145 caratteri)
 - [ ] Controllare "above the fold" in tutte le pagine
-- [ ] Controllare/mdificare messaggi errore/successo di tutte le form (vedi_slide:122 pdf:principi di web design)
+- [ ] Controllare/modificare messaggi errore/successo di tutte le form (vedi_slide:122 pdf:principi di web design)
 - [x] Nella pagina about togliere l'immagine della mappa e mettere solo un testo con l'indirizzo del concessionario e altre info
 - [ ] Aggiungere anche ontap oltre che onclick perchè i cellulari vecchi non fanno la conversione
 - [ ] .manifest ??? (vedi_slide:113 pdf:html)
-- [ ] Fare bene le pagine 404.html 403.html 500.html rassicurando l'utente
+- [ ] Fare bene le pagine 404.html 403.html 500.html rassicurando l'utente (Emanuele)
 - [ ] Impedire l'accesso diretto alle risorse della cartella assets
 - [ ] Dare enfasi ad alcune parole chiave con tag <em> e <strong>
 - [ ] Nella relazione descrivere strategia mobile first
 - [ ] Eseguire e descrivere nella relazione tutti i controlli sull'accessibilità eseguiti con i vari tool
 - [ ] Rimuovere file php_info.php
-- [ ] Sistemare dimensioni file immagini (max 1MB)
-- [ ] Rimuovere tutti i display: none
+- [ ] Sistemare dimensioni file immagini (max 1MB) (Emanuele)
+- [ ] Rimuovere tutti i display: none (Emanuele)
 - [ ] Aggiungere tag time/date in tabelle amministratore e utente
 
