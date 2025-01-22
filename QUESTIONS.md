@@ -85,4 +85,7 @@
 - [ ] Sistemare dimensioni file immagini (max 1MB) (Emanuele)
 - [ ] Rimuovere tutti i display: none (Emanuele)
 - [ ] Aggiungere tag time/date in tabelle amministratore e utente
+- [ ] Rimuovere exit da codice php amministratore primi 2 forms
+- [ ] Fare Js form gestione prenotazioni amministratore
+- [ ] In listino tenere come carburanti: Gasolio, Benzina, Elettrico, Ibrido
 
