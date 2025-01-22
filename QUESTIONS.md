@@ -60,36 +60,68 @@
   
 # ALTRE MODIFICHE DA IMPLEMENTARE E DOCUMENTARE IN RELAZIONE
 - [x] Nella pagina about.html dichiarare che il link con la mail porta effettivamente alla mail : indirizzomail@luzzauto.com(mail)
+
 - [x] Modificare title area personale: NO username -> SI Area Personale | LuzzAuto Concessionario
+
 - [x] Fix background troppo corto mobile in registrazione login utente amministratore
+
 - [x] Attributo enctype nel form aggiunta auto (vedi_slide:93 pdf:html)
+
 - [x] Modifica select auto in test_drive e amministratore (vedi_slide:95 pdf:html)
+
 - [ ] Tabella responsive mobile in utente e amministratore (vedi_slide:74 pdf:accessibilità)
+
 - [ ] Testo giustificato nel print.css
+
 - [ ] Aggiungere tabindex su tutti i link/funzionalità
+
 - [ ] Mettere placeholders di esempio in tutti gli input type text dei form (es: Fiat)
+
 - [ ] Agguingere "skip to content" in tutte le pagine
+
 - [ ] Controllare le description di tutte le pagine (max: 145 caratteri)
+
 - [ ] Controllare "above the fold" in tutte le pagine
+
 - [ ] Controllare/modificare messaggi errore/successo di tutte le form (vedi_slide:122 pdf:principi di web design)
+
 - [x] Nella pagina about togliere l'immagine della mappa e mettere solo un testo con l'indirizzo del concessionario e altre info
+
 - [ ] Aggiungere anche ontap oltre che onclick perchè i cellulari vecchi non fanno la conversione
+
 - [ ] .manifest ??? (vedi_slide:113 pdf:html)
+
 - [ ] Fare bene le pagine 404.html 403.html 500.html rassicurando l'utente (Emanuele)
+
 - [x] Impedire l'accesso diretto alle risorse della cartella assets
+
 - [ ] Dare enfasi ad alcune parole chiave con tag em e strong
+
 - [ ] Nella relazione descrivere strategia mobile first
+
 - [ ] Togliere tutti gli attributi aria-label negli input di tutti i form a cui è già associata una label con il tag html
+
 - [ ] Eseguire e descrivere nella relazione tutti i controlli sull'accessibilità eseguiti con i vari tool
+
 - [ ] Rimuovere file php_info.php
+
 - [ ] Sistemare dimensioni file immagini (max 1MB) (Emanuele)
+
 - [x] Rimuovere tutti i display: none (Emanuele) (PAIN)
+
 - [ ] Aggiungere tag time/date in tabelle amministratore e utente
+
 - [x] Rimuovere exit da codice php amministratore primi 2 forms
+
 - [ ] Fare Js form gestione prenotazioni amministratore
+
 - [ ] In listino tenere come carburanti: Gasolio, Benzina, Elettrico, Ibrido
+
 - [ ] Modificare select auto test_drive e amministratore usando solo l'id nel value
+
 - [ ] Mettere nella relazione che abbiamo tolto i display none
+
 - [ ] Mettere nella relazione che abbiamo usato modalità IE11
+
 - [ ] Sistemare tutti i warning di Wave e di Lighthouse
 
