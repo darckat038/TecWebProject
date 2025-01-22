@@ -200,5 +200,39 @@ if (isset($_POST['gestPrenAdmin'])) {
     $adminPage = str_replace("[err]", $err, $adminPage);
 }
 
+
+//ELIMINA PRENOTAZIONE
+
+//ESECUZIONE DELLA QUERY PER INSERIRE LE AUTO NEL SELECT
+try{
+    $a = array();
+    $db = new DBConnection();
+    $ris = $db->getFilteredVehicles($a);
+    $db->closeConnection();
+    unset($db);
+    $veicoliDaEliminare = '';
+    //INSERIMENTO DEI VEICOLI NEL SELECT
+    $marca = '';
+    foreach($ris as $row){
+        if($marca != $row["marca"]){
+            if($marca == ''){
+                $marca = $row["marca"];
+                $veicoliDaEliminare .= "<optgroup label='". $marca . "'>";
+            }
+            else{
+                $marca = $row["marca"];
+                $veicoliDaEliminare .= "</optgroup><optgroup label='". $marca . "'>";
+            }
+        }
+        $veicoliDaEliminare .= "<option value='" . $row["id"] . "-" . $row["marca"] . "-" . $row['modello'] . "'>" . $row["id"] . " - " . $row['modello'] ."</option>";
+    }
+
+    $adminPage = str_replace("[VeicoliDaEliminare]", $veicoliDaEliminare, $adminPage);
+}
+catch(Exception $e){
+    header("location: 500.html");
+    exit();
+}
+
 echo $adminPage;
 ?>
