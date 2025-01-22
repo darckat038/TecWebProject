@@ -135,6 +135,8 @@ if(isset($_POST["nome"]) || isset($_POST["cognome"]) || isset($_POST["username"]
         exit();
     }
 
+}else{
+    $pagina = str_replace("[err]", $err, $pagina);
 }
 
 
