@@ -95,7 +95,9 @@ try {
         $immagini = "<img src=\"assets/img/Content/auto_non_trovata.png\" alt=\"Auto ricoperta di schiuma\">";
         $stringaDettagli = "
             <h2>Qualcuno potrebbe aver portato il veicolo all'autolavaggio</h2>
-            <p>Non riusciamo a trovare i dettagli del veicolo specificato.</p>
+            <h3>Non riusciamo a trovare i dettagli del veicolo specificato</h3>
+            <p>Il veicolo che stai cercando non è disponibile nel nostro concessionario in questo momento.
+            Puoi riprovare più tardi oppure <a href='listino.php'>tornare al nostro listino</a>.</p>
             ";
         $stringaBottoni = "";
     }

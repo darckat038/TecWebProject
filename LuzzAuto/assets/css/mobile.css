@@ -69,6 +69,10 @@ select option {
     cursor: pointer;
 }
 
+h1, h2, h3 {
+    text-align: center;
+}
+
 /* CHECKBOX CUSTOM Sì/No */
 
 .interruttore p{

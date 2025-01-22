@@ -47,6 +47,10 @@ body.purple {
 
 html { scroll-behavior: smooth; }
 
+h1, h2, h3 {
+    text-align: center;
+}
+
 /******************* 
         MENU
 ********************/
