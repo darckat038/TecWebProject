@@ -17,6 +17,7 @@
 
     <script src="assets/js/file.js"></script>
     <script src="assets/js/toggle.js"></script>
+    <script src="assets/js/form_validation_amm_elimina.js"></script>
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -170,12 +171,21 @@
 
         </fieldset>
       </form>
+
+      <div class='form_errors'>
+        [errAdd]
+      </div>
+
+      <div class='form_success'>
+          [succAdd]
+      </div>
+
     </section>
 
 
 
     <section class="riquadriAdmin">
-      <form method="post" action="amministratore.php#eliminaButtonAdmin">
+      <form method="post" action="amministratore.php#eliminaButtonAdmin" id="eliminaAutoFormAdmin">
         <fieldset>
           <legend class="nomeRiqAdmin">Elimina Automobile</legend>
 
