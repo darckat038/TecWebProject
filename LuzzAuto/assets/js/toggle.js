@@ -36,6 +36,8 @@ function adjustMenuOnResize() {
         }
     }
     // Esegui al caricamento e al resize
+    if (window.innerWidth > 1024) tasto.classList.add("change");
+    else tasto.classList.remove("change");
     menuOpenClose();
     window.addEventListener('resize', function(){
         if (window.innerWidth > 1024) tasto.classList.add("change");
