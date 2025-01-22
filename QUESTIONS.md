@@ -83,10 +83,12 @@
 - [ ] Eseguire e descrivere nella relazione tutti i controlli sull'accessibilità eseguiti con i vari tool
 - [ ] Rimuovere file php_info.php
 - [ ] Sistemare dimensioni file immagini (max 1MB) (Emanuele)
-- [ ] Rimuovere tutti i display: none (Emanuele)
+- [x] Rimuovere tutti i display: none (Emanuele) (PAIN)
 - [ ] Aggiungere tag time/date in tabelle amministratore e utente
 - [ ] Rimuovere exit da codice php amministratore primi 2 forms
 - [ ] Fare Js form gestione prenotazioni amministratore
 - [ ] In listino tenere come carburanti: Gasolio, Benzina, Elettrico, Ibrido
 - [ ] Modifiare select auto test_drive e amministratore usando solo l'id nel value
+- [ ] Mettere nella relazione che abbiamo tolto i display none
+
 
