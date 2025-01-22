@@ -520,7 +520,7 @@ class DBConnection {
 
 	//FUNZIONE PER PRENDERE TUTTE LE PRENOTAZIONI PRESENTI NEL DB
 	public function getAllPrenotazioni() {
-		$query = "SELECT p.codice, v.marca, v.modello, p.dataOra, p.stato
+		$query = "SELECT p.codice, p.username, v.marca, v.modello, p.dataOra, p.stato
 					FROM Prenotazione p
 					JOIN Veicolo v ON p.idAuto = v.id
 					ORDER BY p.codice";
@@ -548,6 +548,33 @@ class DBConnection {
 		$stmt->close();
 	
 		return $rows;
+	}
+
+
+	//FUNZIONE PER AGGIORNARE LO STATO DELLA PRENOTAZIONE
+	function updateStatoPrenotazione($codicePrenotazione, $stato) {
+		$query = "UPDATE Prenotazione SET stato = ? WHERE codice = ?;";
+	
+		// Preparazione dello statement
+		$stmt = $this->connection->prepare($query);
+		if ($stmt === false) {
+			die("Errore nella preparazione dello statement: " . $this->connection->error);
+		}
+	
+		// Binding dei parametri
+		$stmt->bind_param("is", $stato, $codicePrenotazione);
+	
+		// Esecuzione dello statement
+		if (!$stmt->execute()) {
+			die("Errore nell'esecuzione dello statement: " . $stmt->error);
+		}
+	
+		// Controllo righe modificate
+		if ($stmt->affected_rows > 0) {
+			return true; // Stato aggiornato con successo
+		} else {
+			return false; // Nessuna prenotazione corrisponde al codice fornito
+		}
 	}
 	
 

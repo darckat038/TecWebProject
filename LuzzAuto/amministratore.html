@@ -65,13 +65,13 @@
             <legend class="nomeRiqAdmin">Gestione Prenotazioni</legend>
 
             <label for="gestPrenAdmin" id="labelPrenAdmin"><strong>Prenotazioni:</strong> </label>
-            <select id="gestPrenAdmin" name="gestPrenAdmin" aria-label="Campo di inserimento della prenotazione che desideri gestire">
+            <select id="gestPrenAdmin" name="gestPrenAdmin" aria-required='true' aria-label='Campo di inserimento della prenotazione che desideri gestire' required data-msg-required='Per favore, seleziona la prenotazione'>
               [prenotazioni]
             </select>
             <label for="azioneAdmin" id="labelAzioneAdmin"><strong>Azione:</strong> </label>
             <select id="azioneAdmin" name="azioneAdmin" aria-label="Azione che desideri effettuare">
-                <option value="Fiat">Accetta</option>
-                <option value="Ford">Rifiuta</option>
+                <option value="accetta">Accetta</option>
+                <option value="rifiuta">Rifiuta</option>
             </select>
             <input type="submit" value="Conferma" id="inviaAzioneAdmin" aria-label="Conferma i cambiamenti">
               
