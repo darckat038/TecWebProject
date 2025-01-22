@@ -97,5 +97,41 @@ $adminPage = file_get_contents('amministratore.html');
 $campiTabella = mostraTabellaPrenotazioni();
 $adminPage = str_replace("[campiTabella]", $campiTabella, $adminPage);
 
+//GESTIONE PRENOTAZIONI
+$err = "";
+
+
+//esecuzione della query
+try{
+    $db = new DBConnection();
+    $prenotazione = $db->getPrenElimina($username);
+    $db->closeConnection();
+
+    unset($db);
+
+    $prenotazioni = '';
+
+    //inserimento veicoli nel select
+    foreach($prenotazione as $row){
+        $val = $row["codice"] . "-" . $row["marca"] . "-" . $row['modello'];
+
+        //reimposto il valore settato
+        if(isset($_POST['gestPrenAdmin']) && $_POST['gestPrenAdmin'] == $val){
+            $prenotazioni .= "<option value='" . $val . "' selected>" . $row["codice"] . " - " . $row["marca"] . " " . $row['modello'] . "</option>";
+        }
+        else{
+            $prenotazioni .= "<option value='" . $val . "'>" . $row["codice"] . " - " . $row["marca"] . " " . $row['modello'] . "</option>";
+        }
+        
+    }
+    $adminPage = str_replace("[prenotazioni]", $prenotazioni, $adminPage);
+
+}
+    
+catch(Exception $e){
+    header("location: 500.html");
+    exit();
+}
+
 echo $adminPage;
 ?>
