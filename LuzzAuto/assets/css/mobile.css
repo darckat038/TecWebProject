@@ -197,9 +197,7 @@ h1.hide{
 }
 
 #menu{
-    list-style: none;
-    position: absolute;
-    margin: -9999em;
+    
     flex-direction: column;
     margin-top: 3.5em;
     text-align: center;
