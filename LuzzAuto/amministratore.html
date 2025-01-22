@@ -60,12 +60,13 @@
     </section>
 
     <section class="riquadriAdmin">
-        <form method="post" action="">
+        <form method="post" action="amministratore.php">
           <fieldset>
             <legend class="nomeRiqAdmin">Gestione Prenotazioni</legend>
 
             <label for="gestPrenAdmin" id="labelPrenAdmin">Prenotazioni:</label>
             <select id="gestPrenAdmin" name="gestPrenAdmin" aria-required='true' aria-label='Campo di inserimento della prenotazione che desideri gestire' required data-msg-required='Per favore, seleziona la prenotazione'>
+              <option value=''>--seleziona--</option>
               [prenotazioni]
             </select>
             <label for="azioneAdmin" id="labelAzioneAdmin">Azione:</label>
@@ -73,13 +74,13 @@
                 <option value="accetta">Accetta</option>
                 <option value="rifiuta">Rifiuta</option>
             </select>
-            <input type="submit" name="confAzionePrenotazioni" value="Conferma" id="inviaAzioneAdmin" aria-label="Conferma i cambiamenti">
+            <input type="submit" name="inviaAzioneAdmin" value="Conferma" id="inviaAzioneAdmin" aria-label="Conferma i cambiamenti">
               
           </fieldset>
         </form>
 
         <div class='form_errors'>
-          [err]
+          [errGest]
         </div>
     </section>
 

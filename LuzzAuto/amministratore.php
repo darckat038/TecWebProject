@@ -98,9 +98,6 @@ $adminPage = file_get_contents('amministratore.html');
 $campiTabella = mostraTabellaPrenotazioni();
 $adminPage = str_replace("[campiTabella]", $campiTabella, $adminPage);
 
-//GESTIONE PRENOTAZIONI
-$err = "";
-
 
 //esecuzione della query
 try{
@@ -136,70 +133,67 @@ catch(Exception $e){
     exit();
 }
 
-if (isset($_GET['confAzionePrenotazioni'])) {
+//GESTIONE PRENOTAZIONI
+$errGest = "";
+
+if (isset($_POST['gestPrenAdmin'])) {
 
     // Controllo sul campo prenotazione vuoto
     if (empty($_POST['gestPrenAdmin'])) {
-        $err .= "<p>Devi compilare tutti i campi.</p>";
-        $adminPage = str_replace("[err]", $err, $adminPage);
-        echo $adminPage;
-        exit();
+        $errGest .= "<p>Devi compilare tutti i campi.</p>";
     }
 
     // Controllo sull'input (validazione)
-    if (!preg_match("/^[A-Za-z0-9\-\s]+$/", $_POST["gestPrenAdmin"])) {
-        $err = $err . "<p>Prenotazione selezionata non valida</p>";
+    if (!preg_match("/^[0-9]+$/", $_POST["gestPrenAdmin"])) {
+        $errGest .= "<p>Prenotazione selezionata non valida</p>";
     }
 
     // Controllo sull'azione scelta
     if ($_POST["azioneAdmin"] != "accetta" && $_POST["azioneAdmin"] != "rifiuta") {
-        $err = $err . "<p>Azione selezionata non valida</p>";
+        $errGest .= "<p>Azione selezionata non valida</p>";
     }
 
     // Restituzione errori in caso di problemi di validazione
-    if (!empty($err)) {
-        $adminPage = str_replace("[err]", $err, $adminPage);
-        echo $adminPage;
-        exit();
-    }
+    if (!empty($errGest)) {
+        $adminPage = str_replace("[errGest]", $errGest, $adminPage);
+        
+    } else {
 
-    if($_POST["azioneAdmin"] == "accetta"){
-        $stato = 1;
-    }else{
-        $stato = -1;
-    }
-
-    // Recupero ID della prenotazione
-    $idPrenotazione = explode("-", $_POST["gestPrenAdmin"])[0];
-    $idPrenotazione = htmlspecialchars($idPrenotazione);
-
-    // Tentativo di aggiornamento della prenotazione
-    try {
-        $db = new DBConnection();
-        $ris = $db->updateStatoPrenotazione($idPrenotazione, $stato); // Assume che la funzione restituisca un booleano (true/false)
-        $db->closeConnection();
-        unset($db);
-
-        if ($ris==true) {
-                // Prenotazione aggiornata con successo
-                header("location: amministratore.php");
-        } else {
-            // Prenotazione non trovata
-            $err .= "<p>Prenotazione non esiste. (ID: " . $idPrenotazione . ")</p>";
+        if($_POST["azioneAdmin"] == "accetta"){
+            $stato = 1;
+        }else{
+            $stato = -1;
         }
 
-    } catch (Exception $e) {
-        // Gestione errori e logging
-        error_log("Errore: " . $e->getMessage());
-        header("location: 500.html");
-        exit();
+        // Recupero ID della prenotazione
+        $idPrenotazione = explode("-", $_POST["gestPrenAdmin"])[0];
+        $idPrenotazione = htmlspecialchars($idPrenotazione);
+
+        // Tentativo di aggiornamento della prenotazione
+        try {
+            $db = new DBConnection();
+            $ris = $db->updateStatoPrenotazione($idPrenotazione, $stato); // Assume che la funzione restituisca un booleano (true/false)
+            $db->closeConnection();
+            unset($db);
+
+            if (!$ris) {
+                // Prenotazione non trovata
+                $errGest .= "<p>Prenotazione non esiste. (ID: " . $idPrenotazione . ")</p>";
+            }
+
+        } catch (Exception $e) {
+            // Gestione errori e logging
+            error_log("Errore: " . $e->getMessage());
+            header("location: 500.html");
+            exit();
+        }
     }
 
     // Aggiornamento della pagina con esito finale
-    $adminPage = str_replace("[err]", $err, $adminPage);
+    $adminPage = str_replace("[errGest]", $errGest, $adminPage);
 
-}else{
-    $adminPage = str_replace("[err]", $err, $adminPage);
+} else {
+    $adminPage = str_replace("[errGest]", $errGest, $adminPage);
 }
 
 
