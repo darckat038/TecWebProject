@@ -114,14 +114,16 @@ try{
 
     //inserimento veicoli nel select
     foreach($prenotazione as $row){
-        $val = $row["codice"] . "-" . $row["marca"] . "-" . $row['modello'];
+        $val = $row["codice"];
 
-        //reimposto il valore settato se ci sono errori
-        if(isset($_POST['gestPrenAdmin']) && $_POST['gestPrenAdmin'] == $val) {
-            $prenotazioni .= "<option value='" . $val . "' selected>" . $row["codice"] . " - " . $row["marca"] . " " . $row['modello'] . "</option>";
-        }
-        else{
-            $prenotazioni .= "<option value='" . $val . "'>" . $row["codice"] . " - " . $row["marca"] . " " . $row['modello'] . "</option>";
+        if($row['stato'] == 0){
+            //reimposto il valore settato se ci sono errori
+            if(isset($_POST['gestPrenAdmin']) && $_POST['gestPrenAdmin'] == $val) {
+                $prenotazioni .= "<option value='" . $val . "' selected>Prenotazione numero " . $row["codice"] . "</option>";
+            }
+            else{
+                $prenotazioni .= "<option value='" . $val . "'>Prenotazione numero " . $row["codice"] . "</option>";
+            }
         }
         
     }
@@ -150,7 +152,7 @@ if (isset($_POST['gestPrenAdmin'])) {
     }
 
     // Controllo sull'azione scelta
-    if ($_POST["azione"] != "accetta" && $_POST["azione"] != "rifiuta") {
+    if ($_POST["azioneAdmin"] != "accetta" && $_POST["azioneAdmin"] != "rifiuta") {
         $err = $err . "<p>Azione selezionata non valida</p>";
     }
 
@@ -161,7 +163,7 @@ if (isset($_POST['gestPrenAdmin'])) {
         exit();
     }
 
-    if($_POST["azione"] == "accetta"){
+    if($_POST["azioneAdmin"] == "accetta"){
         $stato = 1;
     }else{
         $stato = -1;
