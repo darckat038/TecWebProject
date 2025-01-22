@@ -63,7 +63,7 @@
 - [x] Modificare title area personale: NO username -> SI Area Personale | LuzzAuto Concessionario
 - [x] Fix background troppo corto mobile in registrazione login utente amministratore
 - [x] Attributo enctype nel form aggiunta auto (vedi_slide:93 pdf:html)
-- [ ] Modifica select auto in test_drive e amministratore (vedi_slide:95 pdf:html)
+- [x] Modifica select auto in test_drive e amministratore (vedi_slide:95 pdf:html)
 - [ ] Tabella responsive mobile in utente e amministratore (vedi_slide:74 pdf:accessibilità)
 - [ ] Testo giustificato nel print.css
 - [ ] Aggiungere tabindex su tutti i link/funzionalità

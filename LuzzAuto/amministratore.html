@@ -64,19 +64,25 @@
 
             <legend class="nomeRiqAdmin">Gestione Prenotazioni</legend>
 
-            <label for="gestPrenAdmin" id="labelPrenAdmin"><strong>Prenotazioni:</strong> </label>
-            <select id="gestPrenAdmin" name="gestPrenAdmin" aria-label="Campo di inserimento della prenotazione che desideri gestire">
+
+            <select id="gestPrenAdmin" name="gestPrenAdmin" aria-required='true' aria-label='Campo di inserimento della prenotazione che desideri gestire' required data-msg-required='Per favore, seleziona la prenotazione'>
+            <label for="gestPrenAdmin" id="labelPrenAdmin">Prenotazioni:</label>
+
               [prenotazioni]
             </select>
-            <label for="azioneAdmin" id="labelAzioneAdmin"><strong>Azione:</strong> </label>
+            <label for="azioneAdmin" id="labelAzioneAdmin">Azione:</label>
             <select id="azioneAdmin" name="azioneAdmin" aria-label="Azione che desideri effettuare">
-                <option value="Fiat">Accetta</option>
-                <option value="Ford">Rifiuta</option>
+                <option value="accetta">Accetta</option>
+                <option value="rifiuta">Rifiuta</option>
             </select>
             <input type="submit" value="Conferma" id="inviaAzioneAdmin" aria-label="Conferma i cambiamenti">
               
           </fieldset>
         </form>
+
+        <div class='form_errors'>
+          [err]
+        </div>
     </section>
 
     <section class="riquadriAdmin">
@@ -176,12 +182,9 @@
         <fieldset>
           <legend class="nomeRiqAdmin">Elimina Automobile</legend>
 
-          <label for="eliminaAutoAdmin" id="labelEliminaAutoAdmin"><strong>Prenotazioni:</strong> </label>
+          <label for="eliminaAutoAdmin" id="labelEliminaAutoAdmin">Auto:</label>
           <select id="eliminaAutoAdmin" name="eliminaAutoAdmin" aria-label="Campo di inserimento dell'auto che desideri eliminare">
-              <option value="Fiat">Fiat Panda</option>
-              <option value="Ford">Ford Mustang</option>
-              <option value="Fiat">Tesla</option>
-              <option value="Ford">Alfa Romeo</option>
+              [VeicoliDaEliminare]
           </select>
           <input type="submit" value="Elimina" id="eliminaButtonAdmin" aria-label="Elimina la prenotazione selezionata">
         </fieldset>

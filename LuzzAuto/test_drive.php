@@ -18,7 +18,13 @@ $succ = "";
 
 $formORbuttonsHTML = "";
 
+$ammHTML = "
+<p>Hai fatto l'accesso come amministratore, non è quindi possibile effettuare una prenotazione.</p>
+";
+
+
 $formHTML = "
+        <p>Non aspettare oltre: fai il primo passo verso la tua nuova auto!</p>
         
         <form id='test_drive_form' method='post' action='test_drive.php#test_drive_prenota'>
             <fieldset>
@@ -50,6 +56,7 @@ $formHTML = "
         
         ";
 $buttonsHTML = "
+<p>Non aspettare oltre: fai il primo passo verso la tua nuova auto!</p>
 
 <p>Accedi al tuo profilo per usufruire del servizio di <span lang='en-GB'>Test Drive</span> :</p>
 <a href='login.html' onclick='setBackToOriginTestDrive()'>LogIn</a>
@@ -61,7 +68,7 @@ $buttonsHTML = "
 
 //CONTROLLO SE UTENTE IN SESSION STORAGE GIA' SETTATO
 session_start();
-if (isset($_SESSION["utente"])) {
+if (isset($_SESSION["utente"]) && $_SESSION["utente"] != "admin") {
     //IMPOSTO HTML DEL FORM
     $formORbuttonsHTML = $formHTML;
 
@@ -76,14 +83,25 @@ if (isset($_SESSION["utente"])) {
         unset($db);
         $veicoli = '';
         //INSERIMENTO DEI VEICOLI NEL SELECT
+        $marca = '';
         foreach($ris as $row){
+            if($marca != $row["marca"]){
+                if($marca == ''){
+                    $marca = $row["marca"];
+                    $veicoli .= "<optgroup label='". $marca . "'>";
+                }
+                else{
+                    $marca = $row["marca"];
+                    $veicoli .= "</optgroup><optgroup label='". $marca . "'>";
+                }
+            }
             $val = $row["id"] . "-" . $row["marca"] . "-" . $row['modello'];
             //REIMPOSTO IL VALORE SETTATO
             if((isset($_POST['test_drive_select_auto']) && $_POST['test_drive_select_auto'] == $val) || (isset($_COOKIE['auto_details_id']) && $_COOKIE['auto_details_id'] == $row["id"])){
-                $veicoli .= "<option value='" . $row["id"] . "-" . $row["marca"] . "-" . $row['modello'] . "' selected>" . $row["id"] . " - " . $row["marca"] . " " . $row['modello'] ."</option>";
+                $veicoli .= "<option value='" . $row["id"] . "-" . $row["marca"] . "-" . $row['modello'] . "' selected>" . $row["id"] . " - " . $row['modello'] ."</option>";
             }
             else{
-                $veicoli .= "<option value='" . $row["id"] . "-" . $row["marca"] . "-" . $row['modello'] . "'>" . $row["id"] . " - " . $row["marca"] . " " . $row['modello'] ."</option>";
+                $veicoli .= "<option value='" . $row["id"] . "-" . $row["marca"] . "-" . $row['modello'] . "'>" . $row["id"] . " - " . $row['modello'] ."</option>";
             }
         }
         if(isset($_COOKIE['auto_details_id'])){
@@ -99,6 +117,11 @@ if (isset($_SESSION["utente"])) {
 
 }
 else{
+    if(isset($_SESSION["utente"]) && $_SESSION["utente"] == "admin"){
+        $test_driveHTML = str_replace("[formORbuttons]", $ammHTML, $test_driveHTML);
+        echo $test_driveHTML;
+        exit();
+    }
     //IMPOSTO HTML DEI BOTTONI
     $formORbuttonsHTML = $buttonsHTML;
 
