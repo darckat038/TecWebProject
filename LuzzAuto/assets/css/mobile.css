@@ -198,12 +198,14 @@ h1.hide{
 
 #menu{
     list-style: none;
-    display: none;
+    position: absolute;
+    margin: -9999em;
     flex-direction: column;
     margin-top: 3.5em;
     text-align: center;
     padding-left: 0;
     z-index: 9999;
+    border-bottom: 1px solid white;
 }
 
 #menu li{
@@ -245,7 +247,8 @@ h1.hide{
     top: 0;
     right: 0;
     padding: 0.5em 0.5em;
-    justify-content: space-between
+    justify-content: space-between;
+    cursor: pointer;
 }
 
 .topNavBar #menu-button-container .menu-button-bar1,
