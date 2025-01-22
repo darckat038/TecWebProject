@@ -2007,7 +2007,7 @@ document.querySelectorAll('#list_filter .list_insert').forEach(select => {
     background-repeat: no-repeat;
     background-color: white;
     background-size:auto;
-    background-position: center;
+    background-position:top;
 }
 
 .signup_content{
