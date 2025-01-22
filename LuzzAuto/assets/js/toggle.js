@@ -79,7 +79,8 @@ function switchToggle() {
                 inputs.forEach(input => {
                     input.setAttribute("tabindex", "0");
                     input.style.position = "static";
-                    input.style.margin = "0";
+                    if(!input.classList.contains("list_button")) input.style.margin = "0";
+                    else input.style.margin = "3em auto 0";
                 });
             } else {
                 // Rimuovi menù

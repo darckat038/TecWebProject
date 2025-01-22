@@ -1135,6 +1135,7 @@ section.aboutUs_history img {
 #list_filter #list_filter_neopatentati {
     font-size: 1em;
     width: 13em;
+    align-self: center;
 }
 
 
