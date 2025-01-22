@@ -12,7 +12,7 @@ function validateFastSearch() {
 			let msg = "";
 
 			console.log("submit event");
-			resetFormError();
+			resetFormError(0);
 			if(!validateMarca()) {
 				ok = false;
 				msg += "<p id=\"marca_err\">Marca non valida, puoi usare solo lettere, numeri, spazi(non all'inizio e alla fine) e il carattere \"-\".</p>";
@@ -79,7 +79,7 @@ function validateFastSearch() {
 			}
 			if(!ok) {
 				console.log("Prevenzione del submit, errore trovato.");
-				addFormError(msg);
+				addFormError(msg, 0);
 				event.preventDefault();
 			} else {
 				console.log("Tutto ok, il form verrà inviato.");

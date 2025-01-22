@@ -11,7 +11,7 @@ function validateFastSearch() {
 		var ok = true;
 		let msg = "";
 
-		resetFormError();
+		resetFormError(0);
 		if(!validateMarca()) {
 			ok = false;
 			msg += "<p tabindex=\"0\" id=\"marca_err\">Marca non valida, puoi usare solo lettere, numeri, spazi(non all'inizio e alla fine) e il carattere \"-\".</p>";
@@ -29,7 +29,7 @@ function validateFastSearch() {
 			msg += "<p id=\"condizione_err\">Selezione condizione non valida. Selezionare nuovamente la scelta desiderata.</p>";
 		}
 		if(!ok) {
-			addFormError(msg);
+			addFormError(msg, 0);
 			event.preventDefault();
 		}
 	});

@@ -7,7 +7,7 @@ function validateRegisterData(){
     
     let form = document.getElementById('signup_form');
     form.addEventListener('submit', function (event){
-        resetFormError();
+        resetFormError(0);
         
         let msg = "";
         let ok = true;
@@ -37,7 +37,7 @@ function validateRegisterData(){
         }
 
         if(!ok){
-            addFormError(msg);
+            addFormError(msg, 0);
             event.preventDefault();
         }
         
