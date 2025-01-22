@@ -77,7 +77,7 @@
 - [ ] .manifest ??? (vedi_slide:113 pdf:html)
 - [ ] Fare bene le pagine 404.html 403.html 500.html rassicurando l'utente (Emanuele)
 - [x] Impedire l'accesso diretto alle risorse della cartella assets
-- [ ] Dare enfasi ad alcune parole chiave con tag <em> e <strong>
+- [ ] Dare enfasi ad alcune parole chiave con tag em e strong
 - [ ] Nella relazione descrivere strategia mobile first
 - [ ] Togliere tutti gli attributi aria-label negli input di tutti i form a cui è già associata una label con il tag html
 - [ ] Eseguire e descrivere nella relazione tutti i controlli sull'accessibilità eseguiti con i vari tool
