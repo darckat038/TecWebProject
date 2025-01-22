@@ -113,7 +113,7 @@
 
 - [x] Rimuovere exit da codice php amministratore primi 2 forms
 
-- [ ] Fare Js form gestione prenotazioni amministratore
+- [x] Fare Js form gestione prenotazioni amministratore
 
 - [ ] In listino tenere come carburanti: Gasolio, Benzina, Elettrico, Ibrido
 
