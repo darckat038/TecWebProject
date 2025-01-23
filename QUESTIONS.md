@@ -127,3 +127,5 @@
 
 - [ ] Sistemare la dl nel dettaglio auto: dd e dt sono invertiti
 
+- [ ] Inserire aria-label in ogni tag nav interattivo
+
