@@ -79,7 +79,7 @@
 
 - [ ] Agguingere "skip to content" in tutte le pagine
 
-- [ ] Controllare le description di tutte le pagine (max: 145 caratteri)
+- [x] Controllare le description di tutte le pagine (max: 145 caratteri)
 
 - [ ] Controllare "above the fold" in tutte le pagine
 

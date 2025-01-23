@@ -401,16 +401,15 @@ legend{
 /******************* 
         SIGNIN
 ********************/
-
-#modUtente_body{
+#signup_body{
     background-image: url(../img/Background/Luzzauto/LuzzAuto_facciata1.png);
     background-repeat: no-repeat;
     background-color: white;
     background-size:auto;
-    background-position: center;
+    background-position:top;
 }
 
-.modUtente_content{
+.signup_content{
     background-color: var(--form-bg-color);
     color: var(--form-text-color);
     padding: 2.5em;
@@ -421,25 +420,25 @@ legend{
     box-shadow: rgba(115, 115, 115, 0.35) 0px 5px 15px;
 }
 
-.modUtente_content > h1, .modUtente_content > p{
+.signup_content > h1, .signup_content > p{
     text-align: center;
 }
 
-.modUtente_content > h1{
+.signup_content > h1{
     margin-bottom: 1em;
     line-height: 1em;
 }
 
-#modUtente_form{
+#signup_form{
     margin: 1em 0;
 }
 
-#modUtente_form > fieldset{
+#signup_form > fieldset{
     display: flex;
     flex-direction: column;
 }
 
-#modUtente_form fieldset .modUtente_input{
+#signup_form fieldset .signup_input{
     height: 3em;
     border-radius: 0.5em;
     border: 1px solid var(--form-border-input-color);
@@ -455,14 +454,14 @@ input[type="date"]::-webkit-calendar-picker-indicator {
     border-radius: 0.5em;
 }
 
-#modUtente_form label{
+#signup_form label{
     background-color: var(--form-bg-color);
     margin-left: 0.8em;
     margin-top: 0.5em;
     color: var(--form-border-input-color);
 }
 
-#modUtente_button{
+#signup_button{
     color: var(--form-text-color);
     background-color: var(--form-bg-color);
     border: 1px solid white;
@@ -474,7 +473,7 @@ input[type="date"]::-webkit-calendar-picker-indicator {
     padding: 0.5em 1em;
 }
 
-#modUtente_button:hover{
+#signup_button:hover{
     background-color: var(--form-text-color);
     color: var(--form-bg-color);
 }
@@ -2010,15 +2009,15 @@ document.querySelectorAll('#list_filter .list_insert').forEach(select => {
     MODIFICA UTENTE
 ********************/
 
-#signup_body{
+#modUtente_body{
     background-image: url(../img/Background/Luzzauto/LuzzAuto_facciata1.png);
     background-repeat: no-repeat;
     background-color: white;
     background-size:auto;
-    background-position:top;
+    background-position: center;
 }
 
-.signup_content{
+.modUtente_content{
     background-color: var(--form-bg-color);
     color: var(--form-text-color);
     padding: 2.5em;
@@ -2029,25 +2028,25 @@ document.querySelectorAll('#list_filter .list_insert').forEach(select => {
     box-shadow: rgba(115, 115, 115, 0.35) 0px 5px 15px;
 }
 
-.signup_content > h1, .signup_content > p{
+.modUtente_content > h1, .modUtente_content > p{
     text-align: center;
 }
 
-.signup_content > h1{
+.modUtente_content > h1{
     margin-bottom: 1em;
     line-height: 1em;
 }
 
-#signup_form{
+#modUtente_form{
     margin: 1em 0;
 }
 
-#signup_form > fieldset{
+#modUtente_form > fieldset{
     display: flex;
     flex-direction: column;
 }
 
-#signup_form fieldset .signup_input{
+#modUtente_form fieldset .modUtente_input{
     height: 3em;
     border-radius: 0.5em;
     border: 1px solid var(--form-border-input-color);
@@ -2063,14 +2062,14 @@ input[type="date"]::-webkit-calendar-picker-indicator {
     border-radius: 0.5em;
 }
 
-#signup_form label{
+#modUtente_form label{
     background-color: var(--form-bg-color);
     margin-left: 0.8em;
     margin-top: 0.5em;
     color: var(--form-border-input-color);
 }
 
-#signup_button{
+#modUtente_button{
     color: var(--form-text-color);
     background-color: var(--form-bg-color);
     border: 1px solid white;
@@ -2082,7 +2081,7 @@ input[type="date"]::-webkit-calendar-picker-indicator {
     padding: 0.5em 1em;
 }
 
-#signup_button:hover{
+#modUtente_button:hover{
     background-color: var(--form-text-color);
     color: var(--form-bg-color);
 }
