@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html lang="it">
-<head>
+  <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width">
 
@@ -23,205 +23,204 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Lexend:wght@100..900&display=swap" rel="stylesheet">
-</head>
+  </head>
 
-<body id="admin_body">
-    
-  <nav class="topNavBar">
+  <body id="admin_body">
+      
+    <nav class="topNavBar">
 
-    <h1 class="hide">LuzzAuto</h1>
-    
-    <div id="menu-button-container" aria-label="Seleziona per espandere e comprimere il menù di navigazione">               
-      <div class="menu-button-bar1" aria-hidden="true"></div>
-      <div class="menu-button-bar2" aria-hidden="true"></div>
-      <div class="menu-button-bar3" aria-hidden="true"></div>
-    </div>
-    <ul id="menu"  aria-label="Menù del sito">
-        <li><a href="index.php"><span lang="eng">Home</span></a></li>
-        <li><a href="about.html" >Chi siamo</a></li>
-        <li><a href="listino.php" >Listino auto</a></li>
-        <li><a href="test_drive.html" ><span lang="eng">Test drive</span></a></li>
-        <li id="here"><a href="utente.php">Area riservata</a></li>
-    </ul>
-  </nav>
+      <h1 class="hide">LuzzAuto</h1>
+      
+      <div id="menu-button-container" aria-label="Seleziona per espandere e comprimere il menù di navigazione">               
+        <div class="menu-button-bar1" aria-hidden="true"></div>
+        <div class="menu-button-bar2" aria-hidden="true"></div>
+        <div class="menu-button-bar3" aria-hidden="true"></div>
+      </div>
+      <ul id="menu"  aria-label="Menù del sito">
+          <li><a href="index.php"><span lang="eng">Home</span></a></li>
+          <li><a href="about.html" >Chi siamo</a></li>
+          <li><a href="listino.php" >Listino auto</a></li>
+          <li><a href="test_drive.html" ><span lang="eng">Test drive</span></a></li>
+          <li id="here"><a href="utente.php">Area riservata</a></li>
+      </ul>
+    </nav>
 
-  <nav id="breadcrumb">
-      <p>Ti trovi in: Amministratore</p>
-  </nav>
+    <nav id="breadcrumb">
+        <p>Ti trovi in: Amministratore</p>
+    </nav>
 
 
-  <main class="admin_content">
+    <main class="admin_content">
 
-    <h1 id="saluto"></h1>
+      <h1 id="saluto"></h1>
 
-    <a href="logout.php" id="admin_logout"><span lang="en-GB">Logout</span></a>
+      <a href="logout.php" id="admin_logout"><span lang="en-GB">Logout</span></a>
 
-    <section class="prenAdmin">
-      [campiTabella]
-    </section>
+      <section class="prenAdmin">
+        [campiTabella]
+      </section>
 
-    <section class="riquadriAdmin">
-        <form method="post" action="amministratore.php" id="gestionePrenotazioneFormAdmin">
+      <section class="riquadriAdmin">
+          <form method="post" action="amministratore.php" id="gestionePrenotazioneFormAdmin">
+            <fieldset>
+              <legend class="nomeRiqAdmin">Gestione Prenotazioni</legend>
+
+              <label for="gestPrenAdmin" id="labelPrenAdmin">Prenotazioni:</label>
+              <select id="gestPrenAdmin" name="gestPrenAdmin" aria-required='true' aria-label='Campo di inserimento della prenotazione che desideri gestire' required data-msg-required='Per favore, seleziona la prenotazione'>
+                <option value=''>--seleziona--</option>
+                [prenotazioni]
+              </select>
+              <label for="azioneAdmin" id="labelAzioneAdmin">Azione:</label>
+              <select id="azioneAdmin" name="azioneAdmin" aria-label="Azione che desideri effettuare">
+                  <option value="accetta">Accetta</option>
+                  <option value="rifiuta">Rifiuta</option>
+              </select>
+              <input type="submit" name="inviaAzioneAdmin" value="Conferma" id="inviaAzioneAdmin" aria-label="Conferma i cambiamenti">
+                
+            </fieldset>
+          </form>
+
+          <div class='form_errors'>
+            [errGest]
+          </div>
+      </section>
+
+      <section class="riquadriAdmin">
+
+        <form id="aggiungiAutoFormAdmin" action="amministratore.php#aggiungiAutoFormAdmin" method="POST" enctype="multipart/form-data">
           <fieldset>
-            <legend class="nomeRiqAdmin">Gestione Prenotazioni</legend>
 
-            <label for="gestPrenAdmin" id="labelPrenAdmin">Prenotazioni:</label>
-            <select id="gestPrenAdmin" name="gestPrenAdmin" aria-required='true' aria-label='Campo di inserimento della prenotazione che desideri gestire' required data-msg-required='Per favore, seleziona la prenotazione'>
-              <option value=''>--seleziona--</option>
-              [prenotazioni]
+            <legend class="nomeRiqAdmin">Aggiungi Automobile</legend>
+
+            <label for="immagineOutAdmin" id="labelimmagineOutAdmin">Immagine esterna dell'auto:</label>
+            <input type="file" id="immagineOutAdmin" name="immagineOutAdmin" required aria-required="true" data-msg-required="Per favore, inserisci un'immagine" accept="image/*">
+            
+            <label for="altImmagineOutAdmin" id="labelAltImmagineOutAdmin">Testo alt per immagine interni:</label>
+            <textarea rows="10" columns="40" id="altImmagineOutAdmin" value="[altOut]" name="altImmagineOutAdmin" placeholder="Inserisci" required aria-required="true" data-msg-required="Per favore, inserisci un testo alternativo per l'immagine"></textarea>
+
+            <label for="immagineInAdmin" id="labelimmagineInAdmin">Immagine interni dell'auto:</label>
+            <input type="file" id="immagineInAdmin" name="immagineInAdmin" required aria-required="true" data-msg-required="Per favore, inserisci un'immagine" accept="image/*">
+
+            <label for="altImmagineInAdmin" id="labelAltImmagineInAdmin">Testo alt per immagine interni:</label>
+            <textarea rows="10" columns="40" id="altImmagineInAdmin" value="[altIn]" name="altImmagineInAdmin" placeholder="Inserisci" required aria-required="true" data-msg-required="Per favore, inserisci un testo alternativo per l'immagine"></textarea>
+
+            <label for="marcaAdmin" id="labelMarcaAdmin">Marca:</label>
+            <input type="text" id="marcaAdmin" value="[marca]" name="marcaAdmin" placeholder="Inserisci" required>
+
+            <label for="modelloAdmin" id="labelModelloAdmin">Modello:</label>
+            <input type="text" id="modelloAdmin" value="[modello]" name="modelloAdmin" placeholder="Inserisci" required>
+
+            <label for="annoAdmin" id="labelAnnoAdmin">Anno:</label>
+            <input type="number" id="annoAdmin" value="[anno]" name="annoAdmin" min="1990" step="1" max="2024" placeholder="Inserisci" required>
+
+            <label for="coloreAdmin" id="labelColoreAdmin">Colore:</label>
+            <select id="coloreAdmin" name="coloreAdmin" required>
+              <option value="">--seleziona--</option>
+              [colori]
             </select>
-            <label for="azioneAdmin" id="labelAzioneAdmin">Azione:</label>
-            <select id="azioneAdmin" name="azioneAdmin" aria-label="Azione che desideri effettuare">
-                <option value="accetta">Accetta</option>
-                <option value="rifiuta">Rifiuta</option>
+
+            <label for="alimentazioneAdmin" id="labelAlimAdmin">Alimentazione:</label>
+            <select id="alimentazioneAdmin" name="alimentazioneAdmin" required>
+              <option value="">--seleziona--</option>
+              <option [benzina]value="benzina">Benzina</option>
+              <option [gasolio]value="gasolio">Gasolio</option>
+              <option [elettrico]value="elettrico">Elettrico</option>
+              <option [metano]value="metano">Metano</option>
+              <option [ibrido]value="ibrido">Ibrido</option>
             </select>
-            <input type="submit" name="inviaAzioneAdmin" value="Conferma" id="inviaAzioneAdmin" aria-label="Conferma i cambiamenti">
-              
+
+            <label for="cambioAdmin" id="labelCambioAdmin">Cambio:</label>
+            <select id="cambioAdmin" name="cambioAdmin" required>
+              <option value="">--seleziona--</option>
+              <option [manuale]value="manuale">Manuale</option>
+              <option [automatico]value="automatico">Automatico</option>
+            </select>
+
+            <label for="trazioneAdmin" id="labelTrazioneAdmin">Trazione:</label>
+            <select id="trazioneAdmin" name="trazioneAdmin" required>
+              <option value="">--seleziona--</option>
+              <option [anteriore]value="anteriore">Anteriore</option>
+              <option [posteriore]value="posteriore">Posteriore</option>
+              <option [integrale]value="integrale">Integrale</option>
+            </select>
+
+            <label for="potenzaAdmin" id="labelPotenzaAdmin">Potenza (<abbr title="cavalli vapore">CV</abbr>):</label>
+            <input type="number" id="potenzaAdmin" value="[potenza]" name="potenzaAdmin" min="0" step="1" placeholder="Inserisci" required>
+
+            <label for="pesoAdmin" id="labelPesoAdmin">Peso (<abbr title="chilogrammi">kg</abbr>):</label>
+            <input type="number" id="pesoAdmin" value="[peso]" name="pesoAdmin" min="0" step="1" placeholder="Inserisci" required>
+
+            <label for="numero_postiAdmin" id="labelPostiAdmin">Numero posti:</label>
+            <input type="number" id="numero_postiAdmin" value="[posti]" name="numero_postiAdmin" min="1" max="9" step="1" placeholder="Inserisci" required>
+
+            <label for="condizioneAdmin" id="labelCondizioniAdmin">Condizione:</label>
+            <select id="condizioneAdmin" name="condizioneAdmin" required>
+              <option value="">--seleziona--</option>
+              <option [nuovo]value="nuovo">Nuovo</option>
+              <option [usato]value="usato">Usato</option>
+              <option [km0]value="km0">KM 0</option>
+            </select>
+
+            <label for="chilometraggioAdmin" id="labelChilometriAdmin">Chilometraggio (<abbr title="chilometri">km</abbr>):</label>
+            <input type="number" id="chilometraggioAdmin" value="[chilometraggio]" name="chilometraggioAdmin" min="0" step="100" placeholder="Inserisci">
+            
+            <label for="prezzoAdmin" id="labelPrezzoAdmin">Prezzo (€):</label>
+            <input type="number" id="prezzoAdmin" value="[prezzo]" name="prezzoAdmin" min="0" step="1" placeholder="Inserisci" required>
+
+            <label for="neopatentatiAdmin" id="labelNeopAdmin">Idoneità neopatentati:</label>
+            <select id="neopatentatiAdmin" name="neopatentatiAdmin" required>
+              <option value="">--seleziona--</option>
+              <option [noNeop]value="no">No</option>
+              <option [siNeop]value="si">Si</option>
+            </select>
+
+            <input type="submit" value="Aggiungi" id="bottoneAggiungi" aria-label="Bottone per confermare i dati e aggiungere una nuova auto">
+
           </fieldset>
         </form>
 
         <div class='form_errors'>
-          [errGest]
+          [errAdd]
         </div>
-    </section>
 
-    <section class="riquadriAdmin">
+        <div class='form_success'>
+            [succAdd]
+        </div>
 
-      <form id="aggiungiAutoFormAdmin" action="amministratore.php#aggiungiAutoFormAdmin" method="POST" enctype="multipart/form-data">
-        <fieldset>
-
-          <legend class="nomeRiqAdmin">Aggiungi Automobile</legend>
-
-          <label for="immagineOutAdmin" id="labelimmagineOutAdmin">Immagine esterna dell'auto:</label>
-          <input type="file" id="immagineOutAdmin" name="immagineOutAdmin" required aria-required="true" data-msg-required="Per favore, inserisci un'immagine">
-          
-          <label for="altImmagineOutAdmin" id="labelAltImmagineOutAdmin">Testo alt per immagine interni:</label>
-          <textarea rows="10" columns="40" id="altImmagineOutAdmin" name="altImmagineOutAdmin" placeholder="Inserisci" required aria-required="true" data-msg-required="Per favore, inserisci un testo alternativo per l'immagine"></textarea>
-
-          <label for="immagineInAdmin" id="labelimmagineInAdmin">Immagine interni dell'auto:</label>
-          <input type="file" id="immagineInAdmin" name="immagineInAdmin" required aria-required="true" data-msg-required="Per favore, inserisci un'immagine">
-
-          <label for="altImmagineInAdmin" id="labelAltImmagineInAdmin">Testo alt per immagine interni:</label>
-          <textarea rows="10" columns="40" id="altImmagineInAdmin" name="altImmagineInAdmin" placeholder="Inserisci" required aria-required="true" data-msg-required="Per favore, inserisci un testo alternativo per l'immagine"></textarea>
-
-          <label for="marcaAdmin" id="labelMarcaAdmin">Marca:</label>
-          <input type="text" id="marcaAdmin" name="marcaAdmin" placeholder="Inserisci" required>
-
-          <label for="modelloAdmin" id="labelModelloAdmin">Modello:</label>
-          <input type="text" id="modelloAdmin" name="modelloAdmin" placeholder="Inserisci" required>
-
-          <label for="annoAdmin" id="labelAnnoAdmin">Anno:</label>
-          <input type="number" id="annoAdmin" name="annoAdmin" min="1990" step="1" max="2024" placeholder="Inserisci" required>
-
-          <label for="coloreAdmin" id="labelColoreAdmin">Colore:</label>
-          <select id="coloreAdmin" name="coloreAdmin" required>
-            <option value="bianco">Bianco</option>
-            <option value="nero">Nero</option>
-            <option value="grigio">Grigio</option>
-            <option value="rosso">Rosso</option>
-            <option value="blu">Blu</option>
-            <option value="verde">Verde</option>
-            <option value="arancione">Arancione</option>
-            <option value="giallo">Giallo</option>
-          </select>
-
-          <label for="alimentazioneAdmin" id="labelAlimAdmin">Alimentazione:</label>
-          <select id="alimentazioneAdmin" name="alimentazioneAdmin" required>
-            <option value="benzina">Benzina</option>
-            <option value="gasolio">Gasolio</option>
-            <option value="elettrico">Elettrico</option>
-            <option value="metano">Metano</option>
-            <option value="ibrido">Ibrido</option>
-          </select>
-
-          <label for="cambioAdmin" id="labelCambioAdmin">Cambio:</label>
-          <select id="cambioAdmin" name="cambioAdmin" required>
-            <option value="manuale">Manuale</option>
-            <option value="automatico">Automatico</option>
-          </select>
-
-          <label for="trazioneAdmin" id="labelTrazioneAdmin">Trazione:</label>
-          <select id="trazioneAdmin" name="trazioneAdmin" required>
-            <option value="anteriore">Anteriore</option>
-            <option value="posteriore">Posteriore</option>
-            <option value="integrale">Integrale</option>
-          </select>
-
-          <label for="potenzaAdmin" id="labelPotenzaAdmin">Potenza (<abbr title="cavalli vapore">CV</abbr>):</label>
-          <input type="number" id="potenzaAdmin" name="potenzaAdmin" min="0" step="1" placeholder="Inserisci" required>
-
-          <label for="pesoAdmin" id="labelPesoAdmin">Peso (<abbr title="chilogrammi">kg</abbr>):</label>
-          <input type="number" id="pesoAdmin" name="pesoAdmin" min="0" step="1" placeholder="Inserisci" required>
-
-          <label for="numero_postiAdmin" id="labelPostiAdmin">Numero posti:</label>
-          <input type="number" id="numero_postiAdmin" name="numero_postiAdmin" min="1" max="9" step="1" placeholder="Inserisci" required>
-
-          <label for="condizioneAdmin" id="labelCondizioniAdmin">Condizione:</label>
-          <select id="condizioneAdmin" name="condizioneAdmin" required>
-            <option value="nuovo">Nuovo</option>
-            <option value="usato">Usato</option>
-            <option value="km0"><abbr title="Chilometro zero">KM 0</abbr></option>
-          </select>
-
-          <label for="chilometraggioAdmin" id="labelChilometriAdmin">Chilometraggio (<abbr title="chilometri">km</abbr>):</label>
-          <input type="number" id="chilometraggioAdmin" name="chilometraggioAdmin" min="0" step="100" placeholder="Inserisci">
-          
-          <label for="prezzoAdmin" id="labelPrezzoAdmin">Prezzo (€):</label>
-          <input type="number" id="prezzoAdmin" name="prezzoAdmin" min="0" step="1" placeholder="Inserisci" required>
-
-          <label for="neopatentatiAdmin" id="labelNeopAdmin">Idoneità neopatentati:</label>
-          <select id="neopatentatiAdmin" name="neopatentatiAdmin" required>
-            <option value="no">No</option>
-            <option value="si">Si</option>
-          </select>
-
-          <input type="submit" value="Aggiungi" id="bottoneAggiungi" aria-label="Bottone per confermare i dati e aggiungere una nuova auto">
-
-        </fieldset>
-      </form>
-
-      <div class='form_errors'>
-        [errAdd]
-      </div>
-
-      <div class='form_success'>
-          [succAdd]
-      </div>
-
-    </section>
+      </section>
 
 
 
-    <section class="riquadriAdmin">
-      <form method="post" action="amministratore.php#eliminaButtonAdmin" id="eliminaAutoFormAdmin">
-        <fieldset>
-          <legend class="nomeRiqAdmin">Elimina Automobile</legend>
+      <section class="riquadriAdmin">
+        <form method="post" action="amministratore.php#eliminaButtonAdmin" id="eliminaAutoFormAdmin">
+          <fieldset>
+            <legend class="nomeRiqAdmin">Elimina Automobile</legend>
 
-          <label for="eliminaAutoAdmin" id="labelEliminaAutoAdmin">Auto:</label>
-          <select id="eliminaAutoAdmin" name="eliminaAutoAdmin" aria-required='true' required>
-              <option value=''>--seleziona--</option>
-              [VeicoliDaEliminare]
-          </select>
-          <input type="submit" value="Elimina" id="eliminaButtonAdmin" aria-label="Elimina la prenotazione selezionata">
-        </fieldset>
-      </form>
+            <label for="eliminaAutoAdmin" id="labelEliminaAutoAdmin">Auto:</label>
+            <select id="eliminaAutoAdmin" name="eliminaAutoAdmin" aria-required='true' required>
+                <option value=''>--seleziona--</option>
+                [VeicoliDaEliminare]
+            </select>
+            <input type="submit" value="Elimina" id="eliminaButtonAdmin" aria-label="Elimina la prenotazione selezionata">
+          </fieldset>
+        </form>
 
-      <div class='form_errors'>
-        [errElim]
-      </div>
+        <div class='form_errors'>
+          [errElim]
+        </div>
 
-      <div class='form_success'>
-          [succElim]
-      </div>
-    </section>
+        <div class='form_success'>
+            [succElim]
+        </div>
+      </section>
 
 
 
-  </main>
-  <footer>
-    <img class="imgValidHTMLCode" src="assets/img/Footer/valid-xhtml10.png" alt="HTML valido">
-    <p>FFF&E Co. - <span lang="en-GB">All rights Reserved</span> - Alcuni marchi e modelli sono frutto della nostra immaginazione; le immagini relative sono state generate da strumenti di intelligenza artificiale.</p>
-    <img class="imgValidCSSCode" src="assets/img/Footer/vcss-blue.gif" alt="CSS valido">
-  </footer>
-</body>
+    </main>
+    <footer>
+      <img class="imgValidHTMLCode" src="assets/img/Footer/valid-xhtml10.png" alt="HTML valido">
+      <p>FFF&E Co. - <span lang="en-GB">All rights Reserved</span> - Alcuni marchi e modelli sono frutto della nostra immaginazione; le immagini relative sono state generate da strumenti di intelligenza artificiale.</p>
+      <img class="imgValidCSSCode" src="assets/img/Footer/vcss-blue.gif" alt="CSS valido">
+    </footer>
+  </body>
 </html>
