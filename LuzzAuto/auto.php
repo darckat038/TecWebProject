@@ -92,7 +92,7 @@ try {
         <a class="list_button" href="test_drive.php#test_drive_prenota">Prenota un test drive</a>';
 
     } else {
-        $immagini = "<img src=\"assets/img/Content/auto_non_trovata.png\" alt=\"Auto ricoperta di schiuma\">";
+        $immagini = "<img src=\"assets/img/Content/auto_non_trovata.webp\" alt=\"Auto ricoperta di schiuma\">";
         $stringaDettagli = "
             <h2>Qualcuno potrebbe aver portato il veicolo all'autolavaggio</h2>
             <h3>Non riusciamo a trovare i dettagli del veicolo specificato</h3>

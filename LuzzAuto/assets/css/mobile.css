@@ -2363,17 +2363,24 @@ footer p {
 
 /*#region Pagine d'errore*/
 .errors_main {
-    margin: 8em;
+    margin: 8em 1em;
     height: max-content;
     text-align: center;
-    align-items: center;
     line-height: 2em;
+    background-color: black;
+    color: white;
+    padding: 2em;
+    border-radius: 2em 0em;
+    min-width: min-content;
 }
 
 .errors_main p {
     line-height: 1.3em
 }
 
+.errors_main img {
+    border-radius: 1em;
+}
 
 /******************* 
     SKIP TO CONTENT  
