@@ -95,13 +95,13 @@ if (isset($_SESSION["utente"]) && $_SESSION["utente"] != "admin") {
                     $veicoli .= "</optgroup><optgroup label='". $marca . "'>";
                 }
             }
-            $val = $row["id"] . "-" . $row["marca"] . "-" . $row['modello'];
+            $val = $row["id"];
             //REIMPOSTO IL VALORE SETTATO
             if((isset($_POST['test_drive_select_auto']) && $_POST['test_drive_select_auto'] == $val) || (isset($_COOKIE['auto_details_id']) && $_COOKIE['auto_details_id'] == $row["id"])){
-                $veicoli .= "<option value='" . $row["id"] . "-" . $row["marca"] . "-" . $row['modello'] . "' selected>" . $row["id"] . " - " . $row['modello'] ."</option>";
+                $veicoli .= "<option value='" . $row["id"] . "' selected>" . $row["id"] . " - " . $row['modello'] ."</option>";
             }
             else{
-                $veicoli .= "<option value='" . $row["id"] . "-" . $row["marca"] . "-" . $row['modello'] . "'>" . $row["id"] . " - " . $row['modello'] ."</option>";
+                $veicoli .= "<option value='" . $row["id"] . "'>" . $row["id"] . " - " . $row['modello'] ."</option>";
             }
         }
         if(isset($_COOKIE['auto_details_id'])){
@@ -143,7 +143,7 @@ if(isset($_POST['test_drive_select_auto']) && isset($_POST['test_drive_date'])){
     else{
 
         //CONTROLLI SULL'INPUT
-        if (!preg_match("/^[A-Za-z0-9\-\s]+$/", $_POST["test_drive_select_auto"])) {
+        if (!preg_match("/^[0-9]+$/", $_POST["test_drive_select_auto"])) {
 			$err = $err . "<p>Auto non valida</p>";
 		}
         $_POST["test_drive_date"] = str_replace("T", ' ', $_POST["test_drive_date"]) . ":00";
@@ -163,7 +163,7 @@ if(isset($_POST['test_drive_select_auto']) && isset($_POST['test_drive_date'])){
         //esecuzione query (controllo se auto esiste nella query)
         //far comparire una scritta verde 'richiesta inviata con successo e un link a area personale'
 
-        $idAuto = explode("-", $_POST["test_drive_select_auto"])[0];
+        $idAuto = $_POST["test_drive_select_auto"];
 
         //ESECUZIONE DELLA QUERY
 		try{

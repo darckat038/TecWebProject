@@ -117,7 +117,7 @@
 
 - [ ] In listino tenere come carburanti: Gasolio, Benzina, Elettrico, Ibrido
 
-- [ ] Modificare select auto test_drive e amministratore usando solo l'id nel value
+- [x] Modificare select auto test_drive e amministratore usando solo l'id nel value
 
 - [ ] Mettere nella relazione che abbiamo tolto i display none
 

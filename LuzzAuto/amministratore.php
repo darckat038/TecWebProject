@@ -3,6 +3,10 @@
 require_once 'dbConnection.php';
 use DB\DBConnection;
 
+function ripristinoInput($adminPage) {
+
+}
+
 function mostraTabellaPrenotazioni() {
     // Variabile per memorizzare il risultato
     $campiTabella = '';
@@ -188,9 +192,12 @@ $adminPage = str_replace("[errGest]", $errGest, $adminPage);
 $campiTabella = mostraTabellaPrenotazioni();
 $adminPage = str_replace("[campiTabella]", $campiTabella, $adminPage);
 
-// SELECT PRENOTAZIONI
+// SELECT GESTIONE PRENOTAZIONI
 
 $adminPage = setSelectPrenGest($adminPage);
+
+// AGGIUNGI AUTO
+
 
 //ELIMINA PRENOTAZIONE
 
@@ -216,7 +223,7 @@ function setSelectAutoElim($adminPage){
                     $veicoliDaEliminare .= "</optgroup><optgroup label='". $marca . "'>";
                 }
             }
-            $veicoliDaEliminare .= "<option value='" . $row["id"] . "-" . $row["marca"] . "-" . $row['modello'] . "'>" . $row["id"] . " - " . $row['modello'] ."</option>";
+            $veicoliDaEliminare .= "<option value='" . $row["id"] . "'>" . $row["id"] . " - " . $row['modello'] ."</option>";
         }
 
         $adminPage = str_replace("[VeicoliDaEliminare]", $veicoliDaEliminare, $adminPage);
@@ -241,7 +248,7 @@ if(isset($_POST['eliminaAutoAdmin'])){
         exit();
     }
 
-    if(!preg_match("/^[A-Za-z0-9\-\s]+$/", $_POST["eliminaAutoAdmin"])){
+    if(!preg_match("/^[0-9]+$/", $_POST["eliminaAutoAdmin"])){
         $errElim = $errElim . "<p>Auto selezionata non valida.</p>";
     }
 
@@ -253,7 +260,7 @@ if(isset($_POST['eliminaAutoAdmin'])){
         exit();
     }
 
-    $idAuto = explode("-", $_POST["eliminaAutoAdmin"])[0];
+    $idAuto = $_POST["eliminaAutoAdmin"];
 
     try{
         $db = new DBConnection();
