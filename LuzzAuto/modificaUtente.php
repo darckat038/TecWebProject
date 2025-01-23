@@ -85,8 +85,6 @@ if(isset($_POST["nome"]) || isset($_POST["cognome"]) || isset($_POST["username"]
 			$err = $err . "<p><span lang='en-GB'>Username</span> non valido, puoi usare solo lettere o numeri.</p>";
 		}
     }
-
-
     if(empty($_POST["password"]) && !empty($_POST["password2"])){
         $err = $err . "<p>Devi inserire anche la vecchia <span lang='en-GB'>password</span>.</p>";
     }
@@ -110,19 +108,26 @@ if(isset($_POST["nome"]) || isset($_POST["cognome"]) || isset($_POST["username"]
 		exit();
 	}
 
+    
     //ESECUZIONE DELLA QUERY
     try{
         $db = new DBConnection();
-        if(!empty($_POST['nome'])){
+        if($nome != $_POST["nome"]){
             $ris = $db->updateNome($username, $_POST['nome']);
         }
-        if(!empty($_POST['cognome'])){
+        if($cognome != $_POST["cognome"]){
             $ris = $db->updateCognome($username, $_POST['cognome']);
         }
-        if(!empty($_POST['username'])){
+        if($username != $_POST["username"]){
             $ris = $db->updateUsername($username, $_POST['username']);
-            $_SESSION["utente"] = $_POST['username'];
-        }
+            if($ris == -2){
+                $err = $err . "<p>L'<span lang='en-GB'>username</span> è già in uso da un altro utente!</p>";
+            } elseif($ris == -1){
+                $err = $err . "<p>Si è verificato un errore durante l'aggiornamento dell'<span lang='en-GB'>username</span>.</p>";
+            } else {
+                $_SESSION["utente"] = $_POST['username'];
+            }
+        }        
 
 
         if(!empty($_POST['password']) && !empty($_POST['password2'])){
@@ -131,8 +136,8 @@ if(isset($_POST["nome"]) || isset($_POST["cognome"]) || isset($_POST["username"]
                 $err = $err . "<p>La vecchia <span lang='en-GB'>password</span> non è corretta.</p>";
             }
         }
-        $db->closeConnection();
         
+        $db->closeConnection();
         unset($db);
 
         if (!empty($err)) {

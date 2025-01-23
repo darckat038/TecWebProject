@@ -77,11 +77,11 @@
 
 - [ ] Mettere placeholders di esempio in tutti gli input type text dei form (es: Fiat)
 
-- [ ] Agguingere "skip to content" in tutte le pagine
+- [x] Agguingere "skip to content" in tutte le pagine
 
 - [x] Controllare le description di tutte le pagine (max: 145 caratteri)
 
-- [ ] Controllare "above the fold" in tutte le pagine
+- [x] Controllare "above the fold" in tutte le pagine
 
 - [ ] Controllare/modificare messaggi errore/successo di tutte le form (vedi_slide:122 pdf:principi di web design)
 
@@ -103,7 +103,7 @@
 
 - [ ] Eseguire e descrivere nella relazione tutti i controlli sull'accessibilità eseguiti con i vari tool
 
-- [ ] Rimuovere file php_info.php
+- [x] Rimuovere file php_info.php
 
 - [ ] Sistemare dimensioni file immagini (max 1MB) (Emanuele)
 
@@ -128,4 +128,6 @@
 - [ ] Sistemare la dl nel dettaglio auto: dd e dt sono invertiti
 
 - [ ] Inserire aria-label in ogni tag nav interattivo (menu e breadcrumb se dentro c'è un link)
+
+- [ ] Fix tab in dettaglio auto
 

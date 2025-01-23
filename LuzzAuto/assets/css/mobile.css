@@ -224,23 +224,18 @@ h1.hide{
     font-size: 1.2em;
 }
 
-#menu #here{
-    background-color: white;
-    border-radius: 1em;
-    align-self: center;
-}
-
 #menu a:visited {
     color: var(--visited-link);
 }
 
-#menu #here a {
+#menu #here {
     text-decoration: none;
     pointer-events: none;
     background-color: var(--content-text-bg-color);
     color: var(--content-text-color);
     border-radius: 1em;
     padding: 0.4em 0.6em;
+    align-self: center;
 }
 
 .topNavBar #menu-button-container {
@@ -741,7 +736,6 @@ input[type="datetime-local"]::-webkit-calendar-picker-indicator {
     background-size: cover;
     background-repeat: no-repeat;
     background-position: top;
-    text-align: right;
     background-color: var(--header-bg-color);
     color: var(--header-text-color);
     width: 100%;
@@ -2374,4 +2368,35 @@ footer p {
     text-align: center;
     align-items: center;
     line-height: 2em;
+}
+
+
+/******************* 
+    SKIP TO CONTENT  
+********************/
+.header_help{
+    width: 100%;
+    text-align: center;
+    padding-top: 2em;
+}
+
+.aHelp {
+    position: absolute;
+    text-indent: -999em;
+    background-color: var(--navbar-bg-color);
+}
+
+.aHelp:focus {
+    position: absolute;
+    text-indent: 0;
+    margin: auto;
+    top: 7em;
+    left: 1em;
+    background-color: var(--navbar-bg-color);
+    width: auto;
+    text-align: left;
+}
+
+.navHelp ul {
+    list-style-type: none;
 }

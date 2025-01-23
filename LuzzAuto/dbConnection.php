@@ -608,7 +608,7 @@ class DBConnection {
 	}
 
 	public function updateNome($username, $nuovoNome) {
-    
+		
 		$query = "UPDATE Utente SET nome = ? WHERE username = ?;";
 		
 		// Preparazione dello statement
@@ -668,6 +668,27 @@ class DBConnection {
 		$this->connection->begin_transaction();
 	
 		try {
+			// Controlla se il nuovo username è già in uso
+			$queryCheck = "SELECT COUNT(*) FROM Utente WHERE username = ?";
+			$stmtCheck = $this->connection->prepare($queryCheck);
+			if ($stmtCheck === false) {
+				throw new Exception("Errore nella preparazione dello statement per il controllo: " . $this->connection->error);
+			}
+			if (!$stmtCheck->bind_param("s", $nuovoUsername)) {
+				throw new Exception("Errore nell'associazione dei parametri per il controllo: " . $stmtCheck->error);
+			}
+			if (!$stmtCheck->execute()) {
+				throw new Exception("Errore nell'esecuzione dello statement per il controllo: " . $stmtCheck->error);
+			}
+			$stmtCheck->bind_result($count);
+			$stmtCheck->fetch();
+			$stmtCheck->close();
+	
+			if ($count > 0) {
+				// Se il nuovo username è già in uso, ritorna -2
+				return -2;
+			}
+	
 			// Disabilita temporaneamente le foreign key
 			$this->connection->query("SET foreign_key_checks = 0;");
 	
@@ -703,15 +724,17 @@ class DBConnection {
 			// Commit della transazione se entrambe le operazioni sono riuscite
 			$this->connection->commit();
 	
-			return true;
+			return 1;
 		} catch (Exception $e) {
 			// In caso di errore, rollback della transazione
 			$this->connection->rollback();
 	
 			// Gestisci l'errore
-			die("Errore: " . $e->getMessage());
+			return -1;
 		}
 	}
+	
+	
 	
 	public function updatePassword($username, $vecchiaPassword, $nuovaPassword) {
 		try {

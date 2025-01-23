@@ -97,7 +97,7 @@ h1.hide{
     text-align: center;
 }
 
-#menu #here a {
+#menu #here {
     text-decoration: none;
     pointer-events: none;
     background-color: var(--content-text-bg-color);
@@ -2587,4 +2587,34 @@ footer p {
     text-align: center;
     align-items: center;
     line-height: 2.5em;
+}
+
+/******************* 
+    SKIP TO CONTENT  
+********************/
+.header_help{
+    width: 100%;
+    text-align: center;
+    padding-top: 2em;
+}
+
+.aHelp {
+    position: absolute;
+    text-indent: -999em;
+    background-color: var(--navbar-bg-color);
+}
+
+.aHelp:focus {
+    position: absolute;
+    text-indent: 0;
+    margin: auto;
+    top: 7em;
+    left: 1em;
+    background-color: var(--navbar-bg-color);
+    width: auto;
+    text-align: left;
+}
+
+.navHelp ul {
+    list-style-type: none;
 }
