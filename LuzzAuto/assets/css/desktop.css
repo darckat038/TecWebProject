@@ -251,7 +251,7 @@ select option {
 ********************/
 
 #login_body{
-    background-image: url(../img/Background/Luzzauto/LuzzAuto_facciata1.png);
+    background-image: url(../img/Background/area-personale.webp);
     background-repeat: no-repeat;
     background-color: white;
     background-size: cover;
@@ -345,7 +345,7 @@ select option {
 ********************/
 
 #signup_body{
-    background-image: url(../img/Background/Luzzauto/LuzzAuto_facciata1.png);
+    background-image: url(../img/Background/area-personale.webp);
     background-repeat: no-repeat;
     background-color: white;
     background-size:cover;
@@ -470,7 +470,7 @@ input[type="date"]::-webkit-calendar-picker-indicator {
     background-color: var(--navbar-bg-color);
     padding-top: 25%;
     padding-bottom: 20%;
-    background-image: url(../img/Background/Luzzauto/backgroundHeaderTestDrive.png);
+    background-image: url(../img/Background/header-testdrive.webp);
     background-size: cover;
     background-repeat: no-repeat;
     background-position: top;
@@ -722,7 +722,7 @@ input[type="datetime-local"]::-webkit-calendar-picker-indicator {
 #aboutUs_header {
     padding-top: 20%;
     padding-bottom: 20%;
-    background-image: url("../img/Background/Luzzauto/header_image_Luzzauto_dark.webp");
+    background-image: url("../img/Background/header-dark.webp");
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
@@ -1495,7 +1495,7 @@ p.list_car_list_empty {
 #home_header {
     padding-top: 20%;
     padding-bottom: 20%;
-    background-image: url("../img/Background/Luzzauto/header_image_Luzzauto_dark.webp");
+    background-image: url("../img/Background/header-dark.webp");
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
@@ -1975,7 +1975,7 @@ p.list_car_list_empty {
 ********************/
 
 #utente_body{
-    background-image: url(../img/Background/Luzzauto/LuzzAuto_facciata1.png);
+    background-image: url(../img/Background/area-personale.webp);
     background-repeat: repeat-y;
     background-color: white;
     background-size:cover;
@@ -2163,7 +2163,7 @@ p.list_car_list_empty {
 ********************/
 
 #modUtente_body{
-    background-image: url(../img/Background/Luzzauto/LuzzAuto_facciata1.png);
+    background-image: url(../img/Background/area-personale.webp);
     background-repeat: no-repeat;
     background-color: white;
     background-size:cover;
@@ -2287,7 +2287,7 @@ input[type="date"]::-webkit-calendar-picker-indicator {
 ********************/
 
 #admin_body{
-    background-image: url(../img/Background/Luzzauto/LuzzAuto_facciata1.png);
+    background-image: url(../img/Background/area-personale.webp);
     background-repeat: repeat-y;
     background-color: white;
     background-size:cover;

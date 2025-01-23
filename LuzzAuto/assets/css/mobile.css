@@ -316,7 +316,7 @@ a:visited {
 ********************/
 
 #login_body{
-    background-image: url(../img/Background/Luzzauto/LuzzAuto_facciata1.png);
+    background-image: url(../img/Background/area-personale.webp);
     background-repeat: no-repeat;
     background-color: white;
     background-size:auto;
@@ -397,7 +397,7 @@ legend{
         SIGNIN
 ********************/
 #signup_body{
-    background-image: url(../img/Background/Luzzauto/LuzzAuto_facciata1.png);
+    background-image: url(../img/Background/area-personale.webp);
     background-repeat: no-repeat;
     background-color: white;
     background-size:auto;
@@ -484,7 +484,7 @@ input[type="date"]::-webkit-calendar-picker-indicator {
     background-color: var(--navbar-bg-color);
     padding-top: 25%;
     padding-bottom: 20%;
-    background-image: url(../img/Background/Luzzauto/backgroundHeaderTestDrive.png);
+    background-image: url(../img/Background/header-testdrive.webp);
     background-size: cover;
     background-repeat: no-repeat;
     background-position: top;
@@ -732,7 +732,7 @@ input[type="datetime-local"]::-webkit-calendar-picker-indicator {
 #aboutUs_header {
     padding-top: 20%;
     padding-bottom: 20%;
-    background-image: url("../img/Background/Luzzauto/header_image_Luzzauto_dark.webp");
+    background-image: url("../img/Background/header-dark.webp");
     background-size: cover;
     background-repeat: no-repeat;
     background-position: top;
@@ -1425,7 +1425,7 @@ document.querySelectorAll('#list_filter .list_insert').forEach(select => {
 #home_header {
     padding-top: 20%;
     padding-bottom: 20%;
-    background-image: url("../img/Background/Luzzauto/header_image_Luzzauto_dark.webp");
+    background-image: url("../img/Background/header-dark.webp");
     background-size: cover;
     background-repeat: no-repeat;
     background-position: top;
@@ -1809,7 +1809,7 @@ document.querySelectorAll('#list_filter .list_insert').forEach(select => {
 ********************/
 
 #utente_body{
-    background-image: url(../img/Background/Luzzauto/LuzzAuto_facciata1.png);
+    background-image: url(../img/Background/area-personale.webp);
     background-repeat: repeat-y;
     background-color: white;
     background-size:auto;
@@ -2004,7 +2004,7 @@ document.querySelectorAll('#list_filter .list_insert').forEach(select => {
 ********************/
 
 #modUtente_body{
-    background-image: url(../img/Background/Luzzauto/LuzzAuto_facciata1.png);
+    background-image: url(../img/Background/area-personale.webp);
     background-repeat: no-repeat;
     background-color: white;
     background-size:auto;
@@ -2089,7 +2089,7 @@ input[type="date"]::-webkit-calendar-picker-indicator {
 ********************/
 
 #admin_body{
-    background-image: url(../img/Background/Luzzauto/LuzzAuto_facciata1.png);
+    background-image: url(../img/Background/area-personale.webp);
     background-repeat: repeat-y;
     background-color: white;
     background-size: cover;
