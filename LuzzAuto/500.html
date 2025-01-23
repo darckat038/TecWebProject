@@ -16,12 +16,48 @@
         <link rel="stylesheet" media="screen and (min-width:1025px)" href="assets/css/desktop.css" type="text/css">
         <link rel="stylesheet" media="print" href="assets/css/print.css" type="text/css">
 
+        <script src="assets/js/toggle.js"></script>
         <script src="assets/js/rand_message.js"></script>
+
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Lexend:wght@100..900&display=swap" rel="stylesheet">
     </head>
     <body>
-        <h1>Errore 500</h1>
-        <h2>Ops, sembra che siamo rimasti a secco!</h2>
-        <p>Al momento non possiamo servirti, ma ti assicuriamo che tutti i tuoi dati sono ancora al sicuro.</p>
-        <p><a href="/">Torna alla <span lang="en-GB">home</span></a></p>
+        <nav class="topNavBar">
+            <h1 class="hide">LuzzAuto</h1>
+            <div id="menu-button-container" aria-label="Seleziona per espandere e comprimere il menù di navigazione">               
+                <div class="menu-button-bar1" aria-hidden="true"></div>
+                <div class="menu-button-bar2" aria-hidden="true"></div>
+                <div class="menu-button-bar3" aria-hidden="true"></div>
+            </div>
+            <ul id="menu"  aria-label="Menù del sito">
+                <li><a href="index.php"><span lang="en-GB">Home</span></a></li>
+                <li><a href="about.html">Chi siamo</a></li>
+                <li><a href="listino.php">Listino auto</a></li>
+                <li><a href="test_drive.html"><span lang="en-GB">Test drive</span></a></li>
+                <li><a href="utente.php">Area riservata</a></li>
+            </ul>
+        </nav>
+        <nav id="breadcrumb">
+            <p>Ti trovi in: Errore 500</p>
+        </nav>
+        <main class="errors_main">
+            <img src="assets/img/Content/error500.png" height="260em" width="260em" alt="Indicatore di serbatoio carburante vuoto">
+            <h1>Ops, sembra che siamo rimasti a secco!</h1>
+            <h2>Il server non è attualmente disponibile.</h2>
+            <p>
+                Ci dispiace, al momento non possiamo servirti per un problema tecnico interno, ma ti assicuriamo che tutti i tuoi dati sono 
+                ancora al sicuro. Per favore riprova più tardi con la richiesta.
+                Se il problema persiste <a href="about.html#aboutUs_reachUs">non esitare a contattarci</a>;
+                altrimenti, <a href="/">puoi continuare la navigazione dalla <span lang="en-GB">home</span></a>.
+            </p>
+            <p>Grazie per la comprensione!</p>
+        </main>
+        <footer>
+            <img class="imgValidHTMLCode" src="assets/img/Footer/valid-xhtml10.png" alt="HTML valido">
+            <p>FFF&E Co. - <span lang="en-GB">All rights Reserved</span> - Alcuni marchi e modelli sono frutto della nostra immaginazione; le immagini relative sono state generate da strumenti di intelligenza artificiale.</p>
+            <img class="imgValidCSSCode" src="assets/img/Footer/vcss-blue.gif" alt="CSS valido">
+        </footer>
     </body>
 </html>
