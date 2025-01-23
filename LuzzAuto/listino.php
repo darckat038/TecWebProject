@@ -16,8 +16,6 @@ function ripristinoInput($listinoHTML) {
 	try {
 		$db = new DBConnection();
 
-		$params = array();
-
 		$colori = $db->getAllVehicleColors();
 
 		$db->closeConnection();
