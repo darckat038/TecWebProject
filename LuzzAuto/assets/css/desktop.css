@@ -1187,12 +1187,14 @@ section.aboutUs_history p {
     width: 5.5em;
 }
 
-#list_filter #list_filter_neopatentati {
+#list_filter #list_filter_neopatentati,
+#neopatentatiAdmin {
     width: 13em;
     margin-top: 2em;
 }
 
-#list_filter #list_filter_neopatentati .interruttore {
+#list_filter #list_filter_neopatentati .interruttore,
+#neopatentatiAdmin .interruttore {
     position: relative;
     display: inline-block;
     width: 50px;
@@ -1201,7 +1203,8 @@ section.aboutUs_history p {
     top: 0.2em;
 }
 
-#list_filter #list_label_neopatentati {
+#list_filter #list_label_neopatentati,
+#labelNeopatentatiAdmin {
     align-self: center;
     padding: 0;
 }
@@ -2441,7 +2444,7 @@ input[type="date"]::-webkit-calendar-picker-indicator {
 #labelMarcaAdmin, #labelModelloAdmin, #labelAnnoAdmin, #labelColoreAdmin,
 #labelAlimAdmin, #labelCambioAdmin, #labelTrazioneAdmin, #labelPotenzaAdmin, 
 #labelPesoAdmin, #labelPostiAdmin, #labelCondizioniAdmin, #labelChilometriAdmin,
-#labelPrezzoAdmin, #labelNeopAdmin, #labelNeopAdmin, #labelimmagineOutAdmin, #labelimmagineInAdmin,
+#labelPrezzoAdmin, #labelNeopAdmin, #labelimmagineOutAdmin, #labelimmagineInAdmin,
 #labelAltImmagineOutAdmin, #labelAltImmagineInAdmin {
     position: absolute;
     display: block;
@@ -2452,9 +2455,15 @@ input[type="date"]::-webkit-calendar-picker-indicator {
     padding: 0 0.3em;
 }
 
+#labelNeopatentatiAdmin, #neopatentatiAdmin {
+    display: inline-block;
+    color: var(--form-border-input-color);
+    background-color: var(--navbar-bg-color);
+}
+
 #marcaAdmin, #modelloAdmin, #annoAdmin, #coloreAdmin, #alimentazioneAdmin, 
 #cambioAdmin, #trazioneAdmin, #potenzaAdmin, #pesoAdmin, #numero_postiAdmin, 
-#condizioneAdmin, #chilometraggioAdmin, #prezzoAdmin, #neopatentatiAdmin, 
+#condizioneAdmin, #chilometraggioAdmin, #prezzoAdmin, 
 #altImmagineOutAdmin, #altImmagineInAdmin {
     width: 100%; 
     padding: 0.8em; 
@@ -2469,6 +2478,12 @@ input[type="date"]::-webkit-calendar-picker-indicator {
     margin-top: 2em;
     color: white;
 }
+
+#neopatentatiAdmin .interruttore {
+    top: 0;
+    margin-left: 1em;
+}
+
 #immagineOutAdmin, #immagineInAdmin{
     width: 100%; 
     padding: 0.8em; 
@@ -2481,10 +2496,9 @@ input[type="date"]::-webkit-calendar-picker-indicator {
     color: white;
 }
 
-#bottoneAggiungi{
-    display: flex;
-    margin: auto;
-    margin-top: 1em;
+#bottoneAggiungi {
+    display: block;
+    margin: 3em auto 0;
     padding: 0.5em 2em;
     color: white;
     cursor: pointer;
