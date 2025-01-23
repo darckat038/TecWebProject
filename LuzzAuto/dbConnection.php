@@ -607,8 +607,9 @@ class DBConnection {
 		}
 	}
 
+	//FUNZIONE PER AGGIORNARE IL NOME
 	public function updateNome($username, $nuovoNome) {
-		
+
 		$query = "UPDATE Utente SET nome = ? WHERE username = ?;";
 		
 		// Preparazione dello statement
@@ -635,6 +636,7 @@ class DBConnection {
 		}
 	}
 
+	//FUNZIONE PER AGGIORNARE IL COGNOME
 	public function updateCognome($username, $nuovoCognome) {
     
 		$query = "UPDATE Utente SET cognome = ? WHERE username = ?;";
@@ -663,140 +665,166 @@ class DBConnection {
 		}
 	}
 
+	//FUNZIONE PER AGGIORNARE USERNAME
 	public function updateUsername($username, $nuovoUsername) {
-		// Inizia la transazione
+		// Inizio transazione
 		$this->connection->begin_transaction();
 	
 		try {
-			// Controlla se il nuovo username è già in uso
-			$queryCheck = "SELECT COUNT(*) FROM Utente WHERE username = ?";
-			$stmtCheck = $this->connection->prepare($queryCheck);
-			if ($stmtCheck === false) {
+			// 0. Controllo se username è già in uso
+			$queryControllo = "SELECT COUNT(*) FROM Utente WHERE username = ?";
+
+			// Preparazione dello statement
+			$stmtControllo = $this->connection->prepare($queryControllo);
+			if ($stmtControllo === false) {
 				throw new Exception("Errore nella preparazione dello statement per il controllo: " . $this->connection->error);
 			}
-			if (!$stmtCheck->bind_param("s", $nuovoUsername)) {
-				throw new Exception("Errore nell'associazione dei parametri per il controllo: " . $stmtCheck->error);
+
+			// Associazione dei parametri alla query
+			if (!$stmtControllo->bind_param("s", $nuovoUsername)) {
+				throw new Exception("Errore nell'associazione dei parametri per il controllo: " . $stmtControllo->error);
 			}
-			if (!$stmtCheck->execute()) {
-				throw new Exception("Errore nell'esecuzione dello statement per il controllo: " . $stmtCheck->error);
+
+			// Esecuzione della query
+			if (!$stmtControllo->execute()) {
+				throw new Exception("Errore nell'esecuzione dello statement per il controllo: " . $stmtControllo->error);
 			}
-			$stmtCheck->bind_result($count);
-			$stmtCheck->fetch();
-			$stmtCheck->close();
+
+			$stmtControllo->bind_result($count);
+			$stmtControllo->fetch();
+			$stmtControllo->close();
 	
 			if ($count > 0) {
-				// Se il nuovo username è già in uso, ritorna -2
-				return -2;
+				return -2;		//se username già in uso
 			}
 	
-			// Disabilita temporaneamente le foreign key
-			$this->connection->query("SET foreign_key_checks = 0;");
+			
+			$this->connection->query("SET foreign_key_checks = 0;");		//disabilito temporaneamente la fk
 	
 			// 1. Aggiornare la tabella Prenotazione
 			$queryPrenotazione = "UPDATE Prenotazione SET username = ? WHERE username = ?";
+
+			// Preparazione dello statement
 			$stmtPrenotazione = $this->connection->prepare($queryPrenotazione);
 			if ($stmtPrenotazione === false) {
 				throw new Exception("Errore nella preparazione dello statement per Prenotazione: " . $this->connection->error);
 			}
+
+			// Associazione dei parametri alla query
 			if (!$stmtPrenotazione->bind_param("ss", $nuovoUsername, $username)) {
 				throw new Exception("Errore nell'associazione dei parametri per Prenotazione: " . $stmtPrenotazione->error);
 			}
+
+			// Esecuzione della query
 			if (!$stmtPrenotazione->execute()) {
 				throw new Exception("Errore nell'esecuzione dello statement per Prenotazione: " . $stmtPrenotazione->error);
 			}
+			
 	
 			// 2. Aggiornare la tabella Utente
 			$queryUtente = "UPDATE Utente SET username = ? WHERE username = ?";
+
+			// Preparazione dello statement
 			$stmtUtente = $this->connection->prepare($queryUtente);
 			if ($stmtUtente === false) {
 				throw new Exception("Errore nella preparazione dello statement per Utente: " . $this->connection->error);
 			}
+
+			// Associazione dei parametri alla query
 			if (!$stmtUtente->bind_param("ss", $nuovoUsername, $username)) {
 				throw new Exception("Errore nell'associazione dei parametri per Utente: " . $stmtUtente->error);
 			}
+
+			// Esecuzione della query
 			if (!$stmtUtente->execute()) {
 				throw new Exception("Errore nell'esecuzione dello statement per Utente: " . $stmtUtente->error);
 			}
 	
-			// Riabilita le foreign key
-			$this->connection->query("SET foreign_key_checks = 1;");
 	
+			$this->connection->query("SET foreign_key_checks = 1;");		// Riabilita la fk
+
 			// Commit della transazione se entrambe le operazioni sono riuscite
 			$this->connection->commit();
 	
 			return 1;
 		} catch (Exception $e) {
-			// In caso di errore, rollback della transazione
-			$this->connection->rollback();
+			$this->connection->rollback();	//in caso di errore ripristino allo stato precedente
 	
-			// Gestisci l'errore
 			return -1;
 		}
 	}
 	
 	
-	
+	//FUNZIONE PER AGGIORNARE LA PASSWORD
 	public function updatePassword($username, $vecchiaPassword, $nuovaPassword) {
 		try {
-			// Query per ottenere la password corrente dell'utente
+			// 1. Prendo la password corretta dall'utente
 			$query = "SELECT password FROM Utente WHERE username = ?;";
+
+			// Preparazione dello statement
 			$stmt = $this->connection->prepare($query);
 			if ($stmt === false) {
-				return -1; // Errore nella preparazione dello statement
+				throw new Exception("Errore nella preparazione dello statement: " . $this->connection->error);
 			}
 	
 			// Associazione dei parametri alla query
 			if (!$stmt->bind_param("s", $username)) {
-				return -1; // Errore nell'associazione dei parametri
+				throw new Exception("Errore nell'associazione dei parametri: " . $stmt->error);
 			}
 	
 			// Esecuzione della query
 			if (!$stmt->execute()) {
-				return -1; // Errore nell'esecuzione della query
+				throw new Exception("Errore nell'esecuzione della query: " . $stmt->error);
 			}
 	
 			// Recupero del risultato
 			$result = $stmt->get_result();
 			if ($result->num_rows === 0) {
-				return -1; // Utente non trovato
+				throw new Exception("Utente non trovato.");
 			}
 	
-			// Estrazione della password memorizzata
-			$row = $result->fetch_assoc();
+			$row = $result->fetch_assoc();		//prendo la password memorizzata
 			$passwordMemorizzata = $row['password'];
 	
 			// Confronto della vecchia password con quella memorizzata
 			if (!password_verify($vecchiaPassword, $passwordMemorizzata)) {
-				return -2; // La vecchia password non corrisponde
+				return -2; 	// Significa che non corrisponde
 			}
 	
-			// Query per aggiornare la password
+			// 2. Aggiorno la password 
 			$queryUpdate = "UPDATE Utente SET password = ? WHERE username = ?;";
+
+			// Preparazione dello statement
 			$stmtUpdate = $this->connection->prepare($queryUpdate);
 			if ($stmtUpdate === false) {
-				return -1; // Errore nella preparazione dello statement per l'update
+				throw new Exception("Errore nella preparazione dello statement per l'update: " . $this->connection->error);
 			}
 	
 			// Crittografia della nuova password
 			$nuovaPasswordCriptata = password_hash($nuovaPassword, PASSWORD_DEFAULT);
 	
-			// Associazione dei parametri per l'update
+			// Associazione dei parametri alla query
 			if (!$stmtUpdate->bind_param("ss", $nuovaPasswordCriptata, $username)) {
-				return -1; // Errore nell'associazione dei parametri per l'update
+				throw new Exception("Errore nell'associazione dei parametri per l'update: " . $stmtUpdate->error);
 			}
 	
-			// Esecuzione della query di aggiornamento
+			// Esecuzione della query
 			if (!$stmtUpdate->execute()) {
-				return -1; // Errore nell'esecuzione della query di aggiornamento
+				throw new Exception("Errore nell'esecuzione della query di aggiornamento: " . $stmtUpdate->error);
 			}
-	
-			// Verifica se la password è stata effettivamente aggiornata
-			return $stmtUpdate->affected_rows > 0 ? 1 : -1;
+			
+			// Verifico se la password è stata aggiornata
+			if ($stmtUpdate->affected_rows > 0) {
+				return 1;
+			} else {
+				return -1;
+			}
+
 		} catch (Exception $e) {
-			// Gestione degli errori imprevisti
 			return -1;
 		}
 	}
+	
 	
 
 	//FUNZIONE PER CANCELLARE LE PRENOTAZIONI

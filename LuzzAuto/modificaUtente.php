@@ -108,7 +108,7 @@ if(isset($_POST["nome"]) || isset($_POST["cognome"]) || isset($_POST["username"]
 		exit();
 	}
 
-    
+
     //ESECUZIONE DELLA QUERY
     try{
         $db = new DBConnection();
@@ -123,17 +123,17 @@ if(isset($_POST["nome"]) || isset($_POST["cognome"]) || isset($_POST["username"]
             if($ris == -2){
                 $err = $err . "<p>L'<span lang='en-GB'>username</span> è già in uso da un altro utente!</p>";
             } elseif($ris == -1){
-                $err = $err . "<p>Si è verificato un errore durante l'aggiornamento dell'<span lang='en-GB'>username</span>.</p>";
+                throw new Exception("Si è verificato un errore durante l'aggiornamento dell'<span lang='en-GB'>username</span>.");
             } else {
                 $_SESSION["utente"] = $_POST['username'];
             }
         }        
-
-
         if(!empty($_POST['password']) && !empty($_POST['password2'])){
             $ris = $db->updatePassword($username, $_POST['password'], $_POST['password2']);
             if($ris == -2){
                 $err = $err . "<p>La vecchia <span lang='en-GB'>password</span> non è corretta.</p>";
+            }elseif($ris == -1){
+                throw new Exception("Si è verificato un errore durante l'aggiornamento della <span lang='en-GB'>password</span>. ");
             }
         }
         
@@ -156,9 +156,6 @@ if(isset($_POST["nome"]) || isset($_POST["cognome"]) || isset($_POST["username"]
     $pagina = str_replace("[err]", $err, $pagina);
 }
 
-
-
 echo $pagina;
-
 
 ?>
