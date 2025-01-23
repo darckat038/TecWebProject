@@ -2061,6 +2061,7 @@ p.list_car_list_empty {
 
 /*tabella prenotazioni*/
 .nomeRiqPrenUtente{
+    text-align: left;
     color: var(--form-border-input-color);
     padding-left: 3em;
     font-weight: bold;
