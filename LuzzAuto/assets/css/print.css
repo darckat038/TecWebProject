@@ -13,6 +13,8 @@
 	background-image: none;
 	break-before:avoid;
 	font-size: 1em;
+	text-align: justify;
+	break-inside: avoid;
 }
 
 #menu-button-container, #menu, form, #home_fastSearch, #list_filter{
@@ -36,28 +38,25 @@ a:after {
 }
 
 #breadcrumb{
-	margin-top: 1cm;
-}
-
-header{
-	margin-top: 8cm;
-	break-after: page;
+	margin-top: 0.9cm;
 }
 
 img{
 	width: 25%;
-	display: block;
-	page-break-inside: avoid;
-	break-inside: avoid;
-	margin: 0 auto;
 }
 
-#aboutUs_reachUs, #list_car_list{
-	break-before: page;
+footer {
+    text-align: center;
+    padding: 1em 0;
+    width: 100%;
 }
 
-#aboutUs_reachUs img{
-	width: 50%;
+footer  img{
+	width: 10%;
+}
+
+h1{
+	font-size: 1.6em;
 }
 
 /*IMMAGINI INUTILI*/
@@ -65,14 +64,7 @@ img{
 	display: none;
 }
 
-footer {
-    text-align: center;
-    padding: 1em 0;
-    width: 100%;
-	position: absolute;
-	bottom: 0;
-}
-
-footer  img{
-	width: 10%;
+table, td, th{
+	border: 1px solid;
+	border-collapse: collapse;
 }

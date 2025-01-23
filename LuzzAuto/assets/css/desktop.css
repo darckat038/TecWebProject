@@ -486,6 +486,7 @@ input[type="date"]::-webkit-calendar-picker-indicator {
     margin-top: -0.5em;
     margin-bottom: 0.5em;
     margin-left: 10%;
+    text-align: left;
 }
 
 #test_drive_header p {
