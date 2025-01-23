@@ -66,6 +66,7 @@ $err = "";
 
 if(isset($_POST["nome"]) || isset($_POST["cognome"]) || isset($_POST["username"]) || isset($_POST["password"]) || isset($_POST["password2"])){
 
+
     if($nome != $_POST["nome"]){
         if (!preg_match("/^[A-Za-z]+$/", $_POST["nome"])) {
 			$err = $err . "<p>Nome non valido, puoi usare solo lettere.</p>";
@@ -85,10 +86,11 @@ if(isset($_POST["nome"]) || isset($_POST["cognome"]) || isset($_POST["username"]
 		}
     }
 
+
     if(empty($_POST["password"]) && !empty($_POST["password2"])){
         $err = $err . "<p>Devi inserire anche la vecchia <span lang='en-GB'>password</span>.</p>";
     }
-    
+
     if(!empty($_POST["password"]) && empty($_POST["password2"])){
         $err = $err . "<p>Devi inserire anche la nuova <span lang='en-GB'>password</span>.</p>";
     }
@@ -121,12 +123,22 @@ if(isset($_POST["nome"]) || isset($_POST["cognome"]) || isset($_POST["username"]
             $ris = $db->updateUsername($username, $_POST['username']);
             $_SESSION["utente"] = $_POST['username'];
         }
+
+
         if(!empty($_POST['password']) && !empty($_POST['password2'])){
             $ris = $db->updatePassword($username, $_POST['password'], $_POST['password2']);
+            if($ris == -2){
+                $err = $err . "<p>La vecchia <span lang='en-GB'>password</span> non è corretta.</p>";
+            }
         }
         $db->closeConnection();
         
         unset($db);
+
+        if (!empty($err)) {
+            echo str_replace("[err]", $err, $pagina);
+            exit();
+        }
         
         header("location: utente.php");
     }

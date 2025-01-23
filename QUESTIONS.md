@@ -79,7 +79,7 @@
 
 - [ ] Agguingere "skip to content" in tutte le pagine
 
-- [ ] Controllare le description di tutte le pagine (max: 145 caratteri)
+- [x] Controllare le description di tutte le pagine (max: 145 caratteri)
 
 - [ ] Controllare "above the fold" in tutte le pagine
 
@@ -117,7 +117,7 @@
 
 - [ ] In listino tenere come carburanti: Gasolio, Benzina, Elettrico, Ibrido
 
-- [ ] Modificare select auto test_drive e amministratore usando solo l'id nel value
+- [x] Modificare select auto test_drive e amministratore usando solo l'id nel value
 
 - [ ] Mettere nella relazione che abbiamo tolto i display none
 

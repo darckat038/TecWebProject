@@ -55,11 +55,11 @@ function validateEmptyAuto(){
 
 function validateAuto(){
     var auto = document.getElementById("test_drive_select_auto").value;
-    const validChars = /^[A-Za-z0-9\-\s]+$/;
+    const validChars = /^[0-9]+$/;
     if(auto.split("-")[0] == ""){
         return false;
     }
-    if(auto.split("-")[0] != "" &&  (!validChars.test(auto) || !isNumber(auto.split("-")[0]))){
+    if(!validChars.test(auto)){
         return false;
     }
     return true;
