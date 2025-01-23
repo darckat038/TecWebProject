@@ -3,6 +3,10 @@
 require_once 'dbConnection.php';
 use DB\DBConnection;
 
+function ripristinoInput($adminPage) {
+
+}
+
 function mostraTabellaPrenotazioni() {
     // Variabile per memorizzare il risultato
     $campiTabella = '';
@@ -188,9 +192,12 @@ $adminPage = str_replace("[errGest]", $errGest, $adminPage);
 $campiTabella = mostraTabellaPrenotazioni();
 $adminPage = str_replace("[campiTabella]", $campiTabella, $adminPage);
 
-// SELECT PRENOTAZIONI
+// SELECT GESTIONE PRENOTAZIONI
 
 $adminPage = setSelectPrenGest($adminPage);
+
+// AGGIUNGI AUTO
+
 
 //ELIMINA PRENOTAZIONE
 
