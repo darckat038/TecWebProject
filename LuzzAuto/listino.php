@@ -46,7 +46,7 @@ function ripristinoInput($listinoHTML) {
 		$listinoHTML = str_replace("[" . $_GET['alimentazione'] . "]", "selected ", $listinoHTML);
 	}
 	// rimpiazzo di default -> seleziono qualsiasi
-	$listinoHTML = str_replace(["[qualsiasiA]", "[benzina]", "[gasolio]", "[elettrico]", "[gpl]", "[ibrido]"], ["selected ", "", "", "", "", ""], $listinoHTML);
+	$listinoHTML = str_replace(["[qualsiasiA]", "[benzina]", "[gasolio]", "[elettrico]", "[metano]", "[ibrido]"], ["selected ", "", "", "", "", ""], $listinoHTML);
 
 	//replace cambio
 	if(htmlspecialchars(isset($_GET['cambio']))) {

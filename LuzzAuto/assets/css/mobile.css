@@ -506,6 +506,7 @@ input[type="date"]::-webkit-calendar-picker-indicator {
     margin-bottom: 0.5em;
     margin-left: 10%;
     line-height: 1em;
+    text-align: left;
 }
 
 #test_drive_header p {
@@ -2246,7 +2247,8 @@ input[type="date"]::-webkit-calendar-picker-indicator {
 #labelMarcaAdmin, #labelModelloAdmin, #labelAnnoAdmin, #labelColoreAdmin,
 #labelAlimAdmin, #labelCambioAdmin, #labelTrazioneAdmin, #labelPotenzaAdmin, 
 #labelPesoAdmin, #labelPostiAdmin, #labelCondizioniAdmin, #labelChilometriAdmin,
-#labelPrezzoAdmin, #labelNeopAdmin, #labelNeopAdmin, #labelimmagineOutAdmin, #labelimmagineInAdmin{
+#labelPrezzoAdmin, #labelNeopAdmin, #labelNeopAdmin, #labelimmagineOutAdmin, #labelimmagineInAdmin,
+#labelAltImmagineOutAdmin, #labelAltImmagineInAdmin {
     position: absolute;
     display: block;
     margin-left: 0.7em;
@@ -2258,7 +2260,8 @@ input[type="date"]::-webkit-calendar-picker-indicator {
 
 #marcaAdmin, #modelloAdmin, #annoAdmin, #coloreAdmin, #alimentazioneAdmin, 
 #cambioAdmin, #trazioneAdmin, #potenzaAdmin, #pesoAdmin, #numero_postiAdmin, 
-#condizioneAdmin, #chilometraggioAdmin, #prezzoAdmin, #neopatentatiAdmin{
+#condizioneAdmin, #chilometraggioAdmin, #prezzoAdmin, #neopatentatiAdmin, 
+#altImmagineOutAdmin, #altImmagineInAdmin {
     width: 100%; 
     padding: 0.8em; 
     border: 1px solid var(--form-border-input-color); 
@@ -2362,4 +2365,13 @@ footer {
 
 footer p {
     margin: 1em 0;
+}
+
+/*#region Pagine d'errore*/
+.errors_main {
+    margin: 8em;
+    height: 22em;
+    text-align: center;
+    align-items: center;
+    line-height: 2em;
 }
