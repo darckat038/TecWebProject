@@ -2248,7 +2248,8 @@ input[type="date"]::-webkit-calendar-picker-indicator {
 #labelMarcaAdmin, #labelModelloAdmin, #labelAnnoAdmin, #labelColoreAdmin,
 #labelAlimAdmin, #labelCambioAdmin, #labelTrazioneAdmin, #labelPotenzaAdmin, 
 #labelPesoAdmin, #labelPostiAdmin, #labelCondizioniAdmin, #labelChilometriAdmin,
-#labelPrezzoAdmin, #labelNeopAdmin, #labelNeopAdmin, #labelimmagineOutAdmin, #labelimmagineInAdmin{
+#labelPrezzoAdmin, #labelNeopAdmin, #labelNeopAdmin, #labelimmagineOutAdmin, #labelimmagineInAdmin,
+#labelAltImmagineOutAdmin, #labelAltImmagineInAdmin {
     position: absolute;
     display: block;
     margin-left: 0.7em;
@@ -2260,7 +2261,8 @@ input[type="date"]::-webkit-calendar-picker-indicator {
 
 #marcaAdmin, #modelloAdmin, #annoAdmin, #coloreAdmin, #alimentazioneAdmin, 
 #cambioAdmin, #trazioneAdmin, #potenzaAdmin, #pesoAdmin, #numero_postiAdmin, 
-#condizioneAdmin, #chilometraggioAdmin, #prezzoAdmin, #neopatentatiAdmin{
+#condizioneAdmin, #chilometraggioAdmin, #prezzoAdmin, #neopatentatiAdmin, 
+#altImmagineOutAdmin, #altImmagineInAdmin {
     width: 100%; 
     padding: 0.8em; 
     border: 1px solid var(--form-border-input-color); 
