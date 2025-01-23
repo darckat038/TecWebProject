@@ -129,3 +129,5 @@
 
 - [ ] Inserire aria-label in ogni tag nav interattivo (menu e breadcrumb se dentro c'è un link)
 
+- [ ] Fix tab in dettaglio auto
+
