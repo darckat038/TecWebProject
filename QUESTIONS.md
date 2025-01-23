@@ -73,7 +73,7 @@
 
 - [x] Testo giustificato nel print.css
 
-- [ ] Aggiungere tabindex su tutti i link/funzionalità
+- [ ] Aggiungere tabindex (accesskey) su tutti i link/funzionalità (Emanuele)
 
 - [ ] Mettere placeholders di esempio in tutti gli input type text dei form (es: Fiat)
 
