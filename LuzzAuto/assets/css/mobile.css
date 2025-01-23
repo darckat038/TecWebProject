@@ -2364,10 +2364,14 @@ footer p {
 /*#region Pagine d'errore*/
 .errors_main {
     margin: 8em;
-    height: 22em;
+    height: max-content;
     text-align: center;
     align-items: center;
     line-height: 2em;
+}
+
+.errors_main p {
+    line-height: 1.3em
 }
 
 
