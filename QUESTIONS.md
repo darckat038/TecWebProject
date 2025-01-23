@@ -77,7 +77,7 @@
 
 - [ ] Mettere placeholders di esempio in tutti gli input type text dei form (es: Fiat)
 
-- [ ] Agguingere "skip to content" in tutte le pagine
+- [x] Agguingere "skip to content" in tutte le pagine
 
 - [x] Controllare le description di tutte le pagine (max: 145 caratteri)
 
