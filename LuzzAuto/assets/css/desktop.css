@@ -97,7 +97,7 @@ h1.hide{
     text-align: center;
 }
 
-#menu #here a {
+#menu #here {
     text-decoration: none;
     pointer-events: none;
     background-color: var(--content-text-bg-color);
