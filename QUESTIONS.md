@@ -125,3 +125,5 @@
 
 - [ ] Sistemare tutti i warning di Wave e di Lighthouse
 
+- [ ] Sistemare la dl nel dettaglio auto: dd e dt sono invertiti
+
