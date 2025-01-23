@@ -4,7 +4,48 @@ require_once 'dbConnection.php';
 use DB\DBConnection;
 
 function ripristinoInput($adminPage) {
+    //RIPRISTINO DELL'INPUT INSERITO
+	// Se c'è input salvato in $_GET, mette quello, altrimenti valore di default (stringa vuota o select default)
+    $adminPage = str_replace('[imageOut]', htmlspecialchars(isset($_POST['immagineOutAdmin']) ? $_POST['immagineOutAdmin'] : ''), $adminPage);
+    $adminPage = str_replace('[altOut]', htmlspecialchars(isset($_POST['altImmagineOutAdmin']) ? $_POST['altImmagineOutAdmin'] : ''), $adminPage);
+    $adminPage = str_replace('[imageIn]', htmlspecialchars(isset($_POST['immagineInAdmin']) ? $_POST['immagineInAdmin'] : ''), $adminPage);
+    $adminPage = str_replace('[altIn]', htmlspecialchars(isset($_POST['altImmagineInAdmin']) ? $_POST['altImmagineInAdmin'] : ''), $adminPage);
+	$adminPage = str_replace('[marca]', htmlspecialchars(isset($_POST['marcaAdmin']) ? $_POST['marcaAdmin'] : ''), $adminPage);
+	$adminPage = str_replace('[modello]', htmlspecialchars(isset($_POST['modelloAdmin']) ? $_POST['modelloAdmin'] : ''), $adminPage);
+	$adminPage = str_replace('[anno]', htmlspecialchars(isset($_POST['annoAdmin']) ? $_POST['annoAdmin'] : ''), $adminPage);
+    $adminPage = str_replace("[colore]", htmlspecialchars(isset($_POST['coloreAdmin']) ? $_POST['coloreAdmin'] : ''), $adminPage);
 
+    if(htmlspecialchars(isset($_POST['alimentazioneAdmin']))) {
+		$adminPage = str_replace("[" . $_POST['alimentazioneAdmin'] . "]", "selected ", $adminPage);
+	}
+	$adminPage = str_replace(["[benzina]", "[gasolio]", "[elettrico]", "[metano]", "[ibrido]"], ["", "", "", "", ""], $adminPage);
+
+    if(htmlspecialchars(isset($_POST['cambioAdmin']))) {
+		$adminPage = str_replace("[" . $_POST['cambioAdmin'] . "]", "selected ", $adminPage);
+	}
+	$adminPage = str_replace(["[manuale]", "[automatico]"], ["", ""], $adminPage);
+
+    if(htmlspecialchars(isset($_POST['trazioneAdmin']))) {
+		$adminPage = str_replace("[" . $_POST['trazioneAdmin'] . "]", "selected ", $adminPage);
+	}
+	$adminPage = str_replace(["[anteriore]", "[posteriore]", "[integrale]"], ["", "", ""], $adminPage);
+
+    $adminPage = str_replace("[potenza]", htmlspecialchars(isset($_POST['potenzaAdmin']) ? $_POST['potenzaAdmin'] : ''), $adminPage);
+    $adminPage = str_replace("[peso]", htmlspecialchars(isset($_POST['pesoAdmin']) ? $_POST['pesoAdmin'] : ''), $adminPage);
+    $adminPage = str_replace("[posti]", htmlspecialchars(isset($_POST['numero_postiAdmin']) ? $_POST['numero_postiAdmin'] : ''), $adminPage);
+    $adminPage = str_replace("[potenza]", htmlspecialchars(isset($_POST['potenzaAdmin']) ? $_POST['potenzaAdmin'] : ''), $adminPage);
+
+    if(htmlspecialchars(isset($_POST['condizioneAdmin']))) {
+		$adminPage = str_replace("[" . $_POST['condizioneAdmin'] . "]", "selected ", $adminPage);
+	}
+	$adminPage = str_replace(["[nuovo]", "[usato]", "[km0]"], ["", "", ""], $adminPage);
+
+    $adminPage = str_replace("[chilometraggio]", htmlspecialchars(isset($_POST['chilometraggioAdmin']) ? $_POST['chilometraggioAdmin'] : ''), $adminPage);
+    $adminPage = str_replace("[prezzo]", htmlspecialchars(isset($_POST['prezzoAdmin']) ? $_POST['prezzoAdmin'] : ''), $adminPage);
+
+    $adminPage = str_replace("[neopatentati]", htmlspecialchars(isset($_POST['neopatentatiAdmin']) && intval($_POST["neopatentatiAdmin"]) == 1 ? 'checked ' : ''), $adminPage);
+	
+    return $adminPage;
 }
 
 function mostraTabellaPrenotazioni() {
