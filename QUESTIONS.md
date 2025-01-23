@@ -103,7 +103,7 @@
 
 - [ ] Eseguire e descrivere nella relazione tutti i controlli sull'accessibilità eseguiti con i vari tool
 
-- [ ] Rimuovere file php_info.php
+- [x] Rimuovere file php_info.php
 
 - [ ] Sistemare dimensioni file immagini (max 1MB) (Emanuele)
 
