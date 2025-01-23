@@ -91,7 +91,7 @@
 
 - [ ] .manifest ??? (vedi_slide:113 pdf:html)
 
-- [ ] Fare bene le pagine 404.html 403.html 500.html rassicurando l'utente (Emanuele)
+- [x] Fare bene le pagine 404.html 403.html 500.html rassicurando l'utente (Emanuele)
 
 - [x] Impedire l'accesso diretto alle risorse della cartella assets
 
