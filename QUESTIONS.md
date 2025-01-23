@@ -71,7 +71,7 @@
 
 - [ ] Tabella responsive mobile in utente e amministratore (vedi_slide:74 pdf:accessibilità)
 
-- [ ] Testo giustificato nel print.css
+- [x] Testo giustificato nel print.css
 
 - [ ] Aggiungere tabindex su tutti i link/funzionalità
 
@@ -124,4 +124,6 @@
 - [ ] Mettere nella relazione che abbiamo usato modalità IE11
 
 - [ ] Sistemare tutti i warning di Wave e di Lighthouse
+
+- [ ] Sistemare la dl nel dettaglio auto: dd e dt sono invertiti
 
