@@ -87,89 +87,95 @@
 
     <section class="riquadriAdmin">
 
-      <form id="formAdmin" action="" method="POST" enctype="multipart/form-data">
+      <form id="aggiungiAutoFormAdmin" action="amministratore.php#aggiungiAutoFormAdmin" method="POST" enctype="multipart/form-data">
         <fieldset>
 
           <legend class="nomeRiqAdmin">Aggiungi Automobile</legend>
 
           <label for="immagineOutAdmin" id="labelimmagineOutAdmin">Immagine esterna dell'auto:</label>
-          <input type="file" id="immagineOutAdmin" name="immagineOutAdmin" placeholder="Carica" aria-label="Campo di inserimento dell'immagine dell'auto vista da fuori." required>
+          <input type="file" id="immagineOutAdmin" name="immagineOutAdmin" required aria-required="true" data-msg-required="Per favore, inserisci un'immagine">
+          
+          <label for="altImmagineOutAdmin" id="labelAltImmagineOutAdmin">Testo alt per immagine interni:</label>
+          <textarea rows="10" columns="40" id="altImmagineOutAdmin" name="altImmagineOutAdmin" placeholder="Inserisci" required aria-required="true" data-msg-required="Per favore, inserisci un testo alternativo per l'immagine"></textarea>
 
           <label for="immagineInAdmin" id="labelimmagineInAdmin">Immagine interni dell'auto:</label>
-          <input type="file" id="immagineInAdmin" name="immagineInAdmin" placeholder="Carica" aria-label="Campo di inserimento dell'immagine degli interni dell'auto" required>
+          <input type="file" id="immagineInAdmin" name="immagineInAdmin" required aria-required="true" data-msg-required="Per favore, inserisci un'immagine">
+
+          <label for="altImmagineInAdmin" id="labelAltImmagineInAdmin">Testo alt per immagine interni:</label>
+          <textarea rows="10" columns="40" id="altImmagineInAdmin" name="altImmagineInAdmin" placeholder="Inserisci" required aria-required="true" data-msg-required="Per favore, inserisci un testo alternativo per l'immagine"></textarea>
 
           <label for="marcaAdmin" id="labelMarcaAdmin">Marca:</label>
-          <input type="text" id="marcaAdmin" name="marcaAdmin" placeholder="Inserisci" aria-label="Campo di inserimento della marca dell'auto" required>
+          <input type="text" id="marcaAdmin" name="marcaAdmin" placeholder="Inserisci" required>
 
           <label for="modelloAdmin" id="labelModelloAdmin">Modello:</label>
-          <input type="text" id="modelloAdmin" name="modelloAdmin" placeholder="Inserisci" aria-label="Campo di inserimento del modello dell'auto" required>
+          <input type="text" id="modelloAdmin" name="modelloAdmin" placeholder="Inserisci" required>
 
           <label for="annoAdmin" id="labelAnnoAdmin">Anno:</label>
-          <input type="number" id="annoAdmin" name="annoAdmin" min="1990" step="1" max="2024" placeholder="Inserisci" aria-label="Campo di inserimento dell'anno di produzione dell'auto" required>
+          <input type="number" id="annoAdmin" name="annoAdmin" min="1990" step="1" max="2024" placeholder="Inserisci" required>
 
           <label for="coloreAdmin" id="labelColoreAdmin">Colore:</label>
-          <select id="coloreAdmin" name="coloreAdmin" aria-label="Campo di inserimento del colore dell'auto" required>
-              <option value="bianco">Bianco</option>
-              <option value="nero">Nero</option>
-              <option value="grigio">Grigio</option>
-              <option value="rosso">Rosso</option>
-              <option value="blu">Blu</option>
-              <option value="verde">Verde</option>
-              <option value="arancione">Arancione</option>
-              <option value="giallo">Giallo</option>
+          <select id="coloreAdmin" name="coloreAdmin" required>
+            <option value="bianco">Bianco</option>
+            <option value="nero">Nero</option>
+            <option value="grigio">Grigio</option>
+            <option value="rosso">Rosso</option>
+            <option value="blu">Blu</option>
+            <option value="verde">Verde</option>
+            <option value="arancione">Arancione</option>
+            <option value="giallo">Giallo</option>
           </select>
 
           <label for="alimentazioneAdmin" id="labelAlimAdmin">Alimentazione:</label>
-          <select id="alimentazioneAdmin" name="alimentazioneAdmin" aria-label="Campo di inserimento dell'alimentazione dell'auto" required>
+          <select id="alimentazioneAdmin" name="alimentazioneAdmin" required>
             <option value="benzina">Benzina</option>
             <option value="gasolio">Gasolio</option>
             <option value="elettrico">Elettrico</option>
-            <option value="gpl">Ibrido <abbr title="">GPL</abbr></option>
-            <option value="plugin">Ibrido <span lang="en-GB">Plug-in</span></option>
+            <option value="metano">Metano</option>
+            <option value="ibrido">Ibrido</option>
           </select>
 
           <label for="cambioAdmin" id="labelCambioAdmin">Cambio:</label>
-          <select id="cambioAdmin" name="cambioAdmin" aria-label="Campo di inserimento del cambio dell'auto" required>
-              <option value="manuale">Manuale</option>
-              <option value="automatico">Automatico</option>
+          <select id="cambioAdmin" name="cambioAdmin" required>
+            <option value="manuale">Manuale</option>
+            <option value="automatico">Automatico</option>
           </select>
 
           <label for="trazioneAdmin" id="labelTrazioneAdmin">Trazione:</label>
-          <select id="trazioneAdmin" name="trazioneAdmin" aria-label="Campo di inserimento della trazione dell'auto" required>
-              <option value="anteriore">Anteriore</option>
-              <option value="posteriore">Posteriore</option>
-              <option value="integrale">Integrale</option>
+          <select id="trazioneAdmin" name="trazioneAdmin" required>
+            <option value="anteriore">Anteriore</option>
+            <option value="posteriore">Posteriore</option>
+            <option value="integrale">Integrale</option>
           </select>
 
           <label for="potenzaAdmin" id="labelPotenzaAdmin">Potenza (<abbr title="cavalli vapore">CV</abbr>):</label>
-          <input type="number" id="potenzaAdmin" name="potenzaAdmin" min="0" step="1" placeholder="Inserisci" aria-label="Campo di inserimento della potenza dell'auto in cavalli vapore" required>
+          <input type="number" id="potenzaAdmin" name="potenzaAdmin" min="0" step="1" placeholder="Inserisci" required>
 
           <label for="pesoAdmin" id="labelPesoAdmin">Peso (<abbr title="chilogrammi">kg</abbr>):</label>
-          <input type="number" id="pesoAdmin" name="pesoAdmin" min="0" step="1" placeholder="Inserisci" aria-label="Campo di inserimento del peso dell'auto in chilogrammi" required>
+          <input type="number" id="pesoAdmin" name="pesoAdmin" min="0" step="1" placeholder="Inserisci" required>
 
           <label for="numero_postiAdmin" id="labelPostiAdmin">Numero posti:</label>
-          <input type="number" id="numero_postiAdmin" name="numero_postiAdmin" min="1" max="9" step="1" placeholder="Inserisci" aria-label="Campo di inserimento del numero di posti dell'auto"  required>
+          <input type="number" id="numero_postiAdmin" name="numero_postiAdmin" min="1" max="9" step="1" placeholder="Inserisci" required>
 
-            <label for="condizioneAdmin" id="labelCondizioniAdmin">Condizione:</label>
-            <select id="condizioneAdmin" name="condizioneAdmin" aria-label="Campo di inserimento della condizione dell'auto" required>
-                <option value="nuovo">Nuovo</option>
-                <option value="usato">Usato</option>
-                <option value="km0"><abbr title="Chilometro zero">KM 0</abbr></option>
-            </select>
+          <label for="condizioneAdmin" id="labelCondizioniAdmin">Condizione:</label>
+          <select id="condizioneAdmin" name="condizioneAdmin" required>
+            <option value="nuovo">Nuovo</option>
+            <option value="usato">Usato</option>
+            <option value="km0"><abbr title="Chilometro zero">KM 0</abbr></option>
+          </select>
 
-            <label for="chilometraggioAdmin" id="labelChilometriAdmin">Chilometraggio (<abbr title="chilometri">km</abbr>):</label>
-            <input type="number" id="chilometraggioAdmin" name="chilometraggioAdmin" min="0" step="100" placeholder="Inserisci" aria-label="Campo di inserimento del chilometraggio massimo dell'auto">
-            
-            <label for="prezzoAdmin" id="labelPrezzoAdmin">Prezzo (€):</label>
-            <input type="number" id="prezzoAdmin" name="prezzoAdmin" min="0" step="1" placeholder="Inserisci" aria-label="Campo di inserimento del prezzo massimo dell'auto" required>
+          <label for="chilometraggioAdmin" id="labelChilometriAdmin">Chilometraggio (<abbr title="chilometri">km</abbr>):</label>
+          <input type="number" id="chilometraggioAdmin" name="chilometraggioAdmin" min="0" step="100" placeholder="Inserisci">
+          
+          <label for="prezzoAdmin" id="labelPrezzoAdmin">Prezzo (€):</label>
+          <input type="number" id="prezzoAdmin" name="prezzoAdmin" min="0" step="1" placeholder="Inserisci" required>
 
-            <label for="neopatentatiAdmin" id="labelNeopAdmin">Idoneità neopatentati:</label>
-            <select id="neopatentatiAdmin" name="neopatentatiAdmin" aria-label="Campo di inserimento se l'auto è per neopatentati" required>
-                <option value="no">No</option>
-                <option value="si">Si</option>
-            </select>
+          <label for="neopatentatiAdmin" id="labelNeopAdmin">Idoneità neopatentati:</label>
+          <select id="neopatentatiAdmin" name="neopatentatiAdmin" required>
+            <option value="no">No</option>
+            <option value="si">Si</option>
+          </select>
 
-            <input type="submit" value="Aggiungi" id="bottoneAggiungi" aria-label="Bottone per confermare i dati e aggiungere una nuova auto">
+          <input type="submit" value="Aggiungi" id="bottoneAggiungi" aria-label="Bottone per confermare i dati e aggiungere una nuova auto">
 
         </fieldset>
       </form>
