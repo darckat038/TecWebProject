@@ -2562,3 +2562,12 @@ footer p {
     display: inline-block;
     margin: auto 1em;
 }
+
+/*#region Pagine d'errore*/
+.errors_main {
+    margin: 8em;
+    height: 22em;
+    text-align: center;
+    align-items: center;
+    line-height: 2.5em;
+}
