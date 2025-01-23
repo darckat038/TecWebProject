@@ -24,6 +24,25 @@
     </head>
 
     <body id="utente_body">
+
+      <header class="header_help">
+        <nav aria-label="aiuti alla navigazione" class="navHelp">
+            <ul>
+                <li>
+                    <a href="#utente_logout" class="aHelp">Vai a logout</a>
+                </li>
+                <li>
+                    <a href="#informazioni_utente" class="aHelp">Vai alle informazioni utente</a>
+                </li>
+                <li>
+                  <a href="#prenotazioni_utente" class="aHelp">Vai alle prenotazioni</a>
+                </li>
+                <li>
+                  <a href="#gestione_prenotazioni" class="aHelp">Vai alla gestione delle prenotazioni</a>
+                </li>
+            </ul>
+        </nav>
+      </header>
     
       <nav class="topNavBar">
 
@@ -54,7 +73,7 @@
 
         <a href="logout.php" id="utente_logout"><span lang="en-GB">Logout</span></a>
 
-        <section class="riquadriUtente">
+        <section class="riquadriUtente" id="informazioni_utente">
           
           <h2 class="nomeRiqUtente">Informazioni Utente</h2>
           <img src="assets/img/ImmagineUtente/ImmagineUtente.svg" id="userImage"></img>
@@ -90,7 +109,7 @@
         </section>
 
 
-        <section class="riquadriUtente">
+        <section class="riquadriUtente" id="gestione_prenotazioni">
           <form method='post' action='utente.php'>
             <fieldset>
               <legend class='nomeRiqUtente'>Gestione Prenotazioni</legend>
