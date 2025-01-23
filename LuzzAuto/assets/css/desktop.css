@@ -2585,8 +2585,11 @@ footer p {
     margin: 8em;
     height: max-content;
     text-align: center;
-    align-items: center;
     line-height: 2.5em;
+    background-color: black;
+    color: white;
+    padding: 2em;
+    border-radius: 2em 0em;
 }
 
 .errors_main p {
