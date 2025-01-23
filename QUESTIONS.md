@@ -115,7 +115,7 @@
 
 - [x] Fare Js form gestione prenotazioni amministratore
 
-- [ ] In listino tenere come carburanti: Gasolio, Benzina, Elettrico, Ibrido
+- [ ] In listino tenere come carburanti: Gasolio, Benzina, Elettrico, Ibrido, Metano
 
 - [x] Modificare select auto test_drive e amministratore usando solo l'id nel value
 
