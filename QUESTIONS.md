@@ -81,7 +81,7 @@
 
 - [x] Controllare le description di tutte le pagine (max: 145 caratteri)
 
-- [ ] Controllare "above the fold" in tutte le pagine
+- [x] Controllare "above the fold" in tutte le pagine
 
 - [ ] Controllare/modificare messaggi errore/successo di tutte le form (vedi_slide:122 pdf:principi di web design)
 
