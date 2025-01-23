@@ -2596,6 +2596,10 @@ footer p {
     line-height: 1.3em;
 }
 
+.errors_main img {
+    border-radius: 1em;
+}
+
 /******************* 
     SKIP TO CONTENT  
 ********************/
