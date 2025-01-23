@@ -21,7 +21,7 @@ function adjustMenuOnResize() {
             menu.setAttribute("tabindex","0");
             links.forEach(link => {
                 link.setAttribute("tabindex", "0");
-                link.style.pointerEvents = "auto";
+                link.style.pointerEvents = (link.classList.contains("here") ? "none" : "auto");
             });
             tasto.setAttribute("aria-label","Seleziona per comprimere il menù di navigazione");
         } else {
