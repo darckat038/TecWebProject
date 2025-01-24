@@ -1312,12 +1312,12 @@ document.querySelectorAll('#list_filter .list_insert').forEach(select => {
     transition: color 0.3s ease;
 }
 
-.list_car_item .list_car_info dd {
+.list_car_item .list_car_info dt {
     font-weight: bold;
     padding-top: 0.3em;
 }
 
-.list_car_item .list_car_info dt {
+.list_car_item .list_car_info dd {
     font-size: 150%;
     font-weight: 300;
 }
@@ -1373,12 +1373,12 @@ document.querySelectorAll('#list_filter .list_insert').forEach(select => {
     column-gap: 0.9em;
 }
 
-#details dd {
+#details dt {
     font-weight: bold;
     padding-top: 0.3em;
 }
 
-#details dt {
+#details dd {
     font-size: 150%;
     font-weight: 300;
     margin-bottom: 0.5em;

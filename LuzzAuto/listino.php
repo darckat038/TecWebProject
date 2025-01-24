@@ -113,20 +113,20 @@ function getVehiclesFromDB($params, $listinoHTML) {
 						<div>
 							<dl class="list_car_info">
 								<div>
-									<dd>Marca</dd>
-									<dt>' . $vehicle["marca"] . '</dt>
+									<dt>Marca</dt>
+									<dd>' . $vehicle["marca"] . '</dd>
 								</div>
 								<div>
-									<dd>Modello</dd>
-									<dt>' . $vehicle["modello"] . '</dt>
+									<dt>Modello</dt>
+									<dd>' . $vehicle["modello"] . '</dd>
 								</div>
 								<div>
-									<dd>Condizioni</dd>
-									<dt>' . $vehicle["condizione"] . '</dt>
+									<dt>Condizioni</dt>
+									<dd>' . $vehicle["condizione"] . '</dd>
 								</div>
 								<div>
-									<dd>Prezzo</dd>
-									<dt><abbr title="Euro">&euro;</abbr> ' . $vehicle["prezzo"] . '</dt>
+									<dt>Prezzo</dt>
+									<dd><abbr title="Euro">&euro;</abbr> ' . $vehicle["prezzo"] . '</dd>
 								</div>
 							</dl>
 							<a class="list_car_item_link" href="auto.php?id=' . $vehicle["id"] . '">Vedi dettagli</a>

@@ -36,57 +36,57 @@ try {
         <h2>Dettagli</h2>
         <dl>
             <div>
-                <dd>Anno</dd>
-                <dt>' . $dettagli['anno'] . '</dt>
+                <dt>Anno</dt>
+                <dd>' . $dettagli['anno'] . '</dd>
             </div>
             <div>
-                <dd>Chilometraggio</dd>
-                <dt>' . $dettagli['chilometraggio'] . ' <abbr title="chilometri">km</abbr></dt>
+                <dt>Chilometraggio</dt>
+                <dd>' . $dettagli['chilometraggio'] . ' <abbr title="chilometri">km</abbr></dd>
             </div>
             <div>
-                <dd>Colore</dd>
-                <dt>' . $dettagli['colore'] . '</dt>
+                <dt>Colore</dt>
+                <dd>' . $dettagli['colore'] . '</dd>
             </div>
             <div>
-                <dd>Alimentazione</dd>
-                <dt>' . $dettagli['alimentazione'] . '</dt>
+                <dt>Alimentazione</dt>
+                <dd>' . $dettagli['alimentazione'] . '</dd>
             </div>
             <div>
-                <dd>Cambio</dd>
-                <dt>' . $dettagli['cambio'] . '</dt>
+                <dt>Cambio</dt>
+                <dd>' . $dettagli['cambio'] . '</dd>
             </div>
             <div>
-                <dd>Trazione</dd>
-                <dt>' . $dettagli['trazione'] . '</dt>
+                <dt>Trazione</dt>
+                <dd>' . $dettagli['trazione'] . '</dd>
             </div>
             <div>
-                <dd>Potenza</dd>
-                <dt>' . $dettagli['potenza'] . ' <abbr title="cavalli vapore">CV</abbr></dt>
+                <dt>Potenza</dt>
+                <dd>' . $dettagli['potenza'] . ' <abbr title="cavalli vapore">CV</abbr></dd>
             </div>
             <div>
-                <dd>Peso</dd>
-                <dt>' . $dettagli['peso'] . ' <abbr title="chili">kg</abbr></dt>
+                <dt>Peso</dt>
+                <dd>' . $dettagli['peso'] . ' <abbr title="chili">kg</abbr></dd>
             </div>
             <div>
-                <dd>Neopatentati abilitati</dd>
-                <dt>' . (($dettagli['neopatentati']==1)?'Sì':'No') . '</dt>
+                <dt>Neopatentati abilitati</dt>
+                <dd>' . (($dettagli['neopatentati']==1)?'Sì':'No') . '</dd>
             </div>
             <div>
-                <dd>Posti</dd>
-                <dt>' . $dettagli['numeroPosti'] . '</dt>
+                <dt>Posti</dt>
+                <dd>' . $dettagli['numeroPosti'] . '</dd>
             </div>
         </dl>';
 
         $stringaBottoni = '
         <dl>
-            <dd>Marca</dd>
-            <dt>' . $dettagli['marca'] . '</dt>
-            <dd>Modello</dd>
-            <dt>' . $dettagli['modello'] . '</dt>
-            <dd>Condizioni</dd>
-            <dt>' . (($dettagli['condizione']=="KM 0") ? "<abbr title='chilometro'>KM</abbr> 0" : $dettagli['condizione']) . '</dt>
-            <dd>Prezzo</dd>
-            <dt><abbr title="Euro">&euro;</abbr> ' . $dettagli['prezzo'] . '</dt>
+            <dt>Marca</dt>
+            <dd>' . $dettagli['marca'] . '</dd>
+            <dt>Modello</dt>
+            <dd>' . $dettagli['modello'] . '</dd>
+            <dt>Condizioni</dt>
+            <dd>' . (($dettagli['condizione']=="KM 0") ? "<abbr title='chilometro'>KM</abbr> 0" : $dettagli['condizione']) . '</dd>
+            <dt>Prezzo</dt>
+            <dd><abbr title="Euro">&euro;</abbr> ' . $dettagli['prezzo'] . '</dd>
         </dl>
 
         <a class="list_button" href="test_drive.php#test_drive_prenota">Prenota un test drive</a>';
