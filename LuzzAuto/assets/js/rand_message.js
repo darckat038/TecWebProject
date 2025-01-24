@@ -5,7 +5,7 @@ document.addEventListener("DOMContentLoaded", function () {
         [["-2"],["Auto in strada con molta nebbia"],["Nebbia fitta all'orizzonte!"],["accendi i fari antinebbia"]],
         [["-3"],["Strada transennata da un cantiere"],["Strada chiusa per lavori in corso."],["trova un percorso alternativo"]],
         [["-4"],["Auto con pneumatico forato caricata sul carro attrezzi"],["Hai forato!"],["chiama il carro attrezzi"]],
-        [["-5"],["Bandiera nera di squalifica sventolata in una gara automobilistica"],["Bandiera nera!"],["fermati ai box"]],
+        [["-5"],["Bandiera nera di squalifica sventolata in una gara automobilistica"],["Bandiera nera!"],["fermati ai <span lang='en-GB'>box</span>"]],
         [["-6"],["Strada interrotta da un muro con il dipinto della strada stessa"],["Strada interrotta!"],["fai inversione"]]
     ];
     // Scegli un messaggio casualmente
