@@ -105,7 +105,7 @@
 
 - [x] Rimuovere file php_info.php
 
-- [ ] Sistemare dimensioni file immagini (max 1MB) (Emanuele)
+- [x] Sistemare dimensioni file immagini (max 1MB) (Emanuele)
 
 - [x] Rimuovere tutti i display: none (Emanuele) (PAIN)
 
@@ -115,7 +115,7 @@
 
 - [x] Fare Js form gestione prenotazioni amministratore
 
-- [ ] In listino tenere come carburanti: Gasolio, Benzina, Elettrico, Ibrido, Metano
+- [x] In listino tenere come carburanti: Gasolio, Benzina, Elettrico, Ibrido, Metano
 
 - [x] Modificare select auto test_drive e amministratore usando solo l'id nel value
 
