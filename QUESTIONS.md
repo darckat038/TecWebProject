@@ -123,7 +123,14 @@
 
 - [ ] Mettere nella relazione che abbiamo usato modalità IE11
 
-- [ ] Sistemare tutti i warning di Wave e di Lighthouse
+- [ ] Sistemare tutti i warning di Wave
+(OK: 403)
+
+- [ ] Sistemare tutti i warning di Lighthouse
+(OK: )
+
+- [ ] Sistemare tutti i warning di WCAG Color checker
+(OK: 403)
 
 - [x] Sistemare la dl nel dettaglio auto: dd e dt sono invertiti
 
