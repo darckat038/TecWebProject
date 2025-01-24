@@ -1033,6 +1033,7 @@ section.aboutUs_history p {
     height: 12vw;
     width: 12vw;
     margin-right: 2em;
+    border-radius: 0.5em;
 }
 
 #aboutUs_ourTeam > dl > div > dt {
