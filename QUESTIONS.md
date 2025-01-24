@@ -73,8 +73,6 @@
 
 - [x] Testo giustificato nel print.css
 
-- [ ] Aggiungere tabindex (accesskey) su tutti i link/funzionalità (Emanuele)
-
 - [ ] Mettere placeholders di esempio in tutti gli input type text dei form (es: Fiat)
 
 - [x] Agguingere "skip to content" in tutte le pagine
@@ -123,7 +121,20 @@
 
 - [ ] Mettere nella relazione che abbiamo usato modalità IE11
 
-- [ ] Sistemare tutti i warning di Wave e di Lighthouse
+- [ ] Aggiungere tabindex (accesskey) su tutti i link/funzionalità (TEST NVDA) (Emanuele)
+(OK: )
+
+- [ ] Sistemare tutti i warning di Lighthouse
+(OK: )
+
+- [ ] Sistemare tutti i warning di Wave
+(OK: 403, 404)
+
+- [ ] Sistemare tutti i warning di WCAG Color checker
+(OK: 403, 404)
+
+- [ ] Check con IE11
+(OK: 403, 404)
 
 - [x] Sistemare la dl nel dettaglio auto: dd e dt sono invertiti
 
