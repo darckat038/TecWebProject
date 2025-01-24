@@ -131,5 +131,5 @@
 
 - [ ] Fix tab in dettaglio auto
 
-- [ ] rimuovere i console.log nel js
+- [ ] Rimuovere i console.log nel js
 
