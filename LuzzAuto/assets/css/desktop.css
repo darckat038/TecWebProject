@@ -2582,7 +2582,7 @@ footer p {
     margin: 8em;
     height: max-content;
     text-align: center;
-    line-height: 2.5em;
+    line-height: 3em;
     background-color: black;
     color: white;
     padding: 2em;
@@ -2590,7 +2590,7 @@ footer p {
 }
 
 .errors_main p {
-    line-height: 1.3em;
+    line-height: 1.5em;
 }
 
 .errors_main img {
