@@ -2368,7 +2368,7 @@ footer p {
     text-align: center;
     line-height: 3em;
     background-color: black;
-    color: white;
+    color: var(--navbar-text-color);
     padding: 2em;
     border-radius: 2em 0em;
     min-width: min-content;
