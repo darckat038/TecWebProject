@@ -73,8 +73,6 @@
 
 - [x] Testo giustificato nel print.css
 
-- [ ] Aggiungere tabindex (accesskey) su tutti i link/funzionalità (Emanuele)
-
 - [ ] Mettere placeholders di esempio in tutti gli input type text dei form (es: Fiat)
 
 - [x] Agguingere "skip to content" in tutte le pagine
@@ -122,6 +120,9 @@
 - [ ] Mettere nella relazione che abbiamo tolto i display none
 
 - [ ] Mettere nella relazione che abbiamo usato modalità IE11
+
+- [ ] Aggiungere tabindex (accesskey) su tutti i link/funzionalità (Emanuele)
+(OK: 403)
 
 - [ ] Sistemare tutti i warning di Wave
 (OK: 403)
