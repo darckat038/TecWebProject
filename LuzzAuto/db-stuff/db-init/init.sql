@@ -63,7 +63,7 @@ INSERT INTO Utente (username, password, nome, cognome, dataNascita) VALUES ("adm
     anno: int
     chilometraggio: int
     colore: stringa a piacere ma non mettere cose troppo complesse come "Blu metallizzato fiordaliso", meglio "Blu chiaro", sempre con la maiuscola iniziale
-    alimentazione: solo "Benzina", "Gasolio", "Elettrico", "Ibrido GPL" o "Ibrido Plug-in"
+    alimentazione: solo "Benzina", "Gasolio", "Elettrico", "Metano" o "Ibrido"
     cambio: solo "Manuale" o "Automatico"
     trazione: solo "Anteriore", "Posteriore" o "Integrale"
     potenza: int
@@ -82,84 +82,83 @@ INSERT INTO Utente (username, password, nome, cognome, dataNascita) VALUES ("adm
 /* UniPD */
 INSERT INTO Veicolo (marca, modello, condizione, prezzo, anno, chilometraggio, colore, alimentazione, cambio, trazione, potenza, peso, neopatentati, numeroPosti, 
     foto, alts)
-VALUES ('UniPD - Universal Premium Design', 'BotanicOrt', 'KM 0', 28000, 2022, 0, 'Grigio', 'Ibrido Plug-in', 'Automatico', 'Anteriore', 160, 1400, 0, 5, 
-    'botanicort.png+botanicort-interni.png', 
-    "Auto berlina grigia metallizzata, quattro porte, design elegante e moderno.+
-    Interni di lusso con sedili in pelle marrone, finiture in legno e schermo di infotainment.");
+VALUES ('UniPD - Universal Premium Design', 'BotanicOrt', 'KM 0', 28000, 2022, 0, 'Grigio', 'Ibrido', 'Automatico', 'Anteriore', 160, 1400, 0, 5, 
+    'botanicort.webp+botanicort-interni.webp', 
+    "Auto berlina grigia metallizzata, quattro porte, design elegante e moderno+
+    Interni di lusso con sedili in pelle marrone, finiture in legno e schermo di infotainment");
 
 INSERT INTO Veicolo (marca, modello, condizione, prezzo, anno, chilometraggio, colore, alimentazione, cambio, trazione, potenza, peso, neopatentati, numeroPosti, 
     foto, alts)
-VALUES ('UniPD - Universal Premium Design', 'Planetary', 'Nuovo', 38500, 2024, 0, 'Blu chiaro', 'Ibrido Plug-in', 'Automatico', 'Anteriore', 150, 1705, 0, 8, 
-    'planetary.png+planetary-interni.png', 
-    "Auto monovolume moderna blu brillante, cinque porte, grandi finestrini, fari a LED. Design elegante con cerchi in lega stilosi.+
-    Interni beige in pelle, cruscotto in legno, touchscreen grande e tetto panoramico.");
+VALUES ('UniPD - Universal Premium Design', 'Planetary', 'Nuovo', 38500, 2024, 0, 'Blu chiaro', 'Ibrido', 'Automatico', 'Anteriore', 150, 1705, 0, 8, 
+    'planetary.webp+planetary-interni.webp', 
+    "Auto monovolume moderna elegante blu brillante, cinque porte, grandi finestrini, fari a LED+
+    Interni beige in pelle, cruscotto in legno, touchscreen grande e tetto panoramico");
 
 INSERT INTO Veicolo (marca, modello, condizione, prezzo, anno, chilometraggio, colore, alimentazione, cambio, trazione, potenza, peso, neopatentati, numeroPosti, 
     foto, alts)
-VALUES ('UniPD - Universal Premium Design', 'Scrovenger', 'Nuovo', 42000, 2024, 0, 'Nero', 'Ibrido Plug-in', 'Automatico', 'Integrale', 180, 1850, 0, 5, 
-    'scrovenger.png+scrovenger-interni.png', 
-    "Station wagon nera, elegante con linee affilate, grandi ruote in lega, vetri oscurati. Design moderno e sofisticato.+
-    Sedili in pelle beige, console centrale e cruscotto marroni, grande schermo touchscreen e tetto panoramico.");
+VALUES ('UniPD - Universal Premium Design', 'Scrovenger', 'Nuovo', 42000, 2024, 0, 'Nero', 'Ibrido', 'Automatico', 'Integrale', 180, 1850, 0, 5, 
+    'scrovenger.webp+scrovenger-interni.webp', 
+    "Station wagon nera, elegante con linee affilate, grandi ruote in lega, vetri oscurati+
+    Sedili in pelle beige, console e cruscotto marroni, schermo touchscreen e tetto panoramico");
 
 /* EXFiat */
 INSERT INTO Veicolo (marca, modello, condizione, prezzo, anno, chilometraggio, colore, alimentazione, cambio, trazione, potenza, peso, neopatentati, numeroPosti, 
     foto, alts)
 VALUES ('EXFiat - EXcellence Fiat', 'Panda Limo', 'Usato', 18000, 2006, 190000, 'Rosso', 'Benzina', 'Manuale', 'Integrale', 47, 1960, 1, 3, 
-    'panda-limo-1.png+panda-limo-2.png+panda-limo-3.gif+panda-limo-interni.png',
-    "Auto limousine rossa, due porte, design unico e inusuale.+
-    Auto limousine rossa, due porte, vari finestrini sulla fiancata destra.+
-    Immagine animata che mostra Panda Limo in movimento da sinistra a destra.+
-    Interni in velluto rosso, spazi ampi. Design retrò.");
+    'panda-limo-1.webp+panda-limo-2.webp+panda-limo-interni.webp',
+    "Auto limousine rossa, due porte, design inusuale e squadrato+
+    Auto limousine rossa, due porte, vari finestrini sulla fiancata destra+
+    Interni in velluto rosso, spazi ampi, design retrò");
 
 INSERT INTO Veicolo (marca, modello, condizione, prezzo, anno, chilometraggio, colore, alimentazione, cambio, trazione, potenza, peso, neopatentati, numeroPosti, 
     foto, alts)
-VALUES ('EXFiat - EXcellence Fiat', 'Due Cavalli', 'Usato', 15000, 2024, 12000, 'Verde', 'Ibrido GPL', 'Manuale', 'Anteriore', 2, 500, 1, 4, 
-    'due-cavalli.jpeg',
-    "Carrozza tradizionale, colore verde scuro con ruote rosse. I sedili sono neri.");
+VALUES ('EXFiat - EXcellence Fiat', 'Due Cavalli', 'Usato', 15000, 2024, 12000, 'Verde', 'Metano', 'Manuale', 'Anteriore', 2, 500, 1, 4, 
+    'due-cavalli.webp',
+    "Carrozza tradizionale, colore verde scuro con ruote rosse, sedili neri");
 
 INSERT INTO Veicolo (marca, modello, condizione, prezzo, anno, chilometraggio, colore, alimentazione, cambio, trazione, potenza, peso, neopatentati, numeroPosti, 
     foto, alts)
-VALUES ('EXFiat - EXcellence Fiat', 'Nove Renne', 'Usato', 0, 1823, 1320000000, 'Rosso', 'Ibrido GPL', 'Manuale', 'Anteriore', 1000000, 800, 0, 1, 
-    'nove-renne.jpeg',
-    "Slitta vintage di colore rosso con un sedile in pelle imbottita. Corpo in legno con lati curvi e decorativi, pattini metallici.");
+VALUES ('EXFiat - EXcellence Fiat', 'Nove Renne', 'Usato', 0, 1823, 1320000000, 'Rosso', 'Metano', 'Manuale', 'Anteriore', 1000000, 800, 0, 1, 
+    'nove-renne.webp',
+    "Slitta vintage rossa in legno con lati curvilinei, sedile in pelle imbottita, pattini metallici");
 
 /* ESU */
 INSERT INTO Veicolo (marca, modello, condizione, prezzo, anno, chilometraggio, colore, alimentazione, cambio, trazione, potenza, peso, neopatentati, numeroPosti, 
     foto, alts)
 VALUES ('ESU - European Sports Unlimited', 'Piövegg', 'Nuovo', 2300000, 2023, 0, 'Nero', 'Gasolio', 'Manuale', 'Posteriore', 1000, 1300, 0, 2, 
-    'piövegg-1.jpg+piövegg-2.jpg+piövegg-interni.jpeg',
-    "Auto sportiva nero opaco, due porte, design aerodinamico, grandi ruote stilose, dettagli intricati. Vista posteriore a tre quarti.+
-    Auto sportiva nera, due porte, design aerodinamico e linee affilate, fari LED allungati, griglia a maglia e prese d'aria sul cofano.+
-    Interni lussuosi con sedili in pelle nera, cruscotto nero e schermo touchscreen.");
+    'piövegg-1.webp+piövegg-2.webp+piövegg-interni.webp',
+    "Auto sportiva nero opaco, due porte, design aerodinamico, vista posteriore a tre quarti+
+    Auto sportiva nera, due porte, linee affilate, fari LED, prese d'aria sul cofano, griglia a maglia+
+    Interni lussuosi con sedili in pelle nera, cruscotto nero, schermo touchscreen");
 
 INSERT INTO Veicolo (marca, modello, condizione, prezzo, anno, chilometraggio, colore, alimentazione, cambio, trazione, potenza, peso, neopatentati, numeroPosti, 
     foto, alts)
 VALUES ('ESU - European Sports Unlimited', 'Muriald', 'KM 0', 1200000, 2020, 0, 'Verde chiaro', 'Benzina', 'Automatico', 'Integrale', 850, 1400, 0, 2, 
-    'muriald.jpeg+muriald-interni.jpeg',
-    "Auto sportiva verde brillante, due porte, design aerodinamico e aggressivo. Fari angolari moderni, grandi ruote nere.+
-    Interni di lusso con sedili in pelle verde, cruscotto digitale e volante coordinato.");
+    'muriald.webp+muriald-interni.webp',
+    "Auto sportiva verde brillante, due porte, design aerodinamico e aggressivo, fari angolari moderni+
+    Interni di lusso con sedili in pelle verde, cruscotto digitale e volante coordinato");
 
 INSERT INTO Veicolo (marca, modello, condizione, prezzo, anno, chilometraggio, colore, alimentazione, cambio, trazione, potenza, peso, neopatentati, numeroPosti, 
     foto, alts)
 VALUES ('ESU - European Sports Unlimited', 'Belzuny', 'Nuovo', 56600, 2024, 0, 'Arancione', 'Gasolio', 'Automatico', 'Integrale', 450, 2200, 0, 5, 
-    'belzuny.jpeg+belzuny-interni.jpeg',
-    "Auto SUV arancione brillante, quattro porte, design grintoso con linee affilate, grandi ruote nere. Luci LED moderne e griglia prominente.+
-    Interni lussuosi con sedili in pelle nera inserti arancioni, cruscotto marrone e grande schermo touchscreen.");
+    'belzuny.webp+belzuny-interni.webp',
+    "Auto SUV arancione brillante, quattro porte, design grintoso, fari LED moderni, griglia prominente+
+    Interni lussuosi, sedili in pelle nera, inserti arancioni, grande schermo touchscreen");
 
 /* DM */
 INSERT INTO Veicolo (marca, modello, condizione, prezzo, anno, chilometraggio, colore, alimentazione, cambio, trazione, potenza, peso, neopatentati, numeroPosti, 
     foto, alts)
 VALUES ('DM - Digital Motion', 'Archimedial', 'KM 0', 17000, 2022, 0, 'Bianco', 'Elettrico', 'Automatico', 'Anteriore', 95, 1200, 1, 5, 
-    'archimedial.jpeg+archimedial-interni.jpeg',
-    "City car bianca, design moderno e futuristico, quattro porte, tetto nero a contrasto, fari angolari a LED e cerchi sportivi a più razze.+
-    Gli interni dell'auto sono eleganti e moderni, con sedili in similpelle, un cruscotto spazioso e un ampio touchscreen.");
+    'archimedial.webp+archimedial-interni.webp',
+    "City car bianca, design moderno e futuristico, quattro porte, tetto nero, fari angolari a LED+
+    Interni eleganti e moderni, sedili in similpelle, cruscotto spazioso, ampio touchscreen");
 
 INSERT INTO Veicolo (marca, modello, condizione, prezzo, anno, chilometraggio, colore, alimentazione, cambio, trazione, potenza, peso, neopatentati, numeroPosti, 
     foto, alts)
 VALUES ('DM - Digital Motion', 'Mudol', 'Nuovo', 65800, 2024, 0, 'Blu chiaro', 'Elettrico', 'Automatico', 'Integrale', 490, 1765, 0, 5, 
-    'mudol.jpeg+mudol-interni.jpeg',
-    "Auto berlina grigio chiaro metallizzata, quattro porte, design elegante e lineare, con fari affilati e una griglia aerodinamica.+
-    Interni con sedili in similpelle, cruscotto digitale, ampio schermo centrale, striscia LED soffusa. Design lussuoso e moderno.");
+    'mudol.webp+mudol-interni.webp',
+    "Auto berlina grigio chiaro metallizzata, quattro porte, design elegante e lineare, fari affilati+
+    Sedili in similpelle, cruscotto digitale, ampio schermo, striscia LED soffusa, design lussuoso");
 
 /* ? */
 
