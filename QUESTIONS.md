@@ -125,7 +125,7 @@
 
 - [ ] Sistemare tutti i warning di Wave e di Lighthouse
 
-- [ ] Sistemare la dl nel dettaglio auto: dd e dt sono invertiti
+- [x] Sistemare la dl nel dettaglio auto: dd e dt sono invertiti
 
 - [ ] Inserire aria-label in ogni tag nav interattivo (menu e breadcrumb se dentro c'è un link)
 
@@ -133,3 +133,4 @@
 
 - [ ] Rimuovere i console.log nel js
 
+- [ ] Fixare tutti i dl (vedi about.html)
