@@ -81,12 +81,21 @@ function validatePasswordInputs() {
 }
 
 function validatePassword(){
-    var password = document.getElementById("modUtente_pass2").value;
-    const validLetter = /[a-zA-Z]/;
-    const validNumber = /\d/;
-    if(!validLetter.test(password) || !validNumber.test(password) || password.length < 8){
-        return false;
+    var password = document.getElementById("modUtente_pass").value;
+    var password2 = document.getElementById("modUtente_pass2").value;
+
+    if (password2 && !password) {
+        return true; 
     }
+
+    if (password2) {
+        const validLetter = /[a-zA-Z]/;
+        const validNumber = /\d/;
+        if (password2.length < 8 || !validLetter.test(password2) || !validNumber.test(password2)) {
+            return false; 
+        }
+    }
+
     return true;
 }
 
