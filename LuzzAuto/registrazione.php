@@ -61,7 +61,7 @@ if(isset($_POST["nome"]) && isset($_POST["cognome"]) && isset($_POST["username"]
 			$err = $err . "<p>Le <span lang='en-GB'>password</span> non coincidono.</p>";
 		}
 		if (strtotime($_POST["data"]) > strtotime(date("Y-m-d")) || !preg_match('/^[0-9\-]+$/', $_POST["data"])) {
-			$err = $err . "<p>La data non è valida.</p>";
+			$err = $err . "<p>La data che hai inserito non &egrave; valida.</p>";
 		}
 		
 
@@ -79,7 +79,7 @@ if(isset($_POST["nome"]) && isset($_POST["cognome"]) && isset($_POST["username"]
 			$db->closeConnection();
 			unset($db);
 			if($ris == -1){
-				$err = $err . "<p><span lang='en-GB'>Username</span> già in uso.</p>";
+				$err = $err . "<p>L'<span lang='en-GB'>username</span> che hai inserito &egrave; già in uso.</p>";
 				$registrazioneHTML = ripristinoInput();
 				echo str_replace("[err]", $err, $registrazioneHTML);
 			}

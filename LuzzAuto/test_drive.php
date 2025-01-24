@@ -59,10 +59,10 @@ $buttonsHTML = "
 <p>Non aspettare oltre: fai il primo passo verso la tua nuova auto!</p>
 
 <p>Accedi al tuo profilo per usufruire del servizio di <span lang='en-GB'>Test Drive</span> :</p>
-<a href='login.html' onclick='setBackToOriginTestDrive()'>LogIn</a>
+<a href='login.html' onclick='setBackToOriginTestDrive()'>Accedi</a>
 
 <p>Oppure crea un <span lang='en-GB'>account</span> :</p>
-<a href='registrazione.html' onclick='setBackToOriginTestDrive()'>SignIn</a>
+<a href='registrazione.html' onclick='setBackToOriginTestDrive()'>Registrati</a>
 
 ";
 
@@ -144,11 +144,11 @@ if(isset($_POST['test_drive_select_auto']) && isset($_POST['test_drive_date'])){
 
         //CONTROLLI SULL'INPUT
         if (!preg_match("/^[0-9]+$/", $_POST["test_drive_select_auto"])) {
-			$err = $err . "<p>Auto non valida</p>";
+			$err = $err . "<p>L'auto che hai selezionato non &egrave; valida</p>";
 		}
         $_POST["test_drive_date"] = str_replace("T", ' ', $_POST["test_drive_date"]) . ":00";
         if (strtotime($_POST["test_drive_date"]) < strtotime(date("Y-m-d H:i:s")) || !preg_match('/^[0-9\-\:\s]+$/', $_POST["test_drive_date"])) {
-			$err = $err . "<p>La data non è valida.</p>";
+			$err = $err . "<p>La data che hai selezionato non &egrave; valida.</p>";
 		}
 
         //CONTROLLO ERRORI
@@ -172,14 +172,14 @@ if(isset($_POST['test_drive_select_auto']) && isset($_POST['test_drive_date'])){
 			$db->closeConnection();
 			unset($db);
 			if($ris == -1){
-				$err = $err . "<p>L'<span lang='en-GB'>Auto</span> non esiste. (" . $idAuto . ")</p>";
+				$err = $err . "<p>L'auto che hai selezionato non esiste. (" . $idAuto . ")</p>";
 			}
             if($ris == -2){
                 $err = $err . "<p>Questa prenotazione esiste già</p>" . "<p>Visita la tua <a href='utente.php'>Area personale</a>";
             }
             if($ris==1){
                 //PRENOTAZIONE INVIATA CON SUCCESSO
-                $succ .= "<p> Prenotazione inviata con SUCCESSO.</p>" . 
+                $succ .= "<p> Abbiamo ricevuto la tua richiesta.</p>" . 
                 "<p>Visita la tua <a href='utente.php#prenotazioni_utente'>Area personale</a> per visualizzarne i dettagli.</p>";
             }
             if($ris==0){

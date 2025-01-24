@@ -26,12 +26,12 @@ function validateFormEliminaAuto(){
             let ok = true;
             
             if(!validateAuto()){
-                msg+="<p>L'auto non è valida js.</p>";
+                msg+="<p>L'auto che hai selezionto non &egrave; valida.</p>";
                 ok = false;
             }
                 
             if(!validateEmptyAuto()){
-                msg+="<p>Selezionare un'auto da eliminare.</p>";
+                msg+="<p>Seleziona un'auto da eliminare.</p>";
                 ok = false;
             }
             if(!ok){
@@ -69,11 +69,11 @@ function validateFormGestPrenotazione(){
             let ok = true;
 
             if(!validatePrenotazione()){
-                msg += "<p>Prenotazione selezionata non valida</p>";
+                msg += "<p>La prenotazione che hai selezionato non &egrave valida</p>";
                 ok = false;
             }
             if(!validateAzione()) {
-                msg += "<p>Azione selezionata non valida</p>";
+                msg += "<p>L'azione che hai selezionato non &egrave; valida</p>";
                 ok = false;
             }
             if(!ok){

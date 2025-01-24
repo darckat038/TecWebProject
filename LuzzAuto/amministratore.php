@@ -180,12 +180,12 @@ if (isset($_POST['gestPrenAdmin'])) {
 
     // Controllo sull'input (validazione)
     if (empty($_POST['gestPrenAdmin']) || !preg_match("/^[0-9]+$/", $_POST["gestPrenAdmin"])) {
-        $errGest .= "<p>Prenotazione selezionata non valida</p>";
+        $errGest .= "<p>La prenotazione che hai selezionato non &egrave; valida</p>";
     }
 
     // Controllo sull'azione scelta
     if ($_POST["azioneAdmin"] != "accetta" && $_POST["azioneAdmin"] != "rifiuta") {
-        $errGest .= "<p>Azione selezionata non valida</p>";
+        $errGest .= "<p>L'azione che hai selezionato non &egrave; valida</p>";
     }
 
     // Restituzione errori in caso di problemi di validazione
@@ -213,7 +213,7 @@ if (isset($_POST['gestPrenAdmin'])) {
 
             if (!$ris) {
                 // Prenotazione non trovata
-                $errGest .= "<p>Prenotazione non esiste. (ID: " . $idPrenotazione . ")</p>";
+                $errGest .= "<p>La prenotazione che hai selezionato non esiste. (ID: " . $idPrenotazione . ")</p>";
             }
 
         } catch (Exception $e) {
@@ -290,7 +290,7 @@ if(isset($_POST['eliminaAutoAdmin'])){
     }
 
     if(!preg_match("/^[0-9]+$/", $_POST["eliminaAutoAdmin"])){
-        $errElim = $errElim . "<p>Auto selezionata non valida.</p>";
+        $errElim = $errElim . "<p>L'auto che hai selezionato non &egrave; valida.</p>";
     }
 
     if(!empty($errElim)){
@@ -313,7 +313,7 @@ if(isset($_POST['eliminaAutoAdmin'])){
             $succElim .= "<p>Auto eliminata con successo.</p>";
         }
         else{
-            $errElim .= "<p>Auto non esiste. (ID: " . $idAuto . ")</p>";
+            $errElim .= "<p>L'auto che hai selezionato non esiste. (ID: " . $idAuto . ")</p>";
         }
 
         $adminPage = str_replace("[errElim]", $errElim, $adminPage);

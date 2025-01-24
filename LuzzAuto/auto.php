@@ -41,7 +41,7 @@ try {
             </div>
             <div>
                 <dd>Chilometraggio</dd>
-                <dt>' . $dettagli['chilometraggio'] . ' km</dt>
+                <dt>' . $dettagli['chilometraggio'] . ' <abbr title="chilometri">km</abbr></dt>
             </div>
             <div>
                 <dd>Colore</dd>
@@ -61,11 +61,11 @@ try {
             </div>
             <div>
                 <dd>Potenza</dd>
-                <dt>' . $dettagli['potenza'] . ' CV</dt>
+                <dt>' . $dettagli['potenza'] . ' <abbr title="cavalli vapore">CV</abbr></dt>
             </div>
             <div>
                 <dd>Peso</dd>
-                <dt>' . $dettagli['peso'] . ' kg</dt>
+                <dt>' . $dettagli['peso'] . ' <abbr title="chili">kg</abbr></dt>
             </div>
             <div>
                 <dd>Neopatentati abilitati</dd>
@@ -84,9 +84,9 @@ try {
             <dd>Modello</dd>
             <dt>' . $dettagli['modello'] . '</dt>
             <dd>Condizioni</dd>
-            <dt>' . $dettagli['condizione'] . '</dt>
+            <dt>' . (($dettagli['condizione']=="KM 0") ? "<abbr title='chilometro'>KM</abbr> 0" : $dettagli['condizione']) . '</dt>
             <dd>Prezzo</dd>
-            <dt>€ ' . $dettagli['prezzo'] . '</dt>
+            <dt><abbr title="Euro">&euro;</abbr> ' . $dettagli['prezzo'] . '</dt>
         </dl>
 
         <a class="list_button" href="test_drive.php#test_drive_prenota">Prenota un test drive</a>';

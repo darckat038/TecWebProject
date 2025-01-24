@@ -174,16 +174,16 @@ if(isset($_GET['action']) && $_GET['action'] == 'Applica filtri') {
 			$err = $err . "<p>Anno non valido, inserisci un anno maggiore di 0 e di massimo 4 cifre.</p>";
 		}
 		if (isset($_GET["colore"]) && !preg_match("/^([A-Za-z]+( [A-Za-z]+)*)?$/", $_GET["colore"])) {
-			$err = $err . "<p>Selezione colore non valida. Selezionare nuovamente la scelta desiderata.</p>";
+			$err = $err . "<p>Selezione colore non valida. Seleziona nuovamente la scelta desiderata.</p>";
 		}
 		if (isset($_GET["alimentazione"]) && !preg_match("/^([A-Za-z0-9\-]+( [A-Za-z0-9\-]+)*)?$/", $_GET["alimentazione"])) {
-			$err = $err . "<p>Selezione alimentazione non valida. Selezionare nuovamente la scelta desiderata.</p>";
+			$err = $err . "<p>Selezione alimentazione non valida. Seleziona nuovamente la scelta desiderata.</p>";
 		}
 		if (isset($_GET["cambio"]) && !preg_match("/^([A-Za-z]+( [A-Za-z]+)*)?$/", $_GET["cambio"])) {
-			$err = $err . "<p>Selezione cambio non valida. Selezionare nuovamente la scelta desiderata.</p>";
+			$err = $err . "<p>Selezione cambio non valida. Seleziona nuovamente la scelta desiderata.</p>";
 		}
 		if (isset($_GET["trazione"]) && !preg_match("/^([A-Za-z]+( [A-Za-z]+)*)?$/", $_GET["trazione"])) {
-			$err = $err . "<p>Selezione trazione non valida. Selezionare nuovamente la scelta desiderata.</p>";
+			$err = $err . "<p>Selezione trazione non valida. Seleziona nuovamente la scelta desiderata.</p>";
 		}
 		if (isset($_GET["potenzaMin"]) && is_numeric($_GET["potenzaMin"])) {
 			if (!preg_match("/^(\d+)?$/", $_GET["potenzaMin"]) || intval($_GET["potenzaMin"]) <= 0 || (!empty($_GET["potenzaMax"]) ? (intval($_GET["potenzaMin"]) > intval($_GET["potenzaMax"])) : false)) {
@@ -209,7 +209,7 @@ if(isset($_GET['action']) && $_GET['action'] == 'Applica filtri') {
 			$err = $err . "<p>Numero di posti non valido, inserisci un numero maggiore di 0.</p>";
 		}
 		if (isset($_GET["condizione"]) && !preg_match("/^([A-Za-z0-9]+( [A-Za-z0-9]+)*)?$/", $_GET["condizione"])) {
-			$err = $err . "<p>Selezione condizione non valida. Selezionare nuovamente la scelta desiderata.</p>";
+			$err = $err . "<p>Selezione condizione non valida. Seleziona nuovamente la scelta desiderata.</p>";
 		}
 		if (isset($_GET["prezzoMax"]) && is_numeric($_GET["prezzoMax"]) && (!preg_match("/^(\d+)?$/", $_GET["prezzoMax"]) || intval($_GET["prezzoMax"]) <= 0)) {
 				$err = $err . "<p>Prezzo non valido, inserisci un prezzo maggiore di 0.</p>";
@@ -218,7 +218,7 @@ if(isset($_GET['action']) && $_GET['action'] == 'Applica filtri') {
 			$err = $err . "<p>Chilometraggio non valido, inserisci un valore maggiore di 0.</p>";
 		}
 		if (!empty($_GET["neopatentati"]) && intval($_GET["neopatentati"]) != 1) {
-			$err = $err . "<p>Selezione neopatentati non valida. Selezionare nuovamente la scelta desiderata.</p>";
+			$err = $err . "<p>Selezione neopatentati non valida. Seleziona nuovamente la scelta desiderata.</p>";
 		}
 
 		//CONTROLLO ERRORI

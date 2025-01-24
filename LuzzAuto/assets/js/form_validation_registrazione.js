@@ -10,27 +10,27 @@ function validateRegisterData(){
         let msg = "";
         let ok = true;
         if(!validateNome()){
-            msg += "<p>Nome non valido, può contenere solo lettere.</p>";
+            msg += "<p>Hai inserito un nome non valido, può contenere solo lettere.</p>";
             ok = false;
         }
         if(!validateCognome()){
-            msg+="<p>Cognome non valido, può contenere solo lettere.</p>";
+            msg+="<p>Hai inserito un cognome non valido, può contenere solo lettere.</p>";
             ok = false;
         }
         if(!validateUsername()){
-            msg+="<p><span lang'en-GB'>Username</span>  non valido, può contenere al massimo 30 caratteri tra lettere e numeri.</p>";
+            msg+="<p>Hai inserito un <span lang'en-GB'>username</span> non valido, può contenere al massimo 30 caratteri tra lettere e numeri.</p>";
             ok = false;
         }
         if(!validatePassword()){
-            msg+="<p><span lang'en-GB'>Password</span>  non valida, deve essere di almeno 8 caratteri e contenere almeno una lettera e un numero.</p>";
+            msg+="<p>Hai inserito una <span lang'en-GB'>password</span> non valida, deve essere di almeno 8 caratteri e contenere almeno una lettera e un numero.</p>";
             ok = false;
         }
         if(!validatePasswordRepeat()){
-            msg+="<p>Le <span lang'en-GB'>password</span> non coincidono.</p>";
+            msg+="<p>Le <span lang'en-GB'>password</span> che hai inserito non coincidono.</p>";
             ok = false;
         }
         if(!validateDate()){
-            msg+="<p>La data non è valida.</p>";
+            msg+="<p>La data che hai inserito non &egrave; valida.</p>";
             ok = false;
         }
 

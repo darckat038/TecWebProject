@@ -37,7 +37,7 @@ if(isset($_GET["marca"]) || isset($_GET["modello"]) || isset($_GET["condizione"]
 		$err = $err . "<p>Modello non valido, puoi usare solo lettere, numeri, spazi(non all'inizio e alla fine) e il carattere \"-\".</p>";
 	}
 	if (isset($_GET["condizione"]) && !preg_match("/^([A-Za-z0-9]+( [A-Za-z0-9]+)*)?$/", $_GET["condizione"])) {
-		$err = $err . "<p>Selezione condizione non valida. Selezionare nuovamente la scelta desiderata.</p>";
+		$err = $err . "<p>Selezione condizione non valida. Seleziona nuovamente la scelta desiderata.</p>";
 	}
 	if (isset($_GET["prezzoMax"]) && is_numeric($_GET["prezzoMax"]) && (!preg_match("/^(\d+)?$/", $_GET["prezzoMax"]) || intval($_GET["prezzoMax"]) <= 0)) {
 		$err = $err . "<p>Prezzo non valido, inserisci un prezzo maggiore di 0.</p>";

@@ -26,7 +26,7 @@ function creaTabellaPrenotazioni($username) {
             $campiTabella = "  
                             <p id='descTable'>
                             La tabella descrive le prenotazioni dei test drive da parte dell'utente, è organizzata in colonne
-                            con numero prenotazione, modello auto, data test drive e stato della prenotazione 
+                            con numero prenotazione, modello auto, data <span lang='en-GB'>Test Drive</span> e stato della prenotazione 
                             </p>
                             <table class='tabellaPrenUtente' aria-describedby='descTable'>
                                 <thead>
@@ -183,7 +183,7 @@ if (isset($_POST['gestPrenUtente'])) {
 
     // Controllo sull'input (validazione)
     if (!preg_match("/^[A-Za-z0-9\-\s]+$/", $_POST["gestPrenUtente"])) {
-        $err = $err . "<p>Prenotazione non valida</p>";
+        $err = $err . "<p>La prenotazione che hai selezionato non &egrave; valida</p>";
     }
 
     // Restituzione errori in caso di problemi di validazione
@@ -209,7 +209,7 @@ if (isset($_POST['gestPrenUtente'])) {
                 header("location: utente.php");
         } else {
             // Prenotazione non trovata
-            $err .= "<p>Prenotazione non esiste. (ID: " . $idPrenotazione . ")</p>";
+            $err .= "<p>La prenotazione che hai selezionato non esiste. (ID: " . $idPrenotazione . ")</p>";
         }
 
     } catch (Exception $e) {

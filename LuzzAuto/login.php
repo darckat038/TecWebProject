@@ -41,7 +41,7 @@ if(isset($_POST["username"]) && isset($_POST["password"])){
 			$db->closeConnection();
 			unset($db);
 			if($ris == -1){
-				$err = $err . "<p><span lang='en-GB'>Username</span> non trovato.</p>";
+				$err = $err . "<p>L'<span lang='en-GB'>username</span> che hai inserito non &egrave; stato trovato.</p>";
 				$loginHTML = ripristinoInput();
 				echo str_replace("[err]", $err, $loginHTML);
 			}
@@ -67,7 +67,7 @@ if(isset($_POST["username"]) && isset($_POST["password"])){
 					}
 				}
 				else{
-					$err = $err . "<p><span lang='en-GB'>Password</span> errata.</p>";
+					$err = $err . "<p>La<span lang='en-GB'>password</span> che hai inserito &egrave; errata.</p>";
 				    $loginHTML = ripristinoInput();
 				    echo str_replace("[err]", $err, $loginHTML);
 				}

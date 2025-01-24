@@ -11,19 +11,19 @@ function validateFastSearch() {
 		resetFormError(0);
 		if(!validateMarca()) {
 			ok = false;
-			msg += "<p tabindex=\"0\" id=\"marca_err\">Marca non valida, puoi usare solo lettere, numeri, spazi(non all'inizio e alla fine) e il carattere \"-\".</p>";
+			msg += "<p tabindex=\"0\" id=\"marca_err\">La marca che hai inserito non &egrave; valida, puoi usare solo lettere, numeri, spazi(non all'inizio e alla fine) e il carattere \"-\".</p>";
 		}
 		if(!validateModello()) {
 			ok = false;
-			msg += "<p id=\"modello_err\">Modello non valido, puoi usare solo lettere, numeri, spazi(non all'inizio e alla fine) e il carattere \"-\".</p>";
+			msg += "<p id=\"modello_err\">Il modello che hai inserito non &egrave; valido, puoi usare solo lettere, numeri, spazi(non all'inizio e alla fine) e il carattere \"-\".</p>";
 		}
 		if(!validatePrezzo()) {
 			ok = false;
-			msg += "<p id=\"prezzoMax_err\">Prezzo non valido, inserisci un prezzo maggiore di 0.</p>";
+			msg += "<p id=\"prezzoMax_err\">Il prezzo che hai inserito non &egrave; valido, inserisci un prezzo maggiore di 0.</p>";
 		}
 		if(!validateCondizione()) {
 			ok = false;
-			msg += "<p id=\"condizione_err\">Selezione condizione non valida. Selezionare nuovamente la scelta desiderata.</p>";
+			msg += "<p id=\"condizione_err\">La condizione che hai selezionato non &egrave; valida. Seleziona nuovamente la scelta desiderata.</p>";
 		}
 		if(!ok) {
 			addFormError(msg, 0);

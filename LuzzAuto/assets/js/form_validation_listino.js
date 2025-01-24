@@ -12,67 +12,67 @@ function validateFastSearch() {
 			resetFormError(0);
 			if(!validateMarca()) {
 				ok = false;
-				msg += "<p id=\"marca_err\">Marca non valida, puoi usare solo lettere, numeri, spazi(non all'inizio e alla fine) e il carattere \"-\".</p>";
+				msg += "<p id=\"marca_err\">La marca che hai inserito non &egrave; valida, puoi usare solo lettere, numeri, spazi(non all'inizio e alla fine) e il carattere \"-\".</p>";
 			}
 			if(!validateModello()) {
 				ok = false;
-				msg += "<p id=\"modello_err\">Modello non valido, puoi usare solo lettere, numeri, spazi(non all'inizio e alla fine) e il carattere \"-\".</p>";
+				msg += "<p id=\"modello_err\">Il modello che hai inserito non &egrave; valido, puoi usare solo lettere, numeri, spazi(non all'inizio e alla fine) e il carattere \"-\".</p>";
 			}
 			if(!validateAnno()) {
 				ok = false;
-				msg += "<p id=\"anno_err\">Anno non valido, inserisci un anno maggiore di 0 e di massimo 4 cifre.</p>";
+				msg += "<p id=\"anno_err\">L'anno che hai inserito non &egrave; valido, inserisci un anno maggiore di 0 e di massimo 4 cifre.</p>";
 			}
 			if(!validateColore()) {
 				ok = false;
-				msg += "<p id=\"colore_err\">Selezione colore non valida. Selezionare nuovamente la scelta desiderata.</p>";
+				msg += "<p id=\"colore_err\">Il colore che hai selezionato non &egrave; valido. Seleziona nuovamente la scelta desiderata.</p>";
 			}
 			if(!validateAlimentazione()) {
 				ok = false;
-				msg += "<p id=\"alimentazione_err\">Selezione alimentazione non valida. Selezionare nuovamente la scelta desiderata.</p>";
+				msg += "<p id=\"alimentazione_err\">Hai selezionato un'alimentazione non valida. Seleziona nuovamente la scelta desiderata.</p>";
 			}
 			if(!validateCambio()) {
 				ok = false;
-				msg += "<p id=\"cambio_err\">Selezione cambio non valida. Selezionare nuovamente la scelta desiderata.</p>";
+				msg += "<p id=\"cambio_err\">Hai selezionato un tipo di cambio non valido. Seleziona nuovamente la scelta desiderata.</p>";
 			}
 			if(!validateTrazione()) {
 				ok = false;
-				msg += "<p id=\"trazione_err\">Selezione trazione non valida. Selezionare nuovamente la scelta desiderata.</p>";
+				msg += "<p id=\"trazione_err\">Hai selezionato un tipo di trazione non valid. Seleziona nuovamente la scelta desiderata.</p>";
 			}
 			if(!validatePotenzaMin()) {
 				ok = false;
-				msg += "<p id=\"potenzaMin_err\">Potenza minima non valida, inserisci una potenza maggiore di 0 e minore o uguale alla potenza massima.</p>";
+				msg += "<p id=\"potenzaMin_err\">Hai inserito una potenza minima non valida, inserisci una potenza maggiore di 0 e minore o uguale alla potenza massima.</p>";
 			}
 			if(!validatePotenzaMax()) {
 				ok = false;
-				msg += "<p id=\"potenzaMax_err\">Potenza massima non valida, inserisci una potenza maggiore di 0 e maggiore o uguale alla potenza minima.</p>";
+				msg += "<p id=\"potenzaMax_err\">Hai inserito una potenza massima non valida, inserisci una potenza maggiore di 0 e maggiore o uguale alla potenza minima.</p>";
 			}
 			if(!validatePesoMin()) {
 				ok = false;
-				msg += "<p id=\"pesoMin_err\">Peso minimo non valido, inserisci un peso maggiore di 0 e minore o uguale al peso massimo.</p>";
+				msg += "<p id=\"pesoMin_err\">Hai inserito un peso minimo non valido, inserisci un peso maggiore di 0 e minore o uguale al peso massimo.</p>";
 			}
 			if(!validatePesoMax()) {
 				ok = false;
-				msg += "<p id=\"pesoMax_err\">Peso massimo non valido, inserisci un peso maggiore di 0 e maggiore o uguale al peso minimo.</p>";
+				msg += "<p id=\"pesoMax_err\">Hai inserito un peso massimo non valido, inserisci un peso maggiore di 0 e maggiore o uguale al peso minimo.</p>";
 			}
 			if(!validatePrezzo()) {
 				ok = false;
-				msg += "<p id=\"prezzoMax_err\">Prezzo non valido, inserisci un prezzo maggiore di 0.</p>";
+				msg += "<p id=\"prezzoMax_err\">Hai inserito un prezzo non valido, inserisci un prezzo maggiore di 0.</p>";
 			}
 			if(!validatePosti()) {
 				ok = false;
-				msg += "<p id=\"posti_err\">Numero di posti non valido, inserisci un numero maggiore di 0.</p>";
+				msg += "<p id=\"posti_err\">Hai inserito un numero di posti non valido, inserisci un numero maggiore di 0.</p>";
 			}
 			if(!validateCondizione()) {
 				ok = false;
-				msg += "<p id=\"condizione_err\">Selezione condizione non valida. Selezionare nuovamente la scelta desiderata.</p>";
+				msg += "<p id=\"condizione_err\">hai selezionato una condizione non valida. Seleziona nuovamente la scelta desiderata.</p>";
 			}
 			if(!validateChilometraggio()) {
 				ok = false;
-				msg += "<p id=\"chilometraggio_err\">Chilometraggio non valido, inserisci un valore maggiore di 0.</p>";
+				msg += "<p id=\"chilometraggio_err\">Hai inserito un chilometraggio non valido, inserisci un valore maggiore di 0.</p>";
 			}
 			if(!validateNeopatentati()) {
 				ok = false;
-				msg += "<p id=\"neopatentati_err\">Selezione neopatentati non valida. Selezionare nuovamente la scelta desiderata.</p>";
+				msg += "<p id=\"neopatentati_err\">Hai selezionato un valore di neopatentati non valido. Seleziona nuovamente la scelta desiderata.</p>";
 			}
 			if(!ok) {
 				console.log("Prevenzione del submit, errore trovato.");
