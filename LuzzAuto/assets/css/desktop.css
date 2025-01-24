@@ -1020,6 +1020,7 @@ section.aboutUs_history p {
     border-radius: 0.5em;
     margin: 0 auto 0;
     max-width: 45em;
+    padding: 1em;
 }
 
 #aboutUs_ourTeam > dl > div:hover {
@@ -1966,14 +1967,12 @@ p.list_car_list_empty {
     background-size: contain;
     background-image: url("../img/Icons/star/star.png");
 }
-
 /*#endregion Home*/
 
 /*#region Utente*/
 /******************* 
         UTENTE
 ********************/
-
 #utente_body{
     background-image: url(../img/Background/area-personale.webp);
     background-repeat: repeat-y;
@@ -2039,7 +2038,6 @@ p.list_car_list_empty {
     margin-top: -1.5em; 
 }
 
-
 .riquadriUtente dt{
     color: var(--form-border-input-color);
     float: left; 
@@ -2048,8 +2046,6 @@ p.list_car_list_empty {
 .riquadriUtente dd{
     margin-bottom: 0.5em;
 }
-
-
 
 .nomeRiqUtente{
     background-color: var(--navbar-bg-color);
