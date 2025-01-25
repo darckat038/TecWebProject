@@ -1960,11 +1960,11 @@ document.querySelectorAll('#list_filter .list_insert').forEach(select => {
 }
 
 #accettatoUtente{
-    color: #4caf50;
+    color: var(--form-success-text-color);
 }
 
 #rifiutatoUtente{
-    color: red;
+    color: var(--form-error-text-color);
 }
 
 /*Gestione prenotazioni*/
