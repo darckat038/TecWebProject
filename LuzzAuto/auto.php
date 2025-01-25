@@ -84,7 +84,7 @@ try {
             <dt>Modello</dt>
             <dd>' . $dettagli['modello'] . '</dd>
             <dt>Condizioni</dt>
-            <dd>' . (($dettagli['condizione']=="KM 0") ? "<abbr title='chilometro'>KM</abbr> 0" : $dettagli['condizione']) . '</dd>
+            <dd>' . (($dettagli['condizione']=="KM 0") ? "<abbr title='chilometro zero'>KM 0</abbr>" : $dettagli['condizione']) . '</dd>
             <dt>Prezzo</dt>
             <dd><abbr title="Euro">&euro;</abbr> ' . $dettagli['prezzo'] . '</dd>
         </dl>

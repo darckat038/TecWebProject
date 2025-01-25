@@ -122,7 +122,7 @@ function getVehiclesFromDB($params, $listinoHTML) {
 								</div>
 								<div>
 									<dt>Condizioni</dt>
-									<dd>' . $vehicle["condizione"] . '</dd>
+									<dd>' . (($vehicle['condizione']=="KM 0") ? "<abbr title='chilometro zero'>KM 0</abbr>" : $vehicle['condizione']) . '</dd>
 								</div>
 								<div>
 									<dt>Prezzo</dt>
