@@ -145,3 +145,5 @@
 - [ ] Rimuovere i console.log nel js
 
 - [ ] Fixare tutti i dl (vedi about.html)
+
+- [ ] Inserire la possibilità per l'utente di eliminare i suoi dati del profilo
