@@ -1128,14 +1128,16 @@ section.aboutUs_history img {
     width: 5.5em;
 }
 
-#list_filter #list_filter_neopatentati {
+#list_filter #list_filter_neopatentati,
+#neopatentatiAdmin {
     font-size: 1em;
     width: 13em;
     align-self: center;
 }
 
 
-#list_filter #list_filter_neopatentati .interruttore {
+#list_filter #list_filter_neopatentati .interruttore,
+#neopatentatiAdmin .interruttore {
     position: relative;
     display: inline-block;
     width: 50px;
@@ -1144,7 +1146,8 @@ section.aboutUs_history img {
     top: 0.2em;
 }
 
-#list_filter #list_label_neopatentati {
+#list_filter #list_label_neopatentati,
+#labelNeopatentatiAdmin {
     align-self: center;
     padding: 0;
 }
@@ -2241,7 +2244,7 @@ input[type="date"]::-webkit-calendar-picker-indicator {
 #labelMarcaAdmin, #labelModelloAdmin, #labelAnnoAdmin, #labelColoreAdmin,
 #labelAlimAdmin, #labelCambioAdmin, #labelTrazioneAdmin, #labelPotenzaAdmin, 
 #labelPesoAdmin, #labelPostiAdmin, #labelCondizioniAdmin, #labelChilometriAdmin,
-#labelPrezzoAdmin, #labelNeopAdmin, #labelNeopAdmin, #labelimmagineOutAdmin, #labelimmagineInAdmin,
+#labelPrezzoAdmin, #labelimmagineOutAdmin, #labelimmagineInAdmin,
 #labelAltImmagineOutAdmin, #labelAltImmagineInAdmin {
     position: absolute;
     display: block;
@@ -2252,9 +2255,15 @@ input[type="date"]::-webkit-calendar-picker-indicator {
     padding: 0 0.3em;
 }
 
+#labelNeopatentatiAdmin, #neopatentatiAdmin {
+    display: inline-block;
+    color: var(--form-border-input-color);
+    background-color: var(--navbar-bg-color);
+}
+
 #marcaAdmin, #modelloAdmin, #annoAdmin, #coloreAdmin, #alimentazioneAdmin, 
 #cambioAdmin, #trazioneAdmin, #potenzaAdmin, #pesoAdmin, #numero_postiAdmin, 
-#condizioneAdmin, #chilometraggioAdmin, #prezzoAdmin, #neopatentatiAdmin, 
+#condizioneAdmin, #chilometraggioAdmin, #prezzoAdmin, 
 #altImmagineOutAdmin, #altImmagineInAdmin {
     width: 100%; 
     padding: 0.8em; 
@@ -2268,6 +2277,11 @@ input[type="date"]::-webkit-calendar-picker-indicator {
     box-sizing: border-box; 
     margin-top: 2em;
     color: white;
+}
+
+#neopatentatiAdmin .interruttore {
+    top: 0;
+    margin-left: 1em;
 }
 
 #immagineOutAdmin, #immagineInAdmin {

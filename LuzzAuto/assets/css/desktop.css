@@ -2441,7 +2441,7 @@ input[type="date"]::-webkit-calendar-picker-indicator {
 #labelMarcaAdmin, #labelModelloAdmin, #labelAnnoAdmin, #labelColoreAdmin,
 #labelAlimAdmin, #labelCambioAdmin, #labelTrazioneAdmin, #labelPotenzaAdmin, 
 #labelPesoAdmin, #labelPostiAdmin, #labelCondizioniAdmin, #labelChilometriAdmin,
-#labelPrezzoAdmin, #labelNeopAdmin, #labelimmagineOutAdmin, #labelimmagineInAdmin,
+#labelPrezzoAdmin, #labelimmagineOutAdmin, #labelimmagineInAdmin,
 #labelAltImmagineOutAdmin, #labelAltImmagineInAdmin {
     position: absolute;
     display: block;
