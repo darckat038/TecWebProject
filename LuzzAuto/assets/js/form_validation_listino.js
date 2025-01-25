@@ -8,8 +8,9 @@ function validateFastSearch() {
 		if(event.submitter.id != "list_clear") {
 			var ok = true;
 			let msg = "";
-			console.log("submit event");
+			
 			resetFormError(0);
+
 			if(!validateMarca()) {
 				ok = false;
 				msg += "<p id=\"marca_err\">La marca che hai inserito non &egrave; valida, puoi usare solo lettere, numeri, spazi(non all'inizio e alla fine) e il carattere \"-\".</p>";
@@ -75,11 +76,8 @@ function validateFastSearch() {
 				msg += "<p id=\"neopatentati_err\">Hai selezionato un valore di neopatentati non valido. Seleziona nuovamente la scelta desiderata.</p>";
 			}
 			if(!ok) {
-				console.log("Prevenzione del submit, errore trovato.");
 				addFormError(msg, 0);
 				event.preventDefault();
-			} else {
-				console.log("Tutto ok, il form verrà inviato.");
 			}
 		}
 	});
