@@ -52,10 +52,10 @@ function creaTabellaPrenotazioni($username) {
                 // Aggiungi una riga per la prenotazione
                 $val = $row["codice"] . "-" . $row["marca"] . "-" . $row['modello'] . "-" . $row['dataOra'] . "-" . $row['stato']; 
                 $campiTabella .= "<tr>
-                                    <td>" . $row["codice"] . "</td>
-                                    <td>" . $row["marca"] . " " . $row['modello'] . "</td>
-                                    <td><time datetime=''" . $row['dataOra'] . "'>" . $row['dataOra'] . "</time></td>
-                                    <td>" . $statoTestuale . "</td>
+                                    <th scope='row' data-title='Codice'>" . $row["codice"] . "</th>
+                                    <td data-title='Auto'>" . $row["marca"] . " " . $row['modello'] . "</td>
+                                    <td data-title='Data'><time datetime=''" . $row['dataOra'] . "'>" . $row['dataOra'] . "</time></td>
+                                    <td data-title='Stato'>" . $statoTestuale . "</td>
                                   </tr>";
             }
             $campiTabella .= "</tbody>

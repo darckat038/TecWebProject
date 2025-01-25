@@ -164,6 +164,29 @@ h1, h2, h3 {
     text-underline-offset: 0.3em;
 }
 
+
+thead{
+    display: none;
+}
+tr, th, td{
+    display: block;
+    white-space: normal;
+}
+th[data-title]:before, td[data-title]:before{
+    content: attr(data-title)":\00A0";
+    font-weight: bold;
+}
+th{
+    background-color: var(--cards-bg-color);
+}
+td,th{
+    border: 1px solid var(--form-border-input-color);
+    padding: 0.5em;
+}
+tr{
+    border-top: 1px solid var(--form-border-input-color);
+}
+
 /******************* 
         MENU
 ********************/
@@ -1881,6 +1904,7 @@ document.querySelectorAll('#list_filter .list_insert').forEach(select => {
     margin-top: -1.5em; 
 }
 
+/*
 .riquadriUtente dl{
     text-align: center;
 }
@@ -1892,6 +1916,9 @@ document.querySelectorAll('#list_filter .list_insert').forEach(select => {
 .riquadriUtente dd{
     margin-bottom: 0.5em;
 }
+*/
+
+
 
 
 .nomeRiqUtente{
@@ -1925,21 +1952,6 @@ document.querySelectorAll('#list_filter .list_insert').forEach(select => {
     width: 100%;
     border-collapse: collapse;
     margin-top: 1em;
-}
-
-.tabellaPrenUtente thead {
-    background-color: var(--navbar-bg-color);
-    color: var(--form-border-input-color);
-}
-
-.tabellaPrenUtente th, .tabellaPrenUtente td {
-    text-align: left;
-    padding: 0.4em;
-    border: 1px solid var(--form-border-input-color);
-}
-
-.tabellaPrenUtente date{
-    display: block;
 }
 
 #descTable{
@@ -2173,21 +2185,6 @@ input[type="date"]::-webkit-calendar-picker-indicator {
     width: 100%;
     border-collapse: collapse;
     margin-top: 1em;
-}
-
-.tabellaPrenAdmin thead {
-    background-color: var(--navbar-bg-color);
-    color: var(--form-border-input-color);
-}
-
-.tabellaPrenAdmin th, .tabellaPrenAdmin td {
-    text-align: left;
-    padding: 0.4em;
-    border: 1px solid var(--form-border-input-color);
-}
-
-.tabellaPrenAdmin date{
-    display: block;
 }
 
 .admin_content legend{
