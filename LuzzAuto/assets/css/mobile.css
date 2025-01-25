@@ -2293,7 +2293,7 @@ input[type="date"]::-webkit-calendar-picker-indicator {
     color: white;
 }
 
-#bottoneAggiungi{
+#aggiungiAutoAdmin{
     display: flex;
     margin: auto;
     margin-top: 1em;
@@ -2306,7 +2306,7 @@ input[type="date"]::-webkit-calendar-picker-indicator {
     border: 1px solid white;
 }
 
-#bottoneAggiungi:hover{
+#aggiungiAutoAdmin:hover{
     background-color: white;
     color: black;
 }
