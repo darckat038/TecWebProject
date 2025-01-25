@@ -128,13 +128,13 @@
 (OK: )
 
 - [ ] Sistemare tutti i warning di Wave
-(OK: 403, 404)
+(OK: 403, 404, 500)
 
 - [ ] Sistemare tutti i warning di WCAG Color checker
-(OK: 403, 404)
+(OK: 403, 404, 500)
 
 - [ ] Check con IE11
-(OK: 403, 404)
+(OK: 403, 404, 500)
 
 - [x] Sistemare la dl nel dettaglio auto: dd e dt sono invertiti
 
