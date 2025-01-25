@@ -2259,6 +2259,7 @@ input[type="date"]::-webkit-calendar-picker-indicator {
     display: inline-block;
     color: var(--form-border-input-color);
     background-color: var(--navbar-bg-color);
+    margin-top: 1em;
 }
 
 #marcaAdmin, #modelloAdmin, #annoAdmin, #coloreAdmin, #alimentazioneAdmin, 
@@ -2299,7 +2300,7 @@ input[type="date"]::-webkit-calendar-picker-indicator {
 #aggiungiAutoAdmin{
     display: flex;
     margin: auto;
-    margin-top: 1em;
+    margin-top: 3em;
     padding: 0.5em 2em;
     color: white;
     cursor: pointer;
