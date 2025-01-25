@@ -1925,7 +1925,7 @@ document.querySelectorAll('#list_filter .list_insert').forEach(select => {
     background-color: var(--navbar-bg-color);
     padding: 0 0.3em;
     font-weight: bold;
-    font-size: 25px;
+    font-size: 1.6em;
     color: var(--form-border-input-color);
 }
 
@@ -1933,7 +1933,7 @@ document.querySelectorAll('#list_filter .list_insert').forEach(select => {
     color: var(--form-border-input-color);
     padding-top: 1em;
     font-weight: bold;
-    font-size: 25px;
+    font-size: 1.6em;
     text-align: center;
 }
 
@@ -1987,7 +1987,7 @@ document.querySelectorAll('#list_filter .list_insert').forEach(select => {
     margin-top: 2em;
     background-color:black;
     color: var(--form-border-input-color); 
-    font-size: 16px;
+    font-size: 1em;
     cursor: pointer;
     color: white; 
 }
@@ -1998,9 +1998,8 @@ document.querySelectorAll('#list_filter .list_insert').forEach(select => {
     margin-top: 1em;
     padding: 0.5em 2em;
     color: white;
-    font-size: 16px;
+    font-size: 1em;
     cursor: pointer;
-    font-size: 18px;
     border-radius: 20px;
     background-color: black;
     border: 1px solid white;
@@ -2178,7 +2177,10 @@ input[type="date"]::-webkit-calendar-picker-indicator {
 .nomeRiqPrenAdmin{
     color: var(--form-border-input-color);
     margin-top: 1.3em;
+    margin-bottom: 1em;
     text-align: center;
+    font-size: 1.6em;
+    font-weight: 600;
 }
 
 .tabellaPrenAdmin {
@@ -2211,7 +2213,7 @@ input[type="date"]::-webkit-calendar-picker-indicator {
     border-radius: 5px; 
     background-color:black; 
     color: var(--form-border-input-color); 
-    font-size: 16px;
+    font-size: 1em;
     cursor: pointer;
     margin-top: 2em;
     color: white;
@@ -2224,7 +2226,7 @@ input[type="date"]::-webkit-calendar-picker-indicator {
     margin-top: 1em;
     padding: 0.5em 2em;
     color: white;
-    font-size: 18px;
+    font-size: 1em;
     border-radius: 20px;
     cursor: pointer;
     background-color: black;
@@ -2268,7 +2270,7 @@ input[type="date"]::-webkit-calendar-picker-indicator {
     border-radius: 5px; 
     background-color: black; 
     color: var(--form-border-input-color); 
-    font-size: 16px; 
+    font-size: 1em; 
     color: var(--form-border-input-color);
     height: auto;
     box-sizing: border-box; 
@@ -2285,7 +2287,7 @@ input[type="date"]::-webkit-calendar-picker-indicator {
     width: 100%; 
     padding: 0.8em; 
     color: var(--form-border-input-color); 
-    font-size: 16px; 
+    font-size: 1em; 
     color: var(--form-border-input-color);
     height: auto;
     box-sizing: border-box; 
@@ -2300,7 +2302,7 @@ input[type="date"]::-webkit-calendar-picker-indicator {
     padding: 0.5em 2em;
     color: white;
     cursor: pointer;
-    font-size: 18px;
+    font-size: 1em;
     border-radius: 20px;
     background-color: black;
     border: 1px solid white;
@@ -2331,7 +2333,7 @@ input[type="date"]::-webkit-calendar-picker-indicator {
     margin-top: 2em;
     background-color:black;
     color: var(--form-border-input-color); 
-    font-size: 16px;
+    font-size: 1em;
     cursor: pointer;
     color: white; 
 }
@@ -2342,9 +2344,8 @@ input[type="date"]::-webkit-calendar-picker-indicator {
     margin-top: 1em;
     padding: 0.5em 2em;
     color: white;
-    font-size: 16px;
+    font-size: 1em;
     cursor: pointer;
-    font-size: 18px;
     border-radius: 20px;
     background-color: black;
     border: 1px solid white;

@@ -2055,7 +2055,7 @@ p.list_car_list_empty {
     padding: 0 0.5em;
     margin-top: -1.9em;
     font-weight: bold;
-    font-size: 25px;
+    font-size: 1.6em;
     color: var(--form-border-input-color);
 }
 
@@ -2065,7 +2065,7 @@ p.list_car_list_empty {
     color: var(--form-border-input-color);
     padding-left: 3em;
     font-weight: bold;
-    font-size: 25px;
+    font-size: 1.6em;
 }
 
 .tabellaPrenUtente {
@@ -2127,7 +2127,7 @@ p.list_car_list_empty {
     margin-top: 2em;
     background-color:black;
     color: var(--form-border-input-color); 
-    font-size: 16px;
+    font-size: 1em;
     cursor: pointer;
     color: white; 
 }
@@ -2138,9 +2138,8 @@ p.list_car_list_empty {
     margin-top: 1em;
     padding: 0.5em 2em;
     color: white;
-    font-size: 16px;
+    font-size: 1em;
     cursor: pointer;
-    font-size: 18px;
     border-radius: 20px;
     background-color: black;
     border: 1px solid white;
@@ -2412,7 +2411,7 @@ input[type="date"]::-webkit-calendar-picker-indicator {
     border-radius: 5px; 
     background-color:black; 
     color: var(--form-border-input-color); 
-    font-size: 16px;
+    font-size: 1em;
     cursor: pointer;
     margin-top: 2em;
     color: white;
@@ -2424,7 +2423,7 @@ input[type="date"]::-webkit-calendar-picker-indicator {
     margin-top: 1em;
     padding: 0.5em 2em;
     color: white;
-    font-size: 18px;
+    font-size: 1em;
     border-radius: 20px;
     cursor: pointer;
     background-color: black;
@@ -2468,7 +2467,7 @@ input[type="date"]::-webkit-calendar-picker-indicator {
     border-radius: 5px; 
     background-color: black; 
     color: var(--form-border-input-color); 
-    font-size: 16px; 
+    font-size: 1em; 
     color: var(--form-border-input-color);
     height: auto;
     box-sizing: border-box; 
@@ -2485,7 +2484,7 @@ input[type="date"]::-webkit-calendar-picker-indicator {
     width: 100%; 
     padding: 0.8em; 
     color: var(--form-border-input-color); 
-    font-size: 16px; 
+    font-size: 1em; 
     color: var(--form-border-input-color);
     height: auto;
     box-sizing: border-box; 
@@ -2499,7 +2498,7 @@ input[type="date"]::-webkit-calendar-picker-indicator {
     padding: 0.5em 2em;
     color: white;
     cursor: pointer;
-    font-size: 18px;
+    font-size: 1em;
     border-radius: 20px;
     background-color: black;
     border: 1px solid white;
@@ -2530,7 +2529,7 @@ input[type="date"]::-webkit-calendar-picker-indicator {
     margin-top: 2em;
     background-color:black;
     color: var(--form-border-input-color); 
-    font-size: 16px;
+    font-size: 1em;
     cursor: pointer;
     color: white; 
 }
@@ -2541,9 +2540,8 @@ input[type="date"]::-webkit-calendar-picker-indicator {
     margin-top: 1em;
     padding: 0.5em 2em;
     color: white;
-    font-size: 16px;
+    font-size: 1em;
     cursor: pointer;
-    font-size: 18px;
     border-radius: 20px;
     background-color: black;
     border: 1px solid white;
