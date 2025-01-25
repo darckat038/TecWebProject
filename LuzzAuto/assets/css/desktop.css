@@ -2075,8 +2075,8 @@ p.list_car_list_empty {
 }
 
 .tabellaPrenUtente thead {
-    background-color: var(--navbar-bg-color);
-    color: var(--form-border-input-color);
+    background-color: var(--cards-bg-color);
+    color: var(--cards-text-color);
 }
 
 .tabellaPrenUtente th, .tabellaPrenUtente td {
@@ -2100,11 +2100,11 @@ p.list_car_list_empty {
 }
 
 #accettatoUtente{
-    color: #4caf50;
+    color: var(--form-success-text-color);
 }
 
 #rifiutatoUtente{
-    color: red;
+    color: var(--form-error-text-color);
 }
 
 /*gestione prenotazioni*/
@@ -2369,8 +2369,8 @@ input[type="date"]::-webkit-calendar-picker-indicator {
 }
 
 .tabellaPrenAdmin thead {
-    background-color: var(--navbar-bg-color);
-    color: var(--form-border-input-color);
+    background-color: var(--cards-bg-color);
+    color: var(--cards-text-color);
 }
 
 .tabellaPrenAdmin th, .tabellaPrenAdmin td {

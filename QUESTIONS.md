@@ -69,7 +69,7 @@
 
 - [x] Modifica select auto in test_drive e amministratore (vedi_slide:95 pdf:html)
 
-- [ ] Tabella responsive mobile in utente e amministratore (vedi_slide:74 pdf:accessibilità)
+- [x] Tabella responsive mobile in utente e amministratore (vedi_slide:74 pdf:accessibilità)
 
 - [x] Testo giustificato nel print.css
 
