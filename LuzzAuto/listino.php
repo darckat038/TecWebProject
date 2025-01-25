@@ -183,7 +183,7 @@ if(isset($_GET['action']) && $_GET['action'] == 'Applica filtri') {
 			$err = $err . "<p id=\"cambio_err\">Hai selezionato un tipo di cambio non valido. Seleziona nuovamente la scelta desiderata.</p>";
 		}
 		if (isset($_GET["trazione"]) && !preg_match("/^([A-Za-z]+( [A-Za-z]+)*)?$/", $_GET["trazione"])) {
-			$err = $err . "<p id=\"trazione_err\">Hai selezionato un tipo di trazione non valid. Seleziona nuovamente la scelta desiderata.</p>";
+			$err = $err . "<p id=\"trazione_err\">Hai selezionato un tipo di trazione non valido. Seleziona nuovamente la scelta desiderata.</p>";
 		}
 		if (isset($_GET["potenzaMin"]) && is_numeric($_GET["potenzaMin"])) {
 			if (!preg_match("/^(\d+)?$/", $_GET["potenzaMin"]) || intval($_GET["potenzaMin"]) <= 0 || (!empty($_GET["potenzaMax"]) ? (intval($_GET["potenzaMin"]) > intval($_GET["potenzaMax"])) : false)) {
