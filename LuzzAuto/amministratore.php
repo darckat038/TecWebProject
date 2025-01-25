@@ -4,8 +4,8 @@ require_once 'dbConnection.php';
 use DB\DBConnection;
 
 function ripristinoInput($adminPage) {
-    //RIPRISTINO DELL'INPUT INSERITO
-	// Se c'è input salvato in $_GET, mette quello, altrimenti valore di default (stringa vuota o select default)
+    //RIPRISTINO DELL'INPUT INSERITO FORM INSERISCI AUTO
+	// Se c'è input salvato in $_POST, mette quello, altrimenti valore di default (stringa vuota o select default)
     $adminPage = str_replace('[imageOut]', htmlspecialchars(isset($_POST['immagineOutAdmin']) ? $_POST['immagineOutAdmin'] : ''), $adminPage);
     $adminPage = str_replace('[altOut]', htmlspecialchars(isset($_POST['altImmagineOutAdmin']) ? $_POST['altImmagineOutAdmin'] : ''), $adminPage);
     $adminPage = str_replace('[imageIn]', htmlspecialchars(isset($_POST['immagineInAdmin']) ? $_POST['immagineInAdmin'] : ''), $adminPage);
@@ -33,7 +33,6 @@ function ripristinoInput($adminPage) {
     $adminPage = str_replace("[potenza]", htmlspecialchars(isset($_POST['potenzaAdmin']) ? $_POST['potenzaAdmin'] : ''), $adminPage);
     $adminPage = str_replace("[peso]", htmlspecialchars(isset($_POST['pesoAdmin']) ? $_POST['pesoAdmin'] : ''), $adminPage);
     $adminPage = str_replace("[posti]", htmlspecialchars(isset($_POST['numero_postiAdmin']) ? $_POST['numero_postiAdmin'] : ''), $adminPage);
-    $adminPage = str_replace("[potenza]", htmlspecialchars(isset($_POST['potenzaAdmin']) ? $_POST['potenzaAdmin'] : ''), $adminPage);
 
     if(htmlspecialchars(isset($_POST['condizioneAdmin']))) {
 		$adminPage = str_replace("[" . $_POST['condizioneAdmin'] . "]", "selected ", $adminPage);
@@ -90,23 +89,25 @@ function mostraTabellaPrenotazioni() {
         } else {
             // Ciclo su ogni prenotazione per generare le righe
             foreach ($prenotazione as $row) {
-                $statoTestuale = "";
-                if ($row['stato'] == 1) {
-                    $statoTestuale = "<span id='accettatoUtente'>Accettato</span>";
-                } else if ($row['stato'] == -1) {
-                    $statoTestuale = "<span id='rifiutatoUtente'>Rifiutato</span>";
-                } else {
-                    $statoTestuale = "<span id='attesaUtente'>In attesa</span>";
-                }
+                if($row['dataOra'] >= date("Y-m-d H:i:s")) {
+                    $statoTestuale = "";
+                    if ($row['stato'] == 1) {
+                        $statoTestuale = "<span id='accettatoUtente'>Accettato</span>";
+                    } else if ($row['stato'] == -1) {
+                        $statoTestuale = "<span id='rifiutatoUtente'>Rifiutato</span>";
+                    } else {
+                        $statoTestuale = "<span id='attesaUtente'>In attesa</span>";
+                    }
 
-                // Aggiungi una riga per la prenotazione
-                $campiTabella .= "<tr>
-                                    <td>" . $row["codice"] . "</td>
-                                    <td>" . $row["username"] . "</td>
-                                    <td>" . $row["marca"] . " " . $row['modello'] . "</td>
-                                    <td><time datetime=''" . $row['dataOra'] . "'>" . $row['dataOra'] . "</time></td>
-                                    <td>" . $statoTestuale . "</td>
-                                  </tr>";
+                    // Aggiungi una riga per la prenotazione
+                    $campiTabella .= "<tr>
+                                        <td>" . $row["codice"] . "</td>
+                                        <td>" . $row["username"] . "</td>
+                                        <td>" . $row["marca"] . " " . $row['modello'] . "</td>
+                                        <td><time datetime=''" . $row['dataOra'] . "'>" . $row['dataOra'] . "</time></td>
+                                        <td>" . $statoTestuale . "</td>
+                                    </tr>";
+                }
             }
             
         }
@@ -153,12 +154,14 @@ function setSelectPrenGest($adminPage) {//esecuzione della query
             $val = $row["codice"];
 
             if($row['stato'] == 0){
-                //reimposto il valore settato se ci sono errori
-                if(isset($_POST['gestPrenAdmin']) && $_POST['gestPrenAdmin'] == $val) {
-                    $prenotazioni .= "<option value='" . $val . "' selected>Prenotazione numero " . $row["codice"] . "</option>";
-                }
-                else{
-                    $prenotazioni .= "<option value='" . $val . "'>Prenotazione numero " . $row["codice"] . "</option>";
+                if($row['dataOra'] >= date("Y-m-d H:i:s")) {
+                    //reimposto il valore settato se ci sono errori
+                    if(isset($_POST['gestPrenAdmin']) && $_POST['gestPrenAdmin'] == $val) {
+                        $prenotazioni .= "<option value='" . $val . "' selected>Prenotazione numero " . $row["codice"] . "</option>";
+                    }
+                    else{
+                        $prenotazioni .= "<option value='" . $val . "'>Prenotazione numero " . $row["codice"] . "</option>";
+                    }
                 }
             }
             
@@ -238,7 +241,113 @@ $adminPage = str_replace("[campiTabella]", $campiTabella, $adminPage);
 $adminPage = setSelectPrenGest($adminPage);
 
 // AGGIUNGI AUTO
+if(isset($_POST['aggiungiAutoAdmin'])){
 
+    // Controllo sull'input (verifico che l'admin abbia compilato tutti i campi)
+    if (empty($_POST['immagineOutAdmin']) || empty($_POST['altImmagineOutAdmin']) || empty($_POST['immagineInAdmin']) || 
+        empty($_POST['altImmagineInAdmin']) || empty($_POST['marcaAdmin']) || empty($_POST['modelloAdmin']) || empty($_POST['annoAdmin']) || 
+        empty($_POST['coloreAdmin']) || empty($_POST['alimentazioneAdmin']) || empty($_POST['cambioAdmin']) || empty($_POST['trazioneAdmin']) || 
+        empty($_POST['potenzaAdmin']) || empty($_POST['pesoAdmin']) || empty($_POST['numero_postiAdmin']) || empty($_POST['condizioneAdmin']) || 
+        empty($_POST['chilometraggioAdmin']) || empty($_POST['prezzoAdmin']) || !isset($_POST['neopatentatiAdmin'])) {
+
+        $errAggiungi = "<p>Devi compilare tutti i campi.</p>";
+        $adminPage = ripristinoInput($adminPage);
+        $adminPage = str_replace("[errAdd]", $errAggiungi, $adminPage);
+    }
+
+    //CONTROLLI SULL'INPUT
+
+    if (!preg_match("/^([A-Za-z0-9,.]+( [A-Za-z0-9,.]+)*)?$/", $_POST["altImmagineOutAdmin"]) || strlen($_POST["altImmagineOutAdmin"]) > 100) {
+        $errAggiungi = $errAggiungi . "<p id=\"altImmagineOut_err\">L'alternativa testuale che hai inserito riguardante la prima immagine non &egrave; valida, puoi usare solo lettere, numeri, spazi(non all'inizio e alla fine) e i caratteri virgola e punto. Non devi superare i 100 caratteri di lunghezza.</p>";
+    }
+    if (!preg_match("/^([A-Za-z0-9,.]+( [A-Za-z0-9,.]+)*)?$/", $_POST["altImmagineInAdmin"]) || strlen($_POST["altImmagineInAdmin"]) > 100) {
+        $errAggiungi = $errAggiungi . "<p id=\"altImmagineOut_err\">L'alternativa testuale che hai inserito riguardante la seconda immagine non &egrave; valida, puoi usare solo lettere, numeri, spazi(non all'inizio e alla fine) e i caratteri virgola e punto. Non devi superare i 100 caratteri di lunghezza.</p>";
+    }
+    if (!preg_match("/^([A-Za-z0-9\-]+( [A-Za-z0-9\-]+)*)?$/", $_POST["marca"])) {
+        $errAggiungi = $errAggiungi . "<p id=\"marca_err\">La marca che hai inserito non &egrave; valida, puoi usare solo lettere, numeri, spazi(non all'inizio e alla fine) e il carattere \"-\".</p>";
+    }
+    if (!preg_match("/^([A-Za-z0-9\-]+( [A-Za-z0-9\-]+)*)?$/", $_POST["modello"])) {
+        $errAggiungi = $errAggiungi . "<p id=\"modello_err\">Il modello che hai inserito non &egrave; valido, puoi usare solo lettere, numeri, spazi(non all'inizio e alla fine) e il carattere \"-\".</p>";
+    }
+    if (is_numeric($_POST["anno"]) && (!preg_match("/^\d{1,4}$/", $_POST["anno"]) || intval($_POST["anno"]) <= 0)) {
+        $errAggiungi = $errAggiungi . "<p id=\"anno_err\">L'anno che hai inserito non &egrave; valido, inserisci un anno maggiore di 0 e di massimo 4 cifre.</p>";
+    }
+    if (!preg_match("/^([A-Za-z]+( [A-Za-z]+)*)?$/", $_POST["colore"])) {
+        $errAggiungi = $errAggiungi . "<p id=\"colore_err\">Il colore che hai inserito non &egrave; valido, puoi usare solo lettere e spazi(non all'inizio e alla fine).</p>";
+    }
+    if (!preg_match("/^([A-Za-z0-9\-]+( [A-Za-z0-9\-]+)*)?$/", $_POST["alimentazione"])) {
+        $errAggiungi = $errAggiungi . "<p id=\"alimentazione_err\">Hai selezionato un'alimentazione non valida. Seleziona nuovamente la scelta desiderata.</p>";
+    }
+    if (!preg_match("/^([A-Za-z]+( [A-Za-z]+)*)?$/", $_POST["cambio"])) {
+        $errAggiungi = $errAggiungi . "<p id=\"cambio_err\">Hai selezionato un tipo di cambio non valido. Seleziona nuovamente la scelta desiderata.</p>";
+    }
+    if (!preg_match("/^([A-Za-z]+( [A-Za-z]+)*)?$/", $_POST["trazione"])) {
+        $errAggiungi = $errAggiungi . "<p id=\"trazione_err\">Hai selezionato un tipo di trazione non valido. Seleziona nuovamente la scelta desiderata.</p>";
+    }
+    if (is_numeric($_POST["potenza"])) {
+        if (!preg_match("/^(\d+)?$/", $_POST["potenza"]) || intval($_POST["potenza"]) <= 0) {
+            $errAggiungi = $errAggiungi . "<p id=\"potenzaMin_err\">Hai inserito una potenza non valida, inserisci una potenza maggiore di 0.</p>";
+        }
+    }
+    if (is_numeric($_POST["peso"])) {
+        if (!preg_match("/^(\d+)?$/", $_POST["peso"]) || intval($_POST["peso"]) <= 0) {
+            $errAggiungi = $errAggiungi . "<p id=\"pesoMin_err\">Hai inserito un peso non valido, inserisci un peso maggiore di 0.</p>";
+        }
+    }
+    if (is_numeric($_POST["posti"]) && (!preg_match("/^(\d+)?$/", $_POST["anno"]) || intval($_POST["anno"]) <= 0)) {
+        $errAggiungi = $errAggiungi . "<p id=\"posti_err\">Hai inserito un numero di posti non valido, inserisci un numero maggiore di 0.</p>";
+    }
+    if (!preg_match("/^([A-Za-z0-9]+( [A-Za-z0-9]+)*)?$/", $_POST["condizione"])) {
+        $errAggiungi = $errAggiungi . "<p id=\"condizione_err\">hai selezionato una condizione non valida. Seleziona nuovamente la scelta desiderata.</p>";
+    }
+    if (is_numeric($_POST["prezzoMax"]) && (!preg_match("/^(\d+)?$/", $_POST["prezzoMax"]) || intval($_POST["prezzoMax"]) <= 0)) {
+            $errAggiungi = $errAggiungi . "<p id=\"prezzoMax_err\">Hai inserito un prezzo non valido, inserisci un prezzo maggiore di 0.</p>";
+    }
+    if (is_numeric($_POST["chilometraggio"]) && (!preg_match("/^(\d+)?$/", $_POST["chilometraggio"]) || intval($_POST["chilometraggio"]) <= 0)) {
+        $errAggiungi = $errAggiungi . "<p id=\"chilometraggio_err\">Hai inserito un chilometraggio non valido, inserisci un valore maggiore di 0.</p>";
+    }
+    if (!empty($_POST["neopatentati"]) && intval($_POST["neopatentati"]) != 1) {
+        $errAggiungi = $errAggiungi . "<p id=\"neopatentati_err\">Hai selezionato un valore di neopatentati non valido. Seleziona nuovamente la scelta desiderata.</p>";
+    }
+
+    /*
+    // Restituzione errori in caso di problemi di validazione
+    if (!empty($errGest)) {
+        $adminPage = str_replace("[errAdd]", $errGest, $adminPage);
+        
+    } else {
+
+        if($_POST["azioneAdmin"] == "accetta"){
+            $stato = 1;
+        }else{
+            $stato = -1;
+        }
+
+        // Recupero ID della prenotazione
+        $idPrenotazione = explode("-", $_POST["gestPrenAdmin"])[0];
+        $idPrenotazione = htmlspecialchars($idPrenotazione);
+
+        // Tentativo di aggiornamento della prenotazione
+        try {
+            $db = new DBConnection();
+            $ris = $db->updateStatoPrenotazione($idPrenotazione, $stato); // Assume che la funzione restituisca un booleano (true/false)
+            $db->closeConnection();
+            unset($db);
+
+            if (!$ris) {
+                // Prenotazione non trovata
+                $errGest .= "<p>La prenotazione che hai selezionato non esiste. (ID: " . $idPrenotazione . ")</p>";
+            }
+
+        } catch (Exception $e) {
+            // Gestione errori e logging
+            error_log("Errore: " . $e->getMessage());
+            header("location: 500.html");
+            exit();
+        }
+    }
+        */
+}
 
 //ELIMINA PRENOTAZIONE
 
