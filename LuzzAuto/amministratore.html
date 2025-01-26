@@ -59,10 +59,10 @@
         <div class="menu-button-bar3" aria-hidden="true"></div>
       </div>
       <ul id="menu"  aria-label="Menù del sito">
-          <li><a href="index.php"><span lang="eng">Home</span></a></li>
+          <li><a href="index.php"><span lang="en-GB">Home</span></a></li>
           <li><a href="about.html" >Chi siamo</a></li>
           <li><a href="listino.php" >Listino auto</a></li>
-          <li><a href="test_drive.html"><span lang="eng">Test drive</span></a></li>
+          <li><a href="test_drive.html"><span lang="en-GB">Test drive</span></a></li>
           <li><a href="utente.php" tabindex="-1" id="here">Area riservata</a></li>
       </ul>
     </nav>
@@ -88,16 +88,17 @@
               <legend class="nomeRiqAdmin">Gestione Prenotazioni</legend>
 
               <label for="gestPrenAdmin" id="labelPrenAdmin">Prenotazioni:</label>
-              <select id="gestPrenAdmin" name="gestPrenAdmin" aria-required='true' aria-label='Campo di inserimento della prenotazione che desideri gestire' required data-msg-required='Per favore, seleziona la prenotazione'>
-                <option value=''>--seleziona--</option>
+              <select id="gestPrenAdmin" name="gestPrenAdmin" aria-required='true' required data-msg-required='Per favore, seleziona la prenotazione'>
+                <option value='' selected disabled>Seleziona un'opzione</option>
                 [prenotazioni]
               </select>
               <label for="azioneAdmin" id="labelAzioneAdmin">Azione:</label>
-              <select id="azioneAdmin" name="azioneAdmin" aria-label="Azione che desideri effettuare">
+              <select id="azioneAdmin" name="azioneAdmin">
+                  <option value='' selected disabled>Seleziona un'opzione</option>
                   <option value="accetta">Accetta</option>
                   <option value="rifiuta">Rifiuta</option>
               </select>
-              <input type="submit" name="inviaAzioneAdmin" value="Conferma" id="inviaAzioneAdmin" aria-label="Conferma i cambiamenti">
+              <input type="submit" name="inviaAzioneAdmin" value="Conferma" id="inviaAzioneAdmin">
                 
             </fieldset>
           </form>
@@ -118,29 +119,29 @@
             <input type="file" id="immagineOutAdmin" name="immagineOutAdmin" value="[imageOut]" required aria-required="true" data-msg-required="Per favore, inserisci un'immagine" accept="image/*">
             
             <label for="altImmagineOutAdmin" id="labelAltImmagineOutAdmin">Testo alt per immagine interni:</label>
-            <textarea rows="10" columns="40" id="altImmagineOutAdmin" value="[altOut]" name="altImmagineOutAdmin" placeholder="Inserisci" required aria-required="true" data-msg-required="Per favore, inserisci un testo alternativo per l'immagine"></textarea>
+            <textarea rows="10" columns="40" id="altImmagineOutAdmin" value="[altOut]" name="altImmagineOutAdmin" placeholder="Es. Auto berlina grigia metallizzata, quattro porte, design elegante e moderno" required aria-required="true" data-msg-required="Per favore, inserisci un testo alternativo per l'immagine"></textarea>
 
             <label for="immagineInAdmin" id="labelimmagineInAdmin">Immagine interni dell'auto:</label>
             <input type="file" id="immagineInAdmin" value="[imageIn]" name="immagineInAdmin" required aria-required="true" data-msg-required="Per favore, inserisci un'immagine" accept="image/*">
 
             <label for="altImmagineInAdmin" id="labelAltImmagineInAdmin">Testo alt per immagine interni:</label>
-            <textarea rows="10" columns="40" id="altImmagineInAdmin" value="[altIn]" name="altImmagineInAdmin" placeholder="Inserisci" required aria-required="true" data-msg-required="Per favore, inserisci un testo alternativo per l'immagine"></textarea>
+            <textarea rows="10" columns="40" id="altImmagineInAdmin" value="[altIn]" name="altImmagineInAdmin" placeholder="Es. Interni di lusso con sedili in pelle marrone, finiture in legno e schermo di infotainment" required aria-required="true" data-msg-required="Per favore, inserisci un testo alternativo per l'immagine"></textarea>
 
             <label for="marcaAdmin" id="labelMarcaAdmin">Marca:</label>
-            <input type="text" id="marcaAdmin" value="[marca]" name="marcaAdmin" placeholder="Inserisci" required aria-required="true" data-msg-required="Per favore, inserisci la marca dell'auto">
+            <input type="text" id="marcaAdmin" value="[marca]" name="marcaAdmin" placeholder="Es. DM - Digital Motion" required aria-required="true" data-msg-required="Per favore, inserisci la marca dell'auto">
 
             <label for="modelloAdmin" id="labelModelloAdmin">Modello:</label>
-            <input type="text" id="modelloAdmin" value="[modello]" name="modelloAdmin" placeholder="Inserisci" required aria-required="true" data-msg-required="Per favore, inserisci il modello dell'auto">
+            <input type="text" id="modelloAdmin" value="[modello]" name="modelloAdmin" placeholder="Es. Mudol" required aria-required="true" data-msg-required="Per favore, inserisci il modello dell'auto">
 
             <label for="annoAdmin" id="labelAnnoAdmin">Anno:</label>
-            <input type="number" id="annoAdmin" value="[anno]" name="annoAdmin" min="1" step="1" max="2025" placeholder="Inserisci" required aria-required="true" data-msg-required="Per favore, inserisci l'anno dell'auto">
+            <input type="number" id="annoAdmin" value="[anno]" name="annoAdmin" min="1" step="1" max="2025" placeholder="Es. 2024" required aria-required="true" data-msg-required="Per favore, inserisci l'anno dell'auto">
 
             <label for="coloreAdmin" id="labelColoreAdmin">Colore:</label>
-            <input type="text" id="coloreAdmin" value="[colore]" name="coloreAdmin" placeholder="Inserisci" required aria-required="true" data-msg-required="Per favore, inserisci il colore dell'auto">
+            <input type="text" id="coloreAdmin" value="[colore]" name="coloreAdmin" placeholder="Es. Nero" required aria-required="true" data-msg-required="Per favore, inserisci il colore dell'auto">
 
             <label for="alimentazioneAdmin" id="labelAlimAdmin">Alimentazione:</label>
             <select id="alimentazioneAdmin" name="alimentazioneAdmin" required aria-required="true" data-msg-required="Per favore, seleziona il tipo di alimentazione">
-              <option value="">--seleziona--</option>
+              <option value="" selected disabled>Seleziona un'opzione</option>
               <option [benzina]value="benzina">Benzina</option>
               <option [gasolio]value="gasolio">Gasolio</option>
               <option [elettrico]value="elettrico">Elettrico</option>
@@ -150,54 +151,54 @@
 
             <label for="cambioAdmin" id="labelCambioAdmin">Cambio:</label>
             <select id="cambioAdmin" name="cambioAdmin" required aria-required="true" data-msg-required="Per favore, seleziona il tipo di cambio">
-              <option value="">--seleziona--</option>
+              <option value="" selected disabled>Seleziona un'opzione</option>
               <option [manuale]value="manuale">Manuale</option>
               <option [automatico]value="automatico">Automatico</option>
             </select>
 
             <label for="trazioneAdmin" id="labelTrazioneAdmin">Trazione:</label>
             <select id="trazioneAdmin" name="trazioneAdmin" required aria-required="true" data-msg-required="Per favore, seleziona il tipo di trazione">
-              <option value="">--seleziona--</option>
+              <option value="" selected disabled>Seleziona un'opzione</option>
               <option [anteriore]value="anteriore">Anteriore</option>
               <option [posteriore]value="posteriore">Posteriore</option>
               <option [integrale]value="integrale">Integrale</option>
             </select>
 
             <label for="potenzaAdmin" id="labelPotenzaAdmin">Potenza (<abbr title="cavalli vapore">CV</abbr>):</label>
-            <input type="number" id="potenzaAdmin" value="[potenza]" name="potenzaAdmin" min="1" step="1" placeholder="Inserisci" required aria-required="true" data-msg-required="Per favore, inserisci la potenza dell'auto">
+            <input type="number" id="potenzaAdmin" value="[potenza]" name="potenzaAdmin" min="1" step="1" placeholder="Es. 180" required aria-required="true" data-msg-required="Per favore, inserisci la potenza dell'auto">
 
             <label for="pesoAdmin" id="labelPesoAdmin">Peso (<abbr title="chilogrammi">kg</abbr>):</label>
-            <input type="number" id="pesoAdmin" value="[peso]" name="pesoAdmin" min="1" step="1" placeholder="Inserisci" required aria-required="true" data-msg-required="Per favore, inserisci il peso dell'auto">
+            <input type="number" id="pesoAdmin" value="[peso]" name="pesoAdmin" min="1" step="1" placeholder="Es. 1200" required aria-required="true" data-msg-required="Per favore, inserisci il peso dell'auto">
 
             <label for="numero_postiAdmin" id="labelPostiAdmin">Numero posti:</label>
-            <input type="number" id="numero_postiAdmin" value="[posti]" name="numero_postiAdmin" min="1" step="1" placeholder="Inserisci" required aria-required="true" data-msg-required="Per favore, inserisci il numero di posti dell'auto">
+            <input type="number" id="numero_postiAdmin" value="[posti]" name="numero_postiAdmin" min="1" step="1" placeholder="Es. 5" required aria-required="true" data-msg-required="Per favore, inserisci il numero di posti dell'auto">
 
             <label for="condizioneAdmin" id="labelCondizioniAdmin">Condizione:</label>
             <select id="condizioneAdmin" name="condizioneAdmin" required aria-required="true" data-msg-required="Per favore, inserisci la condizione dell'auto">
-              <option value="">--seleziona--</option>
+              <option value="" selected disabled>Seleziona un'opzione</option>
               <option [nuovo]value="nuovo">Nuovo</option>
               <option [usato]value="usato">Usato</option>
               <option [km0]value="km0">KM 0</option>
             </select>
 
             <label for="chilometraggioAdmin" id="labelChilometriAdmin">Chilometraggio (<abbr title="chilometri">km</abbr>):</label>
-            <input type="number" id="chilometraggioAdmin" value="[chilometraggio]" name="chilometraggioAdmin" min="0" step="1" placeholder="Inserisci" required aria-required="true" data-msg-required="Per favore, inserisci il chilometraggio dell'auto">
+            <input type="number" id="chilometraggioAdmin" value="[chilometraggio]" name="chilometraggioAdmin" min="0" step="1" placeholder="Es. 1200" required aria-required="true" data-msg-required="Per favore, inserisci il chilometraggio dell'auto">
             
             <label for="prezzoAdmin" id="labelPrezzoAdmin">Prezzo (€):</label>
-            <input type="number" id="prezzoAdmin" value="[prezzo]" name="prezzoAdmin" min="1" step="1" placeholder="Inserisci" required aria-required="true" data-msg-required="Per favore, inserisci il prezzo dell'auto">
+            <input type="number" id="prezzoAdmin" value="[prezzo]" name="prezzoAdmin" min="1" step="1" placeholder="Es. 40000" required aria-required="true" data-msg-required="Per favore, inserisci il prezzo dell'auto">
 
             
             <div id="neopatentatiAdmin">
                 <label class="interruttore" for="neopatentatiID" id="labelNeopatentatiAdmin">
                     Idoneità neopatentati:
-                    <input type="checkbox" name="neopatentatiAdmin" id="neopatentatiID" [neopatentati]value="1" aria-label="Mettere spunta se neopatentati abilitati alla guida dell'auto">
+                    <input type="checkbox" name="neopatentatiAdmin" id="neopatentatiID" [neopatentati]value="1">
                     <div class="interruttore-slider">
                         <div class="interruttore-knob"></div>
                     </div>
                 </label>
             </div>
 
-            <input type="submit" value="Aggiungi" id="aggiungiAutoAdmin" aria-label="Bottone per confermare i dati e aggiungere una nuova auto">
+            <input type="submit" value="Aggiungi" id="aggiungiAutoAdmin">
 
           </fieldset>
         </form>
@@ -221,10 +222,10 @@
 
             <label for="eliminaAutoAdmin" id="labelEliminaAutoAdmin">Auto:</label>
             <select id="eliminaAutoAdmin" name="eliminaAutoAdmin" aria-required='true' required>
-                <option value=''>--seleziona--</option>
+                <option value='' selected disabled>Seleziona un'opzione</option>
                 [VeicoliDaEliminare]
             </select>
-            <input type="submit" value="Elimina" id="eliminaButtonAdmin" aria-label="Elimina la prenotazione selezionata">
+            <input type="submit" value="Elimina" id="eliminaButtonAdmin">
           </fieldset>
         </form>
 
