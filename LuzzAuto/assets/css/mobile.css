@@ -1534,7 +1534,7 @@ section.aboutUs_history img {
     line-height: 1.2em;
 }
 
-#home_new div.home_car_item {
+#home_new .home_car_item {
     margin: 4em 3em 0;
     display: inline-block;
     border: 0px solid black;
@@ -1547,7 +1547,7 @@ section.aboutUs_history img {
     background-color: var(--content-text-bg-color);
 }
 
-#home_new div.home_car_item dt {
+#home_new .home_car_item div {
     font-weight: 450;
     font-size: 1.3em;
     padding: 0.5em 0 1em;
@@ -1555,7 +1555,7 @@ section.aboutUs_history img {
     color: var(--navbar-text-color);
 }
 
-#home_new div.home_car_item dd {
+#home_new .home_car_item p {
     padding: 0.7em 1em 1em;
     font-weight: 300;
     font-size: 1.1em;
