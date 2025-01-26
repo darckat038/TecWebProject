@@ -154,10 +154,6 @@ select option {
 
 /* CHECKBOX CUSTOM Sì/No */
 
-.interruttore p{
-    position: absolute;
-    margin: -9999em;
-}
 
 /* Nascondi l'input checkbox */
 .interruttore input[type="checkbox"] {
@@ -173,6 +169,7 @@ select option {
     left: 0;
     right: 0;
     bottom: 0;
+    margin: 0.8em -7em -0.8em 7em;
     background-color: #ccc;
     border-radius: 25px;
     transition: background-color 0.3s;
@@ -1192,7 +1189,7 @@ section.aboutUs_history p {
 #list_filter #list_filter_neopatentati,
 #neopatentatiAdmin {
     width: 13em;
-    margin-top: 2em;
+    margin-top: 1.5em;
 }
 
 #list_filter #list_filter_neopatentati .interruttore,
