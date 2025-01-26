@@ -513,9 +513,10 @@ input[type="date"]::-webkit-calendar-picker-indicator {
     line-height: 1.1em;
 }
 
-#test_drive_main > p{
+#test_drive_main p{
     margin: 1.5em 20% 0 20%;
     text-align: center;
+    max-width: 70em;
 }
 
 #test_drive_comefunziona{

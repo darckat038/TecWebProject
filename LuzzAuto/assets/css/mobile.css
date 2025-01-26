@@ -566,11 +566,6 @@ input[type="date"]::-webkit-calendar-picker-indicator {
     margin-top: 5em;
 }
 
-#test_drive_main p {
-    font-size: 1.15em;
-    font-weight: 300;
-}
-
 #test_drive_main > section > h3 {
     font-size: 1.5em;
     font-weight: 500;
@@ -584,9 +579,12 @@ input[type="date"]::-webkit-calendar-picker-indicator {
     line-height: 1.1em;
 }
 
-#test_drive_main > p{
+#test_drive_main p{
+    font-size: 1.15em;
+    font-weight: 300;
     margin: 1.5em 20% 0 20%;
     text-align: center;
+    max-width: 20em;
 }
 
 #test_drive_comefunziona{
