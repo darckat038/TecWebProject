@@ -1,4 +1,5 @@
 # Controlli accessibilità e ritrutturazioni (Emanuele, progressi segnati tra parentesi)
+- [ ] validator.w3.org D:
 
 - [ ] Aggiungere tabindex (accesskey) su tutti i link/funzionalità (TEST NVDA) (Emanuele)  
 (OK: )
