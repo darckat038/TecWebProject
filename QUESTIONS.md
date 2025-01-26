@@ -81,8 +81,6 @@
 ## IL COLORE DEI LINK VISITATI DEVE ESSERE MANTENUTO ANCHE IN CASO DI HOVER? (VEDI TEST DRIVE)
 - [x] PROBABILMENTE SI
 
-- [ ] # !DOCUMENTARE TUTTE LE COSE CHE PUO' FARE L'UTENTE
-
 
   
 # ALTRE MODIFICHE DA IMPLEMENTARE E DOCUMENTARE IN RELAZIONE
@@ -118,10 +116,6 @@
 
 - [ ] Dare enfasi ad alcune parole chiave con tag em e strong
 
-- [ ] Nella relazione descrivere strategia mobile first
-
-- [ ] Eseguire e descrivere nella relazione tutti i controlli sull'accessibilità eseguiti con i vari tool
-
 - [x] Rimuovere file php_info.php
 
 - [x] Sistemare dimensioni file immagini (max 1MB) (Emanuele)
@@ -138,10 +132,6 @@
 
 - [x] Modificare select auto test_drive e amministratore usando solo l'id nel value
 
-- [ ] Mettere nella relazione che abbiamo tolto i display none
-
-- [ ] Mettere nella relazione che abbiamo usato modalità IE11
-
 - [x] Sistemare la dl nel dettaglio auto: dd e dt sono invertiti
 
 - [ ] Inserire aria-label in ogni tag nav interattivo (menu e breadcrumb se dentro c'è un link)
@@ -153,3 +143,15 @@
 - [ ] Fixare tutti i dl (vedi about.html)
 
 - [ ] Inserire la possibilità per l'utente di eliminare i suoi dati del profilo
+
+# RELAZIONE
+- [ ] # !DOCUMENTARE TUTTE LE COSE CHE PUO' FARE L'UTENTE
+
+- [ ] Mettere nella relazione che abbiamo tolto i display none
+
+- [ ] Mettere nella relazione che abbiamo usato modalità IE11
+
+- [ ] Nella relazione descrivere strategia mobile first
+
+- [ ] Eseguire e descrivere nella relazione tutti i controlli sull'accessibilità eseguiti con i vari tool
+
