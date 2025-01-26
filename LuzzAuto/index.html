@@ -87,10 +87,10 @@
                         
                         <label for="home_condizione" id="home_label_condizione">Condizione</label>
                         <select id="home_condizione" name="condizione" class="home_insert">
-                            <option value="qualsiasi">Qualsiasi</option>
-                            <option value="nuovo">Nuovo</option>
-                            <option value="usato">Usato</option>
-                            <option value="km0">KM 0</option>
+                            <option [qualsiasiCd]value="qualsiasi">Qualsiasi</option>
+                            <option [nuovo]value="nuovo">Nuovo</option>
+                            <option [usato]value="usato">Usato</option>
+                            <option [km0]value="km0">KM 0</option>
                         </select>
                     
                         <label for="home_prezzoMax" id="home_label_prezzo">Prezzo massimo (<abbr title="Euro">&euro;</abbr>)</label>
@@ -106,35 +106,35 @@
 
             <section id="home_new" aria-label="Sezione esposizione nuove automobili">
                 <h3 class="home_sectionTitle">Le nostre auto del momento</h3>
-                <dl id="home_car_list">
-                    <div id="home_first_car" class="home_car_item">
+                <ul id="home_car_list">
+                    <li id="home_first_car" class="home_car_item">
                         <img id="home_first_image" src="assets/img/Cars/DM - Digital Motion/mudol.webp" alt="Auto berlina blu chiaro metallizzata, quattro porte, design elegante e lineare, fari affilati">
-                        <dt><a href="auto.php?id=11">DM Mudol</a></dt>
-                        <dd>
+                        <div><a href="auto.php?id=11">DM Mudol</a></div>
+                        <p>
                             Prestazioni mozzafiato e design aerodinamico si fondono in questa elegante berlina sportiva.
                             Colore esclusivo blu elettrico, linee dinamiche e tecnologia all'avanguardia per un'esperienza di guida unica.
                             Disponibile ora presso il nostro <span lang="en-GB">showroom</span>!
-                        </dd>
-                    </div>
-                    <div id="home_second_car" class="home_car_item">
+                        </p>
+                    </li>
+                    <li id="home_second_car" class="home_car_item">
                         <img id="home_second_image" src="assets/img/Cars/ESU - European Sports Unlimited/belzuny.webp" alt="Auto SUV arancione brillante, quattro porte, design grintoso, fari LED moderni, griglia prominente">
-                        <dt><a href="auto.php?id=9">ESU Belzuny</a></dt>
-                        <dd>
+                        <div><a href="auto.php?id=9">ESU Belzuny</a></div>
+                        <p>
                             Unione perfetta di potenza e stile, questo SUV di lusso si distingue per il suo <span lang="en-GB">design</span> aggressivo e le prestazioni straordinarie su ogni terreno.
                             Verniciatura esclusiva rosso metallizzato e interni di altissimo livello.
                             Vieni a scoprirlo nel nostro <span lang="en-GB">showroom</span>!
-                        </dd>
-                    </div>
-                    <div id="home_third_car" class="home_car_item">
+                        </p>
+                    </li>
+                    <li id="home_third_car" class="home_car_item">
                         <img id="home_third_image" src="assets/img/Cars/UniPD - Universal Premium Design/planetary.webp" alt="Auto monovolume moderna elegante blu brillante, cinque porte, grandi finestrini, fari a LED">
-                        <dt><a href="auto.php?id=2">UniPD Planetary</a></dt>
-                        <dd>
+                        <div><a href="auto.php?id=2">UniPD Planetary</a></div>
+                        <p>
                             Progettata per la famiglia moderna, questa monovolume <span lang="en-GB">premium</span> offre spazio, eleganza e tecnologia avanzata.
                             Il <span lang="en-GB">design</span> raffinato in blu metallizzato e gli interni spaziosi garantiscono <span lang="en-GB">comfort</span> per ogni viaggio.
                             Scopri l'auto perfetta per le tue esigenze nel nostro <span lang="en-GB">showroom</span>!
-                        </dd>
-                    </div>
-                </dl>
+                        </p>
+                    </li>
+                </ul>
             </section>
 
             <section id="home_workWithUs" aria-label="Sezione lavora con noi">
@@ -155,12 +155,6 @@
                     <img src="assets/img/Cars/ESU - European Sports Unlimited/stemma.webp" alt="Logo ESU circolare cromato, nome in basso, raffigurato un leone di profilo al centro" class="stemma_brand">
                     <img src="assets/img/Cars/EXFiat - EXcellence Fiat/stemma.webp" alt="Logo EXFiat, stemma araldico con leoni dorati, scudo rosso e corona reale, nome in basso" class="stemma_brand">
                     <img src="assets/img/Cars/UniPD - Universal Premium Design/stemma.webp" alt="Logo UniPD, emblema dorato, cavallo al centro, corona in alto, alloro attorno, nome in basso" class="stemma_brand">
-                    <!-- 
-                    <img src="assets/img/Cars/Audi/stemma_scritta.png" alt="Stemma Audi, quattro anelli cromati intrecciati, scritta Audi in basso a sinistra" id="home_audi">
-                    <img src="assets/img/Cars/Ford/stemma.png" alt="Stemma Ford, ellisse blu al centro con scritta Ford bianca in mezzo" class="stemma_brand">
-                    <img src="assets/img/Cars/Opel/stemma_scrittaSotto.png" alt="Stemma Opel, fulmine orizzontale nero all'interno di un cerchio nero, scritta nera Opel in basso" id="home_opel">
-                    <img src="assets/img/Cars/Tesla/stemma_scritta.png" alt="Stemma Tesla, lettera T in rosso al centro, scritta Tesla rossa sotto" class="stemma_brand">
-                    -->
                 </div>
             </section>
 

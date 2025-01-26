@@ -1619,7 +1619,7 @@ p.list_car_list_empty {
     font-size: 2.7em;
 }
 
-#home_new div.home_car_item {
+#home_new .home_car_item {
     margin: 4em 3em 0;
     display: inline-block;
     border: 0px solid black;
@@ -1633,17 +1633,17 @@ p.list_car_list_empty {
     background-color: var(--content-text-bg-color);
 }
 
-#home_new div.home_car_item:hover {
+#home_new0 .home_car_item:hover {
     transform: scale(1.2);
     transition-duration: 0.5s;
 }
 
-#home_new div.home_car_item:not(:hover) {
+#home_new .home_car_item:not(:hover) {
     transform: scale(1);
     transition-duration: 0.5s;
 }  
 
-#home_new div.home_car_item dt {
+#home_new .home_car_item div {
     font-weight:450;
     font-size: 1.3em;
     padding: 0.5em 0 1em;
@@ -1651,7 +1651,7 @@ p.list_car_list_empty {
     color: var(--navbar-text-color);
 }
 
-#home_new div.home_car_item dd {
+#home_new .home_car_item p {
     padding: 0.5em 1em 1em;
     font-weight: 300;
     font-size: 1.1em;
