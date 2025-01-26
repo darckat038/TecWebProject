@@ -2441,6 +2441,10 @@ input[type="date"]::-webkit-calendar-picker-indicator {
     padding: 0 0.3em;
 }
 
+#labelAltImmagineOutAdmin, #labelAltImmagineInAdmin {
+    margin-top: 0.8em;
+}
+
 #labelNeopatentatiAdmin, #neopatentatiAdmin {
     display: inline-block;
     color: var(--form-border-input-color);
@@ -2467,7 +2471,6 @@ input[type="date"]::-webkit-calendar-picker-indicator {
 
 #altImmagineOutAdmin, #altImmagineInAdmin {
     resize: none;
-    margin-top: 2em;
 }
 
 #neopatentatiAdmin .interruttore {
@@ -2476,7 +2479,7 @@ input[type="date"]::-webkit-calendar-picker-indicator {
 }
 
 #immagineOutAdmin, #immagineInAdmin{
-    width: 100%;
+    width: fit-content;
     padding: 0.8em;
     color: var(--form-border-input-color);
     font-size: 1em;
