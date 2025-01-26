@@ -157,7 +157,7 @@ INSERT INTO Veicolo (marca, modello, condizione, prezzo, anno, chilometraggio, c
     foto, alts)
 VALUES ('DM - Digital Motion', 'Mudol', 'Nuovo', 65800, 2024, 0, 'Blu chiaro', 'Elettrico', 'Automatico', 'Integrale', 490, 1765, 0, 5, 
     'mudol.webp+mudol-interni.webp',
-    "Auto berlina grigio chiaro metallizzata, quattro porte, design elegante e lineare, fari affilati+
+    "Auto berlina blu chiaro metallizzata, quattro porte, design elegante e lineare, fari affilati+
     Sedili in similpelle, cruscotto digitale, ampio schermo, striscia LED soffusa, design lussuoso");
 
 /* ? */
