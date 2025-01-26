@@ -131,7 +131,7 @@
 (OK: 403, 404, 500, about, auto, index)
 
 - [ ] Sistemare tutti i warning di WCAG Color checker
-(OK: 403, 404, 500, about, auto. index)
+(OK: 403, 404, 500, about, auto, index)
 
 - [ ] Check con IE11
 (OK: 403, 404, 500, about, auto, index)
