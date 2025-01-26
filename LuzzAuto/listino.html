@@ -43,7 +43,6 @@
         <nav class="topNavBar">
 
             <h1 class="hide">LuzzAuto</h1>
-            
             <div id="menu-button-container" aria-label="Seleziona per espandere e comprimere il menù di navigazione">               
                 <div class="menu-button-bar1" aria-hidden="true"></div>
                 <div class="menu-button-bar2" aria-hidden="true"></div>
@@ -57,36 +56,18 @@
                 <li><a href="utente.php">Area riservata</a></li>
             </ul>
         </nav>
-
         <nav id="breadcrumb">
             <p>Ti trovi in: Listino auto</p>
         </nav>
 
         <main id="list_main">
             <section id="list_filter">
-                
                 <input type="checkbox" id="list_toggle_filter" class="list_toggle_input" title="Interruttore espansione menù filtro" hidden checked>
-               
                 <div id="list_filter_header">
                     <h2 class="list_sectionTitle">Filtra il listino</h2>
                     <button for="list_toggle_filter" id="list_toggle_button" aria-label="Seleziona per espandere e comprimere il form filtro" title="Espandi/comprimi form" aria-expanded="false" aria-controls="filter_form" >▼</button>
                 </div>
-                
-
                 <form action="listino.php" method="GET" id="list_filter_form" aria-label="Form per filtrare le automobili">
-                    <!-- Fieldset per info base veicolo 
-                    - Marca
-                    - Modello
-                    - Anno
-                    - Colore
-                    - Alimentazione
-                    - Cambio
-                    - Trazione (AWD, RWD, FWD)
-                    - Potenza (CV)
-                    - Peso (kg)
-                    - Neopatentati (sì/no)
-                    - Numero posti
-                    -->
                     <fieldset id="list_filter_basicInfo">
                         <legend>INFORMAZIONI SUL VEICOLO</legend>
                         
