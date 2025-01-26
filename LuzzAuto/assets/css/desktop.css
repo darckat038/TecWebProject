@@ -1571,22 +1571,6 @@ p.list_car_list_empty {
     margin-left: 6.5em;
 }
 
-/* input type range
-#home_fastSearch #home_prezzoMax {
-    background-color: white;
-    padding-left: 0;
-    margin-left: 3.5em;
-    float: left;
-    margin-top: 0.25em;
-}
-
-#home_fastSearch output {
-    float: right;
-    margin-top: 1em;
-}
-
-/* fine input type range*/
-
 #home_fastSearch .home_insert {
     height: 3em;
     border-radius: 0.5em;
@@ -1719,90 +1703,6 @@ p.list_car_list_empty {
 #home_workWithUs #home_workWithUs_email:visited {
     color: var(--visited-link);
 }
-
-/*
-
-#home_workWithUs fieldset {
-    display: inline-block;
-}
-
-#home_workWithUs legend {
-    text-align: center;
-    padding-bottom: 1.5em;
-    padding-top: 2em;
-    font-size: 100%;
-}
-
-#home_workWithUs label {
-    background-color: var(--form-bg-color);
-    color: var(--form-border-input-color);
-    position: absolute;
-    padding: 0 0.5em;
-    font-size: 100%;
-}
-
-#home_workWithUs #home_label_name {
-    margin-top: -0.85em;
-    margin-left: 1.2em;
-}
-
-#home_workWithUs #home_name {
-    float: left;
-    margin-right: 2em;
-}
-
-#home_workWithUs #home_label_mail {
-    margin-top: -0.85em;
-    margin-left: 3.2em;
-}
-
-#home_workWithUs #home_mail {
-    float: right;
-    margin-left: 2em;
-    width: 20em;
-}
-
-#home_workWithUs #home_label_role {
-    margin-top: -0.85em;
-    margin-left: 2.8em;
-}
-
-#home_workWithUs #home_role {
-    float: left;
-    margin-left: 1.7em;
-    padding-right: 0.8em;
-}
-
-#home_workWithUs .home_insert {
-    height: 3em;
-    border-radius: 0.5em;
-    border: 1px solid var(--form-border-input-color);
-    background-color: var(--form-bg-color);
-    color: var(--form-text-color);
-    font-family: "Lexend", Roboto, sans-serif;
-    padding-left: 1em;
-    font-size: 100%;
-}
-
-#home_workWithUs #home_invia {
-    display: block;
-    margin: 3em auto 0;
-    color: var(--form-text-color);
-    background-color: var(--form-bg-color);
-    border: 1px solid white;
-    padding: 1em 1.5em;
-    border-radius: 1.5em;
-    max-width: 10em;
-    font-size: 100%;
-    font-family: "Lexend", Roboto, sans-serif;
-}
-
-#home_workWithUs #home_invia:hover {
-    background-color: var(--form-text-color);
-    color: var(--form-bg-color);
-}
-
-*/
 
 /* ---- HOME BRANDS ---- */
 
