@@ -5,6 +5,11 @@ Progetto del corso di Tecnologie Web della laurea in Informatica presso l'Univer
 - Bellon Filippo
 - Diviesti Filippo
 - Righetto Filippo
+### Relazione
+- [Bozza](https://docs.google.com/document/d/14q_VYQknr7hYWEUJreqwyqjKIgjF5Sw_Ofze7QbzDlg/edit?usp=sharing)
+- [Solo visualizzazione in LaTeX](https://www.overleaf.com/read/qfmrzmtkjgyt#62e722)
+
+
 ### Link utili:
 - [Template esempio PIU' COMPLETO](https://themes.getbootstrap.com/preview/?theme_id=1719)
 - [Template esempio Carvilla](https://demo.themesine.com/carvilla/)
