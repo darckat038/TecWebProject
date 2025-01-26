@@ -2,7 +2,7 @@
 window.addEventListener('load', function () {
 	validateFormEliminaAuto();
     validateFormGestPrenotazione();
-    // validateFormAggiungiAuto();
+    validateFormAggiungiAuto();
 });
 
 function isNumber(value){
