@@ -2451,18 +2451,23 @@ input[type="date"]::-webkit-calendar-picker-indicator {
 #cambioAdmin, #trazioneAdmin, #potenzaAdmin, #pesoAdmin, #numero_postiAdmin, 
 #condizioneAdmin, #chilometraggioAdmin, #prezzoAdmin, 
 #altImmagineOutAdmin, #altImmagineInAdmin {
-    width: 100%; 
-    padding: 0.8em; 
-    border: 1px solid var(--form-border-input-color); 
-    border-radius: 5px; 
-    background-color: black; 
-    color: var(--form-border-input-color); 
-    font-size: 1em; 
+    width: 100%;
+    padding: 0.8em;
+    border: 1px solid var(--form-border-input-color);
+    border-radius: 5px;
+    background-color: black;
+    color: var(--form-border-input-color);
+    font-size: 1em;
     color: var(--form-border-input-color);
     height: auto;
     box-sizing: border-box; 
     margin-top: 2em;
     color: white;
+}
+
+#altImmagineOutAdmin, #altImmagineInAdmin {
+    resize: none;
+    margin-top: 2em;
 }
 
 #neopatentatiAdmin .interruttore {
@@ -2471,13 +2476,13 @@ input[type="date"]::-webkit-calendar-picker-indicator {
 }
 
 #immagineOutAdmin, #immagineInAdmin{
-    width: 100%; 
-    padding: 0.8em; 
-    color: var(--form-border-input-color); 
-    font-size: 1em; 
+    width: 100%;
+    padding: 0.8em;
+    color: var(--form-border-input-color);
+    font-size: 1em;
     color: var(--form-border-input-color);
     height: auto;
-    box-sizing: border-box; 
+    box-sizing: border-box;
     margin-top: 2em;
     color: white;
 }
