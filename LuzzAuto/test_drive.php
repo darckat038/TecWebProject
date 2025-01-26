@@ -38,7 +38,7 @@ $formHTML = "
                 </select>
 
                 <label id='test_drive_label' for='test_drive_date'>Data e ora</label>
-                <input id='test_drive_date' class='test_drive_input' type='datetime-local' name='test_drive_date' aria-required='true' required data-msg-required='Per favore, inserisci data e ora della prenotazione' value='[data]' placeholder='gg/mm/aaaa'>
+                <input id='test_drive_date' class='test_drive_input' type='datetime-local' name='test_drive_date' aria-required='true' required data-msg-required='Per favore, inserisci data e ora della prenotazione' value='[data]' placeholder='gg/mm/aaaa --:--'>
         
                 <input id='test_drive_prenotaBtn' type='submit' value='INVIA RICHIESTA'>
 
