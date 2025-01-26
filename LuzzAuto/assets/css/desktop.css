@@ -1408,12 +1408,21 @@ p.list_car_list_empty {
 #details #details_box #details_box_carousel img:hover {
     transform: scale(4);
     border-radius: 0.1em;
-    background-color: white;
+    background-color: var(--content-text-bg-color);
 }
 
 #details #details_box p {
     text-align: center;
 }
+
+#details_box #details_box_info p {
+    background-color: black;
+    color: white;
+    margin: 0.75em;
+    padding: 0.5em;
+    border-radius: 1em 0;
+}
+
 
 #details #details_box #details_box_info {
     margin-top: 1em;
@@ -1437,8 +1446,8 @@ p.list_car_list_empty {
 }
 
 #details #details_buttons {
-    background-color: black; /* Sfondo nero */
-    color: white; /* Testo bianco */
+    background-color: var(--form-bg-color); /* Sfondo nero */
+    color: var(--cards-text-color); /* Testo bianco */
     border: 1px solid black; /* Bordo sottile nero */
     border-radius: 1em; /* Angoli arrotondati */
     width: 80em; /* Larghezza fissa */
@@ -1459,7 +1468,7 @@ p.list_car_list_empty {
 }
 
 #details #details_buttons .list_button:hover {
-    color: black;
+    color: var(--content-text-color);
 }
 
 #details #details_buttons .list_button:visited {
