@@ -176,7 +176,7 @@ if(isset($_GET['action']) && $_GET['action'] == 'Applica filtri') {
 		if (isset($_GET["colore"]) && !preg_match("/^([A-Za-z]+( [A-Za-z]+)*)?$/", $_GET["colore"])) {
 			$err = $err . "<p id=\"colore_err\">Il colore che hai selezionato non &egrave; valido. Seleziona nuovamente la scelta desiderata.</p>";
 		}
-		if (isset($_GET["alimentazione"]) && !preg_match("/^([A-Za-z0-9\-]+( [A-Za-z0-9\-]+)*)?$/", $_GET["alimentazione"])) {
+		if (isset($_GET["alimentazione"]) && !preg_match("/^([A-Za-z]+( [A-Za-z]+)*)?$/", $_GET["alimentazione"])) {
 			$err = $err . "<p id=\"alimentazione_err\">Hai selezionato un'alimentazione non valida. Seleziona nuovamente la scelta desiderata.</p>";
 		}
 		if (isset($_GET["cambio"]) && !preg_match("/^([A-Za-z]+( [A-Za-z]+)*)?$/", $_GET["cambio"])) {
