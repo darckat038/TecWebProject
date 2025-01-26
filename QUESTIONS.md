@@ -13,7 +13,7 @@
 (OK: 403, 404, 500, about, auto, index, listino)
 
 - [ ] Check con IE11
-(OK: 403, 404, 500, about, auto, index)
+(OK: 403, 404, 500, about, auto, index, listino)
 
 - [ ] Mettere placeholders di esempio in tutti gli input type text dei form (es: placeholder="Es. Fiat, Toyota, Tesla", placeholder="gg/mm/aaaa")
  (OK: index, listino)
