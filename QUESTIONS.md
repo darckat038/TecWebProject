@@ -7,19 +7,19 @@
 (OK: )
 
 - [ ] Sistemare tutti i warning di Wave  
-(OK: 403, 404, 500, about, auto, index, listino)
+(OK: 403, 404, 500, about, auto, index, listino, utente)
 
 - [ ] Sistemare tutti i warning di WCAG Color checker  
-(OK: 403, 404, 500, about, auto, index, listino)
+(OK: 403, 404, 500, about, auto, index, listino, utente)
 
 - [ ] Check con IE11  
-(OK: 403, 404, 500, about, auto, index, listino)
+(OK: 403, 404, 500, about, auto, index, listino, utente)
 
 - [ ] Mettere placeholders di esempio in tutti gli input type text dei form (es: placeholder="Es. Fiat, Toyota, Tesla", placeholder="gg/mm/aaaa")  
-(OK: 403, 404, 500, about, auto, index, listino)
+(OK: 403, 404, 500, about, auto, index, listino, utente)
 
 - [ ] Togliere tutti gli attributi aria-label negli input di tutti i form a cui è già associata una label con il tag html  
-(OK: 403, 404, 500, about, auto, index, listino)
+(OK: 403, 404, 500, about, auto, index, listino, utente)
 
 - [ ] Aggiungere anche ontap oltre che onclick perchè i cellulari vecchi non fanno la conversione
 
