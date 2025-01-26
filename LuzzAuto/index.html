@@ -68,17 +68,17 @@
 
         <main>
             <section id="home_fastSearch" aria-label="Sezione ricerca rapida veicolo">
-                <h3 class="home_sectionTitle">Cerchi un veicolo in particolare?</h3>
+                <h2 class="home_sectionTitle">Cerchi un veicolo in particolare?</h2>
                 <form action="index.php" method="GET" id="home_fastSearch_form" aria-label="Form per filtrare rapidamente le automobili">
                     <!-- Fieldset per info base veicolo -->
                     <fieldset id="home_basicInfo">
                         <legend>INFORMAZIONI SUL VEICOLO</legend>
                         
                         <label for="home_marca" id="home_label_marca">Marca</label>
-                        <input type="text" id="home_marca" class="home_insert" value="[marca]" name="marca" placeholder="Qualsiasi" aria-label="Campo di inserimento della marca dell'auto">
+                        <input type="text" id="home_marca" class="home_insert" value="[marca]" name="marca" placeholder="UniPD">
                     
                         <label for="home_modello" id="home_label_modello">Modello</label>
-                        <input type="text" id="home_modello" class="home_insert" value="[modello]" name="modello" placeholder="Qualsiasi" aria-label="Campo di inserimento del modello dell'auto">
+                        <input type="text" id="home_modello" class="home_insert" value="[modello]" name="modello" placeholder="Planetary">
                     </fieldset>
                 
                     <!-- Fieldset per preferenze di acquisto -->
@@ -86,7 +86,7 @@
                         <legend>PREFERENZE</legend>
                         
                         <label for="home_condizione" id="home_label_condizione">Condizione</label>
-                        <select id="home_condizione" name="condizione" class="home_insert" aria-label="Campo di selezione della condizione dell'auto">
+                        <select id="home_condizione" name="condizione" class="home_insert">
                             <option [qualsiasiCd]value="qualsiasi">Qualsiasi</option>
                             <option [nuovo]value="nuovo">Nuovo</option>
                             <option [usato]value="usato">Usato</option>
@@ -94,9 +94,9 @@
                         </select>
                     
                         <label for="home_prezzoMax" id="home_label_prezzo">Prezzo massimo (<abbr title="Euro">&euro;</abbr>)</label>
-                        <input type="number" id="home_prezzoMax" class="home_insert" value="[prezzoMax]" name="prezzoMax" placeholder="Qualsiasi" aria-label="Campo di inserimento del prezzo massimo dell'auto">
+                        <input type="number" id="home_prezzoMax" class="home_insert" value="[prezzoMax]" name="prezzoMax" placeholder="40000">
                     </fieldset>
-                    <input type="submit" value="Ricerca" id="home_cerca" aria-label="Bottone di ricerca per ricercare veicoli con opzioni selezionate sopra">
+                    <input type="submit" value="Ricerca" id="home_cerca">
                 </form>
 
                 <div class = "form_errors">
@@ -138,8 +138,8 @@
             </section>
 
             <section id="home_workWithUs" aria-label="Sezione lavora con noi">
-                <h3 class="home_sectionTitle">Vuoi lavorare con noi?</h3>
-                <h4>Siamo attualmente alla ricerca di nuovi talenti.</h4>
+                <h2 class="home_sectionTitle">Vuoi lavorare con noi?</h2>
+                <h3>Siamo attualmente alla ricerca di nuovi talenti.</h3>
                 <p>
                     Se vuoi unirti a noi, inviaci il tuo curriculum all'indirizzo <span lang="en-GB">email</span> 
                     <a id="home_workWithUs_email" href="mailto:luzzauto.concessionario@luzzauto.it" aria-label="link apertura email">luzzauto.concessionario@luzzauto.it</a>(mail) 
@@ -149,7 +149,7 @@
             </section>
 
             <section id="home_brands" aria-label="Sezione i nostri brand">
-                <h3 class="home_sectionTitle">I <span lang="en-GB">brand</span> che trattiamo</h3>
+                <h2 class="home_sectionTitle">I <span lang="en-GB">brand</span> che trattiamo</h2>
                 <div id="home_brands_container">
                     <img src="assets/img/Cars/DM - Digital Motion/stemma.webp" alt="Logo DM circolare, nome al centro, dettagli stilizzati di circuiti elettronici, bordatura cromata" class="stemma_brand">
                     <img src="assets/img/Cars/ESU - European Sports Unlimited/stemma.webp" alt="Logo ESU circolare cromato, nome in basso, raffigurato un leone di profilo al centro" class="stemma_brand">
@@ -165,7 +165,7 @@
             </section>
 
             <section id="home_reviews" aria-label="Sezione recensioni dei clienti">
-                <h3 class="home_sectionTitle">Cosa dicono i nostri clienti</h3>
+                <h2 class="home_sectionTitle">Cosa dicono i nostri clienti</h2>
                 <dl id="home_clients_reviews">
                     <div id="home_first_review" class="home_review_item">
                         <dt>Elon Muschio</dt>
