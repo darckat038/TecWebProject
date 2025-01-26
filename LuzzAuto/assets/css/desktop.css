@@ -153,8 +153,6 @@ select option {
 }
 
 /* CHECKBOX CUSTOM Sì/No */
-
-
 /* Nascondi l'input checkbox */
 .interruttore input[type="checkbox"] {
     opacity: 0;
@@ -173,7 +171,7 @@ select option {
     background-color: #ccc;
     border-radius: 25px;
     transition: background-color 0.3s;
-    /*border: solid 1px black;    /* Per migliore visibilità */
+    border: solid 1px black;    /* Per migliore visibilità */
 }
 
 /* Manopola dell'interruttore */

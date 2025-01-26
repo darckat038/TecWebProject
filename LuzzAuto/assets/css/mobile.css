@@ -74,12 +74,6 @@ h1, h2, h3 {
 }
 
 /* CHECKBOX CUSTOM Sì/No */
-
-.interruttore p{
-    position: absolute;
-    margin: -9999em;
-}
-
 /* Nascondi l'input checkbox */
 .interruttore input[type="checkbox"] {
     opacity: 0;
@@ -94,10 +88,11 @@ h1, h2, h3 {
     left: 0;
     right: 0;
     bottom: 0;
+    margin: 0.8em -7em -0.8em 7em;
     background-color: #ccc;
     border-radius: 25px;
     transition: background-color 0.3s;
-    /*border: solid 1px black;    /* Per migliore visibilità */
+    border: solid 1px black;    /* Per migliore visibilità */
 }
 
 /* Manopola dell'interruttore */
@@ -1153,9 +1148,8 @@ section.aboutUs_history img {
 
 #list_filter #list_filter_neopatentati,
 #neopatentatiAdmin {
-    font-size: 1em;
     width: 13em;
-    align-self: center;
+    margin-top: 1.5em;
 }
 
 
