@@ -1174,39 +1174,6 @@ section.aboutUs_history img {
     font-size: 100%;
 }
 
-/*
-PER METTERE IL PLACEHOLDER DI COLORE GRIGIO NEI SELECT
-
-
-#list_filter .list_insert option[selected],
-#list_filter .list_insert:focus option[selected],
-#list_filter .list_insert option[disabled],
-#list_filter .list_insert:focus option[disabled] {
-    color: var(--form-border-input-color);
-}
-
-in realtà servirebbe 
-
-// Aggiungiamo un controllo ai select
-document.querySelectorAll('#list_filter .list_insert').forEach(select => {
-    // Funzione per aggiornare lo stile
-    function updateSelectStyle() {
-        if (select.value === "") {
-            select.classList.add('placeholder');
-        } else {
-            select.classList.remove('placeholder');
-        }
-    }
-
-    // Eseguiamo il controllo all'avvio
-    updateSelectStyle();
-
-    // Aggiungiamo un evento per rilevare i cambiamenti
-    select.addEventListener('change', updateSelectStyle);
-});
-
-*/
-
 #list_filter #list_filter_buttons {
     display: flex;
     flex-direction: row;
@@ -1368,6 +1335,16 @@ document.querySelectorAll('#list_filter .list_insert').forEach(select => {
 #details #details_box p {
     position: absolute;
     margin: -9999em;
+}
+
+#details_box #details_box_info p {
+    position: static;
+    text-align: center;
+    background-color: black;
+    color: white;
+    margin: 0.75em;
+    padding: 0.5em;
+    border-radius: 1em 0;
 }
 
 #details #details_box #details_box_info {
