@@ -11,11 +11,11 @@ function validateFastSearch() {
 		resetFormError(0);
 		if(!validateMarca()) {
 			ok = false;
-			msg += "<p tabindex=\"0\" id=\"marca_err\">La marca che hai inserito non &egrave; valida, puoi usare solo lettere, numeri, spazi(non all'inizio e alla fine) e il carattere \"-\".</p>";
+			msg += "<p tabindex=\"0\" id=\"marca_err\">La marca che hai inserito non &egrave; valida, puoi usare solo lettere, numeri, spazi (non all'inizio e alla fine) e il carattere \"-\".</p>";
 		}
 		if(!validateModello()) {
 			ok = false;
-			msg += "<p id=\"modello_err\">Il modello che hai inserito non &egrave; valido, puoi usare solo lettere, numeri, spazi(non all'inizio e alla fine) e il carattere \"-\".</p>";
+			msg += "<p id=\"modello_err\">Il modello che hai inserito non &egrave; valido, puoi usare solo lettere, numeri, spazi (non all'inizio e alla fine) e il carattere \"-\".</p>";
 		}
 		if(!validatePrezzo()) {
 			ok = false;

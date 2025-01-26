@@ -151,7 +151,7 @@ function validateFormAggiungiAuto(){
                 ok = false;
             }
             if(!validateTrazione()){
-                msg += "<p id=\"trazione_err\">Hai selezionato un tipo di trazione non valid. Seleziona nuovamente la scelta desiderata.</p>";
+                msg += "<p id=\"trazione_err\">Hai selezionato un tipo di trazione non valido. Seleziona nuovamente la scelta desiderata.</p>";
                 ok = false;
             }
             if(!validatePotenza()){
