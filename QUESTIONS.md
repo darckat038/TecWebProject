@@ -21,7 +21,7 @@
 - [x] Togliere tutti gli attributi aria-label negli input di tutti i form a cui è già associata una label con il tag html  
 (OK: 403, 404, 500, about, amministratore, auto, index, listino, login, modificautente, registrazione, testdrive, utente)
 
-- [ ] Aggiungere anche ontap oltre che onclick perchè i cellulari vecchi non fanno la conversione
+- [x] Aggiungere anche ontap oltre che onclick perchè i cellulari vecchi non fanno la conversione
 
 
 
