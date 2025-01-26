@@ -186,10 +186,10 @@
             <label for="prezzoAdmin" id="labelPrezzoAdmin">Prezzo (€):</label>
             <input type="number" id="prezzoAdmin" value="[prezzo]" name="prezzoAdmin" min="1" step="1" placeholder="Inserisci" required aria-required="true" data-msg-required="Per favore, inserisci il prezzo dell'auto">
 
-            <label for="neopatentatiAdmin" id="labelNeopatentatiAdmin">Idoneità neopatentati:</label>
+            
             <div id="neopatentatiAdmin">
-                <label class="interruttore" for="neopatentatiID">
-                    <p tabindex="-1">Interruttore qui</p>
+                <label class="interruttore" for="neopatentatiID" id="labelNeopatentatiAdmin">
+                    Idoneità neopatentati:
                     <input type="checkbox" name="neopatentatiAdmin" id="neopatentatiID" [neopatentati]value="1" aria-label="Mettere spunta se neopatentati abilitati alla guida dell'auto">
                     <div class="interruttore-slider">
                         <div class="interruttore-knob"></div>
