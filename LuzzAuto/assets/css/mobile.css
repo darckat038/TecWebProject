@@ -457,6 +457,8 @@ legend{
     border: 1px solid var(--form-border-input-color);
     background-color: var(--form-bg-color);
     color: var(--navbar-text-color);
+    margin: 0 5em 1em 5em;
+    font-size: 100%;
     font-family: "Lexend", Roboto, sans-serif;
     padding-left: 1em;
 }
@@ -469,9 +471,12 @@ input[type="date"]::-webkit-calendar-picker-indicator {
 
 #signup_form label{
     background-color: var(--form-bg-color);
-    margin-left: 0.8em;
-    margin-top: 0.5em;
-    color: var(--form-border-input-color);
+    padding: 0 0.5em;
+    position: relative;
+    top: 0.85em;
+    width: max-content;
+    margin-left: 6em;
+    z-index: 1;
 }
 
 #signup_button{
@@ -561,11 +566,6 @@ input[type="date"]::-webkit-calendar-picker-indicator {
     margin-top: 5em;
 }
 
-#test_drive_main p {
-    font-size: 1.15em;
-    font-weight: 300;
-}
-
 #test_drive_main > section > h3 {
     font-size: 1.5em;
     font-weight: 500;
@@ -579,9 +579,12 @@ input[type="date"]::-webkit-calendar-picker-indicator {
     line-height: 1.1em;
 }
 
-#test_drive_main > p{
+#test_drive_main p{
+    font-size: 1.15em;
+    font-weight: 300;
     margin: 1.5em 20% 0 20%;
     text-align: center;
+    max-width: 20em;
 }
 
 #test_drive_comefunziona{
@@ -678,7 +681,7 @@ input[type="date"]::-webkit-calendar-picker-indicator {
     color: var(--navbar-text-color);
     font-family: "Lexend", Roboto, sans-serif;
     padding-left: 1em;
-    margin: 1em 0;
+    margin: 0 1em;
 }
 
 input[type="datetime-local"]::-webkit-calendar-picker-indicator {
@@ -705,18 +708,15 @@ input[type="datetime-local"]::-webkit-calendar-picker-indicator {
     color: var(--form-bg-color);
 }
 
-#test_drive_label_auto{
-    background-color: var(--form-bg-color);
-    margin-left: 0.8em;
-    margin-top: 0.5em;
+#test_drive_label{
     color: var(--form-border-input-color);
-}
-
-#test_drive_label_date{
     background-color: var(--form-bg-color);
-    margin-left: 0.8em;
-    margin-top: 0.5em;
-    color: var(--form-border-input-color);
+    padding: 0 0.5em;
+    position: relative;
+    margin-left: 1.5em;
+    top: 0.5em;
+    width: max-content;
+    z-index: 1;
 }
 
 #test_drive_prenota > a{
@@ -2018,6 +2018,8 @@ section.aboutUs_history img {
     border: 1px solid var(--form-border-input-color);
     background-color: var(--form-bg-color);
     color: var(--navbar-text-color);
+    margin: 0 1em;
+    font-size: 100%;
     font-family: "Lexend", Roboto, sans-serif;
     padding-left: 1em;
 }
@@ -2030,9 +2032,12 @@ input[type="date"]::-webkit-calendar-picker-indicator {
 
 #modUtente_form label{
     background-color: var(--form-bg-color);
-    margin-left: 0.8em;
-    margin-top: 0.5em;
-    color: var(--form-border-input-color);
+    padding: 0 0.5em;
+    position: relative;
+    top: 0.85em;
+    width: max-content;
+    margin-left: 2em;
+    z-index: 1;
 }
 
 #modUtente_button{

@@ -31,16 +31,16 @@ $formHTML = "
 
                 <legend>Prenota <span lang='en-GB'>Test Drive</span></legend>
 
-                <label id='test_drive_label_auto' for='test_drive_select_auto'>Auto</label>
+                <label id='test_drive_label' for='test_drive_select_auto'>Auto</label>
                 <select name='test_drive_select_auto' id='test_drive_select_auto' class='test_drive_input' aria-required='true' required data-msg-required='Per favore, seleziona la macchina' data-msg-invalid:='Ci dispiace, formato non corretto'>
                     <option value='' selected disabled>Seleziona un'opzione</option>
                     [veicoli]
                 </select>
 
-                <label id='test_drive_label_date' for='test_drive_date'>Data e ora</label>
-                <input id='test_drive_date' class='test_drive_input' type='datetime-local' name='test_drive_date' aria-required='true' required data-msg-required='Per favore, inserisci data e ora della prenotazione' value='[data]'>
+                <label id='test_drive_label' for='test_drive_date'>Data e ora</label>
+                <input id='test_drive_date' class='test_drive_input' type='datetime-local' name='test_drive_date' aria-required='true' required data-msg-required='Per favore, inserisci data e ora della prenotazione' value='[data]' placeholder='gg/mm/aaaa --:--'>
         
-                <input id='test_drive_prenotaBtn' type='submit' value='INVIA RICHIESTA' aria-label='Bottone di invio del form'>
+                <input id='test_drive_prenotaBtn' type='submit' value='INVIA RICHIESTA'>
 
             </fieldset>
                         

@@ -387,7 +387,7 @@ select option {
     border: 1px solid var(--form-border-input-color);
     background-color: var(--form-bg-color);
     color: var(--navbar-text-color);
-    margin: 0 5em 2em 5em;
+    margin: 0 5em 1em 5em;
     font-size: 100%;
     font-family: "Lexend", Roboto, sans-serif;
     padding-left: 1em;
@@ -397,39 +397,12 @@ select option {
 #signup_form label{
     background-color: var(--form-bg-color);
     margin-left: 6em;
-    position: absolute;
     padding: 0 0.5em;
+    position: relative;
+    top: 0.85em;
+    width: max-content;
 }
 
-#signup_label_nome{
-    margin-top: -0.8em;
-    color: var(--form-border-input-color);
-}
-
-#signup_label_cognome{
-    margin-top: 4.5em;
-    color: var(--form-border-input-color);
-}
-
-#signup_label_username{
-    margin-top: 9.8em;
-    color: var(--form-border-input-color);
-}
-
-#signup_label_pass{
-    margin-top: 15em;
-    color: var(--form-border-input-color);
-}
-
-#signup_label_pass2{
-    margin-top: 20.2em;
-    color: var(--form-border-input-color);
-}
-
-#signup_label_data{
-    margin-top: 25.5em;
-    color: var(--form-border-input-color);
-}
 
 input[type="date"]::-webkit-calendar-picker-indicator {
     background-color: white;
@@ -540,9 +513,10 @@ input[type="date"]::-webkit-calendar-picker-indicator {
     line-height: 1.1em;
 }
 
-#test_drive_main > p{
+#test_drive_main p{
     margin: 1.5em 20% 0 20%;
     text-align: center;
+    max-width: 70em;
 }
 
 #test_drive_comefunziona{
@@ -639,7 +613,7 @@ input[type="date"]::-webkit-calendar-picker-indicator {
     border: 1px solid var(--form-border-input-color);
     background-color: var(--form-bg-color);
     color: var(--navbar-text-color);
-    margin: 2em 5em 2em 5em;
+    margin: 0 5em 2em 5em;
     font-size: 100%;
     font-family: "Lexend", Roboto, sans-serif;
     padding-left: 1em;
@@ -669,22 +643,14 @@ input[type="datetime-local"]::-webkit-calendar-picker-indicator {
     color: var(--form-bg-color);
 }
 
-#test_drive_label_auto{
+#test_drive_label {
     color: var(--form-border-input-color);
     background-color: var(--form-bg-color);
     padding: 0 0.5em;
-    position: absolute;
+    position: relative;
     margin-left: 5.7em;
-    margin-top: 1.2em;
-}
-
-#test_drive_label_date{
-    color: var(--form-border-input-color);
-    background-color: var(--form-bg-color);
-    padding: 0 0.5em;
-    position: absolute;
-    margin-left: 5.7em;
-    margin-top: 8.2em;
+    top: 0.5em;
+    width: max-content;
 }
 
 #test_drive_prenota > a{
@@ -1987,9 +1953,9 @@ p.list_car_list_empty {
 }
 
 #utente_logout{
-    position: absolute;
+    position: relative;
     top: 1em;
-    right: 1em;
+    left: 43em;
     background-color: var(--form-bg-color);
     border: 1px solid white;
     padding: 0.3em 1.5em 0.5em 1.5em;
@@ -2196,7 +2162,7 @@ p.list_car_list_empty {
     border: 1px solid var(--form-border-input-color);
     background-color: var(--form-bg-color);
     color: var(--navbar-text-color);
-    margin: 0 5em 2em 5em;
+    margin: 0 5em 1em 5em;
     font-size: 100%;
     font-family: "Lexend", Roboto, sans-serif;
     padding-left: 1em;
@@ -2206,38 +2172,10 @@ p.list_car_list_empty {
 #modUtente_form label{
     background-color: var(--form-bg-color);
     margin-left: 6em;
-    position: absolute;
     padding: 0 0.5em;
-}
-
-#modUtente_label_nome{
-    margin-top: -0.8em;
-    color: var(--form-border-input-color);
-}
-
-#modUtente_label_cognome{
-    margin-top: 4.5em;
-    color: var(--form-border-input-color);
-}
-
-#modUtente_label_username{
-    margin-top: 9.8em;
-    color: var(--form-border-input-color);
-}
-
-#modUtente_label_pass{
-    margin-top: 15em;
-    color: var(--form-border-input-color);
-}
-
-#modUtente_label_pass2{
-    margin-top: 20.2em;
-    color: var(--form-border-input-color);
-}
-
-#modUtente_label_data{
-    margin-top: 25.5em;
-    color: var(--form-border-input-color);
+    position: relative;
+    top: 0.85em;
+    width: max-content;
 }
 
 input[type="date"]::-webkit-calendar-picker-indicator {
