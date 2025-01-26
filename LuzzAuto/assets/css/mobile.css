@@ -62,6 +62,8 @@ a:visited {
 
 img {
     object-fit: contain;
+    max-width: 40em;
+    max-height: 30em;
 }
 
 select,
