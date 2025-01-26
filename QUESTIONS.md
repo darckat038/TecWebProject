@@ -1,11 +1,10 @@
 # Controlli accessibilità e ritrutturazioni (Emanuele, progressi segnati tra parentesi)
-- [ ] validator.w3.org D:
+- [x] validator.w3.org D:
 
 - [ ] Aggiungere tabindex (accesskey) su tutti i link/funzionalità (TEST NVDA) (Emanuele)  
 (OK: )
 
-- [ ] Sistemare tutti i warning di Lighthouse  
-(OK: )
+- [ ] Sistemare tutti i warning di Lighthouse -> ridotto dimensioni imgs -> ora bisogna minify js e optimize css (prestazioni mediocri mobile)
 
 - [x] Sistemare tutti i warning di Wave  
 (OK: 403, 404, 500, about, amministratore, auto, index, listino, login, modificautente, registrazione, testdrive, utente)
