@@ -182,11 +182,13 @@
             <input type="number" id="prezzoAdmin" value="[prezzo]" name="prezzoAdmin" min="1" step="1" placeholder="Es. 40000" required aria-required="true" data-msg-required="Per favore, inserisci il prezzo dell'auto">
             
             <div id="neopatentatiAdmin">
-                <label class="interruttore" for="neopatentatiID" id="labelNeopatentatiAdmin">
+                <label for="neopatentatiID" id="labelNeopatentatiAdmin">
                     Idoneità neopatentati:
-                    <input type="checkbox" name="neopatentatiAdmin" id="neopatentatiID" [neopatentati]value="1">
-                    <div class="interruttore-slider">
-                        <div class="interruttore-knob"></div>
+                    <div class="interruttore">
+                      <input type="checkbox" name="neopatentatiAdmin" id="neopatentatiID" [neopatentati]value="1">
+                      <div class="interruttore-slider">
+                          <div class="interruttore-knob"></div>
+                      </div>
                     </div>
                 </label>
             </div>
