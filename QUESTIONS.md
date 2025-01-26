@@ -1,3 +1,28 @@
+# Controlli accessibilità e ritrutturazioni (Emanuele, progressi segnati tra parentesi)
+
+- [ ] Aggiungere tabindex (accesskey) su tutti i link/funzionalità (TEST NVDA) (Emanuele)
+(OK: )
+
+- [ ] Sistemare tutti i warning di Lighthouse
+(OK: )
+
+- [ ] Sistemare tutti i warning di Wave
+(OK: 403, 404, 500, about, auto, index)
+
+- [ ] Sistemare tutti i warning di WCAG Color checker
+(OK: 403, 404, 500, about, auto, index)
+
+- [ ] Check con IE11
+(OK: 403, 404, 500, about, auto, index)
+
+- [ ] Mettere placeholders di esempio in tutti gli input type text dei form (es: Fiat) (OK: index)
+
+- [ ] Togliere tutti gli attributi aria-label negli input di tutti i form a cui è già associata una label con il tag html (OK: index)
+
+- [ ] Aggiungere anche ontap oltre che onclick perchè i cellulari vecchi non fanno la conversione
+
+
+
 # DOMANDE
 
 ## È possibile usare una lista dl direttamente dentro un'altra dl? 
@@ -73,8 +98,6 @@
 
 - [x] Testo giustificato nel print.css
 
-- [ ] Mettere placeholders di esempio in tutti gli input type text dei form (es: Fiat) (OK: index)
-
 - [x] Agguingere "skip to content" in tutte le pagine
 
 - [x] Controllare le description di tutte le pagine (max: 145 caratteri)
@@ -85,8 +108,6 @@
 
 - [x] Nella pagina about togliere l'immagine della mappa e mettere solo un testo con l'indirizzo del concessionario e altre info
 
-- [ ] Aggiungere anche ontap oltre che onclick perchè i cellulari vecchi non fanno la conversione
-
 - [ ] .manifest ??? (vedi_slide:113 pdf:html)
 
 - [x] Fare bene le pagine 404.html 403.html 500.html rassicurando l'utente (Emanuele)
@@ -96,8 +117,6 @@
 - [ ] Dare enfasi ad alcune parole chiave con tag em e strong
 
 - [ ] Nella relazione descrivere strategia mobile first
-
-- [ ] Togliere tutti gli attributi aria-label negli input di tutti i form a cui è già associata una label con il tag html (OK: index)
 
 - [ ] Eseguire e descrivere nella relazione tutti i controlli sull'accessibilità eseguiti con i vari tool
 
@@ -120,21 +139,6 @@
 - [ ] Mettere nella relazione che abbiamo tolto i display none
 
 - [ ] Mettere nella relazione che abbiamo usato modalità IE11
-
-- [ ] Aggiungere tabindex (accesskey) su tutti i link/funzionalità (TEST NVDA) (Emanuele)
-(OK: )
-
-- [ ] Sistemare tutti i warning di Lighthouse
-(OK: )
-
-- [ ] Sistemare tutti i warning di Wave
-(OK: 403, 404, 500, about, auto, index)
-
-- [ ] Sistemare tutti i warning di WCAG Color checker
-(OK: 403, 404, 500, about, auto, index)
-
-- [ ] Check con IE11
-(OK: 403, 404, 500, about, auto, index)
 
 - [x] Sistemare la dl nel dettaglio auto: dd e dt sono invertiti
 
