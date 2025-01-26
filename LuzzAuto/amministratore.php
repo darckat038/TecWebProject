@@ -63,10 +63,10 @@ function mostraTabellaPrenotazioni() {
         unset($db);
 
         $campiTabella = "
-                        <p id='descTable'>
+                        <span id='descTable' aria-hidden='true'>
                             La tabella descrive le richieste di prenotazioni dei test drive effettuate dagli utenti. È organizzata in colonne
-                            con numero prenotazione, modello auto, data test drive e stato della prenotazione.
-                        </p>
+                            con numero prenotazione, utente richiedente, modello auto, data test drive e stato della prenotazione.
+                        </span>
                         <table class='tabellaPrenAdmin' aria-describedby='descTable'>
                         <caption class='nomeRiqPrenAdmin'>Prenotazioni</caption>
                             <thead>
