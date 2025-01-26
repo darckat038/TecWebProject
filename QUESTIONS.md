@@ -16,10 +16,10 @@
 (OK: 403, 404, 500, about, auto, index, listino)
 
 - [ ] Mettere placeholders di esempio in tutti gli input type text dei form (es: placeholder="Es. Fiat, Toyota, Tesla", placeholder="gg/mm/aaaa")  
- (OK: index, listino)
+(OK: 403, 404, 500, about, auto, index, listino)
 
 - [ ] Togliere tutti gli attributi aria-label negli input di tutti i form a cui è già associata una label con il tag html  
-(OK: index, listino)
+(OK: 403, 404, 500, about, auto, index, listino)
 
 - [ ] Aggiungere anche ontap oltre che onclick perchè i cellulari vecchi non fanno la conversione
 
