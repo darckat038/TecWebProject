@@ -116,13 +116,13 @@
             <legend class="nomeRiqAdmin">Aggiungi Automobile</legend>
 
             <label for="immagineOutAdmin" id="labelimmagineOutAdmin">Immagine esterna dell'auto:</label>
-            <input type="file" id="immagineOutAdmin" name="immagineOutAdmin" value="[imageOut]" required aria-required="true" data-msg-required="Per favore, inserisci un'immagine" accept="image/*">
+            <input type="file" id="immagineOutAdmin" name="immagineOutAdmin" required aria-required="true" data-msg-required="Per favore, inserisci un'immagine" accept="image/*">
             
             <label for="altImmagineOutAdmin" id="labelAltImmagineOutAdmin">Testo alt per immagine interni:</label>
             <textarea rows="10" columns="40" id="altImmagineOutAdmin" value="[altOut]" name="altImmagineOutAdmin" placeholder="Es. Auto berlina grigia metallizzata, quattro porte, design elegante e moderno" required aria-required="true" data-msg-required="Per favore, inserisci un testo alternativo per l'immagine"></textarea>
 
-            <label for="immagineInAdmin" id="labelimmagineInAdmin">Immagine interni dell'auto:</label>
-            <input type="file" id="immagineInAdmin" value="[imageIn]" name="immagineInAdmin" required aria-required="true" data-msg-required="Per favore, inserisci un'immagine" accept="image/*">
+            <label for="immagineInAdmin" id="labelimmagineInAdmin">Immagine interna dell'auto:</label>
+            <input type="file" id="immagineInAdmin" name="immagineInAdmin" required aria-required="true" data-msg-required="Per favore, inserisci un'immagine" accept="image/*">
 
             <label for="altImmagineInAdmin" id="labelAltImmagineInAdmin">Testo alt per immagine interni:</label>
             <textarea rows="10" columns="40" id="altImmagineInAdmin" value="[altIn]" name="altImmagineInAdmin" placeholder="Es. Interni di lusso con sedili in pelle marrone, finiture in legno e schermo di infotainment" required aria-required="true" data-msg-required="Per favore, inserisci un testo alternativo per l'immagine"></textarea>
@@ -198,7 +198,7 @@
                 </label>
             </div>
 
-            <input type="submit" value="Aggiungi" id="aggiungiAutoAdmin">
+            <input type="submit" value="Aggiungi" id="aggiungiAutoAdmin" name="aggiungiAutoAdmin">
 
           </fieldset>
         </form>
