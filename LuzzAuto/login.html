@@ -50,21 +50,18 @@
 
             <h1>&Egrave; un piacere rivederti in LuzzAuto</h1>
             <p>Inserisci le tue credenziali per accedere alla tua AREA PERSONALE.</p>
-            
 
             <form id="login_form" method="post" action="">
                 <fieldset>
-    
                     <legend><span lang="en-GB">LogIn</span></legend>
     
                     <label id="login_label_username" for="login_username"><span lang="en-GB">Username</span></label>
-                    <input type="text" name="username" id="login_username" aria-required="true" aria-label="Campo di inserimento dell'username" required data-msg-required="Per favore, inserisci il tuo username" data-msg-invalid:="Ci dispiace, formato non corretto" value="[username]">
+                    <input type="text" name="username" id="login_username" aria-required="true" required data-msg-required="Per favore, inserisci il tuo username" data-msg-invalid:="Ci dispiace, formato non corretto" value="[username]" placeholder="Es. mario.rossi">
     
                     <label id="label_password" for="password"><span lang="en-GB">Password</span></label>
-                    <input type="password" name="password" id="password" aria-required="true" aria-label="Campo di inserimento della password" required data-msg-required="Per favore, inserisci la tua password" value="[password]">
+                    <input type="password" name="password" id="password" aria-required="true" required data-msg-required="Per favore, inserisci la tua password" value="[password]" placeholder="Minimo 8 caratteri">
     
-                    <input id="accedi" type="submit" value="Accedi" aria-label="Bottone di invio del form">
-    
+                    <input id="accedi" type="submit" value="Accedi">
                 </fieldset>
             </form>
 
