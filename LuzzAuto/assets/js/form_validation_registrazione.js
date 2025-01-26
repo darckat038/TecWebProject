@@ -30,7 +30,7 @@ function validateRegisterData(){
             ok = false;
         }
         if(!validateDate()){
-            msg+="<p>La data che hai inserito non &egrave; valida.</p>";
+            msg+="<p>La data che hai inserito non &egrave; valida. Usa formato gg/mm/aaaa</p>";
             ok = false;
         }
 
