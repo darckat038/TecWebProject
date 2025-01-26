@@ -26,7 +26,6 @@
   </head>
 
   <body id="admin_body">
-
     <header class="header_help">
       <nav aria-label="aiuti alla navigazione" class="navHelp">
           <ul>
@@ -50,9 +49,7 @@
     </header>
       
     <nav class="topNavBar">
-
       <h1 class="hide">LuzzAuto</h1>
-      
       <div id="menu-button-container" aria-label="Seleziona per espandere e comprimere il menù di navigazione">               
         <div class="menu-button-bar1" aria-hidden="true"></div>
         <div class="menu-button-bar2" aria-hidden="true"></div>
@@ -71,9 +68,7 @@
         <p>Ti trovi in: Amministratore</p>
     </nav>
 
-
     <main class="admin_content">
-
       <h1 id="saluto"></h1>
 
       <a href="logout.php" id="admin_logout"><span lang="en-GB">Logout</span></a>
@@ -109,7 +104,6 @@
       </section>
 
       <section class="riquadriAdmin">
-
         <form id="aggiungiAutoFormAdmin" action="amministratore.php#aggiungiAutoFormAdmin" method="POST" enctype="multipart/form-data">
           <fieldset>
 
@@ -186,7 +180,6 @@
             
             <label for="prezzoAdmin" id="labelPrezzoAdmin">Prezzo (€):</label>
             <input type="number" id="prezzoAdmin" value="[prezzo]" name="prezzoAdmin" min="1" step="1" placeholder="Es. 40000" required aria-required="true" data-msg-required="Per favore, inserisci il prezzo dell'auto">
-
             
             <div id="neopatentatiAdmin">
                 <label class="interruttore" for="neopatentatiID" id="labelNeopatentatiAdmin">
@@ -197,9 +190,7 @@
                     </div>
                 </label>
             </div>
-
             <input type="submit" value="Aggiungi" id="aggiungiAutoAdmin" name="aggiungiAutoAdmin">
-
           </fieldset>
         </form>
 
@@ -210,10 +201,7 @@
         <div class='form_success'>
           [succAdd]
         </div>
-
       </section>
-
-
 
       <section class="riquadriAdmin">
         <form method="post" action="amministratore.php#eliminaButtonAdmin" id="eliminaAutoFormAdmin">
