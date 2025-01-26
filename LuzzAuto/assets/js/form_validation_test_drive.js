@@ -23,18 +23,15 @@ function validateTestDriveData(){
             let msg = "";
             let ok = true;
             if(!validateAuto()){
-                console.log("auto non valida");
                 msg+="<p>L'auto selezionata non &egrave; valida.</p>";
                 ok = false;
             }
             if(!validateEmptyAuto()){
-                console.log("auto non selezionata");
                 msg+="<p>Seleziona un'auto da eliminare.</p>";
                 ok = false;
             }
             if(!validateDate()){
-                console.log("data non valida");
-                msg+="<p>La data inserita non &egrave; valida.</p>";
+                msg+="<p>La data inserita non &egrave; valida. Usa formato gg/mm/aaaa.</p>";
                 ok = false;
             }
             if(!ok){

@@ -100,7 +100,6 @@ function validatePrenotazione(){
 
 function validateAzione(){
     var azione = document.getElementById("azioneAdmin").value;
-    console.log(azione);
     if(azione == "accetta" || azione == "rifiuta"){
         return true;
     }
