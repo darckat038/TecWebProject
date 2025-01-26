@@ -65,7 +65,7 @@
                 <input type="checkbox" id="list_toggle_filter" class="list_toggle_input" title="Interruttore espansione menù filtro" hidden checked>
                 <div id="list_filter_header">
                     <h2 class="list_sectionTitle">Filtra il listino</h2>
-                    <button for="list_toggle_filter" id="list_toggle_button" aria-label="Seleziona per espandere e comprimere il form filtro" title="Espandi/comprimi form" aria-expanded="false" aria-controls="filter_form" >▼</button>
+                    <button id="list_toggle_button" aria-label="Seleziona per espandere e comprimere il form filtro" title="Espandi/comprimi form" aria-expanded="false" aria-controls="list_filter_form" >▼</button>
                 </div>
                 <form action="listino.php" method="GET" id="list_filter_form" aria-label="Form per filtrare le automobili">
                     <fieldset id="list_filter_basicInfo">
@@ -135,27 +135,27 @@
                             </div>
 
                             <div class="list_input_container">
-                                <label for="list_filter_potenzaMin" id="list_label_potenza">Potenza minima (<abbr title="cavalli vapore">CV</abbr>)</label>
+                                <label for="list_filter_potenzaMin">Potenza minima (<abbr title="cavalli vapore">CV</abbr>)</label>
                                 <div>
                                     <input type="number" id="list_filter_potenzaMin" class="list_insert" value="[potenzaMin]" name="potenzaMin" min="1" step="1" placeholder="Es. 120">
                                 </div>
                             </div>
 
                             <div class="list_input_container">
-                                <label for="list_filter_potenzaMax" id="list_label_potenza">Potenza massima (<abbr title="cavalli vapore">CV</abbr>)</label>
+                                <label for="list_filter_potenzaMax">Potenza massima (<abbr title="cavalli vapore">CV</abbr>)</label>
                                 <div>
                                     <input type="number"  id="list_filter_potenzaMax"class="list_insert" value="[potenzaMax]" name="potenzaMax" min="1" step="1" placeholder="Es. 250">
                                 </div>
                             </div>
 
                             <div class="list_input_container">
-                                <label for="list_filter_pesoMin" id="list_label_peso">Peso minimo (<abbr title="chilogrammi">kg</abbr>)</label>
+                                <label for="list_filter_pesoMin">Peso minimo (<abbr title="chilogrammi">kg</abbr>)</label>
                                 <div>
                                     <input type="number" id="list_filter_pesoMin" class="list_insert" value="[pesoMin]" name="pesoMin" min="1" step="1" placeholder="Es. 1100">
                                 </div>
                             </div>
                             <div class="list_input_container">
-                                <label for="list_filter_pesoMax" id="list_label_peso">Peso massimo (<abbr title="chilogrammi">kg</abbr>)</label>
+                                <label for="list_filter_pesoMax">Peso massimo (<abbr title="chilogrammi">kg</abbr>)</label>
                                 <div>
                                     <input type="number" id="list_filter_pesoMax" class="list_insert" value="[pesoMax]" name="pesoMax" min="1" step="1" placeholder="Es. 1500">
                                 </div>
@@ -227,11 +227,10 @@
                 </dl>
             </section>
         </main>
-
         <footer>
-            <img class="imgValidHTMLCode" src="assets/img/Footer/valid-xhtml10.webp" alt="HTML valido">
+            <p><a href="https://validator.w3.org/nu/"><img style="border:0;width:88px;height:31px" src="https://www.w3.org/Icons/valid-xhtml10" title="HTML Valido!" alt="HTML Valido!"></a></p>
             <p>FFF&E Co. - <span lang="en-GB">All rights Reserved</span> - Alcuni marchi e modelli sono frutto della nostra immaginazione; le immagini relative sono state generate da strumenti di intelligenza artificiale.</p>
-            <img class="imgValidCSSCode" src="assets/img/Footer/valid-css.webp" alt="CSS valido">
+            <p><a href="http://jigsaw.w3.org/css-validator/check/referer"><img style="border:0;width:88px;height:31px" src="http://jigsaw.w3.org/css-validator/images/vcss-blue" title="CSS Valido!" alt="CSS Valido!"></a></p>
         </footer>
     </body>
 </html>
