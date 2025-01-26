@@ -73,7 +73,7 @@
 
 - [x] Testo giustificato nel print.css
 
-- [ ] Mettere placeholders di esempio in tutti gli input type text dei form (es: Fiat)
+- [ ] Mettere placeholders di esempio in tutti gli input type text dei form (es: Fiat) (OK: index)
 
 - [x] Agguingere "skip to content" in tutte le pagine
 
@@ -97,7 +97,7 @@
 
 - [ ] Nella relazione descrivere strategia mobile first
 
-- [ ] Togliere tutti gli attributi aria-label negli input di tutti i form a cui è già associata una label con il tag html
+- [ ] Togliere tutti gli attributi aria-label negli input di tutti i form a cui è già associata una label con il tag html (OK: index)
 
 - [ ] Eseguire e descrivere nella relazione tutti i controlli sull'accessibilità eseguiti con i vari tool
 
@@ -128,13 +128,13 @@
 (OK: )
 
 - [ ] Sistemare tutti i warning di Wave
-(OK: 403, 404, 500, about, auto)
+(OK: 403, 404, 500, about, auto, index)
 
 - [ ] Sistemare tutti i warning di WCAG Color checker
-(OK: 403, 404, 500, about, auto)
+(OK: 403, 404, 500, about, auto. index)
 
 - [ ] Check con IE11
-(OK: 403, 404, 500, about, auto)
+(OK: 403, 404, 500, about, auto, index)
 
 - [x] Sistemare la dl nel dettaglio auto: dd e dt sono invertiti
 
