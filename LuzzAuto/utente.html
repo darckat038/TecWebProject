@@ -76,13 +76,7 @@
         <section class="riquadriUtente" id="informazioni_utente">
           
           <h2 class="nomeRiqUtente">Informazioni Utente</h2>
-          <img src="assets/img/Users/default.svg" id="userImage"></img>
-
-          <!--
-          <p><strong>Nome:</strong><span> [nome]</span></p>
-          <p><strong>Cognome:</strong><span> [cognome]</span></p>
-          <p><strong>Username:</strong><span> [username]</span></p>
-          -->
+          <img src="assets/img/Users/default.svg" id="userImage" alt="Foto profilo stilizzata predefinita"></img>
 
           <dl>
             <dt>Nome:&nbsp;</dt>
@@ -98,7 +92,7 @@
             <dd>************</dd>
           </dl>
 
-          <p>Se desideri modificare i tuoi dati premere: <a href="modificaUtente.php">Modifica</a></p>
+          <a href="modificaUtente.php">Modifica i tuoi dati</a>
 
         </section>
 
@@ -115,12 +109,12 @@
               <legend class='nomeRiqUtente'>Gestione Prenotazioni</legend>
 
               <label id='labelPrenUtente' for='gestPrenUtente'><strong>Prenotazioni:</strong> </label>
-              <select name='gestPrenUtente' id='gestPrenUtente' aria-required='true' aria-label='Campo di inserimento della prenotazione che desideri annullare' required data-msg-required='Per favore, seleziona la prenotazione'>
-              <option value=''>--seleziona--</option>
-              [prenotazioni]
+              <select name='gestPrenUtente' id='gestPrenUtente' aria-required='true' required data-msg-required='Per favore, seleziona la prenotazione'>
+                <option value='' selected disabled>Seleziona un'opzione</option>
+                [prenotazioni]
               </select>
 
-              <input id='eliminaPrenUtente' type='submit' value='Elimina' aria-label='Elimina la prenotazione selezionata'>
+              <input id='eliminaPrenUtente' type='submit' value='Elimina'>
             </fieldset>
           </form>
 
