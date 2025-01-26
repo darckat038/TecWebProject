@@ -384,38 +384,6 @@ class DBConnection {
 		return -1;
 	}
 
-	//FUNZIONE PER INSERIRE NUOVO VEICOLO IN VEICOLI NEL DB
-	public function insertNewVehicle($marca, $modello, $anno, $colore, $alimentazione, $cambio, $trazione, $CVpotenza, $KGpeso, $neoP, $nPosti, $condizione, $chilometraggio, $prezzo) {
-		
-		$query = "INSERT INTO Veicolo (marca ,modello, anno, colore, alimentazione, cambio, trazione, potenza, 
-							peso, neopatentati, numeroPosti, condizione, chilometraggio, prezzo) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)";
-
-		// Preparazione dello statement
-		$stmt = $this->connection->prepare($query);
-		if ($stmt === false) {
-			die("Errore nella preparazione dello statement: " . $this->connection->error);
-		}
-
-		// Bind dei parametri (s = stringa, i = intero, d = double/float, b = blob)
-		$stmt->bind_param("ssissssiiiisid", $marca, $modello, $anno, $colore, $alimentazione, $cambio, $trazione, $CVpotenza, 
-						$KGpeso, $neoP, $nPosti, $condizione, $chilometraggio, $prezzo);
-
-		// Esecuzione della query
-		if (!$stmt->execute()) {
-			die("Errore nell'esecuzione dello statement: " . $stmt->error);
-		}
-
-		$result = $stmt->get_result();
-
-		// Controllo del risultato
-		if ($result) {
-			return true;
-		} else {
-			return false;
-		}
-		
-	}
-
 
 	//FUNZIONE PER PRENDERE NOME, COGNOME E USERNAME DA USERNAME
 	public function getNomeCognomeUser($username) {
@@ -824,10 +792,41 @@ class DBConnection {
 			return -1;
 		}
 	}
-	
-	
 
-	//FUNZIONE PER CANCELLARE LE PRENOTAZIONI
+
+	//FUNZIONE PER INSERIRE LE AUTO
+	public function insertAuto($marca, $modello, $anno, $colore, $alimentazione, $cambio, $trazione, $potenza, $peso, $neopatentati, $numeroPosti, $condizione, $chilometraggio, $prezzo, $foto, $alts) {
+		$query = "INSERT INTO Veicolo (marca, modello, anno, colore, alimentazione, cambio, trazione, potenza, peso, neopatentati, numeroPosti, condizione, chilometraggio, prezzo, foto, alts) 
+		VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?);";
+
+		// Preparazione dello statement
+		$stmt = $this->connection->prepare($query);
+		if ($stmt === false) {
+			die("Errore nella preparazione dello statement: " . $this->connection->error);
+		}
+
+		// Bind dei parametri (s = stringa, i = intero, d = double/float, b = blob)
+		$stmt->bind_param("ssissssiiiisidss", $marca, $modello, $anno, $colore, $alimentazione, $cambio, $trazione, $potenza, $peso, $neopatentati, $numeroPosti, $condizione, $chilometraggio, $prezzo, $foto, $alts);
+
+		// Esecuzione della query
+		if (!$stmt->execute()) {
+			die("Errore nell'esecuzione dello statement: " . $stmt->error);
+		}
+
+		// Ottenimento del risultato
+		$result = $stmt->get_result();
+		// $rows = $result->fetch_all(MYSQLI_ASSOC);
+		// $numRows = count($rows);
+
+		if($result){
+			return 1;
+		} else {
+			return 0;
+		}
+	
+	}
+
+	//FUNZIONE PER CANCELLARE LE AUTO
 	public function deleteAuto($idAuto) {
 		
 		$query = "DELETE FROM Veicolo WHERE id = ?;";
@@ -839,7 +838,7 @@ class DBConnection {
 		}
 	
 		// Associazione dei parametri alla query
-		if (!$stmt->bind_param("d", $idAuto)) {
+		if (!$stmt->bind_param("i", $idAuto)) {
 			die("Errore nell'associazione dei parametri: " . $stmt->error);
 		}
 	
@@ -850,9 +849,9 @@ class DBConnection {
 	
 		// Controllo righe eliminate
 		if ($stmt->affected_rows > 0) {
-			return true; // Prenotazione eliminata con successo
+			return true; // Auto eliminata con successo
 		} else {
-			return false; // Nessuna prenotazione corrisponde al codice fornito
+			return false; // Nessuna auto corrisponde all'id fornito
 		}
 	}
 
