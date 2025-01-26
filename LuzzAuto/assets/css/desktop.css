@@ -387,7 +387,7 @@ select option {
     border: 1px solid var(--form-border-input-color);
     background-color: var(--form-bg-color);
     color: var(--navbar-text-color);
-    margin: 0 5em 2em 5em;
+    margin: 0 5em 1em 5em;
     font-size: 100%;
     font-family: "Lexend", Roboto, sans-serif;
     padding-left: 1em;
@@ -397,39 +397,12 @@ select option {
 #signup_form label{
     background-color: var(--form-bg-color);
     margin-left: 6em;
-    position: absolute;
     padding: 0 0.5em;
+    position: relative;
+    top: 0.85em;
+    width: max-content;
 }
 
-#signup_label_nome{
-    margin-top: -0.8em;
-    color: var(--form-border-input-color);
-}
-
-#signup_label_cognome{
-    margin-top: 4.5em;
-    color: var(--form-border-input-color);
-}
-
-#signup_label_username{
-    margin-top: 9.8em;
-    color: var(--form-border-input-color);
-}
-
-#signup_label_pass{
-    margin-top: 15em;
-    color: var(--form-border-input-color);
-}
-
-#signup_label_pass2{
-    margin-top: 20.2em;
-    color: var(--form-border-input-color);
-}
-
-#signup_label_data{
-    margin-top: 25.5em;
-    color: var(--form-border-input-color);
-}
 
 input[type="date"]::-webkit-calendar-picker-indicator {
     background-color: white;
