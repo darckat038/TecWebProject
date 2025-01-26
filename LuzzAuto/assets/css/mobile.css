@@ -1135,12 +1135,6 @@ section.aboutUs_history img {
     box-sizing: border-box;
 }
 
-#list_filter #list_filter_potenza,
-#list_filter #list_filter_peso {
-    padding: 0;
-    border: 0;
-}
-
 #list_filter #list_filter_potenza input,
 #list_filter #list_filter_peso input {
     width: 5.5em;
@@ -1167,13 +1161,6 @@ section.aboutUs_history img {
 #labelNeopatentatiAdmin {
     align-self: center;
     padding: 0;
-}
-
-#list_filter #list_label_potenza,
-#list_filter #list_label_peso {
-    align-self: center;
-    padding: 0;
-    top: 0;
 }
 
 #list_filter .list_insert {
