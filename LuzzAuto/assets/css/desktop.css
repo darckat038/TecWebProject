@@ -989,7 +989,7 @@ section.aboutUs_history p {
     color: var(--cards-text-color);
 }
 
-#aboutUs_ourTeam > dl > div > img {
+#aboutUs_ourTeam dl div img {
     float: left;
     height: 12vw;
     width: 12vw;
