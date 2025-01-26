@@ -809,16 +809,10 @@ class DBConnection {
 		$stmt->bind_param("ssissssiiiisidss", $marca, $modello, $anno, $colore, $alimentazione, $cambio, $trazione, $potenza, $peso, $neopatentati, $numeroPosti, $condizione, $chilometraggio, $prezzo, $foto, $alts);
 
 		// Esecuzione della query
-		if (!$stmt->execute()) {
-			die("Errore nell'esecuzione dello statement: " . $stmt->error);
-		}
+		$result = $stmt->execute();
 
-		// Ottenimento del risultato
-		$result = $stmt->get_result();
-		// $rows = $result->fetch_all(MYSQLI_ASSOC);
-		// $numRows = count($rows);
-
-		if($result){
+		// Controllo del risultato
+		if ($result) {
 			return 1;
 		} else {
 			return 0;

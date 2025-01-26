@@ -240,15 +240,18 @@ $adminPage = str_replace("[campiTabella]", $campiTabella, $adminPage);
 
 $adminPage = setSelectPrenGest($adminPage);
 
+$errAggiungi = '';
+$succAggiungi = '';
+
 // AGGIUNGI AUTO
 if(isset($_POST['aggiungiAutoAdmin'])){
 
     // Controllo sull'input (verifico che l'admin abbia compilato tutti i campi)
-    if (empty($_POST['immagineOutAdmin']) || empty($_POST['altImmagineOutAdmin']) || empty($_POST['immagineInAdmin']) || 
+    if (empty($_FILES['immagineOutAdmin']) || empty($_POST['altImmagineOutAdmin']) || empty($_FILES['immagineInAdmin']) || 
         empty($_POST['altImmagineInAdmin']) || empty($_POST['marcaAdmin']) || empty($_POST['modelloAdmin']) || empty($_POST['annoAdmin']) || 
         empty($_POST['coloreAdmin']) || empty($_POST['alimentazioneAdmin']) || empty($_POST['cambioAdmin']) || empty($_POST['trazioneAdmin']) || 
         empty($_POST['potenzaAdmin']) || empty($_POST['pesoAdmin']) || empty($_POST['numero_postiAdmin']) || empty($_POST['condizioneAdmin']) || 
-        empty($_POST['chilometraggioAdmin']) || empty($_POST['prezzoAdmin']) || !isset($_POST['neopatentatiAdmin'])) {
+        empty($_POST['chilometraggioAdmin']) || empty($_POST['prezzoAdmin'])) {
 
         $errAggiungi = "<p>Devi compilare tutti i campi.</p>";
         $adminPage = ripristinoInput($adminPage);
@@ -257,96 +260,161 @@ if(isset($_POST['aggiungiAutoAdmin'])){
 
     //CONTROLLI SULL'INPUT
 
+    if($_FILES['immagineOutAdmin']['size'] > 1048576) {
+        $errAggiungi = $errAggiungi . "<p id=\"immagineOut_err\">La prima immagine che hai inserito &egrave; troppo grande, la dimensione massima consentita &egrave; 1MB.</p>";
+    }
+    if($_FILES['immagineInAdmin']['size'] > 1048576) {
+        $errAggiungi = $errAggiungi . "<p id=\"immagineIn_err\">La seconda immagine che hai inserito &egrave; troppo grande, la dimensione massima consentita &egrave; 1MB.</p>";
+    }
     if (!preg_match("/^([A-Za-z0-9,.]+( [A-Za-z0-9,.]+)*)?$/", $_POST["altImmagineOutAdmin"]) || strlen($_POST["altImmagineOutAdmin"]) > 100) {
         $errAggiungi = $errAggiungi . "<p id=\"altImmagineOut_err\">L'alternativa testuale che hai inserito riguardante la prima immagine non &egrave; valida, puoi usare solo lettere, numeri, spazi(non all'inizio e alla fine) e i caratteri virgola e punto. Non devi superare i 100 caratteri di lunghezza.</p>";
     }
     if (!preg_match("/^([A-Za-z0-9,.]+( [A-Za-z0-9,.]+)*)?$/", $_POST["altImmagineInAdmin"]) || strlen($_POST["altImmagineInAdmin"]) > 100) {
         $errAggiungi = $errAggiungi . "<p id=\"altImmagineOut_err\">L'alternativa testuale che hai inserito riguardante la seconda immagine non &egrave; valida, puoi usare solo lettere, numeri, spazi(non all'inizio e alla fine) e i caratteri virgola e punto. Non devi superare i 100 caratteri di lunghezza.</p>";
     }
-    if (!preg_match("/^([A-Za-z0-9\-]+( [A-Za-z0-9\-]+)*)?$/", $_POST["marca"])) {
+    if (!preg_match("/^([A-Za-z0-9\-]+( [A-Za-z0-9\-]+)*)?$/", $_POST["marcaAdmin"])) {
         $errAggiungi = $errAggiungi . "<p id=\"marca_err\">La marca che hai inserito non &egrave; valida, puoi usare solo lettere, numeri, spazi(non all'inizio e alla fine) e il carattere \"-\".</p>";
     }
-    if (!preg_match("/^([A-Za-z0-9\-]+( [A-Za-z0-9\-]+)*)?$/", $_POST["modello"])) {
+    if (!preg_match("/^([A-Za-z0-9\-]+( [A-Za-z0-9\-]+)*)?$/", $_POST["modelloAdmin"])) {
         $errAggiungi = $errAggiungi . "<p id=\"modello_err\">Il modello che hai inserito non &egrave; valido, puoi usare solo lettere, numeri, spazi(non all'inizio e alla fine) e il carattere \"-\".</p>";
     }
-    if (is_numeric($_POST["anno"]) && (!preg_match("/^\d{1,4}$/", $_POST["anno"]) || intval($_POST["anno"]) <= 0)) {
+    if (is_numeric($_POST["annoAdmin"]) && (!preg_match("/^\d{1,4}$/", $_POST["annoAdmin"]) || intval($_POST["annoAdmin"]) <= 0)) {
         $errAggiungi = $errAggiungi . "<p id=\"anno_err\">L'anno che hai inserito non &egrave; valido, inserisci un anno maggiore di 0 e di massimo 4 cifre.</p>";
     }
-    if (!preg_match("/^([A-Za-z]+( [A-Za-z]+)*)?$/", $_POST["colore"])) {
+    if (!preg_match("/^([A-Za-z]+( [A-Za-z]+)*)?$/", $_POST["coloreAdmin"])) {
         $errAggiungi = $errAggiungi . "<p id=\"colore_err\">Il colore che hai inserito non &egrave; valido, puoi usare solo lettere e spazi(non all'inizio e alla fine).</p>";
     }
-    if (!preg_match("/^([A-Za-z0-9\-]+( [A-Za-z0-9\-]+)*)?$/", $_POST["alimentazione"])) {
+    if (!preg_match("/^([A-Za-z0-9\-]+( [A-Za-z0-9\-]+)*)?$/", $_POST["alimentazioneAdmin"])) {
         $errAggiungi = $errAggiungi . "<p id=\"alimentazione_err\">Hai selezionato un'alimentazione non valida. Seleziona nuovamente la scelta desiderata.</p>";
     }
-    if (!preg_match("/^([A-Za-z]+( [A-Za-z]+)*)?$/", $_POST["cambio"])) {
+    if (!preg_match("/^([A-Za-z]+( [A-Za-z]+)*)?$/", $_POST["cambioAdmin"])) {
         $errAggiungi = $errAggiungi . "<p id=\"cambio_err\">Hai selezionato un tipo di cambio non valido. Seleziona nuovamente la scelta desiderata.</p>";
     }
-    if (!preg_match("/^([A-Za-z]+( [A-Za-z]+)*)?$/", $_POST["trazione"])) {
+    if (!preg_match("/^([A-Za-z]+( [A-Za-z]+)*)?$/", $_POST["trazioneAdmin"])) {
         $errAggiungi = $errAggiungi . "<p id=\"trazione_err\">Hai selezionato un tipo di trazione non valido. Seleziona nuovamente la scelta desiderata.</p>";
     }
-    if (is_numeric($_POST["potenza"])) {
-        if (!preg_match("/^(\d+)?$/", $_POST["potenza"]) || intval($_POST["potenza"]) <= 0) {
+    if (is_numeric($_POST["potenzaAdmin"])) {
+        if (!preg_match("/^(\d+)?$/", $_POST["potenzaAdmin"]) || intval($_POST["potenzaAdmin"]) <= 0) {
             $errAggiungi = $errAggiungi . "<p id=\"potenzaMin_err\">Hai inserito una potenza non valida, inserisci una potenza maggiore di 0.</p>";
         }
     }
-    if (is_numeric($_POST["peso"])) {
-        if (!preg_match("/^(\d+)?$/", $_POST["peso"]) || intval($_POST["peso"]) <= 0) {
+    if (is_numeric($_POST["pesoAdmin"])) {
+        if (!preg_match("/^(\d+)?$/", $_POST["pesoAdmin"]) || intval($_POST["pesoAdmin"]) <= 0) {
             $errAggiungi = $errAggiungi . "<p id=\"pesoMin_err\">Hai inserito un peso non valido, inserisci un peso maggiore di 0.</p>";
         }
     }
-    if (is_numeric($_POST["posti"]) && (!preg_match("/^(\d+)?$/", $_POST["anno"]) || intval($_POST["anno"]) <= 0)) {
+    if (is_numeric($_POST["numero_postiAdmin"]) && (!preg_match("/^(\d+)?$/", $_POST["numero_postiAdmin"]) || intval($_POST["numero_postiAdmin"]) <= 0)) {
         $errAggiungi = $errAggiungi . "<p id=\"posti_err\">Hai inserito un numero di posti non valido, inserisci un numero maggiore di 0.</p>";
     }
-    if (!preg_match("/^([A-Za-z0-9]+( [A-Za-z0-9]+)*)?$/", $_POST["condizione"])) {
+    if (!preg_match("/^([A-Za-z0-9]+( [A-Za-z0-9]+)*)?$/", $_POST["condizioneAdmin"])) {
         $errAggiungi = $errAggiungi . "<p id=\"condizione_err\">hai selezionato una condizione non valida. Seleziona nuovamente la scelta desiderata.</p>";
     }
-    if (is_numeric($_POST["prezzoMax"]) && (!preg_match("/^(\d+)?$/", $_POST["prezzoMax"]) || intval($_POST["prezzoMax"]) <= 0)) {
-            $errAggiungi = $errAggiungi . "<p id=\"prezzoMax_err\">Hai inserito un prezzo non valido, inserisci un prezzo maggiore di 0.</p>";
+    if (is_numeric($_POST["prezzoAdmin"]) && (!preg_match("/^(\d+)?$/", $_POST["prezzoAdmin"]) || intval($_POST["prezzoAdmin"]) <= 0)) {
+        $errAggiungi = $errAggiungi . "<p id=\"prezzoMax_err\">Hai inserito un prezzo non valido, inserisci un prezzo maggiore di 0.</p>";
     }
-    if (is_numeric($_POST["chilometraggio"]) && (!preg_match("/^(\d+)?$/", $_POST["chilometraggio"]) || intval($_POST["chilometraggio"]) <= 0)) {
+    if (is_numeric($_POST["chilometraggioAdmin"]) && (!preg_match("/^(\d+)?$/", $_POST["chilometraggioAdmin"]) || intval($_POST["chilometraggioAdmin"]) <= 0)) {
         $errAggiungi = $errAggiungi . "<p id=\"chilometraggio_err\">Hai inserito un chilometraggio non valido, inserisci un valore maggiore di 0.</p>";
     }
-    if (!empty($_POST["neopatentati"]) && intval($_POST["neopatentati"]) != 1) {
+    if (!empty($_POST["neopatentatiAdmin"]) && intval($_POST["neopatentatiAdmin"]) != 1) {
         $errAggiungi = $errAggiungi . "<p id=\"neopatentati_err\">Hai selezionato un valore di neopatentati non valido. Seleziona nuovamente la scelta desiderata.</p>";
     }
 
-    /*
     // Restituzione errori in caso di problemi di validazione
-    if (!empty($errGest)) {
-        $adminPage = str_replace("[errAdd]", $errGest, $adminPage);
-        
+    if (!empty($errAggiungi)) {
+
+        $adminPage = str_replace("[errAdd]", $errAggiungi, $adminPage);
+        $adminPage = str_replace("[succAdd]", "", $adminPage);
+        $adminPage = ripristinoInput($adminPage);
     } else {
 
-        if($_POST["azioneAdmin"] == "accetta"){
-            $stato = 1;
-        }else{
-            $stato = -1;
-        }
+        //ESECUZIONE DELLA QUERY
 
-        // Recupero ID della prenotazione
-        $idPrenotazione = explode("-", $_POST["gestPrenAdmin"])[0];
-        $idPrenotazione = htmlspecialchars($idPrenotazione);
+        $marca = $_POST["marcaAdmin"];
+        $modello = $_POST["modelloAdmin"];
+        $anno = $_POST["annoAdmin"];
+        $colore = $_POST["coloreAdmin"];
+        $alimentazione = $_POST["alimentazioneAdmin"];
+        $cambio = $_POST["cambioAdmin"];
+        $trazione = $_POST["trazioneAdmin"];
+        $potenza = $_POST["potenzaAdmin"];
+        $peso = $_POST["pesoAdmin"];
+        $posti = $_POST["numero_postiAdmin"];
+        $condizione = $_POST["condizioneAdmin"];
+        $chilometraggio = $_POST["chilometraggioAdmin"];
+        $prezzo = $_POST["prezzoAdmin"];
+        $neopatentati = isset($_POST["neopatentatiAdmin"]) ? 1 : 0;
+        $alts = $_POST["altImmagineOutAdmin"] . "+" . $_POST["altImmagineInAdmin"];
+        $foto = $modello . "_esterni." . pathinfo($_FILES['immagineOutAdmin']['name'], PATHINFO_EXTENSION) . "+" . $modello . "_interni." . pathinfo($_FILES['immagineInAdmin']['name'], PATHINFO_EXTENSION);
 
-        // Tentativo di aggiornamento della prenotazione
         try {
             $db = new DBConnection();
-            $ris = $db->updateStatoPrenotazione($idPrenotazione, $stato); // Assume che la funzione restituisca un booleano (true/false)
+            $ris = $db->insertAuto($marca, $modello, $anno, $colore, $alimentazione, $cambio, $trazione, $potenza, $peso, $neopatentati, $posti, $condizione, $chilometraggio, $prezzo, $foto, $alts);
             $db->closeConnection();
             unset($db);
 
-            if (!$ris) {
-                // Prenotazione non trovata
-                $errGest .= "<p>La prenotazione che hai selezionato non esiste. (ID: " . $idPrenotazione . ")</p>";
+            if ($ris) {
+                $succAggiungi = "<p>Auto aggiunta con successo.</p>";
+
+                // SPOSTO IMMAGINE AUTO IN CARTELLA GIUSTA
+
+                // Creo cartella base per foto auto (se non esiste)
+                
+                $target_dir = "assets/img/Cars/";
+                /*
+                if (!is_dir($target_dir)) {
+                    mkdir($target_dir, 0755, true);
+                }
+                */
+
+                // CREO LA DIRECTORY DELLA MARCA
+                $marcaDir = $target_dir . $marca . "/";
+
+                if (!is_dir($marcaDir)) {
+                    mkdir($marcaDir, 0777, true);
+                }
+
+                // IMMAGINE ESTERNI
+                $esterni = $_FILES["immagineOutAdmin"];
+                $fileExtension = pathinfo($esterni['name'], PATHINFO_EXTENSION);
+                $esterniFinale = $modello . "_esterni." . $fileExtension;
+                $targetPath = $marcaDir . $esterniFinale;
+
+                $okEst = move_uploaded_file($esterni['tmp_name'], $targetPath);
+
+                // IMMAGINE INTERNI
+                $interni = $_FILES["immagineInAdmin"];
+                $fileExtension = pathinfo($interni['name'], PATHINFO_EXTENSION);
+                $interniFinale = $modello . "_interni." . $fileExtension;
+                $targetPath = $marcaDir . $interniFinale;
+
+                $okInt = move_uploaded_file($interni['tmp_name'], $targetPath);
+
+                if ($okEst && $okInt) {
+                    $succAggiungi .= "<p>Immagini salvate con successo.</p>";
+                } else {
+                    $errAggiungi .= "<p>Errore nel salvataggio delle immagini.</p>";
+                }
+
             }
 
+            $adminPage = str_replace("[errAdd]", $errAggiungi, $adminPage);
+            $adminPage = str_replace("[succAdd]", $succAggiungi, $adminPage);
+
+            // RIPRISTINO IL FORM VUOTO
+            $adminPage = str_replace("[altOut]", "", $adminPage);
+            $adminPage = str_replace("[altIn]", "", $adminPage);
+            $adminPage = str_replace("[marca]", "", $adminPage);
+            $adminPage = str_replace("[modello]", "", $adminPage);
+            $adminPage = str_replace("[colore]", "", $adminPage);
         } catch (Exception $e) {
-            // Gestione errori e logging
-            error_log("Errore: " . $e->getMessage());
             header("location: 500.html");
             exit();
         }
     }
-        */
+} else {
+    $adminPage = str_replace("[errAdd]", $errAggiungi, $adminPage);
+    $adminPage = str_replace("[succAdd]", $succAggiungi, $adminPage);
+    $adminPage = ripristinoInput($adminPage);
 }
 
 //ELIMINA PRENOTAZIONE
