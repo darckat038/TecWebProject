@@ -457,6 +457,8 @@ legend{
     border: 1px solid var(--form-border-input-color);
     background-color: var(--form-bg-color);
     color: var(--navbar-text-color);
+    margin: 0 5em 1em 5em;
+    font-size: 100%;
     font-family: "Lexend", Roboto, sans-serif;
     padding-left: 1em;
 }
@@ -469,9 +471,12 @@ input[type="date"]::-webkit-calendar-picker-indicator {
 
 #signup_form label{
     background-color: var(--form-bg-color);
-    margin-left: 0.8em;
-    margin-top: 0.5em;
-    color: var(--form-border-input-color);
+    padding: 0 0.5em;
+    position: relative;
+    top: 0.85em;
+    width: max-content;
+    margin-left: 6em;
+    z-index: 1;
 }
 
 #signup_button{
