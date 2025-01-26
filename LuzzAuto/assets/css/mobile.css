@@ -1736,7 +1736,7 @@ section.aboutUs_history img {
     font-size: 100%;
     background-color: rgb(223, 223, 223);
     color: var(--content-text-color);
-    background-color: var();
+    background-color: var(--bg-color);
 }
 
 #home_reviews dl dt {
