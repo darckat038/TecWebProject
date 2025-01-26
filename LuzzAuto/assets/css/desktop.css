@@ -1151,8 +1151,11 @@ section.aboutUs_history p {
 #list_filter #list_filter_colore,
 #list_filter #list_filter_alimentazione,
 #list_filter #list_filter_cambio,
+#list_filter #list_filter_potenzaMin,
+#list_filter #list_filter_potenzaMax,
+#list_filter #list_filter_pesoMin,
+#list_filter #list_filter_pesoMax,
 #list_filter #list_filter_trazione,
-#list_filter #list_filter_potenza,
 #list_filter #list_filter_condizione,
 #list_filter #list_filter_prezzo,
 #list_filter #list_filter_chilometraggio {
@@ -1171,17 +1174,6 @@ section.aboutUs_history p {
     width: 10em;
     padding: 0.5em;
     box-sizing: border-box;
-}
-
-#list_filter #list_filter_potenza,
-#list_filter #list_filter_peso {
-    padding: 0;
-    border: 0;
-}
-
-#list_filter #list_filter_potenza input,
-#list_filter #list_filter_peso input {
-    width: 5.5em;
 }
 
 #list_filter #list_filter_neopatentati,
@@ -1206,12 +1198,6 @@ section.aboutUs_history p {
     padding: 0;
 }
 
-#list_filter #list_label_potenza,
-#list_filter #list_label_peso {
-    align-self: center;
-    padding: 0;
-    top: 0;
-}
 
 #list_filter .list_insert {
     height: 3em;
