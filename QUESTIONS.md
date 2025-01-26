@@ -1,25 +1,25 @@
 # Controlli accessibilità e ritrutturazioni (Emanuele, progressi segnati tra parentesi)
 
-- [ ] Aggiungere tabindex (accesskey) su tutti i link/funzionalità (TEST NVDA) (Emanuele)
+- [ ] Aggiungere tabindex (accesskey) su tutti i link/funzionalità (TEST NVDA) (Emanuele)  
 (OK: )
 
-- [ ] Sistemare tutti i warning di Lighthouse
+- [ ] Sistemare tutti i warning di Lighthouse  
 (OK: )
 
-- [ ] Sistemare tutti i warning di Wave
-(OK: 403, 404, 500, about, auto, index)
+- [ ] Sistemare tutti i warning di Wave  
+(OK: 403, 404, 500, about, auto, index, listino)
 
-- [ ] Sistemare tutti i warning di WCAG Color checker
-(OK: 403, 404, 500, about, auto, index)
+- [ ] Sistemare tutti i warning di WCAG Color checker  
+(OK: 403, 404, 500, about, auto, index, listino)
 
-- [ ] Check con IE11
-(OK: 403, 404, 500, about, auto, index)
+- [ ] Check con IE11  
+(OK: 403, 404, 500, about, auto, index, listino)
 
-- [ ] Mettere placeholders di esempio in tutti gli input type text dei form (es: Fiat) (OK: index)
-es. placeholder="Es. Fiat, Toyota, Tesla", placeholder="gg/mm/aaaa"
+- [ ] Mettere placeholders di esempio in tutti gli input type text dei form (es: placeholder="Es. Fiat, Toyota, Tesla", placeholder="gg/mm/aaaa")  
+(OK: 403, 404, 500, about, auto, index, listino)
 
-
-- [ ] Togliere tutti gli attributi aria-label negli input di tutti i form a cui è già associata una label con il tag html (OK: index)
+- [ ] Togliere tutti gli attributi aria-label negli input di tutti i form a cui è già associata una label con il tag html  
+(OK: 403, 404, 500, about, auto, index, listino)
 
 - [ ] Aggiungere anche ontap oltre che onclick perchè i cellulari vecchi non fanno la conversione
 
