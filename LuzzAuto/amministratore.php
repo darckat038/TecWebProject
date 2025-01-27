@@ -10,10 +10,10 @@ function ripristinoInput($adminPage) {
     $adminPage = str_replace('[altOut]', htmlspecialchars(isset($_POST['altImmagineOutAdmin']) ? $_POST['altImmagineOutAdmin'] : ''), $adminPage);
     $adminPage = str_replace('[imageIn]', htmlspecialchars(isset($_POST['immagineInAdmin']) ? $_POST['immagineInAdmin'] : ''), $adminPage);
     $adminPage = str_replace('[altIn]', htmlspecialchars(isset($_POST['altImmagineInAdmin']) ? $_POST['altImmagineInAdmin'] : ''), $adminPage);
-	$adminPage = str_replace('[marca]', htmlspecialchars(isset($_POST['marcaAdmin']) ? $_POST['marcaAdmin'] : ''), $adminPage);
-	$adminPage = str_replace('[modello]', htmlspecialchars(isset($_POST['modelloAdmin']) ? $_POST['modelloAdmin'] : ''), $adminPage);
-	$adminPage = str_replace('[anno]', htmlspecialchars(isset($_POST['annoAdmin']) ? $_POST['annoAdmin'] : ''), $adminPage);
-    $adminPage = str_replace("[colore]", htmlspecialchars(isset($_POST['coloreAdmin']) ? $_POST['coloreAdmin'] : ''), $adminPage);
+	$adminPage = str_replace('[marca]', htmlspecialchars(isset($_POST['marcaAdmin']) ? 'value="' . $_POST['marcaAdmin'] . '"' : ''), $adminPage);
+	$adminPage = str_replace('[modello]', htmlspecialchars(isset($_POST['modelloAdmin']) ? 'value="' . $_POST['modelloAdmin'] . '"' : ''), $adminPage);
+	$adminPage = str_replace('[anno]', htmlspecialchars(isset($_POST['annoAdmin']) ? 'value="' . $_POST['annoAdmin'] . '"' : ''), $adminPage);
+    $adminPage = str_replace("[colore]", htmlspecialchars(isset($_POST['coloreAdmin']) ? 'value="' . $_POST['coloreAdmin'] . '"' : ''), $adminPage);
 
     if(htmlspecialchars(isset($_POST['alimentazioneAdmin']))) {
 		$adminPage = str_replace("[" . $_POST['alimentazioneAdmin'] . "]", "selected ", $adminPage);
@@ -30,17 +30,17 @@ function ripristinoInput($adminPage) {
 	}
 	$adminPage = str_replace(["[anteriore]", "[posteriore]", "[integrale]"], ["", "", ""], $adminPage);
 
-    $adminPage = str_replace("[potenza]", htmlspecialchars(isset($_POST['potenzaAdmin']) ? $_POST['potenzaAdmin'] : ''), $adminPage);
-    $adminPage = str_replace("[peso]", htmlspecialchars(isset($_POST['pesoAdmin']) ? $_POST['pesoAdmin'] : ''), $adminPage);
-    $adminPage = str_replace("[posti]", htmlspecialchars(isset($_POST['numero_postiAdmin']) ? $_POST['numero_postiAdmin'] : ''), $adminPage);
+    $adminPage = str_replace("[potenza]", htmlspecialchars(isset($_POST['potenzaAdmin']) ? 'value="' . $_POST['potenzaAdmin'] . '"' : ''), $adminPage);
+    $adminPage = str_replace("[peso]", htmlspecialchars(isset($_POST['pesoAdmin']) ? 'value="' . $_POST['pesoAdmin'] . '"' : ''), $adminPage);
+    $adminPage = str_replace("[posti]", htmlspecialchars(isset($_POST['numero_postiAdmin']) ? 'value="' . $_POST['numero_postiAdmin'] . '"' : ''), $adminPage);
 
     if(htmlspecialchars(isset($_POST['condizioneAdmin']))) {
 		$adminPage = str_replace("[" . $_POST['condizioneAdmin'] . "]", "selected ", $adminPage);
 	}
 	$adminPage = str_replace(["[nuovo]", "[usato]", "[km0]"], ["", "", ""], $adminPage);
 
-    $adminPage = str_replace("[chilometraggio]", htmlspecialchars(isset($_POST['chilometraggioAdmin']) ? $_POST['chilometraggioAdmin'] : ''), $adminPage);
-    $adminPage = str_replace("[prezzo]", htmlspecialchars(isset($_POST['prezzoAdmin']) ? $_POST['prezzoAdmin'] : ''), $adminPage);
+    $adminPage = str_replace("[chilometraggio]", htmlspecialchars(isset($_POST['chilometraggioAdmin']) ? 'value="' . $_POST['chilometraggioAdmin'] . '"' : ''), $adminPage);
+    $adminPage = str_replace("[prezzo]", htmlspecialchars(isset($_POST['prezzoAdmin']) ? 'value="' . $_POST['prezzoAdmin'] . '"' : ''), $adminPage);
 
     $adminPage = str_replace("[neopatentati]", htmlspecialchars(isset($_POST['neopatentatiAdmin']) && intval($_POST["neopatentatiAdmin"]) == 1 ? 'checked ' : ''), $adminPage);
 	
@@ -104,7 +104,7 @@ function mostraTabellaPrenotazioni() {
                                         <th scope='row' data-title='Codice'>" . $row["codice"] . "</th>
                                         <td data-title='Utente'>" . $row["username"] . "</td>
                                         <td data-title='Auto'>" . $row["marca"] . " " . $row['modello'] . "</td>
-                                        <td data-title='Data'><time datetime=''" . $row['dataOra'] . "'>" . $row['dataOra'] . "</time></td>
+                                        <td data-title='Data'><time datetime='" . $row['dataOra'] . "'>" . $row['dataOra'] . "</time></td>
                                         <td data-title='Stato'>" . $statoTestuale . "</td>
                                     </tr>";
                 }
