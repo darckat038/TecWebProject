@@ -24,11 +24,12 @@ function creaTabellaPrenotazioni($username) {
         } else {
             // Altrimenti creo il markup della tabella
             $campiTabella = "  
-                            <p id='descTable'>
+                            <p id='descTable' aria-hidden='true'>
                             La tabella descrive le prenotazioni dei test drive da parte dell'utente, è organizzata in colonne
                             con numero prenotazione, modello auto, data <span lang='en-GB'>Test Drive</span> e stato della prenotazione 
                             </p>
                             <table class='tabellaPrenUtente' aria-describedby='descTable'>
+                            <caption class='nomeRiqPrenUtente'>Prenotazioni</caption>
                                 <thead>
                                 <tr>
                                     <th scope='col'><abbr title='Numero prenotazione'>Num. Pren.</abbr></th>

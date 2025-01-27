@@ -1852,6 +1852,36 @@ section.aboutUs_history img {
     margin-top: 1em;
 }
 
+
+#prenotazioni_utente {
+    margin-top: 3em;
+    overflow-y: auto; /* make the table scrollable if height is more than 200 px  */
+    height: 15em; /* gives an initial height of 200px to the table */
+}
+#prenotazioni_utente thead th{
+    position: sticky; /* make the table heads sticky */
+    top: 1.5em; /* table head will be placed from the top of the table and sticks to it */
+}
+
+#prenotazioni_utente caption{
+    position: sticky; /* make the table heads sticky */
+    top: -0.1em; /* table head will be placed from the top of the table and sticks to it */
+    background-color: var(--header-bg-color);
+}
+
+#prenotazioni_utente table {
+    border-collapse: collapse; /* make the table borders collapse to each other */
+    width: 100%;
+}
+#prenotazioni_utente th,td {
+    padding: 8px 16px;
+    border: 1px solid #ccc;
+}
+#prenotazioni_utente th {
+    background: var(--cards-bg-color);
+}
+
+
 #descTable{
     position: absolute;
     left: -999em;
@@ -2084,6 +2114,34 @@ input[type="date"]::-webkit-calendar-picker-indicator {
     text-align: center;
     font-size: 1.6em;
     font-weight: 600;
+}
+
+.prenAdmin {
+    margin-top: 3em;
+    overflow-y: auto; /* make the table scrollable if height is more than 200 px  */
+    height: 25em; /* gives an initial height of 200px to the table */
+}
+.prenAdmin thead th{
+    position: sticky; /* make the table heads sticky */
+    top: 1.5em; /* table head will be placed from the top of the table and sticks to it */
+}
+
+.prenAdmin caption{
+    position: sticky; /* make the table heads sticky */
+    top: 0; /* table head will be placed from the top of the table and sticks to it */
+    background-color: var(--header-bg-color);
+}
+
+.prenAdmin table {
+    border-collapse: collapse; /* make the table borders collapse to each other */
+    width: 100%;
+}
+.prenAdmin th,td {
+    padding: 8px 16px;
+    border: 1px solid #ccc;
+}
+.prenAdmin th {
+    background: var(--cards-bg-color);
 }
 
 .tabellaPrenAdmin {
