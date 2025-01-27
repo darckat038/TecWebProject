@@ -125,16 +125,7 @@ function mostraTabellaPrenotazioni() {
 
 session_start();
 
-// Controllo se l'amministratore è loggato
-if (!isset($_SESSION["utente"])) {
-    header("location: login.php");
-    exit();
-}
-// Controllo se l'utente è loggato
-if (isset($_SESSION["utente"]) && $_SESSION["utente"] !="admin") {
-    header("location: utente.php");
-    exit();
-}
+
 
 // Carico template html
 $adminPage = file_get_contents('amministratore.html');
