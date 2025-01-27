@@ -1858,7 +1858,7 @@ p.list_car_list_empty {
 
 #utente_logout{
     position: relative;
-    top: 1em;
+    top: -1em;
     left: 43em;
     background-color: var(--form-bg-color);
     border: 1px solid white;
@@ -1921,9 +1921,8 @@ p.list_car_list_empty {
 
 /*tabella prenotazioni*/
 .nomeRiqPrenUtente{
-    text-align: left;
+    text-align: center;
     color: var(--form-border-input-color);
-    padding-left: 3em;
     font-weight: bold;
     font-size: 1.6em;
 }
@@ -1932,16 +1931,18 @@ p.list_car_list_empty {
 #prenotazioni_utente {
     margin-top: 3em;
     overflow-y: auto; /* make the table scrollable if height is more than 200 px  */
-    height: 15em; /* gives an initial height of 200px to the table */
+    height: 15em;
+    width: 85%;
+    margin: auto;/* gives an initial height of 200px to the table */
 }
 #prenotazioni_utente thead th{
     position: sticky; /* make the table heads sticky */
-    top: 1.5em; /* table head will be placed from the top of the table and sticks to it */
+    top: 1.45em; /* table head will be placed from the top of the table and sticks to it */
 }
 
 #prenotazioni_utente caption{
     position: sticky; /* make the table heads sticky */
-    top: 0; /* table head will be placed from the top of the table and sticks to it */
+    top: 0;
     background-color: var(--header-bg-color);
 }
 
@@ -2169,7 +2170,7 @@ input[type="date"]::-webkit-calendar-picker-indicator {
 
 #admin_logout{
     position: relative;
-    top: 1em;
+    top: -1em;
     left: 43em;
     background-color: var(--form-bg-color);
     border: 1px solid white;
@@ -2220,9 +2221,10 @@ input[type="date"]::-webkit-calendar-picker-indicator {
 }
 
 .prenAdmin {
-    margin-top: 3em;
     overflow-y: auto; /* make the table scrollable if height is more than 200 px  */
-    height: 25em; /* gives an initial height of 200px to the table */
+    height: 25em;
+    width: 85%;
+    margin: auto; /* gives an initial height of 200px to the table */
 }
 .prenAdmin thead th{
     position: sticky; /* make the table heads sticky */

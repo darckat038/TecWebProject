@@ -1757,7 +1757,7 @@ section.aboutUs_history img {
 }
 
 .utente_content > .riquadriUtente{
-    margin-top: 2em;
+    margin-top: 3em;
 }
 
 #utente_logout{
@@ -1858,9 +1858,9 @@ section.aboutUs_history img {
 
 
 #prenotazioni_utente {
-    margin-top: 3em;
+    margin-top: 1em;
     overflow-y: auto; /* make the table scrollable if height is more than 200 px  */
-    height: 15em; /* gives an initial height of 200px to the table */
+    height: 23em; /* gives an initial height of 200px to the table */
 }
 #prenotazioni_utente thead th{
     position: sticky; /* make the table heads sticky */
@@ -2132,7 +2132,7 @@ input[type="date"]::-webkit-calendar-picker-indicator {
 
 .prenAdmin caption{
     position: sticky; /* make the table heads sticky */
-    top: 0; /* table head will be placed from the top of the table and sticks to it */
+    top: -0.05em; /* table head will be placed from the top of the table and sticks to it */
     background-color: var(--header-bg-color);
 }
 
