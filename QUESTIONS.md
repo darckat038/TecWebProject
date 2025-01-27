@@ -32,7 +32,7 @@
 
 - [ ] Dare enfasi ad alcune parole chiave con tag em e strong
 
-- [ ] Aggiungere tag time/date in tabelle amministratore e utente
+- [x] Aggiungere tag time/date in tabelle amministratore e utente
 
 - [x] Nella pagina about.html dichiarare che il link con la mail porta effettivamente alla mail : indirizzomail@luzzauto.com(mail)
 
