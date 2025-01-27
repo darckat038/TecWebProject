@@ -208,7 +208,7 @@ VALUES ('DM - Digital Motion', 'Mudol', 'Nuovo', 65800, 2024, 0, 'Blu chiaro', '
     VALUES ('mario.rossi', 1, '2024-01-01 12:00:00', 0);
 */
 
-INSERT INTO Prenotazione (username, idAuto, dataOra, stato) VALUES ('user', 1, '2024-01-01 12:00:00', 0);
-INSERT INTO Prenotazione (username, idAuto, dataOra, stato) VALUES ('user', 4, '2024-12-06 17:00:00', 0);
-INSERT INTO Prenotazione (username, idAuto, dataOra, stato) VALUES ('user', 2, '2025-01-09 14:00:00', 0);
-INSERT INTO Prenotazione (username, idAuto, dataOra, stato) VALUES ('user', 6, '2025-01-01 10:00:00', 0);
+INSERT INTO Prenotazione (username, idAuto, dataOra, stato) VALUES ('user', 1, '2025-01-10 12:00:00', 0);
+INSERT INTO Prenotazione (username, idAuto, dataOra, stato) VALUES ('user', 4, '2025-12-06 17:00:00', 0);
+INSERT INTO Prenotazione (username, idAuto, dataOra, stato) VALUES ('user', 2, '2025-03-09 14:00:00', 0);
+INSERT INTO Prenotazione (username, idAuto, dataOra, stato) VALUES ('user', 6, '2025-06-01 10:00:00', 0);
