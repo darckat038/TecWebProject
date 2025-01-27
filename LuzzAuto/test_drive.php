@@ -59,10 +59,10 @@ $buttonsHTML = "
 <p>Non aspettare oltre: fai il primo passo verso la tua nuova auto!</p>
 
 <p>Accedi al tuo profilo per usufruire del servizio di <span lang='en-GB'>Test Drive</span> :</p>
-<a href='login.html' onclick='setBackToOriginTestDrive()' ontouchend='setBackToOriginTestDrive()'>Accedi</a>
+<a href='login.html' onclick='setBackToOriginTestDrive()'>Accedi</a>
 
 <p>Oppure crea un <span lang='en-GB'>account</span> :</p>
-<a href='registrazione.html' onclick='setBackToOriginTestDrive()' ontouchend='setBackToOriginTestDrive()'>Registrati</a>
+<a href='registrazione.html' onclick='setBackToOriginTestDrive()'>Registrati</a>
 
 ";
 

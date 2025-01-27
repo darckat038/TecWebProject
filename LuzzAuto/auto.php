@@ -28,7 +28,7 @@ try {
         // Itera sull'array dei nomi di foto
         foreach ($fotos as $foto) {
             // Genera il codice HTML per ogni immagine
-            $immagini .= '<img src="assets/img/Cars/' . htmlspecialchars(string: $dettagli['marca']) . '/' . htmlspecialchars(string: $foto) . '" 
+            $immagini .= '<img src="assets/img/Cars/' . str_replace(' ', '%20', htmlspecialchars(string: $dettagli['marca'])) . '/' . str_replace(' ', '%20', htmlspecialchars(string: $foto)) . '" 
             alt="' . htmlspecialchars(string: $alts[array_search(needle: $foto, haystack: $fotos)]) . '">';
         }
 
