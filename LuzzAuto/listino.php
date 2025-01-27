@@ -105,7 +105,7 @@ function getVehiclesFromDB($params, $listinoHTML) {
 						// Gestione delle immagini
 						$fotos = explode(separator: "+", string: $vehicle['foto']);
 						$alts = explode(separator:'+', string: $vehicle['alts']);
-						$foto = '<img src="assets/img/Cars/' . htmlspecialchars(string: $vehicle['marca']) . '/' . htmlspecialchars(string: $fotos[0]) . '" alt=" ' . htmlspecialchars(string: $alts[0]) . '">';
+						$foto = '<img src="assets/img/Cars/' . str_replace(' ', '%20', htmlspecialchars(string: $vehicle['marca'])) . '/' . str_replace(' ', '%20', htmlspecialchars(string: $fotos[0])) . '" alt=" ' . htmlspecialchars(string: $alts[0]) . '">';
 						$listaAuto .= $foto;
 
 				$listaAuto .= '
