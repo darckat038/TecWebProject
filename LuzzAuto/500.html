@@ -23,6 +23,15 @@
         <link href="https://fonts.googleapis.com/css2?family=Lexend:wght@100..900&display=swap" rel="stylesheet">
     </head>
     <body>
+        <header>
+            <nav aria-label="aiuti alla navigazione" class="navHelp">
+                <ul>
+                    <li>
+                        <a href="#500_main" class="aHelp">Vai al contenuto</a>
+                    </li>
+                </ul>
+            </nav>
+        </header>
         <nav class="topNavBar">
             <h1 class="hide">LuzzAuto</h1>
             <button id="menu-button-container" aria-label="Seleziona per espandere e comprimere il menù di navigazione">               
@@ -38,10 +47,10 @@
                 <li><a href="utente.php">Area riservata</a></li>
             </ul>
         </nav>
-        <nav id="breadcrumb">
+        <nav id="breadcrumb" aria-label="Percorso attuale nel sito">
             <p>Ti trovi in: Errore 500</p>
         </nav>
-        <main class="errors_main">
+        <main class="errors_main" id="500_main">
             <img src="assets/img/Content/error500.webp" height="260" alt="Indicatore di serbatoio carburante vuoto">
             <h1>Ops, sembra che siamo rimasti a secco!</h1>
             <h2>Il <span lang="en-GB">server</span> non è attualmente disponibile.</h2>
