@@ -32,13 +32,13 @@ $formHTML = "
                 <legend>Prenota <span lang='en-GB'>Test Drive</span></legend>
 
                 <label id='test_drive_label' for='test_drive_select_auto'>Auto</label>
-                <select name='test_drive_select_auto' id='test_drive_select_auto' class='test_drive_input' aria-required='true' required data-msg-required='Per favore, seleziona la macchina' data-msg-invalid:='Ci dispiace, formato non corretto'>
-                    <option value='' selected disabled>Seleziona un'opzione</option>
+                <select name='test_drive_select_auto' id='test_drive_select_auto' class='test_drive_input' required data-msg-required='Per favore, seleziona la macchina' data-msg-invalid:='Ci dispiace, formato non corretto'>
+                    <option selected disabled>Seleziona un'opzione</option>
                     [veicoli]
                 </select>
 
                 <label id='test_drive_label' for='test_drive_date'>Data e ora</label>
-                <input id='test_drive_date' class='test_drive_input' type='datetime-local' name='test_drive_date' aria-required='true' required data-msg-required='Per favore, inserisci data e ora della prenotazione' value='[data]' placeholder='gg/mm/aaaa --:--'>
+                <input id='test_drive_date' class='test_drive_input' type='datetime-local' name='test_drive_date' required data-msg-required='Per favore, inserisci data e ora della prenotazione' value='[data]' placeholder='gg/mm/aaaa --:--'>
         
                 <input id='test_drive_prenotaBtn' type='submit' value='INVIA RICHIESTA'>
 
@@ -59,10 +59,10 @@ $buttonsHTML = "
 <p>Non aspettare oltre: fai il primo passo verso la tua nuova auto!</p>
 
 <p>Accedi al tuo profilo per usufruire del servizio di <span lang='en-GB'>Test Drive</span> :</p>
-<a href='login.html' onclick='setBackToOriginTestDrive()' ontap='setBackToOriginTestDrive()'>Accedi</a>
+<a href='login.html' onclick='setBackToOriginTestDrive()' ontouchend='setBackToOriginTestDrive()'>Accedi</a>
 
 <p>Oppure crea un <span lang='en-GB'>account</span> :</p>
-<a href='registrazione.html' onclick='setBackToOriginTestDrive()' ontap=='setBackToOriginTestDrive()'>Registrati</a>
+<a href='registrazione.html' onclick='setBackToOriginTestDrive()' ontouchend='setBackToOriginTestDrive()'>Registrati</a>
 
 ";
 
