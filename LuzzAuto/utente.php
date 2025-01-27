@@ -84,8 +84,6 @@ if (isset($_SESSION["utente"]) && $_SESSION["utente"] =="admin") {
     exit();
 }
 
-
-
 //INFORMAZIONI UTENTE
 
 // Recupero username dalla sessione
