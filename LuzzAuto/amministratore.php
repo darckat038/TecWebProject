@@ -260,11 +260,15 @@ if(isset($_POST['aggiungiAutoAdmin'])){
 
     //CONTROLLI SULL'INPUT
 
-    if($_FILES['immagineOutAdmin']['size'] > 1048576) {
-        $errAggiungi = $errAggiungi . "<p id=\"immagineOut_err\">La prima immagine che hai inserito &egrave; troppo grande, la dimensione massima consentita &egrave; 1MB.</p>";
+    // echo $_FILES['immagineOutAdmin']['name'] . ">" . $_FILES['immagineOutAdmin']['size'] . $_FILES['immagineOutAdmin']['error'] . "----";
+    // echo $_FILES['immagineInAdmin']['name'] . ">" . $_FILES['immagineInAdmin']['size'] . $_FILES['immagineInAdmin']['error'] . "----";
+    // exit();
+
+    if($_FILES['immagineOutAdmin']['error'] != 0) {
+        $errAggiungi = $errAggiungi . "<p id=\"immagineOut_err\">C'è stato un errore nel caricamento della prima immagine, riprova ricordando che la dimensione massima consentita &egrave; 1MB.</p>";
     }
-    if($_FILES['immagineInAdmin']['size'] > 1048576) {
-        $errAggiungi = $errAggiungi . "<p id=\"immagineIn_err\">La seconda immagine che hai inserito &egrave; troppo grande, la dimensione massima consentita &egrave; 1MB.</p>";
+    if($_FILES['immagineInAdmin']['error'] != 0) {
+        $errAggiungi = $errAggiungi . "<p id=\"immagineIn_err\">C'è stato un errore nel caricamento della seconda immagine, riprova ricordando che la dimensione massima consentita &egrave; 1MB.</p>";
     }
     if (!preg_match("/^([A-Za-z0-9,.]+( [A-Za-z0-9,.]+)*)?$/", $_POST["altImmagineOutAdmin"]) || strlen($_POST["altImmagineOutAdmin"]) > 100) {
         $errAggiungi = $errAggiungi . "<p id=\"altImmagineOut_err\">L'alternativa testuale che hai inserito riguardante la prima immagine non &egrave; valida, puoi usare solo lettere, numeri, spazi(non all'inizio e alla fine) e i caratteri virgola e punto. Non devi superare i 100 caratteri di lunghezza.</p>";
