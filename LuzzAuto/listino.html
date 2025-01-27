@@ -73,18 +73,18 @@
                         
                             <div class="list_input_container">
                                 <label for="list_filter_marca" id="list_label_marca">Marca</label>
-                                <input type="text" id="list_filter_marca" class="list_insert" value="[marca]" name="marca" placeholder="Es. DM, UniPD, ESU...">
+                                <input type="text" id="list_filter_marca" class="list_insert" [marca] name="marca" placeholder="Es. DM, UniPD, ESU...">
                             </div>
 
                             <div class="list_input_container">
                                 <label for="list_filter_modello" id="list_label_modello">Modello</label>
-                                <input type="text" id="list_filter_modello" class="list_insert" value="[modello]" name="modello" placeholder="Es. Mudol, Belzuny...">
+                                <input type="text" id="list_filter_modello" class="list_insert" [modello] name="modello" placeholder="Es. Mudol, Belzuny...">
                             </div>
 
                             <div class="list_input_container">
                                 <label for="list_filter_anno" id="list_label_anno">Anno</label>
                                 <div>
-                                    <input type="number" id="list_filter_anno" class="list_insert" value="[anno]" name="anno" min="1" step="1" max="2025" placeholder="Es. 2022">
+                                    <input type="number" id="list_filter_anno" class="list_insert" [anno] name="anno" min="1" step="1" max="2025" placeholder="Es. 2022">
                                 </div>
                             </div>
 
@@ -130,34 +130,34 @@
                             <div class="list_input_container">
                                 <label for="list_filter_posti" id="list_label_posti">Numero posti</label>
                                 <div>
-                                    <input type="number" id="list_filter_posti" class="list_insert" value="[posti]" name="posti" min="1" step="1" placeholder="Es. 5">
+                                    <input type="number" id="list_filter_posti" class="list_insert" [posti] name="posti" min="1" step="1" placeholder="Es. 5">
                                 </div>
                             </div>
 
                             <div class="list_input_container">
                                 <label for="list_filter_potenzaMin">Potenza minima (<abbr title="cavalli vapore">CV</abbr>)</label>
                                 <div>
-                                    <input type="number" id="list_filter_potenzaMin" class="list_insert" value="[potenzaMin]" name="potenzaMin" min="1" step="1" placeholder="Es. 120">
+                                    <input type="number" id="list_filter_potenzaMin" class="list_insert" [potenzaMin] name="potenzaMin" min="1" step="1" placeholder="Es. 120">
                                 </div>
                             </div>
 
                             <div class="list_input_container">
                                 <label for="list_filter_potenzaMax">Potenza massima (<abbr title="cavalli vapore">CV</abbr>)</label>
                                 <div>
-                                    <input type="number"  id="list_filter_potenzaMax"class="list_insert" value="[potenzaMax]" name="potenzaMax" min="1" step="1" placeholder="Es. 250">
+                                    <input type="number"  id="list_filter_potenzaMax"class="list_insert" [potenzaMax] name="potenzaMax" min="1" step="1" placeholder="Es. 250">
                                 </div>
                             </div>
 
                             <div class="list_input_container">
                                 <label for="list_filter_pesoMin">Peso minimo (<abbr title="chilogrammi">kg</abbr>)</label>
                                 <div>
-                                    <input type="number" id="list_filter_pesoMin" class="list_insert" value="[pesoMin]" name="pesoMin" min="1" step="1" placeholder="Es. 1100">
+                                    <input type="number" id="list_filter_pesoMin" class="list_insert" [pesoMin] name="pesoMin" min="1" step="1" placeholder="Es. 1100">
                                 </div>
                             </div>
                             <div class="list_input_container">
                                 <label for="list_filter_pesoMax">Peso massimo (<abbr title="chilogrammi">kg</abbr>)</label>
                                 <div>
-                                    <input type="number" id="list_filter_pesoMax" class="list_insert" value="[pesoMax]" name="pesoMax" min="1" step="1" placeholder="Es. 1500">
+                                    <input type="number" id="list_filter_pesoMax" class="list_insert" [pesoMax] name="pesoMax" min="1" step="1" placeholder="Es. 1500">
                                 </div>
                             </div>
                             
@@ -195,12 +195,12 @@
                         
                         <div class="list_input_container">
                             <label for="list_filter_prezzo" id="list_label_prezzo">Prezzo massimo (<abbr title="Euro">&euro;</abbr>)</label>
-                            <input type="number" id="list_filter_prezzo" class="list_insert" value="[prezzoMax]" name="prezzoMax" min="1" step="1" placeholder="Es. 40000">
+                            <input type="number" id="list_filter_prezzo" class="list_insert" [prezzoMax] name="prezzoMax" min="1" step="1" placeholder="Es. 40000">
                         </div>
 
                         <div class="list_input_container">
                             <label for="list_filter_chilometraggio" id="list_label_chilometraggio">Chilometraggio massimo (<abbr title="chilometri">km</abbr>)</label>
-                            <input type="number" id="list_filter_chilometraggio" class="list_insert" value="[chilometraggio]" name="chilometraggio" min="1" step="1" placeholder="Es. 15000">
+                            <input type="number" id="list_filter_chilometraggio" class="list_insert" [chilometraggio] name="chilometraggio" min="1" step="1" placeholder="Es. 15000">
                         </div>
 
                     </fieldset>

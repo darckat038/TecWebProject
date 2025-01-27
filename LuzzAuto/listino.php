@@ -7,9 +7,9 @@ function ripristinoInput($listinoHTML) {
 	// $listinoHTML = file_get_contents("listino.html");
 	//RIPRISTINO DELL'INPUT INSERITO
 	// Se c'è input salvato in $_GET, mette quello, altrimenti valore di default (stringa vuota o select default)
-	$listinoHTML = str_replace('[marca]', htmlspecialchars(isset($_GET['marca']) ? $_GET['marca'] : ''), $listinoHTML);
-	$listinoHTML = str_replace('[modello]', htmlspecialchars(isset($_GET['modello']) ? $_GET['modello'] : ''), $listinoHTML);
-	$listinoHTML = str_replace('[anno]', htmlspecialchars(isset($_GET['anno']) ? $_GET['anno'] : ''), $listinoHTML);
+	$listinoHTML = str_replace('[marca]', isset($_GET['marca']) ? 'value="' . htmlspecialchars($_GET['marca']) . '"': '', $listinoHTML);
+	$listinoHTML = str_replace('[modello]', isset($_GET['modello']) ? 'value="' . htmlspecialchars($_GET['modello']) . '"': '', $listinoHTML);
+	$listinoHTML = str_replace('[anno]', isset($_GET['anno']) ? 'value="' . htmlspecialchars($_GET['anno']) . '"': '', $listinoHTML);
 	
 	// rimpiazzo di default -> seleziono qualsiasi
 	
@@ -60,12 +60,12 @@ function ripristinoInput($listinoHTML) {
 	// rimpiazzo di default -> seleziono qualsiasi
 	$listinoHTML = str_replace(["[qualsiasiT]", "[anteriore]", "[posteriore]", "[integrale]"], ["selected ", "", "", ""], $listinoHTML);
 
-	$listinoHTML = str_replace('[potenzaMin]', htmlspecialchars(isset($_GET['potenzaMin']) ? $_GET['potenzaMin'] : ''), $listinoHTML);
-	$listinoHTML = str_replace('[potenzaMax]', htmlspecialchars(isset($_GET['potenzaMax']) ? $_GET['potenzaMax'] : ''), $listinoHTML);
-	$listinoHTML = str_replace('[pesoMin]', htmlspecialchars(isset($_GET['pesoMin']) ? $_GET['pesoMin'] : ''), $listinoHTML);
-	$listinoHTML = str_replace('[pesoMax]', htmlspecialchars(isset($_GET['pesoMax']) ? $_GET['pesoMax'] : ''), $listinoHTML);
+	$listinoHTML = str_replace('[potenzaMin]', isset($_GET['potenzaMin']) ? 'value="' . htmlspecialchars($_GET['potenzaMin']) . '"': '', $listinoHTML);
+	$listinoHTML = str_replace('[potenzaMax]', isset($_GET['potenzaMax']) ? 'value="' . htmlspecialchars($_GET['potenzaMax']) . '"': '', $listinoHTML);
+	$listinoHTML = str_replace('[pesoMin]', isset($_GET['pesoMin']) ? 'value="' . htmlspecialchars($_GET['pesoMin']) . '"': '', $listinoHTML);
+	$listinoHTML = str_replace('[pesoMax]', isset($_GET['pesoMax']) ? 'value="' . htmlspecialchars($_GET['pesoMax']) . '"': '', $listinoHTML);
 	$listinoHTML = str_replace("[neopatentati]", htmlspecialchars(isset($_GET['neopatentati']) && intval($_GET["neopatentati"]) == 1 ? 'checked ' : ''), $listinoHTML);
-	$listinoHTML = str_replace('[posti]', htmlspecialchars(isset($_GET['posti']) ? $_GET['posti'] : ''), $listinoHTML);
+	$listinoHTML = str_replace('[posti]', isset($_GET['posti']) ? 'value="' . htmlspecialchars($_GET['posti']) . '"': '', $listinoHTML);
 
 	//replace condizione
 	if(htmlspecialchars(isset($_GET['condizione']))) {
@@ -74,8 +74,8 @@ function ripristinoInput($listinoHTML) {
 	// rimpiazzo di default -> seleziono qualsiasi
 	$listinoHTML = str_replace(["[qualsiasiCd]", "[nuovo]", "[usato]", "[km0]"], ["selected ", "", "", ""], $listinoHTML);
 
-	$listinoHTML = str_replace("[prezzoMax]", htmlspecialchars(isset($_GET['prezzoMax']) ? $_GET['prezzoMax'] : ''), $listinoHTML);
-	$listinoHTML = str_replace("[chilometraggio]", htmlspecialchars(isset($_GET['chilometraggio']) ? $_GET['chilometraggio'] : ''), $listinoHTML);
+	$listinoHTML = str_replace("[prezzoMax]", isset($_GET['prezzoMax']) ? 'value="' . htmlspecialchars($_GET['prezzoMax']) . '"': '', $listinoHTML);
+	$listinoHTML = str_replace("[chilometraggio]", isset($_GET['chilometraggio']) ? 'value="' . htmlspecialchars($_GET['chilometraggio']) . '"': '', $listinoHTML);
 
 	return $listinoHTML;
 }
