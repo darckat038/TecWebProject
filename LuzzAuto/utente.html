@@ -62,7 +62,7 @@
         </ul>
       </nav>
 
-      <nav id="breadcrumb">
+      <nav id="breadcrumb" aria-label="Percorso attuale nel sito">
           <p>Ti trovi in: Area riservata</p>
       </nav>
       <main class="utente_content">
@@ -102,7 +102,7 @@
               <legend class='nomeRiqUtente'>Gestione Prenotazioni</legend>
 
               <label id='labelPrenUtente' for='gestPrenUtente'><strong>Prenotazioni:</strong> </label>
-              <select name='gestPrenUtente' id='gestPrenUtente' aria-required='true' required data-msg-required='Per favore, seleziona la prenotazione'>
+              <select name='gestPrenUtente' id='gestPrenUtente' required data-msg-required='Per favore, seleziona la prenotazione' required>
                 <option value='' selected disabled>Seleziona un'opzione</option>
                 [prenotazioni]
               </select>
