@@ -1811,8 +1811,6 @@ section.aboutUs_history img {
 */
 
 
-
-
 .nomeRiqUtente{
     background-color: var(--navbar-bg-color);
     padding: 0 0.3em;
@@ -1836,6 +1834,14 @@ section.aboutUs_history img {
     background-size: cover; 
     background-position: center;
     margin-top: -0.5em; 
+}
+
+.riquadriUtente dt{
+    color: var(--form-border-input-color);
+}
+
+.riquadriUtente dd{
+    margin-bottom: 0.5em;
 }
 
 /*tabella prenotazioni*/

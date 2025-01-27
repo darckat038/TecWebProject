@@ -20,7 +20,7 @@ function adjustMenuOnResize() {
             else menu.style.marginTop = "3.5em";
             menu.setAttribute("tabindex","0");
             links.forEach(link => {
-                link.setAttribute("tabindex", "0");
+                link.setAttribute("tabindex", (link.id === "here" ? "-1" : "0"));
                 link.style.pointerEvents = (link.id === "here" ? "none" : "auto");
             });
             tasto.setAttribute("aria-label","Seleziona per comprimere il menù di navigazione");
