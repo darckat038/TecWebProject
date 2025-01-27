@@ -8,47 +8,55 @@ document.addEventListener("DOMContentLoaded", function () {
 * Gestione menù ad hamburger
 */
 function adjustMenuOnResize() {
-    let menu = document.getElementById("menu");
     let tasto = document.getElementById("menu-button-container");
-    let links = menu.querySelectorAll("a");
-    function menuOpenClose() {
-        // Cambia tra menù visibile e nascosto
-        if (tasto.classList.contains("change")) {
-            menu.style.position = "static";
-            menu.style.margin = "0";
-            if (window.innerWidth > 1024) menu.style.marginLeft = "auto";
-            else menu.style.marginTop = "3.5em";
-            menu.setAttribute("tabindex","0");
-            links.forEach(link => {
-                link.setAttribute("tabindex", (link.id === "here" ? "-1" : "0"));
-                link.style.pointerEvents = (link.id === "here" ? "none" : "auto");
-            });
-            tasto.setAttribute("aria-label","Seleziona per comprimere il menù di navigazione");
-        } else {
-            menu.style.position = "absolute";
-            menu.style.margin = "-9999em";
-            menu.setAttribute("tabindex","-1");
-            links.forEach(link => {
-                link.setAttribute("tabindex", "-1");
-                link.style.pointerEvents = "none";
-            });
-            tasto.setAttribute("aria-label","Seleziona per espandere il menù di navigazione");
+
+    if(tasto) {
+        let menu = document.getElementById("menu");
+        let links = menu.querySelectorAll("a");
+        function menuOpenClose() {
+            // Cambia tra menù visibile e nascosto
+            if (tasto.classList.contains("change")) {
+                menu.style.position = "static";
+                menu.style.margin = "0";
+                if (window.innerWidth > 1024) menu.style.marginLeft = "auto";
+                else menu.style.marginTop = "3.5em";
+
+                menu.setAttribute("tabindex","0");
+                links.forEach(link => {
+                    link.setAttribute("tabindex", (link.id === "here" ? "-1" : "0"));
+                    link.style.pointerEvents = (link.id === "here" ? "none" : "auto");
+                });
+                
+                tasto.setAttribute("aria-label","Seleziona per comprimere il menù di navigazione");
+            } else {
+                menu.style.position = "absolute";
+                menu.style.margin = "-9999em";
+                menu.setAttribute("tabindex","-1");
+                links.forEach(link => {
+                    link.setAttribute("tabindex", "-1");
+                    link.style.pointerEvents = "none";
+                });
+                tasto.setAttribute("aria-label","Seleziona per espandere il menù di navigazione");
+            }
         }
-    }
-    // Esegui al caricamento e al resize
-    if (window.innerWidth > 1024) tasto.classList.add("change");
-    else tasto.classList.remove("change");
-    menuOpenClose();
-    window.addEventListener('resize', function(){
+        tasto.addEventListener('click', function() {
+            // Cambia tra linee e croce
+            tasto.classList.toggle("change");
+            menuOpenClose();
+        });
+
+        // Esegui al caricamento e al resize
         if (window.innerWidth > 1024) tasto.classList.add("change");
         else tasto.classList.remove("change");
+        tasto.setAttribute("tabindex", (window.innerWidth > 1024 ? "-1" : "0"));
         menuOpenClose();
-    });
-    tasto.addEventListener('click', function() {
-        // Cambia tra linee e croce
-        tasto.classList.toggle("change");   
-        menuOpenClose();
-    });
+        window.addEventListener('resize', function(){
+            if (window.innerWidth > 1024) tasto.classList.add("change");
+            else tasto.classList.remove("change");
+            tasto.setAttribute("tabindex", (window.innerWidth > 1024 ? "-1" : "0"));
+            menuOpenClose();
+        });
+    }
 }
 /*
 * Assicuriamo il funzionamento dell'espansione del filtro da mobile e la corretta gestione del aria-label
@@ -96,7 +104,7 @@ function switchToggle() {
             }
         }
         // Ascolta pressioni toggle
-        toggleButton.addEventListener("click", function() {
+        toggleButton.addEventListener('click', function() {
             // Cambio stato ed espansione/riduzione menù
             toggleInput.checked = !toggleInput.checked;
             filterOpenClose();

@@ -212,6 +212,15 @@ tr{
     overflow: hidden;
 }
 
+#menu-button-container {
+    background-color: var(--form-bg-color);
+}
+
+#menu-button-container.hide {
+    position: absolute;
+    margin: -9999em;
+}
+
 h1.hide{
     background-image: url("../img/Logo/bianco-scritta.svg");
     background-size: contain;

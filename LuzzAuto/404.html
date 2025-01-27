@@ -24,13 +24,22 @@
         <link href="https://fonts.googleapis.com/css2?family=Lexend:wght@100..900&display=swap" rel="stylesheet">
     </head>
     <body>
+        <header>
+            <nav aria-label="aiuti alla navigazione" class="navHelp">
+                <ul>
+                    <li>
+                        <a href="#404_message" class="aHelp">Vai al contenuto</a>
+                    </li>
+                </ul>
+            </nav>
+        </header>
         <nav class="topNavBar">
             <h1 class="hide">LuzzAuto</h1>
-            <div id="menu-button-container" aria-label="Seleziona per espandere e comprimere il menù di navigazione">               
+            <button id="menu-button-container" aria-label="Seleziona per espandere e comprimere il menù di navigazione">               
                 <div class="menu-button-bar1" aria-hidden="true"></div>
                 <div class="menu-button-bar2" aria-hidden="true"></div>
                 <div class="menu-button-bar3" aria-hidden="true"></div>
-            </div>
+            </button>
             <ul id="menu"  aria-label="Menù del sito">
                 <li><a href="index.php"><span lang="en-GB">Home</span></a></li>
                 <li><a href="about.html">Chi siamo</a></li>
@@ -39,7 +48,7 @@
                 <li><a href="utente.php">Area riservata</a></li>
             </ul>
         </nav>
-        <nav id="breadcrumb">
+        <nav id="breadcrumb" aria-label="Percorso attuale nel sito">
             <p>Ti trovi in: Errore 404</p>
         </nav>
         <main class="errors_main" id="404_message">
