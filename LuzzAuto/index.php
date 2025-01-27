@@ -4,8 +4,8 @@ function ripristinoInput(){
 	$indexHTML = file_get_contents('index.html');
 	//RIPRISTINO DELL'INPUT INSERITO
 	// Se c'è input salvato in $_GET, mette quello, altrimenti valore di default (stringa vuota o select default)
-	$indexHTML = str_replace("[marca]", htmlspecialchars(isset($_GET['marca']) ? $_GET['marca'] : ''), $indexHTML);
-	$indexHTML = str_replace("[modello]", htmlspecialchars(isset($_GET['modello']) ? $_GET['modello'] : ''), $indexHTML);
+	$indexHTML = str_replace("[marca]", htmlspecialchars(isset($_GET['marca']) ? 'value="' . $_GET['marca'] . '"' : ''), $indexHTML);
+	$indexHTML = str_replace("[modello]", htmlspecialchars(isset($_GET['modello']) ? 'value="' . $_GET['modello'] . '"' : ''), $indexHTML);
 
 	//replace condizione
 	if(htmlspecialchars(isset($_GET['condizione']))) {
@@ -14,7 +14,7 @@ function ripristinoInput(){
 	// rimpiazzo di default -> seleziono qualsiasi
 	$indexHTML = str_replace(["[qualsiasiCd]", "[nuovo]", "[usato]", "[km0]"], ["selected ", "", "", ""], $indexHTML);
 
-	$indexHTML = str_replace("[prezzoMax]", htmlspecialchars(isset($_GET['prezzoMax']) ? $_GET['prezzoMax'] : ''), $indexHTML);
+	$indexHTML = str_replace("[prezzoMax]", htmlspecialchars(isset($_GET['prezzoMax']) ? 'value="' . $_GET['prezzoMax'] . '"' : ''), $indexHTML);
 	return $indexHTML;
 }
 
