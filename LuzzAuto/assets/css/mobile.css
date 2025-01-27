@@ -75,6 +75,10 @@ h1, h2, h3 {
     text-align: center;
 }
 
+abbr{
+    cursor: help;
+}
+
 /* CHECKBOX CUSTOM Sì/No */
 /* Nascondi l'input checkbox */
 .interruttore input[type="checkbox"] {
