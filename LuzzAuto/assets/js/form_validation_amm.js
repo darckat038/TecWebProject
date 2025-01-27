@@ -138,7 +138,7 @@ function validateFormAggiungiAuto(){
                 ok = false;
             }
             if(!validateColore()){
-                msg += "<p id=\"colore_err\">Il colore che hai selezionato non &egrave; valido. Seleziona nuovamente la scelta desiderata.</p>";
+                msg += "<p id=\"colore_err\">Il colore che hai inserito non &egrave; valido, puoi usare solo lettere e spazi(non all'inizio e alla fine).</p>";
                 ok = false;
             }
             if(!validateAlimentazione()){
