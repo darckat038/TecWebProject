@@ -1,8 +1,8 @@
 # Controlli accessibilità e ritrutturazioni (Emanuele, progressi segnati tra parentesi)
 - [x] validator.w3.org D:
 
-- [ ] Aggiungere tabindex (accesskey) su tutti i link/funzionalità (TEST NVDA) (Emanuele)  
-(OK: )
+- [x] Aggiungere tabindex (accesskey) su tutti i link/funzionalità (TEST NVDA) (Emanuele)  
+(OK: in generale)
 
 - [ ] Sistemare tutti i warning di Lighthouse -> ridotto dimensioni imgs -> ora bisogna minify js e optimize css (prestazioni mediocri mobile)
 
