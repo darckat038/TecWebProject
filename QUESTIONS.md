@@ -24,13 +24,8 @@
 - [x] Aggiungere anche ontap oltre che onclick perchè i cellulari vecchi non fanno la conversione
   
 # ALTRE MODIFICHE DA IMPLEMENTARE E DOCUMENTARE IN RELAZIONE
-- [ ] Inserire aria-label in ogni tag nav interattivo (menu e breadcrumb se dentro c'è un link)
 
-- [ ] Fix tab in dettaglio auto
-
-- [ ] Inserire la possibilità per l'utente di eliminare i suoi dati del profilo
-
-- [ ] Dare enfasi ad alcune parole chiave con tag em e strong
+- [x] Inserire la possibilità per l'utente di eliminare i suoi dati del profilo
 
 - [x] Aggiungere tag time/date in tabelle amministratore e utente
 
