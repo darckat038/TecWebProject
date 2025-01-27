@@ -96,10 +96,10 @@ function getVehiclesFromDB($params, $listinoHTML) {
 
 		if($ris){
 			// Qui ci sono auto
-			$listaAuto = '<dl id="list_car_list">';
+			$listaAuto = '<ul id="list_car_list">';
 			foreach($ris as $vehicle) {
 				$listaAuto .= '
-					<div class="list_car_item">
+					<li class="list_car_item">
 						<div class="list_car_image">';
 							
 						// Gestione delle immagini
@@ -121,15 +121,15 @@ function getVehiclesFromDB($params, $listinoHTML) {
 									<dd><abbr title="Euro">&euro;</abbr> ' . $vehicle["prezzo"] . '</dd>
 							</dl>
 							<a class="list_car_item_link" href="auto.php?id=' . $vehicle["id"] . '">Vedi dettagli</a>
-					</div>';
+					</li>';
 			}
-			$listaAuto .='</dl>';
+			$listaAuto .='</ul>';
 		} else {
 			$listaAuto ='<p class="list_car_list_empty">Nessun veicolo compatibile con i filtri impostati</p>';
 		}
 
 		$listinoHTML = ripristinoInput($listinoHTML);
-		$listinoHTML = preg_replace('/<dl id="list_car_list">.*?<\/dl>\s*<\/section>/s', $listaAuto, $listinoHTML);
+		$listinoHTML = preg_replace('/<ul id="list_car_list">.*?<\/ul>/s', $listaAuto, $listinoHTML);
 		
 		return $listinoHTML;
 	}
