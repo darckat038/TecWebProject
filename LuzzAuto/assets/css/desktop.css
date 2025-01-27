@@ -51,6 +51,10 @@ h1, h2, h3 {
     text-align: center;
 }
 
+abbr{
+    cursor: help;
+}
+
 /******************* 
         MENU
 ********************/
@@ -71,6 +75,15 @@ h1, h2, h3 {
     text-indent: 100%;
     white-space: nowrap;
     overflow: hidden;
+}
+
+#menu-button-container {
+    background-color: var(--form-bg-color);
+}
+
+#menu-button-container.hide {
+    position: absolute;
+    margin: -9999em;
 }
 
 h1.hide{
@@ -1854,7 +1867,7 @@ p.list_car_list_empty {
 
 #utente_logout{
     position: relative;
-    top: 1em;
+    top: -1em;
     left: 43em;
     background-color: var(--form-bg-color);
     border: 1px solid white;
@@ -1917,12 +1930,44 @@ p.list_car_list_empty {
 
 /*tabella prenotazioni*/
 .nomeRiqPrenUtente{
-    text-align: left;
+    text-align: center;
     color: var(--form-border-input-color);
-    padding-left: 3em;
     font-weight: bold;
     font-size: 1.6em;
 }
+
+
+#prenotazioni_utente {
+    margin-top: 3em;
+    overflow-y: auto; /* make the table scrollable if height is more than 200 px  */
+    height: 15em;
+    width: 85%;
+    margin: auto;/* gives an initial height of 200px to the table */
+}
+#prenotazioni_utente thead th{
+    position: sticky; /* make the table heads sticky */
+    top: 1.45em; /* table head will be placed from the top of the table and sticks to it */
+}
+
+#prenotazioni_utente caption{
+    position: sticky; /* make the table heads sticky */
+    top: 0;
+    background-color: var(--header-bg-color);
+}
+
+#prenotazioni_utente table {
+    border-collapse: collapse; /* make the table borders collapse to each other */
+    width: 100%;
+}
+#prenotazioni_utente th,td {
+    padding: 8px 16px;
+    border: 1px solid #ccc;
+}
+#prenotazioni_utente th {
+    background: var(--cards-bg-color);
+}
+
+
 
 .tabellaPrenUtente {
     width: calc(100% - 6em); /* 100% meno il padding a sinistra e a destra */
@@ -2134,7 +2179,7 @@ input[type="date"]::-webkit-calendar-picker-indicator {
 
 #admin_logout{
     position: relative;
-    top: 1em;
+    top: -1em;
     left: 43em;
     background-color: var(--form-bg-color);
     border: 1px solid white;
@@ -2185,14 +2230,40 @@ input[type="date"]::-webkit-calendar-picker-indicator {
 }
 
 .prenAdmin {
-    margin-top: 3em;
+    overflow-y: auto; /* make the table scrollable if height is more than 200 px  */
+    height: 25em;
+    width: 85%;
+    margin: auto; /* gives an initial height of 200px to the table */
 }
+.prenAdmin thead th{
+    position: sticky; /* make the table heads sticky */
+    top: 1.5em; /* table head will be placed from the top of the table and sticks to it */
+}
+
+.prenAdmin caption{
+    position: sticky; /* make the table heads sticky */
+    top: 0; /* table head will be placed from the top of the table and sticks to it */
+    background-color: var(--header-bg-color);
+}
+
+.prenAdmin table {
+    border-collapse: collapse; /* make the table borders collapse to each other */
+    width: 100%;
+}
+.prenAdmin th,td {
+    padding: 8px 16px;
+    border: 1px solid #ccc;
+}
+.prenAdmin th {
+    background: var(--cards-bg-color);
+}
+
 
 /* tabella prenotazione */
 .tabellaPrenAdmin {
     width: calc(100% - 6em); /* 100% meno il padding a sinistra e a destra */
     border-collapse: collapse;
-    margin: 1em auto; 
+    margin: 1em auto;
 }
 
 .tabellaPrenAdmin thead {
@@ -2388,6 +2459,12 @@ input[type="date"]::-webkit-calendar-picker-indicator {
     color: black;
 }
 
+/*PAGINA ELIMINAZIONE UTENTE (STESSO CSS LOGIN)*/
+#label_password_elim{
+    margin-top: -0.6em;
+    color: var(--form-border-input-color);
+}
+
 /*#endregion Amministratore*/
 
 /* FOOTER */
@@ -2409,6 +2486,12 @@ footer.shortPageFooter {
 footer p {
     display: inline-block;
     margin: auto 1em;
+}
+
+footer img {
+    border: 0;
+    width: 88px;
+    height: 31px;
 }
 
 /*#region Pagine d'errore*/

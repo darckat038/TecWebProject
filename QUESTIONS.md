@@ -24,15 +24,10 @@
 - [x] Aggiungere anche ontap oltre che onclick perchè i cellulari vecchi non fanno la conversione
   
 # ALTRE MODIFICHE DA IMPLEMENTARE E DOCUMENTARE IN RELAZIONE
-- [ ] Inserire aria-label in ogni tag nav interattivo (menu e breadcrumb se dentro c'è un link)
 
-- [ ] Fix tab in dettaglio auto
+- [x] Inserire la possibilità per l'utente di eliminare i suoi dati del profilo
 
-- [ ] Inserire la possibilità per l'utente di eliminare i suoi dati del profilo
-
-- [ ] Dare enfasi ad alcune parole chiave con tag em e strong
-
-- [ ] Aggiungere tag time/date in tabelle amministratore e utente
+- [x] Aggiungere tag time/date in tabelle amministratore e utente
 
 - [x] Nella pagina about.html dichiarare che il link con la mail porta effettivamente alla mail : indirizzomail@luzzauto.com(mail)
 
@@ -87,7 +82,7 @@
 # RELAZIONE
 - [ ] # !DOCUMENTARE TUTTE LE COSE CHE PUO' FARE L'UTENTE
 
-- [ ] Mettere nella relazione che abbiamo tolto i display none
+- [ ] Mettere nella relazione che abbiamo tolto i display none (tranne tabella responsive)
 
 - [ ] Mettere nella relazione che abbiamo usato modalità IE11
 

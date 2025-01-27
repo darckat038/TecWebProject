@@ -23,13 +23,22 @@
         <link href="https://fonts.googleapis.com/css2?family=Lexend:wght@100..900&display=swap" rel="stylesheet">
     </head>
     <body>
+        <header>
+            <nav aria-label="aiuti alla navigazione" class="navHelp">
+                <ul>
+                    <li>
+                        <a href="#500_main" class="aHelp">Vai al contenuto</a>
+                    </li>
+                </ul>
+            </nav>
+        </header>
         <nav class="topNavBar">
             <h1 class="hide">LuzzAuto</h1>
-            <div id="menu-button-container" aria-label="Seleziona per espandere e comprimere il menù di navigazione">               
+            <button id="menu-button-container" aria-label="Seleziona per espandere e comprimere il menù di navigazione">               
                 <div class="menu-button-bar1" aria-hidden="true"></div>
                 <div class="menu-button-bar2" aria-hidden="true"></div>
                 <div class="menu-button-bar3" aria-hidden="true"></div>
-            </div>
+            </button>
             <ul id="menu"  aria-label="Menù del sito">
                 <li><a href="index.php"><span lang="en-GB">Home</span></a></li>
                 <li><a href="about.html">Chi siamo</a></li>
@@ -38,10 +47,10 @@
                 <li><a href="utente.php">Area riservata</a></li>
             </ul>
         </nav>
-        <nav id="breadcrumb">
+        <nav id="breadcrumb" aria-label="Percorso attuale nel sito">
             <p>Ti trovi in: Errore 500</p>
         </nav>
-        <main class="errors_main">
+        <main class="errors_main" id="500_main">
             <img src="assets/img/Content/error500.webp" height="260" alt="Indicatore di serbatoio carburante vuoto">
             <h1>Ops, sembra che siamo rimasti a secco!</h1>
             <h2>Il <span lang="en-GB">server</span> non è attualmente disponibile.</h2>
@@ -54,9 +63,9 @@
             <p>Grazie per la comprensione!</p>
         </main>
         <footer>
-            <p><a href="https://validator.w3.org/nu/"><img style="border:0;width:88px;height:31px" src="https://www.w3.org/Icons/valid-xhtml10" title="HTML Valido!" alt="HTML Valido!"></a></p>
-            <p>FFF&E Co. - <span lang="en-GB">All rights Reserved</span> - Alcuni marchi e modelli sono frutto della nostra immaginazione; le immagini relative sono state generate da strumenti di intelligenza artificiale.</p>
-            <p><a href="http://jigsaw.w3.org/css-validator/check/referer"><img style="border:0;width:88px;height:31px" src="http://jigsaw.w3.org/css-validator/images/vcss-blue" title="CSS Valido!" alt="CSS Valido!"></a></p>
+            <p><a href="https://validator.w3.org/nu/"><img src="https://www.w3.org/Icons/valid-xhtml10" alt="HTML Valido!"></a></p>
+            <p>FFF&E & <span lang="en-GB">Company</span> - <span lang="en-GB">All rights Reserved</span> - Alcuni marchi e modelli sono frutto della nostra immaginazione; le immagini relative sono state generate da strumenti di intelligenza artificiale.</p>
+            <p><a href="http://jigsaw.w3.org/css-validator/check/referer"><img src="http://jigsaw.w3.org/css-validator/images/vcss-blue" alt="CSS Valido!"></a></p>
         </footer>
     </body>
 </html>

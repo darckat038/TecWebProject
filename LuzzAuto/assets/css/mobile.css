@@ -75,6 +75,10 @@ h1, h2, h3 {
     text-align: center;
 }
 
+abbr{
+    cursor: help;
+}
+
 /* CHECKBOX CUSTOM Sì/No */
 /* Nascondi l'input checkbox */
 .interruttore input[type="checkbox"] {
@@ -206,6 +210,15 @@ tr{
     text-indent: 100%;
     white-space: nowrap;
     overflow: hidden;
+}
+
+#menu-button-container {
+    background-color: var(--form-bg-color);
+}
+
+#menu-button-container.hide {
+    position: absolute;
+    margin: -9999em;
 }
 
 h1.hide{
@@ -1753,7 +1766,7 @@ section.aboutUs_history img {
 }
 
 .utente_content > .riquadriUtente{
-    margin-top: 2em;
+    margin-top: 3em;
 }
 
 #utente_logout{
@@ -1851,6 +1864,36 @@ section.aboutUs_history img {
     border-collapse: collapse;
     margin-top: 1em;
 }
+
+
+#prenotazioni_utente {
+    margin-top: 1em;
+    overflow-y: auto; /* make the table scrollable if height is more than 200 px  */
+    height: 23em; /* gives an initial height of 200px to the table */
+}
+#prenotazioni_utente thead th{
+    position: sticky; /* make the table heads sticky */
+    top: 1.5em; /* table head will be placed from the top of the table and sticks to it */
+}
+
+#prenotazioni_utente caption{
+    position: sticky; /* make the table heads sticky */
+    top: -0.1em; /* table head will be placed from the top of the table and sticks to it */
+    background-color: var(--header-bg-color);
+}
+
+#prenotazioni_utente table {
+    border-collapse: collapse; /* make the table borders collapse to each other */
+    width: 100%;
+}
+#prenotazioni_utente th,td {
+    padding: 8px 16px;
+    border: 1px solid #ccc;
+}
+#prenotazioni_utente th {
+    background: var(--cards-bg-color);
+}
+
 
 #descTable{
     position: absolute;
@@ -2086,6 +2129,34 @@ input[type="date"]::-webkit-calendar-picker-indicator {
     font-weight: 600;
 }
 
+.prenAdmin {
+    margin-top: 3em;
+    overflow-y: auto; /* make the table scrollable if height is more than 200 px  */
+    height: 25em; /* gives an initial height of 200px to the table */
+}
+.prenAdmin thead th{
+    position: sticky; /* make the table heads sticky */
+    top: 1.5em; /* table head will be placed from the top of the table and sticks to it */
+}
+
+.prenAdmin caption{
+    position: sticky; /* make the table heads sticky */
+    top: -0.05em; /* table head will be placed from the top of the table and sticks to it */
+    background-color: var(--header-bg-color);
+}
+
+.prenAdmin table {
+    border-collapse: collapse; /* make the table borders collapse to each other */
+    width: 100%;
+}
+.prenAdmin th,td {
+    padding: 8px 16px;
+    border: 1px solid #ccc;
+}
+.prenAdmin th {
+    background: var(--cards-bg-color);
+}
+
 .tabellaPrenAdmin {
     width: 100%;
     border-collapse: collapse;
@@ -2275,6 +2346,12 @@ footer {
 
 footer p {
     margin: 1em 0;
+}
+
+footer img {
+    border: 0;
+    width: 88px;
+    height: 31px;
 }
 
 /*#region Pagine d'errore*/
