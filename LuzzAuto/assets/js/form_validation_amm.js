@@ -318,7 +318,6 @@ function validatePrezzo() {
 * Controllo il chilometraggio inserito
 */
 function validateChilometraggio() {
-    const allowedChars = /^(\d+)?$/; // solo numeri
     var chilometraggio = document.getElementById("chilometraggioAdmin").value;
     return chilometraggio ? (chilometraggio != "" && isNumber(chilometraggio) && chilometraggio > 0) : true;
 }
