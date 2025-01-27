@@ -872,6 +872,25 @@ class DBConnection {
 			return -1;
 		}
 		else{
+			//ELIMINAZIONE PRENOTAZIONI
+			$query1 = "DELETE FROM Prenotazione WHERE username = ?;";
+			// Preparazione dello statement
+			$stmt1 = $this->connection->prepare($query1);
+			if ($stmt1 === false) {
+				die("Errore nella preparazione dello statement: " . $this->connection->error);
+			}
+		
+			// Associazione dei parametri alla query
+			if (!$stmt1->bind_param("s", $username)) {
+				die("Errore nell'associazione dei parametri: " . $stmt1->error);
+			}
+		
+			// Esecuzione dello statement
+			if (!$stmt1->execute()) {
+				die("Errore nell'esecuzione dello statement: " . $stmt1->error);
+			}
+
+			//ELIMINAZIONE UTENTE
 			$query = "DELETE FROM Utente WHERE username = ?;";
 			// Preparazione dello statement
 			$stmt = $this->connection->prepare($query);
