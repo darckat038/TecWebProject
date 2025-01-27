@@ -82,7 +82,7 @@
 # RELAZIONE
 - [ ] # !DOCUMENTARE TUTTE LE COSE CHE PUO' FARE L'UTENTE
 
-- [ ] Mettere nella relazione che abbiamo tolto i display none
+- [ ] Mettere nella relazione che abbiamo tolto i display none (tranne tabella responsive)
 
 - [ ] Mettere nella relazione che abbiamo usato modalità IE11
 
