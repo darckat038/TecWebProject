@@ -2411,6 +2411,12 @@ footer p {
     margin: auto 1em;
 }
 
+footer img {
+    border: 0;
+    width: 88px;
+    height: 31px;
+}
+
 /*#region Pagine d'errore*/
 .errors_main {
     margin: 8em;
