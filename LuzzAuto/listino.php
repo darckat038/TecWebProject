@@ -110,27 +110,17 @@ function getVehiclesFromDB($params, $listinoHTML) {
 
 				$listaAuto .= '
 						</div>
-						<div>
 							<dl class="list_car_info">
-								<div>
 									<dt>Marca</dt>
 									<dd>' . $vehicle["marca"] . '</dd>
-								</div>
-								<div>
 									<dt>Modello</dt>
 									<dd>' . $vehicle["modello"] . '</dd>
-								</div>
-								<div>
 									<dt>Condizioni</dt>
 									<dd>' . (($vehicle['condizione']=="KM 0") ? "<abbr title='chilometro zero'>KM 0</abbr>" : $vehicle['condizione']) . '</dd>
-								</div>
-								<div>
 									<dt>Prezzo</dt>
 									<dd><abbr title="Euro">&euro;</abbr> ' . $vehicle["prezzo"] . '</dd>
-								</div>
 							</dl>
 							<a class="list_car_item_link" href="auto.php?id=' . $vehicle["id"] . '">Vedi dettagli</a>
-						</div>
 					</div>';
 			}
 			$listaAuto .='</dl>';
