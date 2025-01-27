@@ -849,6 +849,51 @@ class DBConnection {
 		}
 	}
 
+	//FUNZIONE DI LOGIN DI UN UTENTE
+	public function deleteUser($username, $password) {
+
+		$queryControllo = "SELECT username, password FROM Utente WHERE username = ?";
+		// Preparazione dello statement
+		$stmt = $this->connection->prepare($queryControllo);
+		if ($stmt === false) {
+			die("Errore nella preparazione dello statement: " . $this->connection->error);
+		}
+		// Bind dei parametri
+		$stmt->bind_param("s", $username);
+		// Esecuzione della query
+		if (!$stmt->execute()) {
+			die("Errore nell'esecuzione dello statement: " . $stmt->error);
+		}
+		// Ottenimento del risultato
+		$result = $stmt->get_result();
+		$rows = $result->fetch_all(MYSQLI_ASSOC);
+		
+		if(!password_verify($password, $rows[0]['password'])){
+			return -1;
+		}
+		else{
+			$query = "DELETE FROM Utente WHERE username = ?;";
+			// Preparazione dello statement
+			$stmt = $this->connection->prepare($query);
+			if ($stmt === false) {
+				die("Errore nella preparazione dello statement: " . $this->connection->error);
+			}
+		
+			// Associazione dei parametri alla query
+			if (!$stmt->bind_param("s", $username)) {
+				die("Errore nell'associazione dei parametri: " . $stmt->error);
+			}
+		
+			// Esecuzione dello statement
+			if (!$stmt->execute()) {
+				die("Errore nell'esecuzione dello statement: " . $stmt->error);
+			}
+			return 0;
+		}
+		
+			
+	}
+
 
 
 }
