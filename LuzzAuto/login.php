@@ -58,8 +58,9 @@ if(isset($_POST["username"]) && isset($_POST["password"])){
 						$_SESSION['utente'] = $_POST["username"];
 						//CONTROLLO BACK TO ORIGIN PER TORNARE ALLA PAGINA DI PROVENIENZA
 						if(isset($_COOKIE['backToOrigin'])){
-							header("location: " . $_COOKIE['backToOrigin']);
+							$oldPath = $_COOKIE['backToOrigin'];
 							setcookie("backToOrigin", "", time() - 3600, "/");
+							header("location: " . $oldPath);
 						}
 						else{
 							header("location: utente.php");
