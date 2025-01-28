@@ -17,6 +17,3 @@ RewriteRule ^amministratore\.html$ /amministratore.php [L,R=301]
 RewriteRule ^eliminaUtente\.html$ /eliminaUtente.php [L,R=301]
 RewriteRule ^(.*).php/(.*)$ /404.html [L,R=301]
 RewriteRule ^(.*).html/(.*)$ /404.html [L,R=301]
-
-php_value post_max_size 10M
-php_value upload_max_filesize 1M
