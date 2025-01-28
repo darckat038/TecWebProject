@@ -52,8 +52,6 @@ $pagina = file_get_contents('modificaUtente.html');
 $pagina = str_replace('[nome]', htmlspecialchars($nome), $pagina);
 $pagina = str_replace('[cognome]', htmlspecialchars($cognome), $pagina);
 $pagina = str_replace('[username]', htmlspecialchars($username), $pagina);
-$pagina = str_replace('[password]', htmlspecialchars("*********"), $pagina);
-$pagina = str_replace('[password2]', htmlspecialchars("*********"), $pagina);
 
 $db = new DBConnection();
 /*$ris = $db->updateNome($username, $_POST["nome"]);*/
