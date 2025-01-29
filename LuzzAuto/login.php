@@ -50,7 +50,7 @@ if(isset($_POST["username"]) && isset($_POST["password"])){
 					if($_POST["username"] == "admin"){
 						$_SESSION['utente'] = $_POST["username"];
 						if(isset($_COOKIE['backToOrigin'])){
-							setcookie("backToOrigin", "", time() - 3600, "/");
+							setcookie("backToOrigin", "", time() - 7200);
 						}
 						header("location: amministratore.php");
 					}
@@ -59,7 +59,7 @@ if(isset($_POST["username"]) && isset($_POST["password"])){
 						//CONTROLLO BACK TO ORIGIN PER TORNARE ALLA PAGINA DI PROVENIENZA
 						if(isset($_COOKIE['backToOrigin'])){
 							$oldPath = $_COOKIE['backToOrigin'];
-							setcookie("backToOrigin", "", time() - 3600, "/");
+							setcookie("backToOrigin", "", time() - 7200);
 							header("location: " . $oldPath);
 						}
 						else{

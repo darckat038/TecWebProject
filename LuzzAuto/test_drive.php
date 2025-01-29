@@ -69,6 +69,8 @@ $buttonsHTML = "
 //CONTROLLO SE UTENTE IN SESSION STORAGE GIA' SETTATO
 session_start();
 if (isset($_SESSION["utente"]) && $_SESSION["utente"] != "admin") {
+    isset($_COOKIE["backToOrigin"]) ? setcookie("backToOrigin", "", time() - 7200) : true;
+
     //IMPOSTO HTML DEL FORM
     $formORbuttonsHTML = $formHTML;
 
