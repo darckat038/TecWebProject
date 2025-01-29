@@ -264,10 +264,10 @@ if(isset($_POST['aggiungiAutoAdmin'])){
     // echo $_FILES['immagineInAdmin']['name'] . ">" . $_FILES['immagineInAdmin']['size'] . $_FILES['immagineInAdmin']['error'] . "----";
     // exit();
 
-    if($_FILES['immagineOutAdmin']['error'] != 0) {
+    if($_FILES['immagineOutAdmin']['size'] > 1048576) {
         $errAggiungi = $errAggiungi . "<p id=\"immagineOut_err\">C'è stato un errore nel caricamento della prima immagine, riprova ricordando che la dimensione massima consentita &egrave; 1MB.</p>";
     }
-    if($_FILES['immagineInAdmin']['error'] != 0) {
+    if($_FILES['immagineInAdmin']['size'] > 1048576) {
         $errAggiungi = $errAggiungi . "<p id=\"immagineIn_err\">C'è stato un errore nel caricamento della seconda immagine, riprova ricordando che la dimensione massima consentita &egrave; 1MB.</p>";
     }
     if (!preg_match("/^([A-Za-z0-9,.]+( [A-Za-z0-9,.]+)*)?$/", $_POST["altImmagineOutAdmin"]) || strlen($_POST["altImmagineOutAdmin"]) > 100) {
