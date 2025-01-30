@@ -81,7 +81,7 @@ abbr{
     background-color: var(--form-bg-color);
 }
 
-#menu-button-container.hide {
+#menu-button-container[data-hidden="false"] {
     position: absolute;
     margin: -9999em;
 }
@@ -1078,11 +1078,6 @@ section.aboutUs_history p {
     margin: -9999em;
 }
 
-.list_toggle_input {
-    position: absolute;
-    margin: -9999em;
-}
-
 #list_filter form {
     margin: 1em 0;
 }
@@ -1646,7 +1641,7 @@ p.list_car_list_empty {
     background-color: var(--content-text-bg-color);
 }
 
-#home_new0 .home_car_item:hover {
+#home_new .home_car_item:hover {
     transform: scale(1.2);
     transition-duration: 0.5s;
 }

@@ -212,15 +212,6 @@ tr{
     overflow: hidden;
 }
 
-#menu-button-container {
-    background-color: var(--form-bg-color);
-}
-
-#menu-button-container.hide {
-    position: absolute;
-    margin: -9999em;
-}
-
 h1.hide{
     background-image: url("../img/Logo/bianco-scritta.svg");
     background-size: contain;
@@ -233,14 +224,18 @@ h1.hide{
     pointer-events: none;
 }
 
-#menu{
-    
+#menu-button-container[data-hidden="false"] + #menu{
     flex-direction: column;
-    margin-top: 3.5em;
+    position: static;
     text-align: center;
     padding-left: 0;
     z-index: 9999;
     border-bottom: 1px solid white;
+}
+
+#menu-button-container[data-hidden="true"] + #menu{
+    position: absolute;
+    margin: -9999em;
 }
 
 #menu li{
@@ -248,7 +243,7 @@ h1.hide{
     margin-bottom: 1em;
 }
 
-#menu a{
+#menu-button-container[data-hidden="false"] + #menu a{
     display: block;
     flex-direction: row;
     color: var(--navbar-text-color);
@@ -257,11 +252,19 @@ h1.hide{
     font-size: 1.2em;
 }
 
-#menu a:visited {
+#menu-button-container[data-hidden="true"] + #menu a{
+    pointer-events: none;
+}
+
+#menu-button-container[data-hidden="false"] + #menu a{
+    pointer-events: auto;
+}
+
+#menu-button-container[data-hidden="false"] + #menu a:visited {
     color: var(--visited-link);
 }
 
-#menu #here {
+#menu-button-container[data-hidden="false"] + #menu #here {
     text-decoration: none;
     pointer-events: none;
     background-color: var(--content-text-bg-color);
@@ -272,6 +275,9 @@ h1.hide{
 }
 
 .topNavBar #menu-button-container {
+    background-color: var(--form-bg-color);
+    position: static;
+    margin: 0;
     display: inline-block;
     position: absolute;
     top: 0;
@@ -281,9 +287,9 @@ h1.hide{
     cursor: pointer;
 }
 
-.topNavBar #menu-button-container .menu-button-bar1,
-.topNavBar #menu-button-container .menu-button-bar2,
-.topNavBar #menu-button-container .menu-button-bar3 {
+#menu-button-container .menu-button-bar1,
+#menu-button-container .menu-button-bar2,
+#menu-button-container .menu-button-bar3 {
     width: 2em;
     height: 0.3em;
     background-color: white;
@@ -292,13 +298,13 @@ h1.hide{
     transition: 0.4s;
 }
 
-.change .menu-button-bar1 {
+#menu-button-container[data-hidden="false"] .menu-button-bar1 {
     transform: translate(0, 0.7em) rotate(-45deg);
 }
   
-.change .menu-button-bar2 {opacity: 0;}
+#menu-button-container[data-hidden="false"] > .menu-button-bar2 {opacity: 0;}
   
-.change .menu-button-bar3 {
+#menu-button-container[data-hidden="false"] > .menu-button-bar3 {
     transform: translate(0, -0.7em) rotate(45deg);
 }
 
@@ -1058,27 +1064,27 @@ section.aboutUs_history img {
     transition: transform 0.3s ease-out;
 }
 
-/* Checkbox nascosto */
-.list_toggle_input {
-    position: absolute;
-    margin: -9999em;
-}
-
 /* Form mostrato di default su mobile */
-#list_filter_form {
+#list_filter_header #list_filter_form {
     display: flex;
     flex-direction: column;
     gap: 1em;
     margin-top: 1em;
 }
 
-/* Mostra il form quando il checkbox è selezionato */
-.list_toggle_input:checked ~ #list_filter_form {
+/* Mostra il form */
+#list_filter_header[data-hidden="false"] + #list_filter_form {
     position: static;
+    margin: 0;
+}
+
+#list_filter_header[data-hidden="true"] + #list_filter_form {
+    position: absolute;
+    margin: -9999em;
 }
 
 /* Ruota il pulsante quando il checkbox è selezionato */
-.list_toggle_input:checked ~ #list_filter_header #list_toggle_button {
+#list_filter_header[data-hidden="true"] #list_toggle_button {
     transform: rotate(180deg);
 }
 
