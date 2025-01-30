@@ -260,10 +260,6 @@ if(isset($_POST['aggiungiAutoAdmin'])){
 
     //CONTROLLI SULL'INPUT
 
-    // echo $_FILES['immagineOutAdmin']['name'] . ">" . $_FILES['immagineOutAdmin']['size'] . $_FILES['immagineOutAdmin']['error'] . "----";
-    // echo $_FILES['immagineInAdmin']['name'] . ">" . $_FILES['immagineInAdmin']['size'] . $_FILES['immagineInAdmin']['error'] . "----";
-    // exit();
-
     if($_FILES['immagineOutAdmin']['size'] > 1048576) {
         $errAggiungi = $errAggiungi . "<p id=\"immagineOut_err\">C'è stato un errore nel caricamento della prima immagine, riprova ricordando che la dimensione massima consentita &egrave; 1MB.</p>";
     }
