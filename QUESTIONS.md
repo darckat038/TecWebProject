@@ -139,14 +139,14 @@
 ## IL COLORE DEI LINK VISITATI DEVE ESSERE MANTENUTO ANCHE IN CASO DI HOVER? (VEDI TEST DRIVE)
 - [x] PROBABILMENTE SI
 
-Max file size tramite controllo php
+- [x] Max file size tramite controllo php
 
-Non mettere codice css in js, usare metodo cambio classi
+- [ ] Non mettere codice css in js, usare metodo cambio classi
 
-In moodle caricare file che ci sono sul server
+- [ ] In moodle caricare file che ci sono sul server
 
-Div in Label ok
+- [x] Div in Label ok
 
-Display none tra mobile e desktop ok
+- [ ] Display none tra mobile e desktop ok
 
-In relazione spiegare falsi positivi Total Validator
+- [ ] In relazione spiegare falsi positivi Total Validator
