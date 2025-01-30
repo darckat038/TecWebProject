@@ -147,6 +147,6 @@
 
 - [x] Div in Label ok
 
-- [ ] Display none tra mobile e desktop ok
+- [x] Display none tra mobile e desktop ok
 
 - [ ] In relazione spiegare falsi positivi Total Validator
