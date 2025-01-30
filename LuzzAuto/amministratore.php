@@ -71,7 +71,7 @@ function mostraTabellaPrenotazioni() {
                         <caption class='nomeRiqPrenAdmin'>Prenotazioni</caption>
                             <thead>
                                 <tr>
-                                    <th scope='col'><abbr title='Numero prenotazione'>Num. Pren.</abbr></th>
+                                    <th scope='col' abbr='Numero'>Numero prenotazione</th>
                                     <th scope='col'>Utente</th>
                                     <th scope='col' abbr='modello'>Modello Auto</th>
                                     <th scope='col' abbr='data'>Data <span lang='en-GB'>Test Drive</span></th>
