@@ -30,16 +30,6 @@
     --form-success-text-color: #3cd33e;
 }
 
-body.dark {
-    --bg-color: #121212;
-    --text-color: #ffffff;
-}
-
-body.purple {
-    --bg-color: #4B0082;
-    --text-color: #ffffff;
-}
-
 * {
     border: 0;
     margin: 0;
@@ -142,8 +132,8 @@ h1.hide{
 ********************/
 
 body {
-    background-color: var(--bg-color);
-    color: var(--text-color);
+    background-color: var(--content-text-bg-color);
+    color: var(--content-text-color);
     font-size: 100%;
     font-family: "Lexend", Roboto, sans-serif;
     line-height: 1.5em;
