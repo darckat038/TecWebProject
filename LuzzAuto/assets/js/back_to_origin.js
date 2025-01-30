@@ -1,8 +1,9 @@
 window.addEventListener('load', function () {
-	setBackToOriginTestDrive();
+	setBackToOriginTestDriveLogin();
+    setBackToOriginTestDriveSignup();
 });
 
-function setBackToOriginTestDrive() {
+function setBackToOriginTestDriveLogin() {
     let linkLogin = document.getElementById('test_drive_login_link');
     if(linkLogin){
         linkLogin.addEventListener('click', function (event){
@@ -10,7 +11,9 @@ function setBackToOriginTestDrive() {
             document.cookie = c;
         });
     }
+}
 
+function setBackToOriginTestDriveSignup() {
     let linkSignup = document.getElementById('test_drive_signup_link');
     if(linkSignup){
         linkSignup.addEventListener('click', function (event){
@@ -18,5 +21,4 @@ function setBackToOriginTestDrive() {
             document.cookie = c;
         });
     }
-    
 }
