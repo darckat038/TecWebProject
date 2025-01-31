@@ -2145,7 +2145,7 @@ input[type="date"]::-webkit-calendar-picker-indicator {
     background-size:cover;
 }
 
-.admin_content{
+#admin_content{
     background-color: var(--navbar-bg-color);
     color: var(--navbar-text-color);
     padding: 2em;
@@ -2156,7 +2156,7 @@ input[type="date"]::-webkit-calendar-picker-indicator {
     position: relative;
 }
 
-.admin_content > h1{
+#admin_content > h1{
     text-align: center;
 }
 
@@ -2271,7 +2271,7 @@ input[type="date"]::-webkit-calendar-picker-indicator {
 }
 
 /*Gestione prenotazione*/
-.admin_content legend{
+#admin_content legend{
     font-size: 1.6em;
     font-weight: 600;
 }
