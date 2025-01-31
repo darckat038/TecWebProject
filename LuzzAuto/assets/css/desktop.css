@@ -872,7 +872,7 @@ section.aboutUs_history p {
 }
 
 #aboutUs_ourNums dt.aboutUs_soldCars::before {
-    background-image: url("../img/Icons/car/icons8-auto-sf-black-filled-96.png");
+    background-image: url("../img/Icons/car/icona_auto.png");
 }
 
 #aboutUs_ourNums .aboutUs_custSat {
@@ -880,7 +880,7 @@ section.aboutUs_history p {
 }
 
 #aboutUs_ourNums dt.aboutUs_custSat::before {
-    background-image: url("../img/Icons/star/star.png");
+    background-image: url("../img/Icons/star/icona_pollice.png");
 }
 
 #aboutUs_ourNums .aboutUs_yearsExp {
@@ -888,7 +888,7 @@ section.aboutUs_history p {
 }
 
 #aboutUs_ourNums dt.aboutUs_yearsExp::before {
-    background-image: url("../img/Icons/exp/icons8-experience-parzival’-1997-detailed-outline-96.png");
+    background-image: url("../img/Icons/exp/icona_exp.png");
 }
 
 #aboutUs_ourNums .aboutUs_savedEmiss {
@@ -896,7 +896,7 @@ section.aboutUs_history p {
 }
 
 #aboutUs_ourNums dt.aboutUs_savedEmiss::before {
-    background-image: url("../img/Icons/co2/icons8-riduzione-della-co2-ios-17-filled-96.png");
+    background-image: url("../img/Icons/co2/icona_co2.png");
 }
 
 #aboutUs_ourNums .aboutUs_testDrives {
@@ -904,7 +904,7 @@ section.aboutUs_history p {
 }
 
 #aboutUs_ourNums dt.aboutUs_testDrives::before {
-    background-image: url("../img/Icons/wheel/icons8-volante-glyph-neue-96.png");
+    background-image: url("../img/Icons/wheel/icona_wheel.png");
 }
 
 #aboutUs_ourNums .aboutUs_warranty {
@@ -912,7 +912,7 @@ section.aboutUs_history p {
 }
 
 #aboutUs_ourNums dt.aboutUs_warranty::before {
-    background-image: url("../img/Icons/warranty/icons8-garanzia-color-96.png");
+    background-image: url("../img/Icons/warranty/icona_warranty.png");
 }
 
 /* ---- LOCATION ---- */
@@ -1817,7 +1817,7 @@ p.list_car_list_empty {
     background-position: center;
     background-repeat: no-repeat;
     background-size: contain;
-    background-image: url("../img/Icons/star/star.png");
+    background-image: url("../img/Icons/star/icona_star.png");
 }
 /*#endregion Home*/
 
