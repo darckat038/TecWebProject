@@ -1960,7 +1960,7 @@ section.aboutUs_history img {
     background-position: center;
 }
 
-.modUtente_content{
+#modUtente_content{
     background-color: var(--form-bg-color);
     color: var(--form-text-color);
     padding: 2.5em;
@@ -1971,11 +1971,11 @@ section.aboutUs_history img {
     box-shadow: rgba(115, 115, 115, 0.35) 0px 5px 15px;
 }
 
-.modUtente_content > h1, .modUtente_content > p{
+#modUtente_content > h1, #modUtente_content > p{
     text-align: center;
 }
 
-.modUtente_content > h1{
+#modUtente_content > h1{
     margin-bottom: 1em;
     line-height: 1em;
 }

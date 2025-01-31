@@ -2049,7 +2049,7 @@ p.list_car_list_empty {
     background-size:cover;
 }
 
-.modUtente_content{
+#modUtente_content{
     background-color: var(--form-bg-color);
     color: var(--form-text-color);
     padding: 2.5em;
@@ -2060,11 +2060,11 @@ p.list_car_list_empty {
     box-shadow: rgba(115, 115, 115, 0.35) 0px 5px 15px;
 }
 
-.modUtente_content > h1, .modUtente_content > p{
+#modUtente_content > h1, #modUtente_content > p{
     text-align: center;
 }
 
-.modUtente_content > h1{
+#modUtente_content > h1{
     margin-bottom: 1em;
 }
 
