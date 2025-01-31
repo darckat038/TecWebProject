@@ -1,1 +1,0 @@
-document.addEventListener("DOMContentLoaded",(function(){const e=(new Date).getHours();let t;t=e>=5&&e<12?"Buongiorno":e>=12&&e<18?"Buon pomeriggio":"Buonasera",document.getElementById("saluto").textContent=`${t}`}));
