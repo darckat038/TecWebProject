@@ -31,7 +31,7 @@
             <nav aria-label="aiuti alla navigazione" class="navHelp">
                 <ul>
                     <li>
-                        <a href="#home_fastSearch" class="aHelp">Vai alla ricerca rapida</a>
+                        <a href="#home_main" class="aHelp">Vai alla ricerca rapida</a>
                     </li>
                     <li>
                         <a href="#home_new" class="aHelp">Vai al contenuto</a>
@@ -49,9 +49,9 @@
             <h1 class="hide">LuzzAuto</h1>
             
             <button id="menu-button-container" aria-label="Seleziona per espandere e comprimere il menù di navigazione" data-hidden="false">               
-                <div class="menu-button-bar1" aria-hidden="true"></div>
-                <div class="menu-button-bar2" aria-hidden="true"></div>
-                <div class="menu-button-bar3" aria-hidden="true"></div>
+                <span class="menu-button-bar1" aria-hidden="true"></span>
+                <span class="menu-button-bar2" aria-hidden="true"></span>
+                <span class="menu-button-bar3" aria-hidden="true"></span>
             </button>
             <ul id="menu"  aria-label="Menù del sito">
                 <li><a href="index.php" id="here"><span lang="en-GB">Home</span></a></li>
@@ -66,7 +66,7 @@
             <p>Ti trovi in: <span lang="en-GB">Home</span></p>
         </nav>
 
-        <main>
+        <main id="home_main">
             <section id="home_fastSearch" aria-label="Sezione ricerca rapida veicolo">
                 <h2 class="home_sectionTitle">Cerchi un veicolo in particolare?</h2>
                 <form action="index.php" method="GET" id="home_fastSearch_form" aria-label="Form per filtrare rapidamente le automobili">
