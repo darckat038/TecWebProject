@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html lang="it">
-    <head>
+  <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width">
 
@@ -12,7 +12,7 @@
     <meta name="author" content="Artusi Emanuele, Bellon Filippo, Diviesti Filippo, Righetto Filippo">
 
     <link rel="stylesheet" media="screen and (max-width:1024px)" href="assets/css/mobile.css" type="text/css">
-    <link rel="stylesheet" media="screen and (min-width:1024px)" href="assets/css/desktop.css" type="text/css">
+    <link rel="stylesheet" media="screen and (min-width:1025px)" href="assets/css/desktop.css" type="text/css">
     <link rel="stylesheet" media="print" href="assets/css/print.css" type="text/css">
 
     <script src="assets/js/greetings.js"></script>
@@ -21,26 +21,29 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Lexend:wght@100..900&display=swap" rel="stylesheet">
-    </head>
+  </head>
 
     <body id="utente_body">
 
       <header class="header_help">
         <nav aria-label="aiuti alla navigazione" class="navHelp">
-            <ul>
-                <li>
-                    <a href="#utente_logout" class="aHelp">Vai a logout</a>
-                </li>
-                <li>
-                    <a href="#informazioni_utente" class="aHelp">Vai alle informazioni utente</a>
-                </li>
-                <li>
-                  <a href="#prenotazioni_utente" class="aHelp">Vai alle prenotazioni</a>
-                </li>
-                <li>
-                  <a href="#gestione_prenotazioni" class="aHelp">Vai alla gestione delle prenotazioni</a>
-                </li>
-            </ul>
+          <ul>
+            <li>
+              <a href="#utente_content" class="aHelp">Vai al contenuto</a>
+            </li>
+            <li>
+              <a href="#utente_logout" class="aHelp">Vai a logout</a>
+            </li>
+            <li>
+              <a href="#informazioni_utente" class="aHelp">Vai alle informazioni utente</a>
+            </li>
+            <li>
+              <a href="#prenotazioni_utente" class="aHelp">Vai alle prenotazioni</a>
+            </li>
+            <li>
+              <a href="#gestione_prenotazioni" class="aHelp">Vai alla gestione delle prenotazioni</a>
+            </li>
+          </ul>
         </nav>
       </header>
     
@@ -65,7 +68,7 @@
       <nav id="breadcrumb" aria-label="Percorso attuale nel sito">
           <p>Ti trovi in: Area riservata</p>
       </nav>
-      <main class="utente_content">
+      <main id="utente_content">
 
         <h1><span id="saluto"></span> [nome]</h1>
 
@@ -102,7 +105,7 @@
               <legend class='nomeRiqUtente'>Gestione Prenotazioni</legend>
 
               <label id='labelPrenUtente' for='gestPrenUtente'><strong>Prenotazioni:</strong> </label>
-              <select name='gestPrenUtente' id='gestPrenUtente' required data-msg-required='Per favore, seleziona la prenotazione' required>
+              <select name='gestPrenUtente' id='gestPrenUtente' data-msg-required='Per favore, seleziona la prenotazione' required>
                 <option value='' selected disabled>Seleziona un'opzione</option>
                 [prenotazioni]
               </select>

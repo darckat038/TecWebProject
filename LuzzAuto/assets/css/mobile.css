@@ -1740,7 +1740,7 @@ section.aboutUs_history img {
     background-position: right;
 }
 
-.utente_content{
+#utente_content{
     background-color: var(--form-bg-color);
     color: var(--form-text-color);
     padding: 2.5em;
@@ -1752,13 +1752,13 @@ section.aboutUs_history img {
     line-height: 1.5em;
 }
 
-.utente_content > h1{
+#utente_content > h1{
     text-align: center;
     line-height: 1.3;
     margin-bottom: 0.7em;
 }
 
-.utente_content > .riquadriUtente{
+#utente_content > .riquadriUtente{
     margin-top: 3em;
 }
 

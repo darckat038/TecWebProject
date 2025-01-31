@@ -1832,7 +1832,7 @@ p.list_car_list_empty {
     background-size:cover;
 }
 
-.utente_content{
+#utente_content{
     background-color: var(--navbar-bg-color);
     color: var(--navbar-text-color);
     padding: 2em;
@@ -1843,7 +1843,7 @@ p.list_car_list_empty {
     position: relative;
 }
 
-.utente_content > h1{
+#utente_content > h1{
     text-align: center;
 }
 
