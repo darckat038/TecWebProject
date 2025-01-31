@@ -891,7 +891,7 @@ section.aboutUs_history img {
 }
 
 #aboutUs_ourNums dt.aboutUs_custSat::before {
-    background-image: url("../img/Icons/star/icona_pollice.png");
+    background-image: url("../img/Icons/thumb/icona_pollice.png");
 }
 
 #aboutUs_ourNums dt.aboutUs_yearsExp::before {
