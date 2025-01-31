@@ -2013,6 +2013,7 @@ p.list_car_list_empty {
     font-size: 1em;
     cursor: pointer;
     color: white; 
+    height: 3em;
 }
 
 #eliminaPrenUtente{
@@ -2296,6 +2297,7 @@ input[type="date"]::-webkit-calendar-picker-indicator {
     cursor: pointer;
     margin-top: 2em;
     color: white;
+    height: 3em;
 }
 
 #inviaAzioneAdmin{
@@ -2360,6 +2362,10 @@ input[type="date"]::-webkit-calendar-picker-indicator {
     color: white;
 }
 
+#aggiungiAutoFormAdmin select {
+    height: 3em;
+}
+
 #altImmagineOutAdmin, #altImmagineInAdmin {
     resize: none;
 }
@@ -2421,6 +2427,7 @@ input[type="date"]::-webkit-calendar-picker-indicator {
     font-size: 1em;
     cursor: pointer;
     color: white; 
+    height: 3em;
 }
 
 #eliminaButtonAdmin{

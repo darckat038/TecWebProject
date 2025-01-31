@@ -977,7 +977,7 @@ section.aboutUs_history img {
     padding: 1em 0 1em;
 }
 
-#aboutUs_ourTeam > dl > div > img{
+#aboutUs_ourTeam > dl > div img {
     object-fit: contain;
     border-radius: 50%;
     width: 13em;
@@ -1923,7 +1923,8 @@ section.aboutUs_history img {
     color: var(--form-border-input-color); 
     font-size: 1em;
     cursor: pointer;
-    color: white; 
+    color: white;
+    height: 3em; 
 }
 
 #eliminaPrenUtente{
@@ -2184,7 +2185,7 @@ input[type="date"]::-webkit-calendar-picker-indicator {
     cursor: pointer;
     margin-top: 2em;
     color: white;
-
+    height: 3em;
 }
 
 #inviaAzioneAdmin{
@@ -2246,6 +2247,10 @@ input[type="date"]::-webkit-calendar-picker-indicator {
     color: white;
 }
 
+#aggiungiAutoFormAdmin select {
+    height: 3em;
+}
+
 #neopatentatiAdmin .interruttore {
     top: 0;
     margin-left: 1em;
@@ -2303,7 +2308,8 @@ input[type="date"]::-webkit-calendar-picker-indicator {
     color: var(--form-border-input-color); 
     font-size: 1em;
     cursor: pointer;
-    color: white; 
+    color: white;
+    height: 3em; 
 }
 
 #eliminaButtonAdmin{
