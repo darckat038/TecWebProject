@@ -213,7 +213,7 @@ if (isset($_POST['gestPrenUtente'])) {
 
     } catch (Exception $e) {
         // Gestione errori e logging
-        error_log("Errore: " . $e->getMessage());
+        //error_log("Errore: " . $e->getMessage());
         header("location: 500.html");
         exit();
     }

@@ -43,7 +43,7 @@
         <nav class="topNavBar">
 
             <h1 class="hide">LuzzAuto</h1>
-            <button id="menu-button-container" aria-label="Seleziona per espandere e comprimere il menù di navigazione" data-hidden="false">               
+            <button id="menu-button-container" aria-label="Seleziona per espandere e comprimere il menù di navigazione" data-hidden="false">
                 <span class="menu-button-bar1" aria-hidden="true"></span>
                 <span class="menu-button-bar2" aria-hidden="true"></span>
                 <span class="menu-button-bar3" aria-hidden="true"></span>
@@ -62,10 +62,9 @@
 
         <main id="list_main">
             <section id="list_filter">
-                <input type="checkbox" id="list_toggle_filter" class="list_toggle_input" title="Interruttore espansione menù filtro" hidden checked>
-                <div id="list_filter_header">
+                <div id="list_filter_header" data-hidden="false">
                     <h2 class="list_sectionTitle">Filtra il listino</h2>
-                    <button id="list_toggle_button" aria-label="Seleziona per espandere e comprimere il form filtro" title="Espandi/comprimi form" aria-expanded="false" aria-controls="list_filter_form" >▼</button>
+                    <button id="list_toggle_button" aria-label="Seleziona per espandere e comprimere il form filtro" title="Espandi/comprimi form" aria-expanded="true" aria-controls="list_filter_form" >▼</button>
                 </div>
                 <form action="listino.php" method="GET" id="list_filter_form" aria-label="Form per filtrare le automobili">
                     <fieldset id="list_filter_basicInfo">

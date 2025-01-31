@@ -283,6 +283,7 @@ h1.hide{
     border-radius: 1em;
     margin: 0.4em 0;
     transition: 0.4s;
+    display: block;
 }
 
 #menu-button-container[data-hidden="false"] .menu-button-bar1 {
@@ -1247,9 +1248,7 @@ section.aboutUs_history img {
 }
 
 .list_car_item .list_car_item_link {
-    position: absolute;
-    left: 6.5em;
-    bottom: 0.5em;
+    position: static;
     background-color: black;
     border: 1px solid white;
     padding: 0.7em;

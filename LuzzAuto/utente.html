@@ -23,106 +23,106 @@
     <link href="https://fonts.googleapis.com/css2?family=Lexend:wght@100..900&display=swap" rel="stylesheet">
   </head>
 
-    <body id="utente_body">
+  <body id="utente_body">
 
-      <header class="header_help">
-        <nav aria-label="aiuti alla navigazione" class="navHelp">
-          <ul>
-            <li>
-              <a href="#utente_content" class="aHelp">Vai al contenuto</a>
-            </li>
-            <li>
-              <a href="#utente_logout" class="aHelp">Vai a logout</a>
-            </li>
-            <li>
-              <a href="#informazioni_utente" class="aHelp">Vai alle informazioni utente</a>
-            </li>
-            <li>
-              <a href="#prenotazioni_utente" class="aHelp">Vai alle prenotazioni</a>
-            </li>
-            <li>
-              <a href="#gestione_prenotazioni" class="aHelp">Vai alla gestione delle prenotazioni</a>
-            </li>
-          </ul>
-        </nav>
-      </header>
-    
-      <nav class="topNavBar">
-
-        <h1 class="hide">LuzzAuto</h1>
-        
-        <button id="menu-button-container" aria-label="Seleziona per espandere e comprimere il menù di navigazione" data-hidden="false">               
-          <span class="menu-button-bar1" aria-hidden="true"></span>
-          <span class="menu-button-bar2" aria-hidden="true"></span>
-          <span class="menu-button-bar3" aria-hidden="true"></span>
-      </button>
-      <ul id="menu"  aria-label="Menù del sito">
-            <li><a href="index.php"><span lang="en-GB">Home</span></a></li>
-            <li><a href="about.html">Chi siamo</a></li>
-            <li><a href="listino.php">Listino auto</a></li>
-            <li><a href="test_drive.html"><span lang="en-GB">Test drive</span></a></li>
-            <li><a href="utente.php" tabindex="-1" id="here">Area riservata</a></li>
+    <header class="header_help">
+      <nav aria-label="aiuti alla navigazione" class="navHelp">
+        <ul>
+          <li>
+            <a href="#utente_content" class="aHelp">Vai al contenuto</a>
+          </li>
+          <li>
+            <a href="#utente_logout" class="aHelp">Vai a logout</a>
+          </li>
+          <li>
+            <a href="#informazioni_utente" class="aHelp">Vai alle informazioni utente</a>
+          </li>
+          <li>
+            <a href="#prenotazioni_utente" class="aHelp">Vai alle prenotazioni</a>
+          </li>
+          <li>
+            <a href="#gestione_prenotazioni" class="aHelp">Vai alla gestione delle prenotazioni</a>
+          </li>
         </ul>
       </nav>
+    </header>
+  
+    <nav class="topNavBar">
 
-      <nav id="breadcrumb" aria-label="Percorso attuale nel sito">
-          <p>Ti trovi in: Area riservata</p>
-      </nav>
-      <main id="utente_content">
+      <h1 class="hide">LuzzAuto</h1>
+      
+      <button id="menu-button-container" aria-label="Seleziona per espandere e comprimere il menù di navigazione" data-hidden="false">               
+        <span class="menu-button-bar1" aria-hidden="true"></span>
+        <span class="menu-button-bar2" aria-hidden="true"></span>
+        <span class="menu-button-bar3" aria-hidden="true"></span>
+    </button>
+    <ul id="menu"  aria-label="Menù del sito">
+          <li><a href="index.php"><span lang="en-GB">Home</span></a></li>
+          <li><a href="about.html">Chi siamo</a></li>
+          <li><a href="listino.php">Listino auto</a></li>
+          <li><a href="test_drive.html"><span lang="en-GB">Test drive</span></a></li>
+          <li><a href="utente.php" tabindex="-1" id="here">Area riservata</a></li>
+      </ul>
+    </nav>
 
-        <h1><span id="saluto"></span> [nome]</h1>
+    <nav id="breadcrumb" aria-label="Percorso attuale nel sito">
+        <p>Ti trovi in: Area riservata</p>
+    </nav>
+    <main id="utente_content">
 
-        <a href="logout.php" id="utente_logout"><span lang="en-GB">Logout</span></a>
+      <h1><span id="saluto"></span> [nome]</h1>
 
-        <section class="riquadriUtente" id="informazioni_utente">
-          
-          <h2 class="nomeRiqUtente">Informazioni Utente</h2>
-          <img src="assets/img/Users/default.svg" id="userImage" alt="Foto profilo stilizzata predefinita">
+      <a href="logout.php" id="utente_logout"><span lang="en-GB">Logout</span></a>
 
-          <dl>
-            <dt>Nome:&nbsp;</dt>
-            <dd>[nome]</dd>
+      <section class="riquadriUtente" id="informazioni_utente">
+        
+        <h2 class="nomeRiqUtente">Informazioni Utente</h2>
+        <img src="assets/img/Users/default.svg" id="userImage" alt="Foto profilo stilizzata predefinita">
 
-            <dt>Cognome:&nbsp;</dt>
-            <dd>[cognome]</dd>
+        <dl>
+          <dt>Nome:&nbsp;</dt>
+          <dd>[nome]</dd>
 
-            <dt><span lang="en-GB">Username:&nbsp;</span></dt>
-            <dd>[username]</dd>
+          <dt>Cognome:&nbsp;</dt>
+          <dd>[cognome]</dd>
 
-            <dt><span lang="en-GB">Password:&nbsp;</span></dt>
-            <dd>************</dd>
-          </dl>
+          <dt><span lang="en-GB">Username:&nbsp;</span></dt>
+          <dd>[username]</dd>
 
-          <p><a href="modificaUtente.php">Modifica i tuoi dati</a> oppure <a href="eliminaUtente.php">elimina profilo</a>.</p>
+          <dt><span lang="en-GB">Password:&nbsp;</span></dt>
+          <dd>************</dd>
+        </dl>
 
-        </section>
-        <section id="prenotazioni_utente">
-          [campiTabella]
-        </section>
-        <section class="riquadriUtente" id="gestione_prenotazioni">
-          <form method='post' action='utente.php'>
-            <fieldset>
-              <legend class='nomeRiqUtente'>Gestione Prenotazioni</legend>
+        <p><a href="modificaUtente.php">Modifica i tuoi dati</a> oppure <a href="eliminaUtente.php">elimina profilo</a>.</p>
 
-              <label id='labelPrenUtente' for='gestPrenUtente'><strong>Prenotazioni:</strong> </label>
-              <select name='gestPrenUtente' id='gestPrenUtente' data-msg-required='Per favore, seleziona la prenotazione' required>
-                <option value='' selected disabled>Seleziona un'opzione</option>
-                [prenotazioni]
-              </select>
+      </section>
+      <section id="prenotazioni_utente">
+        [campiTabella]
+      </section>
+      <section class="riquadriUtente" id="gestione_prenotazioni">
+        <form method='post' action='utente.php'>
+          <fieldset>
+            <legend class='nomeRiqUtente'>Gestione Prenotazioni</legend>
 
-              <input id='eliminaPrenUtente' type='submit' value='Elimina'>
-            </fieldset>
-          </form>
+            <label id='labelPrenUtente' for='gestPrenUtente'><strong>Prenotazioni:</strong> </label>
+            <select name='gestPrenUtente' id='gestPrenUtente' data-msg-required='Per favore, seleziona la prenotazione' required>
+              <option value='' selected disabled>Seleziona un'opzione</option>
+              [prenotazioni]
+            </select>
 
-          <div class='form_errors'>
-            [err]
-          </div>
-        </section>
-      </main>
-      <footer>
-        <p><a href="https://validator.w3.org/nu/"><img src="https://www.w3.org/Icons/valid-xhtml10" alt="HTML Valido!"></a></p>
-        <p>FFF&E & <span lang="en-GB">Company</span> - <span lang="en-GB">All rights Reserved</span> - Alcuni marchi e modelli sono frutto della nostra immaginazione; le immagini relative sono state generate da strumenti di intelligenza artificiale.</p>
-        <p><a href="http://jigsaw.w3.org/css-validator/check/referer"><img src="http://jigsaw.w3.org/css-validator/images/vcss-blue" alt="CSS Valido!"></a></p>
-      </footer>
-    </body>
+            <input id='eliminaPrenUtente' type='submit' value='Elimina'>
+          </fieldset>
+        </form>
+
+        <div class='form_errors'>
+          [err]
+        </div>
+      </section>
+    </main>
+    <footer>
+      <p><a href="https://validator.w3.org/nu/"><img src="https://www.w3.org/Icons/valid-xhtml10" alt="HTML Valido!"></a></p>
+      <p>FFF&E & <span lang="en-GB">Company</span> - <span lang="en-GB">All rights Reserved</span> - Alcuni marchi e modelli sono frutto della nostra immaginazione; le immagini relative sono state generate da strumenti di intelligenza artificiale.</p>
+      <p><a href="http://jigsaw.w3.org/css-validator/check/referer"><img src="http://jigsaw.w3.org/css-validator/images/vcss-blue" alt="CSS Valido!"></a></p>
+    </footer>
+  </body>
 </html>
