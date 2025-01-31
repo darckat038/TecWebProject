@@ -17,17 +17,22 @@ function adjustMenuOnResize() {
             // Cambia tra menù visibile e nascosto
             if (tasto.getAttribute("data-hidden")==="false") {
                 menu.setAttribute("tabindex","0");
+                menu.setAttribute("aria-hidden", "false");
                 links.forEach(link => {
                     link.setAttribute("tabindex", (link.id === "here" ? "-1" : "0"));
+                    link.setAttribute("aria-hidden", (link.id === "here" ? "true" : "false"));
                 });
                 tasto.setAttribute("aria-label","Seleziona per comprimere il menù di navigazione");
             } else {
                 menu.setAttribute("tabindex","-1");
+                menu.setAttribute("aria-hidden", "true");
                 if (window.innerWidth > 1024) links.forEach(link => {
                     link.setAttribute("tabindex", (link.id === "here" ? "-1" : "0"));
+                    link.setAttribute("aria-hidden", (link.id === "here" ? "true" : "false"));
                 });
                 else links.forEach(link => {
                     link.setAttribute("tabindex", "-1");
+                    link.setAttribute("aria-hidden", "true");
                 });
                 tasto.setAttribute("aria-label","Seleziona per espandere il menù di navigazione");
             }
@@ -43,20 +48,24 @@ function adjustMenuOnResize() {
         if (window.innerWidth > 1024) {
             tasto.setAttribute("data-hidden", "true");
             tasto.setAttribute("tabindex", "-1");
+            tasto.setAttribute("aria-hidden", "true");
         }
         else {
             tasto.setAttribute("data-hidden", "false");
             tasto.setAttribute("tabindex", "0");
+            tasto.setAttribute("aria-hidden", "false");
         }
         menuOpenClose();
         window.addEventListener('resize', function(){
             if (window.innerWidth > 1024) {
                 tasto.setAttribute("data-hidden", "true");
                 tasto.setAttribute("tabindex", "-1");
+                tasto.setAttribute("aria-hidden", "true");
             }
             else {
                 tasto.setAttribute("data-hidden", "false");
                 tasto.setAttribute("tabindex", "0");
+                tasto.setAttribute("aria-hidden", "false");
             }
             menuOpenClose();
         });
@@ -77,12 +86,15 @@ function switchToggle() {
                 // Mostra toggle se su mobile altrimenti rimuovi
                 if(window.innerWidth <= 1024) {
                     toggleButton.setAttribute("tabindex", "0");
+                    toggleButton.setAttribute("aria-hidden", "false");
                 } else {
                     toggleButton.setAttribute("tabindex", "-1");
+                    toggleButton.setAttribute("aria-hidden", "true");
                 }
                 // Mostra campi input
                 inputs.forEach(input => {
                     input.setAttribute("tabindex", "0");
+                    input.setAttribute("aria-hidden", "false");
                 });
             } else {
                 // Rimuovi menù
@@ -90,6 +102,7 @@ function switchToggle() {
                 // Rimuovi campi input
                 inputs.forEach(input => {
                     input.setAttribute("tabindex", "-1");
+                    input.setAttribute("aria-hidden", "true");
                 });
             }
         }
