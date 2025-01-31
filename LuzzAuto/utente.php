@@ -23,7 +23,7 @@ function creaTabellaPrenotazioni($username) {
             $campiTabella = "<p id='prenIndispUtente'>Non ci sono prenotazioni disponibili.</p>";
         } else {
             // Altrimenti creo il markup della tabella
-            $campiTabella = "  
+            $campiTabella = "
                             <p id='descTable' aria-hidden='true'>
                             La tabella descrive le prenotazioni dei test drive da parte dell'utente, è organizzata in colonne
                             con numero prenotazione, modello auto, data <span lang='en-GB'>Test Drive</span> e stato della prenotazione 
