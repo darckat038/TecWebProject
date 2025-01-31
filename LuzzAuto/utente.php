@@ -43,11 +43,11 @@ function creaTabellaPrenotazioni($username) {
             foreach ($prenotazione as $row) {
                 $statoTestuale = "";
                 if ($row['stato'] == 1) {
-                    $statoTestuale = "<span id='accettatoUtente'>Accettato</span>";
+                    $statoTestuale = "<span class='accettatoUtente'>Accettato</span>";
                 } else if ($row['stato'] == -1) {
-                    $statoTestuale = "<span id='rifiutatoUtente'>Rifiutato</span>";
+                    $statoTestuale = "<span class='rifiutatoUtente'>Rifiutato</span>";
                 } else {
-                    $statoTestuale = "<span id='attesaUtente'>In attesa</span>";
+                    $statoTestuale = "<span class='attesaUtente'>In attesa</span>";
                 }
 
                 // Aggiungi una riga per la prenotazione
@@ -55,7 +55,7 @@ function creaTabellaPrenotazioni($username) {
                 $campiTabella .= "<tr>
                                     <th scope='row' data-title='Codice'>" . $row["codice"] . "</th>
                                     <td data-title='Auto'>" . $row["marca"] . " " . $row['modello'] . "</td>
-                                    <td data-title='Data'><time datetime=''" . $row['dataOra'] . "'>" . $row['dataOra'] . "</time></td>
+                                    <td data-title='Data'><time datetime='" . $row['dataOra'] . "'>" . $row['dataOra'] . "</time></td>
                                     <td data-title='Stato'>" . $statoTestuale . "</td>
                                   </tr>";
             }
