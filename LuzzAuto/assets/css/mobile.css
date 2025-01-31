@@ -1893,11 +1893,11 @@ section.aboutUs_history img {
     left: -999em;
 }
 
-#accettatoUtente{
+.accettatoUtente{
     color: var(--form-success-text-color);
 }
 
-#rifiutatoUtente{
+.rifiutatoUtente{
     color: var(--form-error-text-color);
 }
 

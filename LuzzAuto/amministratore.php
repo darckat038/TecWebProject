@@ -92,11 +92,11 @@ function mostraTabellaPrenotazioni() {
                 if($row['dataOra'] >= date("Y-m-d H:i:s")) {
                     $statoTestuale = "";
                     if ($row['stato'] == 1) {
-                        $statoTestuale = "<span id='accettatoUtente'>Accettato</span>";
+                        $statoTestuale = "<span class='accettatoUtente'>Accettato</span>";
                     } else if ($row['stato'] == -1) {
-                        $statoTestuale = "<span id='rifiutatoUtente'>Rifiutato</span>";
+                        $statoTestuale = "<span class='rifiutatoUtente'>Rifiutato</span>";
                     } else {
-                        $statoTestuale = "<span id='attesaUtente'>In attesa</span>";
+                        $statoTestuale = "<span class='attesaUtente'>In attesa</span>";
                     }
 
                     // Aggiungi una riga per la prenotazione

@@ -1982,11 +1982,11 @@ p.list_car_list_empty {
     margin-left: 4.7em;
 }
 
-#accettatoUtente{
+.accettatoUtente{
     color: var(--form-success-text-color);
 }
 
-#rifiutatoUtente{
+.rifiutatoUtente{
     color: var(--form-error-text-color);
 }
 
