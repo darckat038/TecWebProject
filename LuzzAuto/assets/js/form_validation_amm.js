@@ -182,7 +182,6 @@ function validateFormAggiungiAuto(){
 				msg += "<p id=\"neopatentati_err\">Hai selezionato un valore di neopatentati non valido. Seleziona nuovamente la scelta desiderata.</p>";
 			}
 
-
             if(!ok){
                 addFormError(msg, 1);
                 event.preventDefault();
